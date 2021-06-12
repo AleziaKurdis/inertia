@@ -80,12 +80,12 @@
             var properties;
             for (var i = 0; i < cuboidID.length; i++) {
                 properties = Entities.getEntityProperties(cuboidID[i], ["position", "velocity"]);
-                if (properties.position.z > MAX_DISTANCE || properties.position.z < -MAX_DISTANCE) {
+                if (properties.position.z > (6000 + MAX_DISTANCE) || properties.position.z < (6000 - MAX_DISTANCE)) {
                     velocityDirection = 1;
-                    newOrigin = -MAX_DISTANCE;
+                    newOrigin = 6000 - MAX_DISTANCE;
                     if (Math.random() > 0.5){
                         velocityDirection = -1;
-                        newOrigin = MAX_DISTANCE;
+                        newOrigin = 6000 + MAX_DISTANCE;
                     }                      
                     Entities.editEntity(cuboidID[i],{
                         "position": {
