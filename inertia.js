@@ -232,7 +232,7 @@
 
     function genMaterialData() {
         var hue = (Math.random() * 360)/360;
-        var color = hslToRgb(hue, 1, 0.3);
+        var color = hslToRgb(hue, 1, 0.5);
         var albedo = "[" + (color[0]/255) + ", " + (color[1]/255) + ", " + (color[2]/255) + "]";
         var materialObj = {
             "materialVersion": 1,
@@ -247,11 +247,12 @@
                 }
             ]
         };
+        print(albedo);
         return JSON.stringify(materialObj);
     }
 
     function genCube(positionX, positionY) {
-        var position = {"x": positionX, "y": positionY, "z": (Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE};
+        var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
             velocityDirection = -1;
