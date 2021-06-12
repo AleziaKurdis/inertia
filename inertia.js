@@ -232,8 +232,8 @@
 
     function genMaterialData() {
         var hue = (Math.random() * 360)/360;
-        var color = hslToRgb(hue, 1, 0.5);
-        var albedo = "[" + (color[0]/255) + ", " + (color[1]/255) + ", " + (color[2]/255) + "]";
+        var color = hslToRgb(hue, 1, 0.3);
+        var albedo = [(color[0]/255), (color[1]/255), (color[2]/255)];
         var materialObj = {
             "materialVersion": 1,
             "materials": [
@@ -247,7 +247,6 @@
                 }
             ]
         };
-        print(albedo);
         return JSON.stringify(materialObj);
     }
 
