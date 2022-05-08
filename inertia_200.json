@@ -1,0 +1,42 @@
+ {
+    "DataVersion": 3,
+    "Paths": {
+        "/": "/6001,6002,6001/0,0.992481,0,-0.122401"
+    },
+    "Entities": [
+        {
+            "id": "{b82c68ee-2d6f-46d4-92aa-01155935056b}",
+            "type": "Shape",
+            "name": "CUBE_ZERO",
+            "locked": true,
+            "dimensions": {
+                "x": 50,
+                "y": 50,
+                "z": 50
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "position": {
+                "x": 6000,
+                "y": 5975,
+                "z": 6000
+            },            
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/inertia_200.js",           
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        }
+    ],
+    "Id": "{4cb81846-a9a5-4a69-b9b0-8af32cb3911b}",
+    "Version": 120
+}
