@@ -228,8 +228,8 @@
             "materialData": genMaterialData(),
             "priority": 1,
             "materialMappingScale": {
-                "x": 0,
-                "y": 0
+                "x": 50,
+                "y": 50
                 }
         }, "local");
         
