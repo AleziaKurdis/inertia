@@ -50,16 +50,16 @@
         //Generate Sky
         genSky();
         //Generate Material for current cube
-        mainCubeMaterialId = genMaterial(thisEntity);
+        mainCubeMaterialId = genMaterial(thisEntity, false);
         //Generate other cube and their material
         var cubeId;
         var cubeMaterialId;
         for (var x = -7; x < 8; x++) {
-            for (var y = -4; y < 8; y++) {
+            for (var y = -2; y < 8; y++) {
                 if (x !== 0 || y !== 0) {
                     if (x !== 0 || y !== -1) {
                         cubeId = genCube(6000 + (x * 65), 6025 + (y * 65));
-                        cubeMaterialId = genMaterial(cubeId);
+                        cubeMaterialId = genMaterial(cubeId, false);
                         cuboidID.push(cubeId);
                         cuboidMaterialsID.push(cubeMaterialId);
                     }
@@ -211,7 +211,12 @@
         }, "local");
     }
 
-    function genMaterial(parentId) {
+    function genMaterial(parentId, isRepeat) {
+        var nbrRepeat = 1;
+        if (isRepeat) {
+            nbrRepeat = 50;
+        }
+        
         var materialId = Entities.addEntity({
             "position": {
                 "x": 6000,
@@ -228,8 +233,8 @@
             "materialData": genMaterialData(),
             "priority": 1,
             "materialMappingScale": {
-                "x": 50,
-                "y": 50
+                "x": nbrRepeat,
+                "y": nbrRepeat
                 }
         }, "local");
         
@@ -257,6 +262,8 @@
     }
 
     function genCube(positionX, positionY) {
+        var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
+        shuffle(shapes);
         var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
@@ -294,7 +301,7 @@
                 "green": 0,
                 "blue": 0
             },
-            "shape": "Cube"           
+            "shape": shapes[0]           
         }, "local");
         return id;
     }
@@ -335,5 +342,21 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
 
 })
