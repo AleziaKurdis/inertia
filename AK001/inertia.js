@@ -263,7 +263,7 @@
 
     function genCube(positionX, positionY) {
         var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
-        shuffle(shapes);
+        var electedShape = Math.floor(Math.random() * shapes.length);
         var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
@@ -301,7 +301,7 @@
                 "green": 0,
                 "blue": 0
             },
-            "shape": shapes[0]           
+            "shape": shapes[electedShape]           
         }, "local");
         return id;
     }
@@ -342,28 +342,5 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
-    function shuffle(array) {
-        var result = Array.from(array);
-
-        /*
-         * This version mutates the array being processed.
-         * Considered generally unsafe practice, done here
-         * for variable lookup speed within the function scope.
-         */
-
-        result.forEach(function(v, i, arr, at, from, to) {
-            // Create indexes from and to
-            at = arr.length - i;
-            from = Math.floor(Math.random() * at);
-            to = at - 1;
-            
-            // Swap values from and to
-            v = arr[to];
-            arr[to] = arr[from];
-            arr[from] = v;
-        });
-
-        return result;
-    }
 
 })
