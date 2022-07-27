@@ -59,7 +59,7 @@
                 if (x !== 0 || y !== 0) {
                     if (x !== 0 || y !== -1) {
                         cubeId = genCube(6000 + (x * 65), 6025 + (y * 65));
-                        cubeMaterialId = genMaterial(cubeId, false);
+                        cubeMaterialId = genMaterial(cubeId, true);
                         cuboidID.push(cubeId);
                         cuboidMaterialsID.push(cubeMaterialId);
                     }
