@@ -205,7 +205,7 @@
             "angularDamping": 0,
             "localAngularVelocity": {
                 "x": 0.0,
-                "y": 0.34,
+                "y": 0.034,
                 "z": 0.0
             },
         }, "local");
