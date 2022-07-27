@@ -343,7 +343,8 @@
     }
 
     function shuffle(array) {
-        let currentIndex = array.length,  randomIndex;
+        var currentIndex = array.length;
+        var randomIndex;
 
         // While there remain elements to shuffle.
         while (currentIndex != 0) {
