@@ -263,7 +263,7 @@
 
     function genCube(positionX, positionY) {
         var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
-        shuffle(shapes);
+        shuffleArray(shapes);
         var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
@@ -342,22 +342,11 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
-    function shuffle(array) {
-        var currentIndex = array.length;
-        var randomIndex;
-
-        // While there remain elements to shuffle.
-        while (currentIndex != 0) {
-
-            // Pick a remaining element.
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            // And swap it with the current element.
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
-
-        return array;
     }
 
 })
