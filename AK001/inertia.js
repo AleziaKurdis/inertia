@@ -57,7 +57,7 @@
         for (var x = -3; x < 3; x++) {
             for (var y = 0; y < 2; y++) {
                 if (x !== 0 || y !== 0) {
-                    cubeId = genCube(6000 + (x * 225), 6025 + (y * 125));
+                    cubeId = genCube(6000 + (x * 250), 6000 + (y * 150));
                     cubeMaterialId = genMaterial(cubeId, true);
                     cuboidID.push(cubeId);
                     cuboidMaterialsID.push(cubeMaterialId);
