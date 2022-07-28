@@ -57,12 +57,10 @@
         for (var x = -3; x < 3; x++) {
             for (var y = 0; y < 2; y++) {
                 if (x !== 0 || y !== 0) {
-                    if (x !== 0 || y !== -1) {
-                        cubeId = genCube(6000 + (x * 250), 6025 + (y * 100));
-                        cubeMaterialId = genMaterial(cubeId, true);
-                        cuboidID.push(cubeId);
-                        cuboidMaterialsID.push(cubeMaterialId);
-                    }
+                    cubeId = genCube(6000 + (x * 200), 6025 + (y * 100));
+                    cubeMaterialId = genMaterial(cubeId, true);
+                    cuboidID.push(cubeId);
+                    cuboidMaterialsID.push(cubeMaterialId);
                 }
             }              
         }
@@ -214,7 +212,7 @@
     function genMaterial(parentId, isRepeat) {
         var nbrRepeat = 1;
         if (isRepeat) {
-            nbrRepeat = 50;
+            nbrRepeat = 80;
         }
         
         var materialId = Entities.addEntity({
@@ -276,8 +274,8 @@
             "locked": false,
             "dimensions": {
                 "x": 1025,
-                "y": 202.2727,
-                "z": 275.0001
+                "y": 200,
+                "z": 275
             },
             "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
             "position": position,            
