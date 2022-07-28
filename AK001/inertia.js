@@ -22,7 +22,7 @@
     var skyId;
     var SKYBOX_URL = "http://metaverse.bashora.com/scripts/hytrion_cloud/skybox/skybox.php";
     var MAX_VELOCITY = 80;
-    var MAX_DISTANCE = 1700;
+    var MAX_DISTANCE = 1250;
     
     var cuboidID = [];
     var cuboidMaterialsID = [];
@@ -238,7 +238,7 @@
     function genMaterial(parentId, isRepeat) {
         var nbrRepeat = 1;
         if (isRepeat) {
-            nbrRepeat = 80;
+            nbrRepeat = 100;
         }
         
         var materialId = Entities.addEntity({
