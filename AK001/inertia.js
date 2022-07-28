@@ -275,16 +275,11 @@
             "name": "NOMADIC_CUBES " + positionX + " " + positionY,
             "locked": false,
             "dimensions": {
-                "x": 300,
-                "y": 150,
-                "z": 1000
+                "x": 1025,
+                "y": 202.2727,
+                "z": 275.0001
             },
-            "rotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-            },
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
             "position": position,            
             "grab": {
                 "grabbable": false
