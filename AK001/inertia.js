@@ -59,7 +59,7 @@
         var cubeMaterialId;
         for (var x = -3; x < 3; x++) {
             for (var y = 0; y < 3; y++) {
-                if (x !== 0 || y !== 0) {
+                //if (x !== 0 || y !== 0) {
                     if (Math.random() < 0.5) {
                         velocityDirection = 1;
                     } else {
@@ -77,7 +77,7 @@
                     cuboidMaterialsID.push(cubeMaterialId);                    
                     
                     
-                }
+                //}
             }              
         }
 
