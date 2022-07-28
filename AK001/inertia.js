@@ -54,11 +54,11 @@
         //Generate other cube and their material
         var cubeId;
         var cubeMaterialId;
-        for (var x = -7; x < 8; x++) {
-            for (var y = -2; y < 8; y++) {
+        for (var x = -3; x < 3; x++) {
+            for (var y = 0; y < 2; y++) {
                 if (x !== 0 || y !== 0) {
                     if (x !== 0 || y !== -1) {
-                        cubeId = genCube(6000 + (x * 65), 6025 + (y * 65));
+                        cubeId = genCube(6000 + (x * 250), 6025 + (y * 100));
                         cubeMaterialId = genMaterial(cubeId, true);
                         cuboidID.push(cubeId);
                         cuboidMaterialsID.push(cubeMaterialId);
@@ -262,8 +262,8 @@
     }
 
     function genCube(positionX, positionY) {
-        var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
-        var electedShape = Math.floor(Math.random() * shapes.length);
+        //var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
+        //var electedShape = Math.floor(Math.random() * shapes.length);
         var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
@@ -271,13 +271,13 @@
         }  
         
         var id = Entities.addEntity({
-            "type": "Shape",
-            "name": "NOMADIC_CUBE " + positionX + " " + positionY,
+            "type": "Model",
+            "name": "NOMADIC_CUBES " + positionX + " " + positionY,
             "locked": false,
             "dimensions": {
-                "x": 50,
-                "y": 50,
-                "z": 50
+                "x": 300,
+                "y": 150,
+                "z": 1000
             },
             "rotation": {
                 "x": 0,
@@ -296,12 +296,9 @@
                 "y": 0,
                 "z": Math.random() * Math.random() * MAX_VELOCITY * velocityDirection
             },
-            "color": {
-                "red": 0,
-                "green": 0,
-                "blue": 0
-            },
-            "shape": shapes[electedShape]           
+            "shapeType": "none",
+            "modelURL": "https://aleziakurdis.github.io/inertia/AK001/aerolithes.fbx",
+            "useOriginalPivot": true
         }, "local");
         return id;
     }
