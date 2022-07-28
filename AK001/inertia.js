@@ -53,14 +53,30 @@
         mainCubeMaterialId = genMaterial(thisEntity, false);
         //Generate other cube and their material
         var cubeId;
+        var laneVelocity;
+        var velocityDirection;
+        var initialPosition;
         var cubeMaterialId;
         for (var x = -3; x < 3; x++) {
             for (var y = 0; y < 2; y++) {
                 if (x !== 0 || y !== 0) {
-                    cubeId = genCube(6000 + (x * 250), 6000 + (y * 150));
+                    if (Math.random() < 0.5) {
+                        velocityDirection = 1;
+                    } else {
+                        velocityDirection = -1;
+                    }                    
+                    laneVelocity = Math.random() * Math.random() * MAX_VELOCITY * velocityDirection;
+                    initialPosition = getTowPositionOnALane();
+                    cubeId = genCube(6000 + (x * 250), 6000 + (y * 150), laneVelocity, initialPosition.a);
                     cubeMaterialId = genMaterial(cubeId, true);
                     cuboidID.push(cubeId);
                     cuboidMaterialsID.push(cubeMaterialId);
+                    cubeId = genCube(6000 + (x * 250), 6000 + (y * 150), laneVelocity, initialPosition.b);
+                    cubeMaterialId = genMaterial(cubeId, true);
+                    cuboidID.push(cubeId);
+                    cuboidMaterialsID.push(cubeMaterialId);                    
+                    
+                    
                 }
             }              
         }
@@ -69,6 +85,21 @@
         processTimer = today.getTime();
         Script.update.connect(myTimer);        
     }; 
+
+    function getTowPositionOnALane() {
+        var points = {
+            "a": 0,
+            "b": 0
+        };
+        
+        points.a = 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE);
+        if (points.a > 6000) {
+            points.b = points.a - 1050 - (Math.random() * 500);
+        } else {
+            points.b = points.a + 1050 + (Math.random() * 500);
+        }
+        return points;
+    }
 
     function myTimer(deltaTime) {
         var velocityDirection, newOrigin;
@@ -79,23 +110,18 @@
             for (var i = 0; i < cuboidID.length; i++) {
                 properties = Entities.getEntityProperties(cuboidID[i], ["position", "velocity"]);
                 if (properties.position.z > (6000 + MAX_DISTANCE) || properties.position.z < (6000 - MAX_DISTANCE)) {
-                    velocityDirection = 1;
-                    newOrigin = 6000 - MAX_DISTANCE;
-                    if (Math.random() > 0.5){
-                        velocityDirection = -1;
+                    if (properties.position.z < (6000 - MAX_DISTANCE)) {
                         newOrigin = 6000 + MAX_DISTANCE;
-                    }                      
+                    } else {
+                        newOrigin = 6000 - MAX_DISTANCE;
+                    }                    
                     Entities.editEntity(cuboidID[i],{
                         "position": {
                             "x": properties.position.x,
                             "y": properties.position.y,
                             "z": newOrigin
                         },
-                        "velocity": {
-                            "x": 0,
-                            "y": 0,
-                            "z": Math.random() * Math.random() * MAX_VELOCITY * velocityDirection
-                        }
+                        "velocity": properties.velocity
                     });
                 }
             }
@@ -259,14 +285,8 @@
         return JSON.stringify(materialObj);
     }
 
-    function genCube(positionX, positionY) {
-        //var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
-        //var electedShape = Math.floor(Math.random() * shapes.length);
-        var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
-        var velocityDirection = 1;
-        if (Math.random() > 0.5){
-            velocityDirection = -1;
-        }  
+    function genCube(positionX, positionY, laneVelocity, initialPosition) {
+        var position = {"x": positionX, "y": positionY, "z": initialPosition};
         
         var id = Entities.addEntity({
             "type": "Model",
@@ -287,7 +307,7 @@
             "velocity": {
                 "x": 0,
                 "y": 0,
-                "z": Math.random() * Math.random() * MAX_VELOCITY * velocityDirection
+                "z": laneVelocity
             },
             "shapeType": "none",
             "modelURL": "https://aleziakurdis.github.io/inertia/AK001/aerolithes.fbx",
