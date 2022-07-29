@@ -59,7 +59,7 @@
         var cubeMaterialId;
         for (var x = -3; x < 3; x++) {
             for (var y = 0; y < 3; y++) {
-                //if (x !== 0 || y !== 0) {
+                if (x !== 0 || y !== 0) {
                     if (Math.random() < 0.5) {
                         velocityDirection = 1;
                     } else {
@@ -67,17 +67,17 @@
                     }                    
                     laneVelocity = Math.random() * Math.random() * MAX_VELOCITY * velocityDirection;
                     initialPosition = getTowPositionOnALane();
-                    cubeId = genCube(6000 + (x * 250), 5975 + (y * 150), laneVelocity, initialPosition.a);
+                    cubeId = genCube(6000 + (x * 175), 6000 + (y * 75), laneVelocity, initialPosition.a);
                     cubeMaterialId = genMaterial(cubeId, true);
                     cuboidID.push(cubeId);
                     cuboidMaterialsID.push(cubeMaterialId);
-                    cubeId = genCube(6000 + (x * 250), 5975 + (y * 150), laneVelocity, initialPosition.b);
+                    cubeId = genCube(6000 + (x * 175), 6000 + (y * 75), laneVelocity, initialPosition.b);
                     cubeMaterialId = genMaterial(cubeId, true);
                     cuboidID.push(cubeId);
                     cuboidMaterialsID.push(cubeMaterialId);                    
                     
                     
-                //}
+                }
             }              
         }
 
