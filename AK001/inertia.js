@@ -162,7 +162,7 @@
         
         if (particleId === Uuid.NULL) {
             //CREATE
-            var speedFactor = (Math.random() * 0.75) + 0.25;
+            var speedFactor = 1;
             if (Math.random() > .5) {
                 speedFactor = -speedFactor;
             }
