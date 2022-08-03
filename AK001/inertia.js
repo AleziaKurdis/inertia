@@ -212,10 +212,10 @@
                     "y": 0,
                     "z": 0.800000011920929 * speedFactor
                 },
-                "particleRadius": 1.2999999523162842,
-                "radiusSpread": 0.6000000238418579,
-                "radiusStart": 0.800000011920929,
-                "radiusFinish": 4,
+                "particleRadius": 2,
+                "radiusSpread": 0.8,
+                "radiusStart": 1.4,
+                "radiusFinish": 6,
                 "colorStart": {
                     "red": 255,
                     "green": 255,
