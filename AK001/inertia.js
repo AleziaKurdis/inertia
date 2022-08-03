@@ -190,8 +190,8 @@
                 "alpha": 0.25,
                 "textures": PARTICLE_URL,
                 "maxParticles": 4000,
-                "lifespan": 8,
-                "emitRate": 50,
+                "lifespan": 6,
+                "emitRate": 65,
                 "emitSpeed": 0,
                 "speedSpread": 0.10000000149011612,
                 "emitOrientation": {
@@ -210,7 +210,7 @@
                 "emitAcceleration": {
                     "x": 0,
                     "y": 0,
-                    "z": 1.6 * speedFactor
+                    "z": 3 * speedFactor
                 },
                 "particleRadius": 2,
                 "radiusSpread": 0.8,
@@ -227,7 +227,7 @@
                     "blue": 18
                 },
                 "alphaSpread": 0.10000000149011612,
-                "alphaStart": 0.34,
+                "alphaStart": 0.5,
                 "alphaFinish": 0,
                 "emitterShouldTrail": true,
                 "spinSpread": 0.3499999940395355,
