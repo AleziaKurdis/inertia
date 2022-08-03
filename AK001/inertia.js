@@ -190,8 +190,8 @@
                 "alpha": 0.4,
                 "textures": PARTICLE_URL,
                 "maxParticles": 4000,
-                "lifespan": 6,
-                "emitRate": 100,
+                "lifespan": 2,
+                "emitRate": 400,
                 "emitSpeed": 0,
                 "speedSpread": 0.10000000149011612,
                 "emitOrientation": {
@@ -210,7 +210,7 @@
                 "emitAcceleration": {
                     "x": 0,
                     "y": 0,
-                    "z": 6 * speedFactor
+                    "z": MAX_VELOCITY * speedFactor
                 },
                 "particleRadius": 2,
                 "radiusSpread": 0.8,
