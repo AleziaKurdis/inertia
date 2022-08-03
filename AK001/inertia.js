@@ -162,7 +162,10 @@
         
         if (particleId === Uuid.NULL) {
             //CREATE
-            var speedFactor = (Math.random() * 2 ) - 1;
+            var speedFactor = (Math.random() * 0.75) + 0.25;
+            if (Math.random() > .5) {
+                speedFactor = -speedFactor;
+            }
             
             
             particleId = Entities.addEntity({
