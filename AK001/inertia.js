@@ -14,6 +14,7 @@
     var ROOT = Script.resolvePath('').split("inertia.js")[0];
 	var soundURL = ROOT + 'inertiaAmbience.mp3';
     var NORMAL_MAP_URL = ROOT + 'panel_normal_512.jpg';
+    var PARTICLE_URL = ROOT + 'particle.png';
 	var mySound;
     var injector;
     var UPDATE_TIMER_INTERVAL = 10000; // 10 sec 
@@ -26,6 +27,7 @@
     
     var cuboidID = [];
     var cuboidMaterialsID = [];
+    var particleId = Uuid.NULL;
     
     function playsound(){
         injector = Audio.playSound(mySound, {
@@ -80,7 +82,9 @@
                 }
             }              
         }
-
+        
+        manageParticle();
+            
         var today = new Date();
         processTimer = today.getTime();
         Script.update.connect(myTimer);        
@@ -105,6 +109,7 @@
         var velocityDirection, newOrigin;
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+            manageParticle();
             //Manage moving cubes
             var properties;
             for (var i = 0; i < cuboidID.length; i++) {
@@ -145,8 +150,98 @@
             Entities.deleteEntity(cuboidID[i]);
             Entities.deleteEntity(cuboidMaterialsID[i]);
         }
-        
+        if (particleId !== Uuid.NULL) {
+            Entities.deleteEntity(particleId);
+            particleId = Uuid.NULL;
+        }
     };
+
+    function manageParticle() {
+        var hue = GetCurrentCycleValue(1, 10800);
+        var color = hslToRgb(hue, 0.55, 0.48);
+        
+        if (particleId === Uuid.NULL) {
+            //CREATE
+            var speedFactor = (Math.random() * 2 ) - 1;
+            
+            
+            particleId = Entities.addEntity({
+                "type": "ParticleEffect",
+                "name": "TRAINEE",
+                "dimensions": {
+                    "x": 72.91200256347656,
+                    "y": 72.91200256347656,
+                    "z": 72.91200256347656
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "shapeType": "ellipsoid",
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                },
+                "alpha": 0.17,
+                "textures": PARTICLE_URL,
+                "maxParticles": 4000,
+                "lifespan": 8,
+                "emitRate": 50,
+                "emitSpeed": 0,
+                "speedSpread": 0.10000000149011612,
+                "emitOrientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                },
+                "emitDimensions": {
+                    "x": 0.30000001192092896,
+                    "y": 0.30000001192092896,
+                    "z": 0
+                },
+                "emitRadiusStart": 0,
+                "polarFinish": 3.1415927410125732,
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.800000011920929 * speedFactor
+                },
+                "particleRadius": 1.2999999523162842,
+                "radiusSpread": 0.6000000238418579,
+                "radiusStart": 0.800000011920929,
+                "radiusFinish": 4,
+                "colorStart": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "colorFinish": {
+                    "red": 16,
+                    "green": 17,
+                    "blue": 18
+                },
+                "alphaSpread": 0.10000000149011612,
+                "alphaStart": 0.20000000298023224,
+                "alphaFinish": 0,
+                "emitterShouldTrail": true,
+                "spinSpread": 0.3499999940395355,
+                "spinStart": -3.140000104904175,
+                "spinFinish": 3.140000104904175,
+                "position": {"x":5974.419921875,"y":5995.54052734375,"z":5976.77099609375}                
+            }, "local");
+        } else {
+            Entities.editEntity(particleId, {
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                }                
+            });
+        }
+    }
     
     function genSky() {
         var lightHue = Math.random();
@@ -352,5 +447,13 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}    
 
 })
