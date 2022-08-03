@@ -187,7 +187,7 @@
                     "green": color[1],
                     "blue": color[2]
                 },
-                "alpha": 0.17,
+                "alpha": 0.25,
                 "textures": PARTICLE_URL,
                 "maxParticles": 4000,
                 "lifespan": 8,
@@ -210,7 +210,7 @@
                 "emitAcceleration": {
                     "x": 0,
                     "y": 0,
-                    "z": 0.800000011920929 * speedFactor
+                    "z": 1.6 * speedFactor
                 },
                 "particleRadius": 2,
                 "radiusSpread": 0.8,
@@ -227,7 +227,7 @@
                     "blue": 18
                 },
                 "alphaSpread": 0.10000000149011612,
-                "alphaStart": 0.20000000298023224,
+                "alphaStart": 0.34,
                 "alphaFinish": 0,
                 "emitterShouldTrail": true,
                 "spinSpread": 0.3499999940395355,
