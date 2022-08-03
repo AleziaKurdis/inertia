@@ -187,11 +187,11 @@
                     "green": color[1],
                     "blue": color[2]
                 },
-                "alpha": 0.25,
+                "alpha": 0.4,
                 "textures": PARTICLE_URL,
                 "maxParticles": 4000,
                 "lifespan": 6,
-                "emitRate": 65,
+                "emitRate": 100,
                 "emitSpeed": 0,
                 "speedSpread": 0.10000000149011612,
                 "emitOrientation": {
@@ -210,7 +210,7 @@
                 "emitAcceleration": {
                     "x": 0,
                     "y": 0,
-                    "z": 3 * speedFactor
+                    "z": 6 * speedFactor
                 },
                 "particleRadius": 2,
                 "radiusSpread": 0.8,
