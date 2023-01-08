@@ -21,6 +21,7 @@
     var STAR_DIAMATER = 10; //m
     var DISTANCE_RATIO = 6;
     var DIAMETER_RATIO = 2;
+    var TROPIC = 40; //degree
     
     var planets = [
         {
@@ -69,15 +70,17 @@
         for (var i = 0; i < planets.length; i++) {
             var parentID;
             var rotation = GetCurrentCycleValue(360, planets[i].duration);
+            var inclinaison;
             if (i === 0) {
                 parentID = entityID;
                 planets[i].diameter = STAR_DIAMATER;
                 planets[i].localPosition = {"x": 0, "y": 0, "z": 0};
-                
+                inclinaison = Math.cos(rotation * Math.PI/180) * TROPIC;
             } else {
                 parentID = planets[i - 1].id;
                 planets[i].diameter = planets[i - 1].diameter / DIAMETER_RATIO; 
                 planets[i].localPosition = {"x": 0, "y": 0, "z": -planets[i].diameter * DISTANCE_RATIO};
+                inclinaison = Math.cos(GetCurrentCycleValue(2 * Math.PI, planets[i - 1].duration)) * TROPIC;
             }
             planets[i].id = Entities.addEntity({
                 "name": planets[i].name,
@@ -88,7 +91,7 @@
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": properties.renderWithZones,
-                "localRotation": Quat.fromVec3Degrees({"x": 0, "y": rotation, "z": 0}),
+                "localRotation": Quat.fromVec3Degrees({"x": inclinaison, "y": rotation, "z": 0}),
                 "angularDamping": 0,
                 "angularVelocity": {"x": 0, "y": 0, "z": 0}
             }, "local");
@@ -109,8 +112,14 @@
             for (var i = 0; i < planets.length; i++) {
                 if (planets[i].id !== Uuid.NULL) {
                     var rotation = GetCurrentCycleValue(360, planets[i].duration);
+                    var inclinaison;
+                    if (i === 0) {
+                        inclinaison = Math.cos(rotation * Math.PI/180) * TROPIC;
+                    } else {
+                        inclinaison = Math.cos(GetCurrentCycleValue(2 * Math.PI, planets[i - 1].duration)) * TROPIC;
+                    }                    
                     Entities.editEntity(planets[i].id, {
-                        "localRotation": Quat.fromVec3Degrees({"x": 0, "y": rotation, "z": 0}),
+                        "localRotation": Quat.fromVec3Degrees({"x": inclinaison, "y": rotation, "z": 0}),
                     });
                 }
             }
