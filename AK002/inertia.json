@@ -37,7 +37,7 @@
             "green":176,
             "blue":240
          },
-         "collisionless": true
+         "collisionless": true,
          "shape":"Cube",
          "clientOnly":false,
          "avatarEntity":false,
