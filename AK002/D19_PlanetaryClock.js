@@ -18,7 +18,7 @@
     var processTimer = 0;
     
     var HYTRION_DAY_DURATION = 68400; //sec
-    var STAR_DIAMATER = 10; //m
+    var STAR_DIAMATER = 100; //m
     var DISTANCE_RATIO = 6;
     var DIAMETER_RATIO = 2;
     var TROPIC = 20; //degree
