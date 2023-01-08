@@ -121,7 +121,11 @@
     }   
 
     this.unload = function(entityID) {
-        
+        for (var i = 0; i < planets.length; i++) {
+            if (planets[i].id !== Uuid.NULL) {
+                Entities.deleteEntity(planets[i].id);
+            }
+        }
         Script.update.disconnect(myTimer);
     };
 
