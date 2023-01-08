@@ -316,7 +316,7 @@
                     }
                 }
             }
-            if (univerSoundPlaying == 1) {
+            if (univerSoundPlaying === 1) {
                 if (universeVolume > 0) {
                     universeSoundInjector.setOptions({"volume": universeVolume});
                 } else {
