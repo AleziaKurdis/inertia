@@ -14,12 +14,12 @@
     var ROOT = Script.resolvePath('').split("D19_PlanetaryClock.js")[0];
     var thisEntity;
     
-    var UPDATE_TIMER_INTERVAL = 10000; // 10 sec 
+    var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMATER = 10; //m
-    var DISTANCE_RATIO = 4;
+    var DISTANCE_RATIO = 2;
     var DIAMETER_RATIO = 6;
     
     var planets = [
