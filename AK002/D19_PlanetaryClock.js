@@ -19,8 +19,8 @@
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMATER = 10; //m
-    var DISTANCE_RATIO = 2;
-    var DIAMETER_RATIO = 6;
+    var DISTANCE_RATIO = 6;
+    var DIAMETER_RATIO = 2;
     
     var planets = [
         {
