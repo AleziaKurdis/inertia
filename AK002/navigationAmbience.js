@@ -324,7 +324,7 @@
                     univerSoundPlaying = 0;
                 }
             } else {
-                if (universeVolume > 0) {
+                if (universeVolume > 0 && universeSound.downloaded) {
                     universeSoundInjector = Audio.playSound(universeSound, {
                             "loop": true,
                             "localOnly": true,
