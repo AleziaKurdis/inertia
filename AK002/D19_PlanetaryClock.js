@@ -184,16 +184,16 @@
                 });
             }
             */
-            var size = STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR;
+
             if (fireLightId === Uuid.NULL) {
                 //CREATE
                 fireLightId = Entities.addEntity({
                     "type": "Light",
                     "name": "STAR-LIGHT",
                     "dimensions": {
-                        "x": size,
-                        "y": size,
-                        "z": size
+                        "x": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "y": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "z": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR
                     },
                     "localPosition": {
                         "x": 0,
@@ -214,7 +214,7 @@
                     "intensity": 15,
                     "exponent": 1,
                     "cutoff": 75,
-                    "falloffRadius": 1                
+                    "falloffRadius": STAR_DIAMETER * 2                
                 }, "local");
             } else {
                 //UPDATE
@@ -223,11 +223,6 @@
                         "red": fireColor[0],
                         "green": fireColor[1],
                         "blue": fireColor[2]
-                    },
-                    "dimensions": {
-                        "x": size,
-                        "y": size,
-                        "z": size
                     }                    
                 });
             } 
