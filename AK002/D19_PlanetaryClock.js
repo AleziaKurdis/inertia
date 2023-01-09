@@ -188,7 +188,7 @@
                 //CREATE
                 fireLightId = Entities.addEntity({
                     "type": "Light",
-                    "name": "STAR LIGHT",
+                    "name": "STAR-LIGHT",
                     "dimensions": {
                         "x": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
                         "y": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
@@ -209,10 +209,11 @@
                         "green": fireColor[1],
                         "blue": fireColor[2]
                     },
+                    "isSpotlight": false,
                     "intensity": 15,
                     "exponent": 1,
                     "cutoff": 75,
-                    "falloffRadius": 2                
+                    "falloffRadius": 1                
                 }, "local");
             } else {
                 //UPDATE
