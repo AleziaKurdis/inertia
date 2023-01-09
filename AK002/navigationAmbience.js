@@ -118,6 +118,7 @@
                 zoneID = Uuid.NULL;
             }
         }
+        isInitiated = false;
     }
 
     function initiate(EntID) {
