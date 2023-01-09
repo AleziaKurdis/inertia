@@ -164,7 +164,7 @@
                     }
                 ]
             };
-            
+            /*
             if (fireMatId === Uuid.NULL) {
                 //CREATE
                 fireMatId = Entities.addEntity({
@@ -183,7 +183,7 @@
                     "materialData": JSON.stringify(materialContent)
                 });
             }
-
+            */
             if (fireLightId === Uuid.NULL) {
                 //CREATE
                 fireLightId = Entities.addEntity({
@@ -224,7 +224,7 @@
                     }               
                 });
             } 
-
+            /*
             if (fireParticles === Uuid.NULL) {
                 //CREATE
                 fireParticles = Entities.addEntity({
@@ -337,7 +337,7 @@
                         "blue": fireColorFinish[2]
                     }                
                 });
-            }
+            } */
         }
     }
 
