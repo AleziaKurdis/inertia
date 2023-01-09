@@ -16,6 +16,12 @@
     
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
+
+    var fireMatId = Uuid.NULL;
+    var fireLightId = Uuid.NULL;
+    var fireParticles = Uuid.NULL;
+    
+    var renderWithZones;
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMATER = 100; //m
@@ -64,8 +70,7 @@
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
-        
+        renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         
         for (var i = 0; i < planets.length; i++) {
             var parentID;
@@ -90,25 +95,24 @@
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": properties.renderWithZones,
+                "renderWithZones": renderWithZones,
                 "localRotation": Quat.fromVec3Degrees({"x": inclinaison, "y": rotation, "z": 0}),
                 "angularDamping": 0,
                 "angularVelocity": {"x": 0, "y": 0, "z": 0}
             }, "local");
         }
 
+        updateStar();
         
         var today = new Date();
         processTimer = today.getTime();
         Script.update.connect(myTimer); 
     }
 
-
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
-            //here's the processing
-
+            
             for (var i = 0; i < planets.length; i++) {
                 if (planets[i].id !== Uuid.NULL) {
                     var rotation = GetCurrentCycleValue(360, planets[i].duration);
@@ -124,10 +128,215 @@
                 }
             }
 
+            updateStar();
+
             today = new Date();
             processTimer = today.getTime();
         }  
     }   
+
+
+    function updateStar() {
+        if (planets[0].id !== Uuid.NULL) {
+            var hue = GetCurrentCycleValue(1, HYTRION_DAY_DURATION);
+            var fireColor = hslToRgb(hue, 1, 0.5);
+            var plasmaColor = hslToRgb(hue, 1, 0.61);
+            var fireColorStart = hslToRgb(hue, 1, 0.9);
+            var fireColorFinish = hslToRgb(hue, 1, 0.15);
+            var bloomFactor = 6;
+            
+            var materialContent = {
+                "materialVersion": 1,
+                "materials": [
+                    {
+                        "name": "plasma",
+                        "albedo": [1, 1, 1],
+                        "metallic": 1,
+                        "roughness": 1,
+                        "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+            
+            if (fireMatId === Uuid.NULL) {
+                //CREATE
+                fireMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": planets[0].id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)                
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireMatId, {
+                    "materialData": JSON.stringify(materialContent)
+                });
+            }
+
+            if (fireLightId === Uuid.NULL) {
+                //CREATE
+                fireLightId = Entities.addEntity({
+                    "type": "Light",
+                    "name": "FIRE LIGHT",
+                    "dimensions": {
+                        "x": 4.288541316986084,
+                        "y": 4.288541316986084,
+                        "z": 4.288541316986084
+                    },
+                    "localRotation": {"x":-0.000030517578125,"y":-0.000030517578125,"z":-0.000030517578125,"w":1},
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "renderWithZones": renderWithZones,
+                    "parentID": planets[0].id,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "intensity": 8,
+                    "exponent": 1,
+                    "cutoff": 75,
+                    "falloffRadius": 2                
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireLightId, {
+                     "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    }               
+                });
+            } 
+
+            if (fireParticles === Uuid.NULL) {
+                //CREATE
+                fireParticles = Entities.addEntity({
+                    "type": "ParticleEffect",
+                    "name": "PIT_PARTICLE",
+                    "dimensions": {
+                        "x": 3.7335205078125,
+                        "y": 3.7335205078125,
+                        "z": 3.7335205078125
+                    },
+                    "rotation": {
+                        "x": -0.0000152587890625,
+                        "y": -0.0000152587890625,
+                        "z": -0.0000152587890625,
+                        "w": 1
+                    },
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "renderWithZones": renderWithZones,
+                    "parentID": planets[0].id,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "ellipsoid",
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "alpha": 0.10000000149011612,
+                    "textures": ROOT + "images/pitParticle.png",
+                    "maxParticles": 800,
+                    "lifespan": 1.5,
+                    "emitRate": 300,
+                    "emitSpeed": 0,
+                    "speedSpread": 0.20000000298023224,
+                    "emitOrientation": {
+                        "x": -0.0000152587890625,
+                        "y": -0.0000152587890625,
+                        "z": -0.0000152587890625,
+                        "w": 1
+                    },
+                    "emitDimensions": {
+                        "x": 0.75,
+                        "y": 0.10000000149011612,
+                        "z": 0.75
+                    },
+                    "polarFinish": 3.1415927410125732,
+                    "emitAcceleration": {
+                        "x": 0,
+                        "y": 0.4000000059604645,
+                        "z": 0
+                    },
+                    "accelerationSpread": {
+                        "x": 0,
+                        "y": 0.20000000298023224,
+                        "z": 0
+                    },
+                    "particleRadius": 0.6000000238418579,
+                    "radiusSpread": 0.20000000298023224,
+                    "radiusStart": 0.20000000298023224,
+                    "radiusFinish": 0.800000011920929,
+                    "colorStart": {
+                        "red": fireColorStart[0],
+                        "green": fireColorStart[1],
+                        "blue": fireColorStart[2]
+                    },
+                    "colorFinish": {
+                        "red": fireColorFinish[0],
+                        "green": fireColorFinish[1],
+                        "blue": fireColorFinish[2]
+                    },
+                    "colorSpread": {
+                        "red": Math.floor(pitch * 15.9),
+                        "green": Math.floor(pitch * 15.9),
+                        "blue": Math.floor(pitch * 15.9)
+                    },                
+                    "alphaSpread": 0.10000000149011612,
+                    "alphaStart": 0.5,
+                    "alphaFinish": 0,
+                    "emitterShouldTrail": true,
+                    "spinSpread": 1.5700000524520874,
+                    "spinStart": null,
+                    "spinFinish": null
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireParticles, {
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "colorStart": {
+                        "red": fireColorStart[0],
+                        "green": fireColorStart[1],
+                        "blue": fireColorStart[2]
+                    },
+                    "colorSpread": {
+                        "red": Math.floor(pitch * 15.9),
+                        "green": Math.floor(pitch * 15.9),
+                        "blue": Math.floor(pitch * 15.9)
+                    },                 
+                    "colorFinish": {
+                        "red": fireColorFinish[0],
+                        "green": fireColorFinish[1],
+                        "blue": fireColorFinish[2]
+                    }                
+                });
+            }
+        }
+    }
+
 
     this.unload = function(entityID) {
         for (var i = 0; i < planets.length; i++) {
