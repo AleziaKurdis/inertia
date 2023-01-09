@@ -24,7 +24,7 @@
     var renderWithZones;
     
     var HYTRION_DAY_DURATION = 68400; //sec
-    var STAR_DIAMATER = 100; //m
+    var STAR_DIAMETER = 100; //m
     var DISTANCE_RATIO = 6;
     var DIAMETER_RATIO = 2;
     var TROPIC = 15; //degree
@@ -79,7 +79,7 @@
             var inclinaison;
             if (i === 0) {
                 parentID = entityID;
-                planets[i].diameter = STAR_DIAMATER;
+                planets[i].diameter = STAR_DIAMETER;
                 planets[i].localPosition = {"x": 0, "y": 0, "z": 0};
                 inclinaison = Math.cos(rotation * Math.PI/180) * TROPIC;
             } else {
@@ -184,15 +184,17 @@
                 });
             }
             */
+            var size = STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR;
+            print("SIZE: " + size); //################################################################################# trash debug line 
             if (fireLightId === Uuid.NULL) {
                 //CREATE
                 fireLightId = Entities.addEntity({
                     "type": "Light",
                     "name": "STAR-LIGHT",
                     "dimensions": {
-                        "x": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "y": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "z": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR
+                        "x": size,
+                        "y": size,
+                        "z": size
                     },
                     "localPosition": {
                         "x": 0,
