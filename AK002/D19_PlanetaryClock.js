@@ -138,6 +138,10 @@
 
     function updateStar() {
         if (planets[0].id !== Uuid.NULL) {
+            
+            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), 240));
+            if (pitch === 0) {pitch = 0.001;}
+            
             var hue = GetCurrentCycleValue(1, HYTRION_DAY_DURATION);
             var fireColor = hslToRgb(hue, 1, 0.5);
             var plasmaColor = hslToRgb(hue, 1, 0.61);
