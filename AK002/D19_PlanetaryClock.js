@@ -190,9 +190,9 @@
                     "type": "Light",
                     "name": "STAR LIGHT",
                     "dimensions": {
-                        "x": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "y": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "z": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR
+                        "x": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "y": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "z": STAR_DIAMATER * STAR_LIGHT_DIAMETER_MULTIPLICATOR
                     },
                     "localPosition": {
                         "x": 0,
