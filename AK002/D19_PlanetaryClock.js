@@ -28,7 +28,7 @@
     var DISTANCE_RATIO = 6;
     var DIAMETER_RATIO = 2;
     var TROPIC = 15; //degree
-    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 15; //X time the diameter of the star.
+    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     
     var planets = [
         {
@@ -164,7 +164,7 @@
                     }
                 ]
             };
-            /*
+            
             if (fireMatId === Uuid.NULL) {
                 //CREATE
                 fireMatId = Entities.addEntity({
@@ -183,7 +183,7 @@
                     "materialData": JSON.stringify(materialContent)
                 });
             }
-            */
+            
 
             if (fireLightId === Uuid.NULL) {
                 //CREATE
