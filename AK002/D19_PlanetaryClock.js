@@ -27,7 +27,8 @@
     var STAR_DIAMATER = 100; //m
     var DISTANCE_RATIO = 6;
     var DIAMETER_RATIO = 2;
-    var TROPIC = 20; //degree
+    var TROPIC = 15; //degree
+    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 15; //X time the diameter of the star.
     
     var planets = [
         {
@@ -187,13 +188,12 @@
                 //CREATE
                 fireLightId = Entities.addEntity({
                     "type": "Light",
-                    "name": "FIRE LIGHT",
+                    "name": "STAR LIGHT",
                     "dimensions": {
-                        "x": 4.288541316986084,
-                        "y": 4.288541316986084,
-                        "z": 4.288541316986084
+                        "x": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "y": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
+                        "z": planets[0].diameter * STAR_LIGHT_DIAMETER_MULTIPLICATOR
                     },
-                    "localRotation": {"x":-0.000030517578125,"y":-0.000030517578125,"z":-0.000030517578125,"w":1},
                     "localPosition": {
                         "x": 0,
                         "y": 0,
@@ -209,7 +209,7 @@
                         "green": fireColor[1],
                         "blue": fireColor[2]
                     },
-                    "intensity": 8,
+                    "intensity": 15,
                     "exponent": 1,
                     "cutoff": 75,
                     "falloffRadius": 2                
@@ -229,7 +229,7 @@
                 //CREATE
                 fireParticles = Entities.addEntity({
                     "type": "ParticleEffect",
-                    "name": "PIT_PARTICLE",
+                    "name": "STAR_PARTICLE",
                     "dimensions": {
                         "x": 3.7335205078125,
                         "y": 3.7335205078125,
