@@ -185,7 +185,6 @@
             }
             */
             var size = STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR;
-            print("SIZE: " + size); //################################################################################# trash debug line 
             if (fireLightId === Uuid.NULL) {
                 //CREATE
                 fireLightId = Entities.addEntity({
@@ -220,11 +219,16 @@
             } else {
                 //UPDATE
                 Entities.editEntity(fireLightId, {
-                     "color": {
+                    "color": {
                         "red": fireColor[0],
                         "green": fireColor[1],
                         "blue": fireColor[2]
-                    }               
+                    },
+                    "dimensions": {
+                        "x": size,
+                        "y": size,
+                        "z": size
+                    }                    
                 });
             } 
             /*
