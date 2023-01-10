@@ -53,9 +53,9 @@
          "name":"PLANETARY_CLOCK_ZONE",
          "locked":true,
          "dimensions":{
-            "x":5000,
-            "y":5000,
-            "z":5000
+            "x":8000,
+            "y":8000,
+            "z":8000
          },
          "rotation":{
             "x":-1.52587890625e-5,
