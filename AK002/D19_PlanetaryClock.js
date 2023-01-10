@@ -140,7 +140,7 @@
     function updateStar() {
         if (planets[0].id !== Uuid.NULL) {
             
-            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), 240));
+            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
             
             var hue = GetCurrentCycleValue(1, HYTRION_DAY_DURATION);
@@ -256,8 +256,8 @@
                     },
                     "alpha": 0.10000000149011612,
                     "textures": ROOT + "images/pitParticle.png",
-                    "maxParticles": 2100,
-                    "lifespan": 7,
+                    "maxParticles": 3600,
+                    "lifespan": 12,
                     "emitRate": 300,
                     "emitSpeed": 0,
                     "speedSpread": 0.1 * STAR_DIAMETER,
@@ -283,10 +283,10 @@
                         "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 1.2 * STAR_DIAMETER,
-                    "radiusSpread": 0.4 * STAR_DIAMETER,
-                    "radiusStart": 0.4 * STAR_DIAMETER,
-                    "radiusFinish": 1.6 * STAR_DIAMETER,
+                    "particleRadius": 1.4 * STAR_DIAMETER,
+                    "radiusSpread": 0.6 * STAR_DIAMETER,
+                    "radiusStart": 0.1 * STAR_DIAMETER,
+                    "radiusFinish": 2 * STAR_DIAMETER,
                     "colorStart": {
                         "red": fireColorStart[0],
                         "green": fireColorStart[1],
@@ -308,7 +308,8 @@
                     "emitterShouldTrail": true,
                     "spinSpread": 1.5700000524520874,
                     "spinStart": 0,
-                    "spinFinish": 0
+                    "particleSpin": 1,
+                    "spinFinish": 2
                 }, "local");
             } else {
                 //UPDATE
