@@ -24,7 +24,7 @@
     var renderWithZones;
     
     var HYTRION_DAY_DURATION = 68400; //sec
-    var STAR_DIAMETER = 1000; //m
+    var STAR_DIAMETER = 800; //m
     var DISTANCE_RATIO = 8;
     var DIAMETER_RATIO = 5;
     var TROPIC = 15; //degree
