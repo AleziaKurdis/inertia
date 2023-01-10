@@ -226,23 +226,18 @@
                     }                    
                 });
             } 
-            /*
+            
             if (fireParticles === Uuid.NULL) {
                 //CREATE
                 fireParticles = Entities.addEntity({
                     "type": "ParticleEffect",
                     "name": "STAR_PARTICLE",
                     "dimensions": {
-                        "x": 3.7335205078125,
-                        "y": 3.7335205078125,
-                        "z": 3.7335205078125
+                        "x": STAR_DIAMETER * 2,
+                        "y": STAR_DIAMETER * 2,
+                        "z": STAR_DIAMETER * 2
                     },
-                    "rotation": {
-                        "x": -0.0000152587890625,
-                        "y": -0.0000152587890625,
-                        "z": -0.0000152587890625,
-                        "w": 1
-                    },
+                    "rotation": Quat.IDENTITY,
                     "localPosition": {
                         "x": 0,
                         "y": 0,
@@ -265,7 +260,7 @@
                     "lifespan": 1.5,
                     "emitRate": 300,
                     "emitSpeed": 0,
-                    "speedSpread": 0.20000000298023224,
+                    "speedSpread": 0.4 * STAR_DIAMETER,
                     "emitOrientation": {
                         "x": -0.0000152587890625,
                         "y": -0.0000152587890625,
@@ -273,25 +268,25 @@
                         "w": 1
                     },
                     "emitDimensions": {
-                        "x": 0.75,
-                        "y": 0.10000000149011612,
-                        "z": 0.75
+                        "x": 0.75 * STAR_DIAMETER,
+                        "y": 0.75 * STAR_DIAMETER,
+                        "z": 0.75 * STAR_DIAMETER,
                     },
                     "polarFinish": 3.1415927410125732,
                     "emitAcceleration": {
                         "x": 0,
-                        "y": 0.4000000059604645,
+                        "y": 0,
                         "z": 0
                     },
                     "accelerationSpread": {
                         "x": 0,
-                        "y": 0.20000000298023224,
+                        "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 0.6000000238418579,
-                    "radiusSpread": 0.20000000298023224,
-                    "radiusStart": 0.20000000298023224,
-                    "radiusFinish": 0.800000011920929,
+                    "particleRadius": 1.2 * STAR_DIAMETER,
+                    "radiusSpread": 0.4 * STAR_DIAMETER,
+                    "radiusStart": 0.4 * STAR_DIAMETER,
+                    "radiusFinish": 1.6 * STAR_DIAMETER,
                     "colorStart": {
                         "red": fireColorStart[0],
                         "green": fireColorStart[1],
@@ -339,7 +334,7 @@
                         "blue": fireColorFinish[2]
                     }                
                 });
-            } */
+            } 
         }
     }
 
