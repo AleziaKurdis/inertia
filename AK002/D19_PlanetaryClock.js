@@ -25,8 +25,8 @@
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 100; //m
-    var DISTANCE_RATIO = 6;
-    var DIAMETER_RATIO = 2;
+    var DISTANCE_RATIO = 5;
+    var DIAMETER_RATIO = 4;
     var TROPIC = 15; //degree
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     
