@@ -256,11 +256,11 @@
                     },
                     "alpha": 0.10000000149011612,
                     "textures": ROOT + "images/pitParticle.png",
-                    "maxParticles": 800,
-                    "lifespan": 1.5,
+                    "maxParticles": 2100,
+                    "lifespan": 7,
                     "emitRate": 300,
                     "emitSpeed": 0,
-                    "speedSpread": 0.4 * STAR_DIAMETER,
+                    "speedSpread": 0.1 * STAR_DIAMETER,
                     "emitOrientation": {
                         "x": -0.0000152587890625,
                         "y": -0.0000152587890625,
@@ -307,8 +307,8 @@
                     "alphaFinish": 0,
                     "emitterShouldTrail": true,
                     "spinSpread": 1.5700000524520874,
-                    "spinStart": null,
-                    "spinFinish": null
+                    "spinStart": 0,
+                    "spinFinish": 0
                 }, "local");
             } else {
                 //UPDATE
