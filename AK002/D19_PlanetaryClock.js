@@ -24,9 +24,9 @@
     var renderWithZones;
     
     var HYTRION_DAY_DURATION = 68400; //sec
-    var STAR_DIAMETER = 800; //m
+    var STAR_DIAMETER = 1000; //m
     var DISTANCE_RATIO = 8;
-    var DIAMETER_RATIO = 5;
+    var DIAMETER_RATIO = 3;
     var TROPIC = 15; //degree
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     
@@ -44,7 +44,7 @@
         {
             "name": "Planet Week", 
             "duration": 9 * HYTRION_DAY_DURATION,
-            "id": Uuid.NULL 
+            "id": Uuid.NULL             
         },
         {
             "name": "Planet Day", 
