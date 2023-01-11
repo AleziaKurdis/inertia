@@ -2,10 +2,10 @@
 //
 //  inertia.js
 //
-//  Created by Alezia Kurdis, July 26th, 2022.
-//  Copyright 2022 Alezia Kurdis.
+//  Created by Alezia Kurdis, June 11th, 2021.
+//  Copyright 2023, Alezia Kurdis.
 //
-//  Serverless Overte domain sandbox / home with a dynamic ambience.
+//  Serverless Overte domain sandbox/home with a dynamic ambience.
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
@@ -13,7 +13,7 @@
 (function(){
     var ROOT = Script.resolvePath('').split("inertia.js")[0];
 	var soundURL = ROOT + 'inertiaAmbience.mp3';
-    var NORMAL_MAP_URL = ROOT + 'panel_normal_512.jpg';
+    var NORMAL_MAP_URL = ROOT + 'normal.png';
 	var mySound;
     var injector;
     var UPDATE_TIMER_INTERVAL = 10000; // 10 sec 
@@ -55,7 +55,7 @@
         var cubeId;
         var cubeMaterialId;
         for (var x = -7; x < 8; x++) {
-            for (var y = -2; y < 8; y++) {
+            for (var y = -4; y < 8; y++) {
                 if (x !== 0 || y !== 0) {
                     if (x !== 0 || y !== -1) {
                         cubeId = genCube(6000 + (x * 65), 6025 + (y * 65));
@@ -152,10 +152,10 @@
                 "z": 12000
             },
             "rotation": {
-                "x":0,
-                "y":0,
-                "z":-0.3826834559440613,
-                "w":0.9238795042037964
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
             },
             "position": {
                 "x": 6000,
@@ -201,13 +201,7 @@
             "ambientLightMode": "enabled",
             "skyboxMode": "enabled",
             "hazeMode": "enabled",
-            "bloomMode": "enabled",
-            "angularDamping": 0,
-            "localAngularVelocity": {
-                "x": 0.0,
-                "y": 0.034,
-                "z": 0.0
-            },
+            "bloomMode": "enabled"
         }, "local");
     }
 
@@ -257,8 +251,6 @@
     }
 
     function genCube(positionX, positionY) {
-        var shapes = ["Cube", "Sphere", "Icosahedron", "dodecahedron"];
-        shuffle(shapes);
         var position = {"x": positionX, "y": positionY, "z": 6000 + ((Math.random() * 2 * MAX_DISTANCE) - MAX_DISTANCE)};
         var velocityDirection = 1;
         if (Math.random() > 0.5){
@@ -296,7 +288,7 @@
                 "green": 0,
                 "blue": 0
             },
-            "shape": shapes[0]           
+            "shape": "Cube"           
         }, "local");
         return id;
     }
@@ -337,22 +329,5 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
-    function shuffle(array) {
-        let currentIndex = array.length;  
-        var randomIndex;
-
-        // While there remain elements to shuffle.
-        while (currentIndex != 0) {
-
-            // Pick a remaining element.
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            // And swap it with the current element.
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-        }
-
-        return array;
-    }
 
 })
