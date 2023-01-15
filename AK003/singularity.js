@@ -205,9 +205,9 @@
                     },
                     "alpha": 0.10000000149011612,
                     "textures": ROOT + "images/pitParticle.png",
-                    "maxParticles": 2000,
-                    "lifespan": 10,
-                    "emitRate": 200,
+                    "maxParticles": 2250,
+                    "lifespan": 9,
+                    "emitRate": 250,
                     "emitSpeed": 0,
                     "speedSpread": 0.1 * STAR_DIAMETER,
                     "emitOrientation": {
@@ -217,9 +217,9 @@
                         "w": 1
                     },
                     "emitDimensions": {
-                        "x": STAR_DIAMETER,
-                        "y": STAR_DIAMETER,
-                        "z": STAR_DIAMETER,
+                        "x": 0.9 * STAR_DIAMETER,
+                        "y": 0.9 * STAR_DIAMETER,
+                        "z": 0.9 * STAR_DIAMETER,
                     },
                     "emitRadiusStart": 1,
                     "polarFinish": 3.1415927410125732,
