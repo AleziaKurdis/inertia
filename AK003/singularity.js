@@ -45,10 +45,11 @@
         
         var RATIO_Z = 0.24;
         
+        var sizeMultiplicator = 3;
         var betlOneId = Entities.addEntity({
             "name": "BELT-01",
             "parentID": starId,
-            "dimensions": {"x": STAR_DIAMETER * 2, "y": STAR_DIAMETER * RATIO_Z * 2, "z": STAR_DIAMETER * 2},
+            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
             "type": "Model",
             "shape": "Sphere",
@@ -58,6 +59,11 @@
                 "grabbable": false
             },
             "angularDamping": 0,
+            "angularVelocity": {
+                "x":0,
+                "y":0.226893,
+                "z":0
+            },
             "modelURL": ROOT + "models/BELT01.fbx",
             "useOriginalPivot": true
         }, "local");
