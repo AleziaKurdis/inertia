@@ -53,7 +53,7 @@
             "type": "Model",
             "shape": "Sphere",
             "color": {"red": 128, "green": 128, "blue": 128},
-            "renderWithZones": renderWithZones
+            "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
             },
