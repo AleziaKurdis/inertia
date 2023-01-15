@@ -80,7 +80,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.18,
+                "y":0.2,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -101,7 +101,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.1,
+                "y":0.12,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -122,7 +122,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.04,
+                "y":0.07,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -143,7 +143,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.015,
+                "y":0.03,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
