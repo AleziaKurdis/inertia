@@ -59,7 +59,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.4,
+                "y":0.6,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
