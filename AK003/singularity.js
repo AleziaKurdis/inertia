@@ -34,7 +34,7 @@
 
         starId = Entities.addEntity({
                 "name": "STAR",
-                "parentID": parentID,
+                "parentID": thisEntity,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
                 "localPosition": {"x": 0, "y": 0, "z": 0},
                 "type": "Shape",
