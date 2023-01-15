@@ -190,7 +190,7 @@
             "keyLightMode": "enabled",
             "ambientLightMode": "enabled",
             "skyboxMode": "enabled",
-            "hazeMode": "inherit",
+            "hazeMode": "disabled",
             "bloomMode": "enabled",
             "angularDamping": 0,
             "angularVelocity": {
