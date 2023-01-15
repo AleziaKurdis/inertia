@@ -110,6 +110,49 @@
             "useOriginalPivot": true
         }, "local");
 
+        sizeMultiplicator = 12;
+        var betlOneId = Entities.addEntity({
+            "name": "BELT-03",
+            "parentID": starId,
+            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 180}),
+            "type": "Model",
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularDamping": 0,
+            "angularVelocity": {
+                "x":0,
+                "y":0.015,
+                "z":0
+            },
+            "modelURL": ROOT + "models/BELT01.fbx",
+            "useOriginalPivot": true
+        }, "local");
+
+        sizeMultiplicator = 14;
+        var betlOneId = Entities.addEntity({
+            "name": "BELT-03",
+            "parentID": starId,
+            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 180}),
+            "type": "Model",
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularDamping": 0,
+            "angularVelocity": {
+                "x":0,
+                "y":-0.04,
+                "z":0
+            },
+            "modelURL": ROOT + "models/BELT01.fbx",
+            "useOriginalPivot": true
+        }, "local");
 
         updateStar();
         
