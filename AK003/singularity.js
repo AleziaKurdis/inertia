@@ -42,18 +42,25 @@
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones
         }, "local");
-/*
+        
+        var RATIO_Z = 0.24;
+        
         var betlOneId = Entities.addEntity({
-                "name": "BELT-01",
-                "parentID": starId,
-                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0, "y": 0, "z": 0},
-                "type": "Model",
-                "shape": "Sphere",
-                "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": renderWithZones
-        }, "local");        
-*/
+            "name": "BELT-01",
+            "parentID": starId,
+            "dimensions": {"x": STAR_DIAMETER * 2, "y": STAR_DIAMETER * RATIO_Z * 2, "z": STAR_DIAMETER * 2},
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "type": "Model",
+            "shape": "Sphere",
+            "color": {"red": 128, "green": 128, "blue": 128},
+            "renderWithZones": renderWithZones
+            "grab": {
+                "grabbable": false
+            },
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/BELT01.fbx",
+            "useOriginalPivot": true
+        }, "local");
 
         updateStar();
         
@@ -85,7 +92,7 @@
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
             var fireColorFinish = hslToRgb(hue, 1, 0.15);
-            var bloomFactor = 6;
+            var bloomFactor = 5;
             
             var materialContent = {
                 "materialVersion": 1,
