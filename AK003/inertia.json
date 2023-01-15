@@ -84,7 +84,7 @@
          "angularDamping": 0,
          "angularVelocity": {
             "x":0,
-            "y":0.005,
+            "y":0.008,
             "z":0
          }
       }
