@@ -8,3 +8,5 @@ https://aleziakurdis.github.io/inertia/inertia.json
 https://aleziakurdis.github.io/inertia/AK001/inertia.json  
   
 https://aleziakurdis.github.io/inertia/AK002/inertia.json  
+ 
+https://aleziakurdis.github.io/inertia/AK003/inertia.json  
