@@ -155,7 +155,7 @@
             "grab": {
                 "grabbable": false
             },
-            "shapeType": "box",
+            "shapeType": "sphere",
             "keyLight": {
                 "color": {
                     "red": 168,
@@ -185,14 +185,20 @@
                 "url": skyTextureUrl
             },
             "bloom": {
-                "bloomIntensity": 0.5
+                "bloomIntensity": 0.6
             },
             "keyLightMode": "enabled",
             "ambientLightMode": "enabled",
             "skyboxMode": "enabled",
-            "hazeMode": "disabled",
-            "bloomMode": "enabled"
-            },"local");        
+            "hazeMode": "inherit",
+            "bloomMode": "enabled",
+            "angularDamping": 0,
+            "angularVelocity": {
+                "x":0,
+                "y":-0.015,
+                "z":0
+            }
+        },"local");
     }
     
     function updateNavigation() {

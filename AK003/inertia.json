@@ -80,13 +80,7 @@
          "localEntity":false,
          "faceCamera":false,
          "isFacingAvatar":false,
-         "script": "https://aleziakurdis.github.io/inertia/AK003/navigationAmbience.js",
-         "angularDamping": 0,
-         "angularVelocity": {
-            "x":0,
-            "y":-0.015,
-            "z":0
-         }
+         "script": "https://aleziakurdis.github.io/inertia/AK003/navigationAmbience.js"
       }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
