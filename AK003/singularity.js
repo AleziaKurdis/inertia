@@ -45,7 +45,7 @@
         
         var RATIO_Z = 0.24;
         
-        var sizeMultiplicator = 3;
+        var sizeMultiplicator = 4;
         var betlOneId = Entities.addEntity({
             "name": "BELT-01",
             "parentID": starId,
@@ -61,7 +61,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.226893,
+                "y":0.28,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
