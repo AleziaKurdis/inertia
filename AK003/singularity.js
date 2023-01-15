@@ -52,8 +52,6 @@
             "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
             "type": "Model",
-            "shape": "Sphere",
-            "color": {"red": 128, "green": 128, "blue": 128},
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
@@ -62,6 +60,28 @@
             "angularVelocity": {
                 "x":0,
                 "y":0.28,
+                "z":0
+            },
+            "modelURL": ROOT + "models/BELT01.fbx",
+            "useOriginalPivot": true
+        }, "local");
+
+        sizeMultiplicator = 6;
+        var betlOneId = Entities.addEntity({
+            "name": "BELT-02",
+            "parentID": starId,
+            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 180}),
+            "type": "Model",
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularDamping": 0,
+            "angularVelocity": {
+                "x":0,
+                "y":0.18,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
