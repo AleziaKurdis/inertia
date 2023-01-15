@@ -45,7 +45,7 @@
         
         var RATIO_Z = 0.24;
         
-        var sizeMultiplicator = 3;
+        var sizeMultiplicator = 4;
         var betlOneId = Entities.addEntity({
             "name": "BELT-01",
             "parentID": starId,
@@ -59,7 +59,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.32,
+                "y":0.4,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -80,7 +80,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.2,
+                "y":0.3,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -101,7 +101,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.12,
+                "y":0.2,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -122,7 +122,7 @@
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
-                "y":0.07,
+                "y":0.1,
                 "z":0
             },
             "modelURL": ROOT + "models/BELT01.fbx",
@@ -341,7 +341,13 @@
                     "spinSpread": 1.5700000524520874,
                     "spinStart": 0,
                     "particleSpin": 1,
-                    "spinFinish": 2
+                    "spinFinish": 2,
+                    "angularDamping": 0,
+                    "angularVelocity": {
+                        "x":0,
+                        "y":0.5,
+                        "z":0
+                    }                    
                 }, "local");
             } else {
                 //UPDATE
