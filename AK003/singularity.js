@@ -45,7 +45,7 @@
         
         var RATIO_Z = 0.24;
         
-        var sizeMultiplicator = 4;
+        var sizeMultiplicator = 3;
         var betlOneId = Entities.addEntity({
             "name": "BELT-01",
             "parentID": starId,
@@ -72,7 +72,6 @@
             "parentID": starId,
             "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
-            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 180}),
             "type": "Model",
             "renderWithZones": renderWithZones,
             "grab": {
@@ -94,7 +93,6 @@
             "parentID": starId,
             "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
-            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 0}),
             "type": "Model",
             "renderWithZones": renderWithZones,
             "grab": {
@@ -116,7 +114,6 @@
             "parentID": starId,
             "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
-            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 180}),
             "type": "Model",
             "renderWithZones": renderWithZones,
             "grab": {
@@ -132,13 +129,12 @@
             "useOriginalPivot": true
         }, "local");
 
-        sizeMultiplicator = 14;
+        sizeMultiplicator = 20;
         var betlOneId = Entities.addEntity({
             "name": "BELT-05",
             "parentID": starId,
             "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
             "localPosition": {"x": 0, "y": 0, "z": 0},
-            "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 0}),
             "type": "Model",
             "renderWithZones": renderWithZones,
             "grab": {
