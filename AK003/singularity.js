@@ -13,10 +13,11 @@
 (function() {
     var ROOT = Script.resolvePath('').split("singularity.js")[0];
     var thisEntity;
-/* //####################################################################### TO REMOVE   
+
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
 
+    var starId = Uuid.NULL;
     var fireMatId = Uuid.NULL;
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
@@ -24,84 +25,35 @@
     var renderWithZones;
     
     var HYTRION_DAY_DURATION = 68400; //sec
-    var STAR_DIAMETER = 1000; //m
-    var DISTANCE_RATIO = 8;
-    var DIAMETER_RATIO = 5;
-    var TROPIC = 15; //degree
+    var STAR_DIAMETER = 500; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
-    
-    var planets = [
-        {
-            "name": "Star Year", 
-            "duration": 360 * HYTRION_DAY_DURATION,
-            "id": Uuid.NULL
-        },
-        {
-            "name": "Planet Month", 
-            "duration": 36 * HYTRION_DAY_DURATION,
-            "id": Uuid.NULL 
-        },
-        {
-            "name": "Planet Week", 
-            "duration": 9 * HYTRION_DAY_DURATION,
-            "id": Uuid.NULL             
-        },
-        {
-            "name": "Planet Day", 
-            "duration": 9 * HYTRION_DAY_DURATION,
-            "id": Uuid.NULL 
-        },
-        {
-            "name": "Planet Hour", 
-            "duration": HYTRION_DAY_DURATION / 24,
-            "id": Uuid.NULL
-        },
-        {
-            "name": "Planet Minute", 
-            "duration": HYTRION_DAY_DURATION / 24 * 60,
-            "id": Uuid.NULL
-        },
-        {
-            "name": "Planet Second", 
-            "duration": HYTRION_DAY_DURATION / 24 * 3600,
-            "id": Uuid.NULL
-        }      
-    ];
-
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
         renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
-        
-        for (var i = 0; i < planets.length; i++) {
-            var parentID;
-            var rotation = GetCurrentCycleValue(360, planets[i].duration);
-            var inclinaison;
-            if (i === 0) {
-                parentID = entityID;
-                planets[i].diameter = STAR_DIAMETER;
-                planets[i].localPosition = {"x": 0, "y": 0, "z": 0};
-                inclinaison = Math.cos(rotation * Math.PI/180) * TROPIC;
-            } else {
-                parentID = planets[i - 1].id;
-                planets[i].diameter = planets[i - 1].diameter / DIAMETER_RATIO; 
-                planets[i].localPosition = {"x": 0, "y": 0, "z": -planets[i].diameter * DISTANCE_RATIO};
-                inclinaison = Math.cos(GetCurrentCycleValue(2 * Math.PI, planets[i - 1].duration)) * TROPIC;
-            }
-            planets[i].id = Entities.addEntity({
-                "name": planets[i].name,
+
+        starId = Entities.addEntity({
+                "name": "STAR",
                 "parentID": parentID,
-                "dimensions": {"x": planets[i].diameter, "y": planets[i].diameter, "z": planets[i].diameter},
-                "localPosition": planets[i].localPosition,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
+                "localPosition": {"x": 0, "y": 0, "z": 0},
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": renderWithZones,
-                "localRotation": Quat.fromVec3Degrees({"x": inclinaison, "y": rotation, "z": 0}),
-                "angularDamping": 0,
-                "angularVelocity": {"x": 0, "y": 0, "z": 0}
-            }, "local");
-        }
+                "renderWithZones": renderWithZones
+        }, "local");
+/*
+        var betlOneId = Entities.addEntity({
+                "name": "BELT-01",
+                "parentID": starId,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
+                "localPosition": {"x": 0, "y": 0, "z": 0},
+                "type": "Model",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": renderWithZones
+        }, "local");        
+*/
 
         updateStar();
         
@@ -113,21 +65,6 @@
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
-            
-            for (var i = 0; i < planets.length; i++) {
-                if (planets[i].id !== Uuid.NULL) {
-                    var rotation = GetCurrentCycleValue(360, planets[i].duration);
-                    var inclinaison;
-                    if (i === 0) {
-                        inclinaison = Math.cos(rotation * Math.PI/180) * TROPIC;
-                    } else {
-                        inclinaison = Math.cos(GetCurrentCycleValue(2 * Math.PI, planets[i - 1].duration)) * TROPIC;
-                    }                    
-                    Entities.editEntity(planets[i].id, {
-                        "localRotation": Quat.fromVec3Degrees({"x": inclinaison, "y": rotation, "z": 0}),
-                    });
-                }
-            }
 
             updateStar();
 
@@ -138,7 +75,7 @@
 
 
     function updateStar() {
-        if (planets[0].id !== Uuid.NULL) {
+        if (starId !== Uuid.NULL) {
             
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
@@ -169,7 +106,7 @@
                 //CREATE
                 fireMatId = Entities.addEntity({
                     "type": "Material",
-                    "parentID": planets[0].id,
+                    "parentID": starId,
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
                     "name": "plasma-material",
@@ -201,7 +138,7 @@
                         "z": 0
                     },
                     "renderWithZones": renderWithZones,
-                    "parentID": planets[0].id,
+                    "parentID": starId,
                     "grab": {
                         "grabbable": false
                     },
@@ -226,7 +163,6 @@
                     }                    
                 });
             } 
-            
             if (fireParticles === Uuid.NULL) {
                 //CREATE
                 fireParticles = Entities.addEntity({
@@ -244,7 +180,7 @@
                         "z": 0
                     },
                     "renderWithZones": renderWithZones,
-                    "parentID": planets[0].id,
+                    "parentID": starId,
                     "grab": {
                         "grabbable": false
                     },
@@ -256,9 +192,9 @@
                     },
                     "alpha": 0.10000000149011612,
                     "textures": ROOT + "images/pitParticle.png",
-                    "maxParticles": 3600,
-                    "lifespan": 12,
-                    "emitRate": 300,
+                    "maxParticles": 2000,
+                    "lifespan": 10,
+                    "emitRate": 200,
                     "emitSpeed": 0,
                     "speedSpread": 0.1 * STAR_DIAMETER,
                     "emitOrientation": {
@@ -268,10 +204,11 @@
                         "w": 1
                     },
                     "emitDimensions": {
-                        "x": 0.75 * STAR_DIAMETER,
-                        "y": 0.75 * STAR_DIAMETER,
-                        "z": 0.75 * STAR_DIAMETER,
+                        "x": STAR_DIAMETER,
+                        "y": STAR_DIAMETER,
+                        "z": STAR_DIAMETER,
                     },
+                    "emitRadiusStart": 1,
                     "polarFinish": 3.1415927410125732,
                     "emitAcceleration": {
                         "x": 0,
@@ -283,10 +220,10 @@
                         "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 1.4 * STAR_DIAMETER,
-                    "radiusSpread": 0.6 * STAR_DIAMETER,
+                    "particleRadius": 0.4 * STAR_DIAMETER,
+                    "radiusSpread": 0.1 * STAR_DIAMETER,
                     "radiusStart": 0.1 * STAR_DIAMETER,
-                    "radiusFinish": 2 * STAR_DIAMETER,
+                    "radiusFinish": 0.6 * STAR_DIAMETER,
                     "colorStart": {
                         "red": fireColorStart[0],
                         "green": fireColorStart[1],
@@ -341,14 +278,12 @@
 
 
     this.unload = function(entityID) {
-        for (var i = 0; i < planets.length; i++) {
-            if (planets[i].id !== Uuid.NULL) {
-                Entities.deleteEntity(planets[i].id);
-            }
+        if (starId !== Uuid.NULL) {
+            Entities.deleteEntity(starId);
         }
         Script.update.disconnect(myTimer);
     };
-*/ //####################################################################### TO REMOVE
+
     /*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
