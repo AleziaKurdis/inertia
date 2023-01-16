@@ -14,6 +14,7 @@
     var ROOT = Script.resolvePath('').split("navigationAmbience.js")[0];
     var isInitiated = false;
     var universeDimension;
+    var universeCenter;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
@@ -478,7 +479,16 @@
             var myPosition = MyAvatar.position;
             var myRotation = MyAvatar.orientation;
             var isInTheEdge = 0;
-
+            
+            var distance = Vec3.distance(myPosition, universeCenter);
+            var vecFromCenter = Vec3.subtract( myPosition, universeCenter);
+            if (distance > (universeDimension.x / 2) - 100 && distance < (universeDimension.x / 2) + 300){
+                myPosition.x = universeCenter.x - vecFromCenter.x;
+                myPosition.y = universeCenter.y - vecFromCenter.y;
+                myPosition.z = universeCenter.z - vecFromCenter.z;
+                MyAvatar.goToLocation( myPosition, true, myRotation);
+            } 
+/*
             if (myPosition.x > universeCenter.x + (universeDimension.x/2) - 100) {
                 myPosition.x = universeCenter.x - (universeDimension.x/2) + 101;
                 isInTheEdge = 1;
@@ -510,7 +520,7 @@
             if (isInTheEdge == 1) {
                 MyAvatar.goToLocation( myPosition, true, myRotation);
             }
-        
+        */
     }
 
     function positionIsInsideEntityBounds(entityID, targetPosition) {
