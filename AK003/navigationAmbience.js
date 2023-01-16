@@ -189,7 +189,7 @@
                 "url": skyTextureUrl
             },
             "bloom": {
-                "bloomIntensity": 0.6
+                "bloomIntensity": 0.5
             },
             "keyLightMode": "enabled",
             "ambientLightMode": "enabled",
