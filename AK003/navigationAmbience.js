@@ -142,7 +142,7 @@
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/darkness.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
-        var skycolor = hslToRgb(hue, 1, 0.55);
+        var skycolor = hslToRgb(hue, 1, 0.75);
 
         
         zoneID = Entities.addEntity({
