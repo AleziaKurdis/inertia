@@ -180,7 +180,7 @@
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
             var fireColorFinish = hslToRgb(hue, 1, 0.15);
-            var bloomFactor = 5;
+            var bloomFactor = 4;
             
             var materialContent = {
                 "materialVersion": 1,

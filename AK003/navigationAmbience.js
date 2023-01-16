@@ -141,6 +141,9 @@
     function generateSky(entityID) {
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/darkness.jpg";
+        var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
+        var skycolor = hslToRgb(hue, 1, 0.55);
+
         
         zoneID = Entities.addEntity({
             "type": "Zone",
@@ -159,9 +162,9 @@
             "shapeType": "sphere",
             "keyLight": {
                 "color": {
-                    "red": 168,
-                    "green": 197,
-                    "blue": 255
+                    "red": skycolor[0],
+                    "green": skycolor[1],
+                    "blue": skycolor[2]
                 },
                 "intensity": 2,
                 "direction": {
@@ -179,9 +182,9 @@
             },
             "skybox": {
                 "color": {
-                    "red": 255,
-                    "green": 255,
-                    "blue": 255
+                    "red": skycolor[0],
+                    "green": skycolor[1],
+                    "blue": skycolor[2]
                 },
                 "url": skyTextureUrl
             },
@@ -659,6 +662,42 @@
 
 		var Ent = Entities.addEntity(properties, "local");        
 
-    }    
-    
+    }
+
+    /*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        var r, g, b;
+
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            var hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+
 })
