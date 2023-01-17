@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hytrion Time Chart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <style>
+        body {
+            background: #615d73;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow:hidden;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #909090;
+            text-align: left;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #FFFFFF;
+            font-weight: 700;            
+        }        
+        td.hytrion {
+            width: 35%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            background: #000000;
+            padding: 2%;
+            vertical-align: top;
+        }
+        td.rl {
+            width: 65%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            background: #FFFFFF;
+            padding: 2%;
+            vertical-align: top;
+        }
+        td.hytrionEx {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #FFFFFF;
+            font-weight: 500;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            background: #000000;
+            padding: 2%;
+            vertical-align: top;
+        }        
+        font.smaller {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            text-decoration: none;
+            font-style: italic;
+            font-variant: normal;
+            text-transform: none;
+        }  
+        div.section {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: #dad5e8; //9c97a8;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            text-align: center;
+            padding: 1%;
+        }       
+        </style>  
+        <script> 
+    
+
+
+
+    var is24 = false;
+    var DAY_DURATION = 68400; //19h
+    var WEEK_DURATION = 615600; //9 days of 19h
+    var YEAR_DURATION = 3600 * 19 * 36 * 10; //10 months of 36 days de 19h
+    var MONTH_DURATION = 3600 * 19 * 36; //36 days de 19h
+    var HOUR_DURATION = 2850;
+    var MINUTE_DURATION = 47.5;    
+    
+    var weekDaysNames = [
+        "Virmonday",
+        "Virtuesday",
+        "Virwednesday",
+        "Virthursday",
+        "Virfriday",
+        "Friturday",
+        "Virsaturday",
+        "Sameday",
+        "Virsunday"
+    ];
+
+    var monthsNames = [
+        "Primum",
+        "Secundum",
+        "Tertium",
+        "Quartum",
+        "Quintilis",
+        "Sextilis",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];    
+    
+
+
+   
+
+   function getHytrionTimeString(timestamp) {
+     
+            var timeInfo = getHourFromSec(GetCurrentCycleValue(8640000, DAY_DURATION, timestamp)/100);
+            var curDayOfWeek = weekDaysNames[Math.floor(GetCurrentCycleValue(9, WEEK_DURATION, timestamp))];
+            
+            var secSince1970 = timestamp/1000;
+            
+            var curYear = Math.ceil(secSince1970 / YEAR_DURATION);
+            
+            var curMonth = monthsNames[Math.floor(GetCurrentCycleValue(10, YEAR_DURATION, timestamp))];
+            
+            var curDayOfMonth = 1 + Math.floor(GetCurrentCycleValue(36, MONTH_DURATION, timestamp));
+            
+            var displayText = "<table style='width:100%;'><tr><td><font style='color:#FFDD00;'><BR>" + curDayOfWeek + "<br>" + curMonth + " " + curDayOfMonth + ", " + curYear + "<br>" + timeInfo + "</font></td></tr></Table>";
+
+            return displayText;
+          
+    }        
+
+   function getRealTimeString(timestamp) {
+
+            var weekday = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+                ];
+
+            var month_rl = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+                ];    
+                
+            var thisTime = new Date(timestamp);
+            
+            var hrs = thisTime.getHours();
+            var mts = thisTime.getMinutes();
+            var timeInfo = getHourFromHourAndMinutes(hrs, mts);
+            var curDayOfWeek = weekday[thisTime.getDay()];           
+            var curYear = thisTime.getFullYear();
+            var curMonth = month_rl[thisTime.getMonth()];
+            var curDayOfMonth = thisTime.getDate();
+            
+            var Uhrs = thisTime.getUTCHours();
+            var Umts = thisTime.getUTCMinutes();
+            var UtimeInfo = getHourFromHourAndMinutes(Uhrs, Umts);
+            var UcurDayOfWeek = weekday[thisTime.getUTCDay()];           
+            var UcurYear = thisTime.getUTCFullYear();
+            var UcurMonth = month_rl[thisTime.getUTCMonth()];
+            var UcurDayOfMonth = thisTime.getUTCDate();
+            
+            var displayText = "<table style='width:100%;'><tr><td><font style='font-weight:500;color:#adadad;'>LOCAL</font><br>" + curDayOfWeek + "<br>" + curMonth + " " + curDayOfMonth + ", " + curYear + "<br>" + timeInfo + "</td>";
+            displayText = displayText + "<td><font style='font-weight:500;color:#adadad;'>UTC</font><br>" + UcurDayOfWeek + "<br>" + UcurMonth + " " + UcurDayOfMonth + ", " + UcurYear + "<br>" + UtimeInfo + "</td></tr></Table>";   
+            return displayText;            
+   }
+
+    function GetCurrentCycleValue(cyclelength, cycleduration, tstamp){
+
+		var TodaySec = tstamp/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
+
+	/*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        var r, g, b;
+
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            var hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+
+    //#####################################
+    function getHourFromSec(daysec){
+        var hours = Math.floor(daysec/3600);
+        var minutes = Math.floor(daysec/60) - (hours * 60);
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        var hoursTwelve = hours % 12;
+        hoursTwelve = hoursTwelve ? hoursTwelve : 12; // the hour '0' should be '12'
+        
+        var minuteZeroized = minutes <= 9 ? '0' + minutes : '' + minutes;
+        /*
+        if (is24 == true) {
+            return hours + ":" + minuteZeroized;
+        }else{
+            return hoursTwelve + ":" + minuteZeroized + " " + ampm
+        }
+        */
+        return hoursTwelve + ":" + minuteZeroized + " " + ampm + " <font class='smaller'>(" + hours + ":" + minuteZeroized + ")</font>"
+        
+    }
+
+    function getHourFromHourAndMinutes(hours, minutes){
+
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        var hoursTwelve = hours % 12;
+        hoursTwelve = hoursTwelve ? hoursTwelve : 12; // the hour '0' should be '12'
+        
+        var minuteZeroized = minutes <= 9 ? '0' + minutes : '' + minutes;
+        /*
+        if (is24 == true) {
+            return hours + ":" + minuteZeroized;
+        }else{
+            return hoursTwelve + ":" + minuteZeroized + " " + ampm
+        }
+        */
+        return hoursTwelve + ":" + minuteZeroized + " " + ampm + " <font class='smaller'>(" + hours + ":" + minuteZeroized + ")</font>"
+    }
+
+  
+</script>
+    </head>
+<body>
+<div class='section'>UNDERSTAND<br>THE LOCAL TIME...</div>
+<table style="width:100%; border-collapse: collapse;">
+<tr>
+<td class ="hytrion">
+<h1>HYTRION<br>CURRENT TIME</h1>
+<div id = "curtime_hytrion"></div>
+</td>
+<td class ="rl">
+<h1>REALITY<br>CURRENT TIME</h1>
+<div id = "curtime_rl"></div>
+</td>
+
+</tr>
+</table><br>
+
+<table style="width:100%; border-collapse: collapse;">
+<tr>
+<td class ="hytrionEx">
+<h2>Hytrion Universal Time (HUT) notation system</h2>
+
+In the Hytrion world, the Day/Night cycle is not matching the cycle of the real world.<br>
+This makes possible to the traveller to experience different in-world time for a regular real world schedule.<br>
+<br>
+Here are the details of the HUT system:<br><br>
+<li>The duration of the "<b>Hytrion Day</b>" is <b>19</b> "real world hours".</li><br><br>
+<li>The "<b>Hytrion Day</b>" is subdivided in <b>24 "Hytrion Hours" of 60 "Hytrion Minutes"</b>.</li><br><br>
+<li>The "<b>Hytrion Week</b>" has <b>9</b> "Hytrion Days":<br><br>
+
+<div align = 'center'><table width = '50%'><tr valign = 'top'>
+<td><font style="color:#b5b0c2;">1- <b>Virmonday</b><br>2- <b>Virtuesday</b><br>3- <b>Virwednesday</b><br>4- <b>Virthursday</b><br>5- <b>Virfriday</b></font></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><font style="color:#b5b0c2;">6- <b>Friturday</b><br>7- <b>Virsaturday</b><br>8- <b>Sameday</b><br>9- <b>Virsunday</b><br></font></td>
+</tr></table></div><br>
+<i><font style="color:#b5b0c2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The prefix "vir" (virtual) has been added to avoid confusion with real time.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Two days as been added: "Friturday" and "Sameday".</i></font></li><br>
+<br>
+<li>There are <b>10</b> "<b>Hytrion Months</b>" in the "<b>Hytrion Year</b>":<br><br>
+<div align = 'center'><table width = '50%'><tr>
+<td><font style="color:#b5b0c2;">1- <b>Primum</b><br>2- <b>Secundum</b><br>3- <b>Tertium</b><br>4- <b>Quartum</b><br>5- <b>Quintilis</b></font></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><font style="color:#b5b0c2;">6- <b>Sextilis</b><br>7- <b>September</b><br>8- <b>October</b><br>9- <b>November</b><br>10- <b>December</b></font></td>
+</tr></table></div><br>
+<i><font style="color:#b5b0c2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This retakes the original roman calendar but without gods and emperors.</i></font></li><br>
+<br>
+<li>Each "<b>Hytrion Month</b>" has <b>36</b> "<b>Hytrion Days</b>".</li><br><br>
+<li>The <b>reference time</b> to compute the "<b>Hytrion Years</b>" is the "<b>Unix epoch time</b>"<br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In real world: 1 January 1970 00:00:00 UTC)</i>.</li><br><br>
+
+</td>
+</tr>
+</table>
+<script>
+
+    var UPDATE_TIMER_INTERVAL = 45000; //each 45 sec timer
+
+    updateClock();
+    
+    var processTimer = setInterval(function(){ 
+        updateClock(); 
+ 
+    }, UPDATE_TIMER_INTERVAL);
+
+
+
+    
+    function updateClock() {
+               
+            var today = new Date();
+
+            document.getElementById("curtime_hytrion").innerHTML = getHytrionTimeString(today.getTime());
+            document.getElementById("curtime_rl").innerHTML = getRealTimeString(today.getTime());
+          
+    } 
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "name":"LIGHT",
+         "albedo":[
+            0.4,
+            0.6627450980392157,
+            1
+         ],
+         "metallic":0.036,
+         "roughness":0.126,
+         "opacity":1,
+         "emissive":[
+            1.2585098039215685,
+            1.8710588235294117,
+            2.84
+         ],
+         "scattering":0,
+         "unlit":false,
+         "model":"hifi_pbr"
+      }
+   ]
+}
