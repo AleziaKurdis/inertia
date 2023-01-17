@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/2000,1,2000\/0,1,0,-0.1"
+      "\/":"\/-2000,-500,2000\/0,1,0,-0.1"
    },
    "Entities":[
       {
@@ -57,6 +57,11 @@
             "y":8000,
             "z":8000
          },
+         "position": {
+             "x": 2000,
+             "y": 500,
+             "z": -2000
+         },         
          "rotation":{
             "x":-1.52587890625e-5,
             "y":-1.52587890625e-5,
@@ -81,7 +86,4108 @@
          "faceCamera":false,
          "isFacingAvatar":false,
          "script": "https://aleziakurdis.github.io/inertia/AK003/navigationAmbience.js"
-      }
+      },
+    {
+    "id": "{5014eafb-5030-4db2-9376-aadfbab10b66}",
+    "type": "Material",
+    "lastEdited": 1673842343893897,
+    "parentID": "{3a74e0f5-a6cd-41ff-8b29-21cb72fef1df}",
+    "name": "WALL-LAMPE_MATERIAL",
+    "position": {
+        "x": 0.1366407573223114,
+        "y": -0.10835742950439453,
+        "z": -0.7121212482452393
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122281960,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2154.19384765625,
+        "y": -1517.8826904296875,
+        "z": 1790.7200927734375,
+        "scale": 1.2652587890625
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{23723790-201c-49da-b9af-d55a2cb536a9}",
+    "type": "Material",
+    "lastEdited": 1673842343892873,
+    "parentID": "{02dd215b-eb6c-4fdf-ad07-0ff1b27378ae}",
+    "name": "WALL-LAMPE_MATERIAL (2)",
+    "position": {
+        "x": 0.136474609375,
+        "y": -0.1083984375,
+        "z": -0.7122802734375
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122281103,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2158.74169921875,
+        "y": -1517.8826904296875,
+        "z": 1789.6470947265625,
+        "scale": 1.287109375
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{682a9576-23a9-4f03-935e-d70f9e9b02a7}",
+    "type": "Material",
+    "lastEdited": 1673842343901333,
+    "parentID": "{bd4e52f4-10e7-492f-8460-87cfbced6e20}",
+    "name": "Plafonier",
+    "position": {
+        "x": -0.104736328125,
+        "y": -1.9903564453125,
+        "z": -0.18671785295009613
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122284264,
+    "lastEditedBy": "{45c3e5cb-14d4-4c0f-8a4b-3c35865c7a39}",
+    "queryAACube": {
+        "x": 2153.327392578125,
+        "y": -1518.020263671875,
+        "z": 1813.6993408203125,
+        "scale": 3.8927001953125
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                1,\n                0.9\n            ],\n            \"emissive\": [\n                3,\n                3,\n                2.6\n            ],\n            \"metallic\": 0.036,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.126,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a8e1f9fe-e4ee-40cb-b177-3b717bf89194}",
+    "type": "Material",
+    "lastEdited": 1673842343901567,
+    "parentID": "{23ac74cf-5a6f-4c2e-b615-bdce4f2cd860}",
+    "name": "WALL-LAMPE_MATERIAL (3)",
+    "position": {
+        "x": 0.136474609375,
+        "y": -0.1083984375,
+        "z": -0.712158203125
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122284423,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2162.69091796875,
+        "y": -1517.8824462890625,
+        "z": 1792.404541015625,
+        "scale": 1.25048828125
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d12b6677-f9cb-4985-b52c-5608fc91a07c}",
+    "type": "Material",
+    "lastEdited": 1673842343901449,
+    "parentID": "{e7a07886-2697-4464-a9b5-7c0150e43a56}",
+    "name": "WALL-LAMPE_MATERIAL (4)",
+    "position": {
+        "x": 0.136474609375,
+        "y": -0.1083984375,
+        "z": -0.7120361328125
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122284611,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2163.716796875,
+        "y": -1517.88232421875,
+        "z": 1796.7454833984375,
+        "scale": 1.27294921875
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a4924593-528a-403b-9710-d559ec26c6af}",
+    "type": "Material",
+    "lastEdited": 1673842343901803,
+    "parentID": "{63f36b4f-dfb2-4725-8129-ac50d5f18271}",
+    "name": "WALL-LAMPE_MATERIAL (5)",
+    "position": {
+        "x": 0.13665771484375,
+        "y": -0.1083984375,
+        "z": -0.712158203125
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122284877,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2171.73779296875,
+        "y": -1517.88232421875,
+        "z": 1793.533935546875,
+        "scale": 1.321533203125
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fd0a2d1e-5561-4674-84c9-2da141af7179}",
+    "type": "Material",
+    "lastEdited": 1673842343901919,
+    "parentID": "{3ccae789-ea24-4858-a6e9-ec9fb3e2a136}",
+    "name": "WALL-LAMPE_MATERIAL (6)",
+    "position": {
+        "x": 0.1368408203125,
+        "y": -0.1083984375,
+        "z": -0.7119140625
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122285025,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 2170.326416015625,
+        "y": -1517.882080078125,
+        "z": 1802.4700927734375,
+        "scale": 1.130615234375
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1943ace2-f5f9-4827-8ab5-c845c5357a9b}",
+    "type": "Material",
+    "lastEdited": 1673842343898725,
+    "parentID": "{1b34b7bc-cff4-4837-82a0-31c57df8cdd4}",
+    "name": "Plafonier (2)",
+    "position": {
+        "x": -0.104736328125,
+        "y": -1.990478515625,
+        "z": -0.18672513961791992
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122282746,
+    "lastEditedBy": "{45c3e5cb-14d4-4c0f-8a4b-3c35865c7a39}",
+    "queryAACube": {
+        "x": 2140.76220703125,
+        "y": -1518.0262451171875,
+        "z": 1805.9041748046875,
+        "scale": 3.854248046875
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                1,\n                0.9\n            ],\n            \"emissive\": [\n                3,\n                3,\n                2.6\n            ],\n            \"metallic\": 0.036,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.126,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c414478b-9e37-4416-b0ae-f964214e4b48}",
+    "type": "Material",
+    "lastEdited": 1673842343897081,
+    "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
+    "name": "WALL-LAMPE_MATERIAL (7)",
+    "position": {
+        "x": 0.136962890625,
+        "y": -0.1085205078125,
+        "z": -0.7122802734375
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.09800875186920166,
+        "z": -0.0000152587890625,
+        "w": 0.9951781034469604
+    },
+    "created": 1673842122282451,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2143.55029296875,
+        "y": -1517.882080078125,
+        "z": 1793.462158203125,
+        "scale": 1.276611328125
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n    \"materialVersion\": 1,\n    \"materials\": [\n        {\n            \"albedo\": [\n                1,\n                0.984313725490196,\n                0.8156862745098039\n            ],\n            \"emissive\": [\n                1.99,\n                1.9275686274509805,\n                1.295450980392157\n            ],\n            \"metallic\": 0.001,\n            \"model\": \"hifi_pbr\",\n            \"name\": \"Mat:LIGHT\",\n            \"opacity\": 1,\n            \"roughness\": 0.5,\n            \"scattering\": 0,\n            \"unlit\": false\n        }\n    ]\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{795f134e-27d5-4b49-9654-0bbbc32fb3f0}",
+    "type": "Light",
+    "lastEdited": 1673842343890987,
+    "parentID": "{3ccae789-ea24-4858-a6e9-ec9fb3e2a136}",
+    "name": "WALL-LAMPE_LIGHT (6)",
+    "position": {
+        "x": 0.0169677734375,
+        "y": -0.18896484375,
+        "z": -0.0732421875
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5808956623077393,
+        "y": -0.005447447299957275,
+        "z": -0.003952085971832275,
+        "w": 0.8139619827270508
+    },
+    "created": 1673842122279547,
+    "lastEditedBy": "{f4340ff1-8b37-4524-bef6-b36d921ef379}",
+    "queryAACube": {
+        "x": 2061.614501953125,
+        "y": -1626.8360595703125,
+        "z": 1693.7581787109375,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 9,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a34e4fda-4671-47ff-a6ae-9414950f1b78}",
+    "type": "Light",
+    "lastEdited": 1673842343891094,
+    "parentID": "{bd4e52f4-10e7-492f-8460-87cfbced6e20}",
+    "name": "PLAFONDIER_LIGHT",
+    "position": {
+        "x": -0.03125,
+        "y": -1.367919921875,
+        "z": 0.07335256040096283
+    },
+    "dimensions": {
+        "x": 34.22481155395508,
+        "y": 34.22481155395508,
+        "z": 34.751712799072266
+    },
+    "rotation": {
+        "x": -0.7099260091781616,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 0.7042801380157471
+    },
+    "created": 1673842122279677,
+    "lastEditedBy": "{45c3e5cb-14d4-4c0f-8a4b-3c35865c7a39}",
+    "queryAACube": {
+        "x": 2125.319580078125,
+        "y": -1547.103759765625,
+        "z": 1785.7960205078125,
+        "scale": 59.58487319946289
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 244,
+        "blue": 199
+    },
+    "isSpotlight": true,
+    "intensity": 20,
+    "exponent": 1,
+    "cutoff": 80.01000213623047,
+    "falloffRadius": 2,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{083eb5ef-c1b4-4a86-8f74-d78cfb6ab935}",
+    "type": "Light",
+    "lastEdited": 1673842343890432,
+    "parentID": "{23ac74cf-5a6f-4c2e-b615-bdce4f2cd860}",
+    "name": "WALL-LAMPE_LIGHT (3)",
+    "position": {
+        "x": 0.016845703125,
+        "y": -0.1893310546875,
+        "z": -0.07415771484375
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5807735919952393,
+        "y": -0.005386412143707275,
+        "z": -0.0038605332374572754,
+        "w": 0.8140230178833008
+    },
+    "created": 1673842122278859,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2053.995361328125,
+        "y": -1626.8367919921875,
+        "z": 1683.60888671875,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a2568ce3-eb1d-4274-ba2a-c0acd7e218da}",
+    "type": "Light",
+    "lastEdited": 1673842343891326,
+    "parentID": "{1b34b7bc-cff4-4837-82a0-31c57df8cdd4}",
+    "name": "PLAFONDIER_LIGHT (2)",
+    "position": {
+        "x": -0.03125,
+        "y": -1.3680419921875,
+        "z": 0.07330138981342316
+    },
+    "dimensions": {
+        "x": 34.22481155395508,
+        "y": 34.22481155395508,
+        "z": 34.751712799072266
+    },
+    "rotation": {
+        "x": -0.7099565267562866,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 0.7042496204376221
+    },
+    "created": 1673842122279951,
+    "lastEditedBy": "{45c3e5cb-14d4-4c0f-8a4b-3c35865c7a39}",
+    "queryAACube": {
+        "x": 2112.715576171875,
+        "y": -1547.1097412109375,
+        "z": 1777.962158203125,
+        "scale": 59.58487319946289
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 244,
+        "blue": 199
+    },
+    "isSpotlight": true,
+    "intensity": 20,
+    "exponent": 1,
+    "cutoff": 80.01000213623047,
+    "falloffRadius": 2,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{42299536-1ce0-4989-bc01-a885b938cb5d}",
+    "type": "Light",
+    "lastEdited": 1673842343890880,
+    "parentID": "{63f36b4f-dfb2-4725-8129-ac50d5f18271}",
+    "name": "WALL-LAMPE_LIGHT (5)",
+    "position": {
+        "x": 0.016815185546875,
+        "y": -0.1890869140625,
+        "z": -0.07373046875
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5808651447296143,
+        "y": -0.005447447299957275,
+        "z": -0.003921568393707275,
+        "w": 0.8139925003051758
+    },
+    "created": 1673842122279381,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2063.048095703125,
+        "y": -1626.83642578125,
+        "z": 1684.76708984375,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cfc99c4d-0216-4a6e-af30-384355b60dd9}",
+    "type": "Material",
+    "lastEdited": 1673842343891434,
+    "parentID": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
+    "name": "Plasma_Material_Metaspaceport",
+    "position": {
+        "x": 4.7270965576171875,
+        "y": 1.045654296875,
+        "z": 0.765869140625
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": -0.7193560600280762,
+        "z": 0.0000152587890625,
+        "w": 0.6946364641189575
+    },
+    "created": 1673842122259741,
+    "lastEditedBy": "{e87d6764-2623-4dd3-8b5b-677405017b32}",
+    "queryAACube": {
+        "x": 2113.681884765625,
+        "y": -1568.1090087890625,
+        "z": 1747.914794921875,
+        "scale": 88.843505859375
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/plasma.json?version=4",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9609e045-2734-4729-a143-6b414d629b1b}",
+    "type": "Light",
+    "lastEdited": 1673842343890772,
+    "parentID": "{e7a07886-2697-4464-a9b5-7c0150e43a56}",
+    "name": "WALL-LAMPE_LIGHT (4)",
+    "position": {
+        "x": 0.0167236328125,
+        "y": -0.189208984375,
+        "z": -0.073974609375
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5808041095733643,
+        "y": -0.005416929721832275,
+        "z": -0.0038910508155822754,
+        "w": 0.8139925003051758
+    },
+    "created": 1673842122279251,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2055.021240234375,
+        "y": -1626.8365478515625,
+        "z": 1688.0103759765625,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{beaa6948-7025-4c9c-9495-1b72d87f6150}",
+    "type": "Light",
+    "lastEdited": 1673842343890322,
+    "parentID": "{02dd215b-eb6c-4fdf-ad07-0ff1b27378ae}",
+    "name": "WALL-LAMPE_LIGHT (2)",
+    "position": {
+        "x": 0.0169677734375,
+        "y": -0.189453125,
+        "z": -0.07421875
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5807430744171143,
+        "y": -0.005386412143707275,
+        "z": -0.0038605332374572754,
+        "w": 0.8140535354614258
+    },
+    "created": 1673842122278673,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2050.002685546875,
+        "y": -1626.837158203125,
+        "z": 1681.0753173828125,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{136f8600-27d3-488e-8fee-62c46b7000f1}",
+    "type": "Light",
+    "lastEdited": 1673842343889245,
+    "parentID": "{3a74e0f5-a6cd-41ff-8b29-21cb72fef1df}",
+    "name": "WALL-LAMPE_LIGHT",
+    "position": {
+        "x": 0.016799181699752808,
+        "y": -0.18945884704589844,
+        "z": -0.074214406311512
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5807125568389893,
+        "y": -0.005355894565582275,
+        "z": -0.0038300156593322754,
+        "w": 0.8140840530395508
+    },
+    "created": 1673842122277405,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2045.4014892578125,
+        "y": -1626.837158203125,
+        "z": 1682.126953125,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{20198a05-5c81-46fb-ba60-79eea9e38669}",
+    "type": "Light",
+    "lastEdited": 1673842343889589,
+    "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
+    "name": "WALL-LAMPE_LIGHT (7)",
+    "position": {
+        "x": -0.106597900390625,
+        "y": -0.1871337890625,
+        "z": -0.248046875
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5809872150421143,
+        "y": -0.005996823310852051,
+        "z": -0.0028534531593322754,
+        "w": 0.8139009475708008
+    },
+    "created": 1673842122277922,
+    "lastEditedBy": "{f4340ff1-8b37-4524-bef6-b36d921ef379}",
+    "queryAACube": {
+        "x": 2034.7767333984375,
+        "y": -1626.8341064453125,
+        "z": 1684.760009765625,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 9,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{42b4a589-4332-44be-95e1-e5153cedf14c}",
+    "type": "Light",
+    "lastEdited": 1673842343889483,
+    "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
+    "name": "WALL-LAMPE_LIGHT (7)",
+    "position": {
+        "x": 0.0169677734375,
+        "y": -0.1890869140625,
+        "z": -0.0736083984375
+    },
+    "dimensions": {
+        "x": 119.70613861083984,
+        "y": 119.70613861083984,
+        "z": 138.2247314453125
+    },
+    "rotation": {
+        "x": -0.5809261798858643,
+        "y": -0.005477964878082275,
+        "z": -0.003982603549957275,
+        "w": 0.8139314651489258
+    },
+    "created": 1673842122277666,
+    "lastEditedBy": "{4997095b-5f23-4cba-b409-d378402a4c77}",
+    "queryAACube": {
+        "x": 2034.9696044921875,
+        "y": -1626.836181640625,
+        "z": 1684.66796875,
+        "scale": 218.55250549316406
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 246,
+        "blue": 212
+    },
+    "isSpotlight": true,
+    "intensity": 10,
+    "exponent": 10,
+    "cutoff": 60,
+    "falloffRadius": 8,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{07cb7ff0-a375-44c0-bcd3-14def9979e22}",
+    "type": "Image",
+    "lastEdited": 1673842343892642,
+    "name": "landingBaysA-B",
+    "position": {
+        "x": 2.6806640625,
+        "y": 1.854248046875,
+        "z": 22.370361328125
+    },
+    "dimensions": {
+        "x": 1.0466907024383545,
+        "y": 1.1778371334075928,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.2742198705673218,
+        "z": -0.0000762939453125,
+        "w": 0.9616693258285522
+    },
+    "created": 1673842122280859,
+    "lastEditedBy": "{9a346d9e-6075-4fb2-8cd2-a6c2eff41fd9}",
+    "queryAACube": {
+        "x": 1.8927931785583496,
+        "y": 1.0663771629333496,
+        "z": 21.582490921020508,
+        "scale": 1.5757416486740112
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/landingBaysA-B.png",
+    "emissive": true,
+    "textures": {
+        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/landingBaysA-B.png"
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
+    "type": "Model",
+    "lastEdited": 1673842343889352,
+    "name": "WALL_LAMPE (7)",
+    "position": {
+        "x": 3.98193359375,
+        "y": 6.3653564453125,
+        "z": 28.00146484375
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.6441901326179504,
+        "z": 0.0001983642578125,
+        "w": -0.7648890018463135
+    },
+    "created": 1673842122277583,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 3.4707248210906982,
+        "y": 5.854147434234619,
+        "z": 27.49025535583496,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3a74e0f5-a6cd-41ff-8b29-21cb72fef1df}",
+    "type": "Model",
+    "lastEdited": 1673842343888996,
+    "name": "WALL_LAMPE",
+    "position": {
+        "x": 14.371337890625,
+        "y": 6.36474609375,
+        "z": 25.502197265625
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0001068115234375,
+        "y": 0.2912489175796509,
+        "z": -0.0000152587890625,
+        "w": 0.9566338062286377
+    },
+    "created": 1673842122277022,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 13.860129356384277,
+        "y": 5.853537082672119,
+        "z": 24.99098777770996,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{23ac74cf-5a6f-4c2e-b615-bdce4f2cd860}",
+    "type": "Model",
+    "lastEdited": 1673842343889948,
+    "name": "WALL_LAMPE (3)",
+    "position": {
+        "x": 22.868408203125,
+        "y": 6.364990234375,
+        "z": 26.94384765625
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0001373291015625,
+        "y": -0.44911879301071167,
+        "z": 0.0000457763671875,
+        "w": 0.8934614658355713
+    },
+    "created": 1673842122278349,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 22.35719871520996,
+        "y": 5.853781223297119,
+        "z": 26.43263816833496,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e7a07886-2697-4464-a9b5-7c0150e43a56}",
+    "type": "Model",
+    "lastEdited": 1673842343890648,
+    "name": "WALL_LAMPE (4)",
+    "position": {
+        "x": 23.894287109375,
+        "y": 6.3651123046875,
+        "z": 31.2847900390625
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0001373291015625,
+        "y": -0.7687647938728333,
+        "z": 0.0000457763671875,
+        "w": 0.6395208835601807
+    },
+    "created": 1673842122279169,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 23.38307762145996,
+        "y": 5.853903293609619,
+        "z": 30.77358055114746,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d21cebad-4f80-4f18-8a11-9c958885be52}",
+    "type": "Box",
+    "lastEdited": 1673842343892986,
+    "visible": false,
+    "name": "TIME-GREETING",
+    "position": {
+        "x": 24.647216796875,
+        "y": 2.8525390625,
+        "z": 19.7391357421875
+    },
+    "dimensions": {
+        "x": 4.021854400634766,
+        "y": 0.762992262840271,
+        "z": 0.11965207755565643
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.2742503881454468,
+        "z": -0.0000457763671875,
+        "w": 0.9616388082504272
+    },
+    "created": 1673842122281224,
+    "lastEditedBy": "{74e8d02f-a686-43ee-8c01-6079fe517b0a}",
+    "queryAACube": {
+        "x": 22.59954833984375,
+        "y": 0.80487060546875,
+        "z": 17.69146728515625,
+        "scale": 4.0953369140625
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/hytrionClock.js?effect=none&mode24=false&display=5&version=22",
+    "scriptTimestamp": 1595040858112,
+    "color": {
+        "red": 79,
+        "green": 188,
+        "blue": 255
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{7b09fcec-c9e7-40e0-8eee-5f9c61a468e7}",
+    "type": "Text",
+    "lastEdited": 1673842343893643,
+    "name": "Gate B",
+    "position": {
+        "x": 24.69921875,
+        "y": 3.8990478515625,
+        "z": 18.202392578125
+    },
+    "dimensions": {
+        "x": 2.11362361907959,
+        "y": 3.3150906562805176,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": 0.0003204345703125,
+        "y": 0.9626764059066772,
+        "z": 0.0001068115234375,
+        "w": 0.2705882787704468
+    },
+    "created": 1673842122281730,
+    "lastEditedBy": "{d273fcbb-863d-4caf-8594-f7cf57555f30}",
+    "queryAACube": {
+        "x": 22.733428955078125,
+        "y": 1.9332572221755981,
+        "z": 16.236602783203125,
+        "scale": 3.9315812587738037
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "text": "B",
+    "lineHeight": 2.5,
+    "textColor": {
+        "red": 51,
+        "green": 255,
+        "blue": 0
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{02dd215b-eb6c-4fdf-ad07-0ff1b27378ae}",
+    "type": "Model",
+    "lastEdited": 1673842343889822,
+    "name": "WALL_LAMPE (2)",
+    "position": {
+        "x": 18.919189453125,
+        "y": 6.36474609375,
+        "z": 24.4510498046875
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0001373291015625,
+        "y": -0.0631570816040039,
+        "z": 0.0000152587890625,
+        "w": 0.99798583984375
+    },
+    "created": 1673842122278216,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 18.40797996520996,
+        "y": 5.853537082672119,
+        "z": 23.93984031677246,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{6357d37c-de18-49a4-9ecf-49160d1bd833}",
+    "type": "Box",
+    "lastEdited": 1673842343893100,
+    "visible": false,
+    "name": "TIME-HOUR",
+    "position": {
+        "x": 25.03271484375,
+        "y": 2.1121826171875,
+        "z": 19.9967041015625
+    },
+    "dimensions": {
+        "x": 3.7574172019958496,
+        "y": 0.7571346759796143,
+        "z": 0.11965207755565643
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.2733653783798218,
+        "z": -0.0000457763671875,
+        "w": 0.9619134664535522
+    },
+    "created": 1673842122281346,
+    "lastEditedBy": "{f0f74ebc-97b6-47c3-8c78-8d44e4db244b}",
+    "queryAACube": {
+        "x": 23.115310668945312,
+        "y": 0.19477856159210205,
+        "z": 18.079299926757812,
+        "scale": 3.834808111190796
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/hytrionClock.js?effect=none&mode24=false&display=0&version=22",
+    "scriptTimestamp": 1595040858112,
+    "color": {
+        "red": 255,
+        "green": 145,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{5778c71b-1e50-48f0-a07b-4cad9aa9c53f}",
+    "type": "Image",
+    "lastEdited": 1673842343893357,
+    "name": "ARROW",
+    "position": {
+        "x": 15.804443359375,
+        "y": 2.1322021484375,
+        "z": 17.9500732421875
+    },
+    "dimensions": {
+        "x": 1.7813034057617188,
+        "y": 2.6950018405914307,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0005035400390625,
+        "y": 0.11564815044403076,
+        "z": -0.0005645751953125,
+        "w": 0.9932860136032104
+    },
+    "created": 1673842122281551,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 14.189189910888672,
+        "y": 0.5169484615325928,
+        "z": 16.334819793701172,
+        "scale": 3.2305073738098145
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "color": {
+        "red": 255,
+        "green": 68,
+        "blue": 0
+    },
+    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png",
+    "emissive": true,
+    "keepAspectRatio": false,
+    "textures": {
+        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png"
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3e7dcfd3-164b-490c-ba5b-9311701e94da}",
+    "type": "Text",
+    "lastEdited": 1673842343893493,
+    "name": "Gate A",
+    "position": {
+        "x": 14.69580078125,
+        "y": 3.9063720703125,
+        "z": 16.8485107421875
+    },
+    "dimensions": {
+        "x": 2.11362361907959,
+        "y": 3.3150906562805176,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0002899169921875,
+        "y": -0.9936827421188354,
+        "z": -0.0002288818359375,
+        "w": 0.11223006248474121
+    },
+    "created": 1673842122281629,
+    "lastEditedBy": "{d273fcbb-863d-4caf-8594-f7cf57555f30}",
+    "queryAACube": {
+        "x": 12.730010032653809,
+        "y": 1.9405814409255981,
+        "z": 14.882719993591309,
+        "scale": 3.9315812587738037
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "text": "A",
+    "lineHeight": 2.5,
+    "textColor": {
+        "red": 255,
+        "green": 153,
+        "blue": 0
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1b34b7bc-cff4-4837-82a0-31c57df8cdd4}",
+    "type": "Model",
+    "lastEdited": 1673842343891201,
+    "name": "LANTERNE-PLAFONIER_PORTUAR (2)",
+    "position": {
+        "x": 2.20556640625,
+        "y": 7.7869873046875,
+        "z": 41.7093505859375
+    },
+    "dimensions": {
+        "x": 1.567910075187683,
+        "y": 2.777853488922119,
+        "z": 1.5679106712341309
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122279868,
+    "lastEditedBy": "{925c7322-cea8-4be4-8eb9-3f0c7a2729c8}",
+    "queryAACube": {
+        "x": 0.4284088611602783,
+        "y": 6.009829521179199,
+        "z": 39.932193756103516,
+        "scale": 3.5543150901794434
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/LANTERNE-PLAFONIER_PORTUAR.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a3f777b5-4517-4262-a1db-c4256c78ec20}",
+    "type": "Sphere",
+    "lastEdited": 1673842343901683,
+    "visible": false,
+    "name": "Radio Cafe",
+    "position": {
+        "x": 24.42578125,
+        "y": 5.0128173828125,
+        "z": 39.216552734375
+    },
+    "dimensions": {
+        "x": 0.25,
+        "y": 0.25,
+        "z": 0.25
+    },
+    "rotation": {
+        "x": 0.12184333801269531,
+        "y": -0.0000457763671875,
+        "z": -0.0000152587890625,
+        "w": 0.9925230741500854
+    },
+    "created": 1673842122284767,
+    "lastEditedBy": "{74e8d02f-a686-43ee-8c01-6079fe517b0a}",
+    "queryAACube": {
+        "x": 24.209274291992188,
+        "y": 4.796310901641846,
+        "z": 39.00004577636719,
+        "scale": 0.4330126941204071
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/radio/radio.php?list=cafebar&range=12",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "alpha": 0.800000011920929,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3ccae789-ea24-4858-a6e9-ec9fb3e2a136}",
+    "type": "Model",
+    "lastEdited": 1673842343889694,
+    "name": "WALL_LAMPE (6)",
+    "position": {
+        "x": 30.50390625,
+        "y": 6.3653564453125,
+        "z": 37.0093994140625
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0002593994140625,
+        "y": -0.8737468719482422,
+        "z": -0.0000152587890625,
+        "w": 0.48638129234313965
+    },
+    "created": 1673842122278063,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 29.99269676208496,
+        "y": 5.854147434234619,
+        "z": 36.498191833496094,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2d24a48f-372f-450b-8484-8e2355394cd2}",
+    "type": "Image",
+    "lastEdited": 1673842343899929,
+    "name": "ARROW (2)",
+    "position": {
+        "x": 27.017822265625,
+        "y": 2.1376953125,
+        "z": 33.765625
+    },
+    "dimensions": {
+        "x": 1.7813034057617188,
+        "y": 2.6950018405914307,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": 0.9852597713470459,
+        "y": -0.0004425048828125,
+        "z": 0.17088580131530762,
+        "w": 0.0005950927734375
+    },
+    "created": 1673842122283078,
+    "lastEditedBy": "{219912b1-cdf3-49a0-b841-d788686b37a7}",
+    "queryAACube": {
+        "x": 25.402568817138672,
+        "y": 0.5224416255950928,
+        "z": 32.15037155151367,
+        "scale": 3.2305073738098145
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "color": {
+        "red": 255,
+        "green": 68,
+        "blue": 0
+    },
+    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png",
+    "emissive": true,
+    "keepAspectRatio": false,
+    "textures": {
+        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png"
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bd4e52f4-10e7-492f-8460-87cfbced6e20}",
+    "type": "Model",
+    "lastEdited": 1673842343890197,
+    "name": "LANTERNE-PLAFONIER_PORTUAR",
+    "position": {
+        "x": 14.8095703125,
+        "y": 7.7928466796875,
+        "z": 49.543212890625
+    },
+    "dimensions": {
+        "x": 1.602000117301941,
+        "y": 2.8382506370544434,
+        "z": 1.6020007133483887
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122278565,
+    "lastEditedBy": "{925c7322-cea8-4be4-8eb9-3f0c7a2729c8}",
+    "queryAACube": {
+        "x": 12.993773460388184,
+        "y": 5.977049350738525,
+        "z": 47.7274169921875,
+        "scale": 3.63159441947937
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/LANTERNE-PLAFONIER_PORTUAR.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2337e209-9d4a-4238-902b-1d88a57331cb}",
+    "type": "Text",
+    "lastEdited": 1673842343899003,
+    "name": "ARRIVAL",
+    "position": {
+        "x": 31.74755859375,
+        "y": 4.4930419921875,
+        "z": 32.2344970703125
+    },
+    "dimensions": {
+        "x": 3.764141321182251,
+        "y": 0.7556774616241455,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.6474250555038452,
+        "z": -0.0000762939453125,
+        "w": 0.7620813846588135
+    },
+    "created": 1673842122282898,
+    "lastEditedBy": "{5bb8dd01-7263-48aa-b21a-08d2cef7babb}",
+    "queryAACube": {
+        "x": 29.82792854309082,
+        "y": 2.5734124183654785,
+        "z": 30.31486701965332,
+        "scale": 3.839258909225464
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "text": "ARRIVALS",
+    "lineHeight": 0.699999988079071,
+    "textColor": {
+        "red": 74,
+        "green": 195,
+        "blue": 255
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "textEffectColor": {
+        "red": 74,
+        "green": 195,
+        "blue": 255
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3c4df2cb-41e2-4255-85bb-42edfa827ef4}",
+    "type": "Box",
+    "lastEdited": 1673842343900045,
+    "visible": false,
+    "name": "CLOCK",
+    "position": {
+        "x": 5.731201171875,
+        "y": 3.2855224609375,
+        "z": 30.9136962890625
+    },
+    "dimensions": {
+        "x": 3.5339627265930176,
+        "y": 0.5135989189147949,
+        "z": 0.11965207755565643
+    },
+    "rotation": {
+        "x": -0.0001068115234375,
+        "y": 0.015396356582641602,
+        "z": -0.0001373291015625,
+        "w": 0.9998779296875
+    },
+    "created": 1673842122283152,
+    "lastEditedBy": "{f0f74ebc-97b6-47c3-8c78-8d44e4db244b}",
+    "queryAACube": {
+        "x": 3.944654703140259,
+        "y": 1.4989759922027588,
+        "z": 29.12714958190918,
+        "scale": 3.5730929374694824
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/hytrionClock.js?effect=none&mode24=false&display=0&version=22",
+    "scriptTimestamp": 1595040858112,
+    "color": {
+        "red": 255,
+        "green": 242,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{63f36b4f-dfb2-4725-8129-ac50d5f18271}",
+    "type": "Model",
+    "lastEdited": 1673842343890072,
+    "name": "WALL_LAMPE (5)",
+    "position": {
+        "x": 31.915283203125,
+        "y": 6.3651123046875,
+        "z": 28.0732421875
+    },
+    "dimensions": {
+        "x": 0.4049546420574188,
+        "y": 0.7101731300354004,
+        "z": 0.6140062808990479
+    },
+    "rotation": {
+        "x": -0.0001983642578125,
+        "y": -0.6136720776557922,
+        "z": -0.0000152587890625,
+        "w": 0.7895475625991821
+    },
+    "created": 1673842122278442,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 31.40407371520996,
+        "y": 5.853903293609619,
+        "z": 27.56203269958496,
+        "scale": 1.022417664527893
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/WALL_LAMPE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1b30eea9-c934-4483-9b3e-20aed8b5f51f}",
+    "type": "Box",
+    "lastEdited": 1673842343899810,
+    "name": "Arrival_Backplate",
+    "position": {
+        "x": 31.600341796875,
+        "y": 4.5518798828125,
+        "z": 32.661376953125
+    },
+    "dimensions": {
+        "x": 3.003236770629883,
+        "y": 0.6123578548431396,
+        "z": 0.1601656973361969
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.6474250555038452,
+        "z": -0.0001068115234375,
+        "w": 0.7620813846588135
+    },
+    "created": 1673842122282977,
+    "lastEditedBy": "{5bb8dd01-7263-48aa-b21a-08d2cef7babb}",
+    "queryAACube": {
+        "x": 30.06573486328125,
+        "y": 3.017273426055908,
+        "z": 31.12677001953125,
+        "scale": 3.0692126750946045
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "alpha": 0.800000011920929,
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b8f2e40b-4ddc-4481-9880-4ad8ca0c0a96}",
+    "type": "Box",
+    "lastEdited": 1673842343900166,
+    "name": "TIME_BackPlate",
+    "position": {
+        "x": 5.8310546875,
+        "y": 3.121826171875,
+        "z": 30.796875
+    },
+    "dimensions": {
+        "x": 4.004110336303711,
+        "y": 1.0161640644073486,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.0173799991607666,
+        "z": -0.0000762939453125,
+        "w": 0.999847412109375
+    },
+    "created": 1673842122283249,
+    "lastEditedBy": "{f0f74ebc-97b6-47c3-8c78-8d44e4db244b}",
+    "queryAACube": {
+        "x": 3.763115406036377,
+        "y": 1.053886890411377,
+        "z": 28.72893524169922,
+        "scale": 4.135878562927246
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "alpha": 0.8999999761581421,
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{08facd57-fbce-4d6e-9d46-b436e44f45c6}",
+    "type": "Box",
+    "lastEdited": 1673842343900769,
+    "visible": false,
+    "name": "TIME-DAY_DATE",
+    "position": {
+        "x": 5.844482421875,
+        "y": 2.84423828125,
+        "z": 30.8973388671875
+    },
+    "dimensions": {
+        "x": 3.8394558429718018,
+        "y": 0.30534976720809937,
+        "z": 0.11965207755565643
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.0174410343170166,
+        "z": -0.0000762939453125,
+        "w": 0.999847412109375
+    },
+    "created": 1673842122283746,
+    "lastEditedBy": "{f0f74ebc-97b6-47c3-8c78-8d44e4db244b}",
+    "queryAACube": {
+        "x": 3.9177639484405518,
+        "y": 0.9175198078155518,
+        "z": 28.97062110900879,
+        "scale": 3.8534369468688965
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/hytrionClock.js?effect=none&mode24=false&display=1&version=22",
+    "scriptTimestamp": 1595040858112,
+    "color": {
+        "red": 119,
+        "green": 255,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d87fb7ac-d983-43aa-8db2-67c5ad845823}",
+    "type": "Model",
+    "lastEdited": 1673842343902038,
+    "name": "MAIL_SEATS_ISLAND.fbx (3)",
+    "position": {
+        "x": 39.2099609375,
+        "y": 0.6302490234375,
+        "z": 29.6329345703125
+    },
+    "dimensions": {
+        "x": 2.5222902297973633,
+        "y": 1.220035195350647,
+        "z": 5.556117534637451
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.024521231651306152,
+        "z": -0.0001983642578125,
+        "w": 0.99969482421875
+    },
+    "created": 1673842122285183,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 36.098655700683594,
+        "y": -2.481055974960327,
+        "z": 26.521629333496094,
+        "scale": 6.222609996795654
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/MAIL_SEATS_ISLAND.fbx?version=2",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{67bdde84-2884-42c3-bd9c-34a1c2c75b00}",
+    "type": "Model",
+    "lastEdited": 1673842343900281,
+    "name": "MAIL_SEATS_ISLAND.fbx",
+    "position": {
+        "x": 30.1787109375,
+        "y": 0.6331787109375,
+        "z": 48.2381591796875
+    },
+    "dimensions": {
+        "x": 2.5222902297973633,
+        "y": 1.220035195350647,
+        "z": 5.556117534637451
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.4774700403213501,
+        "z": -0.0000152587890625,
+        "w": 0.8786602020263672
+    },
+    "created": 1673842122283333,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 27.067405700683594,
+        "y": -2.478126287460327,
+        "z": 45.126853942871094,
+        "scale": 6.222609996795654
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/MAIL_SEATS_ISLAND.fbx?version=2",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bedfb35b-e6ea-487d-be2e-64ed90f73918}",
+    "type": "Text",
+    "lastEdited": 1673842343892405,
+    "name": "LOCAL AIRSPACE",
+    "position": {
+        "x": 0.34765625,
+        "y": 3.92138671875,
+        "z": 20.9306640625
+    },
+    "dimensions": {
+        "x": 4.534749984741211,
+        "y": 0.640815258026123,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0001068115234375,
+        "y": -0.27605098485946655,
+        "z": -0.0001068115234375,
+        "w": 0.9611505270004272
+    },
+    "created": 1673842122280711,
+    "lastEditedBy": "{b35eeeca-dccf-43bb-9412-7947d8401c0a}",
+    "queryAACube": {
+        "x": -1.9422509670257568,
+        "y": 1.6314795017242432,
+        "z": 18.640756607055664,
+        "scale": 4.579814434051514
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "text": "LOCAL AIRSPACE",
+    "lineHeight": 0.6000000238418579,
+    "textColor": {
+        "red": 255,
+        "green": 77,
+        "blue": 0
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8bf78dee-cb71-4cd8-9c05-91b88fc10fd0}",
+    "type": "Box",
+    "lastEdited": 1673842343892527,
+    "name": "Locar Airspace BackPlate",
+    "position": {
+        "x": 0.260009765625,
+        "y": 3.970458984375,
+        "z": 20.7645263671875
+    },
+    "dimensions": {
+        "x": 4.372339725494385,
+        "y": 0.5358155369758606,
+        "z": 0.18387655913829803
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.27653926610946655,
+        "z": -0.0000457763671875,
+        "w": 0.9609979391098022
+    },
+    "created": 1673842122280785,
+    "lastEditedBy": "{b35eeeca-dccf-43bb-9412-7947d8401c0a}",
+    "queryAACube": {
+        "x": -1.9444324970245361,
+        "y": 1.7660167217254639,
+        "z": 18.560083389282227,
+        "scale": 4.408884525299072
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "alpha": 0.800000011920929,
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
+    "type": "Model",
+    "lastEdited": 1673842343888749,
+    "name": "AK003-1_METASPACEPORT",
+    "position": {
+        "x": 17.769775390625,
+        "y": 0.0489501953125,
+        "z": 26.3646240234375
+    },
+    "dimensions": {
+        "x": 64.89075469970703,
+        "y": 21.488723754882812,
+        "z": 56.7502326965332
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7193255424499512,
+        "z": -0.0000457763671875,
+        "w": 0.6946669816970825
+    },
+    "created": 1673842122215217,
+    "lastEditedBy": "{76ff5fe8-6fb8-439b-895e-928389584c5f}",
+    "queryAACube": {
+        "x": -26.651966094970703,
+        "y": -44.3727912902832,
+        "z": -18.057117462158203,
+        "scale": 88.8434829711914
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/HYTRION_METASPACEPORT.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4c6ca369-284f-45ed-ac4d-01f4a2554c59}",
+    "type": "Model",
+    "lastEdited": 1673842343900540,
+    "name": "TROPICAL_TREE.fbx (5)",
+    "position": {
+        "x": 29.860107421875,
+        "y": 2.196533203125,
+        "z": 47.352783203125
+    },
+    "dimensions": {
+        "x": 4.038459777832031,
+        "y": 3.764500856399536,
+        "z": 3.70432710647583
+    },
+    "rotation": {
+        "x": -0.09303426742553711,
+        "y": -0.11277943849563599,
+        "z": -0.06617838144302368,
+        "w": 0.9870297908782959
+    },
+    "created": 1673842122283560,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 26.535852432250977,
+        "y": -1.1277210712432861,
+        "z": 44.02853012084961,
+        "scale": 6.648508548736572
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{08253825-5e59-40b0-a7ec-a03536a1a320}",
+    "type": "ParticleEffect",
+    "lastEdited": 1673842343890540,
+    "name": "PORTAL_PLASMA",
+    "position": {
+        "x": 17.795166015625,
+        "y": 1.80517578125,
+        "z": 30.43798828125
+    },
+    "dimensions": {
+        "x": 17.520000457763672,
+        "y": 17.520000457763672,
+        "z": 17.520000457763672
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122279063,
+    "lastEditedBy": "{ffe3a990-d173-4d87-a6a4-4bbd53f267d0}",
+    "queryAACube": {
+        "x": 2.622401237487793,
+        "y": -13.367588996887207,
+        "z": 15.265223503112793,
+        "scale": 30.345529556274414
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/portalSound.js",
+    "shapeType": "ellipsoid",
+    "color": {
+        "red": 0,
+        "green": 119,
+        "blue": 255
+    },
+    "alpha": 0,
+    "textures": "http://eu-central-1.linodeobjects.com/vircadia-assets/interface/default/default_particle.png",
+    "maxParticles": 150,
+    "lifespan": 4,
+    "emitRate": 30,
+    "emitSpeed": 0.6000000238418579,
+    "speedSpread": 0.30000001192092896,
+    "emitOrientation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "emitDimensions": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+    },
+    "polarFinish": 3.1415927410125732,
+    "emitAcceleration": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "particleRadius": 4,
+    "radiusSpread": 0.800000011920929,
+    "radiusStart": 1.5,
+    "radiusFinish": 4,
+    "colorStart": {
+        "red": 199,
+        "green": 225,
+        "blue": 255
+    },
+    "colorFinish": {
+        "red": 0,
+        "green": 13,
+        "blue": 255
+    },
+    "alphaStart": 1,
+    "alphaFinish": null,
+    "emitterShouldTrail": true,
+    "spinSpread": 1.5700000524520874,
+    "spinStart": -1.5700000524520874,
+    "spinFinish": 1.5700000524520874,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}",
+    "type": "Zone",
+    "lastEdited": 1673842343889127,
+    "name": "LOCAL_ZONE_METASPACEPORT",
+    "position": {
+        "x": 17.769775390625,
+        "y": 0.0489501953125,
+        "z": 26.3646240234375
+    },
+    "dimensions": {
+        "x": 900,
+        "y": 900,
+        "z": 900
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122277331,
+    "lastEditedBy": "{1bfa0d03-a48f-4d11-85ae-4ef19399e561}",
+    "queryAACube": {
+        "x": -761.653076171875,
+        "y": -779.3739013671875,
+        "z": -753.0582275390625,
+        "scale": 1558.845703125
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "box",
+    "keyLight": {
+        "direction": {
+            "x": 0,
+            "y": -0.7071067690849304,
+            "z": 0.7071067690849304
+        },
+        "castShadows": true
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{684692d4-6800-48a9-a2d3-3625008f9251}",
+    "type": "Light",
+    "lastEdited": 1673842343892277,
+    "name": "SIGLE_ENTRANCE_LIGHT",
+    "position": {
+        "x": 5.317138671875,
+        "y": 2.799560546875,
+        "z": 18.421142578125
+    },
+    "dimensions": {
+        "x": 7.441174507141113,
+        "y": 7.441174507141113,
+        "z": 7.441174507141113
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.4935225248336792,
+        "z": -0.0000152587890625,
+        "w": 0.8697489500045776
+    },
+    "created": 1673842122280634,
+    "lastEditedBy": "{d273fcbb-863d-4caf-8594-f7cf57555f30}",
+    "queryAACube": {
+        "x": -1.1271076202392578,
+        "y": -3.644685745239258,
+        "z": 11.976896286010742,
+        "scale": 12.888492584228516
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "color": {
+        "red": 0,
+        "green": 149,
+        "blue": 255
+    },
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{44f667a8-1cd6-40fa-be6a-1b38893fd6d4}",
+    "type": "Model",
+    "lastEdited": 1673842343894034,
+    "name": "MAIL_SEATS_ISLAND.fbx (2)",
+    "position": {
+        "x": 36.9345703125,
+        "y": 0.631591796875,
+        "z": 40.2362060546875
+    },
+    "dimensions": {
+        "x": 2.5222902297973633,
+        "y": 1.220035195350647,
+        "z": 5.556117534637451
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.2514533996582031,
+        "z": -0.0001373291015625,
+        "w": 0.9678645133972168
+    },
+    "created": 1673842122282091,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 33.823265075683594,
+        "y": -2.479713201522827,
+        "z": 37.124900817871094,
+        "scale": 6.222609996795654
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/MAIL_SEATS_ISLAND.fbx?version=2",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{83f5293f-14d1-4f06-8660-df23eb7be2df}",
+    "type": "Light",
+    "lastEdited": 1673842343891554,
+    "name": "PLASMA LIGHT",
+    "position": {
+        "x": 17.864013671875,
+        "y": 1.093994140625,
+        "z": 30.387451171875
+    },
+    "dimensions": {
+        "x": 11.810162544250488,
+        "y": 11.810162544250488,
+        "z": 11.810162544250488
+    },
+    "rotation": {
+        "x": -0.7078507542610168,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 0.7063553333282471
+    },
+    "created": 1673842122280113,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": 7.636113166809082,
+        "y": -9.133906364440918,
+        "z": 20.159549713134766,
+        "scale": 20.455801010131836
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 149,
+        "blue": 255
+    },
+    "intensity": 10,
+    "exponent": 0.800000011920929,
+    "cutoff": 37,
+    "falloffRadius": 9,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{85c60123-f1dc-46d2-bd0a-2cccfe51a579}",
+    "type": "Model",
+    "lastEdited": 1673842343896057,
+    "name": "TROPICAL_TREE.fbx (4)",
+    "position": {
+        "x": 36.5859375,
+        "y": 0.5743408203125,
+        "z": 40.319580078125
+    },
+    "dimensions": {
+        "x": 2.0093421936035156,
+        "y": 1.8730332851409912,
+        "z": 1.843093752861023
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.28398561477661133,
+        "z": -0.0000457763671875,
+        "w": 0.9588006734848022
+    },
+    "created": 1673842122282335,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 34.931949615478516,
+        "y": -1.0796470642089844,
+        "z": 38.665592193603516,
+        "scale": 3.3079757690429688
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{12667b72-a582-4a80-8e09-901454865bef}",
+    "type": "Light",
+    "lastEdited": 1673842343900994,
+    "name": "CAFE LIGHT RED",
+    "position": {
+        "x": 24.27294921875,
+        "y": 4.4176025390625,
+        "z": 39.35595703125
+    },
+    "dimensions": {
+        "x": 9.115063667297363,
+        "y": 9.115063667297363,
+        "z": 9.115063667297363
+    },
+    "rotation": {
+        "x": -0.7107499837875366,
+        "y": -0.0000152587890625,
+        "z": -0.0000457763671875,
+        "w": 0.7034561634063721
+    },
+    "created": 1673842122283921,
+    "lastEditedBy": "{5345206c-1b8a-429e-845f-ee0fad283597}",
+    "queryAACube": {
+        "x": 16.379072189331055,
+        "y": -3.4762744903564453,
+        "z": 31.462080001831055,
+        "scale": 15.78775405883789
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 252,
+        "green": 28,
+        "blue": 3
+    },
+    "intensity": 8,
+    "exponent": 1,
+    "cutoff": 45,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0cf9cad1-90a7-4b24-bd32-661100168b73}",
+    "type": "Light",
+    "lastEdited": 1673842343901105,
+    "name": "CAFE LIGHT BLUE (3)",
+    "position": {
+        "x": 24.273193359375,
+        "y": 4.3780517578125,
+        "z": 35.2655029296875
+    },
+    "dimensions": {
+        "x": 9.115063667297363,
+        "y": 9.115063667297363,
+        "z": 9.115063667297363
+    },
+    "rotation": {
+        "x": -0.7105363607406616,
+        "y": -0.0000152587890625,
+        "z": -0.0000457763671875,
+        "w": 0.7036697864532471
+    },
+    "created": 1673842122284046,
+    "lastEditedBy": "{5345206c-1b8a-429e-845f-ee0fad283597}",
+    "queryAACube": {
+        "x": 16.379316329956055,
+        "y": -3.5158252716064453,
+        "z": 27.371625900268555,
+        "scale": 15.78775405883789
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 3,
+        "green": 136,
+        "blue": 252
+    },
+    "intensity": 8,
+    "exponent": 1,
+    "cutoff": 45,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c741bb75-2994-4380-a1ba-313e2d9dfe23}",
+    "type": "Web",
+    "lastEdited": 1673842343897203,
+    "name": "Hytrion Time Chart",
+    "position": {
+        "x": 5.8232421875,
+        "y": 1.4246826171875,
+        "z": 30.8759765625
+    },
+    "dimensions": {
+        "x": 3.9321746826171875,
+        "y": 2.1603946685791016,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0002288818359375,
+        "y": 0.0173494815826416,
+        "z": 0.0000762939453125,
+        "w": 0.999847412109375
+    },
+    "created": 1673842122282577,
+    "lastEditedBy": "{9f80bdc8-dadb-4f97-9bbb-a1f6f0eafa5b}",
+    "queryAACube": {
+        "x": 3.5799520015716553,
+        "y": -0.8186075687408447,
+        "z": 28.632686614990234,
+        "scale": 4.4865803718566895
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "sourceUrl": "https://aleziakurdis.github.io/inertia/AK003/spaceport/mainpanel.html",
+    "dpi": 11,
+    "maxFPS": 1,
+    "showKeyboardFocusHighlight": false,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3dab4514-b707-48d7-8806-cee35f4f3439}",
+    "type": "Text",
+    "lastEdited": 1673842343891993,
+    "name": "Gate B (2)",
+    "position": {
+        "x": 34.336181640625,
+        "y": 0.0283203125,
+        "z": 3.4390869140625
+    },
+    "dimensions": {
+        "x": 5.4868855476379395,
+        "y": 8.198866844177246,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.1923399567604065,
+        "y": 0.6805676221847534,
+        "z": 0.6807202100753784,
+        "w": 0.19069194793701172
+    },
+    "created": 1673842122280478,
+    "lastEditedBy": "{d273fcbb-863d-4caf-8594-f7cf57555f30}",
+    "queryAACube": {
+        "x": 29.4034481048584,
+        "y": -4.904412746429443,
+        "z": -1.4936461448669434,
+        "scale": 9.865466117858887
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "text": "B",
+    "lineHeight": 8,
+    "textColor": {
+        "red": 51,
+        "green": 255,
+        "blue": 0
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bf54c9c2-3e9e-46db-a8df-cfb71fd0f1c3}",
+    "type": "Light",
+    "lastEdited": 1673842343891668,
+    "name": "GATE A LIGHT",
+    "position": {
+        "x": 15.08203125,
+        "y": 3.04833984375,
+        "z": 16.8203125
+    },
+    "dimensions": {
+        "x": 15.47823715209961,
+        "y": 15.47823715209961,
+        "z": 15.47823715209961
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.057938456535339355,
+        "z": -0.0000762939453125,
+        "w": 0.998291015625
+    },
+    "created": 1673842122280188,
+    "lastEditedBy": "{c1251a12-1dc6-401a-8545-d8bfbc2bfed1}",
+    "queryAACube": {
+        "x": 1.6774845123291016,
+        "y": -10.356206893920898,
+        "z": 3.4157657623291016,
+        "scale": 26.809093475341797
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "color": {
+        "red": 255,
+        "green": 174,
+        "blue": 0
+    },
+    "isSpotlight": true,
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 90,
+    "falloffRadius": 0.5,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0c7af0e6-96ff-4a24-89ec-197a89a1f2f9}",
+    "type": "Text",
+    "lastEdited": 1673842343893780,
+    "name": "Gate A (2)",
+    "position": {
+        "x": 9.66455078125,
+        "y": 0,
+        "z": 0
+    },
+    "dimensions": {
+        "x": 6.723874568939209,
+        "y": 8.247838020324707,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.07972836494445801,
+        "y": -0.7025711536407471,
+        "z": -0.7029068470001221,
+        "w": 0.07719540596008301
+    },
+    "created": 1673842122281829,
+    "lastEditedBy": "{d273fcbb-863d-4caf-8594-f7cf57555f30}",
+    "queryAACube": {
+        "x": 4.343897342681885,
+        "y": -5.320653438568115,
+        "z": -5.320653438568115,
+        "scale": 10.64130687713623
+    },
+    "renderWithZones": [
+        "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "text": "A",
+    "lineHeight": 8,
+    "textColor": {
+        "red": 255,
+        "green": 153,
+        "blue": 0
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3160e70f-65ac-4c25-8b06-2baf34edddb8}",
+    "type": "Model",
+    "lastEdited": 1673842343902270,
+    "name": "TROPICAL_TREE.fbx (2)",
+    "position": {
+        "x": 38.789306640625,
+        "y": 1.3836669921875,
+        "z": 30.4290771484375
+    },
+    "dimensions": {
+        "x": 2.108212947845459,
+        "y": 1.9651970863342285,
+        "z": 1.9337843656539917
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7008926868438721,
+        "z": -0.0000457763671875,
+        "w": 0.7132524251937866
+    },
+    "created": 1673842122285380,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 37.053932189941406,
+        "y": -0.3517063856124878,
+        "z": 28.69370460510254,
+        "scale": 3.4707467555999756
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{536fbf17-9b92-4049-b634-46174bbd5c9e}",
+    "type": "Light",
+    "lastEdited": 1673842343900882,
+    "name": "CAFE LIGHT ORANGE (2)",
+    "position": {
+        "x": 27.26220703125,
+        "y": 4.3946533203125,
+        "z": 37.3653564453125
+    },
+    "dimensions": {
+        "x": 9.115063667297363,
+        "y": 9.115063667297363,
+        "z": 9.115063667297363
+    },
+    "rotation": {
+        "x": -0.7096513509750366,
+        "y": -0.0000152587890625,
+        "z": -0.0000457763671875,
+        "w": 0.7045547962188721
+    },
+    "created": 1673842122283851,
+    "lastEditedBy": "{5345206c-1b8a-429e-845f-ee0fad283597}",
+    "queryAACube": {
+        "x": 19.368330001831055,
+        "y": -3.4992237091064453,
+        "z": 29.471479415893555,
+        "scale": 15.78775405883789
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 252,
+        "green": 53,
+        "blue": 3
+    },
+    "intensity": 8,
+    "exponent": 1,
+    "cutoff": 45,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{dc364092-7bbe-43db-8241-ccc796d5648f}",
+    "type": "Model",
+    "lastEdited": 1673842343902154,
+    "name": "TROPICAL_TREE.fbx",
+    "position": {
+        "x": 38.98388671875,
+        "y": 2.049560546875,
+        "z": 29.3436279296875
+    },
+    "dimensions": {
+        "x": 3.4339728355407715,
+        "y": 3.2010207176208496,
+        "z": 3.1498539447784424
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1673842122285286,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 36.1572151184082,
+        "y": -0.7771108150482178,
+        "z": 26.516956329345703,
+        "scale": 5.6533427238464355
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{74a2d332-e4ce-482d-8b93-42adfb32e012}",
+    "type": "Image",
+    "lastEdited": 1673842343892760,
+    "name": "welcomeToAK003-1",
+    "position": {
+        "x": 10.559814453125,
+        "y": 2.499755859375,
+        "z": 20.186767578125
+    },
+    "dimensions": {
+        "x": 4.679112911224365,
+        "y": 4.679112911224365,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.30897998809814453,
+        "z": -0.0000457763671875,
+        "w": 0.9510490894317627
+    },
+    "created": 1673842122280937,
+    "lastEditedBy": "{5bb8dd01-7263-48aa-b21a-08d2cef7babb}",
+    "queryAACube": {
+        "x": 7.25117826461792,
+        "y": -0.8088803291320801,
+        "z": 16.878131866455078,
+        "scale": 6.61727237701416
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/welcome.jpg",
+    "emissive": true,
+    "textures": {
+        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/welcome.jpg"
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{57b47e87-e6a8-42a7-a485-68450b487fa4}",
+    "type": "Model",
+    "lastEdited": 1673842343900400,
+    "name": "TROPICAL_TREE.fbx (4)",
+    "position": {
+        "x": 29.12841796875,
+        "y": 3.248291015625,
+        "z": 48.452880859375
+    },
+    "dimensions": {
+        "x": 6.923900604248047,
+        "y": 6.454200744628906,
+        "z": 6.3510332107543945
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0174715518951416,
+        "z": -0.0000457763671875,
+        "w": 0.999847412109375
+    },
+    "created": 1673842122283421,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 23.42901611328125,
+        "y": -2.451111316680908,
+        "z": 42.75347900390625,
+        "scale": 11.398804664611816
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{6319f2bd-da5e-418c-9074-600a72bab9a1}",
+    "type": "Model",
+    "lastEdited": 1673842343894933,
+    "name": "TROPICAL_TREE.fbx (3)",
+    "position": {
+        "x": 37.263916015625,
+        "y": 1.8319091796875,
+        "z": 40.592529296875
+    },
+    "dimensions": {
+        "x": 3.030061721801758,
+        "y": 2.824509859085083,
+        "z": 2.7793614864349365
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7008926868438721,
+        "z": -0.0000457763671875,
+        "w": 0.7132524251937866
+    },
+    "created": 1673842122282226,
+    "lastEditedBy": "{704f4e59-38d9-4b0b-a493-eda55b082798}",
+    "queryAACube": {
+        "x": 34.76972198486328,
+        "y": -0.662283182144165,
+        "z": 38.09833526611328,
+        "scale": 4.98838472366333
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{09cf404e-00b7-4ce8-8295-abbf1a09c91e}",
+    "type": "Box",
+    "lastEdited": 1673842343893243,
+    "name": "Today Greeting_BackPlate",
+    "position": {
+        "x": 24.62353515625,
+        "y": 2.5318603515625,
+        "z": 19.60107421875
+    },
+    "dimensions": {
+        "x": 5.0062971115112305,
+        "y": 1.759961724281311,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0001373291015625,
+        "y": -0.2749217748641968,
+        "z": -0.0001373291015625,
+        "w": 0.9614557027816772
+    },
+    "created": 1673842122281429,
+    "lastEditedBy": "{f0f74ebc-97b6-47c3-8c78-8d44e4db244b}",
+    "queryAACube": {
+        "x": 21.96832847595215,
+        "y": -0.12334585189819336,
+        "z": 16.94586753845215,
+        "scale": 5.310412406921387
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "alpha": 0.800000011920929,
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{869ce449-972e-4a11-97c9-516a061f1af7}",
+    "type": "Text",
+    "lastEdited": 1673842343892108,
+    "name": "SIGN-AK003-1 METASPACEPORT",
+    "position": {
+        "x": 3.25390625,
+        "y": 4.2423095703125,
+        "z": 19.9638671875
+    },
+    "dimensions": {
+        "x": 6.8,
+        "y": 2.1661205291748047,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0001068115234375,
+        "y": 0.9636224508285522,
+        "z": -0.0001678466796875,
+        "w": 0.2672312259674072
+    },
+    "created": 1673842122280561,
+    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "queryAACube": {
+        "x": -0.365741491317749,
+        "y": 0.622661828994751,
+        "z": 16.344219207763672,
+        "scale": 7.239295482635498
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "text": "AK003-1 Metaspaceport",
+    "lineHeight": 0.699999988079071,
+    "textColor": {
+        "red": 168,
+        "green": 222,
+        "blue": 255
+    },
+    "backgroundAlpha": 0,
+    "unlit": true,
+    "textEffect": "outline fill",
+    "textEffectColor": {
+        "red": 0,
+        "green": 0,
+        "blue": 255
+    },
+    "textEffectThickness": 0.30000001192092896,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{ce9bd9e8-b8e1-4a33-8ece-7fbf3640ebcf}",
+    "type": "Light",
+    "lastEdited": 1673842343891886,
+    "name": "RED LOCAL LIGHT",
+    "position": {
+        "x": 0,
+        "y": 3.391845703125,
+        "z": 21.1075439453125
+    },
+    "dimensions": {
+        "x": 6.394796848297119,
+        "y": 6.394796848297119,
+        "z": 9.043608665466309
+    },
+    "rotation": {
+        "x": -0.10627907514572144,
+        "y": 0.8668497800827026,
+        "z": 0.4155489206314087,
+        "w": 0.2541085481643677
+    },
+    "created": 1673842122280339,
+    "lastEditedBy": "{27bda85d-6401-467f-a5d3-23581f8dcc2d}",
+    "queryAACube": {
+        "x": -6.394796848297119,
+        "y": -3.002951145172119,
+        "z": 14.712747573852539,
+        "scale": 12.789593696594238
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 252,
+        "green": 46,
+        "blue": 5
+    },
+    "isSpotlight": true,
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 45,
+    "falloffRadius": 0.4000000059604645,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4a365042-17d1-44d8-b051-bcba48dc687b}",
+    "type": "Light",
+    "lastEdited": 1673842343900658,
+    "name": "CAFE LIGHT PURPLE",
+    "position": {
+        "x": 21.18603515625,
+        "y": 4.3948974609375,
+        "z": 36.967529296875
+    },
+    "dimensions": {
+        "x": 9.115063667297363,
+        "y": 9.115063667297363,
+        "z": 9.115063667297363
+    },
+    "rotation": {
+        "x": -0.7112993001937866,
+        "y": -0.0000152587890625,
+        "z": -0.0000457763671875,
+        "w": 0.7029068470001221
+    },
+    "created": 1673842122283639,
+    "lastEditedBy": "{5345206c-1b8a-429e-845f-ee0fad283597}",
+    "queryAACube": {
+        "x": 13.292158126831055,
+        "y": -3.4989795684814453,
+        "z": 29.073652267456055,
+        "scale": 15.78775405883789
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 73,
+        "green": 3,
+        "blue": 252
+    },
+    "intensity": 8,
+    "exponent": 1,
+    "cutoff": 45,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2e03d1dc-08f8-42c0-892d-664ee5844b37}",
+    "type": "Light",
+    "lastEdited": 1673842343891777,
+    "name": "GATE B LIGHT",
+    "position": {
+        "x": 25.09765625,
+        "y": 3.42529296875,
+        "z": 18.3878173828125
+    },
+    "dimensions": {
+        "x": 15.47823715209961,
+        "y": 15.47823715209961,
+        "z": 15.47823715209961
+    },
+    "rotation": {
+        "x": 0.0000762939453125,
+        "y": 0.24586856365203857,
+        "z": 0.0001678466796875,
+        "w": -0.9692988395690918
+    },
+    "created": 1673842122280262,
+    "lastEditedBy": "{c1251a12-1dc6-401a-8545-d8bfbc2bfed1}",
+    "queryAACube": {
+        "x": 11.693109512329102,
+        "y": -9.979253768920898,
+        "z": 4.983270645141602,
+        "scale": 26.809093475341797
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "color": {
+        "red": 21,
+        "green": 255,
+        "blue": 0
+    },
+    "isSpotlight": true,
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 90,
+    "falloffRadius": 0.5,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+}      
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
