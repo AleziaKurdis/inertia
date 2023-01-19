@@ -49,11 +49,11 @@
     var univerSoundPlaying = 0;
     var blindspots = [
         {
-            "name": "HYTRION METASPACEPORT",
+            "name": "AK003-1 METASPACEPORT",
             "position": {
-                "x": 2156.8542,
-                "y": -1522.6411,
-                "z": 1802.9808,
+                "x": 17,
+                "y": 0,
+                "z": 30,
              },
             "occultationRadius": 25.5,
             "influenceRadius": 60,
