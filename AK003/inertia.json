@@ -1783,33 +1783,35 @@
     "isFacingAvatar": false
 },
     {
-    "id": "{5778c71b-1e50-48f0-a07b-4cad9aa9c53f}",
-    "type": "Image",
-    "lastEdited": 1673842343893357,
-    "name": "ARROW",
-    "position": {
-        "x": 15.804443359375,
-        "y": 2.1322021484375,
-        "z": 17.9500732421875
-    },
+    "id": "{c3b7a2d5-b730-4033-a024-d34d925c9145}",
+    "type": "Model",
+    "lastEdited": 1674098183851645,
+    "name": "ARROW 1",
+    "locked": true,
+    "parentID": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
     "dimensions": {
-        "x": 1.7813034057617188,
-        "y": 2.6950018405914307,
-        "z": 0.009999999776482582
+        "x": 1.6199514865875244,
+        "y": 1.7030608654022217,
+        "z": 0.05000019446015358
     },
     "rotation": {
-        "x": -0.0005035400390625,
-        "y": 0.11564815044403076,
-        "z": -0.0005645751953125,
-        "w": 0.9932860136032104
+        "x": -0.00043194947647862136,
+        "y": 0.11564798653125763,
+        "z": 0.00005029153544455767,
+        "w": 0.9932901859283447
     },
-    "created": 1673842122281551,
-    "lastEditedBy": "{be8708be-7a38-444d-9393-b4a67c3aef90}",
+    "localPosition": {
+        "x": 8.4925,
+        "y": 2.0813,
+        "z": -1.8347
+    },    
+    "created": 1674097979693795,
+    "lastEditedBy": "{e3cae6c4-6d0b-43e2-aeea-39daca478c16}",
     "queryAACube": {
-        "x": 14.189189910888672,
-        "y": 0.5169484615325928,
-        "z": 16.334819793701172,
-        "scale": 3.2305073738098145
+        "x": -1.1754955053329468,
+        "y": -1.1754955053329468,
+        "z": -1.1754955053329468,
+        "scale": 2.3509910106658936
     },
     "renderWithZones": [
         "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
@@ -1821,16 +1823,11 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "color": {
-        "red": 255,
-        "green": 68,
-        "blue": 0
-    },
-    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png",
-    "emissive": true,
-    "keepAspectRatio": false,
-    "textures": {
-        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png"
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false
     },
     "clientOnly": false,
     "avatarEntity": false,
@@ -2058,66 +2055,51 @@
     "isFacingAvatar": false
 },
     {
-    "id": "{2d24a48f-372f-450b-8484-8e2355394cd2}",
-    "type": "Image",
-    "lastEdited": 1673842343899929,
-    "name": "ARROW (2)",
-    "position": {
-        "x": 27.017822265625,
-        "y": 2.1376953125,
-        "z": 33.765625
-    },
+    "id": "{036203bc-4d3d-4d13-bda4-b30f604c6c9b}",
+    "type": "Model",
+    "lastEdited": 1674098200030572,
+    "name": "ARROW 2",
+    "locked": true,
+    "parentID": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
     "dimensions": {
-        "x": 1.7813034057617188,
-        "y": 2.6950018405914307,
-        "z": 0.009999999776482582
+        "x": 1.6199514865875244,
+        "y": 1.7030608654022217,
+        "z": 0.05000019446015358
     },
     "rotation": {
-        "x": 0.9852597713470459,
-        "y": -0.0004425048828125,
-        "z": 0.17088580131530762,
-        "w": 0.0005950927734375
+        "x": 0.9840373992919922,
+        "y": -0.000008443374099442735,
+        "z": 0.17796337604522705,
+        "w": 0.000047445300879189745
     },
-    "created": 1673842122283078,
-    "lastEditedBy": "{219912b1-cdf3-49a0-b841-d788686b37a7}",
+    "localPosition": {
+        "x": -7.7412,
+        "y": 2.1025,
+        "z": 8.8449
+    },
+    "created": 1674097844647735,
+    "lastEditedBy": "{e3cae6c4-6d0b-43e2-aeea-39daca478c16}",
     "queryAACube": {
-        "x": 25.402568817138672,
-        "y": 0.5224416255950928,
-        "z": 32.15037155151367,
-        "scale": 3.2305073738098145
+        "x": -1.1754955053329468,
+        "y": -1.1754955053329468,
+        "z": -1.1754955053329468,
+        "scale": 2.3509910106658936
     },
     "renderWithZones": [
         "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
     ],
     "grab": {
-        "grabbable": false,
-        "equippableLeftRotation": {
-            "x": -0.0000152587890625,
-            "y": -0.0000152587890625,
-            "z": -0.0000152587890625,
-            "w": 1
-        },
-        "equippableRightRotation": {
-            "x": -0.0000152587890625,
-            "y": -0.0000152587890625,
-            "z": -0.0000152587890625,
-            "w": 1
-        }
+        "grabbable": false
     },
     "damping": 0,
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "color": {
-        "red": 255,
-        "green": 68,
-        "blue": 0
-    },
-    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png",
-    "emissive": true,
-    "keepAspectRatio": false,
-    "textures": {
-        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.png"
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/arrow.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false
     },
     "clientOnly": false,
     "avatarEntity": false,
