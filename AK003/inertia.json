@@ -1260,34 +1260,26 @@
     "faceCamera": false,
     "isFacingAvatar": false
 },
-    {
-    "id": "{07cb7ff0-a375-44c0-bcd3-14def9979e22}",
-    "type": "Image",
-    "lastEdited": 1673842343892642,
-    "name": "landingBaysA-B",
-    "position": {
-        "x": 2.6806640625,
-        "y": 1.854248046875,
-        "z": 22.370361328125
-    },
+{
+    "id": "{38e32f53-4edb-4b9a-8fb1-3f0c031366a2}",
+    "type": "Model",
+    "lastEdited": 1674100299614809,
+    "name": "LandingBays",
+    "locked": true,
     "dimensions": {
-        "x": 1.0466907024383545,
-        "y": 1.1778371334075928,
-        "z": 0.009999999776482582
+        "x": 1.000430941581726,
+        "y": 1.1354235410690308,
+        "z": 0.022708658128976822
     },
-    "rotation": {
-        "x": -0.0000762939453125,
-        "y": -0.2742198705673218,
-        "z": -0.0000762939453125,
-        "w": 0.9616693258285522
-    },
-    "created": 1673842122280859,
-    "lastEditedBy": "{9a346d9e-6075-4fb2-8cd2-a6c2eff41fd9}",
+    "rotation": {"x":0.0000130984335555695,"y":0.9618552923202515,"z":-0.000046055021812208,"w":0.2735593616962433},
+    "position": {"x":2.7162277698516846,"y":1.8452650308609009,"z":22.3436279296875},
+    "created": 1674100200105647,
+    "lastEditedBy": "{47ee95be-2071-46f1-b21c-beaa9eac7d86}",
     "queryAACube": {
-        "x": 1.8927931785583496,
-        "y": 1.0663771629333496,
-        "z": 21.582490921020508,
-        "scale": 1.5757416486740112
+        "x": -0.7567304968833923,
+        "y": -0.7567304968833923,
+        "z": -0.7567304968833923,
+        "scale": 1.5134609937667847
     },
     "renderWithZones": [
         "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
@@ -1295,12 +1287,15 @@
     "grab": {
         "grabbable": false
     },
+    "damping": 0,
+    "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/landingBaysA-B.png",
-    "emissive": true,
-    "textures": {
-        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/landingBaysA-B.png"
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/landingBays.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false
     },
     "clientOnly": false,
     "avatarEntity": false,
@@ -3714,34 +3709,26 @@
     "faceCamera": false,
     "isFacingAvatar": false
 },
-    {
-    "id": "{74a2d332-e4ce-482d-8b93-42adfb32e012}",
-    "type": "Image",
-    "lastEdited": 1673842343892760,
-    "name": "welcomeToAK003-1",
-    "position": {
-        "x": 10.559814453125,
-        "y": 2.499755859375,
-        "z": 20.186767578125
-    },
+{
+    "id": "{5929287f-4369-42d9-abc0-642296c0ec7d}",
+    "type": "Model",
+    "lastEdited": 1674100644934894,
+    "name": "Welcome",
+    "locked": true,
     "dimensions": {
-        "x": 4.679112911224365,
-        "y": 4.679112911224365,
-        "z": 0.009999999776482582
+        "x": 4.758949279785156,
+        "y": 2.7387118339538574,
+        "z": 0.04000032693147659
     },
-    "rotation": {
-        "x": -0.0000457763671875,
-        "y": 0.30897998809814453,
-        "z": -0.0000457763671875,
-        "w": 0.9510490894317627
-    },
-    "created": 1673842122280937,
-    "lastEditedBy": "{5bb8dd01-7263-48aa-b21a-08d2cef7babb}",
+    "rotation": {"x":-0.00000908134643395897,"y":0.9510700106620789,"z":-0.000027953667085967027,"w":-0.3089753985404968},
+    "position": {"x":10.519131660461426,"y":2.506757974624634,"z":20.138568878173828},
+    "created": 1674100553352562,
+    "lastEditedBy": "{47ee95be-2071-46f1-b21c-beaa9eac7d86}",
     "queryAACube": {
-        "x": 7.25117826461792,
-        "y": -0.8088803291320801,
-        "z": 16.878131866455078,
-        "scale": 6.61727237701416
+        "x": -2.745439052581787,
+        "y": -2.745439052581787,
+        "z": -2.745439052581787,
+        "scale": 5.490878105163574
     },
     "renderWithZones": [
         "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
@@ -3749,10 +3736,15 @@
     "grab": {
         "grabbable": false
     },
-    "imageURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/welcome.jpg",
-    "emissive": true,
-    "textures": {
-        "tex.picture": "https://aleziakurdis.github.io/inertia/AK003/spaceport/welcome.jpg"
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/welcome.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false
     },
     "clientOnly": false,
     "avatarEntity": false,
