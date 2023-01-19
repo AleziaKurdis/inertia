@@ -2347,7 +2347,7 @@
         "green": 0,
         "blue": 0
     },
-    "alpha": 0.800000011920929,
+    "alpha": 1,
     "shape": "Cube",
     "clientOnly": false,
     "avatarEntity": false,
@@ -2397,7 +2397,7 @@
         "green": 0,
         "blue": 0
     },
-    "alpha": 0.8999999761581421,
+    "alpha": 1,
     "shape": "Cube",
     "clientOnly": false,
     "avatarEntity": false,
@@ -2675,7 +2675,7 @@
         "green": 0,
         "blue": 0
     },
-    "alpha": 0.800000011920929,
+    "alpha": 1,
     "shape": "Cube",
     "clientOnly": false,
     "avatarEntity": false,
@@ -3906,7 +3906,7 @@
         "green": 0,
         "blue": 0
     },
-    "alpha": 0.800000011920929,
+    "alpha": 1,
     "shape": "Cube",
     "clientOnly": false,
     "avatarEntity": false,
