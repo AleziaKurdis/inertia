@@ -162,12 +162,20 @@
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
 
             updateStar();
-
+            moveStar();
+            
             today = new Date();
             processTimer = today.getTime();
         }  
     }   
 
+    function moveStar() {
+        if (starId !== Uuid.NULL) {
+            var axisOne = GetCurrentCycleValue(360, HYTRION_DAY_DURATION/48);
+            var veloVector = Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0,"y": axisOne, "z": 0}), {"x": 0,"y": 0, "z": -10});
+            Entities.editEntity(starId, {"localVelocity": veloVector});
+        }
+    }
 
     function updateStar() {
         if (starId !== Uuid.NULL) {
