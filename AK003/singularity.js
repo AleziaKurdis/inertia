@@ -28,19 +28,24 @@
     var STAR_DIAMETER = 400; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     
+    var currentSunPosition = {"x": 0, "y": 0, "z": 0};
+    var nextSunPosition;
+    
     this.preload = function(entityID) { 
         thisEntity = entityID;
         renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
-
+        currentSunPosition = getCurrentSunPosition();
+        nextSunPosition = currentSunPosition;
         starId = Entities.addEntity({
                 "name": "STAR",
                 "parentID": thisEntity,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0, "y": 0, "z": 0},
+                "localPosition": currentSunPosition,
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": renderWithZones
+                "renderWithZones": renderWithZones,
+                "damping": 0
         }, "local");
         
         var RATIO_Z = 0.24;
@@ -171,9 +176,16 @@
 
     function moveStar() {
         if (starId !== Uuid.NULL) {
-            var axisOne = Math.sin(GetCurrentCycleValue((2* Math.PI), HYTRION_DAY_DURATION/48));
-            Entities.editEntity(starId, {"localPosition": {"x": 0, "y": (axisOne * 900) - 500, "z": 0}});
+            currentSunPosition = nextSunPosition;
+            nextSunPosition = getCurrentSunPosition();
+            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
         }
+    }
+
+    function getCurrentSunPosition() {
+        var axisOne = Math.sin(GetCurrentCycleValue((2* Math.PI), HYTRION_DAY_DURATION/48));
+        return {"x": 0, "y": (axisOne * 900) - 500, "z": 0};
     }
 
     function updateStar() {

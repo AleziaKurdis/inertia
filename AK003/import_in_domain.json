@@ -8,9 +8,9 @@
          "visible": false,
          "name":"STAR-GEN",
          "localPosition":{
-            "x":300,
+            "x":0,
             "y":0,
-            "z":300
+            "z":0
          },
          "dimensions":{
             "x":10,
@@ -55,9 +55,9 @@
             "z":8000
          },
          "position": {
-             "x": 2000,
-             "y": 500,
-             "z": 2000
+             "x": 0,
+             "y": 0,
+             "z": 0
          },         
          "rotation":{
             "x":-1.52587890625e-5,
