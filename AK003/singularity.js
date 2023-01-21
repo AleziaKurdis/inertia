@@ -186,7 +186,7 @@
     function getCurrentSunPosition() {
         var axisOne = Math.sin(GetCurrentCycleValue((2* Math.PI), HYTRION_DAY_DURATION/48));
         var axisTwo = Math.cos(GetCurrentCycleValue(Math.PI, HYTRION_DAY_DURATION/48));
-        return {"x": (axisTwo * 1000), "y": (axisOne * 500), "z": 0};
+        return {"x": (axisTwo * 2000), "y": (axisOne * 500), "z": 0};
     }
 
     function updateStar() {
