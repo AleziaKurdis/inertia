@@ -171,8 +171,8 @@
 
     function moveStar() {
         if (starId !== Uuid.NULL) {
-            var axisOne = GetCurrentCycleValue(360, HYTRION_DAY_DURATION/48);
-            var axisTwo = GetCurrentCycleValue(360, HYTRION_DAY_DURATION/48);
+            var axisOne = GetCurrentCycleValue(360, HYTRION_DAY_DURATION/148);
+            var axisTwo = GetCurrentCycleValue(360, HYTRION_DAY_DURATION/148);
             var orbital = Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0,"y": axisOne, "z": axisTwo}), {"x": 0,"y": 0, "z": -500});
             Entities.editEntity(starId, {"localPosition": orbital});
         }
