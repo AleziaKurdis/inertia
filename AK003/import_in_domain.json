@@ -4138,6 +4138,49 @@
     "localEntity": false,
     "faceCamera": false,
     "isFacingAvatar": false
+},
+    {
+    "id": "{0f6092c2-9c2c-4ba4-9565-01fcf2fd3d8c}",
+    "type": "Model",
+    "lastEdited": 1674355791510769,
+    "name": "4 PORTALS",
+    "locked": true,
+    "parentID": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
+    "dimensions": {
+        "x": 7.954778671264648,
+        "y": 5.174842834472656,
+        "z": 7.954778671264648
+    },
+    "rotation": {"x":-0.000015258787243510596,"y":0.7193255424499512,"z":-0.00004577635627356358,"w":0.6946669816970825},
+    "position": {"x":17.911941528320312,"y":-0.17255069315433502,"z":30.43976593017578},
+    "created": 1674355678161080,
+    "lastEditedBy": "{fec17ff3-d4b2-4f77-a194-3eca8d5e1b7e}",
+    "queryAACube": {
+        "x": -6.191445827484131,
+        "y": -6.191445827484131,
+        "z": -6.191445827484131,
+        "scale": 12.382891654968262
+    },
+    "renderWithZones": [
+        "{7ddadd20-eefe-4b0e-9aed-5be4cb3f015b}"
+    ],
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/AK003/spaceport/4PORTALS.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
 }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
