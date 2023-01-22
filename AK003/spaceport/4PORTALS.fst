@@ -1,0 +1,3 @@
+name = 4-PORTALS
+filename = 4PORTALS.fbx
+materialMap = [{"mat::BANNERS": {"materials":[{ "name": "BANNERS", "albedo": [1.0, 1.0, 1.0], "roughness": 0.15, "metallic": 0.01, "albedoMap": "portals_signs.jpg", "emissiveMap": "portals_signs.jpg", "cullFaceMode": "CULL_BACK", "defaultFallthrough": false}]}},{"mat::LIGHT": {"materials":[{ "name": "LIGHT", "albedo": [1.0 ,1.0 ,1.0], "roughness": 1.0, "metallic": 1.0, "emissive": [2.44, 1.81804, 0.83247], "cullFaceMode": "CULL_NONE", "model": "hifi_pbr", "defaultFallthrough": false}]}}]
