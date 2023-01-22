@@ -10,6 +10,7 @@
          "parentID":"{00356305-f3d5-4395-834a-096bbbf4c4dc}",
          "visible": false,
          "name":"STAR-GEN",
+         "locked": true,
          "localPosition":{
             "x":0,
             "y":0,
@@ -93,6 +94,7 @@
     "lastEdited": 1673842343893897,
     "parentID": "{3a74e0f5-a6cd-41ff-8b29-21cb72fef1df}",
     "name": "WALL-LAMPE_MATERIAL",
+    "locked": true,
     "position": {
         "x": 0.1366407573223114,
         "y": -0.10835742950439453,
@@ -148,6 +150,7 @@
     "lastEdited": 1673842343892873,
     "parentID": "{02dd215b-eb6c-4fdf-ad07-0ff1b27378ae}",
     "name": "WALL-LAMPE_MATERIAL (2)",
+    "locked": true,
     "position": {
         "x": 0.136474609375,
         "y": -0.1083984375,
@@ -203,6 +206,7 @@
     "lastEdited": 1673842343901333,
     "parentID": "{bd4e52f4-10e7-492f-8460-87cfbced6e20}",
     "name": "Plafonier",
+    "locked": true,
     "position": {
         "x": -0.104736328125,
         "y": -1.9903564453125,
@@ -246,6 +250,7 @@
     "lastEdited": 1673842343901567,
     "parentID": "{23ac74cf-5a6f-4c2e-b615-bdce4f2cd860}",
     "name": "WALL-LAMPE_MATERIAL (3)",
+    "locked": true,
     "position": {
         "x": 0.136474609375,
         "y": -0.1083984375,
@@ -301,6 +306,7 @@
     "lastEdited": 1673842343901449,
     "parentID": "{e7a07886-2697-4464-a9b5-7c0150e43a56}",
     "name": "WALL-LAMPE_MATERIAL (4)",
+    "locked": true,
     "position": {
         "x": 0.136474609375,
         "y": -0.1083984375,
@@ -356,6 +362,7 @@
     "lastEdited": 1673842343901803,
     "parentID": "{63f36b4f-dfb2-4725-8129-ac50d5f18271}",
     "name": "WALL-LAMPE_MATERIAL (5)",
+    "locked": true,
     "position": {
         "x": 0.13665771484375,
         "y": -0.1083984375,
@@ -411,6 +418,7 @@
     "lastEdited": 1673842343901919,
     "parentID": "{3ccae789-ea24-4858-a6e9-ec9fb3e2a136}",
     "name": "WALL-LAMPE_MATERIAL (6)",
+    "locked": true,
     "position": {
         "x": 0.1368408203125,
         "y": -0.1083984375,
@@ -466,6 +474,7 @@
     "lastEdited": 1673842343898725,
     "parentID": "{1b34b7bc-cff4-4837-82a0-31c57df8cdd4}",
     "name": "Plafonier (2)",
+    "locked": true,
     "position": {
         "x": -0.104736328125,
         "y": -1.990478515625,
@@ -521,6 +530,7 @@
     "lastEdited": 1673842343897081,
     "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
     "name": "WALL-LAMPE_MATERIAL (7)",
+    "locked": true,
     "position": {
         "x": 0.136962890625,
         "y": -0.1085205078125,
@@ -576,6 +586,7 @@
     "lastEdited": 1673842343890987,
     "parentID": "{3ccae789-ea24-4858-a6e9-ec9fb3e2a136}",
     "name": "WALL-LAMPE_LIGHT (6)",
+    "locked": true,
     "position": {
         "x": 0.0169677734375,
         "y": -0.18896484375,
@@ -642,6 +653,7 @@
     "lastEdited": 1673842343891094,
     "parentID": "{bd4e52f4-10e7-492f-8460-87cfbced6e20}",
     "name": "PLAFONDIER_LIGHT",
+    "locked": true,
     "position": {
         "x": -0.03125,
         "y": -1.367919921875,
@@ -696,6 +708,7 @@
     "lastEdited": 1673842343890432,
     "parentID": "{23ac74cf-5a6f-4c2e-b615-bdce4f2cd860}",
     "name": "WALL-LAMPE_LIGHT (3)",
+    "locked": true,
     "position": {
         "x": 0.016845703125,
         "y": -0.1893310546875,
@@ -762,6 +775,7 @@
     "lastEdited": 1673842343891326,
     "parentID": "{1b34b7bc-cff4-4837-82a0-31c57df8cdd4}",
     "name": "PLAFONDIER_LIGHT (2)",
+    "locked": true,
     "position": {
         "x": -0.03125,
         "y": -1.3680419921875,
@@ -828,6 +842,7 @@
     "lastEdited": 1673842343890880,
     "parentID": "{63f36b4f-dfb2-4725-8129-ac50d5f18271}",
     "name": "WALL-LAMPE_LIGHT (5)",
+    "locked": true,
     "position": {
         "x": 0.016815185546875,
         "y": -0.1890869140625,
@@ -894,6 +909,7 @@
     "lastEdited": 1673842343891434,
     "parentID": "{0518f7fa-6fdb-4e66-9e26-4919fa3a396d}",
     "name": "Plasma_Material_Metaspaceport",
+    "locked": true,
     "position": {
         "x": 4.7270965576171875,
         "y": 1.045654296875,
@@ -936,6 +952,7 @@
     "lastEdited": 1673842343890772,
     "parentID": "{e7a07886-2697-4464-a9b5-7c0150e43a56}",
     "name": "WALL-LAMPE_LIGHT (4)",
+    "locked": true,
     "position": {
         "x": 0.0167236328125,
         "y": -0.189208984375,
@@ -1002,6 +1019,7 @@
     "lastEdited": 1673842343890322,
     "parentID": "{02dd215b-eb6c-4fdf-ad07-0ff1b27378ae}",
     "name": "WALL-LAMPE_LIGHT (2)",
+    "locked": true,
     "position": {
         "x": 0.0169677734375,
         "y": -0.189453125,
@@ -1068,6 +1086,7 @@
     "lastEdited": 1673842343889245,
     "parentID": "{3a74e0f5-a6cd-41ff-8b29-21cb72fef1df}",
     "name": "WALL-LAMPE_LIGHT",
+    "locked": true,
     "position": {
         "x": 0.016799181699752808,
         "y": -0.18945884704589844,
@@ -1134,6 +1153,7 @@
     "lastEdited": 1673842343889589,
     "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
     "name": "WALL-LAMPE_LIGHT (7)",
+    "locked": true,
     "position": {
         "x": -0.106597900390625,
         "y": -0.1871337890625,
@@ -1200,6 +1220,7 @@
     "lastEdited": 1673842343889483,
     "parentID": "{f5497020-0b32-44d3-b476-4cdcea75e1e0}",
     "name": "WALL-LAMPE_LIGHT (7)",
+    "locked": true,
     "position": {
         "x": 0.0169677734375,
         "y": -0.1890869140625,
@@ -1308,6 +1329,7 @@
     "type": "Model",
     "lastEdited": 1673842343889352,
     "name": "WALL_LAMPE (7)",
+    "locked": true,
     "position": {
         "x": 3.98193359375,
         "y": 6.3653564453125,
@@ -1364,6 +1386,7 @@
     "type": "Model",
     "lastEdited": 1673842343888996,
     "name": "WALL_LAMPE",
+    "locked": true,
     "position": {
         "x": 14.371337890625,
         "y": 6.36474609375,
@@ -1420,6 +1443,7 @@
     "type": "Model",
     "lastEdited": 1673842343889948,
     "name": "WALL_LAMPE (3)",
+    "locked": true,
     "position": {
         "x": 22.868408203125,
         "y": 6.364990234375,
@@ -1476,6 +1500,7 @@
     "type": "Model",
     "lastEdited": 1673842343890648,
     "name": "WALL_LAMPE (4)",
+    "locked": true,
     "position": {
         "x": 23.894287109375,
         "y": 6.3651123046875,
@@ -1533,6 +1558,7 @@
     "lastEdited": 1673842343892986,
     "visible": false,
     "name": "TIME-GREETING",
+    "locked": true,
     "position": {
         "x": 24.647216796875,
         "y": 2.8525390625,
@@ -1596,6 +1622,7 @@
     "type": "Text",
     "lastEdited": 1673842343893643,
     "name": "Gate B",
+    "locked": true,
     "position": {
         "x": 24.69921875,
         "y": 3.8990478515625,
@@ -1662,6 +1689,7 @@
     "type": "Model",
     "lastEdited": 1673842343889822,
     "name": "WALL_LAMPE (2)",
+    "locked": true,
     "position": {
         "x": 18.919189453125,
         "y": 6.36474609375,
@@ -1719,6 +1747,7 @@
     "lastEdited": 1673842343893100,
     "visible": false,
     "name": "TIME-HOUR",
+    "locked": true,
     "position": {
         "x": 25.03271484375,
         "y": 2.1121826171875,
@@ -1825,6 +1854,7 @@
     "type": "Text",
     "lastEdited": 1673842343893493,
     "name": "Gate A",
+    "locked": true,
     "position": {
         "x": 14.69580078125,
         "y": 3.9063720703125,
@@ -1879,6 +1909,7 @@
     "type": "Model",
     "lastEdited": 1673842343891201,
     "name": "LANTERNE-PLAFONIER_PORTUAR (2)",
+    "locked": true,
     "position": {
         "x": 2.20556640625,
         "y": 7.7869873046875,
@@ -1936,6 +1967,7 @@
     "lastEdited": 1673842343901683,
     "visible": false,
     "name": "Radio Cafe",
+    "locked": true,
     "position": {
         "x": 24.42578125,
         "y": 9.0128173828125,
@@ -1988,6 +2020,7 @@
     "type": "Model",
     "lastEdited": 1673842343889694,
     "name": "WALL_LAMPE (6)",
+    "locked": true,
     "position": {
         "x": 30.50390625,
         "y": 6.3653564453125,
@@ -2087,6 +2120,7 @@
     "type": "Model",
     "lastEdited": 1673842343890197,
     "name": "LANTERNE-PLAFONIER_PORTUAR",
+    "locked": true,
     "position": {
         "x": 14.8095703125,
         "y": 7.7928466796875,
@@ -2131,6 +2165,7 @@
     "type": "Text",
     "lastEdited": 1673842343899003,
     "name": "ARRIVAL",
+    "locked": true,
     "position": {
         "x": 31.74755859375,
         "y": 4.4930419921875,
@@ -2191,6 +2226,7 @@
     "lastEdited": 1673842343900045,
     "visible": false,
     "name": "CLOCK",
+    "locked": true,
     "position": {
         "x": 5.731201171875,
         "y": 3.2855224609375,
@@ -2254,6 +2290,7 @@
     "type": "Model",
     "lastEdited": 1673842343890072,
     "name": "WALL_LAMPE (5)",
+    "locked": true,
     "position": {
         "x": 31.915283203125,
         "y": 6.3651123046875,
@@ -2310,6 +2347,7 @@
     "type": "Box",
     "lastEdited": 1673842343899810,
     "name": "Arrival_Backplate",
+    "locked": true,
     "position": {
         "x": 31.600341796875,
         "y": 4.5518798828125,
@@ -2360,6 +2398,7 @@
     "type": "Box",
     "lastEdited": 1673842343900166,
     "name": "TIME_BackPlate",
+    "locked": true,
     "position": {
         "x": 5.8310546875,
         "y": 3.121826171875,
@@ -2411,6 +2450,7 @@
     "lastEdited": 1673842343900769,
     "visible": false,
     "name": "TIME-DAY_DATE",
+    "locked": true,
     "position": {
         "x": 5.844482421875,
         "y": 2.84423828125,
@@ -2474,6 +2514,7 @@
     "type": "Model",
     "lastEdited": 1673842343902038,
     "name": "MAIL_SEATS_ISLAND.fbx (3)",
+    "locked": true,
     "position": {
         "x": 39.2099609375,
         "y": 0.6302490234375,
@@ -2530,6 +2571,7 @@
     "type": "Model",
     "lastEdited": 1673842343900281,
     "name": "MAIL_SEATS_ISLAND.fbx",
+    "locked": true,
     "position": {
         "x": 30.1787109375,
         "y": 0.6331787109375,
@@ -2574,6 +2616,7 @@
     "type": "Text",
     "lastEdited": 1673842343892405,
     "name": "LOCAL AIRSPACE",
+    "locked": true,
     "position": {
         "x": 0.34765625,
         "y": 3.92138671875,
@@ -2638,6 +2681,7 @@
     "type": "Box",
     "lastEdited": 1673842343892527,
     "name": "Locar Airspace BackPlate",
+    "locked": true,
     "position": {
         "x": 0.260009765625,
         "y": 3.970458984375,
@@ -2688,6 +2732,7 @@
     "type": "Model",
     "lastEdited": 1673842343888749,
     "name": "AK003-1_METASPACEPORT",
+    "locked": true,
     "position": {
         "x": 17.769775390625,
         "y": 0.0489501953125,
@@ -2732,6 +2777,7 @@
     "type": "Model",
     "lastEdited": 1673842343900540,
     "name": "TROPICAL_TREE.fbx (5)",
+    "locked": true,
     "position": {
         "x": 29.860107421875,
         "y": 2.196533203125,
@@ -2788,6 +2834,7 @@
     "type": "ParticleEffect",
     "lastEdited": 1673842343890540,
     "name": "PORTAL_PLASMA",
+    "locked": true,
     "position": {
         "x": 17.795166015625,
         "y": 1.80517578125,
@@ -2894,6 +2941,7 @@
     "type": "Zone",
     "lastEdited": 1673842343889127,
     "name": "LOCAL_ZONE_METASPACEPORT",
+    "locked": true,
     "position": {
         "x": 17.769775390625,
         "y": 0.0489501953125,
@@ -2943,6 +2991,7 @@
     "type": "Light",
     "lastEdited": 1673842343892277,
     "name": "SIGLE_ENTRANCE_LIGHT",
+    "locked": true,
     "position": {
         "x": 5.317138671875,
         "y": 2.799560546875,
@@ -2997,6 +3046,7 @@
     "type": "Model",
     "lastEdited": 1673842343894034,
     "name": "MAIL_SEATS_ISLAND.fbx (2)",
+    "locked": true,
     "position": {
         "x": 36.9345703125,
         "y": 0.631591796875,
@@ -3053,6 +3103,7 @@
     "type": "Light",
     "lastEdited": 1673842343891554,
     "name": "PLASMA LIGHT",
+    "locked": true,
     "position": {
         "x": 17.864013671875,
         "y": 1.093994140625,
@@ -3117,6 +3168,7 @@
     "type": "Model",
     "lastEdited": 1673842343896057,
     "name": "TROPICAL_TREE.fbx (4)",
+    "locked": true,
     "position": {
         "x": 36.5859375,
         "y": 0.5743408203125,
@@ -3173,6 +3225,7 @@
     "type": "Light",
     "lastEdited": 1673842343900994,
     "name": "CAFE LIGHT RED",
+    "locked": true,
     "position": {
         "x": 24.27294921875,
         "y": 4.4176025390625,
@@ -3234,6 +3287,7 @@
     "type": "Light",
     "lastEdited": 1673842343901105,
     "name": "CAFE LIGHT BLUE (3)",
+    "locked": true,
     "position": {
         "x": 24.273193359375,
         "y": 4.3780517578125,
@@ -3295,6 +3349,7 @@
     "type": "Web",
     "lastEdited": 1673842343897203,
     "name": "Hytrion Time Chart",
+    "locked": true,
     "position": {
         "x": 5.8232421875,
         "y": 1.4246826171875,
@@ -3354,6 +3409,7 @@
     "type": "Text",
     "lastEdited": 1673842343891993,
     "name": "Gate B (2)",
+    "locked": true,
     "position": {
         "x": 34.336181640625,
         "y": 0.0283203125,
@@ -3420,6 +3476,7 @@
     "type": "Light",
     "lastEdited": 1673842343891668,
     "name": "GATE A LIGHT",
+    "locked": true,
     "position": {
         "x": 15.08203125,
         "y": 3.04833984375,
@@ -3487,6 +3544,7 @@
     "type": "Text",
     "lastEdited": 1673842343893780,
     "name": "Gate A (2)",
+    "locked": true,
     "position": {
         "x": 9.66455078125,
         "y": 0,
@@ -3553,6 +3611,7 @@
     "type": "Model",
     "lastEdited": 1673842343902270,
     "name": "TROPICAL_TREE.fbx (2)",
+    "locked": true,
     "position": {
         "x": 38.789306640625,
         "y": 1.3836669921875,
@@ -3609,6 +3668,7 @@
     "type": "Light",
     "lastEdited": 1673842343900882,
     "name": "CAFE LIGHT ORANGE (2)",
+    "locked": true,
     "position": {
         "x": 27.26220703125,
         "y": 4.3946533203125,
@@ -3670,6 +3730,7 @@
     "type": "Model",
     "lastEdited": 1673842343902154,
     "name": "TROPICAL_TREE.fbx",
+    "locked": true,
     "position": {
         "x": 38.98388671875,
         "y": 2.049560546875,
@@ -3757,6 +3818,7 @@
     "type": "Model",
     "lastEdited": 1673842343900400,
     "name": "TROPICAL_TREE.fbx (4)",
+    "locked": true,
     "position": {
         "x": 29.12841796875,
         "y": 3.248291015625,
@@ -3813,6 +3875,7 @@
     "type": "Model",
     "lastEdited": 1673842343894933,
     "name": "TROPICAL_TREE.fbx (3)",
+    "locked": true,
     "position": {
         "x": 37.263916015625,
         "y": 1.8319091796875,
@@ -3869,6 +3932,7 @@
     "type": "Box",
     "lastEdited": 1673842343893243,
     "name": "Today Greeting_BackPlate",
+    "locked": true,
     "position": {
         "x": 24.62353515625,
         "y": 2.5318603515625,
@@ -3919,6 +3983,7 @@
     "type": "Text",
     "lastEdited": 1673842343892108,
     "name": "SIGN-AK003-1 METASPACEPORT",
+    "locked": true,
     "position": {
         "x": 3.25390625,
         "y": 4.2423095703125,
@@ -3978,6 +4043,7 @@
     "type": "Light",
     "lastEdited": 1673842343891886,
     "name": "RED LOCAL LIGHT",
+    "locked": true,
     "position": {
         "x": 0,
         "y": 3.391845703125,
@@ -4031,6 +4097,7 @@
     "type": "Light",
     "lastEdited": 1673842343900658,
     "name": "CAFE LIGHT PURPLE",
+    "locked": true,
     "position": {
         "x": 21.18603515625,
         "y": 4.3948974609375,
@@ -4080,6 +4147,7 @@
     "type": "Light",
     "lastEdited": 1673842343891777,
     "name": "GATE B LIGHT",
+    "locked": true,
     "position": {
         "x": 25.09765625,
         "y": 3.42529296875,
