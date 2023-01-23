@@ -78,6 +78,7 @@
             var id = Entities.addEntity({
                 "type": "Box",
                 "name": teleporters[i].name,
+                "visible": false,
                 "description": teleporters[i].url,
                 "dimensions": {
                     "x": 1.1507105827331543,
