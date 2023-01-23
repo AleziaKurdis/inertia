@@ -4243,6 +4243,7 @@
     "animation": {
         "allowTranslation": false
     },
+    "script": "https://aleziakurdis.github.io/inertia/AK003/spaceport/tpGenerator.js",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
