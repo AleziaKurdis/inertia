@@ -42,7 +42,7 @@
     var thunderInjector; 
 
     var zoneID = Uuid.NULL;
-
+    var thisEntity = Uuid.NULL;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.2;
     var universeSound, universeSoundInjector;
@@ -63,7 +63,7 @@
     
    
     this.preload = function(entityID) {
-      
+        thisEntity = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
  
@@ -166,7 +166,7 @@
                     "y": universeDimension.y - 20,
                     "z": universeDimension.z - 20
                 },
-                "parentID": entityID,
+                "parentID": thisEntity,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localRotation": zoneRotation,
                 "grab": {
