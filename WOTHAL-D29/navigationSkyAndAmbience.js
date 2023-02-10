@@ -244,7 +244,7 @@
                 },
                 "haze": {
                     "hazeRange": hrange,
-                    "hazeColor": { "red": currentRGBhaze[0], "green": currentRGBhaze[1], "blu"e: currentRGBhaze[2] },
+                    "hazeColor": { "red": currentRGBhaze[0], "green": currentRGBhaze[1], "blue": currentRGBhaze[2] },
                     "hazeBackgroundBlend": 0,
                     "hazeEnableGlare": true,
                     "hazeGlareColor": { "red": currentRGBsky[0], "green": currentRGBsky[1], "blue": currentRGBsky[2] },
