@@ -30,7 +30,7 @@
 
     var UFO_TIDE_CYCLE_DURATION = 18720; //5.2 hours
     
-    var DAY_DURATION = 68400;
+    var D29_DAY_DURATION = 104400; //29h in sec.
     var storming = false;
     var lightningsID = Uuid.NULL;
     var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
@@ -145,7 +145,6 @@
 
     function updateSky() {
         var referenceAltitude = universeCenter.z;
-		var D29_DAY_DURATION = 104400; //29h in sec.
 		var skycode = new Array("A", "B", "C", "D");
 		var currentsky = ROOT + "images/SKYBOX_WOTHAL_1024-" + skycode[Math.floor(GetCurrentCycleValue(4, 4 * D29_DAY_DURATION))] + ".png"; //change each D29 day
         
@@ -402,10 +401,10 @@
             // ######### END UNIVERSE SOUD VOLUME MANAGEMENT ######## 
             //############## NOCTURN LIGHTNINGS AND THUNDER #############
             
-            var hytrionCurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
+            var d29CurrentHour = (GetCurrentCycleValue(8640000, D29_DAY_DURATION)/100) / 3600;
             
-            //if ( hytrionCurrentHour > 11.5 || hytrionCurrentHour < 11 ) { //debug
-            if ( hytrionCurrentHour > 16 || hytrionCurrentHour < 19 ) {
+            //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
+            if ( d29CurrentHour > 16 || d29CurrentHour < 19 ) {
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
@@ -427,9 +426,9 @@
                         "type": "ParticleEffect",
                         "name": "STORM",
                         "dimensions": {
-                            "x": 3000,
-                            "y": 3000,
-                            "z": 3000
+                            "x": 6000,
+                            "y": 6000,
+                            "z": 6000
                         },
                         "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )),
                         "grab": {
@@ -449,9 +448,9 @@
                             "w": 1
                         },
                         "emitDimensions": {
-                            "x": 3000,
-                            "y": 3000,
-                            "z": 3000
+                            "x": 6000,
+                            "y": 6000,
+                            "z": 6000
                         },
                         "polarStart": 0,
                         "polarFinish": Math.PI,
@@ -492,8 +491,8 @@
                         "particleSpin": 3.140000104904175,
                         "spinSpread": 3.140000104904175,
                         "spinStart": 3.140000104904175,
-                        "spinFinish": 3.140000104904175,                        
-                        "emitterShouldTrail": true                        
+                        "spinFinish": 3.140000104904175,
+                        "emitterShouldTrail": true
                     }, "local");
                     
                     storming = true;
