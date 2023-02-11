@@ -154,7 +154,7 @@
 		var currentRGBhaze = hslToRgb(hue, 1, 0.2); //cycle 2.5h
 		var hrange = 5 + GetCurrentCycleValue(995, D29_DAY_DURATION/4); //cycle 6h (D29 hours)
 
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": (hue * 360)-180, "z": 0.0} );
+        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": (hue * 360), "z": 0.0} );
 
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
