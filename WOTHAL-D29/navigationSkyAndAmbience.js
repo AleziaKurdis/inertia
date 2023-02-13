@@ -207,8 +207,8 @@
                     "hazeGlareColor": { "red": currentRGBsky[0], "green": currentRGBsky[1], "blue": currentRGBsky[2] },
                     "hazeGlareAngle": 15,
                     "hazeAltitudeEffect": true,
-                    "hazeBaseRef": referenceAltitude - 3000,
-                    "hazeCeiling": referenceAltitude - 2100,
+                    "hazeBaseRef": referenceAltitude - 1500,
+                    "hazeCeiling": referenceAltitude - 100,
                     "hazeAttenuateKeyLight": false,
                     "hazeKeyLightRange": 300,
                     "hazeKeyLightAltitude": 300
