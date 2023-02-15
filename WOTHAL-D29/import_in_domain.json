@@ -35,7 +35,47 @@
          "faceCamera":false,
          "isFacingAvatar":false,
          "script": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/navigationSkyAndAmbience.js"
-      }
+      },
+      {
+        "id": "{70de1a98-3810-4551-8d6e-57b684daa458}",
+        "type": "Model",
+        "lastEdited": 1676428864182751,
+        "name": "MEGABUILDINGS",
+        "dimensions": {
+            "x": 8093.03125,
+            "y": 6311.76953125,
+            "z": 6613.76708984375
+        },
+        "position": {
+            "x": 6000,
+            "y": 6000,
+            "z": 6000
+        },        
+        "created": 1676428804057132,
+        "lastEditedBy": "{eccc4d8d-eb28-4a07-82dd-0d259d7fee17}",
+        "queryAACube": {
+            "x": -6104.86474609375,
+            "y": -6104.86474609375,
+            "z": -6104.86474609375,
+            "scale": 12209.7294921875
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/MEGABUILDINGS.fbx",
+        "useOriginalPivot": true,
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
+       }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
   "Version": 133
