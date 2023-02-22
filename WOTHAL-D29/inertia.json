@@ -71,7 +71,7 @@
         "damping": 0,
         "angularDamping": 0,
         "shapeType": "static-mesh",
-        "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/MEGABUILDINGS.fbx",
+        "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/MEGABUILDINGS.fst",
         "useOriginalPivot": true,
         "clientOnly": false,
         "avatarEntity": false,
