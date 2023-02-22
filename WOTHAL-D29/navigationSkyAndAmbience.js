@@ -181,11 +181,11 @@
                     "intensity": 2,
                     "direction": Vec3.fromPolar( 15 * DEGREES_TO_RADIANS, -78 * DEGREES_TO_RADIANS),
                     "castShadows": true,
-                    "shadowBias": 0.02,
+                    "shadowBias": 0.03,
                     "shadowMaxDistance": 150
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.02,
+                    "ambientIntensity": 0.03,
                     "ambientURL": currentsky
                 },
                 "skybox": {
