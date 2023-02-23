@@ -160,6 +160,48 @@
             "localEntity": false,
             "faceCamera": false,
             "isFacingAvatar": false
+        },
+        {
+            "id": "{31af0f2e-41f9-4ec0-aa8e-9c9df502f9c4}",
+            "type": "Model",
+            "lastEdited": 1677119096034152,
+            "name": "COMPLEX-A3",
+            "locked": true,
+            "position": {"x":3566.166748046875,"y":6000.296875,"z":5772.408203125},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "dimensions": {
+                "x": 156.76095581054688,
+                "y": 232.8361053466797,
+                "z": 152.15032958984375
+            },
+            "created": 1677118972605574,
+            "lastEditedBy": "{9acd74ab-b6df-403b-ba88-ddc9d0d47a33}",
+            "queryAACube": {
+                "x": -159.6373748779297,
+                "y": -159.6373748779297,
+                "z": -159.6373748779297,
+                "scale": 319.2747497558594
+            },
+            "renderWithZones": [
+                "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/WOTHAL-ELEMENT-A.fst",
+            "blendshapeCoefficients": "{\n}\n",
+            "useOriginalPivot": true,
+            "animation": {
+                "allowTranslation": false
+            },
+            "clientOnly": false,
+            "avatarEntity": false,
+            "localEntity": false,
+            "faceCamera": false,
+            "isFacingAvatar": false
         }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
