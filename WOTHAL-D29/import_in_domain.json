@@ -454,6 +454,132 @@
             "localEntity": false,
             "faceCamera": false,
             "isFacingAvatar": false
+        },
+        {
+            "id": "{c3bb632e-5e02-43cb-8f45-515161d7f8b1}",
+            "type": "Model",
+            "lastEdited": 1677206010615086,
+            "name": "COMPLEX-D1",
+            "locked": true,
+            "dimensions": {
+                "x": 165.36090087890625,
+                "y": 455.8597717285156,
+                "z": 156.4224853515625
+            },
+            "position": {"x":7019.6357421875,"y":5723.205078125,"z":4226.24755859375},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "created": 1677205849082718,
+            "lastEditedBy": "{ccc56255-5273-4636-a553-31462d6f0137}",
+            "queryAACube": {
+                "x": -254.7647705078125,
+                "y": -254.7647705078125,
+                "z": -254.7647705078125,
+                "scale": 509.529541015625
+            },
+            "renderWithZones": [
+                "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/WOTHAL-ELEMENT-D.fst",
+            "blendshapeCoefficients": "{\n}\n",
+            "useOriginalPivot": true,
+            "animation": {
+                "allowTranslation": false
+            },
+            "clientOnly": false,
+            "avatarEntity": false,
+            "localEntity": false,
+            "faceCamera": false,
+            "isFacingAvatar": false
+        },
+        {
+            "id": "{ecf3b902-f395-40fb-a790-fc411e977f51}",
+            "type": "Model",
+            "lastEdited": 1677206010615086,
+            "name": "COMPLEX-D2",
+            "locked": true,
+            "dimensions": {
+                "x": 165.36090087890625,
+                "y": 455.8597717285156,
+                "z": 156.4224853515625
+            },
+            "position": {"x":3662.676025390625,"y":5999.96728515625,"z":7956.572265625},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "created": 1677205849082718,
+            "lastEditedBy": "{ccc56255-5273-4636-a553-31462d6f0137}",
+            "queryAACube": {
+                "x": -254.7647705078125,
+                "y": -254.7647705078125,
+                "z": -254.7647705078125,
+                "scale": 509.529541015625
+            },
+            "renderWithZones": [
+                "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/WOTHAL-ELEMENT-D.fst",
+            "blendshapeCoefficients": "{\n}\n",
+            "useOriginalPivot": true,
+            "animation": {
+                "allowTranslation": false
+            },
+            "clientOnly": false,
+            "avatarEntity": false,
+            "localEntity": false,
+            "faceCamera": false,
+            "isFacingAvatar": false
+        },
+        {
+            "id": "{bb2a315a-c5e6-4413-9337-c6f18e8b8982}",
+            "type": "Model",
+            "lastEdited": 1677206010615086,
+            "name": "COMPLEX-D3",
+            "locked": true,
+            "dimensions": {
+                "x": 165.36090087890625,
+                "y": 455.8597717285156,
+                "z": 156.4224853515625
+            },
+            "position": {"x":5404.33251953125,"y":5723.638671875,"z":7895.638671875},
+            "rotation": {"x":0,"y":-0.7071067690849304,"z":0,"w":0.7071067690849304},
+            "created": 1677205849082718,
+            "lastEditedBy": "{ccc56255-5273-4636-a553-31462d6f0137}",
+            "queryAACube": {
+                "x": -254.7647705078125,
+                "y": -254.7647705078125,
+                "z": -254.7647705078125,
+                "scale": 509.529541015625
+            },
+            "renderWithZones": [
+                "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/models/WOTHAL-ELEMENT-D.fst",
+            "blendshapeCoefficients": "{\n}\n",
+            "useOriginalPivot": true,
+            "animation": {
+                "allowTranslation": false
+            },
+            "clientOnly": false,
+            "avatarEntity": false,
+            "localEntity": false,
+            "faceCamera": false,
+            "isFacingAvatar": false
         }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
