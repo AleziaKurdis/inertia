@@ -185,7 +185,7 @@
                     "shadowMaxDistance": 150
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.03,
+                    "ambientIntensity": 0.05,
                     "ambientURL": currentsky
                 },
                 "skybox": {
@@ -230,7 +230,7 @@
                     }
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.02,
+                    "ambientIntensity": 0.05,
                     "ambientURL": currentsky
                 },
                 "skybox": {
