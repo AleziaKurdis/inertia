@@ -185,7 +185,7 @@
                     "shadowMaxDistance": 150
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.05,
+                    "ambientIntensity": 0.07,
                     "ambientURL": currentsky
                 },
                 "skybox": {
@@ -204,7 +204,8 @@
                     "hazeColor": { "red": currentRGBhaze[0], "green": currentRGBhaze[1], "blue": currentRGBhaze[2] },
                     "hazeBackgroundBlend": 0,
                     "hazeEnableGlare": true,
-                    "hazeGlareColor": { "red": currentRGBlight[0], "green": currentRGBlight[1], "blue": currentRGBlight[2] },
+                    //"hazeGlareColor": { "red": currentRGBlight[0], "green": currentRGBlight[1], "blue": currentRGBlight[2] },
+                    "hazeGlareColor": { "red": 1, "green": 1, "blue": 1 },
                     "hazeGlareAngle": 10,
                     "hazeAltitudeEffect": true,
                     "hazeBaseRef": referenceAltitude - 800,
@@ -230,7 +231,7 @@
                     }
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.05,
+                    "ambientIntensity": 0.07,
                     "ambientURL": currentsky
                 },
                 "skybox": {
@@ -246,7 +247,8 @@
                     "hazeColor": { "red": currentRGBhaze[0], "green": currentRGBhaze[1], "blue": currentRGBhaze[2] },
                     "hazeBackgroundBlend": 0,
                     "hazeEnableGlare": true,
-                    "hazeGlareColor": { "red": currentRGBlight[0], "green": currentRGBlight[1], "blue": currentRGBlight[2] },
+                    //"hazeGlareColor": { "red": currentRGBlight[0], "green": currentRGBlight[1], "blue": currentRGBlight[2] },
+                    "hazeGlareColor": { "red": 1, "green": 1, "blue": 1 },
                     "hazeGlareAngle": 10,
                     "hazeAltitudeEffect": true,
                     "hazeBaseRef": referenceAltitude - 3000,
