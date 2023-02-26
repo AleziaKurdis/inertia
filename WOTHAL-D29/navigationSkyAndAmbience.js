@@ -147,12 +147,16 @@
         var referenceAltitude = universeCenter.z;
 		var skycode = new Array("A", "B", "C", "D");
 		var currentsky = ROOT + "images/SKYBOX_WOTHAL_1024-" + skycode[Math.floor(GetCurrentCycleValue(4, 4 * D29_DAY_DURATION))] + ".png"; //change each D29 day
-        
+
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION);
 		var currentRGBsky = hslToRgb(hue, 1, 0.5); //cycle 2.5h
 		var currentRGBlight = hslToRgb(hue, 1, 0.65); //cycle 2.5h
 		var currentRGBhaze = hslToRgb(hue, 1, 0.2); //cycle 2.5h
 		var hrange = 5 + GetCurrentCycleValue(995, D29_DAY_DURATION/4); //cycle 6h (D29 hours)
+
+        //var ambientsky = currentsky;
+        var AMBIENT_SKYBOX_URL = "http://metaverse.bashora.com/scripts/hytrion_cloud/skybox/skybox.php";
+        var ambientsky = AMBIENT_SKYBOX_URL + "?h=" + Math.floor(hue * 360) + "&s=18"
 
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": (hue * 360), "z": 0.0} );
 
@@ -186,7 +190,7 @@
                 },
                 "ambientLight": {
                     "ambientIntensity": 0.07,
-                    "ambientURL": currentsky
+                    "ambientURL": ambientsky
                 },
                 "skybox": {
                     "color": {
@@ -232,7 +236,7 @@
                 },
                 "ambientLight": {
                     "ambientIntensity": 0.07,
-                    "ambientURL": currentsky
+                    "ambientURL": ambientsky
                 },
                 "skybox": {
                     "color": {
