@@ -15,6 +15,7 @@
     var isInitiated = false;
     var universeDimension;
     var universeCenter;
+    var universeRenderWithZones;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
@@ -40,6 +41,8 @@
     var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
     var thunderSound = []; 
     var thunderInjector; 
+    
+    var vaporID = Uuid.NULL;
 
     var zoneID = Uuid.NULL;
     var thisEntity = Uuid.NULL;
@@ -101,6 +104,7 @@
             skyProcessingTimer = skyProcessingTimer + 1;
             if (skyProcessingTimer > 5) {
                 updateSky();
+                updateVaporFX();
                 skyProcessingTimer = 0;
             }
             today = new Date();
@@ -123,19 +127,25 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NULL;
             }
+            if (vaporID !== Uuid.NULL) {
+                Entities.deleteEntity(vaporID);
+                vaporID = Uuid.NULL;
+            }
         }
         isInitiated = false;
     }
 
     function initiate(EntID) {
-        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones"]);
         universeCenter = properties.position;
         universeDimension = properties.dimensions;
+        universeRenderWithZones = properties.renderWithZones;
 
         isInitiated = true; 
  
         univerSoundPlaying = 0;
         updateSky();
+        updateVaporFX();
 
         var today = new Date();
         processTimer = today.getTime();
@@ -143,22 +153,117 @@
         Script.update.connect(myTimer);
     }
 
+    function updateVaporFX() {
+        
+        var y = -760 + (Math.sin(GetCurrentCycleValue(Math.PI * 2, D29_DAY_DURATION/6)) * 300); //4h D29 tide.
+        var alphaFactor = (Math.sin(GetCurrentCycleValue(Math.PI * 2, D29_DAY_DURATION * 3)) * 300); //3 day D29 intensity cycle.
+        var hue = GetCurrentCycleValue(1, 9 * D29_DAY_DURATION); //1 D29 week cycle)
+		var currentRGBsky = hslToRgb(hue, 1, 0.5);
+        
+        if (vaporID === Uuid.NULL) {
+            vaporID = Entities.addEntity({
+                "type": "ParticleEffect",
+                "renderWithZones": universeRenderWithZones,
+                "name": "vapor",
+                "dimensions": {
+                    "x": 9000,
+                    "y": 9000,
+                    "z": 9000
+                },
+                "parentID": thisEntity,
+                "localPosition":{
+                    "x": 0,
+                    "y": y,
+                    "z": 0
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "cylinder-y",
+                "color": {
+                    "red": currentRGBsky[0],
+                    "green": currentRGBsky[1],
+                    "blue": currentRGBsky[2]
+                },
+                "alpha": 0.2 * alphaFactor,
+                "textures": ROOT + "images/FOG.png",
+                "maxParticles": 2000,
+                "lifespan": 10,
+                "emitRate": 200,
+                "emitSpeed": 0,
+                "speedSpread": 0,
+                "emitOrientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                },
+                "emitDimensions": {
+                    "x": 8000,
+                    "y": 400,
+                    "z": 8000
+                },
+                "emitRadiusStart": 0.009999999776482582,
+                "polarFinish": 3.1415927410125732,
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": 9,
+                    "z": 0
+                },
+                "particleRadius": 300,
+                "radiusSpread": 100,
+                "radiusStart": 200,
+                "radiusFinish": 400,
+                "colorStart": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 0
+                },
+                "colorFinish": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 0
+                },
+                "alphaStart": 0,
+                "alphaFinish": 0,
+                "emitterShouldTrail": true,
+                "spinStart": null,
+                "spinFinish": null,
+                "spinSpread": Math.PI/3
+            },"local");
+        } else {
+            Entities.editEntity(vaporID, {
+                "localPosition":{
+                    "x": 0,
+                    "y": y,
+                    "z": 0
+                },
+                "color": {
+                    "red": currentRGBsky[0],
+                    "green": currentRGBsky[1],
+                    "blue": currentRGBsky[2]
+                },
+                "alpha": 0.2 * alphaFactor
+            });
+        }
+    }
+
     function updateSky() {
         var referenceAltitude = universeCenter.z;
 		var skycode = new Array("A", "B", "C", "D");
 		var currentsky = ROOT + "images/SKYBOX_WOTHAL_1024-" + skycode[Math.floor(GetCurrentCycleValue(4, 4 * D29_DAY_DURATION))] + ".png"; //change each D29 day
 
-        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION);
-		var currentRGBsky = hslToRgb(hue, 1, 0.5); //cycle 2.5h
-		var currentRGBlight = hslToRgb(hue, 1, 0.65); //cycle 2.5h
-		var currentRGBhaze = hslToRgb(hue, 1, 0.2); //cycle 2.5h
+        var hue = GetCurrentCycleValue(1, 9 * D29_DAY_DURATION); //1 D29 week cycle)
+		var currentRGBsky = hslToRgb(hue, 1, 0.5); 
+		var currentRGBlight = hslToRgb(hue, 1, 0.65); 
+		var currentRGBhaze = hslToRgb(hue, 1, 0.2); 
 		var hrange = 5 + GetCurrentCycleValue(995, D29_DAY_DURATION/4); //cycle 6h (D29 hours)
 
         //var ambientsky = currentsky;
         var AMBIENT_SKYBOX_URL = "http://metaverse.bashora.com/scripts/hytrion_cloud/skybox/skybox.php";
         var ambientsky = AMBIENT_SKYBOX_URL + "?h=" + Math.floor(hue * 360) + "&s=18"
 
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": (hue * 360), "z": 0.0} );
+        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": GetCurrentCycleValue(360, D29_DAY_DURATION), "z": 0.0} );
 
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
