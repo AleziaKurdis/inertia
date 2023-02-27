@@ -159,7 +159,8 @@
         var alphaFactor = (Math.sin(GetCurrentCycleValue(Math.PI * 2, D29_DAY_DURATION * 3)) * 300); //3 day D29 intensity cycle.
         var hue = GetCurrentCycleValue(1, 9 * D29_DAY_DURATION); //1 D29 week cycle)
 		var currentRGBsky = hslToRgb(hue, 1, 0.5);
-        
+        print("y: " + y);
+        print("alphaFactor: " + alphaFactor);
         if (vaporID === Uuid.NULL) {
             vaporID = Entities.addEntity({
                 "type": "ParticleEffect",
