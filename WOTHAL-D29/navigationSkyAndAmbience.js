@@ -131,6 +131,10 @@
                 Entities.deleteEntity(vaporID);
                 vaporID = Uuid.NULL;
             }
+            if (lightningsID !== Uuid.NULL) {
+                Entities.deleteEntity(lightningsID);
+                lightningsID = Uuid.NULL;
+            }
         }
         isInitiated = false;
     }
