@@ -118,6 +118,10 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NULL;
             }
+            if (lightningsID !== Uuid.NULL) {
+                Entities.deleteEntity(lightningsID);
+                lightningsID = Uuid.NULL;
+            }
         }
         isInitiated = false;
     }
@@ -437,8 +441,8 @@
                         "particleSpin": 3.140000104904175,
                         "spinSpread": 3.140000104904175,
                         "spinStart": 3.140000104904175,
-                        "spinFinish": 3.140000104904175,                        
-                        "emitterShouldTrail": true                        
+                        "spinFinish": 3.140000104904175,
+                        "emitterShouldTrail": true
                     }, "local");
                     
                     storming = true;
@@ -660,7 +664,7 @@
 
 		print("ASTEROID-" + catalogNumber + " : " + astVelocity + " | " + astLife);
 
-		var Ent = Entities.addEntity(properties, "local");        
+		var Ent = Entities.addEntity(properties, "local");
 
     }
 
