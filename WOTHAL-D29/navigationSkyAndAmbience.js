@@ -158,7 +158,7 @@
     }
 
     function updateVaporFX() {
-        
+        var avaPos = MyAvatar.position;
         var y = -760 + (Math.sin(GetCurrentCycleValue(Math.PI * 2, D29_DAY_DURATION/6)) * 300); //4h D29 tide.
         var alphaFactor = Math.abs(Math.sin(GetCurrentCycleValue(Math.PI * 2, D29_DAY_DURATION * 3))); //3 day D29 intensity cycle.
         var hue = GetCurrentCycleValue(1, 9 * D29_DAY_DURATION); //1 D29 week cycle)
@@ -177,9 +177,9 @@
                 },
                 "parentID": thisEntity,
                 "localPosition":{
-                    "x": 0,
+                    "x": avaPos.x,
                     "y": y,
-                    "z": 0
+                    "z": avaPos.z
                 },
                 "grab": {
                     "grabbable": false
@@ -239,9 +239,9 @@
         } else {
             Entities.editEntity(vaporID, {
                 "localPosition":{
-                    "x": 0,
+                    "x": avaPos.x,
                     "y": y,
-                    "z": 0
+                    "z": avaPos.z
                 },
                 "color": {
                     "red": currentRGBsky[0],
