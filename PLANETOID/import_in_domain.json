@@ -34,7 +34,7 @@
          "localEntity":false,
          "faceCamera":false,
          "isFacingAvatar":false,
-         "script": ""
+         "script": "https://aleziakurdis.github.io/inertia/PLANETOID/planetarGravityWithHollowGravity.js"
       },
     {
         "id": "{f34d9be2-8766-4e5e-9140-be17551d5f10}",
