@@ -1,0 +1,87 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+      {
+         "id":"{00356305-f3d5-4395-834a-096bbbf4c4dc}",
+         "type":"Zone",
+         "lastEdited":1620878021148222,
+         "name":"PLANETOID_VISIBILITY_ZONE",
+         "locked":true,
+         "dimensions":{
+            "x":4000,
+            "y":4000,
+            "z":4000
+         },
+         "position": {
+             "x": 4000,
+             "y": 4000,
+             "z": 4000
+         },
+         "grab":{
+            "grabbable":false
+         },
+         "shapeType":"sphere",
+         "keyLight":{
+            "direction":{
+               "x":0,
+               "y":-0.70710676908493,
+               "z":0.70710676908493
+            },
+            "castShadows":true
+         },
+         "clientOnly":false,
+         "avatarEntity":false,
+         "localEntity":false,
+         "faceCamera":false,
+         "isFacingAvatar":false,
+         "script": ""
+      },
+    {
+        "id": "{f34d9be2-8766-4e5e-9140-be17551d5f10}",
+        "type": "Model",
+        "lastEdited": 1678331120320160,
+        "name": "planetoid",
+        "locked": true,
+        "dimensions": {
+            "x": 1303.29296875,
+            "y": 1299.842041015625,
+            "z": 1300.388916015625
+        },
+        "created": 1678330940709311,
+        "lastEditedBy": "{719b35a2-a20b-47f5-a3b4-4440d9c97b7f}",
+        "queryAACube": {
+            "x": -1126.85107421875,
+            "y": -1126.85107421875,
+            "z": -1126.85107421875,
+            "scale": 2253.7021484375
+        },
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/planetoid.fbx",
+        "blendshapeCoefficients": "{\n}\n",
+        "useOriginalPivot": true,
+        "animation": {
+            "allowTranslation": false
+        },
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
+    }
+    ],
+  "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
+  "Version": 133
+}
