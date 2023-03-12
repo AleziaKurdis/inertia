@@ -34,7 +34,7 @@
          "localEntity":false,
          "faceCamera":false,
          "isFacingAvatar":false,
-         "script": "https://aleziakurdis.github.io/inertia/PLANETOID/planetarGravityWithHollowGravity.js"
+         "script": "https://aleziakurdis.github.io/inertia/PLANETOID/navigationPlanetoidSkyAndAmbience.js"
       },
     {
         "id": "{f34d9be2-8766-4e5e-9140-be17551d5f10}",
@@ -79,7 +79,8 @@
         "avatarEntity": false,
         "localEntity": false,
         "faceCamera": false,
-        "isFacingAvatar": false
+        "isFacingAvatar": false,
+        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/planetarGravityWithHollowGravity.js"
     }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
