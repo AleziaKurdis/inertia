@@ -33,7 +33,10 @@
     
     var D29_DAY_DURATION = 104400; //29h in sec.
 
+    var SKY_TEXTURE = ROOT + "images/SKY-PLANET-W-11_JUNE_2019.jpg";
+
     var zoneID = Uuid.NULL;
+    var darkZoneID = Uuid.NULL;
     var thisEntity = Uuid.NULL;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.2;
@@ -111,6 +114,10 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NULL;
             }
+            if (darkZoneID !== Uuid.NULL) {
+                Entities.deleteEntity(darkZoneID);
+                darkZoneID = Uuid.NULL;
+            }
         }
         isInitiated = false;
     }
@@ -126,6 +133,54 @@
         univerSoundPlaying = 0;
         updateSky();
 
+        darkZoneID = Entities.addEntity({
+            "type": "Zone",
+            "name": "PLANETOID_DARKN3SS-D29_(!)_Z0N3",
+            "dimensions": {
+                "x": 1293,
+                "y": 1293,
+                "z": 1293
+            },
+            "parentID": EntID,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "sphere",
+            "keyLight": {
+                "color": {
+                    "red": 181,
+                    "green": 195,
+                    "blue": 255
+                },
+                "intensity": 0.05,
+                "direction": Vec3.fromPolar( 89.9 * DEGREES_TO_RADIANS, 0 * DEGREES_TO_RADIANS),
+                "castShadows": false,
+            },
+            "ambientLight": {
+                "ambientIntensity": 0.03,
+                "ambientURL": SKY_TEXTURE
+            },
+            "skybox": {
+                "color": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "url": SKY_TEXTURE
+            },
+            "bloom": {
+                "bloomIntensity": 0.5,
+                "bloomThreshhold": 0.7,
+                "bloomSize": 0.8
+            },
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "inherit",
+            "bloomMode": "enabled"
+        },"local");
+
         var today = new Date();
         processTimer = today.getTime();
     
@@ -134,7 +189,7 @@
 
 
     function updateSky() {
-		var currentsky = ROOT + "images/SKY-PLANET-W-11_JUNE_2019.jpg";
+		var currentsky = SKY_TEXTURE;
 /*
         var hue = GetCurrentCycleValue(1, 9 * D29_DAY_DURATION); //1 D29 week cycle)
 		var currentRGBsky = hslToRgb(hue, 1, 0.5); 
@@ -142,7 +197,7 @@
 		var currentRGBhaze = hslToRgb(hue, 1, 0.2); 
 		var hrange = 5 + GetCurrentCycleValue(995, D29_DAY_DURATION/4); //cycle 6h (D29 hours)
 */
-        var ambientsky = currentsky;
+        var ambientsky = SKY_TEXTURE;
 
         var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, D29_DAY_DURATION)} );
 
