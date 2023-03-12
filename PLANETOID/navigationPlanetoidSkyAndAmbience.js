@@ -144,7 +144,7 @@
 */
         var ambientsky = currentsky;
 
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": GetCurrentCycleValue(360, D29_DAY_DURATION), "z": 0.0} );
+        var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, D29_DAY_DURATION)} );
 
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
@@ -175,7 +175,7 @@
                     "shadowMaxDistance": 150
                 },
                 "ambientLight": {
-                    "ambientIntensity": 0.5,
+                    "ambientIntensity": 0.3,
                     "ambientURL": ambientsky
                 },
                 "skybox": {
