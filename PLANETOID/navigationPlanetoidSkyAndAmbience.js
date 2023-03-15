@@ -155,7 +155,7 @@
                 },
                 "intensity": 0.05,
                 "direction": Vec3.fromPolar( 89.9 * DEGREES_TO_RADIANS, 0 * DEGREES_TO_RADIANS),
-                "castShadows": false,
+                "castShadows": true,
             },
             "ambientLight": {
                 "ambientIntensity": 0.03,

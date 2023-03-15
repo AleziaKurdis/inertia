@@ -81,6 +81,52 @@
         "faceCamera": false,
         "isFacingAvatar": false,
         "script": "https://aleziakurdis.github.io/inertia/PLANETOID/planetarGravityWithHollowGravity.js"
+    },
+    {
+        "id": "{c8ae1509-1882-4d89-931e-26b518f5f947}",
+        "type": "Model",
+        "lastEdited": 1678765043661275,
+        "name": "exoEntrance",
+        "dimensions": {
+            "x": 17.73486328125,
+            "y": 28.080045700073242,
+            "z": 34.16356658935547
+        },
+        "rotation": {
+            "x": -0.10462632030248642,
+            "y": -0.9065982699394226,
+            "z": 0.39668092131614685,
+            "w": 0.09888006746768951
+        },
+        "position": {"x":4058.65966796875,"y":4421.29541015625,"z":3508.149169921875},
+        "created": 1678764198582458,
+        "lastEditedBy": "{c2ec2008-e419-4748-aca2-c0c51f33d6a1}",
+        "queryAACube": {
+            "x": -23.823116302490234,
+            "y": -23.823116302490234,
+            "z": -23.823116302490234,
+            "scale": 47.64623260498047
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/GATE.fbx",
+        "blendshapeCoefficients": "{\n}\n",
+        "useOriginalPivot": true,
+        "animation": {
+            "allowTranslation": false
+        },
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
     }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
