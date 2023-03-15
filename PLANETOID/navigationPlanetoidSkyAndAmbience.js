@@ -199,7 +199,7 @@
 */
         var ambientsky = SKY_TEXTURE;
 
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, D29_DAY_DURATION)} );
+        var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, 4500)} ); //4500 s = 75 minute Days long. so 0.08 deg/s
 
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
@@ -213,6 +213,8 @@
                 "parentID": thisEntity,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localRotation": zoneRotation,
+                "localAngularVelocity": {"x": 0, "y": 0.0, "z": 0.001396263},
+                "angularDamping": 0.0,
                 "grab": {
                     "grabbable": false
                 },
@@ -254,7 +256,8 @@
             },"local");
         } else {
             Entities.editEntity(zoneID, {
-                "localRotation": zoneRotation
+                "localRotation": zoneRotation,
+                "localAngularVelocity": {"x": 0, "y": 0.0, "z": 0.001396263},
             });
         }
     }
