@@ -199,8 +199,8 @@
 */
         var ambientsky = SKY_TEXTURE;
 
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, 1800)} ); //1800 s = 30 minute Days long. so 0.2 deg/s
-        var anglVelo = 0.00349066;
+        var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": 0.0, "z": GetCurrentCycleValue(360, 1200)} ); //1200 s = 20 minute Days long. so 0.3 deg/s
+        var anglVelo = 0.00523599;
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
                 "type": "Zone",
