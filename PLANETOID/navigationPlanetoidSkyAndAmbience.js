@@ -213,7 +213,7 @@
                 "parentID": thisEntity,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localRotation": zoneRotation,
-                "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": anglVelo},
+                "localAngularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
                 "angularDamping": 0.0,
                 "grab": {
                     "grabbable": false
@@ -257,7 +257,7 @@
         } else {
             Entities.editEntity(zoneID, {
                 "localRotation": zoneRotation,
-                "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": anglVelo},
+                "localAngularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
             });
         }
     }
