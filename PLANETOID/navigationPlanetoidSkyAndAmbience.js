@@ -255,10 +255,10 @@
                 "bloomMode": "enabled"
             },"local");
         } else {
-            Entities.editEntity(zoneID, {
+            /*Entities.editEntity(zoneID, {
                 "localRotation": zoneRotation,
                 "localAngularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
-            });
+            });*/
         }
     }
     
