@@ -90,6 +90,7 @@
         "type": "Model",
         "lastEdited": 1678765043661275,
         "name": "exoEntrance",
+        "locked": true,
         "dimensions": {
             "x": 17.73486328125,
             "y": 28.080045700073242,
