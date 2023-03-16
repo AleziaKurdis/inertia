@@ -90,7 +90,7 @@
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             updateNavigation();
             skyProcessingTimer = skyProcessingTimer + 1;
-            if (skyProcessingTimer > 5) {
+            if (skyProcessingTimer > 20) {
                 updateSky();
                 skyProcessingTimer = 0;
             }
@@ -200,8 +200,8 @@
         var ambientsky = SKY_TEXTURE;
 
         var zoneRotation = Quat.fromVec3Degrees( {"x": 90.0, "y": GetCurrentCycleValue(360, 720), "z": 0.0} ); //720 s = 12 minutes Days long. so 0.5 deg/s
-        //var anglVelo = 0.00872665;
-        var anglVelo = 0.002;
+        var anglVelo = 0.00872665;
+
         if (zoneID === Uuid.NULL) {
             zoneID = Entities.addEntity({
                 "type": "Zone",
@@ -256,10 +256,10 @@
                 "bloomMode": "enabled"
             },"local");
         } else {
-            /*Entities.editEntity(zoneID, {
+            Entities.editEntity(zoneID, {
                 "localRotation": zoneRotation,
                 "angularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
-            });*/
+            });
         }
     }
     
