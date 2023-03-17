@@ -1,0 +1,23 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[
+            1,
+            1,
+            1
+         ],
+         "metallic":0.072,
+         "roughness":0.87,
+         "opacity":1,
+         "emissive":[
+            0,
+            0,
+            0
+         ],
+         "scattering":0,
+         "cullFaceMode":"CULL_BACK",
+         "defaultFallthrough":true
+      }
+   ]
+}
