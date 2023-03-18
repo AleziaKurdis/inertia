@@ -4,8 +4,9 @@
         {
             "name": "LIGHT",
             "albedo": [1, 1, 1],
-            "metallic": 0.009,
+            "metallic": 0.02,
             "roughness": 0.976,
+            "opacity": 1,
             "emissive": [2.84, 2.1494902, 0.44549019],
             "cullFaceMode": "CULL_BACK",
             "model": "hifi_pbr"
