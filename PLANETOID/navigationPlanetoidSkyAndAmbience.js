@@ -244,7 +244,7 @@
                 "useOriginalPivot": true,
                 "renderWithZones": universeRenderWithZones,
                 "dimensions": {"x": 0.2868, "y": 3.5952, "z": 0.3296},
-                "modelUrl": modelUrl,
+                "modelUrl": modelUrl
             }, "local");
             
             lightID =  Entities.addEntity({
@@ -254,7 +254,7 @@
                 "renderWithZones": universeRenderWithZones,
                 "localPosition": {"x": 0, "y": 0, "z": 0},
                 "color": lightColor,
-                "dimensions": {"x": 80, "y": 80: 80},
+                "dimensions": {"x": 80, "y": 80, "z": 80},
                 "intensity": 20,
                 "falloffRadius": 2
             }, "local");
