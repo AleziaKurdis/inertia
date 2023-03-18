@@ -233,7 +233,7 @@
                 localUp = Quat.inverse(localUp);
             }
             lanternRotation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), Quat.IDENTITY));
-            
+            print("modelUrl: " + modelUrl);
             lanternID = Entities.addEntity({
                 "type": "Model",
                 "name": "Lantern " + i,
