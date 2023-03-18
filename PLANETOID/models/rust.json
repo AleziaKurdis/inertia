@@ -1,0 +1,15 @@
+{
+   "materialVersion":1,
+   "materials":[
+        {
+            "albedo":[1, 1, 1],
+            "albedoMap": "RUST_COLOR.jpg",
+            "metallic":0.04,
+            "roughness":0.6,
+            "normalMap": "RUST_NORMAL.jpg"
+            "scattering":0,
+            "cullFaceMode":"CULL_BACK",
+            "defaultFallthrough":false
+        }
+   ]
+}

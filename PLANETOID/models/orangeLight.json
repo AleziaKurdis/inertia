@@ -1,0 +1,14 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "name": "LIGHT",
+            "albedo": [1, 1, 1],
+            "metallic": 0.009,
+            "roughness": 0.976,
+            "emissive": [2.84, 2.1494902, 0.44549019],
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
