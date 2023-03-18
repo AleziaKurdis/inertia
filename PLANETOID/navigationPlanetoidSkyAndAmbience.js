@@ -118,6 +118,10 @@
                 Entities.deleteEntity(darkZoneID);
                 darkZoneID = Uuid.NULL;
             }
+            
+            for (var i = 0; i < entitiesToDelete.length; i++) {
+                Entities.deleteEntity(entitiesToDelete[i]);
+            }
         }
         isInitiated = false;
     }
@@ -132,7 +136,9 @@
  
         univerSoundPlaying = 0;
         updateSky();
-
+        
+        var entitiesToDelete = [];
+        
         darkZoneID = Entities.addEntity({
             "type": "Zone",
             "name": "PLANETOID_DARKN3SS-D29_(!)_Z0N3",
@@ -181,12 +187,81 @@
             "bloomMode": "enabled"
         },"local");
 
+        generateLanterns();
+
         var today = new Date();
         processTimer = today.getTime();
     
         Script.update.connect(myTimer);
     }
 
+    function generateLanterns() {
+        var lanterns = [
+            {"position": {"x":4054.140380859375,"y":4416.908203125,"z":3498.732666015625}, "gravity": "EXO"},
+            {"position": {"x":4113.36279296875,"y":4451.8515625,"z":3626.70947265625}, "gravity": "EXO"},
+            {"position": {"x":4134.12060546875,"y":4425.20166015625,"z":3607.34423828125}, "gravity": "EXO"},
+            {"position": {"x":4087.8662109375,"y":4418.1435546875,"z":3609.46435546875}, "gravity": "EXO"},
+            {"position": {"x":4071.53369140625,"y":4429.77880859375,"z":3620.380615234375}, "gravity": "EXO"},
+            {"position": {"x":4059.20849609375,"y":4426.40087890625,"z":3526.289794921875}, "gravity": "EXO"},
+            {"position": {"x":4065.099609375,"y":4447.376953125,"z":3557.905029296875}, "gravity": "EXO"},
+            {"position": {"x":4091.027587890625,"y":4445.69140625,"z":3568.681640625}, "gravity": "EXO"},
+            {"position": {"x":4114.3564453125,"y":4427.1796875,"z":3561.130859375}, "gravity": "EXO"},
+            {"position": {"x":4123.740234375,"y":4412.037109375,"z":3549.7880859375}, "gravity": "EXO"},
+            {"position": {"x":4165.744140625,"y":4428.08447265625,"z":3580.9404296875}, "gravity": "EXO"},
+            {"position": {"x":4147.20751953125,"y":4417.06201171875,"z":3555.38330078125}, "gravity": "EXO"},
+            {"position": {"x":4182.74609375,"y":4455.61083984375,"z":3618.478759765625}, "gravity": "EXO"},
+            {"position": {"x":4145.0185546875,"y":4464.1005859375,"z":3634.46044921875}, "gravity": "EXO"}
+        ];
+        var modelUrl = "";
+        var lightColor;
+        var lanternRotation, direction, localUp, lanternID, lightID;
+        for (var i = 0; i < lanterns.length; i++) {
+            direction = Vec3.subtract(lanterns[i].position, universeCenter);
+            localUp = Quat.getUp(Quat.IDENTITY);
+            if (lanterns[i].gravity === "EXO") {
+                modelUrl = ROOT + "models/lanternBlue.fst";
+                lightColor = {
+                    "red": 28,
+                    "green": 142,
+                    "blue": 255
+                };
+            } else {
+                modelUrl = ROOT + "models/lanternOrange.fst";
+                lightColor = {
+                    "red": 255,
+                    "green": 194,
+                    "blue": 28
+                };
+                localUp = Quat.inverse(localUp);
+            }
+            lanternRotation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), Quat.IDENTITY));
+            
+            lanternID = Entities.addEntity({
+                "type": "Model",
+                "name": "Lantern " + i,
+                "position": lanterns[i].position,
+                "rotation": lanternRotation,
+                "useOriginalPivot": true,
+                "renderWithZones": universeRenderWithZones,
+                "dimensions": {"x": 0.2868, "y": 3.5952, "z": 0.3296},
+                "modelUrl": modelUrl,
+            }, "local");
+            
+            lightID =  Entities.addEntity({
+                "type": "Light",
+                "name": "light lantern " + i,
+                "parentID": lanternID,
+                "renderWithZones": universeRenderWithZones,
+                "localPosition": {"x": 0, "y": 0, "z": 0},
+                "color": lightColor,
+                "dimensions": {"x": 80, "y": 80: 80},
+                "intensity": 20,
+                "falloffRadius": 2
+            }, "local");
+            
+            entitiesToDelete.push(lanternID);
+        }
+    }
 
     function updateSky() {
 		var currentsky = SKY_TEXTURE;
