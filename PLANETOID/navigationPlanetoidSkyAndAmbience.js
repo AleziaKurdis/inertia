@@ -34,7 +34,7 @@
     var D29_DAY_DURATION = 104400; //29h in sec.
 
     var SKY_TEXTURE = ROOT + "images/SKY-PLANET-W-11_JUNE_2019.jpg";
-
+    var entitiesToDelete = [];
     var zoneID = Uuid.NULL;
     var darkZoneID = Uuid.NULL;
     var thisEntity = Uuid.NULL;
@@ -136,8 +136,6 @@
  
         univerSoundPlaying = 0;
         updateSky();
-        
-        var entitiesToDelete = [];
         
         darkZoneID = Entities.addEntity({
             "type": "Zone",
