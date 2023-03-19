@@ -237,7 +237,7 @@
             lanternID = Entities.addEntity({
                 "type": "Model",
                 "name": "Lantern " + i,
-                "modelUrl": modelUrl,
+                "modelURL": modelUrl,
                 "position": lanterns[i].position,
                 "rotation": lanternRotation,
                 "useOriginalPivot": true,
