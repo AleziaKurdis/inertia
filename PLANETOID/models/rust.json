@@ -3,10 +3,10 @@
    "materials":[
         {
             "name": "RUST",
-            "albedo":[1, 1, 1],
+            "albedo":[0.42, 0.588, 0.78],
             "albedoMap": "RUST_COLOR.jpg",
             "metallic": 0.04,
-            "roughness": 0.6,
+            "roughness": 0.5,
             "normalMap": "RUST_NORMAL.jpg",
             "scattering":0,
             "cullFaceMode":"CULL_BACK",
