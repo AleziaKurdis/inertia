@@ -3,7 +3,7 @@
    "materials":[
         {
             "name": "RUST",
-            "albedo":[0.42, 0.588, 0.78],
+            "albedo":[0.769, 0.702, 0.631],
             "albedoMap": "RUST_COLOR.jpg",
             "metallic": 0.04,
             "roughness": 0.5,
