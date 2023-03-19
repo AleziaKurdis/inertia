@@ -241,9 +241,9 @@
                 "position": lanterns[i].position,
                 "rotation": lanternRotation,
                 "useOriginalPivot": true,
-                //"renderWithZones": universeRenderWithZones,
+                "renderWithZones": universeRenderWithZones,
                 "dimensions": {"x": 0.2868, "y": 3.5952, "z": 0.3296}
-            }, "local");
+            }, "domain"); //############################################################### Reset to local
             
             lightID =  Entities.addEntity({
                 "type": "Light",
