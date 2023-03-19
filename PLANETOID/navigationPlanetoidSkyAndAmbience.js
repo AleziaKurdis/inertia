@@ -15,7 +15,7 @@
     var isInitiated = false;
     var universeDimension;
     var universeCenter;
-    var universeRenderWithZones;
+    var universeRenderWithZones = [];
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
@@ -127,10 +127,10 @@
     }
 
     function initiate(EntID) {
-        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions"]);
         universeCenter = properties.position;
         universeDimension = properties.dimensions;
-        universeRenderWithZones = properties.renderWithZones;
+        universeRenderWithZones.push(EntID);
 
         isInitiated = true; 
  
@@ -243,7 +243,7 @@
                 "useOriginalPivot": true,
                 "renderWithZones": universeRenderWithZones,
                 "dimensions": {"x": 0.2868, "y": 3.5952, "z": 0.3296}
-            }, "domain");
+            }, "local");
             
             lightID =  Entities.addEntity({
                 "type": "Light",
