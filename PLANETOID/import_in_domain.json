@@ -160,7 +160,7 @@
         "grab": {
             "grabbable": false
         },
-        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularity.js"
+        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularityInnerWorld.js"
     }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
