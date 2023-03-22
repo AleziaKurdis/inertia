@@ -26,7 +26,7 @@
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 152; //m
-    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 6.3; //X time the diameter of the star.
+    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 6.35; //X time the diameter of the star.
 
     this.preload = function(entityID) { 
         thisEntity = entityID;
