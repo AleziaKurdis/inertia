@@ -108,7 +108,7 @@
             "modelURL": ROOT + "models/BELT01.fbx",
             "useOriginalPivot": true
         }, "local");
-
+/*
         sizeMultiplicator = 12;
         var betlOneId = Entities.addEntity({
             "name": "BELT-04",
@@ -150,7 +150,7 @@
             "modelURL": ROOT + "models/BELT01.fbx",
             "useOriginalPivot": true
         }, "local");
-
+*/
         updateStar();
         
         var today = new Date();
@@ -177,6 +177,7 @@
             
             var hue = GetCurrentCycleValue(1, HYTRION_DAY_DURATION);
             var fireColor = hslToRgb(hue, 1, 0.5);
+            var lightColor = hslToRgb(hue, 1, 0.8);
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
             var fireColorFinish = hslToRgb(hue, 1, 0.15);
@@ -238,9 +239,9 @@
                         "grabbable": false
                     },
                     "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
+                        "red": lightColor[0],
+                        "green": lightColor[1],
+                        "blue": lightColor[2]
                     },
                     "isSpotlight": false,
                     "intensity": 15,
@@ -252,9 +253,9 @@
                 //UPDATE
                 Entities.editEntity(fireLightId, {
                     "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
+                        "red": lightColor[0],
+                        "green": lightColor[1],
+                        "blue": lightColor[2]
                     }                    
                 });
             } 
