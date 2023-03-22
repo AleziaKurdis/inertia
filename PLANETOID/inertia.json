@@ -131,6 +131,39 @@
         "localEntity": false,
         "faceCamera": false,
         "isFacingAvatar": false
+    },
+    {
+        "id": "{3b45796c-9f0b-452c-b5ea-a41e1d40b695}",
+        "type": "Sphere",
+        "lastEdited": 1679449710994646,
+        "name": "SINGULARITY",
+        "locked": true,
+        "dimensions": {
+            "x": 150,
+            "y": 150,
+            "z": 150
+        },
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "created": 1679449496788799,
+        "lastEditedBy": "{495b7438-56bd-4378-874c-75d3b57dada2}",
+        "queryAACube": {
+            "x": -129.90380859375,
+            "y": -129.90380859375,
+            "z": -129.90380859375,
+            "scale": 259.8076171875
+        },
+        "canCastShadow": false,
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularity.js"
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",

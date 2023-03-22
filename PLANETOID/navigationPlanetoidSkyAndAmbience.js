@@ -215,7 +215,10 @@
             {"position": {"x":4115.072265625,"y":4428.3115234375,"z":3657.331787109375}, "gravity": "INNER"},
             {"position": {"x":4140.7939453125,"y":4428.03955078125,"z":3666.197021484375}, "gravity": "INNER"},
             {"position": {"x":4176.173828125,"y":4413.3447265625,"z":3669.866943359375}, "gravity": "INNER"},
-            {"position": {"x":4153.34814453125,"y":4360.42431640625,"z":3641.41552734375}, "gravity": "INNER"}
+            {"position": {"x":4153.34814453125,"y":4360.42431640625,"z":3641.41552734375}, "gravity": "INNER"},
+            {"position": {"x":4120.6552734375,"y":4340.21484375,"z":3626.396484375}, "gravity": "INNER"},
+            {"position": {"x":4101.50390625,"y":4353.71484375,"z":3633.78076171875}, "gravity": "INNER"},
+            {"position": {"x":4093.785888671875,"y":4369.7490234375,"z":3652.677001953125}, "gravity": "INNER"}
         ];
         var modelUrl = "";
         var lightColor;
@@ -259,9 +262,9 @@
                 "renderWithZones": universeRenderWithZones,
                 "localPosition": {"x": 0, "y": 0, "z": 0},
                 "color": lightColor,
-                "dimensions": {"x": 80, "y": 80, "z": 80},
-                "intensity": 20,
-                "falloffRadius": 2
+                "dimensions": {"x": 60, "y": 60, "z": 60},
+                "intensity": 10,
+                "falloffRadius": 1
             }, "local");
             
             entitiesToDelete.push(lanternID);
