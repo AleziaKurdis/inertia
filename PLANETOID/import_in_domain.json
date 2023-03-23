@@ -161,6 +161,47 @@
             "grabbable": false
         },
         "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularityInnerWorld.js"
+    },
+    {
+        "id": "{4623a4b3-b358-463a-ba12-0e5d6f810eab}",
+        "type": "Model",
+        "lastEdited": 1679540716529162,
+        "name": "POLARRIVAL",
+        "locked": true,
+        "position": {"x":4000,"y":4649.958984375,"z":4000},
+        "dimensions": {
+            "x": 20,
+            "y": 9.74752140045166,
+            "z": 17.320505142211914
+        },
+        "created": 1679540622510020,
+        "lastEditedBy": "{40355b47-022f-45e3-8829-2c39c76a5c1a}",
+        "queryAACube": {
+            "x": -14.097996711730957,
+            "y": -14.097996711730957,
+            "z": -14.097996711730957,
+            "scale": 28.195993423461914
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/POLARRIVAL.fbx",
+        "blendshapeCoefficients": "{\n}\n",
+        "useOriginalPivot": true,
+        "animation": {
+            "allowTranslation": false
+        },
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
     }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
