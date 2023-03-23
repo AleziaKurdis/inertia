@@ -44,9 +44,9 @@
 
     function update(deltatime) {
         var planet = Entities.getEntityProperties(_entityID, ["position"]);
-        var distance = Vec3.distance(planet.position, MyAvatar.position);
-        if (distance < 0.5 && distance > -0.5) {
-            MyAvatar.position = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { x: 0, y: -0.75, z: 0 }));
+        var distanceFromInversionPoint = HOLLOW_GRAVITY_INVERSION_RADIUS - Vec3.distance(planet.position, MyAvatar.position);
+        if (distanceFromInversionPoint < 0.7 && distanceFromInversionPoint > -0.7) {
+                MyAvatar.position = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { x: 0, y: -2, z: 0 }));
         }
         var direction = Vec3.subtract(MyAvatar.position, planet.position);
         var localUp = Quat.getUp(MyAvatar.orientation);
