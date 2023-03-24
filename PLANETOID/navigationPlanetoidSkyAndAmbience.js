@@ -190,6 +190,7 @@
             "name": "INNER_INFLEXION_LIGHT",
             "locked": true,
             "renderWithZones": universeRenderWithZones,
+            "parentID": EntID,
             "dimensions": {
                 "x": 28.848323822021484,
                 "y": 28.848323822021484,
@@ -201,7 +202,7 @@
                 "z": 0,
                 "w": 0.8703556656837463
             },
-            "position": {"x":4046.80322265625,"y":4434.869140625,"z":3616.272705078125},
+            "localPosition": {"x":46.7099609375,"y":420.57177734375,"z":-370.63916015625},
             "grab": {
                 "grabbable": false
             },
@@ -222,6 +223,7 @@
             "name": "EXO_INFLEXION_LIGHT",
             "locked": true,
             "renderWithZones": universeRenderWithZones,
+            "parentID": EntID,
             "dimensions": {
                 "x": 28.848323822021484,
                 "y": 28.848323822021484,
@@ -233,7 +235,7 @@
                 "z": 0,
                 "w": 0.8703556656837463
             },
-            "position": {"x":4046.7099609375,"y":4420.57177734375,"z":3629.36083984375},
+            "localPosition": {"x":46.80322265625,"y":434.869140625,"z":-383.727294921875},
             "grab": {
                 "grabbable": false
             },
@@ -243,6 +245,33 @@
                 "blue": 157
             },
             "intensity": 15,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 3
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "lavaLight",
+            "locked": true,
+            "renderWithZones": universeRenderWithZones,
+            "parentID": EntID,
+            "dimensions": {
+                "x": 80,
+                "y": 80,
+                "z": 80
+            },
+            "localPosition": {"x": 123.71,"y": 445.50,"z": -342.45},
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": 255,
+                "green": 60,
+                "blue": 0
+            },
+            "intensity": 20,
             "exponent": 1,
             "cutoff": 75,
             "falloffRadius": 3

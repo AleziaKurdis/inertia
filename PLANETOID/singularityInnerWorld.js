@@ -67,7 +67,7 @@
             "useOriginalPivot": true
         }, "local");
 
-        sizeMultiplicator = 6;
+        sizeMultiplicator = 5;
         var betlOneId = Entities.addEntity({
             "name": "BELT-02",
             "parentID": starId,
@@ -88,7 +88,7 @@
             "useOriginalPivot": true
         }, "local");
 
-        sizeMultiplicator = 9;
+/*        sizeMultiplicator = 9;
         var betlOneId = Entities.addEntity({
             "name": "BELT-03",
             "parentID": starId,
@@ -108,7 +108,7 @@
             "modelURL": ROOT + "models/BELT01.fbx",
             "useOriginalPivot": true
         }, "local");
-/*
+
         sizeMultiplicator = 12;
         var betlOneId = Entities.addEntity({
             "name": "BELT-04",
