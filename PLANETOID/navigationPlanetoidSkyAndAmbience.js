@@ -185,6 +185,70 @@
             "bloomMode": "enabled"
         },"local");
 
+        var id = Entities.addEntity({
+            "type": "Light",
+            "name": "INNER_INFLEXION_LIGHT",
+            "locked": true,
+            "renderWithZones": universeRenderWithZones,
+            "dimensions": {
+                "x": 28.848323822021484,
+                "y": 28.848323822021484,
+                "z": 28.848323822021484
+            },
+            "rotation": {
+                "x": 0.49242356419563293,
+                "y": 0,
+                "z": 0,
+                "w": 0.8703556656837463
+            },
+            "position": {"x":4046.80322265625,"y":4434.869140625,"z":3616.272705078125},
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": 255,
+                "green": 51,
+                "blue": 0
+            },
+            "intensity": 15,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 3
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "EXO_INFLEXION_LIGHT",
+            "locked": true,
+            "renderWithZones": universeRenderWithZones,
+            "dimensions": {
+                "x": 28.848323822021484,
+                "y": 28.848323822021484,
+                "z": 28.848323822021484
+            },
+            "rotation": {
+                "x": 0.49242356419563293,
+                "y": 0,
+                "z": 0,
+                "w": 0.8703556656837463
+            },
+            "position": {"x":4046.7099609375,"y":4420.57177734375,"z":3629.36083984375},
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": 0,
+                "green": 255,
+                "blue": 157
+            },
+            "intensity": 15,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 3
+        }, "local");
+        entitiesToDelete.push(id);
+        
         generateLanterns();
 
         var today = new Date();
