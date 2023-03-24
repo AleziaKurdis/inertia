@@ -202,6 +202,49 @@
         "localEntity": false,
         "faceCamera": false,
         "isFacingAvatar": false
+    },
+    {
+        "id": "{f0e9d281-f221-4ae1-a08e-904b0a4e840d}",
+        "type": "Model",
+        "lastEdited": 1679544225526700,
+        "name": "innerEntrance",
+        "locked": true,
+        "description": "",
+        "dimensions": {
+            "x": 18.091333389282227,
+            "y": 32.37241744995117,
+            "z": 34.85025405883789
+        },
+        "position": {"x":4045.2353515625,"y":4311.369140625,"z":3637.131591796875},
+        "rotation": {"x":-0.9007899165153503,"y":0.09313122928142548,"z":0.08466973900794983,"w":-0.41561412811279297},
+        "created": 1679542734917475,
+        "lastEditedBy": "{358f8a4d-ddc4-44d3-8fef-e1246dc36afe}",
+        "queryAACube": {
+            "x": -25.445087432861328,
+            "y": -25.445087432861328,
+            "z": -25.445087432861328,
+            "scale": 50.890174865722656
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/GATE.fbx",
+        "blendshapeCoefficients": "{\n}\n",
+        "useOriginalPivot": true,
+        "animation": {
+            "allowTranslation": false
+        },
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
     }
     ],
   "Id": "{22df3d29-df8c-4931-b798-5c2251055ccf}",
