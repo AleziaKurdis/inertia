@@ -130,39 +130,6 @@
         "isFacingAvatar": false
     },
     {
-        "id": "{3b45796c-9f0b-452c-b5ea-a41e1d40b695}",
-        "type": "Sphere",
-        "lastEdited": 1679449710994646,
-        "name": "SINGULARITY",
-        "locked": true,
-        "dimensions": {
-            "x": 150,
-            "y": 150,
-            "z": 150
-        },
-        "position": {
-            "x": 4000,
-            "y": 4000,
-            "z": 4000
-        },
-        "created": 1679449496788799,
-        "lastEditedBy": "{495b7438-56bd-4378-874c-75d3b57dada2}",
-        "queryAACube": {
-            "x": -129.90380859375,
-            "y": -129.90380859375,
-            "z": -129.90380859375,
-            "scale": 259.8076171875
-        },
-        "canCastShadow": false,
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "grab": {
-            "grabbable": false
-        },
-        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularityInnerWorld.js"
-    },
-    {
         "id": "{4623a4b3-b358-463a-ba12-0e5d6f810eab}",
         "type": "Model",
         "lastEdited": 1679540716529162,
@@ -204,6 +171,77 @@
         "isFacingAvatar": false
     },
     {
+        "id": "{ccf38dc3-6334-46e7-892b-83b3569e4988}",
+        "type": "Zone",
+        "lastEdited": 1679712216822053,
+        "name": "INNER_PLANETOID_VISIBILITY_ZONE",
+        "locked": true,
+        "dimensions": {
+            "x": 980,
+            "y": 980,
+            "z": 980
+        },
+        "created": 1679711806486518,
+        "lastEditedBy": "{d9339c97-15b0-4000-ab82-03138cbecf8f}",
+        "queryAACube": {
+            "x": -848.7048950195312,
+            "y": -848.7048950195312,
+            "z": -848.7048950195312,
+            "scale": 1697.4097900390625
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "sphere",
+        "script": "https://aleziakurdis.github.io/inertia/PLANETOID/singularityInnerWorld.js",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },        
+        "keyLight": {
+            "direction": {
+                "x": 0,
+                "y": -0.7071067690849304,
+                "z": 0.7071067690849304
+            },
+            "castShadows": true
+        },
+        "ambientLight": {
+            "ambientIntensity": 0.30000001192092896,
+            "ambientURL": "https://aleziakurdis.github.io/inertia/PLANETOID/images/innerAmbient.jpg"
+        },
+        "skybox": {
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "url": "https://aleziakurdis.github.io/inertia/PLANETOID/images/innerAmbient.jpg"
+        },
+        "haze": {
+            "hazeRange": 10000,
+            "hazeColor": {
+                "red": 53,
+                "green": 82,
+                "blue": 112
+            }
+        },
+        "ambientLightMode": "enabled",
+        "skyboxMode": "enabled",
+        "hazeMode": "enabled",
+        "clientOnly": false,
+        "avatarEntity": false,
+        "localEntity": false,
+        "faceCamera": false,
+        "isFacingAvatar": false
+    },
+    {
         "id": "{f0e9d281-f221-4ae1-a08e-904b0a4e840d}",
         "type": "Model",
         "lastEdited": 1679544225526700,
@@ -226,7 +264,7 @@
             "scale": 50.890174865722656
         },
         "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+            "{ccf38dc3-6334-46e7-892b-83b3569e4988}"
         ],
         "grab": {
             "grabbable": false
