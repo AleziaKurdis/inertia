@@ -194,7 +194,7 @@
         "damping": 0,
         "angularDamping": 0,
         "shapeType": "static-mesh",
-        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/POLARRIVAL.fbx",
+        "modelURL": "https://aleziakurdis.github.io/inertia/PLANETOID/models/POLARRIVAL.fst",
         "blendshapeCoefficients": "{\n}\n",
         "useOriginalPivot": true,
         "animation": {

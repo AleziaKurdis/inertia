@@ -118,7 +118,6 @@
                 Entities.deleteEntity(darkZoneID);
                 darkZoneID = Uuid.NULL;
             }
-            
             for (var i = 0; i < entitiesToDelete.length; i++) {
                 Entities.deleteEntity(entitiesToDelete[i]);
             }
