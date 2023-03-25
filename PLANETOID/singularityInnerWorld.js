@@ -181,10 +181,10 @@
                         "blue": lightColor[2]
                     },
                     "isSpotlight": false,
-                    "intensity": 15,
+                    "intensity": 60,
                     "exponent": 1,
                     "cutoff": 75,
-                    "falloffRadius": 3
+                    "falloffRadius": 4
                 }, "local");
             } else {
                 //UPDATE
