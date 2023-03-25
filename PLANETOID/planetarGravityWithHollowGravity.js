@@ -19,7 +19,7 @@
     
     var PLANETAR_RADIUS = 650; //in meters
     var EXTERNAL_GRAVITY_FIELD_INFLUENCE_RADIUS = 1.2 * PLANETAR_RADIUS;
-    var HOLLOW_GRAVITY_INVERSION_RADIUS = 572.5; // in meters
+    var HOLLOW_GRAVITY_INVERSION_RADIUS = 572; // in meters
     
     this.preload = function (entityID) {
         _entityID = entityID;

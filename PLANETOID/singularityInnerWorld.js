@@ -26,7 +26,7 @@
     
     var HYTRION_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 152; //m
-    var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 6.37; //X time the diameter of the star.
+    var STAR_LIGHT_DIAMETER = 980; //m
 
     this.preload = function(entityID) { 
         thisEntity = entityID;
@@ -88,69 +88,6 @@
             "useOriginalPivot": true
         }, "local");
 
-/*        sizeMultiplicator = 9;
-        var betlOneId = Entities.addEntity({
-            "name": "BELT-03",
-            "parentID": starId,
-            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
-            "localPosition": {"x": 0, "y": 0, "z": 0},
-            "type": "Model",
-            "renderWithZones": renderWithZones,
-            "grab": {
-                "grabbable": false
-            },
-            "angularDamping": 0,
-            "angularVelocity": {
-                "x":0,
-                "y":0.2,
-                "z":0
-            },
-            "modelURL": ROOT + "models/BELT01.fbx",
-            "useOriginalPivot": true
-        }, "local");
-
-        sizeMultiplicator = 12;
-        var betlOneId = Entities.addEntity({
-            "name": "BELT-04",
-            "parentID": starId,
-            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
-            "localPosition": {"x": 0, "y": 0, "z": 0},
-            "type": "Model",
-            "renderWithZones": renderWithZones,
-            "grab": {
-                "grabbable": false
-            },
-            "angularDamping": 0,
-            "angularVelocity": {
-                "x":0,
-                "y":0.1,
-                "z":0
-            },
-            "modelURL": ROOT + "models/BELT01.fbx",
-            "useOriginalPivot": true
-        }, "local");
-
-        sizeMultiplicator = 20;
-        var betlOneId = Entities.addEntity({
-            "name": "BELT-05",
-            "parentID": starId,
-            "dimensions": {"x": STAR_DIAMETER * sizeMultiplicator, "y": STAR_DIAMETER * RATIO_Z * sizeMultiplicator, "z": STAR_DIAMETER * sizeMultiplicator},
-            "localPosition": {"x": 0, "y": 0, "z": 0},
-            "type": "Model",
-            "renderWithZones": renderWithZones,
-            "grab": {
-                "grabbable": false
-            },
-            "angularDamping": 0,
-            "angularVelocity": {
-                "x":0,
-                "y":0.03,
-                "z":0
-            },
-            "modelURL": ROOT + "models/BELT01.fbx",
-            "useOriginalPivot": true
-        }, "local");
-*/
         updateStar();
         
         var today = new Date();
@@ -224,9 +161,9 @@
                     "type": "Light",
                     "name": "STAR-LIGHT",
                     "dimensions": {
-                        "x": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "y": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "z": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR
+                        "x": STAR_LIGHT_DIAMETER,
+                        "y": STAR_LIGHT_DIAMETER,
+                        "z": STAR_LIGHT_DIAMETER
                     },
                     "localPosition": {
                         "x": 0,
@@ -247,7 +184,7 @@
                     "intensity": 15,
                     "exponent": 1,
                     "cutoff": 75,
-                    "falloffRadius": STAR_DIAMETER * 2
+                    "falloffRadius": 3
                 }, "local");
             } else {
                 //UPDATE
