@@ -3,7 +3,7 @@
     "materials": [
         {
             "name": "SIGN",
-            "albedo": [1, 1, 1],
+            "albedo": [1, 0.71, 0.169],
             "albedoMap": "meridian.jpg",
             "metallic": 0.02,
             "roughness": 0.2,
