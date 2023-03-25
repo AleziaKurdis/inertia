@@ -8,7 +8,7 @@
             "metallic": 0.02,
             "roughness": 0.2,
             "opacity": 1,
-            "emissive": [2.84, 2.1494902, 0.44549019],
+            "unlit": true,
             "cullFaceMode": "CULL_BACK",
             "model": "hifi_pbr"
         }
