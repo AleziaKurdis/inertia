@@ -292,7 +292,7 @@
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
             "grab": {
                 "grabbable": false
-            }
+            },
             "rotation": Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":59.044677734375,"y":424.876953125,"z":-376.980224609375}, {"x":0,"y":0,"z":0}), Quat.IDENTITY))
         }, "local");
         entitiesToDelete.push(id);
