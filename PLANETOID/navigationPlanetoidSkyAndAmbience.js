@@ -276,6 +276,26 @@
             "falloffRadius": 3
         }, "local");
         entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cylinder",
+            "name": "interWater",
+            "locked": true,
+            "renderWithZones": universeRenderWithZones,
+            "parentID": EntID,
+            "dimensions": {
+                "x": 60,
+                "y": 0.1,
+                "z": 60
+            },
+            "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
+            "grab": {
+                "grabbable": false
+            }
+            "rotation": Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":59.044677734375,"y":424.876953125,"z":-376.980224609375}, {"x":0,"y":0,"z":0})), Quat.IDENTITY));
+        }, "local");
+        entitiesToDelete.push(id);
         
         generateLanterns();
 
@@ -319,7 +339,8 @@
         var lightColor;
         var lanternRotation, direction, localUp, lanternID, lightID;
         for (var i = 0; i < lanterns.length; i++) {
-            direction = Vec3.subtract(lanterns[i].position, universeCenter);
+            lanternLocalPosition = Vec3.subtract(lanterns[i].position, {"x":4000,"y":4000,"z":4000});
+            direction = lanternLocalPosition;
             localUp = Quat.getUp(Quat.IDENTITY);
             if (lanterns[i].gravity === "EXO") {
                 modelUrl = ROOT + "models/lanternBlue.fst";
@@ -343,7 +364,7 @@
                 "type": "Model",
                 "name": "Lantern " + i,
                 "modelURL": modelUrl,
-                "position": lanterns[i].position,
+                "position": lanternLocalPosition,
                 "rotation": lanternRotation,
                 "useOriginalPivot": true,
                 "renderWithZones": universeRenderWithZones,
