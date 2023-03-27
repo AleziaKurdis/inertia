@@ -286,15 +286,54 @@
             "parentID": EntID,
             "dimensions": {
                 "x": 60,
-                "y": 0.1,
+                "y": 2,
                 "z": 60
             },
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
+            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            "angularDamping": 0.0,
             "grab": {
                 "grabbable": false
             },
             "rotation": Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":59.044677734375,"y":424.876953125,"z":-376.980224609375}, {"x":0,"y":0,"z":0})), Quat.IDENTITY))
         }, "local");
+        
+        var materialData = {
+           "materialVersion":1,
+           "materials":[
+                {
+                    "name":"PIX",
+                    "albedo":[ 0, 0, 0 ],
+                    "metallic": 1,
+                    "roughness":0.008,
+                    "opacity": 0.967,
+                    "normalMap": ROOT + "images/waves_normal_512.jpg",
+                    "cullFaceMode":"CULL_NONE",
+                    "model":"hifi_pbr"
+                }
+           ]
+        };
+
+        var materialId = Entities.addEntity({
+            "type": "Material",
+            "renderWithZones": universeRenderWithZones,
+            "name": "interWater_Material",
+            "locked": true,
+            "grab": {
+                "grabbable": false
+            },
+            "materialURL": "materialData",
+            "priority": 1,
+            "parentMaterialName": "all",
+            "materialData": JSON.stringify(materialData),
+            "parentID": id,
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "materialMappingScale": {
+                "x": 4,
+                "y": 4
+            }
+        },"local");
+        
         entitiesToDelete.push(id);
         
         generateLanterns();
