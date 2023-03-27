@@ -288,16 +288,16 @@
             "parentID": EntID,
             "dimensions": {
                 "x": 60,
-                "y": 3,
+                "y": 4,
                 "z": 60
             },
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
-            //"localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
             "angularDamping": 0.0,
             "grab": {
                 "grabbable": false
             },
-            "rotation": waterRotation
+            "localRotation": waterRotation
         }, "local");
         
         var materialData = {
@@ -305,7 +305,7 @@
            "materials":[
                 {
                     "name":"water",
-                    "albedo":[ 0.2, 0.2, 0.2 ],
+                    "albedo":[ 0.4, 0.4, 0.4 ],
                     "metallic": 1,
                     "roughness":0.008,
                     "opacity": 0.967,
