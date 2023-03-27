@@ -288,7 +288,7 @@
             "parentID": EntID,
             "dimensions": {
                 "x": 60,
-                "y": 2,
+                "y": 3,
                 "z": 60
             },
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
@@ -305,7 +305,7 @@
            "materials":[
                 {
                     "name":"water",
-                    "albedo":[ 0, 0, 0 ],
+                    "albedo":[ 0.2, 0.2, 0.2 ],
                     "metallic": 1,
                     "roughness":0.008,
                     "opacity": 0.967,
