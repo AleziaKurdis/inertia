@@ -276,7 +276,9 @@
             "falloffRadius": 3
         }, "local");
         entitiesToDelete.push(id);
-
+        
+        var waterRotation = Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":59.044677734375,"y":424.876953125,"z":-376.980224609375}, {"x":0,"y":0,"z":0})), Quat.IDENTITY));
+        
         id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cylinder",
@@ -290,19 +292,19 @@
                 "z": 60
             },
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
-            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            //"localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
             "angularDamping": 0.0,
             "grab": {
                 "grabbable": false
             },
-            "rotation": Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":59.044677734375,"y":424.876953125,"z":-376.980224609375}, {"x":0,"y":0,"z":0})), Quat.IDENTITY))
+            "rotation": waterRotation
         }, "local");
         
         var materialData = {
            "materialVersion":1,
            "materials":[
                 {
-                    "name":"PIX",
+                    "name":"water",
                     "albedo":[ 0, 0, 0 ],
                     "metallic": 1,
                     "roughness":0.008,
@@ -324,7 +326,7 @@
             },
             "materialURL": "materialData",
             "priority": 1,
-            "parentMaterialName": "all",
+            "parentMaterialName": 0,
             "materialData": JSON.stringify(materialData),
             "parentID": id,
             "localPosition": {"x": 0, "y": 0, "z": 0},
