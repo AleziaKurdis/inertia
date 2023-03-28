@@ -292,7 +292,7 @@
                 "z": 60
             },
             "localPosition": {"x":59.044677734375,"y":424.876953125,"z":-376.980224609375},
-            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            //"localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
             "angularDamping": 0.0,
             "grab": {
                 "grabbable": false
@@ -353,7 +353,7 @@
                 "z": 40
             },
             "localPosition": {"x":122.59765625,"y":450.4013671875,"z":-339.255126953125},
-            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            //"localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
             "angularDamping": 0.0,
             "grab": {
                 "grabbable": false
