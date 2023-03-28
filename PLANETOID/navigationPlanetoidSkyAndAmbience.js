@@ -297,7 +297,7 @@
             "grab": {
                 "grabbable": false
             },
-            "localRotation": waterRotation
+            "rotation": waterRotation
         }, "local");
         
         var materialData = {
@@ -337,6 +337,67 @@
         },"local");
         
         entitiesToDelete.push(id);
+
+        var lavaRotation = Quat.normalize(Quat.multiply(Quat.rotationBetween(Quat.getUp(Quat.IDENTITY), Vec3.subtract({"x":122.59765625,"y":450.4013671875,"z":-339.255126953125}, {"x":0,"y":0,"z":0})), Quat.IDENTITY));
+        
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cylinder",
+            "name": "interLava",
+            "locked": true,
+            "renderWithZones": universeRenderWithZones,
+            "parentID": EntID,
+            "dimensions": {
+                "x": 40,
+                "y": 4,
+                "z": 40
+            },
+            "localPosition": {"x":122.59765625,"y":450.4013671875,"z":-339.255126953125},
+            "localAngularVelocity": {"x":0,"y":0.0174533,"z":0},
+            "angularDamping": 0.0,
+            "grab": {
+                "grabbable": false
+            },
+            "rotation": lavaRotation
+        }, "local");
+        
+        materialData = {
+           "materialVersion":1,
+           "materials":[
+                {
+                    "name":"lava",
+                    "albedo": [1, 1, 1],
+                    "metallic": 0.004,
+                    "roughness": 0.984,
+                    "emissive": [3.74, 2.024, 0.24933333333333335],
+                    "cullFaceMode":"CULL_BACK",
+                    "model":"hifi_pbr"
+                }
+           ]
+        };
+
+        materialId = Entities.addEntity({
+            "type": "Material",
+            "renderWithZones": universeRenderWithZones,
+            "name": "interLava_Material",
+            "locked": true,
+            "grab": {
+                "grabbable": false
+            },
+            "materialURL": "materialData",
+            "priority": 1,
+            "parentMaterialName": 0,
+            "materialData": JSON.stringify(materialData),
+            "parentID": id,
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "materialMappingScale": {
+                "x": 1,
+                "y": 1
+            }
+        },"local");
+        
+        entitiesToDelete.push(id);
+
         
         generateLanterns();
 
