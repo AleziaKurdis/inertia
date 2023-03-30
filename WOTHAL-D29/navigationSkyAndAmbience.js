@@ -319,7 +319,7 @@
                     "hazeBackgroundBlend": 0,
                     "hazeEnableGlare": true,
                     //"hazeGlareColor": { "red": currentRGBlight[0], "green": currentRGBlight[1], "blue": currentRGBlight[2] },
-                    "hazeGlareColor": { "red": 1, "green": 1, "blue": 1 },
+                    "hazeGlareColor": { "red": 255, "green": 255, "blue": 255 },
                     "hazeGlareAngle": 10,
                     "hazeAltitudeEffect": true,
                     "hazeBaseRef": referenceAltitude - 800,
