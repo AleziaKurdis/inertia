@@ -254,7 +254,7 @@
     }
 
     function updateSky() {
-        var referenceAltitude = universeCenter.z;
+        var referenceAltitude = universeCenter.y;
 		var skycode = new Array("A", "B", "C", "D");
 		var currentsky = ROOT + "images/SKYBOX_WOTHAL_1024-" + skycode[Math.floor(GetCurrentCycleValue(4, 4 * D29_DAY_DURATION))] + ".png"; //change each D29 day
 
