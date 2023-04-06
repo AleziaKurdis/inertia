@@ -1,9 +1,24 @@
-{"materials":[{
-    "albedo": [0.211, 0.211, 0.211],
-    "roughness": 0.351, 
-    "metallic": 0.816, 
-    "normalMap": "CARBONITE_NORMAL.jpg",
-    "cullFaceMode": "CULL_NONE", 
-    "model": "hifi_pbr",
-    "defaultFallthrough": false
-}]}
+{
+  "materialVersion": 1,
+  "materials": [
+    {
+      "name": "FLOOR1",
+      "albedo": [
+        0.5607843137254902,
+        0,
+        0
+      ],
+      "metallic": 0.015,
+      "roughness": 0.011,
+      "normalMap": "MARBLE_NORMAL_512.jpg",
+      "opacity": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "scattering": 0,
+      "cullFaceMode": "CULL_BACK"
+    }
+  ]
+}

@@ -1,9 +1,23 @@
-{"materials":[{
-    "albedo": [0.211, 0.211, 0.211],
-    "roughness": 0.351, 
-    "metallic": 0.816, 
-    "normalMap": "CARBONITE_NORMAL.jpg",
-    "cullFaceMode": "CULL_NONE", 
-    "model": "hifi_pbr",
-    "defaultFallthrough": false
-}]}
+{
+  "materialVersion": 1,
+  "materials": [
+    {
+      "name": "LIGHT",
+      "albedo": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.003,
+      "roughness": 0.976,
+      "opacity": 1,
+      "emissive": [
+        3.78,
+        2.268,
+        0.9487058823529411
+      ],
+      "scattering": 0,
+      "cullFaceMode": "CULL_BACK"
+    }
+  ]
+}
