@@ -54,7 +54,7 @@
         {
             "name": "BLACK CATHEDRAL",
             "position": {"x":5029,"y":5905,"z":9036},
-            "occultationRadius": 35,
+            "occultationRadius": 50,
             "influenceRadius": 80,
             "astroids": false
         }
