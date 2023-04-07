@@ -52,16 +52,12 @@
     var univerSoundPlaying = 0;
     var blindspots = [
         {
-            "name": "AK003-1 METASPACEPORT",
-            "position": {
-                "x": 17,
-                "y": 0,
-                "z": 30,
-             },
-            "occultationRadius": 25.5,
-            "influenceRadius": 60,
-            "astroids": true
-        }        
+            "name": "BLACK CATHEDRAL",
+            "position": {"x":5029,"y":5905,"z":9036},
+            "occultationRadius": 35,
+            "influenceRadius": 80,
+            "astroids": false
+        }
     ];
     
    
