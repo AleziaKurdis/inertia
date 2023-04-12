@@ -65,7 +65,7 @@
                 "name": "STAR",
                 "parentID": thisEntity,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER/4, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0, "y": 100, "z": 0},
+                "localPosition": {"x": 0, "y": 177, "z": 0},
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
