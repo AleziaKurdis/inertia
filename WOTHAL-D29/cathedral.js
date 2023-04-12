@@ -132,6 +132,10 @@
             if (pitch === 0) {pitch = 0.001;}
             
             var hue = GetCurrentCycleValue(1, WEEK_DURATION);
+            hue = hue + 0.5;
+            if (hue > 1) {
+                hue = hue - 1;
+            }
             var fireColor = hslToRgb(hue, 1, 0.5);
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
@@ -306,7 +310,7 @@
                     },
                     "accelerationSpread": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                     },
                     "particleRadius": 0.2 * STAR_DIAMETER,
