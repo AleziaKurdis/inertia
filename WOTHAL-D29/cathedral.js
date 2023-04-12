@@ -301,7 +301,7 @@
                     "polarFinish": 3.1415927410125732,
                     "emitAcceleration": {
                         "x": 0,
-                        "y": 1,
+                        "y": 0.2,
                         "z": 0
                     },
                     "accelerationSpread": {
