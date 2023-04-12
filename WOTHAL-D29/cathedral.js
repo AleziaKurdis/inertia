@@ -17,9 +17,16 @@
     var thisEntity = Uuid.NULL;
     var renderWithZones;
     
-    //var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
-    //var processTimer = 0;
-   
+    var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
+    var processTimer = 0;
+    
+    var starId = Uuid.NULL;
+    var fireMatId = Uuid.NULL;
+    var fireLightId = Uuid.NULL;
+    var fireParticles = Uuid.NULL;
+    
+    var STAR_DIAMETER = 20;
+    
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(thisEntity, ["renderWithZones"]);
@@ -54,9 +61,20 @@
             "falloffRadius": 15
         }, "local");
 
-        //var today = new Date();
-        //processTimer = today.getTime();
-        //Script.update.connect(myTimer);
+        starId = Entities.addEntity({
+                "name": "STAR",
+                "parentID": thisEntity,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER/4, "z": STAR_DIAMETER},
+                "localPosition": {"x": 0, "y": 100, "z": 0},
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": renderWithZones
+        }, "local");
+
+        var today = new Date();
+        processTimer = today.getTime();
+        Script.update.connect(myTimer);
     };
 
     
@@ -64,7 +82,7 @@
         shutdown();
     };    
 
-/*    function myTimer(deltaTime) {
+    function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
 
@@ -72,14 +90,19 @@
             processTimer = today.getTime();
         }  
     }
-*/
+
     function shutdown() {
         if (isInitiated){            
-            //Script.update.disconnect(myTimer);
+            Script.update.disconnect(myTimer);
             if (centralLightID != Uuid.NULL){
                 Entities.deleteEntity(centralLightID);
                 centralLightID = Uuid.NULL;
             }
+            if (starId != Uuid.NULL){
+                Entities.deleteEntity(starId);
+                starId = Uuid.NULL;
+            }
+            
         }
     }
 
