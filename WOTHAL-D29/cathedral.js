@@ -136,7 +136,7 @@
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
             var fireColorFinish = hslToRgb(hue, 1, 0.15);
-            var bloomFactor = 4;
+            var bloomFactor = 3;
             
             var materialContent = {
                 "materialVersion": 1,
@@ -252,15 +252,15 @@
                 });
             }
 
-/*            if (fireParticles === Uuid.NULL) {
+            if (fireParticles === Uuid.NULL) {
                 //CREATE
                 fireParticles = Entities.addEntity({
                     "type": "ParticleEffect",
                     "name": "STAR_PARTICLE",
                     "dimensions": {
-                        "x": STAR_DIAMETER * 2,
-                        "y": STAR_DIAMETER * 2,
-                        "z": STAR_DIAMETER * 2
+                        "x": STAR_DIAMETER,
+                        "y": STAR_DIAMETER,
+                        "z": STAR_DIAMETER
                     },
                     "rotation": Quat.IDENTITY,
                     "localPosition": {
@@ -342,7 +342,7 @@
                         "x":0,
                         "y":0.5,
                         "z":0
-                    }                    
+                    }
                 }, "local");
             } else {
                 //UPDATE
@@ -368,7 +368,7 @@
                         "blue": fireColorFinish[2]
                     }                
                 });
-            } */
+            }
         }
     }
 
