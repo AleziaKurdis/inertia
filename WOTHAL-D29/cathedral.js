@@ -24,10 +24,16 @@
     var poolAId = Uuid.NULL;
     var poolBId = Uuid.NULL;
     var fireMatId = Uuid.NULL;
+    var poolAMatId = Uuid.NULL;
+    var poolBMatId = Uuid.NULL;
+    var poolALightId = Uuid.NULL;
+    var poolBLightId = Uuid.NULL;    
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
     
     var STAR_DIAMETER = 12;
+    var DAY_DURATION = 104400; //29h
+    var WEEK_DURATION = DAY_DURATION * 9;
     
     this.preload = function(entityID) {
         thisEntity = entityID;
@@ -120,8 +126,252 @@
     }
 
     function updateStar() {
-        
+        if (starId !== Uuid.NULL) {
+            
+            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
+            if (pitch === 0) {pitch = 0.001;}
+            
+            var hue = GetCurrentCycleValue(1, WEEK_DURATION);
+            var fireColor = hslToRgb(hue, 1, 0.5);
+            var plasmaColor = hslToRgb(hue, 1, 0.61);
+            var fireColorStart = hslToRgb(hue, 1, 0.9);
+            var fireColorFinish = hslToRgb(hue, 1, 0.15);
+            var bloomFactor = 4;
+            
+            var materialContent = {
+                "materialVersion": 1,
+                "materials": [
+                    {
+                        "name": "plasma",
+                        "albedo": [1, 1, 1],
+                        "metallic": 1,
+                        "roughness": 1,
+                        "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+            
+            if (fireMatId === Uuid.NULL) {
+                //CREATE
+                fireMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": starId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireMatId, {
+                    "materialData": JSON.stringify(materialContent)
+                });
+            }
+
+            if (poolAMatId === Uuid.NULL) {
+                //CREATE
+                poolAMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": poolAId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(poolAMatId, {
+                    "materialData": JSON.stringify(materialContent)
+                });
+            }
+
+            if (poolBMatId === Uuid.NULL) {
+                //CREATE
+                poolBMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": poolBId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(poolBMatId, {
+                    "materialData": JSON.stringify(materialContent)
+                });
+            }
+
+            if (fireLightId === Uuid.NULL) {
+                //CREATE
+                fireLightId = Entities.addEntity({
+                    "type": "Light",
+                    "name": "STAR-LIGHT",
+                    "dimensions": {
+                        "x": STAR_DIAMETER * 1.2,
+                        "y": STAR_DIAMETER * 1.2,
+                        "z": STAR_DIAMETER * 1.2
+                    },
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "renderWithZones": renderWithZones,
+                    "parentID": starId,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "isSpotlight": false,
+                    "intensity": 15,
+                    "exponent": 1,
+                    "cutoff": 75,
+                    "falloffRadius": STAR_DIAMETER * 2
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireLightId, {
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    }                    
+                });
+            }
+
+/*            if (fireParticles === Uuid.NULL) {
+                //CREATE
+                fireParticles = Entities.addEntity({
+                    "type": "ParticleEffect",
+                    "name": "STAR_PARTICLE",
+                    "dimensions": {
+                        "x": STAR_DIAMETER * 2,
+                        "y": STAR_DIAMETER * 2,
+                        "z": STAR_DIAMETER * 2
+                    },
+                    "rotation": Quat.IDENTITY,
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "renderWithZones": renderWithZones,
+                    "parentID": starId,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "ellipsoid",
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "alpha": 0.10000000149011612,
+                    "textures": ROOT + "images/pitParticle.png",
+                    "maxParticles": 2250,
+                    "lifespan": 9,
+                    "emitRate": 250,
+                    "emitSpeed": 0,
+                    "speedSpread": 0.1 * STAR_DIAMETER,
+                    "emitOrientation": {
+                        "x": -0.0000152587890625,
+                        "y": -0.0000152587890625,
+                        "z": -0.0000152587890625,
+                        "w": 1
+                    },
+                    "emitDimensions": {
+                        "x": 0.9 * STAR_DIAMETER,
+                        "y": 0.9 * STAR_DIAMETER,
+                        "z": 0.9 * STAR_DIAMETER,
+                    },
+                    "emitRadiusStart": 1,
+                    "polarFinish": 3.1415927410125732,
+                    "emitAcceleration": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "accelerationSpread": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "particleRadius": 0.4 * STAR_DIAMETER,
+                    "radiusSpread": 0.1 * STAR_DIAMETER,
+                    "radiusStart": 0.1 * STAR_DIAMETER,
+                    "radiusFinish": 0.6 * STAR_DIAMETER,
+                    "colorStart": {
+                        "red": fireColorStart[0],
+                        "green": fireColorStart[1],
+                        "blue": fireColorStart[2]
+                    },
+                    "colorFinish": {
+                        "red": fireColorFinish[0],
+                        "green": fireColorFinish[1],
+                        "blue": fireColorFinish[2]
+                    },
+                    "colorSpread": {
+                        "red": Math.floor(pitch * 15.9),
+                        "green": Math.floor(pitch * 15.9),
+                        "blue": Math.floor(pitch * 15.9)
+                    },                
+                    "alphaSpread": 0.10000000149011612,
+                    "alphaStart": 0.5,
+                    "alphaFinish": 0,
+                    "emitterShouldTrail": false,
+                    "rotateWithEntity": true,
+                    "spinSpread": 1.5700000524520874,
+                    "spinStart": 0,
+                    "particleSpin": 1,
+                    "spinFinish": 2,
+                    "angularDamping": 0,
+                    "angularVelocity": {
+                        "x":0,
+                        "y":0.5,
+                        "z":0
+                    }                    
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireParticles, {
+                    "color": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "colorStart": {
+                        "red": fireColorStart[0],
+                        "green": fireColorStart[1],
+                        "blue": fireColorStart[2]
+                    },
+                    "colorSpread": {
+                        "red": Math.floor(pitch * 15.9),
+                        "green": Math.floor(pitch * 15.9),
+                        "blue": Math.floor(pitch * 15.9)
+                    },                 
+                    "colorFinish": {
+                        "red": fireColorFinish[0],
+                        "green": fireColorFinish[1],
+                        "blue": fireColorFinish[2]
+                    }                
+                });
+            } 
+        }*/
     }
+
 
     function shutdown() {
         Script.update.disconnect(myTimer);
