@@ -100,17 +100,14 @@
     }
 
     function shutdown() {
-        if (isInitiated){            
-            Script.update.disconnect(myTimer);
-            if (centralLightID != Uuid.NULL){
-                Entities.deleteEntity(centralLightID);
-                centralLightID = Uuid.NULL;
-            }
-            if (starId != Uuid.NULL){
-                Entities.deleteEntity(starId);
-                starId = Uuid.NULL;
-            }
-            
+        Script.update.disconnect(myTimer);
+        if (centralLightID != Uuid.NULL){
+            Entities.deleteEntity(centralLightID);
+            centralLightID = Uuid.NULL;
+        }
+        if (starId != Uuid.NULL){
+            Entities.deleteEntity(starId);
+            starId = Uuid.NULL;
         }
     }
 
