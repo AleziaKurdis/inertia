@@ -128,7 +128,7 @@
     function updateStar() {
         if (starId !== Uuid.NULL) {
             
-            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
+            var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), ((DAY_DURATION/24) * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
             
             var hue = GetCurrentCycleValue(1, WEEK_DURATION);
