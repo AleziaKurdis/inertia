@@ -21,6 +21,8 @@
     var processTimer = 0;
     
     var starId = Uuid.NULL;
+    var poolAId = Uuid.NULL;
+    var poolBId = Uuid.NULL;
     var fireMatId = Uuid.NULL;
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
@@ -65,13 +67,24 @@
                 "name": "STAR",
                 "parentID": thisEntity,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER/3, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0, "y": 178, "z": 0},
+                "localPosition": {"x": 0, "y": 177.5, "z": 0},
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones
         }, "local");
 
+/*        poolAId = Entities.addEntity({
+                "name": "POOL_A",
+                "parentID": starId,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER/3, "z": STAR_DIAMETER},
+                "localPosition": {"x": 0, "y": 178, "z": 0},
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": renderWithZones
+        }, "local");
+*/
         updateStar();
 
         var today = new Date();
@@ -109,6 +122,7 @@
             Entities.deleteEntity(starId);
             starId = Uuid.NULL;
         }
+        
     }
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
