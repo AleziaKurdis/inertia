@@ -74,17 +74,28 @@
                 "renderWithZones": renderWithZones
         }, "local");
 
-/*        poolAId = Entities.addEntity({
+        poolAId = Entities.addEntity({
                 "name": "POOL_A",
                 "parentID": starId,
-                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER/3, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0, "y": 178, "z": 0},
+                "dimensions": {"x": 25, "y": 0.70, "z": 10},
+                "localPosition": {"x": 0.7466, "y": -0.7788, "z": 14.8410},
                 "type": "Shape",
-                "shape": "Sphere",
+                "shape": "Cylinder",
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones
         }, "local");
-*/
+
+        poolBId = Entities.addEntity({
+                "name": "POOL_A",
+                "parentID": starId,
+                "dimensions": {"x": 25, "y": 0.70, "z": 10},
+                "localPosition": {"x": -1.1860, "y": -0.7788, "z": -16.923},
+                "type": "Shape",
+                "shape": "Cylinder",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": renderWithZones
+        }, "local");
+
         updateStar();
 
         var today = new Date();
