@@ -84,7 +84,7 @@
                 "name": "POOL_A",
                 "parentID": starId,
                 "dimensions": {"x": 25, "y": 0.70, "z": 10},
-                "localPosition": {"x": 0.7466, "y": -0.7788, "z": 14.8410},
+                "localPosition": {"x": 1.1860, "y": -0.7788, "z": 16.923},
                 "type": "Shape",
                 "shape": "Cylinder",
                 "color": {"red": 128, "green": 128, "blue": 128},
@@ -92,7 +92,7 @@
         }, "local");
 
         poolBId = Entities.addEntity({
-                "name": "POOL_A",
+                "name": "POOL_B",
                 "parentID": starId,
                 "dimensions": {"x": 25, "y": 0.70, "z": 10},
                 "localPosition": {"x": -1.1860, "y": -0.7788, "z": -16.923},
