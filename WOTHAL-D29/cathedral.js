@@ -216,9 +216,9 @@
                     "type": "Light",
                     "name": "STAR-LIGHT",
                     "dimensions": {
-                        "x": STAR_DIAMETER * 1.2,
-                        "y": STAR_DIAMETER * 1.2,
-                        "z": STAR_DIAMETER * 1.2
+                        "x": STAR_DIAMETER * 1.3,
+                        "y": STAR_DIAMETER * 1.3,
+                        "z": STAR_DIAMETER * 1.3
                     },
                     "localPosition": {
                         "x": 0,
