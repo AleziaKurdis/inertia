@@ -285,7 +285,7 @@
                     "lifespan": 9,
                     "emitRate": 250,
                     "emitSpeed": 0,
-                    "speedSpread": 0.1 * STAR_DIAMETER,
+                    "speedSpread": 0.4,
                     "emitOrientation": {
                         "x": -0.0000152587890625,
                         "y": -0.0000152587890625,
@@ -293,15 +293,15 @@
                         "w": 1
                     },
                     "emitDimensions": {
-                        "x": 0.9 * STAR_DIAMETER,
-                        "y": 0.9 * STAR_DIAMETER,
-                        "z": 0.9 * STAR_DIAMETER,
+                        "x": 0.7 * STAR_DIAMETER,
+                        "y": 0.7 * STAR_DIAMETER,
+                        "z": 0.7 * STAR_DIAMETER,
                     },
                     "emitRadiusStart": 1,
                     "polarFinish": 3.1415927410125732,
                     "emitAcceleration": {
                         "x": 0,
-                        "y": 0,
+                        "y": 1,
                         "z": 0
                     },
                     "accelerationSpread": {
@@ -309,10 +309,10 @@
                         "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 0.4 * STAR_DIAMETER,
-                    "radiusSpread": 0.1 * STAR_DIAMETER,
-                    "radiusStart": 0.1 * STAR_DIAMETER,
-                    "radiusFinish": 0.6 * STAR_DIAMETER,
+                    "particleRadius": 0.2 * STAR_DIAMETER,
+                    "radiusSpread": 0.05 * STAR_DIAMETER,
+                    "radiusStart": 0.05 * STAR_DIAMETER,
+                    "radiusFinish": 0.4 * STAR_DIAMETER,
                     "colorStart": {
                         "red": fireColorStart[0],
                         "green": fireColorStart[1],
