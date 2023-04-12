@@ -368,8 +368,8 @@
                         "blue": fireColorFinish[2]
                     }                
                 });
-            } 
-        }*/
+            } */
+        }
     }
 
 
