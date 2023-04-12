@@ -285,7 +285,7 @@
                     "lifespan": 9,
                     "emitRate": 250,
                     "emitSpeed": 0,
-                    "speedSpread": 0.4,
+                    "speedSpread": 0.1,
                     "emitOrientation": {
                         "x": -0.0000152587890625,
                         "y": -0.0000152587890625,
@@ -294,10 +294,10 @@
                     },
                     "emitDimensions": {
                         "x": 0.7 * STAR_DIAMETER,
-                        "y": 0.7 * STAR_DIAMETER,
+                        "y": (0.7 * STAR_DIAMETER)/3,
                         "z": 0.7 * STAR_DIAMETER,
                     },
-                    "emitRadiusStart": 1,
+                    "emitRadiusStart": 0.5,
                     "polarFinish": 3.1415927410125732,
                     "emitAcceleration": {
                         "x": 0,
@@ -336,13 +336,7 @@
                     "spinSpread": 1.5700000524520874,
                     "spinStart": 0,
                     "particleSpin": 1,
-                    "spinFinish": 2,
-                    "angularDamping": 0,
-                    "angularVelocity": {
-                        "x":0,
-                        "y":0.5,
-                        "z":0
-                    }
+                    "spinFinish": 2
                 }, "local");
             } else {
                 //UPDATE
