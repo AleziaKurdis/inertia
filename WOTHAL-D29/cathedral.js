@@ -72,6 +72,8 @@
                 "renderWithZones": renderWithZones
         }, "local");
 
+        updateStar();
+
         var today = new Date();
         processTimer = today.getTime();
         Script.update.connect(myTimer);
@@ -85,10 +87,16 @@
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
-
+            
+            updateStar();
+            
             today = new Date();
             processTimer = today.getTime();
         }  
+    }
+
+    function updateStar() {
+        
     }
 
     function shutdown() {
