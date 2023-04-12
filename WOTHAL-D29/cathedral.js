@@ -25,7 +25,7 @@
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
     
-    var STAR_DIAMETER = 20;
+    var STAR_DIAMETER = 12;
     
     this.preload = function(entityID) {
         thisEntity = entityID;
