@@ -37,7 +37,7 @@
         
         var id = Entities.addEntity({
             "type": "Box",
-            "name": teleporters[i].name,
+            "name": "TP",
             "visible": false,
             "description": portalData.url,
             "dimensions": portalData.dimensions,
