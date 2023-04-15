@@ -130,6 +130,7 @@
             
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), ((DAY_DURATION/24) * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
+            pitch = 0; //This deactivate the spead color tide.
             
             var hue = GetCurrentCycleValue(1, WEEK_DURATION);
             hue = hue + 0.5;
@@ -283,7 +284,7 @@
                         "green": fireColor[1],
                         "blue": fireColor[2]
                     },
-                    "alpha": 0.10000000149011612,
+                    "alpha": 0.1,
                     "textures": ROOT + "images/pitParticle.png",
                     "maxParticles": 2250,
                     "lifespan": 9,
@@ -310,13 +311,13 @@
                     },
                     "accelerationSpread": {
                         "x": 0,
-                        "y": 0.5,
+                        "y": 0.05,
                         "z": 0
                     },
                     "particleRadius": 0.2 * STAR_DIAMETER,
                     "radiusSpread": 0.05 * STAR_DIAMETER,
                     "radiusStart": 0.05 * STAR_DIAMETER,
-                    "radiusFinish": 0.4 * STAR_DIAMETER,
+                    "radiusFinish": 0.5 * STAR_DIAMETER,
                     "colorStart": {
                         "red": fireColorStart[0],
                         "green": fireColorStart[1],
