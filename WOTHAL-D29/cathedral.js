@@ -30,6 +30,7 @@
     var poolBLightId = Uuid.NULL;    
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
+    var planetId = Uuid.NULL;
     
     var STAR_DIAMETER = 12;
     var DAY_DURATION = 104400; //29h
@@ -103,6 +104,7 @@
         }, "local");
 
         updateStar();
+        updatePlanet();
 
         var today = new Date();
         processTimer = today.getTime();
@@ -119,10 +121,48 @@
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             
             updateStar();
+            updatePlanet();
             
             today = new Date();
             processTimer = today.getTime();
         }  
+    }
+
+    function updatePlanet() {
+        var DISTANCE_FROM_CENTER =  {"x": 0, "y": 0, "z": 5};
+        var angle = GetCurrentCycleValue(360, WEEK_DURATION);
+        var planetLocalPosition = Vec3.sum({"x": 0.0, "y": 180, "z": 0.0}, Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0, "y": angle, "z": 0}), DISTANCE_FROM_CENTER ));
+        if (planetId === Uuid.NULL) {
+            //create
+            planetId = Entities.addEntity({
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "parentID": thisEntity,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": planetLocalPosition,
+                    "name": "Coloweek",
+                    "color": {"red": 100, "green": 100, "blue": 100 },
+                    "dimensions": {"x": 1, "y": 1, "z": 1},
+                    "angularDamping": 0,
+                    "angularVelocity": {"x": 0, "y": (2 * Math.PI)/72.5, "z": 0}
+                }, "local");
+            
+            var moon = Entities.addEntity({
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "parentID": planetId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0, "y": 0, "z": 1},
+                    "name": "Moonut",
+                    "color": {"red": 100, "green": 100, "blue": 100 },
+                    "dimensions": {"x": 0.2, "y": 0.2, "z": 0.2}
+                }, "local");
+        } else {
+            //update
+            Entities.editEntity(planetId, {
+                "localPosition": planetLocalPosition
+            });
+        }
     }
 
     function updateStar() {
@@ -381,6 +421,11 @@
         if (starId != Uuid.NULL){
             Entities.deleteEntity(starId);
             starId = Uuid.NULL;
+        }
+        
+        if (planetId != Uuid.NULL){
+            Entities.deleteEntity(planetId);
+            planetId = Uuid.NULL;
         }
         
     }
