@@ -129,7 +129,7 @@
     }
 
     function updatePlanet() {
-        var DISTANCE_FROM_CENTER =  {"x": 0, "y": 0, "z": 4};
+        var DISTANCE_FROM_CENTER =  {"x": 0, "y": 0, "z": 4.2};
         var angle = GetCurrentCycleValue(360, WEEK_DURATION);
         var planetLocalPosition = Vec3.sum({"x": 0.0, "y": 180, "z": 0.0}, Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0, "y": angle, "z": 0}), DISTANCE_FROM_CENTER ));
         if (planetId === Uuid.NULL) {
@@ -153,7 +153,7 @@
                     "shape": "Sphere",
                     "parentID": planetId,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0, "y": 0, "z": 1.5},
+                    "localPosition": {"x": 0, "y": 0, "z": 1},
                     "name": "Moonut",
                     "color": {"red": 100, "green": 100, "blue": 100 },
                     "dimensions": {"x": 0.1, "y": 0.1, "z": 0.1}
