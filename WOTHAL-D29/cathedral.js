@@ -140,6 +140,7 @@
                     "parentID": thisEntity,
                     "renderWithZones": renderWithZones,
                     "localPosition": planetLocalPosition,
+                    "localRotation": Quat.fromVec3Degrees({"x": 38, "y": 0, "z": 0}),
                     "name": "Coloweek",
                     "color": {"red": 100, "green": 100, "blue": 100 },
                     "dimensions": {"x": 0.618, "y": 0.618, "z": 0.618},
