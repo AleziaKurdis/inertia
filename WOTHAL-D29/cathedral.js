@@ -140,12 +140,12 @@
                     "parentID": thisEntity,
                     "renderWithZones": renderWithZones,
                     "localPosition": planetLocalPosition,
-                    "localRotation": Quat.fromVec3Degrees({"x": 38, "y": 0, "z": 0}),
+                    "localRotation": Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 0}),
                     "name": "Coloweek",
                     "color": {"red": 100, "green": 100, "blue": 100 },
                     "dimensions": {"x": 0.618, "y": 0.618, "z": 0.618},
                     "angularDamping": 0,
-                    "angularVelocity": {"x": 0, "y": (2 * Math.PI)/72.5, "z": 0}
+                    "angularVelocity": {"x": (2 * Math.PI)/72.5, "y": 0, "z": 0}
                 }, "local");
             
             var moon = Entities.addEntity({
