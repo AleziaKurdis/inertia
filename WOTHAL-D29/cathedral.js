@@ -131,7 +131,7 @@
     function updatePlanet() {
         var DISTANCE_FROM_CENTER =  {"x": 0, "y": 0, "z": 4.2};
         var angle = GetCurrentCycleValue(360, WEEK_DURATION);
-        var planetLocalPosition = Vec3.sum({"x": 0.0, "y": 180, "z": 0.0}, Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0, "y": angle, "z": 0}), DISTANCE_FROM_CENTER ));
+        var planetLocalPosition = Vec3.sum({"x": 0.0, "y": 180.7, "z": 0.0}, Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0, "y": angle, "z": 0}), DISTANCE_FROM_CENTER ));
         if (planetId === Uuid.NULL) {
             //create
             planetId = Entities.addEntity({
