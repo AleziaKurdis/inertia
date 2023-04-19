@@ -1,0 +1,3 @@
+name = TPGATE STANDARD - Vankh_to_BCofWothal
+filename = TPGATE_STANDARD.fbx
+materialMap = [{"mat::WALLS":"wothalMatter.json#WALLS"}, {"mat::SIGNTO": {"materials":[{ "name": "SIGNTO", "albedo": [1,1,1], "albedoMap": "BlackCathedralOfWothal_sign.jpg", "roughness": 0.15, "metallic": 0.01, "emissiveMap": "BlackCathedralOfWothal_sign.jpg", "cullFaceMode": "CULL_BACK", "defaultFallthrough": false}]}}, {"mat::SIGNFROM": {"materials":[{ "name": "SIGNFROM", "albedo": [1,1,1], "albedoMap": "http://metaverse.bashora.com/objects/virz_junction/vankh_sign.jpg", "roughness": 0.15, "metallic": 0.01, "emissiveMap": "http://metaverse.bashora.com/objects/virz_junction/vankh_sign.jpg", "cullFaceMode": "CULL_BACK", "defaultFallthrough": false}]}}]
