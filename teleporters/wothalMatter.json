@@ -1,0 +1,9 @@
+{"materials":[{
+    "albedo": [0.211, 0.211, 0.211],
+    "roughness": 0.351, 
+    "metallic": 0.816, 
+    "normalMap": "CARBONITE_NORMAL.jpg",
+    "cullFaceMode": "CULL_NONE", 
+    "model": "hifi_pbr",
+    "defaultFallthrough": false
+}]}
