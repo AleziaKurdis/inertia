@@ -3,7 +3,7 @@
     "roughness": 0.351, 
     "metallic": 0.816, 
     "normalMap": "CARBONITE_NORMAL.jpg",
-    "cullFaceMode": "CULL_NONE", 
+    "cullFaceMode": "CULL_BACK", 
     "model": "hifi_pbr",
     "defaultFallthrough": false
 }]}
