@@ -19,7 +19,7 @@
     var thisPosition;
     var thisRenderWithZones;
     var thisDisplayRadius;
-    
+    var thisEmissive;
     var tableauID = Uuid.NULL;
     
     this.preload = function(entityID) {
@@ -30,6 +30,7 @@
         thisRenderWithZones = properties.renderWithZones;
         thisDisplayRadius = properties.userData.displayRadius !== undefined?properties.userData.displayRadius: 400;
         thisSecToChange = properties.userData.secToChange !== undefined?properties.userData.secToChange: 300;
+        thisEmissive = properties.userData.emissive !== undefined?properties.userData.emissive: true;
         
         updateTableau();
         
@@ -76,7 +77,7 @@
             };
             
             var signFile = "framed_sign_";
-            if (isEmissive) {
+            if (thisEmissive) {
                 signFile = "framed_sign_emissive_";
                 textures = {
                     "base_color_texture": url,
