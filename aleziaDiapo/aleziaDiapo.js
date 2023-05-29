@@ -65,7 +65,6 @@
 
     function updateTableau() {
         if (tableauID !== Uuid.NULL){
-            Script.update.disconnect(myTimer);
             Entities.deleteEntity(tableauID);
             tableauID = Uuid.NULL;
         }
