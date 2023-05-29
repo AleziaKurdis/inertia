@@ -57,10 +57,10 @@
 
     function shutdown() {
         if (tableauID !== Uuid.NULL){
-            Script.update.disconnect(myTimer);
             Entities.deleteEntity(tableauID);
             tableauID = Uuid.NULL;
         }
+        Script.update.disconnect(myTimer);
     }
 
     function updateTableau() {
