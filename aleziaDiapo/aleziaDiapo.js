@@ -91,7 +91,7 @@
                "name": "alezia_story",
                "type": "Model",
                "localPosition": {"x": 0, "y": 0, "z": 0},
-               "parentID": thisID
+               "parentID": thisID,
                "dimensions": dimensions,
                "modelURL": ROOT + "models/" + signFile + "h.fst",
                "useOriginalPivot": true,
