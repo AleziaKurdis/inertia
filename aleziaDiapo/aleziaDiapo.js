@@ -101,7 +101,7 @@
                },
                "textures": JSON.stringify(textures),
                "renderWithZones": thisRenderWithZones
-            }, "domain");
+            }, "local");
         }
 
     } 
