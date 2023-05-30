@@ -92,7 +92,7 @@
 
             var dimensions = {"x": 2.0, "y": 1.22, "z": 0.0400};
             
-            var tableauID = Entities.addEntity({
+            tableauID = Entities.addEntity({
                "name": "alezia_story",
                "type": "Model",
                "localPosition": {"x": 0, "y": 0, "z": 0},
