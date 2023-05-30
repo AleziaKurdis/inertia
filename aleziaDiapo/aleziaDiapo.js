@@ -70,6 +70,12 @@
         }
         if (Vec3.distance(MyAvatar.position, thisPosition) < thisDisplayRadius) {
             var tableauNo = Math.ceil(GetCurrentCycleValue(4472, thisSecToChange * 4472));
+            
+            //exclusion here: 3441, 3444, 3445, 3447, 3487
+            if (tableauNo === 3441 || tableauNo === 3444 || tableauNo === 3445 || tableauNo === 3447 || tableauNo === 3487) {
+                tableauNo = 3453;
+            }
+            
             var url = "http://book.bashora.com/img/" + tableauNo + ".jpg";
             var textures = {
                 "base_color_texture": url
