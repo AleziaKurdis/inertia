@@ -45,7 +45,7 @@
 
     function myTimer(deltaTime) {
         var today = new Date();
-        if ((today.getTime() - processTimer) > thisSecToChange ) {
+        if ((today.getTime() - processTimer) > thisSecToChange * 1000 ) {
 
             updateTableau();
 
@@ -69,7 +69,7 @@
             tableauID = Uuid.NULL;
         }
         if (Vec3.distance(MyAvatar.position, thisPosition) < thisDisplayRadius) {
-            var tableauNo = Math.ceil(GetCurrentCycleValue(4472, thisSecToChange * 4472));
+            var tableauNo = Math.ceil(GetCurrentCycleValue(4472, thisSecToChange * 1000 * 4472));
             
             //exclusion here: 3441, 3444, 3445, 3447, 3487
             if (tableauNo === 3441 || tableauNo === 3444 || tableauNo === 3445 || tableauNo === 3447 || tableauNo === 3487) {
