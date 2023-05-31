@@ -33,9 +33,6 @@
         thisSecToChange = userData.secToChange !== undefined?userData.secToChange: 300;
         thisEmissive = userData.emissive !== undefined?userData.emissive: true;
         
-        print("thisDisplayRadius= " + thisDisplayRadius);
-        print("userData.displayRadius= " + userData.displayRadius);
-        
         updateTableau();
         
         today = new Date();
