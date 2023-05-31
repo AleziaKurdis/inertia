@@ -28,12 +28,13 @@
         var properties = Entities.getEntityProperties(thisID, ["position", "renderWithZones", "userData"] );
         thisPosition =  properties.position;
         thisRenderWithZones = properties.renderWithZones;
-        thisDisplayRadius = properties.userData.displayRadius !== undefined?properties.userData.displayRadius: 400;
-        thisSecToChange = properties.userData.secToChange !== undefined?properties.userData.secToChange: 300;
-        thisEmissive = properties.userData.emissive !== undefined?properties.userData.emissive: true;
+        var userData = JSON.parse(properties.userData);
+        thisDisplayRadius = userData.displayRadius !== undefined?userData.displayRadius: 400;
+        thisSecToChange = userData.secToChange !== undefined?userData.secToChange: 300;
+        thisEmissive = userData.emissive !== undefined?userData.emissive: true;
         
         print("thisDisplayRadius= " + thisDisplayRadius);
-        print("properties.userData.displayRadius= " + properties.userData.displayRadius);
+        print("userData.displayRadius= " + userData.displayRadius);
         
         updateTableau();
         
