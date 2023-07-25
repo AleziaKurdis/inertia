@@ -1,0 +1,67 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/4000.19,4000.19,3998.21\/0,0.999997,0,0.00250736"
+   },
+   "Entities":[
+      {
+         "id":"{ca6eecc2-d5c1-42ed-8cf7-a362835fb87b}",
+         "type":"Zone",
+         "name":"AK004_VISIBILITY_ZONE",
+         "locked":true,
+         "dimensions":{
+            "x":3000,
+            "y":3000,
+            "z":3000
+         },
+         "grab":{
+            "grabbable":false
+         },
+         "position": {
+            "x":4000,
+            "y":4000,
+            "z":4000
+         },
+         "damping":0,
+         "angularDamping":0,
+         "shapeType":"box",
+         "keyLight":{
+            "direction":{
+               "x":0,
+               "y":-0.70710676908493,
+               "z":0.70710676908493
+            },
+            "castShadows":true
+         }
+      },
+      {
+         "id":"{b8ab3aac-1446-494b-9e41-50127851c768}",
+         "type":"Model",
+         "name":"SUNCRETE VILLA",
+         "locked":true,
+         "dimensions":{
+            "x":143.49697875977,
+            "y":65.60432434082,
+            "z":194.45132446289
+         },
+         "renderWithZones":[
+            "{ca6eecc2-d5c1-42ed-8cf7-a362835fb87b}"
+         ],
+         "grab":{
+            "grabbable":false
+         },
+         "position": {
+            "x":4000,
+            "y":4000,
+            "z":4000
+         },         
+         "damping":0,
+         "angularDamping":0,
+         "shapeType":"static-mesh",
+         "modelURL":"https:\/\/aleziakurdis.github.io\/inertia\/AK004\/models\/suncrete.fbx",
+         "useOriginalPivot":true
+      }
+   ],
+   "Id":"{8c7071b7-53fe-4e44-8989-921186f90ebb}",
+   "Version":120
+}
