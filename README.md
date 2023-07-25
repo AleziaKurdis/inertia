@@ -11,6 +11,8 @@ https://aleziakurdis.github.io/inertia/AK002/inertia.json
  
 https://aleziakurdis.github.io/inertia/AK003/inertia.json  
   
+https://aleziakurdis.github.io/inertia/AK003/inertia.json  
+  
 https://aleziakurdis.github.io/inertia/WOTHAL-D29/inertia.json  
   
 https://aleziakurdis.github.io/inertia/PLANETOID/inertia.json 
