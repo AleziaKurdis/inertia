@@ -15,6 +15,7 @@
     var thisEntity;
     var renderWithZones;
     var HALF = 0.5;
+     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var universeCenter;
     var universeDimensions;
     var updateTimerInterval = 2000; // 2 sec
