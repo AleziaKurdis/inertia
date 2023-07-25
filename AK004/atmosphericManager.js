@@ -104,7 +104,7 @@
         intensity = 0.5 + (Math.cos((hour/24) * (2 * Math.PI)) * 1.5);
         
         var zoneRotation = Quat.fromVec3Radians({"x": Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI)), "y": 0.0, "z": GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/6)});
-        var anglVelo = (Math.PI/(D29_HOUR_DURATION/6)) * 2 * MAX_COUNT;
+        var anglVelo = 0;//(Math.PI/(D29_HOUR_DURATION/6)) * 2 * MAX_COUNT;
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
