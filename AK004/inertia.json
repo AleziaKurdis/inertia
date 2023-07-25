@@ -32,7 +32,8 @@
                "z":0.70710676908493
             },
             "castShadows":true
-         }
+         },
+         "script": "https://aleziakurdis.github.io/inertia/AK004/atmosphericManager.js"
       },
       {
          "id":"{b8ab3aac-1446-494b-9e41-50127851c768}",
