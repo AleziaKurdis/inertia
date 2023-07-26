@@ -109,7 +109,7 @@
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 106");
+        print("version: 107");
         print("zoneRotation: " + JSON.stringify({"x": Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI)), "y": 0.0, "z": GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/6)}));
         print("anglVelo: " + anglVelo);
         
@@ -127,7 +127,7 @@
                 "renderWithZones": renderWithZones,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localRotation": zoneRotation,
-                "angularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
+                "angularVelocity": {"x": 0.0, "y": 0.0, "z": anglVelo},
                 "angularDamping": 0.0,
                 "grab": {
                     "grabbable": false
@@ -173,7 +173,7 @@
             //UPDATE
             Entities.editEntity(skyID, {
                 "localRotation": zoneRotation,
-                "angularVelocity": {"x": 0.0, "y": anglVelo, "z": 0.0},
+                "angularVelocity": {"x": 0.0, "y": 0.0, "z": anglVelo},
                 "ambientLight": {
                     "ambientIntensity": ambientIntensity
                 },
