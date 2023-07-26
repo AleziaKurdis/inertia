@@ -112,7 +112,7 @@
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 111");
+        print("version: 112");
         print("zoneRotation: " + JSON.stringify({"x": Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI)), "y": 0.0, "z": GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/6)}));
         print("anglVelo: " + anglVelo);
         
@@ -165,10 +165,28 @@
                     "bloomThreshhold": 0.7,
                     "bloomSize": 0.8
                 },
+                "haze": {
+                    "hazeRange": 2000,
+                    "hazeColor": {
+                        "red": skyTint[0],
+                        "green": skyTint[1],
+                        "blue": skyTint[2]
+                    },
+                    "hazeGlareColor": {
+                        "red": lighColor[0],
+                        "green": lighColor[1],
+                        "blue": lighColor[2]
+                    },
+                    "hazeEnableGlare": true,
+                    "hazeGlareAngle": 30,
+                    "hazeAltitudeEffect": true,
+                    "hazeBaseRef": universeCenter.z -120,
+                    "hazeCeiling": universeCenter.z + 10
+                },
                 "keyLightMode": "enabled",
                 "ambientLightMode": "enabled",
                 "skyboxMode": "enabled",
-                "hazeMode": "inherit",
+                "hazeMode": "enabled",
                 "bloomMode": "enabled"
             }, "local");
             
@@ -188,6 +206,24 @@
                     },
                     "intensity": intensity
                 },
+                "haze": {
+                    "hazeRange": 2000,
+                    "hazeColor": {
+                        "red": skyTint[0],
+                        "green": skyTint[1],
+                        "blue": skyTint[2]
+                    },
+                    "hazeGlareColor": {
+                        "red": lighColor[0],
+                        "green": lighColor[1],
+                        "blue": lighColor[2]
+                    },
+                    "hazeEnableGlare": true,
+                    "hazeGlareAngle": 30,
+                    "hazeAltitudeEffect": true,
+                    "hazeBaseRef": universeCenter.z -120,
+                    "hazeCeiling": universeCenter.z + 10
+                },                
                 "skybox": {
                     "color": {
                         "red": skyTint[0],
