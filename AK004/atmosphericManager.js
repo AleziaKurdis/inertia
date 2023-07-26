@@ -77,7 +77,7 @@
     }
 
     function manageSky() {
-        var hue, saturation, lightness, lighColor, intensity;
+        var hue, saturation, lightness, lighColor, intensity, skyTint;
         var today = new Date();
         var hour = GetCurrentCycleValue(today.getTime(), 24, DAY_DURATION);
         if (hour > 6 && hour < 18) {
@@ -85,31 +85,34 @@
             saturation = 1;
             lightness = .75 + Math.abs(Math.cos((hour/24) * (2 * Math.PI)) * 0.25);
             lighColor = hslToRgb(hue, saturation, lightness);
+            skyTint = hslToRgb(hue, saturation, lightness);
         } else if (hour > 5 && hour < 6) {
             hue = (210 + ((hour - 5) * 182))/360;
             saturation = 1;
             lightness = .75 + Math.abs(Math.sin((hour/24) * (2 * Math.PI)) * 0.25);
-            lighColor = hslToRgb(hue, saturation, lightness);           
+            lighColor = hslToRgb(hue, saturation, lightness);
+            skyTint = hslToRgb(hue, saturation, lightness);
         } else if (hour > 18 && hour < 19) {
             hue = (28 + ((hour - 19) * 182))/360;
             saturation = 1;
             lightness = .75 + Math.abs(Math.sin((hour/24) * (2 * Math.PI)) * 0.25);
-            lighColor = hslToRgb(hue, saturation, lightness);           
+            lighColor = hslToRgb(hue, saturation, lightness);
+            skyTint = hslToRgb(hue, saturation, 1 - lightness);
         } else {
             hue = 210/360;
             saturation = 1;
             lightness = .75 + Math.abs(Math.sin((hour/24) * (2 * Math.PI)) * 0.25);
             lighColor = hslToRgb(hue, saturation, lightness);
+            skyTint = hslToRgb(hue, saturation, 1 - lightness);
         }
         intensity = 0.5 + (Math.cos((hour/24) * (2 * Math.PI)) * 1.5);
         var HOUR_DIV = 12;
         var zoneRotation = Quat.fromVec3Radians({"x": (Math.PI/8) * (Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI))), "y": 0.0, "z": (Math.PI/2) - GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/HOUR_DIV)});
-        //var zoneRotation = Quat.fromVec3Radians({"x": 0.0, "y": 0.0, "z": (Math.PI/2) - GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/HOUR_DIV)});
-        var anglVelo = (-Math.PI/(D29_HOUR_DURATION/HOUR_DIV));// * 2 * MAX_COUNT;
+        var anglVelo = (-Math.PI/(D29_HOUR_DURATION/HOUR_DIV));
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 110");
+        print("version: 111");
         print("zoneRotation: " + JSON.stringify({"x": Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI)), "y": 0.0, "z": GetCurrentCycleValue(today.getTime(), Math.PI, D29_HOUR_DURATION/6)}));
         print("anglVelo: " + anglVelo);
         
@@ -151,9 +154,9 @@
                 },
                 "skybox": {
                     "color": {
-                        "red": 255,
-                        "green": 255,
-                        "blue": 255
+                        "red": skyTint[0],
+                        "green": skyTint[1],
+                        "blue": skyTint[2]
                     },
                     "url": currentsky
                 },
@@ -184,6 +187,13 @@
                         "blue": lighColor[2]
                     },
                     "intensity": intensity
+                },
+                "skybox": {
+                    "color": {
+                        "red": skyTint[0],
+                        "green": skyTint[1],
+                        "blue": skyTint[2]
+                    }
                 }
             });
         }
