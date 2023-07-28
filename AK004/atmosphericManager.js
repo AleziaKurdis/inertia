@@ -107,14 +107,19 @@
         }
         intensity = 2 - (Math.cos((hour/24) * (2 * Math.PI)) * 1.75);
         var HOUR_DIV = 12;
-        //var zoneRotation = Quat.fromVec3Radians({"x": (Math.PI/8) * (Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI))), "y": 0.0, "z": (Math.PI/2) - (Math.PI/3 * Math.sin(GetCurrentCycleValue(today.getTime(), 2 * Math.PI, D29_HOUR_DURATION/HOUR_DIV)))});
-        var zoneRotation = Quat.fromVec3Radians({"x": (Math.PI/8) * (Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI))), "y": 0.0, "z": (Math.PI/3 * Math.sin(GetCurrentCycleValue(today.getTime(), 2 * Math.PI, D29_HOUR_DURATION/HOUR_DIV)))});
 
-        var anglVelo = 0; (-Math.PI/(D29_HOUR_DURATION/HOUR_DIV) )* 3;
+        var cycle = GetCurrentCycleValue(today.getTime(), 2 * Math.PI, D29_HOUR_DURATION/HOUR_DIV);
+        var spin = 1;
+        if (Math.cos(cycle) < 0) {
+            spin = -1;
+        }
+        var zoneRotation = Quat.fromVec3Radians({"x": spin * (Math.PI/8) * (Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI))), "y": 0.0, "z": (Math.PI/3 * Math.sin(cycle))});
+
+        var anglVelo = spin * (Math.PI/(D29_HOUR_DURATION/HOUR_DIV) ) * 3;
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 119");
+        print("version: 120");
         print("zoneRotation: " + JSON.stringify(zoneRotation));
         print("anglVelo: " + anglVelo);
         print("intensity: " + intensity);
