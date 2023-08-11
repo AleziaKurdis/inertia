@@ -119,7 +119,7 @@
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 128");
+        print("version: 129");
         //print("zoneRotation: " + JSON.stringify(zoneRotation));
         print("anglVelo: " + anglVelo);
         //print("intensity: " + intensity);
