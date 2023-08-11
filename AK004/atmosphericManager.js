@@ -115,14 +115,14 @@
         }
         var zoneRotation = Quat.fromVec3Radians({"x": spin * (Math.PI/8) * (Math.sin((GetCurrentCycleValue(today.getTime(), 2 * Math.PI, MONTH_DURATION)) * (2 * Math.PI))), "y": 0.0, "z": ((Math.PI/3) * Math.sin(cycle))});
 
-        var anglVelo = spin * ((2 * Math.PI/3)/(D29_HOUR_DURATION/HOUR_DIV));
+        var anglVelo = spin * ((4 * Math.PI/3)/(D29_HOUR_DURATION/HOUR_DIV));
         var ambientIntensity = intensity/10;
         var currentsky = "https://aleziakurdis.github.io/inertia/AK004/images/sky.jpg";
         
-        print("version: 127");
+        print("version: 128");
         //print("zoneRotation: " + JSON.stringify(zoneRotation));
         print("anglVelo: " + anglVelo);
-        print("intensity: " + intensity);
+        //print("intensity: " + intensity);
         
         if (skyID === Uuid.NULL) {
             //CREATE
