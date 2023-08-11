@@ -20,7 +20,7 @@
     var universeDimensions;
     var updateTimerInterval = 2000; // 2 sec
     var cycleCount = 0;
-    var MAX_COUNT = 4; //3 X 2sec = 8 sec.
+    var MAX_COUNT = 2; //4 X 2sec = 8 sec.
     var processTimer = 0;
     var skyID = Uuid.NULL;
 
