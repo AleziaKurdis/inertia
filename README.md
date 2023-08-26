@@ -15,4 +15,6 @@ https://aleziakurdis.github.io/inertia/AK004/inertia.json
   
 https://aleziakurdis.github.io/inertia/WOTHAL-D29/inertia.json  
   
-https://aleziakurdis.github.io/inertia/PLANETOID/inertia.json 
+https://aleziakurdis.github.io/inertia/PLANETOID/inertia.json  
+
+https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json 
