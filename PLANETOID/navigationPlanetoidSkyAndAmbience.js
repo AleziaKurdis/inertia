@@ -459,7 +459,8 @@
                     "blue": 28
                 };
                 //localUp = Quat.inverse(localUp);
-                localUp = Quat.getUp(Quat.inverse(Quat.IDENTITY));
+                localUp.y = -localUp.y;
+                
             }
             lanternRotation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), Quat.IDENTITY));
             

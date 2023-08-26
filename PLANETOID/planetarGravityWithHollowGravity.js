@@ -51,7 +51,6 @@
         var direction = Vec3.subtract(MyAvatar.position, planet.position);
         var localUp = Quat.getUp(MyAvatar.orientation);
         if (Vec3.distance(planet.position, MyAvatar.position) <= HOLLOW_GRAVITY_INVERSION_RADIUS) {
-            //localUp = Quat.inverse(localUp);
             direction = Vec3.subtract(planet.position, MyAvatar.position);
         }
         MyAvatar.orientation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), MyAvatar.orientation));
