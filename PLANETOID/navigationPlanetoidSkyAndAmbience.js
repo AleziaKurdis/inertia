@@ -458,7 +458,6 @@
                     "green": 194,
                     "blue": 28
                 };
-                //localUp = Quat.inverse(localUp);
                 localUp.y = -localUp.y;
                 
             }
