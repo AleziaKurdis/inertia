@@ -52,9 +52,9 @@
         var localUp = Quat.getUp(MyAvatar.orientation);
         if (Vec3.distance(planet.position, MyAvatar.position) <= HOLLOW_GRAVITY_INVERSION_RADIUS) {
             //localUp = Quat.inverse(localUp);
-            localUp = Vec3.subtract(localUp, Vec3.ZERO);
+            direction = Vec3.subtract(planet.position, MyAvatar.position);
         }
-        MyAvatar.orientation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), MyAvatar.orientation)); 
+        MyAvatar.orientation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), MyAvatar.orientation));
         if (hmdMode === false) {
             Camera.mode = "third person";
         } else {
