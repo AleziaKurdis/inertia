@@ -144,14 +144,14 @@
 
     function generateSky(entityID) {
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
-        var skyTextureUrl = ROOT + "images/darkness.jpg";
+        var skyTextureUrl = ROOT + "images/SANCTUARY_SKY.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
 
         
         zoneID = Entities.addEntity({
             "type": "Zone",
-            "name": "D4RKN3SS_(!)_Z0N3",
+            "name": "SANCTUARY_(!)_Z0N3",
             "dimensions": {
                 "x": universeDimension.x - 20,
                 "y": universeDimension.y - 20,
@@ -186,9 +186,9 @@
             },
             "skybox": {
                 "color": {
-                    "red": skycolor[0],
-                    "green": skycolor[1],
-                    "blue": skycolor[2]
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
                 },
                 "url": skyTextureUrl
             },
@@ -235,7 +235,7 @@
                 }
             }
 
-            var myAvRot = MyAvatar.orientation;            
+            var myAvRot = MyAvatar.orientation;
             var distanceAstrolith = 65;
             var radiusEffect = 50;//70; 
             if (myVelocity > 25){
@@ -458,7 +458,7 @@
             
             //############## END NOCTURN LIGHTNINGS AND THUNDER #############
 
-
+            /*
             //###################### ASTEROIDS ##############################
             var astroidEventFrequency = 0.033 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.013);
             
@@ -467,6 +467,7 @@
                 GenAsteroid(myAvPos);
             }
             //###################### END ASTEROIDS ##########################
+            */
         }
     } 
 
@@ -552,7 +553,7 @@
             && targetPosition.y >= minY && targetPosition.y <= maxY
             && targetPosition.z >= minZ && targetPosition.z <= maxZ);
     }
-    
+/*    
     function GenAsteroid(avatarPosition) {
         var FOG_DISTANCE = 2400;
         
@@ -667,7 +668,7 @@
 		var Ent = Entities.addEntity(properties, "local");
 
     }
-
+*/
     /*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
