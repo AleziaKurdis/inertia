@@ -52,7 +52,7 @@
         var localUp = Quat.getUp(MyAvatar.orientation);
         if (Vec3.distance(planet.position, MyAvatar.position) <= HOLLOW_GRAVITY_INVERSION_RADIUS) {
             //localUp = Quat.inverse(localUp);
-            localUp = Quat.getUp(Quat.inverse(MyAvatar.orientation));
+            localUp = Vec3.subtract(localUp, Vec3.ZERO);
         }
         MyAvatar.orientation = Quat.normalize(Quat.multiply(Quat.rotationBetween(localUp, direction), MyAvatar.orientation)); 
         if (hmdMode === false) {
