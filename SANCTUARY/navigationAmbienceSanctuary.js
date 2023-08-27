@@ -30,7 +30,7 @@
 
     var UFO_TIDE_CYCLE_DURATION = 18720; //5.2 hours
     
-    var DAY_DURATION = 68400;
+    var DAY_DURATION = 104400; //D29
     var storming = false;
     var lightningsID = Uuid.NULL;
     var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
@@ -351,10 +351,10 @@
             // ######### END UNIVERSE SOUD VOLUME MANAGEMENT ######## 
             //############## NOCTURN LIGHTNINGS AND THUNDER #############
             
-            var hytrionCurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
+            var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
-            //if ( hytrionCurrentHour > 11.5 || hytrionCurrentHour < 11 ) { //debug
-            if ( hytrionCurrentHour > 21.5 || hytrionCurrentHour < 2.5 ) {
+            //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
+            if ( d29CurrentHour > 18 || d29CurrentHour < 6 ) {
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
@@ -419,7 +419,7 @@
                             "red": 255,
                             "green": 255,
                             "blue": 255
-                        },                        
+                        },
                         "colorStart": {
                             "red": 255,
                             "green": 255,
