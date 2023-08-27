@@ -1,37 +1,63 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/4017.1389,4000,4029.9184\/0,0.522213,0,0.852815"
+      "\/":"\/3990.73,3992.95,4028.88\/0,0.878685,0,-0.477402"
    },
    "Entities":[
-      {
-         "id":"{00356305-f3d5-4395-834a-096bbbf4c4dc}",
-         "type":"Zone",
-         "lastEdited":1620878021148222,
-         "name":"SANCTUARY_VISIBILITY_ZONE",
-         "locked":true,
-         "dimensions":{
+    {
+        "id":"{00356305-f3d5-4395-834a-096bbbf4c4dc}",
+        "type":"Zone",
+        "name":"SANCTUARY_VISIBILITY_ZONE",
+        "locked":true,
+        "dimensions":{
             "x":4000,
             "y":4000,
             "z":4000
-         },
-         "position": {
+        },
+        "position": {
              "x": 4000,
              "y": 4000,
              "z": 4000
-         },         
-         "rotation":{
+        },         
+        "rotation":{
             "x":-1.52587890625e-5,
             "y":-1.52587890625e-5,
             "z":-1.52587890625e-5,
             "w":1
-         },
-         "grab":{
+        },
+        "grab":{
             "grabbable":false
-         },
-         "shapeType":"sphere",
-         "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/navigationAmbienceSanctuary.js"
-      }
+        },
+        "shapeType":"sphere",
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/navigationAmbienceSanctuary.js"
+    },
+    {
+        "id": "{9e11f297-8b6f-453a-ad95-ac4e3da34365}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "MAIN-ASTEROIDS",
+        "locked": true,
+        "dimensions": {
+            "x": 175.7730712890625,
+            "y": 91.55181884765625,
+            "z": 159.4537353515625
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/models/SANCTUARY.fst",
+        "useOriginalPivot": true
+    }      
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120

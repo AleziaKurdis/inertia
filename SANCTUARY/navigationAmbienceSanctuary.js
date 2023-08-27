@@ -178,10 +178,10 @@
                 },
                 "castShadows": true,
                 "shadowBias": 0.02,
-                "shadowMaxDistance": 90
+                "shadowMaxDistance": 100
             },
             "ambientLight": {
-                "ambientIntensity": 2.5,
+                "ambientIntensity": 0.5,
                 "ambientURL": skyTextureUrl
             },
             "skybox": {
