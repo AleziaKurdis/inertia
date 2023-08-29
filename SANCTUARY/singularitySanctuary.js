@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split("singularitySanctuary.js")[0];
     var thisEntity;
 
-    var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
+    var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
     var processTimer = 0;
 
     var starId = Uuid.NULL;
@@ -30,6 +30,7 @@
     var D29_DAY_DURATION = 104400; //sec
     var STAR_DIAMETER = 400; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
+    var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
     var nextSunPosition;
@@ -39,17 +40,20 @@
         var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
-        currentSunPosition = getCurrentSunPosition();
+        var sunCumputedValues = getCurrentSunPosition();
+        currentSunPosition = sunCumputedValues.localPosition;
         nextSunPosition = currentSunPosition;
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
-            "name": "STAR",
+            "name": "SUNLIGHT_(!)_Z0N3",
             "dimensions": {"x": 3800, "y": 3800, "z": 3800},
             "type": "Zone",
             "keyLightMode": "enabled",
             "keyLight": {
-                "color": {"red": 255, "green": 255, "blue": 255 },
+                "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
                 "intensity": 2.6,
-                "direction": {},
+                "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth),
                 "castShadows": true,
                 "shadowBias": 0.02,
                 "shadowMaxDistance": 100
@@ -199,16 +203,31 @@
     function moveStar() {
         if (starId !== Uuid.NULL) {
             currentSunPosition = nextSunPosition;
-            nextSunPosition = getCurrentSunPosition();
+            var sunCumputedValues = getCurrentSunPosition();
+            nextSunPosition = = sunCumputedValues.localPosition;
+            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+            var sunColor = hslToRgb(hue, 1, 0.6);
             var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
+            Entities.editEntity(starId, {
+                "keyLight": {
+                    "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
+                    "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth)
+                }
+            });
         }
     }
 
     function getCurrentSunPosition() {
-        var axisOne = Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION/48));
-        var axisTwo = Math.abs(Math.cos(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION/48)));
-        return {"x": (axisTwo * 2000)+500, "y": (axisOne * 800), "z": 0};
+        var distanceFactor = Math.abs(Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 36))); //un tour par mois
+        var elevation = (0.38 * Math.PI) - ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION)));
+        var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION *  9); //un tour par semaine
+        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
+        return { 
+                    "elevation" : ,
+                    "azimuth" : ,
+                    "localPosition": localPosition
+                };
     }
 
     function updateStar() {
@@ -217,7 +236,7 @@
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
             
-            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION);
+            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var fireColor = hslToRgb(hue, 1, 0.5);
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
@@ -265,9 +284,9 @@
                     "type": "Light",
                     "name": "STAR-LIGHT",
                     "dimensions": {
-                        "x": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "y": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR,
-                        "z": STAR_DIAMETER * STAR_LIGHT_DIAMETER_MULTIPLICATOR
+                        "x": 1500,
+                        "y": 1500,
+                        "z": 1500
                     },
                     "localPosition": {
                         "x": 0,
