@@ -56,7 +56,8 @@
         "angularDamping": 0,
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/models/SANCTUARY.fst",
-        "useOriginalPivot": true
+        "useOriginalPivot": true,
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/singularitySanctuary.js"
     }      
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
