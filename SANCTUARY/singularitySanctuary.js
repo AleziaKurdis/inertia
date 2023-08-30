@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 //
 //  singularitySanctuary.js
 //
@@ -225,8 +225,8 @@
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
         print("local Position!!!!::: " + JSON.stringify(localPosition));
         return { 
-                    "elevation" : ,
-                    "azimuth" : ,
+                    "elevation" : elevation,
+                    "azimuth" : azimuth,
                     "localPosition": localPosition
                 };
     }
