@@ -220,7 +220,7 @@
 
     function getCurrentSunPosition() {
         var distanceFactor = Math.abs(Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 36))); //un tour par mois
-        var elevation = (0.38 * Math.PI) - ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION)));
+        var elevation = (Math.PI/4) + ((Math.PI/8) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION)));
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION *  9); //un tour par semaine
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
         print("local Position: " + JSON.stringify(localPosition));
