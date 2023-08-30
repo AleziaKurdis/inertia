@@ -2,7 +2,7 @@
 //
 //  singularitySanctuary.js
 //
-//  Created by Alezia Kurdis, August 29th 2023.
+//  Created by Alezia Kurdis, August 29th, 2023.
 //  Copyright 2023, Overte e.V.
 //
 //  Generate a singularity for SANCTUARY.
@@ -204,7 +204,7 @@
         if (starId !== Uuid.NULL) {
             currentSunPosition = nextSunPosition;
             var sunCumputedValues = getCurrentSunPosition();
-            nextSunPosition = = sunCumputedValues.localPosition;
+            nextSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var sunColor = hslToRgb(hue, 1, 0.6);
             var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
