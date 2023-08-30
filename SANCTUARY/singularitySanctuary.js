@@ -61,7 +61,7 @@
             "position": singularityGeneratorPosition,
             "renderWithZones": renderWithZones,
         }, "local");
-        
+
         starId = Entities.addEntity({
                 "name": "STAR",
                 "parentID": thisEntity,
@@ -223,6 +223,7 @@
         var elevation = (0.38 * Math.PI) - ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION)));
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION *  9); //un tour par semaine
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
+        print("local Position!!!!::: " + JSON.stringify(localPosition));
         return { 
                     "elevation" : ,
                     "azimuth" : ,
