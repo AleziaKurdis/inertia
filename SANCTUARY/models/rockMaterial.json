@@ -9,16 +9,9 @@
          ],
          "metallic":0.001,
          "roughness":0.55,
-         "opacity":1,
-         "emissive":[
-            0,
-            0,
-            0
-         ],
          "normalMap": "TexturesCom_Rock_CliffGranite_1K_normal.jpg"
-         "scattering":0,
          "cullFaceMode":"CULL_BACK",
-         "defaultFallthrough":true
+         "defaultFallthrough": false
       }
    ]
 }
