@@ -10,8 +10,7 @@
          "metallic":0.001,
          "roughness":0.55,
          "normalMap": "TexturesCom_Rock_CliffGranite_1K_normal.jpg"
-         "cullFaceMode":"CULL_BACK",
-         "defaultFallthrough": false
+         "cullFaceMode":"CULL_BACK"
       }
    ]
 }
