@@ -225,7 +225,7 @@
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
         //print("local Position: " + JSON.stringify(localPosition));
         //print("elevation: " + elevation);
-        //print("azimuth: " + azimuth);
+        //ASTEROID_1print("azimuth: " + azimuth);
         return { 
                     "elevation" : elevation,
                     "azimuth" : azimuth,
@@ -310,7 +310,7 @@
                     "intensity": 15,
                     "exponent": 1,
                     "cutoff": 75,
-                    "falloffRadius": STAR_DIAMETER * 2                
+                    "falloffRadius": STAR_DIAMETER * 2
                 }, "local");
             } else {
                 //UPDATE
