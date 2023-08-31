@@ -4,7 +4,7 @@
       {
          "albedo":[0,0,0],
          "metallic":0.01,
-         "roughness":0.55,
+         "roughness":0.46,
          "normalMap": "TexturesCom_Rock_CliffGranite_1K_normal.jpg",
          "cullFaceMode":"CULL_BACK"
       }
