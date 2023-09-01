@@ -22,6 +22,7 @@
     var fireLightId = Uuid.NULL;
     var fireParticles = Uuid.NULL;
     var solarZoneId = Uuid.NULL;
+    var asteroidIds = [];
     
     var singularityGeneratorPosition;
     
@@ -61,7 +62,9 @@
             "position": singularityGeneratorPosition,
             "renderWithZones": renderWithZones,
         }, "local");
-
+        
+        genTroyanAsteroid();
+        
         starId = Entities.addEntity({
                 "name": "STAR",
                 "parentID": thisEntity,
@@ -446,12 +449,86 @@
     this.unload = function(entityID) {
         if (starId !== Uuid.NULL) {
             Entities.deleteEntity(starId);
+            starId = Uuid.NULL;
         }
         if (solarZoneId !== Uuid.NULL) {
             Entities.deleteEntity(solarZoneId);
+            solarZoneId = Uuid.NULL;
+        }
+        var i;
+        for (i = 0; i < asteroidIds.length; i++) {
+            if (asteroidIds[i] !== Uuid.NULL) {
+                Entities.deleteEntity(asteroidIds[i]);
+                asteroidIds[i] = Uuid.NULL;
+            }
         }
         Script.update.disconnect(myTimer);
     };
+
+    function genTroyanAsteroid() {
+        var troyanAsteroids = [
+            {
+                "file": "ASTEROID_1.fst",
+                "localPosition": Vec3.subtract({"x":4021.9892578125,"y":4044.546875,"z":3946.948974609375}, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":4 * DEGREES_TO_RADIANS, "y":7 * DEGREES_TO_RADIANS, "z": 2 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":15, "y":17, "z":17}
+            },
+            {
+                "file": "ASTEROID_2.fst",
+                "localPosition": Vec3.subtract({"x":4074.339599609375,"y":4003.91552734375,"z":4081.083251953125}, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":5 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 11 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":34, "y":38, "z":37}
+            },
+            {
+                "file": "ASTEROID_3.fst",
+                "localPosition": Vec3.subtract({"x":3945.13818359375,"y":4025.339599609375,"z":4021.63232421875}, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":9 * DEGREES_TO_RADIANS, "y":15 * DEGREES_TO_RADIANS, "z": 20 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":22, "y":21, "z":27}
+            },
+            {
+                "file": "ASTEROID_4.fst",
+                "localPosition": Vec3.subtract({"x":3991.478515625,"y":4027.4560546875,"z":3850.606201171875}, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":3 * DEGREES_TO_RADIANS, "y":4 * DEGREES_TO_RADIANS, "z": 9 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":81, "y":40, "z":48}
+            }/*,
+            {
+                "file": "ASTEROID_5.fst",
+                "localPosition": Vec3.subtract(v1, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":5 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 11 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":4000, "y":4000, "z":4000}
+            },
+            {
+                "file": "ASTEROID_6.fst",
+                "localPosition": Vec3.subtract(v1, {"x":4000, "y":4000, "z":4000}),
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": {"x":5 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 11 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":4000, "y":4000, "z":4000}
+            }*/
+        ];
+        
+        var i, id;
+        for (i = 0; i < troyanAsteroids.length; i++) {
+            id = Entities.addEntity({
+                    "type": "Model",
+                    "name": "Troyan Asteroid-" + i,
+                    "parentID": thisEntity,
+                    "localPosition": troyanAsteroids[i].localPosition,
+                    "rotation": troyanAsteroids[i].rotation,
+                    "renderWithZones": renderWithZones,
+                    "dimensions": troyanAsteroids[i].dimensions,
+                    "modelURL": ROOT + "models/" + troyanAsteroids[i].file,
+                    "useOriginalPivot": true,
+                    "angularDamping": 0,
+                    "angularVelocity": troyanAsteroids[i].angularVelocity
+                }, "local");
+            asteroidIds.push(id);
+        }
+    }
 
     /*
      * Converts an HSL color value to RGB. Conversion formula
