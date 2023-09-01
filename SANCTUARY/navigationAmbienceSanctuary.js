@@ -39,7 +39,8 @@
     var THUNDER_SOUND_3 = ROOT + "sounds/thunder2.mp3";
     var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
     var thunderSound = []; 
-    var thunderInjector; 
+    var thunderInjector;
+    var asteroidStack = [];
 
     var zoneID = Uuid.NULL;
 
@@ -122,6 +123,12 @@
                 Entities.deleteEntity(lightningsID);
                 lightningsID = Uuid.NULL;
             }
+            var i;
+            for (i=0; i > asteroidStack.length; i++) {
+                Entities.deleteEntity(asteroidStack[i].id);
+                
+            }
+            asteroidStack = [];
         }
         isInitiated = false;
     }
@@ -458,16 +465,16 @@
             
             //############## END NOCTURN LIGHTNINGS AND THUNDER #############
 
-            /*
+            
             //###################### ASTEROIDS ##############################
             var astroidEventFrequency = 0.033 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.013);
             
             if (Math.random() < astroidEventFrequency && astroidFXstatus) { //0.02 = 1 fois par 33 sec
                 //trigger an astroid
-                GenAsteroid(myAvPos);
+                genAsteroid(myAvPos);
             }
             //###################### END ASTEROIDS ##########################
-            */
+            
         }
     } 
 
@@ -553,8 +560,18 @@
             && targetPosition.y >= minY && targetPosition.y <= maxY
             && targetPosition.z >= minZ && targetPosition.z <= maxZ);
     }
-/*    
-    function GenAsteroid(avatarPosition) {
+    
+    function genAsteroid(avatarPosition) {
+        var nowDate = new Date();
+		var catalogNumber = nowDate.getTime();
+        var i;
+        for (i=0; i > asteroidStack.length; i++) {
+            if (asteroidStack[i].expiration < catalogNumber) {
+                Entities.deleteEntity(asteroidStack[i].id);
+                asteroidStack.splice(i, 1);
+            }
+        }
+        
         var FOG_DISTANCE = 2400;
         
         var astFromCap = Math.random() * (Math.PI * 2);
@@ -574,60 +591,14 @@
             z: (Math.random()*1.5) - 0.75
         };  
 
-        var contest = Math.random();
         var asteroidModelURL, excentricity, astDimension;
+        astDimension = {
+            "x": (1 + Math.random() - 0.5) * asteroidScale,
+            "y": (1 + Math.random() - 0.5) * asteroidScale,
+            "z": (1 + Math.random() - 0.5) * asteroidScale
+        };
         
-        if (contest < 0.6){
-            //asteroid
-            asteroidModelURL = ROOT + "models/asteroid_aster.glb";
-            excentricity = {
-				"x": 0.5 + (Math.random()*0.2) - 0.1,
-				"y": 0.5 + (Math.random()*0.2) - 0.1,
-				"z": 0.5 + (Math.random()*0.2) - 0.1
-			};
-            astDimension = {
-				"x": (1 + Math.random() - 0.5) * asteroidScale,
-				"y": (1 + Math.random() - 0.5) * asteroidScale,
-				"z": (1 + Math.random() - 0.5) * asteroidScale
-			};
-        } else {
-            if (contest < 0.8) {
-                //cuboid
-                asteroidModelURL = ROOT + "models/asteroid_cuboid.glb";
-                excentricity = {
-                    "x": 0.5 + (Math.random()*0.1) - 0.05,
-                    "y": 0.5 + (Math.random()*0.1) - 0.05,
-                    "z": 0.5 + (Math.random()*0.1) - 0.05
-                };
-                astDimension = {
-                    "x": asteroidScale,
-                    "y": asteroidScale,
-                    "z": asteroidScale
-                };
-            } else {
-                if (contest < 0.9) {
-                    //cube
-                    asteroidModelURL = ROOT + "models/asteroid_cube.glb";
-                    excentricity = {"x": 0.5,"y": 0.5,"z": 0.5};
-                    astDimension = {
-                        "x": asteroidScale,
-                        "y": asteroidScale,
-                        "z": asteroidScale
-                    };
-                } else {
-                    //thetrahead
-                    asteroidModelURL = ROOT + "models/asteroid_tetra.glb";
-                    excentricity = {"x": 0.5,"y": 0.5,"z": 0.5};
-                    astDimension = {
-                        "x": asteroidScale,
-                        "y": asteroidScale,
-                        "z": asteroidScale
-                    };
-                }
-            } 
-        }
-		var nowDate = new Date();
-		var catalogNumber = nowDate.getTime();
+        asteroidModelURL = ROOT + "models/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
         
         
         var targetPoint = Vec3.sum(avatarPosition, Vec3.multiply( Vec3.multiplyQbyV(MyAvatar.orientation, Vec3.UNIT_NEG_Z), (250 + Math.random() * 500 )));
@@ -635,40 +606,36 @@
         var veloVec = Vec3.multiply(Vec3.normalize({"x": (targetPoint.x - astStartPoint.x), "y": (targetPoint.y - astStartPoint.y), "z": (targetPoint.z - astStartPoint.z)}), astVelocity);
         
 		var properties = {
-			type: "Model",
-			visible: true,
-			locked: false,
-			name: "AST-" + catalogNumber,
-			position: astStartPoint,
-			registrationPoint: excentricity,
-			dimensions: astDimension,
-			velocity: veloVec,
-			damping: 0,
-			angularVelocity: angVeloc,
-			angularDamping: 0,
-			restitution: 1,
-			friction: 0,
-			gravity: {
-				x: 0,
-				y: 0,
-				z: 0
+			"type": "Model",
+			"name": "AST-" + catalogNumber,
+			"position": astStartPoint,
+			"useOriginalPivot": true,
+			"dimensions": astDimension,
+			"velocity": veloVec,
+			"damping": 0,
+			"angularVelocity": angVeloc,
+			"angularDamping": 0,
+			"restitution": 1,
+			"friction": 0,
+			"gravity": {
+				"x": 0,
+				"y": 0,
+				"z": 0
 			},
-			density: 10,
-			dynamic: true,
-			collisionless: canCollide,
-			lifetime: astLife,
-			modelURL: asteroidModelURL,
-			shapeType: "box",
-            canCastShadow: true
+			"density": 10,
+			"dynamic": true,
+			"collisionless": canCollide,
+			"modelURL": asteroidModelURL,
+			"shapeType": "sphere"
 		};
 
 
 		print("ASTEROID-" + catalogNumber + " : " + astVelocity + " | " + astLife);
 
-		var Ent = Entities.addEntity(properties, "local");
-
+		var id = Entities.addEntity(properties, "local");
+        asteroidStack.push({"id": id, "expiration": catalogNumber + astLife});
     }
-*/
+
     /*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
