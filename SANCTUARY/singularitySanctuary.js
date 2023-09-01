@@ -494,21 +494,21 @@
                 "rotation": {"x":0,"y":0,"z":0,"w":1},
                 "angularVelocity": {"x":3 * DEGREES_TO_RADIANS, "y":4 * DEGREES_TO_RADIANS, "z": 9 * DEGREES_TO_RADIANS},
                 "dimensions": {"x":81, "y":40, "z":48}
-            }/*,
+            },
             {
                 "file": "ASTEROID_5.fst",
-                "localPosition": Vec3.subtract(v1, {"x":4000, "y":4000, "z":4000}),
+                "localPosition": Vec3.subtract({"x":4024.126220703125,"y":3965.513427734375,"z":3947.52880859375}, {"x":4000, "y":4000, "z":4000}),
                 "rotation": {"x":0,"y":0,"z":0,"w":1},
-                "angularVelocity": {"x":5 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 11 * DEGREES_TO_RADIANS},
-                "dimensions": {"x":4000, "y":4000, "z":4000}
+                "angularVelocity": {"x":8 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 33 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":44, "y":46, "z":49}
             },
             {
                 "file": "ASTEROID_6.fst",
-                "localPosition": Vec3.subtract(v1, {"x":4000, "y":4000, "z":4000}),
+                "localPosition": Vec3.subtract({"x":3967.548095703125,"y":3969.5244140625,"z":3883.59375}, {"x":4000, "y":4000, "z":4000}),
                 "rotation": {"x":0,"y":0,"z":0,"w":1},
-                "angularVelocity": {"x":5 * DEGREES_TO_RADIANS, "y":6 * DEGREES_TO_RADIANS, "z": 11 * DEGREES_TO_RADIANS},
-                "dimensions": {"x":4000, "y":4000, "z":4000}
-            }*/
+                "angularVelocity": {"x":20 * DEGREES_TO_RADIANS, "y":10 * DEGREES_TO_RADIANS, "z": 6 * DEGREES_TO_RADIANS},
+                "dimensions": {"x":34, "y":50, "z":49}
+            }
         ];
         
         var i, id;
