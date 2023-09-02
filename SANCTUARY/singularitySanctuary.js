@@ -531,7 +531,7 @@
         }
         
         //Asteroid field (far and random)
-        var ASTEROID_FIELD_QUANTITY = 30; 
+        var ASTEROID_FIELD_QUANTITY = 40; 
         var MIN_DISTANCE = 50; //meters
         var MAX_DISTANCE = 300; //meters
         var MAX_SIZE = 100;//meters
@@ -539,7 +539,7 @@
         for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
             var azimuth = Math.random() * 2 * Math.PI;
-            var elevation = (Math.random() * (Math.PI/4)) - (Math.PI/8);
+            var elevation = (Math.random() * (Math.PI/6)) - (Math.PI/12);
             var localPosition = Vec3.fromPolar({"x": elevation,"y": azimuth,"z": distance});
             var asteroidScale = Math.random() * Math.random()  * Math.random() * MAX_SIZE;
             var angVeloc = {
