@@ -466,6 +466,7 @@
     };
 
     function genTroyanAsteroid() {
+        //Near and positionned.
         var troyanAsteroids = [
             {
                 "file": "ASTEROID_1.fst",
@@ -525,6 +526,46 @@
                     "useOriginalPivot": true,
                     "angularDamping": 0,
                     "angularVelocity": troyanAsteroids[i].angularVelocity
+                }, "local");
+            asteroidIds.push(id);
+        }
+        
+        //Asteroid field (far and random)
+        var ASTEROID_FIELD_QUANTITY = 30; 
+        var MIN_DISTANCE = 50; //meters
+        var MAX_DISTANCE = 300; //meters
+        var MAX_SIZE = 100;//meters
+        
+        for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
+            var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
+            var azimuth = Math.random() * 2 * Math.PI;
+            var elevation = (Math.random() * (Math.PI/4)) - (Math.PI/8);
+            var localPosition = Vec3.fromPolar({"x": elevation,"y": azimuth,"z": distance});
+            var asteroidScale = Math.random() * Math.random()  * Math.random() * MAX_SIZE;
+            var angVeloc = {
+                    "x": (Math.random()*1.5) - 0.75, //Rad/sec
+                    "y": (Math.random()*1.5) - 0.75,
+                    "z": (Math.random()*1.5) - 0.75
+                };  
+            var astDimension = {
+                "x": (1 + Math.random() - 0.5) * asteroidScale,
+                "y": (1 + Math.random() - 0.5) * asteroidScale,
+                "z": (1 + Math.random() - 0.5) * asteroidScale
+            };
+            
+            var asteroidModelURL = ROOT + "models/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
+            
+            id = Entities.addEntity({
+                    "type": "Model",
+                    "name": "Asteroid Field - " + i,
+                    "parentID": thisEntity,
+                    "localPosition": localPosition,
+                    "renderWithZones": renderWithZones,
+                    "dimensions": astDimension,
+                    "modelURL": asteroidModelURL,
+                    "useOriginalPivot": true,
+                    "angularDamping": 0,
+                    "angularVelocity": angVeloc
                 }, "local");
             asteroidIds.push(id);
         }
