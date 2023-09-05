@@ -532,9 +532,9 @@
         
         //Asteroid field (far and random)
         var ASTEROID_FIELD_QUANTITY = 40; 
-        var MIN_DISTANCE = 70; //meters
-        var MAX_DISTANCE = 200; //meters
-        var MAX_SIZE = 100;//meters
+        var MIN_DISTANCE = 80; //meters
+        var MAX_DISTANCE = 130; //meters
+        var MAX_SIZE = 60;//meters
         
         for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
