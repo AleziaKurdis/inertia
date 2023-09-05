@@ -43,7 +43,7 @@
     var asteroidStack = [];
 
     var zoneID = Uuid.NULL;
-
+    var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.2;
     var universeSound, universeSoundInjector;
@@ -64,7 +64,7 @@
     
    
     this.preload = function(entityID) {
-      
+        thisEntityID = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
  
@@ -622,11 +622,15 @@
 				"y": 0,
 				"z": 0
 			},
+            "grab": {
+                "grabbable": false
+                },
 			"density": 10,
 			"dynamic": true,
 			"collisionless": canCollide,
 			"modelURL": asteroidModelURL,
-			"shapeType": "sphere"
+			"shapeType": "sphere",
+            "renderWithZones": [thisEntityID]
 		};
 
 
