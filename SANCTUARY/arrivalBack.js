@@ -19,6 +19,7 @@
     this.preload = function(entityID) {
         var rwz = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         //manage color (one shot at the arrival only)
+        //Add a light
         fxID = Entities.addEntity({
             "type": "ParticleEffect",
             "localPosition": {
@@ -115,7 +116,7 @@
             Entities.deleteEntity(fxID);
             fxID = Uuid.NULL;
         }
-        arrived = FALSE;
+        arrived = false;
     };
     
     
