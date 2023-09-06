@@ -16,13 +16,78 @@
     var fxID = Uuid.NULL;
     
     this.preload = function(entityID) {
-        //Sett effect here
-        /*
+        var rwz = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
+
         fxID = Entities.addEntity({
-                
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "name": "ARRIVAL-BACK FX",
+            "dimensions": {
+                "x": 8.792000770568848,
+                "y": 8.792000770568848,
+                "z": 8.792000770568848
+            },
+            "renderWithZones": rwz,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 240,
+                "green": 240,
+                "blue": 240
+            },
+            "alpha": 0.20000000298023224,
+            "textures": ROOT + "/images/bubble.png",
+            "maxParticles": 2800,
+            "lifespan": 6,
+            "emitRate": 400,
+            "emitSpeed": -0.10000000149011612,
+            "speedSpread": 0.10000000149011612,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 0,
+                "z": 2
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0.20000000298023224,
+                "z": 0
+            },
+            "particleRadius": 0.03999999910593033,
+            "radiusStart": 0,
+            "radiusFinish": 0.03999999910593033,
+            "colorStart": {
+                "red": null,
+                "green": null,
+                "blue": null
+            },
+            "colorFinish": {
+                "red": 106,
+                "green": 0,
+                "blue": 255
+            },
+            "alphaStart": 0.20000000298023224,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinStart": 0,
+            "spinFinish": 0
             }, "local");
-        
-        */
+
     }
 
     this.enterEntity = function(entityID) {
