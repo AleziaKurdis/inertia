@@ -14,6 +14,7 @@
 
     var ROOT = Script.resolvePath('').split("arrivalBack.js")[0];
     var fxID = Uuid.NULL;
+    var arrived = false;
     
     this.preload = function(entityID) {
         var rwz = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
@@ -91,16 +92,22 @@
     }
 
     this.enterEntity = function(entityID) {
-        if (location.canGoBack()) {
-            location.goBack();
-        } else {
-            if (LocationBookmarks.getHomeLocationAddress()) {
-                location.handleLookupString(LocationBookmarks.getHomeLocationAddress());
+        if (arrived) {
+            if (location.canGoBack()) {
+                location.goBack();
             } else {
-                Window.location = "file:///~/serverless/tutorial.json";
+                if (LocationBookmarks.getHomeLocationAddress()) {
+                    location.handleLookupString(LocationBookmarks.getHomeLocationAddress());
+                } else {
+                    Window.location = "file:///~/serverless/tutorial.json";
+                }
             }
         }
     }; 
+
+    this.leaveEntity = function(entityID) {
+        arrived = true;
+    };
     
     this.unload = function(entityID) {
         //remove effect
@@ -108,6 +115,7 @@
             Entities.deleteEnity(fxID);
             fxID = Uuid.NULL;
         }
+        arrived = FALSE;
     };
     
     
