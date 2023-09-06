@@ -62,6 +62,7 @@
     {
         "type": "Shape",
         "visible": false,
+        "locked": true,
         "name": "ARRIVAL-BACK",
         "dimensions": {
             "x": 3,
