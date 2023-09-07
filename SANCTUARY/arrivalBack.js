@@ -37,7 +37,7 @@
                 "parentID": entityID,
                 "localPosition": {
                     "x": 0,
-                    "y": -2,
+                    "y": -1.8,
                     "z": 0
                 },
                 "name": "ARRIVAL-BACK FX",
