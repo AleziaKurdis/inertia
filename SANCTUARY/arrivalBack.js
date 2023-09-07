@@ -45,7 +45,7 @@
                     "y": 8.792000770568848,
                     "z": 8.792000770568848
                 },
-                //"renderWithZones": rwz,
+                "renderWithZones": rwz,
                 "grab": {
                     "grabbable": false
                 },
@@ -101,6 +101,7 @@
                 "spinStart": 0,
                 "spinFinish": 0
             }, "local");
+            print("arrivalBack: " + fxID);
             
             var id = Entities.addEntity({
                     "type": "Light",
