@@ -15,15 +15,16 @@
     var ROOT = Script.resolvePath('').split("arrivalBack.js")[0];
     var fxID = Uuid.NULL;
     var arrived = false;
-    var hasEntered = false;
     var D29_DAY_DURATION = 104400; //sec
+    var HALF = 0.5;
     
     this.preload = function(entityID) {
-        if (hasEntered) {
+        if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
             arrived = false;
         } else {
             arrived = true;
         }
+        
         var rwz = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
 
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
@@ -31,7 +32,6 @@
             antiHue = antiHue - 1;
         }
         var color = hslToRgb(antiHue, 1, 0.5);
-        //Add a light
         fxID = Entities.addEntity({
                 "type": "ParticleEffect",
                 "localPosition": {
@@ -132,7 +132,6 @@
     }
 
     this.enterEntity = function(entityID) {
-        hasEntered = true;
         if (arrived) {
             if (location.canGoBack()) {
                 location.goBack();
@@ -204,6 +203,29 @@
 		return (CurrentSec/cycleduration)*cyclelength;
 		
 	}
+
+    function positionIsInsideEntityBounds(entityID, targetPosition) {
+        targetPosition = targetPosition || MyAvatar.position;
+
+        var properties = Entities.getEntityProperties(entityID, ["position", "dimensions", "rotation"]);
+        var entityPosition = properties.position;
+        var entityDimensions = properties.dimensions;
+        var entityRotation = properties.rotation;
+
+        var worldOffset = Vec3.subtract(targetPosition, entityPosition);
+        targetPosition = Vec3.multiplyQbyV(Quat.inverse(entityRotation), worldOffset);
+
+        var minX = -entityDimensions.x * HALF;
+        var maxX = entityDimensions.x * HALF;
+        var minY = -entityDimensions.y * HALF;
+        var maxY = entityDimensions.y * HALF;
+        var minZ = -entityDimensions.z * HALF;
+        var maxZ = entityDimensions.z * HALF;
+
+        return (targetPosition.x >= minX && targetPosition.x <= maxX
+            && targetPosition.y >= minY && targetPosition.y <= maxY
+            && targetPosition.z >= minZ && targetPosition.z <= maxZ);
+    }
 
 })
 
