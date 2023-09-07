@@ -535,7 +535,7 @@
         var MIN_DISTANCE = 90; //meters
         var MAX_DISTANCE = 130; //meters
         var MAX_SIZE = 60;//meters
-        
+        var captured = [];
         for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
             var azimuth = Math.random() * 2 * Math.PI;
@@ -553,7 +553,7 @@
                 "z": (1 + Math.random() - 0.5) * asteroidScale
             };
             
-            var asteroidModelURL = ROOT + "models/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
+            var asteroidModelURL = "ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
             
             id = Entities.addEntity({
                     "type": "Model",
@@ -562,13 +562,23 @@
                     "localPosition": localPosition,
                     "renderWithZones": renderWithZones,
                     "dimensions": astDimension,
-                    "modelURL": asteroidModelURL,
+                    "modelURL": ROOT + "models/" + asteroidModelURL,
                     "useOriginalPivot": true,
                     "angularDamping": 0,
                     "angularVelocity": angVeloc
                 }, "local");
             asteroidIds.push(id);
+            var entry = {
+                "file": asteroidModelURL,
+                "localPosition": localPosition,
+                "rotation": {"x":0,"y":0,"z":0,"w":1},
+                "angularVelocity": angVeloc,
+                "dimensions": astDimension
+            }
+            captured.push(entry);
+            
         }
+        print(JSON.stringify(captured));
     }
 
     /*
