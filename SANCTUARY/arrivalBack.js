@@ -16,6 +16,7 @@
     var fxID = Uuid.NULL;
     var arrived = false;
     var hasEntered = false;
+    var D29_DAY_DURATION = 104400; //sec
     
     this.preload = function(entityID) {
         if (hasEntered) {
@@ -24,7 +25,12 @@
             arrived = true;
         }
         var rwz = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
-        //manage color (one shot at the arrival only)
+
+        var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        if (antiHue > 1) {
+            antiHue = antiHue - 1;
+        }
+        var color = hslToRgb(antiHue, 1, 0.5);
         //Add a light
         fxID = Entities.addEntity({
                 "type": "ParticleEffect",
@@ -47,9 +53,9 @@
                 "angularDamping": 0,
                 "shapeType": "ellipsoid",
                 "color": {
-                    "red": 0,
-                    "green": 240,
-                    "blue": 0
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
                 },
                 "alpha": 0.20000000298023224,
                 "textures": ROOT + "/images/bubble.png",
@@ -80,14 +86,14 @@
                 "radiusStart": 0,
                 "radiusFinish": 0.03999999910593033,
                 "colorStart": {
-                    "red": 255,
-                    "green": 255,
-                    "blue": 255
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
                 },
                 "colorFinish": {
-                    "red": 106,
-                    "green": 0,
-                    "blue": 255
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
                 },
                 "alphaStart": 0.20000000298023224,
                 "alphaFinish": 0,
@@ -95,6 +101,33 @@
                 "spinStart": 0,
                 "spinFinish": 0
             }, "local");
+            
+            var id = Entities.addEntity({
+                    "type": "Light",
+                    "parentID": fxID,
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "name": "ARRIVAL-BACK LIGHT",
+                    "dimensions": {
+                        "x": 7,
+                        "y": 7,
+                        "z": 7
+                    },
+                    "renderWithZones": rwz,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "color": {
+                        "red": color[0],
+                        "green": color[1],
+                        "blue": color[2]
+                    },
+                    "intensity": 6,
+                    "falloffRadius": 1
+                }, "local");
 
     }
 
@@ -126,6 +159,51 @@
         arrived = false;
     };
     
-    
+
+    /*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        var r, g, b;
+
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            var hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
+
 })
 
