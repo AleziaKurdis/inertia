@@ -34,6 +34,7 @@
         var color = hslToRgb(antiHue, 1, 0.5);
         fxID = Entities.addEntity({
                 "type": "ParticleEffect",
+                "parentID": entityID,
                 "localPosition": {
                     "x": 0,
                     "y": -1,
@@ -101,8 +102,7 @@
                 "spinStart": 0,
                 "spinFinish": 0
             }, "local");
-            print("arrivalBack: " + fxID);
-            
+
             var id = Entities.addEntity({
                     "type": "Light",
                     "parentID": fxID,
