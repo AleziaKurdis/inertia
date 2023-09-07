@@ -532,7 +532,7 @@
         
         //Asteroid field (far and random)
         var ASTEROID_FIELD_QUANTITY = 40; 
-        var MIN_DISTANCE = 80; //meters
+        var MIN_DISTANCE = 90; //meters
         var MAX_DISTANCE = 130; //meters
         var MAX_SIZE = 60;//meters
         
