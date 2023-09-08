@@ -541,6 +541,7 @@
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
             var azimuth = Math.random() * 2 * Math.PI;
             var elevation = (Math.random() * (Math.PI/3)) - (Math.PI/6);
+            var astScale = MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE));
             var localPosition = Vec3.fromPolar({"x": elevation,"y": azimuth,"z": distance});
             var angVeloc = {
                     "x": (Math.random()*1.5) - 0.75, //Rad/sec
@@ -548,9 +549,9 @@
                     "z": (Math.random()*1.5) - 0.75
                 };  
             var astDimension = {
-                "x": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE)),
-                "y": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE)),
-                "z": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE))
+                "x": (0.5 + (Math.random() * 0.5)) * astScale,
+                "y": (0.5 + (Math.random() * 0.5)) * astScale,
+                "z": (0.5 + (Math.random() * 0.5)) * astScale
             };
             
             var asteroidModelURL = "ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
