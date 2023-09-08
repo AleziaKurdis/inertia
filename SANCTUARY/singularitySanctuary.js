@@ -534,23 +534,23 @@
         var ASTEROID_FIELD_QUANTITY = 40; 
         var MIN_DISTANCE = 90; //meters
         var MAX_DISTANCE = 130; //meters
-        var MAX_SIZE = 60;//meters
+        var MAX_SIZE = 50;//meters
+        var MAX_SIZE = 5; //meters
         var captured = [];
         for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
             var azimuth = Math.random() * 2 * Math.PI;
-            var elevation = (Math.random() * (Math.PI/6)) - (Math.PI/12);
+            var elevation = (Math.random() * (Math.PI/3)) - (Math.PI/6);
             var localPosition = Vec3.fromPolar({"x": elevation,"y": azimuth,"z": distance});
-            var asteroidScale = Math.random() * Math.random()  * Math.random() * MAX_SIZE;
             var angVeloc = {
                     "x": (Math.random()*1.5) - 0.75, //Rad/sec
                     "y": (Math.random()*1.5) - 0.75,
                     "z": (Math.random()*1.5) - 0.75
                 };  
             var astDimension = {
-                "x": (1 + Math.random() - 0.5) * asteroidScale,
-                "y": (1 + Math.random() - 0.5) * asteroidScale,
-                "z": (1 + Math.random() - 0.5) * asteroidScale
+                "x": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE)),
+                "y": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE)),
+                "z": MIN_SIZE + (Math.random() * (MAX_SIZE - MIN_SIZE))
             };
             
             var asteroidModelURL = "ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
