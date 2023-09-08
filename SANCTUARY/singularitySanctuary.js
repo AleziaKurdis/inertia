@@ -535,7 +535,7 @@
         var MIN_DISTANCE = 90; //meters
         var MAX_DISTANCE = 130; //meters
         var MAX_SIZE = 50;//meters
-        var MAX_SIZE = 5; //meters
+        var MIN_SIZE = 5; //meters
         var captured = [];
         for (i = 0; i < ASTEROID_FIELD_QUANTITY; i++) {
             var distance = MIN_DISTANCE + (Math.random() * MAX_DISTANCE);
