@@ -549,9 +549,9 @@
                     "z": (Math.random()*1.5) - 0.75
                 };  
             var astDimension = {
-                "x": (0.5 + (Math.random() * 0.5)) * astScale,
-                "y": (0.5 + (Math.random() * 0.5)) * astScale,
-                "z": (0.5 + (Math.random() * 0.5)) * astScale
+                "x": (0.7 + (Math.random() * 0.3)) * astScale,
+                "y": (0.7 + (Math.random() * 0.3)) * astScale,
+                "z": (0.7 + (Math.random() * 0.3)) * astScale
             };
             
             var asteroidModelURL = "ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
@@ -579,6 +579,7 @@
             captured.push(entry);
             
         }
+        print("version 100");
         print(JSON.stringify(captured));
     }
 
