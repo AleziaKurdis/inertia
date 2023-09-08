@@ -37,7 +37,7 @@
                 "parentID": entityID,
                 "localPosition": {
                     "x": 0,
-                    "y": -1.8,
+                    "y": 0,
                     "z": 0
                 },
                 "name": "ARRIVAL-BACK FX",
@@ -58,13 +58,13 @@
                     "green": 255,
                     "blue": 255
                 },
-                "alpha": 0.20000000298023224,
-                "textures": ROOT + "/images/bubble.png",
-                "maxParticles": 2800,
-                "lifespan": 6,
-                "emitRate": 400,
-                "emitSpeed": -0.10000000149011612,
-                "speedSpread": 0.10000000149011612,
+                "alpha": 0.01,
+                "textures": ROOT + "/images/PARTICULE_OPERA_001.png",
+                "maxParticles": 1000,
+                "lifespan": 2,
+                "emitRate": 500,
+                "emitSpeed": 0,
+                "speedSpread": 0.2,
                 "emitOrientation": {
                     "x": 0,
                     "y": 0,
@@ -73,19 +73,20 @@
                 },
                 "emitDimensions": {
                     "x": 2,
-                    "y": 0,
+                    "y": 4,
                     "z": 2
                 },
                 "emitRadiusStart": 0,
                 "polarFinish": 3.1415927410125732,
                 "emitAcceleration": {
                     "x": 0,
-                    "y": 0.20000000298023224,
+                    "y": 0,
                     "z": 0
                 },
-                "particleRadius": 0.03999999910593033,
-                "radiusStart": 0,
-                "radiusFinish": 0.03999999910593033,
+                "particleRadius": 0.4,
+                "radiusStart": 0.6,
+                "radiusFinish": 0.2,
+                "radiusSpread": 0.1,
                 "colorStart": {
                     "red": color[0],
                     "green": color[1],
@@ -96,11 +97,14 @@
                     "green": color[1],
                     "blue": color[2]
                 },
-                "alphaStart": 0.20000000298023224,
+                "alphaStart": 0.02,
                 "alphaFinish": 0,
+                "alphaSpread": 0.01,
                 "emitterShouldTrail": true,
-                "spinStart": 0,
-                "spinFinish": 0
+                "spinStart": -2 * Math.PI,
+                "spinFinish": 2 * Math.PI,
+                "particleSpin": 0,
+                "spinSpread": Math.PI/2
             }, "local");
 
             var id = Entities.addEntity({
@@ -134,6 +138,7 @@
 
     this.enterEntity = function(entityID) {
         if (arrived) {
+            arrived = false;
             if (location.canGoBack()) {
                 location.goBack();
             } else {
