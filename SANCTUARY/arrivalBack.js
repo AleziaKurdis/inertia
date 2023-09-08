@@ -88,9 +88,9 @@
                 "radiusFinish": 0.2,
                 "radiusSpread": 0.1,
                 "colorStart": {
-                    "red": 255,
-                    "green": 255,
-                    "blue": 255
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
                 },
                 "colorFinish": {
                     "red": color[0],
