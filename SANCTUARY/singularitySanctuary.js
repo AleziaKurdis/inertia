@@ -38,7 +38,7 @@
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
-        var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
+        var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position", "dimensions"]);
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
         var sunCumputedValues = getCurrentSunPosition();
@@ -48,7 +48,7 @@
         var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
             "name": "SUNLIGHT_(!)_Z0N3",
-            "dimensions": {"x": 3800, "y": 3800, "z": 3800},
+            "dimensions": {"x": prop.dimensions.x - 200, "y": prop.dimensions.y - 200, "z": prop.dimensions.z - 200},
             "type": "Zone",
             "keyLightMode": "enabled",
             "keyLight": {
@@ -274,7 +274,7 @@
                     "name": "plasma-material",
                     "materialURL": "materialData",
                     "priority": 1,
-                    "materialData": JSON.stringify(materialContent)                
+                    "materialData": JSON.stringify(materialContent)
                 }, "local");
             } else {
                 //UPDATE
