@@ -38,9 +38,13 @@
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
-        var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position", "dimensions"]);
+        var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
+        
+        var visibilityZoneId = findEntitiesByName( "SANCTUARY_VISIBILITY_ZONE", singularityGeneratorPosition, 10);
+        var superZoneDimensions = Entities.getEntityProperties(visibilityZoneId[0], ["dimensions"]).dimensions;
+        
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
         nextSunPosition = currentSunPosition;
@@ -48,7 +52,7 @@
         var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
             "name": "SUNLIGHT_(!)_Z0N3",
-            "dimensions": {"x": prop.dimensions.x - 200, "y": prop.dimensions.y - 200, "z": prop.dimensions.z - 200},
+            "dimensions": {"x": superZoneDimensions.x - 200, "y": superZoneDimensions.y - 200, "z": superZoneDimensions.z - 200},
             "type": "Zone",
             "keyLightMode": "enabled",
             "keyLight": {
