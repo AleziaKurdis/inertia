@@ -82,6 +82,24 @@
         "ignoreForCollisions": true,
         "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/arrivalBack.js",
         "shape": "Cylinder"
+    },{
+        "type": "Sphere",
+        "position": {"x":3946.653564453125,"y":4004.3515625,"z":3961.910400390625},
+        "visible": false,
+        "name": "DARKSIDE_SWITCH",
+        "locked": true,
+        "dimensions": {
+            "x": 0.7684439420700073,
+            "y": 0.6104849576950073,
+            "z": 0.7684439420700073
+        },
+        "renderWithZones": [
+            "{a9b8399d-b449-4dd0-b6ed-8a45778e966d}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/darkside.js"
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
