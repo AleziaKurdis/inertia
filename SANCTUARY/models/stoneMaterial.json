@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0,0,0],
+         "metallic":0.1,
+         "roughness": 0.073,
+         "normalMap": "MARBLE_NORMAL_512.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
