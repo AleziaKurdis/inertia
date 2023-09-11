@@ -100,7 +100,175 @@
             "grabbable": false
         },
         "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/darkside.js"
-    }
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Blue",
+        "userData": "{\n    \"name\": \"Throne Blue\",\n    \"fst\": \"THRONE_BLUE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "shape": "Cube",
+        "position": {"x":3946.624267578125,"y":4004.498046875,"z":3964.806884765625},
+        "rotation": {"x":0,"y":0,"z":0,"w":1}
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Orange",
+        "userData": "{\n    \"name\": \"Throne Orange\",\n    \"fst\": \"THRONE_ORANGE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube",
+        "position": {"x":3946.624267578125,"y":4004.498046875,"z":3958.98486328125},
+        "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Red",
+        "userData": "{\n    \"name\": \"Throne Red\",\n    \"fst\": \"THRONE_RED.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube",
+        "position": {"x":3949.145263671875,"y":4004.498046875,"z":3963.3515625},
+        "rotation": {"x":0,"y":0.5,"z":0,"w":0.8660253882408142}
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Yellow",
+        "userData": "{\n    \"name\": \"Throne Yellow\",\n    \"fst\": \"THRONE_YELLOW.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube",
+        "position": {"x":3944.103271484375,"y":4004.498046875,"z":3960.4404296875},
+        "rotation": {"x":0,"y":0.8660253882408142,"z":0,"w":-0.5}
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Green",
+        "userData": "{\n    \"name\": \"Throne Green\",\n    \"fst\": \"THRONE_GREEN.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube",
+        "position": {"x":3944.103271484375,"y":4004.498046875,"z":3963.3515625},
+        "rotation": {"x":0,"y":-0.5,"z":0,"w":0.8660253882408142}
+    },
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Throne Purple",
+        "userData": "{\n    \"name\": \"Throne Purple\",\n    \"fst\": \"THRONE_PURPLE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube",
+        "position": {"x":3949.145263671875,"y":4004.498046875,"z":3960.4404296875},
+        "rotation": {"x":0,"y":0.8660253882408142,"z":0,"w":0.5}
+    }    
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
