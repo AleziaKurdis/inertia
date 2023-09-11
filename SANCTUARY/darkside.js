@@ -13,7 +13,7 @@
 (function() {
     var ROOT = Script.resolvePath('').split("darkside.js")[0];
     var D29_DAY_DURATION = 104400; //sec    
-    var MAX_CLICKABLE_DISTANCE_M = 3;
+    var MAX_CLICKABLE_DISTANCE_M = 4;
 
     // Constructor
     var _this = null;
