@@ -103,6 +103,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Blue",
         "userData": "{\n    \"name\": \"Throne Blue\",\n    \"fst\": \"THRONE_BLUE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
@@ -131,6 +132,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Orange",
         "userData": "{\n    \"name\": \"Throne Orange\",\n    \"fst\": \"THRONE_ORANGE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
@@ -159,6 +161,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Red",
         "userData": "{\n    \"name\": \"Throne Red\",\n    \"fst\": \"THRONE_RED.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
@@ -187,6 +190,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Yellow",
         "userData": "{\n    \"name\": \"Throne Yellow\",\n    \"fst\": \"THRONE_YELLOW.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
@@ -215,6 +219,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Green",
         "userData": "{\n    \"name\": \"Throne Green\",\n    \"fst\": \"THRONE_GREEN.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
@@ -243,6 +248,7 @@
     },
     {
         "type": "Box",
+        "locked": true,
         "visible": false,
         "name": "Seat - Throne Purple",
         "userData": "{\n    \"name\": \"Throne Purple\",\n    \"fst\": \"THRONE_PURPLE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
