@@ -16,7 +16,7 @@
     var darkSound;
     var darkSoundInjector;
     var darkSoundPlaying = false;
-    var DARKSOUND_VOLUME = 0.2;
+    var DARKSOUND_VOLUME = 0.5;
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
     var giroLightID = Uuid.NULL;
@@ -148,9 +148,8 @@
                             "loop": true,
                             "localOnly": true,
                             "volume": DARKSOUND_VOLUME,
-                            "position": giroscopePosition,
-                            //"pitch": 0.0625
-                        });
+                            "position": giroscopePosition
+                        });//"pitch": 0.0625
         darkSoundPlaying = true;
     }
     
