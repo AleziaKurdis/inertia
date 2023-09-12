@@ -29,16 +29,7 @@
         var rwz = properties.renderWithZones;
         //generate sound
         darkSound = SoundCache.getSound(ROOT + "sounds/darkside.mp3");
-        print("audioInjector: " + JSON.stringify(darkSoundInjector));
-        darkSoundInjector = Audio.playSound(darkSound, {
-                            "loop": true,
-                            "localOnly": true,
-                            "volume": DARKSOUND_VOLUME,
-                            "position": giroscopePosition,
-                            "pitch": 0.0625
-                        });
-        darkSoundPlaying = 1;
-        print("audioInjector: " + JSON.stringify(darkSoundInjector));
+        darkSound.ready.connect(onSoundReady);
         
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
@@ -86,6 +77,20 @@
         //Generating partxle fx
         
     };
+
+    function onSoundReady() {
+        darkSound.ready.disconnect(onSoundReady);
+        print("audioInjector: " + JSON.stringify(darkSoundInjector));
+        darkSoundInjector = Audio.playSound(darkSound, {
+                            "loop": true,
+                            "localOnly": true,
+                            "volume": DARKSOUND_VOLUME,
+                            "position": giroscopePosition,
+                            "pitch": 0.0625
+                        });
+        darkSoundPlaying = 1;
+        print("audioInjector: " + JSON.stringify(darkSoundInjector));
+    }
     
     this.unload = function(entityID) {
         if (darkSoundPlaying === 1) {
