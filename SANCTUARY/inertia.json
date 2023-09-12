@@ -260,6 +260,7 @@
     {
         "id": "{50971ecb-4d58-4d87-92d2-d46dc482b4cc}",
         "type": "Box",
+        "locked": true,
         "name": "CLOCK D29",
         "dimensions": {
             "x": 0.631975531578064,
