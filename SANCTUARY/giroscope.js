@@ -85,7 +85,7 @@
                             "localOnly": true,
                             "volume": DARKSOUND_VOLUME,
                             "position": giroscopePosition,
-                            "pitch": 0.0625
+                            //"pitch": 0.0625
                         });
         darkSoundPlaying = true;
     }
