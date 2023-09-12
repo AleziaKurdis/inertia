@@ -19,13 +19,14 @@
     var DARKSOUND_VOLUME = 0.2;
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
-    
+    var giroLightID = Uuid.NULL;
     
 
     this.preload = function(entityID) {
         thisEntity = entityID;
-        giroscopePosition = Entities.getEntityProperties(entityID, ["position"]).position;
-        
+        var properties = Entities.getEntityProperties(thisEntity, ["position", "renderWithZones"]);
+        giroscopePosition = properties.position;
+        var rwz = properties.renderWithZones;
         //generate sound
         darkSound = SoundCache.getSound(ROOT + "sounds/darkside.mp3");
         darkSoundInjector = Audio.playSound(darkSound, {
@@ -37,13 +38,49 @@
                         });
         darkSoundPlaying = 1;
         
-        
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
             antiHue = antiHue - 1;
         }
         var antiHueColor = hslToRgb(antiHue, 1, 0.5);
+        
         //Generate ligth (color of the anti Hue)
+        var giroLightID = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 0,
+                "y": 1.5,
+                "z": 0
+            },
+            "parentID": thisEntity,
+            "name": "GIROSCOPE_LIGHT",
+            "dimensions": {
+                "x": 9.85885238647461,
+                "y": 9.85885238647461,
+                "z": 9.85885238647461
+            },
+            "rotation": {
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "renderWithZones": rwz,
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": antiHueColor[0],
+                "green": antiHueColor[1],
+                "blue": antiHueColor[2]
+            },
+            "isSpotlight": true,
+            "intensity": 40,
+            "exponent": 1,
+            "cutoff": 90,
+            "falloffRadius": 5
+        }, "local");
+        
         //Generating partxle fx
         
     };
@@ -53,12 +90,12 @@
             darkSoundInjector.stop();
             darkSoundPlaying = 0;
         }
-        /*
-        if (starId !== Uuid.NULL) {
-            Entities.deleteEntity(starId);
-            starId = Uuid.NULL;
+
+        if (giroLightID !== Uuid.NULL) {
+            Entities.deleteEntity(giroLightID);
+            giroLightID = Uuid.NULL;
         }
-        */
+
     };    
 
    /*
