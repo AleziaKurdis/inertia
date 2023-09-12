@@ -20,6 +20,7 @@
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
     var giroLightID = Uuid.NULL;
+    var fxID = Uuid.NULL;
     
 
     this.preload = function(entityID) {
@@ -75,6 +76,69 @@
         }, "local");
         
         //Generating partxle fx
+        fxID = Entities.addEntity({
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "parentID": thisEntity,
+            "name": "GIROSCOPE POWER FX",
+            "dimensions": {
+                "x": 14,
+                "y": 14,
+                "z": 14
+            },
+            "renderWithZones": rwz,
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "ellipsoid",
+            "alpha": 0,
+            "textures": ROOT + "images/electricArc.png",
+            "maxParticles": 200,
+            "lifespan": 0.10000000149011612,
+            "emitRate": 20,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 0.20000000298023224,
+                "z": 2
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 4,
+            "radiusSpread": 2,
+            "radiusStart": 4,
+            "radiusFinish": 4,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": antiHueColor[0],
+                "green": antiHueColor[1],
+                "blue": antiHueColor[2]
+            },
+            "alphaStart": 1,
+            "alphaFinish": 1,
+            "emitterShouldTrail": true,
+            "spinSpread": 3.140000104904175
+        }, "local");
         
     };
 
@@ -101,6 +165,10 @@
             giroLightID = Uuid.NULL;
         }
 
+        if (fxID !== Uuid.NULL) {
+            Entities.deleteEntity(fxID);
+            fxID = Uuid.NULL;
+        }
     };    
 
    /*
