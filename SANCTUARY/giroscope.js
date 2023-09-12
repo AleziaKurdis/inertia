@@ -15,7 +15,7 @@
     var D29_DAY_DURATION = 104400; //sec
     var darkSound;
     var darkSoundInjector;
-    var darkSoundPlaying = 0;
+    var darkSoundPlaying = false;
     var DARKSOUND_VOLUME = 0.2;
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
@@ -80,7 +80,6 @@
 
     function onSoundReady() {
         darkSound.ready.disconnect(onSoundReady);
-        print("audioInjector: " + JSON.stringify(darkSoundInjector));
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
@@ -88,14 +87,13 @@
                             "position": giroscopePosition,
                             "pitch": 0.0625
                         });
-        darkSoundPlaying = 1;
-        print("audioInjector: " + JSON.stringify(darkSoundInjector));
+        darkSoundPlaying = true;
     }
     
     this.unload = function(entityID) {
-        if (darkSoundPlaying === 1) {
+        if (darkSoundPlaying) {
             darkSoundInjector.stop();
-            darkSoundPlaying = 0;
+            darkSoundPlaying = false;
         }
 
         if (giroLightID !== Uuid.NULL) {
