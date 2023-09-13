@@ -28,6 +28,9 @@
     
     var renderWithZones;
     
+    var matId = Uuid.NULL;
+    var lightTableID = Uuid.NULL;
+    
     var D29_DAY_DURATION = 104400; //sec
     var STAR_DIAMETER = 400; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
@@ -67,6 +70,7 @@
             "renderWithZones": renderWithZones,
         }, "local");
         
+        genMainAsteroidLightMaterial(thisEntity, renderWithZones);
         genTroyanAsteroid();
         
         starId = Entities.addEntity({
@@ -238,6 +242,73 @@
                     "azimuth" : azimuth,
                     "localPosition": localPosition
                 };
+    }
+
+    function genMainAsteroidLightMaterial(id, rwz) {
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        if (antiHue > 1) {
+            antiHue = antiHue - 1;
+        }
+        var color = hslToRgb(antiHue, 1, 0.5);
+        var lightMatColor = hslToRgb(antiHue, 1, 0.61);
+        var bloomFactor = 4;
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "plasma",
+                    "albedo": [1, 1, 1],
+                    "metallic": 1,
+                    "roughness": 1,
+                    "emissive": [(lightMatColor[0]/255) * bloomFactor, (lightMatColor[1]/255) * bloomFactor, (lightMatColor[2]/255) * bloomFactor],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+
+        matId = Entities.addEntity({
+            "type": "Material",
+            "parentID": id,
+            "renderWithZones": rwz,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-material",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(materialContent)
+        }, "local");
+        
+        lightTableID = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": -53.3345,
+                "y": 4.5818,
+                "z": -38.0559
+            },
+            "parentID": id,
+            "name": "TABLE_LIGHT",
+            "dimensions": {
+                "x": 9,
+                "y": 9,
+                "z": 9
+            },
+            "rotation": {"x":0.7071068286895752,"y":0,"z":0,"w":0.7071068286895752},
+            "renderWithZones": rwz,
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": color[0],
+                "green": color[1],
+                "blue": color[2]
+            },
+            "isSpotlight": true,
+            "intensity": 10,
+            "exponent": 1,
+            "cutoff": 90,
+            "falloffRadius": 2
+        }, "local");
     }
 
     function updateStar() {
@@ -459,6 +530,17 @@
             Entities.deleteEntity(solarZoneId);
             solarZoneId = Uuid.NULL;
         }
+        
+        if (matId !== Uuid.NULL) {
+            Entities.deleteEntity(matId);
+            matId = Uuid.NULL;
+        }
+
+        if (lightTableID !== Uuid.NULL) {
+            Entities.deleteEntity(lightTableID);
+            lightTableID = Uuid.NULL;
+        }
+
         var i;
         for (i = 0; i < asteroidIds.length; i++) {
             if (asteroidIds[i] !== Uuid.NULL) {
