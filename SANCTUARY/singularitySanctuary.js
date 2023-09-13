@@ -257,7 +257,7 @@
             "materialVersion": 1,
             "materials": [
                 {
-                    "name": "plasma",
+                    "name": "LIGHT",
                     "albedo": [1, 1, 1],
                     "metallic": 1,
                     "roughness": 1,
@@ -275,7 +275,8 @@
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
             "name": "plasma-material",
             "materialURL": "materialData",
-            "priority": 1,
+            "priority": 3,
+            "parentMaterialName":  "mat::LIGHT",
             "materialData": JSON.stringify(materialContent)
         }, "local");
         
