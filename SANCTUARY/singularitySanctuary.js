@@ -276,7 +276,7 @@
             "name": "plasma-material",
             "materialURL": "materialData",
             "priority": 3,
-            "parentMaterialName":  "mat::LIGHT",
+            "parentMaterialName": "mat::LIGHT",
             "materialData": JSON.stringify(materialContent)
         }, "local");
         
