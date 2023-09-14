@@ -16,7 +16,7 @@
     var darkSound;
     var darkSoundInjector;
     var darkSoundPlaying = false;
-    var DARKSOUND_VOLUME = 0.5;
+    var DARKSOUND_VOLUME = 0.3;
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
     var giroLightID = Uuid.NULL;
