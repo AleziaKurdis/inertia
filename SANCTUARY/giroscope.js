@@ -21,7 +21,7 @@
     var thisEntity = Uuid.NULL;
     var giroLightID = Uuid.NULL;
     var fxID = Uuid.NULL;
-    
+    var intervalID;
 
     this.preload = function(entityID) {
         thisEntity = entityID;
@@ -144,7 +144,6 @@
     };
 
     function onSoundReady() {
-        print("Sound Loaded!");
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
@@ -154,10 +153,16 @@
                         });
         darkSoundPlaying = true;
         darkSound.ready.disconnect(onSoundReady);
+        intervalID = Script.setInterval(function() {
+            darkSoundInjector.setOptions({
+					"position": giroscopePosition
+				});
+        }, 1000);
     }
     
     this.unload = function(entityID) {
         if (darkSoundPlaying) {
+            Script.clearInterval(intervalID);
             darkSoundInjector.stop();
             darkSoundPlaying = false;
         }
