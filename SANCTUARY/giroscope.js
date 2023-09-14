@@ -144,7 +144,6 @@
     };
 
     function onSoundReady() {
-        darkSound.ready.disconnect(onSoundReady);
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
@@ -152,6 +151,7 @@
                             "position": giroscopePosition
                         });//"pitch": 0.0625
         darkSoundPlaying = true;
+        darkSound.ready.disconnect(onSoundReady);
     }
     
     this.unload = function(entityID) {
