@@ -144,12 +144,14 @@
     };
 
     function onSoundReady() {
+        print("Sound Loaded!");
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
                             "volume": DARKSOUND_VOLUME,
-                            "position": giroscopePosition
-                        });//"pitch": 0.0625
+                            "position": giroscopePosition,
+                            "pitch": 0.0625
+                        });
         darkSoundPlaying = true;
         darkSound.ready.disconnect(onSoundReady);
     }
