@@ -29,6 +29,7 @@
         giroscopePosition = properties.position;
         var rwz = properties.renderWithZones;
         //generate sound
+        darkSoundPlaying = false;
         darkSound = SoundCache.getSound(ROOT + "sounds/darkside.mp3");
         darkSound.ready.connect(onSoundReady);
         
