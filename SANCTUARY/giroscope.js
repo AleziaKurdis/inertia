@@ -154,6 +154,7 @@
     }
     
     function playDarkSound() {
+        print("play giro");
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
