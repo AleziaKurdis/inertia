@@ -144,6 +144,7 @@
     };
 
     function onSoundReady() {
+        print("Sound Loaded!");
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
@@ -163,6 +164,7 @@
     }
     
     this.unload = function(entityID) {
+        print("Exit Giro!");
         if (darkSoundPlaying) {
             Script.clearInterval(intervalID);
             darkSoundInjector.stop();
