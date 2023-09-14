@@ -155,7 +155,9 @@
         darkSound.ready.disconnect(onSoundReady);
         intervalID = Script.setInterval(function() {
             darkSoundInjector.setOptions({
-					"position": giroscopePosition
+					"position": giroscopePosition,
+                    "volume": DARKSOUND_VOLUME,
+                    "pitch": 0.0625
 				});
         }, 1000);
     }
