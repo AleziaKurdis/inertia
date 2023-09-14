@@ -32,8 +32,11 @@
         print("Preload Giro!");
         darkSoundPlaying = false;
         darkSound = SoundCache.getSound(ROOT + "sounds/darkside.mp3");
-        darkSound.ready.connect(onSoundReady);
-        
+        if (darkSound.downloaded) {
+            playDarkSound();
+        } else {
+            darkSound.ready.connect(onSoundReady);
+        }
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
             antiHue = antiHue - 1;
@@ -146,6 +149,11 @@
 
     function onSoundReady() {
         print("Sound Loaded!");
+        darkSound.ready.disconnect(onSoundReady);
+        playDarkSound();
+    }
+    
+    function playDarkSound() {
         darkSoundInjector = Audio.playSound(darkSound, {
                             "loop": true,
                             "localOnly": true,
@@ -154,7 +162,7 @@
                             "pitch": 0.0625
                         });
         darkSoundPlaying = true;
-        darkSound.ready.disconnect(onSoundReady);
+        
         intervalID = Script.setInterval(function() {
             darkSoundInjector.setOptions({
 					"position": giroscopePosition,
