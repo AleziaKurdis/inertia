@@ -34,7 +34,7 @@
         var properties = Entities.getEntityProperties(thisEntity, ["position", "renderWithZones"]);
         giroscopePosition = properties.position;
         var rwz = properties.renderWithZones;
-
+        print("giroscopePosition: " + JSON.stringify(giroscopePosition));
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
             antiHue = antiHue - 1;
