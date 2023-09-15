@@ -146,15 +146,13 @@
 						"position": giroscopePosition,
 						"volume": soundVolume,
 						"loop": soundLoop,
-						"localOnly": soundLocal//,
-                        //"pitch": 0.0625
+						"localOnly": soundLocal
 					});
 				}
 			} else {
                 injector.setOptions({
                     "position": giroscopePosition,
-                    "volume": soundVolume//,
-                    //"pitch": 0.0625
+                    "volume": soundVolume
                 });
 			}
 		}, refreshInterval);
