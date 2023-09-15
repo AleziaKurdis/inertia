@@ -10,40 +10,37 @@
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
-(function() {
+(function(){
     var ROOT = Script.resolvePath('').split("giroscope.js")[0];
     var D29_DAY_DURATION = 104400; //sec
-    var darkSound;
-    var darkSoundInjector;
-    var darkSoundPlaying = false;
-    var DARKSOUND_VOLUME = 0.3;
     var giroscopePosition;
     var thisEntity = Uuid.NULL;
     var giroLightID = Uuid.NULL;
     var fxID = Uuid.NULL;
-    var intervalID;
+    var intervalID = null;
 
+	var SOUND_URL = ROOT + "sounds/darkside.mp3";
+	var loopTime = -1; // Loop for how long?  -1 is always on.
+	var soundURL = SoundCache.getSound(SOUND_URL);
+	var receiverName = "";
+	var soundLoop = true;
+	var soundLocal = true;
+	var soundVolume = 0.3;
+	var refreshInterval = 1000;
+	var injector = null;
+	
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(thisEntity, ["position", "renderWithZones"]);
         giroscopePosition = properties.position;
         var rwz = properties.renderWithZones;
-        //generate sound
-        print("Preload Giro!");
-        darkSoundPlaying = false;
-        darkSound = SoundCache.getSound(ROOT + "sounds/darkside.mp3");
-        if (darkSound.downloaded) {
-            playDarkSound();
-        } else {
-            darkSound.ready.connect(onSoundReady);
-        }
+
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
             antiHue = antiHue - 1;
         }
         var antiHueColor = hslToRgb(antiHue, 1, 0.5);
         
-        //Generate ligth (color of the anti Hue)
         var giroLightID = Entities.addEntity({
             "type": "Light",
             "localPosition": {
@@ -80,7 +77,6 @@
             "falloffRadius": 5
         }, "local");
         
-        //Generating partxle fx
         fxID = Entities.addEntity({
             "type": "ParticleEffect",
             "localPosition": {
@@ -145,42 +141,34 @@
             "spinSpread": 3.140000104904175
         }, "local");
         
-    };
 
-    function onSoundReady() {
-        print("Sound Loaded!");
-        darkSound.ready.disconnect(onSoundReady);
-        playDarkSound();
-    }
-    
-    function playDarkSound() {
-        print("play giro");
-        darkSoundInjector = Audio.playSound(darkSound, {
-                            "loop": true,
-                            "localOnly": true,
-                            "volume": DARKSOUND_VOLUME,
-                            "position": giroscopePosition,
-                            "pitch": 0.0625
-                        });
-        darkSoundPlaying = true;
-        
-        intervalID = Script.setInterval(function() {
-            darkSoundInjector.setOptions({
-					"position": giroscopePosition,
-                    "volume": DARKSOUND_VOLUME,
+		intervalID = Script.setInterval(function() {
+			if (!injector) {
+				if (soundURL.downloaded) {
+					injector = Audio.playSound(soundURL, {
+						"position": giroscopePosition,
+						"volume": soundVolume,
+						"loop": soundLoop,
+						"localOnly": soundLocal,
+                        "pitch": 0.0625
+					});
+				}
+			} else {
+                injector.setOptions({
+                    "position": giroscopePosition,
+                    "volume": soundVolume,
                     "pitch": 0.0625
-				});
-        }, 1000);
-    }
-    
-    this.unload = function(entityID) {
-        print("Exit Giro!");
-        if (darkSoundPlaying) {
-            Script.clearInterval(intervalID);
-            darkSoundInjector.stop();
-            darkSoundPlaying = false;
-        }
-
+                });
+			}
+		}, refreshInterval);
+	};
+	
+	this.unload = function(){
+		if (injector) {
+			injector.stop();
+			injector = null;
+		}
+        
         if (giroLightID !== Uuid.NULL) {
             Entities.deleteEntity(giroLightID);
             giroLightID = Uuid.NULL;
@@ -190,7 +178,9 @@
             Entities.deleteEntity(fxID);
             fxID = Uuid.NULL;
         }
-    };    
+        
+        Script.clearInterval(intervalID);
+	};
 
    /*
      * Converts an HSL color value to RGB. Conversion formula
