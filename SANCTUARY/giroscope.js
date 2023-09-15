@@ -20,9 +20,7 @@
     var intervalID = null;
 
 	var SOUND_URL = ROOT + "sounds/darkside.mp3";
-	var loopTime = -1; // Loop for how long?  -1 is always on.
 	var soundURL = SoundCache.getSound(SOUND_URL);
-	var receiverName = "";
 	var soundLoop = true;
 	var soundLocal = true;
 	var soundVolume = 0.3;
