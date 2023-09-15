@@ -32,7 +32,6 @@
         var properties = Entities.getEntityProperties(thisEntity, ["position", "renderWithZones"]);
         giroscopePosition = properties.position;
         var rwz = properties.renderWithZones;
-        print("giroscopePosition: " + JSON.stringify(giroscopePosition));
         var antiHue = 0.5 + GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         if (antiHue > 1) {
             antiHue = antiHue - 1;
@@ -147,15 +146,15 @@
 						"position": giroscopePosition,
 						"volume": soundVolume,
 						"loop": soundLoop,
-						"localOnly": soundLocal,
-                        "pitch": 0.0625
+						"localOnly": soundLocal//,
+                        //"pitch": 0.0625
 					});
 				}
 			} else {
                 injector.setOptions({
                     "position": giroscopePosition,
-                    "volume": soundVolume,
-                    "pitch": 0.0625
+                    "volume": soundVolume//,
+                    //"pitch": 0.0625
                 });
 			}
 		}, refreshInterval);
