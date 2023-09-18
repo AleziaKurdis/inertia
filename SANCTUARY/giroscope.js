@@ -23,7 +23,7 @@
 	var soundURL = SoundCache.getSound(SOUND_URL);
 	var soundLoop = true;
 	var soundLocal = true;
-	var soundVolume = 0.3;
+	var soundVolume = 0.35;
 	var refreshInterval = 1000;
 	var injector = null;
 	

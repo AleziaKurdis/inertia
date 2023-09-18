@@ -45,7 +45,7 @@
     var zoneID = Uuid.NULL;
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
-    var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.2;
+    var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
     var blindspots = [
