@@ -7,7 +7,7 @@
     {
         "id":"{00356305-f3d5-4395-834a-096bbbf4c4dc}",
         "type":"Zone",
-        "name":"SANCTUARY_VISIBILITY_ZONE",
+        "name":"CEON_VISIBILITY_ZONE",
         "locked":true,
         "dimensions":{
             "x":4000,
@@ -29,7 +29,7 @@
             "grabbable":false
         },
         "shapeType":"sphere",
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/navigationAmbienceSanctuary.js"
+        "script": "https://aleziakurdis.github.io/inertia/CEON/navigationAmbienceCeon.js"
     },
     {
         "id": "{9e11f297-8b6f-453a-ad95-ac4e3da34365}",
@@ -39,7 +39,7 @@
             "y": 4000,
             "z": 4000
         },
-        "name": "MAIN-ASTEROIDS",
+        "name": "CEON-MAIN",
         "locked": true,
         "dimensions": {
             "x": 191.7617,
@@ -55,207 +55,9 @@
         "damping": 0,
         "angularDamping": 0,
         "shapeType": "static-mesh",
-        "modelURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/models/SANCTUARY.fst",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_MAIN.fst",
         "useOriginalPivot": true,
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/singularitySanctuary.js"
-    },
-    {
-        "type": "Shape",
-        "visible": false,
-        "locked": true,
-        "name": "ARRIVAL-BACK",
-        "dimensions": {
-            "x": 3,
-            "y": 5,
-            "z": 3
-        },
-        "position": {"x":3991.093017578125,"y":3994.67431640625,"z":4029.18701171875},
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "grab": {
-            "grabbable": false
-        },
-        "damping": 0,
-        "angularDamping": 0,
-        "collisionless": true,
-        "ignoreForCollisions": true,
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/arrivalBack.js",
-        "shape": "Cylinder"
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Blue",
-        "userData": "{\n    \"name\": \"Throne Blue\",\n    \"fst\": \"THRONE_BLUE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "shape": "Cube",
-        "position": {"x":3946.624267578125,"y":4004.498046875,"z":3964.806884765625},
-        "rotation": {"x":0,"y":0,"z":0,"w":1}
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Orange",
-        "userData": "{\n    \"name\": \"Throne Orange\",\n    \"fst\": \"THRONE_ORANGE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "shape": "Cube",
-        "position": {"x":3946.624267578125,"y":4004.498046875,"z":3958.98486328125},
-        "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Red",
-        "userData": "{\n    \"name\": \"Throne Red\",\n    \"fst\": \"THRONE_RED.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "shape": "Cube",
-        "position": {"x":3949.145263671875,"y":4004.498046875,"z":3963.3515625},
-        "rotation": {"x":0,"y":0.5,"z":0,"w":0.8660253882408142}
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Yellow",
-        "userData": "{\n    \"name\": \"Throne Yellow\",\n    \"fst\": \"THRONE_YELLOW.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "shape": "Cube",
-        "position": {"x":3944.103271484375,"y":4004.498046875,"z":3960.4404296875},
-        "rotation": {"x":0,"y":0.8660253882408142,"z":0,"w":-0.5}
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Green",
-        "userData": "{\n    \"name\": \"Throne Green\",\n    \"fst\": \"THRONE_GREEN.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "shape": "Cube",
-        "position": {"x":3944.103271484375,"y":4004.498046875,"z":3963.3515625},
-        "rotation": {"x":0,"y":-0.5,"z":0,"w":0.8660253882408142}
-    },
-    {
-        "type": "Box",
-        "locked": true,
-        "visible": false,
-        "name": "Seat - Throne Purple",
-        "userData": "{\n    \"name\": \"Throne Purple\",\n    \"fst\": \"THRONE_PURPLE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
-        "dimensions": {
-            "x": 0.3499999940395355,
-            "y": 0.004999999888241291,
-            "z": 0.3499999940395355
-        },
-        "grab": {
-            "grabbable": false
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitClient.js",
-        "scriptTimestamp": 1670185484288,
-        "serverScripts": "https://aleziakurdis.github.io/inertia/SANCTUARY/thrones/sitServer.js",
-        "color": {
-            "red": 0,
-            "green": 180,
-            "blue": 239
-        },
-        "shape": "Cube",
-        "position": {"x":3949.145263671875,"y":4004.498046875,"z":3960.4404296875},
-        "rotation": {"x":0,"y":0.8660253882408142,"z":0,"w":0.5}
+        "script": "https://aleziakurdis.github.io/inertia/CEON/singularityCeon.js"
     },
     {
         "id": "{50971ecb-4d58-4d87-92d2-d46dc482b4cc}",
@@ -280,48 +82,13 @@
         "grab": {
             "grabbable": false
         },
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/d29Clock.js",
+        "script": "https://aleziakurdis.github.io/inertia/CEON/d29Clock.js",
         "color": {
             "red": 0,
             "green": 0,
             "blue": 0
         },
         "shape": "Cube"
-    },
-    {
-        "id": "{156cb1a6-c292-4373-a3ec-9aeeb8ee8a11}",
-        "type": "Model",
-        "position": {"x":3945.671630859375,"y":3999.656005859375,"z":3968.432861328125},
-        "name": "GIROSCOPE",
-        "dimensions": {
-            "x": 2.365983486175537,
-            "y": 1.547296166419983,
-            "z": 2.365983486175537
-        },
-        "rotation": {
-            "x": 0,
-            "y": 0.9998120069503784,
-            "z": 0,
-            "w": -0.019390687346458435
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "grab": {
-            "grabbable": false
-        },
-        "angularVelocity": {
-            "x": 0,
-            "y": 17.453292846679688,
-            "z": 0
-        },
-        "damping": 0,
-        "angularDamping": 0,
-        "shapeType": "simple-hull",
-        "modelURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/models/GEAR.fbx",
-        "useOriginalPivot": true,
-        "locked": true,
-        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/giroscope.js"
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
