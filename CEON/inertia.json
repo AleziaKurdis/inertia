@@ -93,6 +93,7 @@
     {
         "id": "{3bdb456e-ff93-41ea-aeeb-e306fc1567ec}",
         "type": "Model",
+        "locked": true,
         "position": {"x":4000,"y":4000,"z":4000},
         "name": "ARRIVAL_BACK_MODULE",
         "dimensions": {
