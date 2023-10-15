@@ -112,7 +112,272 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/ARRIVAL_MODULE.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-1",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":4020.760986328125,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-2",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":4010.737060546875,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-3",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":4000.758056640625,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-4",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3990.79541015625,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-5",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3980.732666015625,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-6",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3970.756591796875,"y":3982.0087890625,"z":3959.648193359375},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-7",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3978.92822265625,"y":3982.0087890625,"z":3977.052978515625},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-8",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3978.92822265625,"y":3982.0087890625,"z":3988.0517578125},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-9",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":3978.92822265625,"y":3982.0087890625,"z":3999.001220703125},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-10",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":4008.778076171875,"y":3982.0087890625,"z":3991.081787109375},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{f942fd6e-0468-4434-9718-cc2232b4b37c}",
+        "type": "Model",
+        "name": "GATE-11",
+        "locked": true,
+        "dimensions": {
+            "x": 6.49951171875,
+            "y": 5.001798152923584,
+            "z": 0.30041056871414185
+        },
+        "position":{"x":4008.778076171875,"y":3982.0087890625,"z":3999.720947265625},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{a926cf12-ef0e-4690-9b76-04aebad93c01}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_HUB_DOOR.fst",
+        "useOriginalPivot": true
     }
+    
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
