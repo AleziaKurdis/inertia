@@ -19,8 +19,6 @@
 
     var starId = Uuid.NULL;
     var fireMatId = Uuid.NULL;
-    var fireLightId = Uuid.NULL;
-    var fireParticles = Uuid.NULL;
     var solarZoneId = Uuid.NULL;
     
     var singularityGeneratorPosition;
@@ -31,7 +29,7 @@
     var lightTableID = Uuid.NULL;
     
     var D29_DAY_DURATION = 104400; //sec
-    var STAR_DIAMETER = 400; //m
+    var STAR_DIAMETER = 300; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
@@ -108,17 +106,15 @@
 
     function moveStar() {
         if (starId !== Uuid.NULL) {
-            currentSunPosition = nextSunPosition;
             var sunCumputedValues = getCurrentSunPosition();
-            nextSunPosition = sunCumputedValues.localPosition;
+            currentSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var antiHue = 0.5 + hue;
             if (antiHue > 1) {
                 antiHue = antiHue - 1;
             }            
             var sunColor = hslToRgb(antiHue, 1, 0.6);
-            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
-            Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
+            Entities.editEntity(starId, {"localPosition": currentSunPosition});
             Entities.editEntity(starId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
@@ -129,13 +125,9 @@
     }
 
     function getCurrentSunPosition() {
-        var distanceFactor = Math.abs(Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 36))); //un tour par mois
-        var elevation = (Math.PI/4) + ((Math.PI/8) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION)));
-        var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION *  9); //un tour par semaine
-        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -1500 - (1000 * distanceFactor)});
-        //print("local Position: " + JSON.stringify(localPosition));
-        //print("elevation: " + elevation);
-        //ASTEROID_1print("azimuth: " + azimuth);
+        var elevation = (Math.PI/4) + ((Math.PI/8) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 12))); //un cycle par 12 jours (1/3 de mois) D29
+        var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
+        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2000});
         return { 
                     "elevation" : elevation,
                     "azimuth" : azimuth,
@@ -257,166 +249,6 @@
                     "materialData": JSON.stringify(materialContent)
                 });
             }
-            
-
-            if (fireLightId === Uuid.NULL) {
-                //CREATE
-                fireLightId = Entities.addEntity({
-                    "type": "Light",
-                    "name": "STAR-LIGHT",
-                    "dimensions": {
-                        "x": 1500,
-                        "y": 1500,
-                        "z": 1500
-                    },
-                    "localPosition": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                    },
-                    "renderWithZones": renderWithZones,
-                    "parentID": starId,
-                    "grab": {
-                        "grabbable": false
-                    },
-                    "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
-                    },
-                    "isSpotlight": false,
-                    "intensity": 15,
-                    "exponent": 1,
-                    "cutoff": 75,
-                    "falloffRadius": STAR_DIAMETER * 2
-                }, "local");
-            } else {
-                //UPDATE
-                Entities.editEntity(fireLightId, {
-                    "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
-                    }                    
-                });
-            } 
-            if (fireParticles === Uuid.NULL) {
-                //CREATE
-                fireParticles = Entities.addEntity({
-                    "type": "ParticleEffect",
-                    "name": "STAR_PARTICLE",
-                    "dimensions": {
-                        "x": STAR_DIAMETER * 2,
-                        "y": STAR_DIAMETER * 2,
-                        "z": STAR_DIAMETER * 2
-                    },
-                    "rotation": Quat.IDENTITY,
-                    "localPosition": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                    },
-                    "renderWithZones": renderWithZones,
-                    "parentID": starId,
-                    "grab": {
-                        "grabbable": false
-                    },
-                    "shapeType": "ellipsoid",
-                    "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
-                    },
-                    "alpha": 0.10000000149011612,
-                    "textures": ROOT + "images/pitParticle.png",
-                    "maxParticles": 2250,
-                    "lifespan": 9,
-                    "emitRate": 250,
-                    "emitSpeed": 0,
-                    "speedSpread": 0.1 * STAR_DIAMETER,
-                    "emitOrientation": {
-                        "x": -0.0000152587890625,
-                        "y": -0.0000152587890625,
-                        "z": -0.0000152587890625,
-                        "w": 1
-                    },
-                    "emitDimensions": {
-                        "x": 0.9 * STAR_DIAMETER,
-                        "y": 0.9 * STAR_DIAMETER,
-                        "z": 0.9 * STAR_DIAMETER,
-                    },
-                    "emitRadiusStart": 1,
-                    "polarFinish": 3.1415927410125732,
-                    "emitAcceleration": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                    },
-                    "accelerationSpread": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                    },
-                    "particleRadius": 0.4 * STAR_DIAMETER,
-                    "radiusSpread": 0.1 * STAR_DIAMETER,
-                    "radiusStart": 0.1 * STAR_DIAMETER,
-                    "radiusFinish": 0.6 * STAR_DIAMETER,
-                    "colorStart": {
-                        "red": fireColorStart[0],
-                        "green": fireColorStart[1],
-                        "blue": fireColorStart[2]
-                    },
-                    "colorFinish": {
-                        "red": fireColorFinish[0],
-                        "green": fireColorFinish[1],
-                        "blue": fireColorFinish[2]
-                    },
-                    "colorSpread": {
-                        "red": Math.floor(pitch * 15.9),
-                        "green": Math.floor(pitch * 15.9),
-                        "blue": Math.floor(pitch * 15.9)
-                    },                
-                    "alphaSpread": 0.10000000149011612,
-                    "alphaStart": 0.5,
-                    "alphaFinish": 0,
-                    "emitterShouldTrail": false,
-                    "rotateWithEntity": true,
-                    "spinSpread": 1.5700000524520874,
-                    "spinStart": 0,
-                    "particleSpin": 1,
-                    "spinFinish": 2,
-                    "angularDamping": 0,
-                    "angularVelocity": {
-                        "x":0,
-                        "y":0.5,
-                        "z":0
-                    }                    
-                }, "local");
-            } else {
-                //UPDATE
-                Entities.editEntity(fireParticles, {
-                    "color": {
-                        "red": fireColor[0],
-                        "green": fireColor[1],
-                        "blue": fireColor[2]
-                    },
-                    "colorStart": {
-                        "red": fireColorStart[0],
-                        "green": fireColorStart[1],
-                        "blue": fireColorStart[2]
-                    },
-                    "colorSpread": {
-                        "red": Math.floor(pitch * 15.9),
-                        "green": Math.floor(pitch * 15.9),
-                        "blue": Math.floor(pitch * 15.9)
-                    },                 
-                    "colorFinish": {
-                        "red": fireColorFinish[0],
-                        "green": fireColorFinish[1],
-                        "blue": fireColorFinish[2]
-                    }                
-                });
-            } 
         }
     }
 
