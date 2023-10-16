@@ -1,0 +1,3 @@
+name = GOTG_FLT_FX
+filename = GOTG_FLT_FX.glb
+materialMap = [{"mat::HEXA": {"materials":[{ "name": "HEXA", "albedo": [1 ,1 ,1], "roughness": 0.10, "metallic": 0.01, "albedoMap": "HEXA-FTL-FX.png", "emissiveMap": "HEXA-FTL-FX.png", "model": "hifi_pbr", "cullFaceMode": "CULL_NONE", "defaultFallthrough": false}]}}, {"mat::LIGHT": {"materials":[{ "name": "LIGHT", "albedo": [1.0 ,1.0 ,1.0], "roughness": 0.5, "metallic": 1.0, "emissive": [2.25, 2.25, 0.8294], "cullFaceMode": "CULL_NONE", "model": "hifi_pbr", "defaultFallthrough": false}]}}]
