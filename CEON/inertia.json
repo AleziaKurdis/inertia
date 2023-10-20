@@ -487,6 +487,42 @@
         "spinSpread": 0.05000000074505806,
         "spinStart": -0.17000000178813934,
         "spinFinish": 0.17000000178813934
+    },
+    {
+        "id": "{2a67c41c-31e7-4781-afb6-7e1a49eb8bc1}",
+        "type": "Light",
+        "name": "ARRIVAL LIGHT",
+        "locked": true,
+        "position": {"x":4019.690673828125, "y":3983.680908203125, "z":3980.335693359375},
+        "dimensions": {
+            "x": 6.085314750671387,
+            "y": 6.085314750671387,
+            "z": 19.178146362304688
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0.7071068286895752,
+            "z": 0,
+            "w": 0.7071068286895752
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "color": {
+            "red": 255,
+            "green": 242,
+            "blue": 56
+        },
+        "isSpotlight": true,
+        "intensity": 15,
+        "exponent": 1,
+        "cutoff": 18.5,
+        "falloffRadius": 2
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
