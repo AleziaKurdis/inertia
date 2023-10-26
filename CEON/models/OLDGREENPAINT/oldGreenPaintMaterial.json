@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "RustyPaintedMetal01_1K_BaseColor.jpg",
+         "metallic":0.002,
+         "roughnessMap": "RustyPaintedMetal01_1K_Roughness.jpg",
+         "normalMap": "RustyPaintedMetal01_1K_Normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
