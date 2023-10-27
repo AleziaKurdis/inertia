@@ -523,7 +523,35 @@
         "exponent": 1,
         "cutoff": 18.5,
         "falloffRadius": 2
-    }
+    },
+    {
+        "id": "{3b61d934-130a-48e3-a81d-bdccf8f1dc63}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "STREET-LIGHTS",
+        "locked": true,
+        "dimensions": {
+            "x": 61.441402435302734,
+            "y": 7.6190643310546875,
+            "z": 61.86748504638672
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "script": "https://aleziakurdis.github.io/inertia/CEON/streetLights.js",
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_STREET_LIGHTS.fst",
+        "useOriginalPivot": true
+    }    
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
