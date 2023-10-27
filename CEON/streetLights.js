@@ -38,7 +38,7 @@
     this.preload = function(entityID) {
         var renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         var i, id;
-        for (i=0; i > localPositions.length; i++) {
+        for (i=0; i < localPositions.length; i++) {
             id = Entities.addEntity({
                 "type": "Light",
                 "name": "street-light",
@@ -79,7 +79,7 @@
 
     this.unload = function(entityID) {
         var i;
-        for (i=0; i > lights.length; i++) {
+        for (i=0; i < lights.length; i++) {
             Entities.deleteEntity(lights[i]);
             
         }

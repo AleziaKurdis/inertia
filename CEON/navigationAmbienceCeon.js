@@ -124,7 +124,7 @@
                 lightningsID = Uuid.NULL;
             }
             var i;
-            for (i=0; i > asteroidStack.length; i++) {
+            for (i=0; i < asteroidStack.length; i++) {
                 Entities.deleteEntity(asteroidStack[i].id);
                 
             }
