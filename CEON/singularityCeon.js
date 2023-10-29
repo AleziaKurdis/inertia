@@ -104,7 +104,7 @@
         }  
     }   
 
-    function moveStar() {
+    function moveStar() {// readd velocity
         if (starId !== Uuid.NULL) {
             var sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
@@ -124,8 +124,9 @@
         }
     }
 
-    function getCurrentSunPosition() {
-        var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 12))); //un cycle par 12 jours (1/3 de mois) D29. +/- 60 deg.
+    function getCurrentSunPosition() {//elevation to adjust duration 400x sec
+        //var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 12))); //un cycle par 12 jours (1/3 de mois) D29. +/- 60 deg.
+        var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), 418.879))); //Matching the translation time.
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2000});
         return { 
