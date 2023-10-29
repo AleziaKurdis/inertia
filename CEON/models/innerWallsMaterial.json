@@ -1,0 +1,13 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo": [0.006, 0.004, 0.012],
+            "metallic": 1,
+            "roughness": 0.145,
+            "normalMap": "METAL-FLOOR_256_NORMAL_50.png",
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
