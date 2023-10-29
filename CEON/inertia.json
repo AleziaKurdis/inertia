@@ -551,6 +551,33 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_STREET_LIGHTS.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{649883e0-b38b-4dd7-8ebf-f0ae98d64b31}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "THE EDGE - BAR",
+        "locked": true,
+        "dimensions": {
+            "x": 13.415470123291016,
+            "y": 5.445868015289307,
+            "z": 12.592750549316406
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BAR_THE_EDGE.fst",
+        "useOriginalPivot": true
     }    
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
