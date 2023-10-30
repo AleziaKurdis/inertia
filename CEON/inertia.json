@@ -578,7 +578,34 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BAR_THE_EDGE.fst",
         "useOriginalPivot": true
-    }    
+    },
+    {
+        "id": "{9be3910f-9403-40f3-98ae-438f32db072e}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "SPACE NAVIGATION PLANNING CENTER",
+        "locked": true,
+        "dimensions": {
+            "x": 23.167627334594727,
+            "y": 7.050081253051758,
+            "z": 19.399967193603516
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_SPACE_NAV_PLAN_CENTER.fst",
+        "useOriginalPivot": true
+    }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
