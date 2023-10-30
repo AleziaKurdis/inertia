@@ -1,0 +1,13 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo": [1, 0.796, 0.561],
+            "metallic": 1,
+            "roughness": 0.2,
+            "normalMap": "WALLS/sci-fi-panel1-normal.jpg",
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
