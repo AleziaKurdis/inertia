@@ -1,0 +1,12 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo": [1, 1, 1],
+            "metallic": 0.001,
+            "emissive": [2.06, 1.995372549019608, 1.5995294117647059],
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
