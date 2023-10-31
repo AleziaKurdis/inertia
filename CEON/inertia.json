@@ -605,6 +605,28 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_SPACE_NAV_PLAN_CENTER.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{70587489-f296-4acb-9e16-55f97bd5c37d}",
+        "type": "Model",
+        "position": {"x":3962.9375,"y":3995.005126953125,"z":3950.134521484375},
+        "name": "Framed Sign - THE EDGE BAR 24/7",
+        "locked": true,
+        "dimensions": {
+            "x": 3.8291015625,
+            "y": 0.9267871379852295,
+            "z": 0.03999999910593033
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_Edge_Bar_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_Edge_Bar_Sign.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/CEON/models/framed_sign_emissive_h.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
