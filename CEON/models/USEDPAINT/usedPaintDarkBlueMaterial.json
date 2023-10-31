@@ -3,10 +3,10 @@
    "materials":[
       {
          "albedo":[0.235, 0.196, 0.388],
-         "albedoMap": "PaintedMetal_1K_albedo.jpg",
-         "metallicMap": "PaintedMetal_1K_Metallic.jpg",
-         "roughnessMap": "PaintedMetal_1K_Roughness.jpg",
-         "normalMap": "PaintedMetal_1K_Normal.jpg",
+         "albedoMap": "paintedMetal_B_albedo.jpg",
+         "metallicMap": 0.001,
+         "roughnessMap": 0.45,
+         "normalMap": "paintedMetal_B_normal.jpg",
          "cullFaceMode":"CULL_BACK"
       }
    ]
