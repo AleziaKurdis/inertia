@@ -648,7 +648,7 @@
         },
         "shapeType": "box",
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\"}",
-        "modelURL": "https://aleziakurdis.github.io/intertia/CEON/models/framed_sign_emissive_h.fst",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
     },
     {
@@ -671,7 +671,7 @@
         },
         "shapeType": "box",
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\"}",
-        "modelURL": "https://aleziakurdis.github.io/intertia/CEON/models/framed_sign_emissive_h.fst",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
     },
     {
@@ -690,7 +690,7 @@
         },
         "shapeType": "box",
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\"}",
-        "modelURL": "https://aleziakurdis.github.io/intertia/CEON/models/framed_sign_emissive_h.fst",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
     }
    ],
