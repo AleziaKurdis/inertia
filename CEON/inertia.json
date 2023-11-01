@@ -631,14 +631,14 @@
     {
         "id": "{640a89a9-4f1c-4da7-8a82-5125198d55f2}",
         "type": "Model",
-        "position": {"x":3975.89892578125,"y":3996.814453125,"z":3970.41748046875},
-        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "position": {"x":3964.94921875,"y":3993.1376953125,"z":3960.322021484375},
+        "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":0.7071068286895752},
         "name": "Framed Sign - SNPC-1",
         "locked": true,
         "dimensions": {
-            "x": 4.355355262756348,
-            "y": 0.8655171990394592,
-            "z": 0.027797190472483635
+            "x": 1.0595,
+            "y": 0.8113,
+            "z": 0.0126
         },
         "renderWithZones": [
             "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
@@ -654,14 +654,14 @@
     {
         "id": "{25b7c299-fb2f-499e-ba55-79c3bbafb495}",
         "type": "Model",
-        "position": {"x":3982.505859375,"y":3996.75830078125,"z":3957.72314453125},
-        "rotation": {"x":0,"y":-0.9449950456619263,"z":0,"w":-0.32708466053009033},
+        "position": {"x":3978.778564453125,"y":3993.139892578125,"z":3954.27392578125},
+        "rotation": {"x":0,"y":-1,"z":0,"w":0},
         "name": "Framed Sign - SNPC-2",
         "locked": true,
         "dimensions": {
-            "x": 4.355355262756348,
-            "y": 0.8655171990394592,
-            "z": 0.027797190472483635
+            "x": 1.0595,
+            "y": 0.8113,
+            "z": 0.0126
         },
         "renderWithZones": [
             "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
@@ -677,11 +677,38 @@
     {
         "id": "{33cb480a-5e70-48c8-8732-8335cc4fe7df}",
         "type": "Model",
-        "position": {"x":3964.941650390625,"y":3994.6044921875,"z":3962.40869140625},
-        "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":0.7071068286895752},
+        "position": {"x":3986.817138671875,"y":3993.00390625,"z":3964.237060546875},
+        "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
         "name": "Framed Sign - SNPC-3",
         "locked": true,
-        "dimensions": {"x":1.9816,"y":0.3938,"z":0.0126},
+        "dimensions": {
+            "x": 1.0595,
+            "y": 0.8113,
+            "z": 0.0126
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{3144c7da-fe82-4155-817c-81648a2533ea}",
+        "type": "Model",
+        "position": {"x":3973.587890625,"y":3992.88525390625,"z":3972.14794921875},
+        "rotation": {"x":0,"y":0,"z":0,"w":1},
+        "name": "Framed Sign - SNPC-4",
+        "locked": true,
+        "dimensions": {
+            "x": 1.0595,
+            "y": 0.8113,
+            "z": 0.0126
+        },
         "renderWithZones": [
             "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
         ],
