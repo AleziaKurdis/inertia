@@ -719,7 +719,34 @@
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_SNPC_Sign.jpg\"}",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
-    }
+    },
+    {
+        "id": "{5ac101be-ee32-4409-af56-7318b85cc00d}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "PIRATE KING HOTEL",
+        "locked": true,
+        "dimensions": {
+            "x": 19.842905044555664,
+            "y": 10.701526641845703,
+            "z": 28.423837661743164
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_PIRATE_KING_HOTEL.fst",
+        "useOriginalPivot": true
+    }    
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
