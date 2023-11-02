@@ -2,7 +2,7 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[0.569, 0.133, 0.075],
+         "albedo":[0.349, 0.106, 0.063],
          "albedoMap": "paintedMetal_B_albedo.jpg",
          "metallicMap": 0.001,
          "roughnessMap": 0.45,
