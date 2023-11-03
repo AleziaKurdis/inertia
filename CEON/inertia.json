@@ -774,6 +774,33 @@
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_PKH_Sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_PKH_Sign.jpg\"}",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{2da45f03-479f-429f-8ec7-03877c2b2b10}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "BLOCK-A",
+        "locked": true,
+        "dimensions": {
+            "x": 17.134441375732422,
+            "y": 11.434558868408203,
+            "z": 32.009071350097656
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_A.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
