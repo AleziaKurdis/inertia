@@ -2,10 +2,9 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[0.337, 0.275, 0.478],
-         "albedoMap": "paintedMetal_B_albedo.jpg",
+         "albedo":[0.337, 0.318, 0.388],
          "metallicMap": 0.001,
-         "roughnessMap": 0.3,
+         "roughnessMap": 0.25,
          "normalMap": "paintedMetal_B_normal.jpg",
          "cullFaceMode":"CULL_BACK"
       }
