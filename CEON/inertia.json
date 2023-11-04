@@ -801,6 +801,37 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_A.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{c44c211c-588d-4680-bdfe-84a3d2c94ab8}",
+        "type": "Light",
+        "position": {"x":4007.40283203125,"y":3994.618896484375,"z":3978.490966796875},
+        "name": "lampe ruel",
+        "locked": true,
+        "dimensions": {
+            "x": 10.086308479309082,
+            "y": 10.086308479309082,
+            "z": 10.24190616607666
+        },
+        "rotation": {"x":0.7071068286895752,"y":0,"z":0,"w":-0.7071068286895752},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "color": {
+            "red": 255,
+            "green": 162,
+            "blue": 56
+        },
+        "isSpotlight": true,
+        "intensity": 6,
+        "exponent": 1,
+        "cutoff": 80,
+        "falloffRadius": 1
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
