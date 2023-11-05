@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split("singularityCeon.js")[0];
     var thisEntity;
 
-    var UPDATE_TIMER_INTERVAL = 1000; // 5 sec 
+    var UPDATE_TIMER_INTERVAL = 500; // 1/2 sec 
     var processTimer = 0;
 
     var starId = Uuid.NULL;
@@ -115,7 +115,7 @@
                 antiHue = antiHue - 1;
             }            
             var sunColor = hslToRgb(antiHue, 1, 0.6);
-            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            var velocity = Vec3.multiply(Vec3.subtract(nextSunPosition, currentSunPosition), 1/UPDATE_TIMER_INTERVAL); 
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
