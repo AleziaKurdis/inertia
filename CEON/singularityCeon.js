@@ -115,7 +115,8 @@
                 antiHue = antiHue - 1;
             }            
             var sunColor = hslToRgb(antiHue, 1, 0.6);
-            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            //var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            var velocity = Vec3.subtract(currentSunPosition, nextSunPosition);
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
