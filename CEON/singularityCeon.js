@@ -106,16 +106,18 @@
 
     function moveStar() {// readd velocity
         if (starId !== Uuid.NULL) {
+            currentSunPosition = nextSunPosition;
             var sunCumputedValues = getCurrentSunPosition();
-            currentSunPosition = sunCumputedValues.localPosition;
+            nextSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var antiHue = 0.5 + hue;
             if (antiHue > 1) {
                 antiHue = antiHue - 1;
             }            
             var sunColor = hslToRgb(antiHue, 1, 0.6);
-            Entities.editEntity(starId, {"localPosition": currentSunPosition});
-            Entities.editEntity(starId, {
+            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
+            Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
                     "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth)
