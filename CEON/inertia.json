@@ -859,6 +859,75 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_THE_TOWER.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{b261d857-24d8-4034-8008-dd73ab8e90a6}",
+        "type": "Model",
+        "position": {"x":3992.8466796875,"y":3994.244140625,"z":3959.786376953125},
+        "name": "Framed Sign - THE TOWER - 1",
+        "locked": true,
+        "dimensions": {
+            "x": 1.0202264785766602,
+            "y": 3.79345703125,
+            "z": 0.03999999910593033
+        },
+        "rotation": {"x":0,"y":-0.5555457472801208,"z":0,"w":0.8314860463142395},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_v.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{512bbb9c-af1f-4f8c-a10e-47afffd3345e}",
+        "type": "Model",
+        "position": {"x":3994.935302734375,"y":3994.244140625,"z":3950.9208984375},
+        "name": "Framed Sign - THE TOWER - 2",
+        "locked": true,
+        "dimensions": {
+            "x": 1.0202264785766602,
+            "y": 3.79345703125,
+            "z": 0.03999999910593033
+        },
+        "rotation": {"x":0,"y":-0.9381921291351318,"z":0,"w":0.3461149036884308},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_v.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{bf775f58-dcbf-4cb2-813f-5eabe4af2f40}",
+        "type": "Model",
+        "position": {"x":4006.51318359375,"y":3994.244140625,"z":3960.810791015625},
+        "name": "Framed Sign - THE TOWER - 3",
+        "locked": true,
+        "dimensions": {
+            "x": 1.0202264785766602,
+            "y": 3.79345703125,
+            "z": 0.03999999910593033
+        },
+        "rotation": {"x":0,"y":0.48859840631484985,"z":0,"w":0.8725088238716125},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_v.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
