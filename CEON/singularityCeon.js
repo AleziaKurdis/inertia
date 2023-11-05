@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split("singularityCeon.js")[0];
     var thisEntity;
 
-    var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
+    var UPDATE_TIMER_INTERVAL = 1000; // 5 sec 
     var processTimer = 0;
 
     var starId = Uuid.NULL;
