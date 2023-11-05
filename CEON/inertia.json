@@ -832,6 +832,33 @@
         "exponent": 1,
         "cutoff": 80,
         "falloffRadius": 1
+    },
+    {
+        "id": "{e56b874f-0ce1-49d9-91ff-fad90dedf16c}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "THE TOWER - CAFE - BAR - RESTAURANT - CASINO",
+        "locked": true,
+        "dimensions": {
+            "x": 16.30731964111328,
+            "y": 8.656681060791016,
+            "z": 16.30731964111328
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_THE_TOWER.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
