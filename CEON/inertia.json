@@ -928,6 +928,75 @@
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/ceon_The_TOWER_sign.jpg\"}",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_v.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{9000e4ad-790a-4c50-8bdc-b7db45640ce6}",
+        "type": "Model",
+        "position": {"x":4000,"y":4000,"z":4000},
+        "name": "BLOCK-D",
+        "locked": true,
+        "dimensions": {
+            "x": 15.237939834594727,
+            "y": 3.7708873748779297,
+            "z": 8.189613342285156
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_D.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{fe46777e-db8b-4cba-89d4-8bd29d10287e}",
+        "type": "Model",
+        "position": {"x":4000,"y":4000,"z":4000},
+        "name": "BLOCK-C",
+        "locked": true,
+        "dimensions": {
+            "x": 13.925214767456055,
+            "y": 7.105902671813965,
+            "z": 20.98192596435547
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_C.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{8b046b55-77d9-42b4-ba99-e44aca2ace9f}",
+        "type": "Model",
+        "position": {"x":4000,"y":4000,"z":4000},
+        "name": "BLOCK-B",
+        "locked": true,
+        "dimensions": {
+            "x": 11.380128860473633,
+            "y": 8.135923385620117,
+            "z": 13.266925811767578
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_B.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
