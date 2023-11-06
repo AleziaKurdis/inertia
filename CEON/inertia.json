@@ -1019,9 +1019,6 @@
         "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/Ceon_Overte_logo.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/Ceon_Overte_logo.jpg\"}",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
         "useOriginalPivot": true
-        ],
-      "Id": "{73d039b5-d686-42a1-bccf-1c34124fd820}",
-      "Version": 133
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
