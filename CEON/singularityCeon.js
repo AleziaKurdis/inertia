@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split("singularityCeon.js")[0];
     var thisEntity;
 
-    var UPDATE_TIMER_INTERVAL = 500; // 1/2 sec 
+    var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
     var processTimer = 0;
 
     var starId = Uuid.NULL;
@@ -34,7 +34,7 @@
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
-    var nextSunPosition;
+    //var nextSunPosition;
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
@@ -47,7 +47,7 @@
         
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
-        nextSunPosition = currentSunPosition;
+        //nextSunPosition = currentSunPosition;
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         var antiHue = 0.5 + hue;
         if (antiHue > 1) {
@@ -106,17 +106,15 @@
 
     function moveStar() {// readd velocity
         if (starId !== Uuid.NULL) {
-            currentSunPosition = nextSunPosition;
             var sunCumputedValues = getCurrentSunPosition();
-            nextSunPosition = sunCumputedValues.localPosition;
+            currentSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var antiHue = 0.5 + hue;
             if (antiHue > 1) {
                 antiHue = antiHue - 1;
             }            
             var sunColor = hslToRgb(antiHue, 1, 0.6);
-            var velocity = Vec3.multiply(Vec3.subtract(nextSunPosition, currentSunPosition), 1/UPDATE_TIMER_INTERVAL); 
-            Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
+            Entities.editEntity(starId, {"localPosition": currentSunPosition});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
@@ -128,7 +126,8 @@
 
     function getCurrentSunPosition() {//elevation to adjust duration 400x sec
         //var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 12))); //un cycle par 12 jours (1/3 de mois) D29. +/- 60 deg.
-        var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), 418.879))); //Matching the translation time.
+        //var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), 418.879))); //Matching the translation time.
+        var elevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 3))); //un cycle de 3 jours
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
         var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2000});
         return { 
