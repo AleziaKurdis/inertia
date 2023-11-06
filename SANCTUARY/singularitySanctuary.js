@@ -37,7 +37,7 @@
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
-    var nextSunPosition;
+    //var nextSunPosition;
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
@@ -50,7 +50,7 @@
         
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
-        nextSunPosition = currentSunPosition;
+        //nextSunPosition = currentSunPosition;
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
@@ -213,13 +213,13 @@
 
     function moveStar() {
         if (starId !== Uuid.NULL) {
-            currentSunPosition = nextSunPosition;
+            //currentSunPosition = nextSunPosition;
             var sunCumputedValues = getCurrentSunPosition();
-            nextSunPosition = sunCumputedValues.localPosition;
+            currentSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var sunColor = hslToRgb(hue, 1, 0.6);
-            var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
-            Entities.editEntity(starId, {"localPosition": currentSunPosition, "localVelocity": velocity});
+            //var velocity = Vec3.subtract(nextSunPosition, currentSunPosition);
+            Entities.editEntity(starId, {"localPosition": currentSunPosition});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
