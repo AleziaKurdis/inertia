@@ -997,6 +997,31 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_BLOC_B.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{efbf09fa-8c61-4477-9ab6-8236136ea3fb}",
+        "type": "Model",
+        "position": {"x":3977.66455078125,"y":3996.567138671875,"z":3995.370849609375},
+        "name": "Framed Sign - Overte Logo",
+        "locked": true,
+        "dimensions": {
+            "x": 4.731255531311035,
+            "y": 1.5671441555023193,
+            "z": 0.05138177424669266
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box",
+        "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/Ceon_Overte_logo.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/CEON/images/Ceon_Overte_logo.jpg\"}",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/framed_sign_emissive_h.fst",
+        "useOriginalPivot": true
+        ],
+      "Id": "{73d039b5-d686-42a1-bccf-1c34124fd820}",
+      "Version": 133
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
