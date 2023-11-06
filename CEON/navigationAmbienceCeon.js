@@ -361,7 +361,7 @@
             var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
             //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
-            if ( d29CurrentHour > 18 || d29CurrentHour < 6 ) {
+            if ( d29CurrentHour > 23 || d29CurrentHour < 5 ) {
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
@@ -598,7 +598,7 @@
             "z": (1 + Math.random() - 0.5) * asteroidScale
         };
         
-        asteroidModelURL = ROOT + "models/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
+        asteroidModelURL = ROOT + "models/ROCK/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
         
         
         var targetPoint = Vec3.sum(avatarPosition, Vec3.multiply( Vec3.multiplyQbyV(MyAvatar.orientation, Vec3.UNIT_NEG_Z), (250 + Math.random() * 500 )));
