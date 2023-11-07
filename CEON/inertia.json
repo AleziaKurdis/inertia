@@ -839,7 +839,7 @@
         "type": "Model",
         "position": {
             "x": 4000,
-            "y": 4000,
+            "y": 3999.90,
             "z": 4000
         },
         "name": "THE TOWER - CAFE - BAR - RESTAURANT - CASINO",
@@ -864,7 +864,7 @@
     {
         "id": "{b261d857-24d8-4034-8008-dd73ab8e90a6}",
         "type": "Model",
-        "position": {"x":3992.8466796875,"y":3994.244140625,"z":3959.786376953125},
+        "position": {"x":3992.8466796875,"y":3994.144140625,"z":3959.786376953125},
         "name": "Framed Sign - THE TOWER - 1",
         "locked": true,
         "dimensions": {
@@ -887,7 +887,7 @@
     {
         "id": "{512bbb9c-af1f-4f8c-a10e-47afffd3345e}",
         "type": "Model",
-        "position": {"x":3994.935302734375,"y":3994.244140625,"z":3950.9208984375},
+        "position": {"x":3994.935302734375,"y":3994.144140625,"z":3950.9208984375},
         "name": "Framed Sign - THE TOWER - 2",
         "locked": true,
         "dimensions": {
@@ -910,7 +910,7 @@
     {
         "id": "{bf775f58-dcbf-4cb2-813f-5eabe4af2f40}",
         "type": "Model",
-        "position": {"x":4006.51318359375,"y":3994.244140625,"z":3960.810791015625},
+        "position": {"x":4006.51318359375,"y":3994.144140625,"z":3960.810791015625},
         "name": "Framed Sign - THE TOWER - 3",
         "locked": true,
         "dimensions": {
