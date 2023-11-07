@@ -13,6 +13,17 @@
     var jsMainFileName = "gotgPortal.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     
+    
+    
+    //################################# PORTAL LIST #############################################################
+    var portals = [
+        {"name": "SANCTUARY", "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}}
+    ];
+    //###########################################################################################################
+    
+    
+    
+    
     var APP_NAME = "SPACE NAV";
     var APP_ICON_INACTIVE = ROOT + "images/icon_template_inactive.png";
     var APP_ICON_ACTIVE = ROOT + "images/icon_template_active.png";
@@ -24,9 +35,17 @@
         "text": APP_NAME,
         "icon": APP_ICON_INACTIVE,
         "activeIcon": APP_ICON_ACTIVE,
-        "sortOrder": 1,
+        "sortOrder": 0,
         "captionColor": "#ffae00"
     });
+
+    this.preload = function(entityID) {
+        
+    }
+
+    this.unload = function(entityID) {
+
+    }
 
     function clicked(){
         if (appStatus === true) {
