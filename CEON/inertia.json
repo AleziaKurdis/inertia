@@ -604,6 +604,7 @@
         "angularDamping": 0,
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_SPACE_NAV_PLAN_CENTER.fst",
+        "script": "https://aleziakurdis.github.io/inertia/CEON/gotgPortal.js",
         "useOriginalPivot": true
     },
     {
