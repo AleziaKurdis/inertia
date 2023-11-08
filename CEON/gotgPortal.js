@@ -140,4 +140,4 @@
     }
 
     Script.scriptEnding.connect(cleanup);
-}());
+})
