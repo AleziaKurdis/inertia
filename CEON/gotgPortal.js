@@ -46,7 +46,7 @@
 
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
-        thisPosition = properties.properties;
+        thisPosition = properties.position;
         thisEntityID = entityID;
     }
 
