@@ -17,7 +17,7 @@
     
     //################################# PORTAL LIST #############################################################
     var portals = [
-        {"name": "SANCTUARY", "id": Uuid.NULL, "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}}
+        {"name": "SANCTUARY", "id": Uuid.NULL, "zoneID": Uuid.NULL, "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}}
     ];
     //###########################################################################################################
     
@@ -33,6 +33,7 @@
     var thisPosition;
     var thisEntityID;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
+
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
@@ -48,10 +49,47 @@
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
         thisEntityID = entityID;
+        
+        for (i = 0; i < portals.length; i++) {
+            portals[i].zoneID = Entities.addEntity({
+                "position": Vec3.sum(thisPosition, portals[i].localPosition),
+                "name": "JUMP POINT - " + portals[i].Name,
+                "type": "Zone",
+                "shapeType": "Sphere",
+                "dimensions": {"x": 250, "y": 250, "z": 250},
+            }, "local");
+            
+            var id = Entities.addEntity({
+                "type": "Model",
+                "localPosition": {"x": 0, "y": 0, "z": 0},
+                "parentID": portals[i].zoneID,
+                "renderWithZones": [portals[i].zoneID],
+                "name": "FTL-FX",
+                "dimensions": {
+                    "x": 117.60910034179688,
+                    "y": 107.577880859375,
+                    "z": 9.917415618896484
+                },
+                "billboardMode": "full",
+                "grab": {
+                    "grabbable": false
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
+                "useOriginalPivot": true
+            }, "local");
+        }
     }
 
     this.unload = function(entityID) {
         removeBeacons();
+        for (i = 0; i < portals.length; i++) {
+            if (portals[i].zoneID !== Uuid.NULL) {
+                Entities.deleteEntity(portals[i].zoneID);
+                portals[i].zoneID = Uuid.NULL;
+            }
+        }
     }
 
     function removeBeacons() {
