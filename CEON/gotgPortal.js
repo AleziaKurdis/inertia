@@ -28,7 +28,7 @@
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
     }
-    print(findGetParameter(test));
+    print(findGetParameter("test"));
     //###########################################################################################################
     
     
