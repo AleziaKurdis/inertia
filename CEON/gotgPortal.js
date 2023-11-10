@@ -163,6 +163,7 @@
                     "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
                     "visible": visible
                 }, "local");
+                print("HERE MATERIALS AN PORTAL");
             } else {
                 Entities.editEntity(portals[i].id, {"dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, "visible": visible});
             }
