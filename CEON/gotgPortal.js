@@ -21,16 +21,14 @@
     if (location.protocol === "hifi") {
         portals = Script.require("./portals_domain.json");
     } else {
+        
         portals = Script.require("./portals_serverless.json");
     }
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
     }
-    /*var portals = [
-        {"name": "SANCTUARY", "id": Uuid.NULL, "zoneID": Uuid.NULL, "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}}
-    ];
-    */
+    print(findGetParameter(test));
     //###########################################################################################################
     
     
@@ -56,6 +54,20 @@
         "sortOrder": 0,
         "captionColor": "#ffae00"
     });
+
+    function findGetParameter(parameterName) {
+        var result = null,
+            tmp = [];
+        var thisLocation = location.href;
+        var items = thisLocation.search.substr(1).split("&");
+        for (var index = 0; index < items.length; index++) {
+            tmp = items[index].split("=");
+            if (tmp[0] === parameterName) {
+                result = decodeURIComponent(tmp[1])
+            };
+        }
+        return result;
+    }
 
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
@@ -163,7 +175,6 @@
                     "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
                     "visible": visible
                 }, "local");
-                print("HERE MATERIALS AN PORTAL");
             } else {
                 Entities.editEntity(portals[i].id, {"dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, "visible": visible});
             }
