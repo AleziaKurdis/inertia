@@ -28,7 +28,7 @@
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
     }
-    //print("TEST: " + findGetParameter("test"));
+    print("TEST: " + findGetParameter("test"));
     //###########################################################################################################
     
     
@@ -55,12 +55,12 @@
         "captionColor": "#ffae00"
     });
 
-/*    function findGetParameter(parameterName) {
+    function findGetParameter(parameterName) {
         var index;
-        var result = null,
-            tmp = [];
+        var result = null, tmp = [];
         var thisLocation = location.href;
-        var items = thisLocation.search.substr(1).split("&");
+        var theParam = thisLocation.split("?");
+        var items = theParam[1].split("&");
         for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
             if (tmp[0] === parameterName) {
@@ -69,7 +69,7 @@
         }
         return result;
     }
-*/
+    
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
