@@ -16,9 +16,21 @@
     
     
     //################################# PORTAL LIST #############################################################
-    var portals = [
+    
+    var portals;
+    if (location.protocol === "hifi") {
+        portals = Script.require("./portals_domain.json");
+    } else {
+        portals = Script.require("./portals_serverless.json");
+    }
+    for (i = 0; i < portals.length; i++) {
+        portals[i].id = Uuid.NULL;
+        portals[i].zoneID = Uuid.NULL;
+    }
+    /*var portals = [
         {"name": "SANCTUARY", "id": Uuid.NULL, "zoneID": Uuid.NULL, "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}}
     ];
+    */
     //###########################################################################################################
     
     
