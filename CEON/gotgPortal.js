@@ -56,11 +56,12 @@
     });
 
     function findGetParameter(parameterName) {
+        var index;
         var result = null,
             tmp = [];
         var thisLocation = location.href;
         var items = thisLocation.search.substr(1).split("&");
-        for (var index = 0; index < items.length; index++) {
+        for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
             if (tmp[0] === parameterName) {
                 result = decodeURIComponent(tmp[1])
