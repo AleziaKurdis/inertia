@@ -17,12 +17,12 @@
    
     var portals;
     if (location.protocol === "hifi") {
-       // portals = Script.require(ROOT + "portals_domain.json");
+        portals = Script.require(ROOT + "portals_domain.json");
     } else {
-        //serverlessReachDestination();
-       // portals = Script.require(ROOT + "portals_serverless.json");
+        serverlessReachDestination();
+        portals = Script.require(ROOT + "portals_serverless.json");
     }
-    portals = [];
+    //portals = [];
     print("PORTALS: " + JSON.stringify(portals));
     
     for (i = 0; i < portals.length; i++) {
@@ -56,8 +56,10 @@
     
     function serverlessReachDestination() {
         var coordinate = getParameterObj();
-        MyAvatar.position = coordinate.position;
-        MyAvatar.orientation = coordinate.rotation;
+        if (!coordinate.isInvalide) {
+            MyAvatar.position = coordinate.position;
+            MyAvatar.orientation = coordinate.rotation;
+        }
     }    
     
     function getParameterObj() {
@@ -67,36 +69,38 @@
         var thisLocation = location.href;
         var theParam = thisLocation.split("?");
         var items = theParam[1].split("&");
-        //print("GOTG thisLocation: " + JSON.stringify(items));
-        for (index = 0; index < items.length; index++) {
-            tmp = items[index].split("=");
-            objResult[tmp[0]] = tmp[1];
-        }
         var position = {"x": 0, "y": 0, "z": 0};
         var rotation = {"x": 0, "y":0, "z":0, "w":0};
-        if (objResult.px !== undefined) {
-            position.x = parseFloat(objResult.px);
-        }
-        if (objResult.py !== undefined) {
-            position.y = parseFloat(objResult.py);
-        }
-        if (objResult.pz !== undefined) {
-            position.z = parseFloat(objResult.pz);
-        }
-        if (objResult.rx !== undefined) {
-            rotation.x = parseFloat(objResult.rx);
-        }
-        if (objResult.ry !== undefined) {
-            rotation.y = parseFloat(objResult.ry);
-        }
-        if (objResult.rz !== undefined) {
-            rotation.z = parseFloat(objResult.rz);
-        }
-        if (objResult.rw !== undefined) {
-            rotation.w = parseFloat(objResult.rw);
-        } 
+        var isInvalide = false;
+        if ( items.length !== 0 ) {
+            for (index = 0; index < items.length; index++) {
+                tmp = items[index].split("=");
+                objResult[tmp[0]] = tmp[1];
+            }
+            if (objResult.px !== undefined) {
+                position.x = parseFloat(objResult.px);
+            } else { isInvalide = true; }
+            if (objResult.py !== undefined) {
+                position.y = parseFloat(objResult.py);
+            } else { isInvalide = true; }
+            if (objResult.pz !== undefined) {
+                position.z = parseFloat(objResult.pz);
+            } else { isInvalide = true; }
+            if (objResult.rx !== undefined) {
+                rotation.x = parseFloat(objResult.rx);
+            } else { isInvalide = true; }
+            if (objResult.ry !== undefined) {
+                rotation.y = parseFloat(objResult.ry);
+            } else { isInvalide = true; }
+            if (objResult.rz !== undefined) {
+                rotation.z = parseFloat(objResult.rz);
+            } else { isInvalide = true; }
+            if (objResult.rw !== undefined) {
+                rotation.w = parseFloat(objResult.rw);
+            } else { isInvalide = true; }
+        } else {isInvalide = true;}
         
-        return {"position": position, "rotation": rotation};
+        return {"position": position, "rotation": rotation, "isInvalide": isInvalide};
     }
     
     this.preload = function(entityID) {
