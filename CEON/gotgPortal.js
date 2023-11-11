@@ -103,7 +103,7 @@
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
         thisEntityID = entityID;
-        
+/*        
         if (portals.length !== 0) {
             for (i = 0; i < portals.length; i++) {
                 portals[i].zoneID = Entities.addEntity({
@@ -156,7 +156,7 @@
                 }, "local");
                 
             }
-        }
+        }*/
     }
 
     this.unload = function(entityID) {
