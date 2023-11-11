@@ -129,7 +129,7 @@
                 "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
                 "useOriginalPivot": true
             }, "local");
-            
+            /*
             id = Entities.addEntity({
                 "type": "Shapes",
                 "shape": "Sphere",
@@ -149,6 +149,7 @@
                 "description": portals[i].destinationURL,
                 "script": ROOT + "teleport.js"
             }, "local");
+            */
         }
     }
 
