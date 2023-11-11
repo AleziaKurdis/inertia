@@ -64,7 +64,7 @@
         var theParam = thisLocation.split("?");
         var items = theParam[1].split("&");
         print("GOTG thisLocation: " + JSON.stringify(items));
-        for (index = 0; index < items.length; index++) {
+/*        for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
             objResult[tmp[0]] = tmp[1];
         }
@@ -91,8 +91,8 @@
         if (objResult.rw !== undefined) {
             rotation.w = parseFloat(objResult.rw);
         } 
-        
-        return {"position": position, "rotation": rotation};
+        */
+        //return {"position": position, "rotation": rotation};
     }
     
     this.preload = function(entityID) {
