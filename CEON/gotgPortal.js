@@ -54,12 +54,15 @@
         "sortOrder": 0,
         "captionColor": "#ffae00"
     });
-
+    
+    //################Get url parameter############################
     function findGetParameter(parameterName) {
         var index;
-        var result = null, tmp = [];
+        var result = null;
+        var tmp = [];
         var thisLocation = location.href;
-        var theParam = thisLocation.split("?");
+        print("GOTG thisLocation: " + thisLocation);
+/*        var theParam = thisLocation.split("?");
         var items = theParam[1].split("&");
         for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
@@ -68,8 +71,12 @@
                 result = tmp[1];
             };
         }
+        */
         return result;
     }
+    
+    print("TEST: " + findGetParameter("test"));
+    //#####################################################
     
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
@@ -184,16 +191,20 @@
     }
 
     function clicked(){
+        var colorCaption;
         if (appStatus === true) {
             removeBeacons();
+            colorCaption = "#ffae00";
             appStatus = false;
         }else{
             showBeacons();
+            colorCaption = "#000000";
             appStatus = true;
         }
 
         button.editProperties({
-            isActive: appStatus
+            "isActive": appStatus,
+            "captionColor": colorCaption
         });
     }
 
