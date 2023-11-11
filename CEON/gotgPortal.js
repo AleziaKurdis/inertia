@@ -129,9 +129,9 @@
                 "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
                 "useOriginalPivot": true
             }, "local");
-            /*
+
             id = Entities.addEntity({
-                "type": "Shapes",
+                "type": "Shape",
                 "shape": "Sphere",
                 "localPosition": {"x": 0, "y": 0, "z": 0},
                 "parentID": portals[i].zoneID,
@@ -149,7 +149,6 @@
                 "description": portals[i].destinationURL,
                 "script": ROOT + "teleport.js"
             }, "local");
-            */
         }
     }
 
