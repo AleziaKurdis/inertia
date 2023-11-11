@@ -145,7 +145,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "visible": false
+                "visible": false,
                 "description": portals[i].destinationURL,
                 "script": ROOT + "teleport.js"
             }, "local");
