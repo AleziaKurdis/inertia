@@ -22,8 +22,8 @@
         serverlessReachDestination();
         portals = Script.require(ROOT + "portals_serverless.json");
     }
-    //print("PORTALS: " + JSON.stringify(portals));
-*/    
+*/    print("PORTALS: " + JSON.stringify(portals));
+    
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
