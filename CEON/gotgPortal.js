@@ -67,9 +67,9 @@
 /*        for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
             objResult[tmp[0]] = tmp[1];
-        }
+        }*/
         var position = {"x": 0, "y": 0, "z": 0};
-        var rotation = {"x": 0, "y":0, "z":0, "w":0};
+        var rotation = {"x": 0, "y":0, "z":0, "w":0};/*
         if (objResult.px !== undefined) {
             position.x = parseFloat(objResult.px);
         }
@@ -92,7 +92,7 @@
             rotation.w = parseFloat(objResult.rw);
         } 
         */
-        //return {"position": position, "rotation": rotation};
+        return {"position": position, "rotation": rotation};
     }
     
     this.preload = function(entityID) {
