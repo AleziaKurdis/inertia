@@ -161,10 +161,12 @@
 
     this.unload = function(entityID) {
         removeBeacons();
-        for (i = 0; i < portals.length; i++) {
-            if (portals[i].zoneID !== Uuid.NULL) {
-                Entities.deleteEntity(portals[i].zoneID);
-                portals[i].zoneID = Uuid.NULL;
+        if (portals.length !== 0) {
+            for (i = 0; i < portals.length; i++) {
+                if (portals[i].zoneID !== Uuid.NULL) {
+                    Entities.deleteEntity(portals[i].zoneID);
+                    portals[i].zoneID = Uuid.NULL;
+                }
             }
         }
     }
@@ -175,10 +177,12 @@
             timer = null;
         }
         var i;
-        for (i = 0; i < portals.length; i++) {
-            if (portals[i].id !== Uuid.NULL) {
-                Entities.deleteEntity(portals[i].id);
-                portals[i].id = Uuid.NULL;
+        if (portals.length !== 0) {
+            for (i = 0; i < portals.length; i++) {
+                if (portals[i].id !== Uuid.NULL) {
+                    Entities.deleteEntity(portals[i].id);
+                    portals[i].id = Uuid.NULL;
+                }
             }
         }
     };
@@ -195,41 +199,43 @@
         var visible = false;
         var eye = Camera.position;
         var distance, position;
-        for (i = 0; i < portals.length; i++) {
-            position = Vec3.sum(thisPosition, portals[i].localPosition);
-            distance = Vec3.distance(position, eye);
-            if (distance < MIN_DISTANCE_TO_STAY_VISIBLE) {
-                visible = false;
-            } else {
-                visible = true;
-            }
-            radius = 0.032 * distance;
-            dimensions = {"x": 0, "y": 0, "z": 0,};
-            if (portals[i].id === Uuid.NULL) {
-                portals[i].id = Entities.addEntity({
-                    "type": "Shape",
-                    "shape": "sphere",
-                    "position": position,
-                    "name": "JUMP POINT BEACON",
-                    "renderLayer": "front",
-                    "primitiveMode": "lines",
-                    "grab": {
-                        "grabbable": false
-                    },
-                    "damping": 0,
-                    "angularDamping": 0,
-                    "collisionless": true,
-                    "ignoreForCollisions": true,
-                    "color": {
-                        "red": 255,
-                        "green": 111,
-                        "blue": 0
-                    },
-                    "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
-                    "visible": visible
-                }, "local");
-            } else {
-                Entities.editEntity(portals[i].id, {"dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, "visible": visible});
+        if (portals.length !== 0) {
+            for (i = 0; i < portals.length; i++) {
+                position = Vec3.sum(thisPosition, portals[i].localPosition);
+                distance = Vec3.distance(position, eye);
+                if (distance < MIN_DISTANCE_TO_STAY_VISIBLE) {
+                    visible = false;
+                } else {
+                    visible = true;
+                }
+                radius = 0.032 * distance;
+                dimensions = {"x": 0, "y": 0, "z": 0,};
+                if (portals[i].id === Uuid.NULL) {
+                    portals[i].id = Entities.addEntity({
+                        "type": "Shape",
+                        "shape": "sphere",
+                        "position": position,
+                        "name": "JUMP POINT BEACON",
+                        "renderLayer": "front",
+                        "primitiveMode": "lines",
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "damping": 0,
+                        "angularDamping": 0,
+                        "collisionless": true,
+                        "ignoreForCollisions": true,
+                        "color": {
+                            "red": 255,
+                            "green": 111,
+                            "blue": 0
+                        },
+                        "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
+                        "visible": visible
+                    }, "local");
+                } else {
+                    Entities.editEntity(portals[i].id, {"dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, "visible": visible});
+                }
             }
         }
     }
