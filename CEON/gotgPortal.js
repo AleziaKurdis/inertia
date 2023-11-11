@@ -14,16 +14,16 @@
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     
     //################################# PORTAL LIST #############################################################
-    
+   
     var portals;
-    if (location.protocol === "hifi") {
+ /*    if (location.protocol === "hifi") {
         portals = Script.require(ROOT + "portals_domain.json");
     } else {
         serverlessReachDestination();
         portals = Script.require(ROOT + "portals_serverless.json");
     }
     //print("PORTALS: " + JSON.stringify(portals));
-    
+*/    
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
