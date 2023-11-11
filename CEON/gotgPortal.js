@@ -12,7 +12,7 @@
 (function() {
     var jsMainFileName = "gotgPortal.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
-    
+    print("WOW!);
     //################################# PORTAL LIST #############################################################
    
     var portals;
