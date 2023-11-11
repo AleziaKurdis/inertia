@@ -13,8 +13,6 @@
     var jsMainFileName = "gotgPortal.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     
-    
-    
     //################################# PORTAL LIST #############################################################
     
     var portals;
@@ -30,10 +28,6 @@
     }
     //###########################################################################################################
 
-    
-    
-    
-    
     
     var APP_NAME = "SPACE NAV";
     var APP_ICON_INACTIVE = ROOT + "images/icon_template_inactive.png";
