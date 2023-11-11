@@ -17,15 +17,18 @@
     
     var portals;
     if (location.protocol === "hifi") {
-        portals = Script.require("./portals_domain.json");
+        portals = Script.require(ROOT + "portals_domain.json");
     } else {
         serverlessReachDestination();
-        portals = Script.require("./portals_serverless.json");
+        portals = Script.require(ROOT + "portals_serverless.json");
     }
+    //print("PORTALS: " + JSON.stringify(portals));
+    
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
     }
+
     //###########################################################################################################
 
     
@@ -63,13 +66,13 @@
         var thisLocation = location.href;
         var theParam = thisLocation.split("?");
         var items = theParam[1].split("&");
-        print("GOTG thisLocation: " + JSON.stringify(items));
-/*        for (index = 0; index < items.length; index++) {
+        //print("GOTG thisLocation: " + JSON.stringify(items));
+        for (index = 0; index < items.length; index++) {
             tmp = items[index].split("=");
             objResult[tmp[0]] = tmp[1];
-        }*/
+        }
         var position = {"x": 0, "y": 0, "z": 0};
-        var rotation = {"x": 0, "y":0, "z":0, "w":0};/*
+        var rotation = {"x": 0, "y":0, "z":0, "w":0};
         if (objResult.px !== undefined) {
             position.x = parseFloat(objResult.px);
         }
@@ -91,7 +94,7 @@
         if (objResult.rw !== undefined) {
             rotation.w = parseFloat(objResult.rw);
         } 
-        */
+        
         return {"position": position, "rotation": rotation};
     }
     
@@ -129,7 +132,7 @@
                 "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
                 "useOriginalPivot": true
             }, "local");
-/*
+
             id = Entities.addEntity({
                 "type": "Shape",
                 "shape": "Sphere",
@@ -148,7 +151,8 @@
                 "visible": false,
                 "description": portals[i].destinationURL,
                 "script": ROOT + "teleport.js"
-            }, "local");*/
+            }, "local");
+            
         }
     }
 
