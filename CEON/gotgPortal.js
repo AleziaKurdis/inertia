@@ -135,6 +135,26 @@
                 "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
                 "useOriginalPivot": true
             }, "local");
+            
+            id = Entities.addEntity({
+                "type": "Shapes",
+                "shape": "Sphere",
+                "localPosition": {"x": 0, "y": 0, "z": 0},
+                "parentID": portals[i].zoneID,
+                "renderWithZones": [portals[i].zoneID],
+                "name": "FTL-JUMP-TRIGGER",
+                "dimensions": {
+                    "x": 20,
+                    "y": 20,
+                    "z": 20
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "visible": false
+                "description": portals[i].destinationURL,
+                "script": ROOT + "teleport.js"
+            }, "local");
         }
     }
 

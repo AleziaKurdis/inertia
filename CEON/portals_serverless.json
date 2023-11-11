@@ -1,6 +1,8 @@
 [
     {
         "name": "SANCTUARY", 
-        "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125}
+        "localPosition": {"x": 906.3857421875,"y": 205.67919921875,"z":-200.65283203125},
+        "destinationURL": " https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json?px=3754.81&py=3877.02&pz=4625.39&rx=0&ry=-0.202187&rz=0&rw=0.979347",
+        "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/SANCTUARY/images/SANCTUARY_SKY_DEEPBLUE.jpg"
     }
 ]
