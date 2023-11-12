@@ -40,7 +40,8 @@
     var thisPosition;
     var thisEntityID;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
-    var HUD_COLOR = "#82d3ff"
+    var ICON_CAPTION_COLOR = "#ffae00";
+    var HUD_COLOR = { "red": 255, "green": 111, "blue": 0 };
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
@@ -49,7 +50,7 @@
         "icon": APP_ICON_INACTIVE,
         "activeIcon": APP_ICON_ACTIVE,
         "sortOrder": 0,
-        "captionColor": HUD_COLOR
+        "captionColor": ICON_CAPTION_COLOR
     });
     
     function serverlessReachDestination() {
@@ -296,11 +297,7 @@
                         "angularDamping": 0,
                         "collisionless": true,
                         "ignoreForCollisions": true,
-                        "color": {
-                            "red": 255,
-                            "green": 111,
-                            "blue": 0
-                        },
+                        "color": HUD_COLOR,
                         "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
                         "visible": visible
                     }, "local");
@@ -315,7 +312,7 @@
         var colorCaption;
         if (appStatus === true) {
             removeBeacons();
-            colorCaption = HUD_COLOR;
+            colorCaption = ICON_CAPTION_COLOR;
             appStatus = false;
         }else{
             showBeacons();
