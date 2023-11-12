@@ -18,29 +18,29 @@
     var bloomFactor = 2;
     
 
-    var UPDATE_TIMER_INTERVAL = 300; // 1 sec 
-    var processTimer = 0;
+    //var UPDATE_TIMER_INTERVAL = 300; // 1 sec 
+   // var processTimer = 0;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
     
     this.preload = function(entityID) {
         thisEntity = entityID;
         thisPosition = Entities.getEntityProperties(entityID, ["position"]).position;
         
-        var today = new Date();
-        processTimer = today.getTime();
+       // var today = new Date();
+       // processTimer = today.getTime();
         Script.update.connect(myTimer); 
     }
 
     function myTimer(deltaTime) {
-        var today = new Date();
-        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+       // var today = new Date();
+       // if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             
             if (Vec3.distance(thisPosition, MyAvatar.position) < MIN_DISTANCE_TO_STAY_VISIBLE) {
                 updateMaterialData();
             }
             
-            today = new Date();
-            processTimer = today.getTime();
+         //   today = new Date();
+         //   processTimer = today.getTime();
         }  
     }
 
