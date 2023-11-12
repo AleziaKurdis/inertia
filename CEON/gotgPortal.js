@@ -142,7 +142,9 @@
                     "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
                     "useOriginalPivot": true
                 }, "local");
-
+                
+                var matId = addSkyMaterial(id, [portals[i].zoneID], portals[i].destinationSkyUrl);
+                
                 id = Entities.addEntity({
                     "type": "Shape",
                     "shape": "Sphere",
@@ -165,6 +167,71 @@
                 
             }
         }
+    }
+
+    function addSkyMaterial(id, rwz, skyUrl) {
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "SKY",
+                    "albedo": [1, 1, 1],
+                    "albedoMap": skyUrl,
+                    "metallic": 0.001,
+                    "roughness": 1,
+                    "emissiveMap": skyUrl,
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+        var matId = Entities.addEntity({
+            "type": "Material",
+            "parentID": id,
+            "renderWithZones": rwz,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "OTHER SKY MATERIAL",
+            "materialURL": "materialData",
+            "priority": 3,
+            "parentMaterialName": "mat::SKY",
+            "materialData": JSON.stringify(materialContent)
+        }, "local");
+        return matId;
+    }
+
+    function addLightMaterial(id, rwz) {
+        var hue = 0; //GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var color = hslToRgb(hue, 1, 0.5);
+        var lightMatColor = hslToRgb(hue, 1, 0.61);
+        var bloomFactor = 4;
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "LIGHT",
+                    "albedo": [1, 1, 1],
+                    "metallic": 1,
+                    "roughness": 1,
+                    "emissive": [(lightMatColor[0]/255) * bloomFactor, (lightMatColor[1]/255) * bloomFactor, (lightMatColor[2]/255) * bloomFactor],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+
+        var matId = Entities.addEntity({
+            "type": "Material",
+            "parentID": id,
+            "renderWithZones": rwz,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-material",
+            "materialURL": "materialData",
+            "priority": 3,
+            "parentMaterialName": "mat::LIGHT",
+            "materialData": JSON.stringify(materialContent)
+        }, "local");
+        
+        return matId;
     }
 
     this.unload = function(entityID) {
@@ -265,6 +332,54 @@
             "captionColor": colorCaption
         });
     }
+
+//######################## CYCLE & COLOR #############################
+    /*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        var r, g, b;
+
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            var hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
+//######################## END CYCLE & COLOR #############################
+
 
     button.clicked.connect(clicked);
 
