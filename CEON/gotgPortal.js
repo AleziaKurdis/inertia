@@ -25,6 +25,7 @@
     
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
+        portals[i].beaconTextID = Uuid.NULL;
         portals[i].zoneID = Uuid.NULL;
     }
 
@@ -301,8 +302,37 @@
                         "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2},
                         "visible": visible
                     }, "local");
+                    
+                    portals[i].beaconTextID = Entities.addEntity({
+                        "type": "Text",
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "text": portals[i].name,
+                        "lineHeight": radius * 0.3, 
+                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01},
+                        "textColor": HUD_COLOR,
+                        "backgroundAlpha": 0,
+                        "unlit": true,
+                        "alignment": "center",
+                        "parentID": portals[i].id,
+                        "name": "JUMP POINT BEACON TEXT",
+                        "renderLayer": "front",
+                        "billboardMode": "full",
+                        "localPosition": {"x": 0, "y": radius * 1.3, "z": 0},
+                        "visible": visible
+                    }, "local");
                 } else {
-                    Entities.editEntity(portals[i].id, {"dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, "visible": visible});
+                    Entities.editEntity(portals[i].id, {
+                        "dimensions": {"x": radius * 2, "y": radius * 2, "z": radius * 2}, 
+                        "visible": visible
+                        });
+                    Entities.editEntity(portals[i].beaconTextID, {
+                        "localPosition": {"x": 0, "y": radius * 1.3, "z": 0}, 
+                        "lineHeight": radius * 0.3, 
+                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01}
+                        "visible": visible
+                        });
                 }
             }
         }
