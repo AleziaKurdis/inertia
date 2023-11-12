@@ -225,7 +225,7 @@
             "priority": 3,
             "parentMaterialName": "mat::LIGHT",
             "materialData": JSON.stringify(materialContent),
-            "script": ROOT + "gotgPortalAssets/portalMaterialFX.js".
+            "script": ROOT + "gotgPortalAssets/portalMaterialFX.js"
         }, "local");
         return matId;
     }
