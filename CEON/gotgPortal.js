@@ -41,7 +41,7 @@
     var thisEntityID;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
     var ICON_CAPTION_COLOR = "#ffae00";
-    var HUD_COLOR = { "red": 255, "green": 111, "blue": 0 };
+    var HUD_COLOR = { "red": 130, "green": 211, "blue": 255 };
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
