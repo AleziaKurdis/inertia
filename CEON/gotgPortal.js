@@ -330,7 +330,7 @@
                     Entities.editEntity(portals[i].beaconTextID, {
                         "localPosition": {"x": 0, "y": radius * 1.3, "z": 0}, 
                         "lineHeight": radius * 0.3, 
-                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01}
+                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01},
                         "visible": visible
                         });
                 }
