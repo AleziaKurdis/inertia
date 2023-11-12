@@ -17,10 +17,10 @@
    
     var portals;
     if (location.protocol === "hifi") {
-        portals = Script.require(ROOT + "portals_domain.json");
+        portals = Script.require(ROOT + "gotgPortalAssets/portals_domain.json");
     } else {
         serverlessReachDestination();
-        portals = Script.require(ROOT + "portals_serverless.json");
+        portals = Script.require(ROOT + "gotgPortalAssets/portals_serverless.json");
     }
     
     for (i = 0; i < portals.length; i++) {
@@ -32,8 +32,8 @@
 
     
     var APP_NAME = "SPACE NAV";
-    var APP_ICON_INACTIVE = ROOT + "images/icon_template_inactive.png";
-    var APP_ICON_ACTIVE = ROOT + "images/icon_template_active.png";
+    var APP_ICON_INACTIVE = ROOT + "gotgPortalAssets/icon_template_inactive.png";
+    var APP_ICON_ACTIVE = ROOT + "gotgPortalAssets/icon_template_active.png";
     var appStatus = false;
     var UPDATE_INTERVAL_MS = 200;
     var timer = null;
@@ -139,7 +139,7 @@
                     },
                     "damping": 0,
                     "angularDamping": 0,
-                    "modelURL": ROOT + "models/GOTG_FLT_FX.fst",
+                    "modelURL": ROOT + "gotgPortalAssets/GOTG_FLT_FX.fst",
                     "useOriginalPivot": true
                 }, "local");
                 
@@ -163,7 +163,7 @@
                     },
                     "visible": false,
                     "description": portals[i].destinationURL,
-                    "script": ROOT + "teleport.js"
+                    "script": ROOT + "gotgPortalAssets/teleport.js"
                 }, "local");
                 
             }
@@ -225,7 +225,7 @@
             "priority": 3,
             "parentMaterialName": "mat::LIGHT",
             "materialData": JSON.stringify(materialContent),
-            "script": ROOT + "portalMaterialFX.js".
+            "script": ROOT + "gotgPortalAssets/portalMaterialFX.js".
         }, "local");
         return matId;
     }
