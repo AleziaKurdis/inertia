@@ -19,11 +19,9 @@
     if (location.protocol === "hifi") {
         portals = Script.require(ROOT + "portals_domain.json");
     } else {
-        //serverlessReachDestination();
+        serverlessReachDestination();
         portals = Script.require(ROOT + "portals_serverless.json");
     }
-    //portals = [];
-    print("PORTALS: " + JSON.stringify(portals));
     
     for (i = 0; i < portals.length; i++) {
         portals[i].id = Uuid.NULL;
@@ -60,46 +58,52 @@
             MyAvatar.position = coordinate.position;
             MyAvatar.orientation = coordinate.rotation;
         }
-    }    
+    }
     
     function getParameterObj() {
         var index;
+        var obj;
         var objResult = {};
-        var tmp = [];
+        var tmp;
         var thisLocation = location.href;
         var theParam = thisLocation.split("?");
-        var items = theParam[1].split("&");
-        var position = {"x": 0, "y": 0, "z": 0};
-        var rotation = {"x": 0, "y":0, "z":0, "w":0};
-        var isInvalide = false;
-        if ( items.length !== 0 ) {
-            for (index = 0; index < items.length; index++) {
-                tmp = items[index].split("=");
-                objResult[tmp[0]] = tmp[1];
-            }
-            if (objResult.px !== undefined) {
-                position.x = parseFloat(objResult.px);
-            } else { isInvalide = true; }
-            if (objResult.py !== undefined) {
-                position.y = parseFloat(objResult.py);
-            } else { isInvalide = true; }
-            if (objResult.pz !== undefined) {
-                position.z = parseFloat(objResult.pz);
-            } else { isInvalide = true; }
-            if (objResult.rx !== undefined) {
-                rotation.x = parseFloat(objResult.rx);
-            } else { isInvalide = true; }
-            if (objResult.ry !== undefined) {
-                rotation.y = parseFloat(objResult.ry);
-            } else { isInvalide = true; }
-            if (objResult.rz !== undefined) {
-                rotation.z = parseFloat(objResult.rz);
-            } else { isInvalide = true; }
-            if (objResult.rw !== undefined) {
-                rotation.w = parseFloat(objResult.rw);
-            } else { isInvalide = true; }
-        } else {isInvalide = true;}
-        return {"position": position, "rotation": rotation, "isInvalide": isInvalide};
+        if (theParam.length < 2) {
+            return { "isInvalide": true };
+        } else {
+            var items = theParam[1].split("&");
+            print("ITEMS: " + JSON.stringify(items));
+            var position = {"x": 0, "y": 0, "z": 0};
+            var rotation = {"x": 0, "y":0, "z":0, "w":0};
+            var isInvalide = false;
+            if ( items.length !== 0 ) {
+                for (index = 0; index < items.length; index++) {
+                    tmp = items[index].split("=");
+                    objResult[tmp[0]] = tmp[1];
+                }
+                if (objResult.px !== undefined) {
+                    position.x = parseFloat(objResult.px);
+                } else { isInvalide = true; }
+                if (objResult.py !== undefined) {
+                    position.y = parseFloat(objResult.py);
+                } else { isInvalide = true; }
+                if (objResult.pz !== undefined) {
+                    position.z = parseFloat(objResult.pz);
+                } else { isInvalide = true; }
+                if (objResult.rx !== undefined) {
+                    rotation.x = parseFloat(objResult.rx);
+                } else { isInvalide = true; }
+                if (objResult.ry !== undefined) {
+                    rotation.y = parseFloat(objResult.ry);
+                } else { isInvalide = true; }
+                if (objResult.rz !== undefined) {
+                    rotation.z = parseFloat(objResult.rz);
+                } else { isInvalide = true; }
+                if (objResult.rw !== undefined) {
+                    rotation.w = parseFloat(objResult.rw);
+                } else { isInvalide = true; }
+            } else {isInvalide = true;}
+            return { "position": position, "rotation": rotation, "isInvalide": isInvalide}; 
+        }
     }
     
     this.preload = function(entityID) {
