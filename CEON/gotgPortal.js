@@ -40,7 +40,7 @@
     var thisPosition;
     var thisEntityID;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
-
+    var HUD_COLOR = "#82d3ff"
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
@@ -49,7 +49,7 @@
         "icon": APP_ICON_INACTIVE,
         "activeIcon": APP_ICON_ACTIVE,
         "sortOrder": 0,
-        "captionColor": "#ffae00"
+        "captionColor": HUD_COLOR
     });
     
     function serverlessReachDestination() {
@@ -315,7 +315,7 @@
         var colorCaption;
         if (appStatus === true) {
             removeBeacons();
-            colorCaption = "#ffae00";
+            colorCaption = HUD_COLOR;
             appStatus = false;
         }else{
             showBeacons();
