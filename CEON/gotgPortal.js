@@ -107,6 +107,7 @@
     }
     
     this.preload = function(entityID) {
+        var id;
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
         thisEntityID = entityID;
@@ -115,13 +116,13 @@
             for (i = 0; i < portals.length; i++) {
                 portals[i].zoneID = Entities.addEntity({
                     "position": Vec3.sum(thisPosition, portals[i].localPosition),
-                    "name": "JUMP POINT - " + portals[i].Name,
+                    "name": "JUMP POINT - " + portals[i].name,
                     "type": "Zone",
                     "shapeType": "Sphere",
                     "dimensions": {"x": 250, "y": 250, "z": 250},
                 }, "local");
                 
-                var id = Entities.addEntity({
+                id = Entities.addEntity({
                     "type": "Model",
                     "localPosition": {"x": 0, "y": 0, "z": 0},
                     "parentID": portals[i].zoneID,
