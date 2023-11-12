@@ -73,7 +73,7 @@
         var rotation = {"x": 0, "y":0, "z":0, "w":0};
         var isInvalide = false;
         if ( items.length !== 0 ) {
-            for (index = 0; index < items.length; index++) {
+         /*   for (index = 0; index < items.length; index++) {
                 tmp = items[index].split("=");
                 objResult[tmp[0]] = tmp[1];
             }
@@ -98,8 +98,8 @@
             if (objResult.rw !== undefined) {
                 rotation.w = parseFloat(objResult.rw);
             } else { isInvalide = true; }
-        } else {isInvalide = true;}
-        
+        } else {isInvalide = true;}*/
+        isInvalide = true;//############################################# to trash
         return {"position": position, "rotation": rotation, "isInvalide": isInvalide};
     }
     
