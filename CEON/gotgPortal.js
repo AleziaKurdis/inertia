@@ -71,7 +71,7 @@
             return { "isInvalide": true };
         } else {
             var items = theParam[1].split("&");
-            print("ITEMS: " + JSON.stringify(items));
+            //print("ITEMS: " + JSON.stringify(items));
             var position = {"x": 0, "y": 0, "z": 0};
             var rotation = {"x": 0, "y":0, "z":0, "w":0};
             var isInvalide = false;
@@ -144,6 +144,7 @@
                 }, "local");
                 
                 var matId = addSkyMaterial(id, [portals[i].zoneID], portals[i].destinationSkyUrl);
+                matId = addLightMaterial(id, [portals[i].zoneID]);
                 
                 id = Entities.addEntity({
                     "type": "Shape",
@@ -200,25 +201,20 @@
     }
 
     function addLightMaterial(id, rwz) {
-        var hue = 0; //GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-        var color = hslToRgb(hue, 1, 0.5);
-        var lightMatColor = hslToRgb(hue, 1, 0.61);
-        var bloomFactor = 4;
         var materialContent = {
             "materialVersion": 1,
             "materials": [
                 {
                     "name": "LIGHT",
                     "albedo": [1, 1, 1],
-                    "metallic": 1,
+                    "metallic": 0.001,
                     "roughness": 1,
-                    "emissive": [(lightMatColor[0]/255) * bloomFactor, (lightMatColor[1]/255) * bloomFactor, (lightMatColor[2]/255) * bloomFactor],
+                    "emissive": [2,2,2],
                     "cullFaceMode": "CULL_NONE",
                     "model": "hifi_pbr"
                 }
             ]
         };
-
         var matId = Entities.addEntity({
             "type": "Material",
             "parentID": id,
@@ -228,9 +224,9 @@
             "materialURL": "materialData",
             "priority": 3,
             "parentMaterialName": "mat::LIGHT",
-            "materialData": JSON.stringify(materialContent)
+            "materialData": JSON.stringify(materialContent),
+            "script": ROOT + "portalMaterialFX.js".
         }, "local");
-        
         return matId;
     }
 
