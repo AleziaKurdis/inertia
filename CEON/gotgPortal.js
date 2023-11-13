@@ -122,6 +122,7 @@
                     "type": "Zone",
                     "shapeType": "Sphere",
                     "dimensions": {"x": 250, "y": 250, "z": 250},
+                    "script": ROOT + "gotgPortalAssets/soundFX.js"
                 }, "local");
                 
                 id = Entities.addEntity({
@@ -309,8 +310,8 @@
                             "grabbable": false
                         },
                         "text": portals[i].name,
-                        "lineHeight": radius * 0.3, 
-                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01},
+                        "lineHeight": radius * 0.4, 
+                        "dimensions": {"x": radius * 3, "y": radius * 0.6, "z": 0.01},
                         "textColor": HUD_COLOR,
                         "backgroundAlpha": 0,
                         "unlit": true,
@@ -329,8 +330,8 @@
                         });
                     Entities.editEntity(portals[i].beaconTextID, {
                         "localPosition": {"x": 0, "y": radius * 1.3, "z": 0}, 
-                        "lineHeight": radius * 0.3, 
-                        "dimensions": {"x": radius * 3, "y": radius * 0.5, "z": 0.01},
+                        "lineHeight": radius * 0.4, 
+                        "dimensions": {"x": radius * 3, "y": radius * 0.6, "z": 0.01},
                         "visible": visible
                         });
                 }
