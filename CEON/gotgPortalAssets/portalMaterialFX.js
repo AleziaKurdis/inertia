@@ -53,13 +53,8 @@
             hue = hue - 1;
         }        
         var lightMatColor = hslToRgb(hue, 1, 0.61);
-        bloomFactor = bloomFactor + ((Math.random() * 4) - 2);
-        if (bloomFactor < 1) {
-            bloomFactor = 1;
-        }
-        if (bloomFactor > 6) {
-            bloomFactor = 6;
-        }
+        bloomFactor = Math.random() * 6)  + 1;
+
         var materialContent = {
             "materialVersion": 1,
             "materials": [
