@@ -18,7 +18,7 @@
     var bloomFactor = 2;
     
 
-    var UPDATE_TIMER_INTERVAL = 80; // 0.08 sec 
+    var UPDATE_TIMER_INTERVAL = 100; // 0.08 sec 
     var processTimer = 0;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
     
