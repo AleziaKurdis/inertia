@@ -125,7 +125,7 @@
                     "script": ROOT + "gotgPortalAssets/soundFX.js"
                 }, "local");
                 
-                id = Entities.addEntity({
+                id = Entities.addEntity({//Ajouter anti shawdow <=====================================########
                     "type": "Model",
                     "localPosition": {"x": 0, "y": 0, "z": 0},
                     "parentID": portals[i].zoneID,
@@ -143,7 +143,8 @@
                     "damping": 0,
                     "angularDamping": 0,
                     "modelURL": ROOT + "gotgPortalAssets/GOTG_FLT_FX.fst",
-                    "useOriginalPivot": true
+                    "useOriginalPivot": true,
+                    "canCastShadow": false
                 }, "local");
                 
                 var matId = addSkyMaterial(id, [portals[i].zoneID], portals[i].destinationSkyUrl);
