@@ -18,7 +18,7 @@
     var bloomFactor = 2;
     
 
-    var UPDATE_TIMER_INTERVAL = 500; // 0.5 sec 
+    var UPDATE_TIMER_INTERVAL = 100; // 0.1 sec 
     var processTimer = 0;
     var MIN_DISTANCE_TO_STAY_VISIBLE = 200; //in meters
     
@@ -53,7 +53,7 @@
             hue = hue - 1;
         }        
         var lightMatColor = hslToRgb(hue, 1, 0.61);
-        bloomFactor = Math.random() * 6)  + 1;
+        bloomFactor = (Math.random() * 6)  + 1;
 
         var materialContent = {
             "materialVersion": 1,
