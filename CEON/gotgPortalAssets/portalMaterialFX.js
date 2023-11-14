@@ -32,16 +32,16 @@
     }
 
     function myTimer(deltaTime) {
-        var today = new Date();
-        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+        //var today = new Date();
+        //if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             
             if (Vec3.distance(thisPosition, MyAvatar.position) < MIN_DISTANCE_TO_STAY_VISIBLE) {
                 updateMaterialData();
             }
             
-            today = new Date();
-            processTimer = today.getTime();
-        }  
+        //    today = new Date();
+        //    processTimer = today.getTime();
+        //}  
     }
 
     function updateMaterialData() {
