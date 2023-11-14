@@ -322,6 +322,33 @@
         "useOriginalPivot": true,
         "locked": true,
         "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/giroscope.js"
+    },
+    {
+        "id": "{b4f9341c-fc83-4862-b612-d8985a648e7e}",
+        "type": "Box",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "visible": false,
+        "name": "PORTALS",
+        "locked": true,
+        "dimensions": {
+            "x": 10,
+            "y": 10,
+            "z": 10
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "collisionless": true,
+        "ignoreForCollisions": true,
+        "shape": "Cube",
+        "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/gotgPortal.js"
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
