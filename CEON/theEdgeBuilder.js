@@ -16,7 +16,7 @@
     var renderWithZones;
     var entitiesToBeDeleted = [];
     var D29_DAY_DURATION = 104400;
-    
+
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
@@ -24,7 +24,6 @@
         
         //Material LIGHT
         var id = addLightMaterial(entityID, renderWithZones);
-        print("ID: " + id);
         entitiesToBeDeleted.push(id);
         
         //Material LIGHT2
@@ -67,16 +66,14 @@
         return matId;
     }
 
-
     
     this.unload = function(entityID) {
-        if (entitiesToBeDeleted.lenght !== 0) {
+        if (entitiesToBeDeleted.lenght > 0) {
             var i;
             for (i = 0; i < entitiesToBeDeleted.lenght; i++ ) {
-                    Entities.deleteEntity(entitiesToBeDeleted[i]);
-                }
-                entitiesToBeDeleted = [];
+                Entities.deleteEntity(entitiesToBeDeleted[i]);
             }
+            entitiesToBeDeleted = [];
         }
     }
     
