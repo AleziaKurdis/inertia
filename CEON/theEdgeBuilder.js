@@ -24,6 +24,7 @@
         
         //Material LIGHT
         var id = addLightMaterial(entityID, renderWithZones);
+        print("ID: " + id);
         entitiesToBeDeleted.push(id);
         
         //Material LIGHT2
