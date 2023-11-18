@@ -18,8 +18,8 @@
     var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
     var processTimer = 0;
     
-    var lightMatID = Uuid.Null;
-    var light2MatID = Uuid.Null;
+    var lightMatID = Uuid.NULL;
+    var light2MatID = Uuid.NULL;
 
     
     
@@ -29,7 +29,7 @@
         renderWithZones = properties.renderWithZones;
 
         manageLightMaterial(thisEntity, renderWithZones);
-        //manageLight2Material(thisEntity, renderWithZones);
+        manageLight2Material(thisEntity, renderWithZones);
 
         var today = new Date();
         processTimer = today.getTime();
@@ -41,7 +41,7 @@
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
 
             manageLightMaterial(thisEntity, renderWithZones);
-            //manageLight2Material(thisEntity, renderWithZones);
+            manageLight2Material(thisEntity, renderWithZones);
             
             today = new Date();
             processTimer = today.getTime();
