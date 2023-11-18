@@ -76,7 +76,7 @@
                 entitiesToBeDeleted = [];
             }
         }
-    };
+    }
     
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(timestamp, cyclelength, cycleduration){
