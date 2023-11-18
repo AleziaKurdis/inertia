@@ -15,6 +15,7 @@
     var thisEntity;
     var renderWithZones;
     var entitiesToBeDeleted = [];
+    var D29_DAY_DURATION = 104400;
     
     this.preload = function(entityID) {
         thisEntity = entityID;
