@@ -14,29 +14,42 @@
     var ROOT = Script.resolvePath('').split("theEdgeBuilder.js")[0];
     var thisEntity;
     var renderWithZones;
-    var entitiesToBeDeleted = [];
     var D29_DAY_DURATION = 104400;
+    var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
+    var processTimer = 0;
+    
+    var lightMatID = Uuid.Null;
+    var light2MatID = Uuid.Null;
 
+    
+    
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
         renderWithZones = properties.renderWithZones;
         
-        //Material LIGHT
-        var id = addLightMaterial(entityID, renderWithZones);
-        entitiesToBeDeleted.push(id);
-        
-        //Material LIGHT2
-        //Particle dance fog
-        //Bar dance fog
-        //lights???
+        var today = new Date();
+        processTimer = today.getTime();
+        Script.update.connect(myTimer); 
     }
 
-    function addLightMaterial(id, rwz) {
+    function myTimer(deltaTime) {
+        var today = new Date();
+        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+
+            //HERE WE DO
+            manageLightMaterial(thisEntity, renderWithZones);
+            manageLight2Material(thisEntity, renderWithZones);
+            
+            today = new Date();
+            processTimer = today.getTime();
+        }  
+    }
+    
+    function manageLightMaterial(id, rwz) {
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         var color = hslToRgb(hue, 1, 0.5);
         var lightMatColor = hslToRgb(hue, 1, 0.61);
-        print(JSON.stringify(lightMatColor));
         var bloomFactor = 3;
         
         var materialContent = {
@@ -53,29 +66,74 @@
                 }
             ]
         };
-        var matId = Entities.addEntity({
-            "type": "Material",
-            "parentID": id,
-            "renderWithZones": rwz,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "EdgeBar-Mobilier-Light",
-            "materialURL": "materialData",
-            "priority": 3,
-            "parentMaterialName": "mat::LIGHT",
-            "materialData": JSON.stringify(materialContent)
-        }, "local");
-        return matId;
+        
+        if (lightMatID === Uuid.NULL) {
+            lightMatID = Entities.addEntity({
+                "type": "Material",
+                "parentID": id,
+                "renderWithZones": rwz,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "name": "EdgeBar-Mobilier-Light",
+                "materialURL": "materialData",
+                "priority": 3,
+                "parentMaterialName": "mat::LIGHT",
+                "materialData": JSON.stringify(materialContent)
+            }, "local");
+        } else {
+            Entities.editEntity(lightMatID, {"materialData": JSON.stringify(materialContent)});
+        }
+    }
+
+    function manageLight2Material(id, rwz) {
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION / 48); //30 minutes cycle
+        var color = hslToRgb(hue, 1, 0.5);
+        var lightMatColor = hslToRgb(hue, 1, 0.61);
+        var bloomFactor = 3;
+        
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "LIGHT2",
+                    "albedo": [1, 1, 1],
+                    "metallic": 0.001,
+                    "roughness": 1,
+                    "emissive": [(lightMatColor[0]/255) * bloomFactor, (lightMatColor[1]/255) * bloomFactor, (lightMatColor[2]/255) * bloomFactor],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+        
+        if (light2MatID === Uuid.NULL) {
+            light2MatID = Entities.addEntity({
+                "type": "Material",
+                "parentID": id,
+                "renderWithZones": rwz,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "name": "EdgeBar-Mobilier-Light2",
+                "materialURL": "materialData",
+                "priority": 3,
+                "parentMaterialName": "mat::LIGHT2",
+                "materialData": JSON.stringify(materialContent)
+            }, "local");
+        } else {
+            Entities.editEntity(light2MatID, {"materialData": JSON.stringify(materialContent)});
+        }
     }
 
     
     this.unload = function(entityID) {
-        if (entitiesToBeDeleted.lenght > 0) {
-            var i;
-            for (i = 0; i < entitiesToBeDeleted.lenght; i++ ) {
-                Entities.deleteEntity(entitiesToBeDeleted[i]);
-            }
-            entitiesToBeDeleted = [];
+        if (lightMatID !== Uuid.NULL) {
+            Entities.deleteEntity(lightMatID);
+            lightMatID = Uuid.NULL;
         }
+        if (light2MatID !== Uuid.NULL) {
+            Entities.deleteEntity(light2MatID);
+            light2MatID = Uuid.NULL;
+        }
+        
+        Script.update.disconnect(myTimer);
     }
     
     /*
