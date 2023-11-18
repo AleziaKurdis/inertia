@@ -1041,6 +1041,48 @@
         },
         "script": "",
         "visible": false
+    },
+    {
+        "id": "{f48849ec-4219-4b89-af00-0a2e0308bfa8}",
+        "type": "Zone",
+        "position": {"x":3967.8125,"y":3994.7734375,"z":3948.8818359375},
+        "name": "THE EDGE - VISIBILITY ZONE",
+        "locked": true,
+        "dimensions": {
+            "x": 22.95654296875,
+            "y": 10.1044921875,
+            "z": 31.320556640625
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "box"
+    },
+    {
+        "id": "{e386b678-133f-43ea-ac5d-72912b442599}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "THE EDGE - MOBILIER",
+        "locked": true,
+        "dimensions": {
+            "x": 8.044445037841797,
+            "y": 4.308876991271973,
+            "z": 7.810543060302734
+        },
+        "renderWithZones": [
+            "{f48849ec-4219-4b89-af00-0a2e0308bfa8}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "script": "",
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/THE_EDGE_INSIDE.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
