@@ -20,7 +20,7 @@
     
     var lightMatID = Uuid.NULL;
     var light2MatID = Uuid.NULL;
-
+    var danceFloorFogID = Uuid.NULL;
     
     
     this.preload = function(entityID) {
@@ -46,6 +46,99 @@
             today = new Date();
             processTimer = today.getTime();
         }  
+    }
+    
+    function manageDanceFloorFog(id, rwz) {
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION / 48); //30 minutes (D29) cycle
+        var color = hslToRgb(hue, 1, 0.5);
+        var lightMatColor = hslToRgb(hue, 1, 0.7);
+        
+        if (danceFloorFogID === Uuid.NULL) {
+            danceFloorFogID = Entities.addEntity({
+                "type": "ParticleEffect",
+                "localPosition": {"x":-35.023,"y":-4.936,"z":-56.0},
+                "parentID": id,
+                "renderWithZones": rwz,
+                "name": "DANCE FLOOR FOG",
+                "dimensions": {
+                    "x": 8.199999809265137,
+                    "y": 8.199999809265137,
+                    "z": 8.199999809265137
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "ellipsoid",
+                "color": {
+                    "red": lightMatColor[0],
+                    "green": lightMatColor[1],
+                    "blue": lightMatColor[2]
+                },
+                "alpha": 0.014999999664723873,
+                "textures": ROOT + "images/fog.png",
+                "maxParticles": 1800,
+                "emitRate": 100,
+                "emitSpeed": 0,
+                "speedSpread": 0,
+                "emitOrientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                },
+                "emitDimensions": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 3
+                },
+                "emitRadiusStart": 0,
+                "polarFinish": 3.1415927410125732,
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": -0.10999999940395355,
+                    "z": 0
+                },
+                "accelerationSpread": {
+                    "x": 0,
+                    "y": 0.10000000149011612,
+                    "z": 0
+                },
+                "particleRadius": 2,
+                "radiusSpread": 0.6000000238418579,
+                "radiusStart": 1,
+                "radiusFinish": 2,
+                "colorStart": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                },
+                "colorFinish": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "alphaSpread": 0.009999999776482582,
+                "alphaStart": 0.019999999552965164,
+                "alphaFinish": 0,
+                "emitterShouldTrail": true,
+                "spinSpread": 0.699999988079071,
+                "spinStart": 0,
+                "spinFinish": 0
+            }, "local");
+        } else {
+            Entities.editEntity(danceFloorFogID, {
+                "color": {
+                    "red": lightMatColor[0],
+                    "green": lightMatColor[1],
+                    "blue": lightMatColor[2]
+                },
+                "colorStart": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                }
+            });
+        }
     }
     
     function manageLightMaterial(id, rwz) {
@@ -133,6 +226,11 @@
         if (light2MatID !== Uuid.NULL) {
             Entities.deleteEntity(light2MatID);
             light2MatID = Uuid.NULL;
+        }
+        
+        if (danceFloorFogID !== Uuid.NULL) {
+            Entities.deleteEntity(danceFloorFogID);
+            danceFloorFogID = Uuid.NULL;
         }
         
         Script.update.disconnect(myTimer);
