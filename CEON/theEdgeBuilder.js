@@ -30,6 +30,7 @@
 
         manageLightMaterial(thisEntity, renderWithZones);
         manageLight2Material(thisEntity, renderWithZones);
+        manageDanceFloorFog(thisEntity, renderWithZones);
 
         var today = new Date();
         processTimer = today.getTime();
@@ -42,6 +43,7 @@
 
             manageLightMaterial(thisEntity, renderWithZones);
             manageLight2Material(thisEntity, renderWithZones);
+            manageDanceFloorFog(thisEntity, renderWithZones);
             
             today = new Date();
             processTimer = today.getTime();
