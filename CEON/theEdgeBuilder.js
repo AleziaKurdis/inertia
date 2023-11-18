@@ -27,10 +27,13 @@
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
         renderWithZones = properties.renderWithZones;
-        
+
+        manageLightMaterial(thisEntity, renderWithZones);
+        manageLight2Material(thisEntity, renderWithZones);
+
         var today = new Date();
         processTimer = today.getTime();
-        Script.update.connect(myTimer); 
+        //Script.update.connect(myTimer); 
     }
 
     function myTimer(deltaTime) {
@@ -85,7 +88,7 @@
     }
 
     function manageLight2Material(id, rwz) {
-        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION / 48); //30 minutes cycle
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION / 48); //30 minutes (D29) cycle
         var color = hslToRgb(hue, 1, 0.5);
         var lightMatColor = hslToRgb(hue, 1, 0.61);
         var bloomFactor = 3;
