@@ -1079,7 +1079,7 @@
         "grab": {
             "grabbable": false
         },
-        "script": "",
+        "script": "https://aleziakurdis.github.io/inertia/CEON/theEdgeBuilder.js",
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/THE_EDGE_INSIDE.fst",
         "useOriginalPivot": true
