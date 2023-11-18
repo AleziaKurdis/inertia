@@ -29,20 +29,19 @@
         renderWithZones = properties.renderWithZones;
 
         manageLightMaterial(thisEntity, renderWithZones);
-        manageLight2Material(thisEntity, renderWithZones);
+        //manageLight2Material(thisEntity, renderWithZones);
 
         var today = new Date();
         processTimer = today.getTime();
-        //Script.update.connect(myTimer); 
+        Script.update.connect(myTimer); 
     }
 
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
 
-            //HERE WE DO
             manageLightMaterial(thisEntity, renderWithZones);
-            manageLight2Material(thisEntity, renderWithZones);
+            //manageLight2Material(thisEntity, renderWithZones);
             
             today = new Date();
             processTimer = today.getTime();
