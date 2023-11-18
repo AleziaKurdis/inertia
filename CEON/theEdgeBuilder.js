@@ -78,9 +78,10 @@
                 },
                 "alpha": 0.014999999664723873,
                 "textures": ROOT + "images/fog.png",
-                "maxParticles": 1800,
-                "emitRate": 100,
+                "maxParticles": 600,
+                "emitRate": 120,
                 "emitSpeed": 0,
+                "lifespan": 3.0,
                 "speedSpread": 0,
                 "emitOrientation": {
                     "x": 0,
@@ -119,7 +120,7 @@
                     "green": 255,
                     "blue": 255
                 },
-                "alphaSpread": 0.009999999776482582,
+                "alphaSpread": 0.02,
                 "alphaStart": 0.019999999552965164,
                 "alphaFinish": 0,
                 "emitterShouldTrail": true,
