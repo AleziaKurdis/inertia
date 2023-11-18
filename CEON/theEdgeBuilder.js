@@ -36,7 +36,8 @@
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         var color = hslToRgb(hue, 1, 0.5);
         var lightMatColor = hslToRgb(hue, 1, 0.61);
-        var bloomFactor = 4;
+        print(JSON.stringify(lightMatColor));
+        var bloomFactor = 3;
         
         var materialContent = {
             "materialVersion": 1,
