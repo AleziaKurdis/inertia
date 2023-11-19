@@ -1083,6 +1083,40 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/THE_EDGE_INSIDE.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{296cca5a-2b49-468b-9bd9-7aa8c6885d94}",
+        "type": "Light",
+        "position": {"x":3971.048583984375,"y":3993.738525390625,"z":3947.454345703125},
+        "name": "THE EDGE - ENTANCE LIGHT",
+        "locked": true,
+        "dimensions": {
+            "x": 5.688808441162109,
+            "y": 5.688808441162109,
+            "z": 5.776567459106445
+        },
+        "rotation": {
+            "x": 0.7071068286895752,
+            "y": 0,
+            "z": 0,
+            "w": -0.7071068286895752
+        },
+        "renderWithZones": [
+            "{f48849ec-4219-4b89-af00-0a2e0308bfa8}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "color": {
+            "red": 0,
+            "green": 119,
+            "blue": 255
+        },
+        "isSpotlight": true,
+        "intensity": 9,
+        "exponent": 1,
+        "cutoff": 80,
+        "falloffRadius": 1.5
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
