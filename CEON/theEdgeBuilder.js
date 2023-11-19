@@ -22,6 +22,9 @@
     var light2MatID = Uuid.NULL;
     var danceFloorFogID = Uuid.NULL;
     var barFogID = Uuid.NULL;
+    var danceFloorLightID = Uuid.NULL;
+    var barLight1ID = Uuid.NULL;
+    var barLight2ID = Uuid.NULL;
     
     this.preload = function(entityID) {
         thisEntity = entityID;
@@ -128,6 +131,38 @@
                 "spinStart": 0,
                 "spinFinish": 0
             }, "local");
+            
+            danceFloorLightID = Entities.addEntity({
+                "type": "Light",
+                "localPosition": {"x":-35.023,"y":-4.936,"z":-56.0},
+                "parentID": id,
+                "renderWithZones": rwz,
+                "name": "EDGE DANCE FLOOR LIGHT",
+                "dimensions": {
+                    "x": 6.633143901824951,
+                    "y": 6.633143901824951,
+                    "z": 8.658954620361328
+                },
+                "rotation": {
+                    "x": 0.7071068286895752,
+                    "y": 0,
+                    "z": 0,
+                    "w": -0.7071068286895752
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                },
+                "isSpotlight": true,
+                "intensity": 20,
+                "exponent": 1,
+                "cutoff": 50,
+                "falloffRadius": 3
+            }, "local");
         } else {
             Entities.editEntity(danceFloorFogID, {
                 "color": {
@@ -136,6 +171,14 @@
                     "blue": lightMatColor[2]
                 },
                 "colorStart": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                }
+            });
+            
+            Entities.editEntity(danceFloorLightID, {
+                "color": {
                     "red": color[0],
                     "green": color[1],
                     "blue": color[2]
@@ -216,6 +259,70 @@
                 "spinStart": 0,
                 "spinFinish": 0
             }, "local");
+            
+            barLight1ID = Entities.addEntity({
+                "type": "Light",
+                "localPosition": {"x":-31.069,"y":-6.118,"z":-59.235},
+                "parentID": id,
+                "renderWithZones": rwz,
+                "name": "EDGE BAR LIGHT 1",
+                "dimensions": {
+                    "x": 4.34384822845459,
+                    "y": 4.34384822845459,
+                    "z": 6.143128871917725
+                },
+                "rotation": {
+                    "x": 0.7071068286895752,
+                    "y": 0,
+                    "z": 0,
+                    "w": -0.7071068286895752
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                },
+                "isSpotlight": true,
+                "intensity": 10,
+                "exponent": 1,
+                "cutoff": 45,
+                "falloffRadius": 1.5
+            }, "local");
+            
+            barLight2ID = Entities.addEntity({
+                "type": "Light",
+                "localPosition": {"x":-31.069,"y":-6.118,"z":-57.313},
+                "parentID": id,
+                "renderWithZones": rwz,
+                "name": "EDGE BAR LIGHT 1",
+                "dimensions": {
+                    "x": 4.34384822845459,
+                    "y": 4.34384822845459,
+                    "z": 6.143128871917725
+                },
+                "rotation": {
+                    "x": 0.7071068286895752,
+                    "y": 0,
+                    "z": 0,
+                    "w": -0.7071068286895752
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                },
+                "isSpotlight": true,
+                "intensity": 10,
+                "exponent": 1,
+                "cutoff": 45,
+                "falloffRadius": 1.5
+            }, "local");
         } else {
             Entities.editEntity(barFogID, {
                 "color": {
@@ -224,6 +331,21 @@
                     "blue": lightMatColor[2]
                 },
                 "colorStart": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                }
+            });
+            
+            Entities.editEntity(barLight1ID, {
+                "color": {
+                    "red": color[0],
+                    "green": color[1],
+                    "blue": color[2]
+                }
+            });
+            Entities.editEntity(barLight2ID, {
+                "color": {
                     "red": color[0],
                     "green": color[1],
                     "blue": color[2]
@@ -328,7 +450,22 @@
             Entities.deleteEntity(barFogID);
             barFogID = Uuid.NULL;
         }
+
+        if (danceFloorLightID !== Uuid.NULL) {
+            Entities.deleteEntity(danceFloorLightID);
+            danceFloorLightID = Uuid.NULL;
+        }
+
+        if (barLight1ID !== Uuid.NULL) {
+            Entities.deleteEntity(barLight1ID);
+            barLight1ID = Uuid.NULL;
+        }
         
+        if (barLight2ID !== Uuid.NULL) {
+            Entities.deleteEntity(barLight2ID);
+            barLight2ID = Uuid.NULL;
+        }
+      
         Script.update.disconnect(myTimer);
     }
     
