@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.434,0.434,0.434],
+         "metallic":0.036,
+         "roughness": 0.259,
+         "normalMap": "TOLE_JAUNE_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
