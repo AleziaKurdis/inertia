@@ -1,0 +1,3 @@
+name = LANDINGPAD
+filename = LANDINGPAD.glb
+materialMap = [{"mat::LIGHT": {"materials":[{ "name": "LIGHT", "albedo": [1.0 ,1.0 ,1.0], "roughness": 0.9, "metallic": 1.0, "emissive": [0.6643137254901961, 1.1043137254901962, 2.2], "cullFaceMode": "CULL_NONE", "model": "hifi_pbr", "defaultFallthrough": false}]}},{"mat::STREETLIGHT": {"materials":[{ "name": "STREETLIGHT", "albedo": [1.0 ,1.0 ,1.0], "roughness": 0.9, "metallic": 1.0, "emissive": [3.01, 2.2663529411764705, 1.5109019607843135], "cullFaceMode": "CULL_NONE", "model": "hifi_pbr", "defaultFallthrough": false}]}}, {"mat::DARKMETAL":"METAL/darkMetalMaterial.json#DARKMETAL"}, {"mat::CEILING":"CEILING/ceilingMaterial.json#CEILING"}]
