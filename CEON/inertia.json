@@ -1144,6 +1144,102 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_THRUSTERS_ROOM.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{c89d2396-f8d7-44a6-acaf-c3c1f5cd2b1e}",
+        "type": "Model",
+        "name": "LANDINGPAD-ORANGE",
+        "locked": true,
+        "dimensions": {
+            "x": 12.198529243469238,
+            "y": 1.890538215637207,
+            "z": 10.740806579589844
+        },
+        "position": {"x":3990.10205078125,"y":4016.397216796875,"z":3949.0439453125},
+        "rotation": {"x":0,"y":0.9238795042037964,"z":0,"w":0.3826834261417389},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/LANDINGPAD_ORANGE.fst",
+        "useOriginalPivot": false
+    },
+    {
+        "id": "{19ab0fe9-650d-4db4-a280-16cb8affee6a}",
+        "type": "Model",
+        "name": "LANDINGPAD-RED",
+        "locked": true,
+        "dimensions": {
+            "x": 12.198529243469238,
+            "y": 1.890538215637207,
+            "z": 10.740806579589844
+        },
+        "position": {"x":4004.152587890625,"y":4016.397216796875,"z":3964.41259765625},
+        "rotation": {"x":0,"y":0.3826834559440613,"z":0,"w":-0.9238795638084412},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/LANDINGPAD_RED.fst",
+        "useOriginalPivot": false
+    },
+    {
+        "id": "{6aa4f54a-6093-4f9e-9510-d68f3a41ecfd}",
+        "type": "Model",
+        "name": "LANDINGPAD-BLUE",
+        "locked": true,
+        "dimensions": {
+            "x": 12.198529243469238,
+            "y": 1.890538215637207,
+            "z": 10.740806579589844
+        },
+        "position": {"x":4004.152587890625,"y":4016.397216796875,"z":3949.0439453125},
+        "rotation": {"x":0,"y":-0.3826834261417389,"z":0,"w":-0.9238796234130859},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/LANDINGPAD_BLUE.fst",
+        "useOriginalPivot": false
+    },
+    {
+        "id": "{477d8f04-8eaa-463d-8c46-9b8205ee8dee}",
+        "type": "Model",
+        "name": "LANDINGPAD-GREEN",
+        "locked": true,
+        "dimensions": {
+            "x": 12.198529243469238,
+            "y": 1.890538215637207,
+            "z": 10.740806579589844
+        },
+        "position": {"x":3990.10205078125,"y":4016.397216796875,"z":3964.41259765625},
+        "rotation": {"x":0,"y":0.9238795638084412,"z":0,"w":-0.3826833963394165},
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/LANDINGPAD_GREEN.fst",
+        "useOriginalPivot": false
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
