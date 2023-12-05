@@ -1,0 +1,14 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo": [1, 1, 1],
+            "albedoMap": "temoins_albedo.jpg",
+            "metallic": 0.001,
+            "roughness": 0.9,
+            "unlit": true,
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
