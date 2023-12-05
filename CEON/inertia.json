@@ -1240,6 +1240,33 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/LANDINGPAD_GREEN.fst",
         "useOriginalPivot": false
+    },
+    {
+        "id": "{557188a1-0e19-434d-9713-58f1493e83db}",
+        "type": "Model",
+        "name": "CEON_TRUSTERS",
+        "locked": true,
+        "dimensions": {
+            "x": 17.354171752929688,
+            "y": 14.813322067260742,
+            "z": 32.871089935302734
+        },
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_THURSTERS.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
