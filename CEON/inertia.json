@@ -1296,6 +1296,31 @@
         "exponent": 1,
         "cutoff": 75,
         "falloffRadius": 6
+    },
+    {
+        "id": "{c8995f7f-eee5-4772-b9a3-67bc40f6cee9}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "CABARET",
+        "locked": true,
+        "dimensions": {
+            "x": 14.09367561340332,
+            "y": 3.706075668334961,
+            "z": 15.061355590820312
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_CABARET.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
