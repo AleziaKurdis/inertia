@@ -1309,7 +1309,7 @@
         "locked": true,
         "dimensions": {
             "x": 14.09367561340332,
-            "y": 3.706075668334961,
+            "y": 5.0240,
             "z": 15.061355590820312
         },
         "renderWithZones": [
@@ -1320,6 +1320,31 @@
         },
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_CABARET.fst",
+        "useOriginalPivot": true
+    },
+    {
+        "id": "{dd6766af-afb3-411b-b711-a14b9b9be31c}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "RESTO",
+        "locked": true,
+        "dimensions": {
+            "x": 6.724836826324463,
+            "y": 4.6151509284973145,
+            "z": 8.973320960998535
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_RESTO.fst",
         "useOriginalPivot": true
     }
    ],
