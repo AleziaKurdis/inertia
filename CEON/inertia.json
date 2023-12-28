@@ -1346,6 +1346,31 @@
         "shapeType": "static-mesh",
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_RESTO.fst",
         "useOriginalPivot": true
+    },
+    {
+        "id": "{0bcf92fb-7d9a-4a33-9f0d-4fe27872ef9a}",
+        "type": "Model",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "CEON_COCKPIT",
+        "locked": true,
+        "dimensions": {
+            "x": 86.3663330078125,
+            "y": 21.022361755371094,
+            "z": 50.979530334472656
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_PASSEREL.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
