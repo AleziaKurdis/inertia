@@ -405,6 +405,34 @@
         "position": {"x":4016.42578125,"y":3981.489501953125,"z":3980.477783203125}
     },
     {
+        "id": "{974d2388-55fe-470d-a105-854d6d94826a}",
+        "type": "Shape",
+        "position": {"x":4019.553466796875,"y":3983.83740234375,"z":3980.34765625},
+        "visible": false,
+        "name": "Arrival TP-BACK",
+        "locked": true,
+        "dimensions": {
+            "x": 0.642871081829071,
+            "y": 3.307421922683716,
+            "z": 3.048632860183716
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "collisionless": true,
+        "ignoreForCollisions": true,
+        "script": "https://aleziakurdis.github.io/inertia/CEON/back.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube"
+    },
+    {
         "id": "{3b71e6ef-20f2-4114-adfb-7bdc5b7c931c}",
         "type": "ParticleEffect",
         "position": {"x":4018.66455078125,"y":3983.1923828125,"z":3980.369384765625},
