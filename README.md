@@ -21,3 +21,13 @@ https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json
   
 https://aleziakurdis.github.io/inertia/CEON/inertia.json  
 
+# Clocks
+**D19 (HUT)**  
+https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json
+  
+**D29**  
+https://aleziakurdis.github.io/inertia/clocks/CLOCK-D29.json
+  
+**D24**  
+https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json
+  
