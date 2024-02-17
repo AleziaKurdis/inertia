@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     var D29Lib = Script.require(ROOT + "d29_library.js");
     
-    var UPDATE_TIMER_INTERVAL = 72500; //each 72.5 sec timer 
+    var UPDATE_TIMER_INTERVAL = (D29Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
     var processTimer = 0;
     var thisID;
     var thisPosition;
@@ -26,7 +26,7 @@
     var hourID = Uuid.NULL;
     var dayID = Uuid.NULL;
     var dateID = Uuid.NULL;
-    var UNIT = "D29";
+    var UNIT = D29Lib.getOfficialUnit();
     
     this.preload = function(entityID) {
         //Generate the Clock text local entity.
@@ -82,11 +82,12 @@
     function updateClock() {
         
         //color value (Wothal specific) =========
-        var HUE_DAY_DURATION = 104400; //29h
+        var HUE_DAY_DURATION = D29Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
         var hue = D29Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
         var color = hslToRgb(hue, 1, 0.5);
         //=======================================
+        var textOfficialColor = D29Lib.getOfficialColor();
         
         if (clockID === Uuid.NULL){
             //create clock
@@ -110,7 +111,7 @@
                 "text": UNIT,
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.07,
-                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "right"
@@ -136,7 +137,7 @@
                 "text": D29Lib.getClockText(0, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.5,
-                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"
@@ -162,7 +163,7 @@
                 "text": D29Lib.getClockText(4, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.15,
-                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"

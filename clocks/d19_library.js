@@ -13,6 +13,17 @@
 //##########################################################
 //Hytrion Universal Time (HUT/D19) notation system Functions
 //##########################################################
+function getDayLenghtInSec() {
+    return 68400;
+}
+
+function getOfficialColor() {
+    return {"red": 252, "green": 165, "blue": 3};
+}
+
+function getOfficialUnit() {
+    return "HUT/D19";
+}
 
 function getClockText(displayFormat, time24h, forceUppercase) {
 

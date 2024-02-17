@@ -14,6 +14,18 @@
 //Time (D24) notation system Functions
 //##########################################################
 
+function getDayLenghtInSec() {
+    return 86400;
+}
+
+function getOfficialColor() {
+    return {"red": 69, "green": 184, "blue": 255};
+}
+
+function getOfficialUnit() {
+    return "D24";
+}
+
 function getClockText(displayFormat, time24h, forceUppercase) {
 
     //time24h: true for 24h mode or set false for 12h AM/PM

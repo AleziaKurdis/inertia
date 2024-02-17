@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     var D19Lib = Script.require(ROOT + "d19_library.js");
     
-    var UPDATE_TIMER_INTERVAL = 45000; //each 45 sec timer
+    var UPDATE_TIMER_INTERVAL = (D19Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
     var processTimer = 0;
     var thisID;
     var thisPosition;
@@ -26,7 +26,7 @@
     var hourID = Uuid.NULL;
     var dayID = Uuid.NULL;
     var dateID = Uuid.NULL;
-    var UNIT = "HUT/D19";
+    var UNIT = D19Lib.getOfficialUnit();
     
     this.preload = function(entityID) {
         //Generate the Clock text local entity.
@@ -82,11 +82,12 @@
     function updateClock() {
         
         //color value (Virborough specific) =========
-        var HUE_DAY_DURATION = 68400; //19h
+        var HUE_DAY_DURATION = D19Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
         var hue = D19Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
         var color = hslToRgb(hue, 1, 0.5);
         //=======================================
+        var textOfficialColor = D19Lib.getOfficialColor();
         
         if (clockID === Uuid.NULL){
             //create clock
@@ -110,7 +111,7 @@
                 "text": UNIT,
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.07,
-                "textColor": {"red": 252, "green": 165, "blue": 3},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "right"
@@ -136,7 +137,7 @@
                 "text": D19Lib.getClockText(0, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.5,
-                "textColor": {"red": 252, "green": 165, "blue": 3},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"
@@ -162,7 +163,7 @@
                 "text": D19Lib.getClockText(4, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.15,
-                "textColor": {"red": 252, "green": 165, "blue": 3},
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"

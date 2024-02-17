@@ -13,6 +13,17 @@
 //##########################################################
 //Time (D29) notation system Functions
 //##########################################################
+function getDayLenghtInSec() {
+    return 104400;
+}
+
+function getOfficialColor() {
+    return {"red": 255, "green": 255, "blue": 255};
+}
+
+function getOfficialUnit() {
+    return "D29";
+}
 
 function getClockText(displayFormat, time24h, forceUppercase) {
 

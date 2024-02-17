@@ -14,7 +14,7 @@
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     var D24Lib = Script.require(ROOT + "d24_library.js");
     
-    var UPDATE_TIMER_INTERVAL = 60000; //each 72.5 sec timer 
+    var UPDATE_TIMER_INTERVAL = (D24Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
     var processTimer = 0;
     var thisID;
     var thisPosition;
@@ -26,7 +26,7 @@
     var hourID = Uuid.NULL;
     var dayID = Uuid.NULL;
     var dateID = Uuid.NULL;
-    var UNIT = "D24";
+    var UNIT = D24Lib.getOfficialUnit();
     
     this.preload = function(entityID) {
         //Generate the Clock text local entity.
@@ -82,12 +82,12 @@
     function updateClock() {
         
         //color value  =========
-        var HUE_DAY_DURATION = 86400; //24h
+        var HUE_DAY_DURATION = D24Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
         var hue = D24Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
         var color = hslToRgb(hue, 1, 0.5);
         //=======================================
-        var D24textOfficialColor = {"red": 69, "green": 184, "blue": 255}; //blue
+        var textOfficialColor = D24Lib.getOfficialColor();
         
         if (clockID === Uuid.NULL){
             //create clock
@@ -111,7 +111,7 @@
                 "text": UNIT,
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.07,
-                "textColor": D24textOfficialColor,
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "right"
@@ -137,7 +137,7 @@
                 "text": D24Lib.getClockText(0, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.5,
-                "textColor": D24textOfficialColor,
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"
@@ -163,7 +163,7 @@
                 "text": D24Lib.getClockText(4, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.15,
-                "textColor": D24textOfficialColor,
+                "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
                 "alignment": "center"
