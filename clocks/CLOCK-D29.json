@@ -1,0 +1,27 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{96f56733-2de4-412a-9467-85a0787c58b4}",
+    "type": "Box",
+    "name": "CLOCK D29",
+    "dimensions": {
+        "x": 1.8433825969696045,
+        "y": 1.3191678524017334,
+        "z": 0.01
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube"
+}
+    ],
+  "Id": "{3723bd63-ed53-4e6d-95c3-56507060b39e}",
+  "Version": 133
+}
