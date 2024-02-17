@@ -87,7 +87,7 @@
         var hue = D24Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
         var color = hslToRgb(hue, 1, 0.5);
         //=======================================
-        var D24textOfficialColor = {"red": 125, "green": 205, "blue": 255}; //blue
+        var D24textOfficialColor = {"red": 69, "green": 184, "blue": 255}; //blue
         
         if (clockID === Uuid.NULL){
             //create clock
