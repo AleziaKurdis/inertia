@@ -15,6 +15,7 @@
     var D19Lib = Script.require(ROOT + "d19_library.js");
     
     var UPDATE_TIMER_INTERVAL = (D19Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
+    print(UPDATE_TIMER_INTERVAL);
     var processTimer = 0;
     var thisID;
     var thisPosition;
