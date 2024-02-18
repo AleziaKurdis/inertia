@@ -33,9 +33,9 @@ function getClockText(displayFormat, time24h, forceUppercase) {
 
     
     var DAY_DURATION = 68400; //19h
-    var WEEK_DURATION = 615600; //9 days of 19h
-    var YEAR_DURATION = 3600 * 19 * 36 * 10; //10 months of 36 days de 19h
-    var MONTH_DURATION = 3600 * 19 * 36; //36 days de 19h
+    var WEEK_DURATION = DAY_DURATION * 9;
+    var MONTH_DURATION = WEEK_DURATION * 4;
+    var YEAR_DURATION = MONTH_DURATION * 10;
     
     var weekDaysNames = [
         "Virmonday",
