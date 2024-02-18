@@ -15,7 +15,6 @@
     var D19Lib = Script.require(ROOT + "d19_library.js");
     
     var UPDATE_TIMER_INTERVAL = (D19Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
-    print(UPDATE_TIMER_INTERVAL);
     var processTimer = 0;
     var thisID;
     var thisPosition;
@@ -82,7 +81,7 @@
 
     function updateClock() {
         
-        //color value (Virborough specific) =========
+        //color value
         var HUE_DAY_DURATION = D19Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
         var hue = D19Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);

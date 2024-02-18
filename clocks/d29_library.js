@@ -160,3 +160,6 @@ function GetCurrentCycleValue(cyclelength, cycleduration){
 
 exports.getClockText = getClockText;
 exports.GetCurrentCycleValue = GetCurrentCycleValue;
+exports.getDayLenghtInSec = getDayLenghtInSec;
+exports.getOfficialColor = getOfficialColor;
+exports.getOfficialUnit = getOfficialUnit;

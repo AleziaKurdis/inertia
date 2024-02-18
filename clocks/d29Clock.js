@@ -81,7 +81,7 @@
 
     function updateClock() {
         
-        //color value (Wothal specific) =========
+        //color value
         var HUE_DAY_DURATION = D29Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
         var hue = D29Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
