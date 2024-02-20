@@ -23,11 +23,17 @@ https://aleziakurdis.github.io/inertia/CEON/inertia.json
 
 # Clocks
 **D19 (HUT)**  
-https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d19.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d19.html?tivan=true  
   
 **D29**  
-https://aleziakurdis.github.io/inertia/clocks/CLOCK-D29.json
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D29.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d29.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d29.html?tivan=true  
   
 **D24**  
-https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d24.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true  
   
