@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+//  d19.html
+//
+//  Created by Alezia Kurdis on February 18th, 2024.
+//  Copyright 2024 Alezia Kurdis.
+//
+//  HTML display for D19 Clock.
+//
+//  Distributed under the Apache License, Version 2.0.
+//  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="d19_library.js"></script> 
+        <style>
+            @font-face {
+                font-family: FiraSans-SemiBold;
+                src: url(fonts/FiraSans-SemiBold.ttf);
+            }
+
+            @font-face {
+                font-family: Tivan;
+                src: url(fonts/tivan.ttf);
+            }
+        
+            body {
+                background: #000000;
+                margin: 0px;
+                padding: 0px;
+            }
+            #dXXDateTime {
+                padding: 1vw;
+                font-family: FiraSans-SemiBold;
+                background-color: #000000;
+                width: 100%;
+                text-align: center;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id='dXXDateTime'></div>
+        <script>
+            var refeshRate = (getDayLenghtInSec()/(24 * 60)) * 1000;
+            
+            function drawDXXDateTime(){
+                var obj = document.getElementById("dXXDateTime");
+                if (isTivan) {
+                    obj.style.fontFamily = "Tivan";
+                } else {
+                    obj.style.fontFamily = "FiraSans-SemiBold";
+                }
+                
+                var HUE_DAY_DURATION = getDayLenghtInSec();
+                var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
+                var hue = GetCurrentCycleValue(1, HUE_WEEK_DURATION);
+                var color = hslToRgb(hue, 1, 0.5);
+                var textOfficialColor = getOfficialColor();
+                var baseColor = "rgb(" + textOfficialColor.red + ", " + textOfficialColor.green + ", " + textOfficialColor.blue + ")";
+                var weekColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
+            
+                var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: 4vw; color: " + baseColor + ";'>" + getOfficialUnit() + "</font></div>";
+                displayClock = displayClock + "<font style='font-size: 22vw; color: " + baseColor + ";'>" + getClockText(0, true, false) + "</font><br>";
+                displayClock = displayClock + "<font style='font-size: 10vw; color: " + weekColor + ";'>" + getClockText(7, true, false) + "</font><br>";
+                displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + getClockText(4, true, false) + "</font>";
+                obj.innerHTML = displayClock;
+            }
+
+            /*
+             * Converts an HSL color value to RGB. Conversion formula
+             * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+             * Assumes h, s, and l are contained in the set [0, 1] and
+             * returns r, g, and b in the set [0, 255].
+             *
+             * @param   {number}  h       The hue
+             * @param   {number}  s       The saturation
+             * @param   {number}  l       The lightness
+             * @return  {Array}           The RGB representation
+             */
+            function hslToRgb(h, s, l){
+                var r, g, b;
+
+                if(s == 0){
+                    r = g = b = l; // achromatic
+                }else{
+                    var hue2rgb = function hue2rgb(p, q, t){
+                        if(t < 0) t += 1;
+                        if(t > 1) t -= 1;
+                        if(t < 1/6) return p + (q - p) * 6 * t;
+                        if(t < 1/2) return q;
+                        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                        return p;
+                    }
+
+                    var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                    var p = 2 * l - q;
+                    r = hue2rgb(p, q, h + 1/3);
+                    g = hue2rgb(p, q, h);
+                    b = hue2rgb(p, q, h - 1/3);
+                }
+
+                return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+            }
+
+            function findGetParameter(parameterName) {
+                var result = null,
+                    tmp = [];
+                var items = location.search.substr(1).split("&");
+                for (var index = 0; index < items.length; index++) {
+                    tmp = items[index].split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                }
+                return result;
+            }
+
+            var isTivan = false;
+            var myParameter = findGetParameter("tivan");
+            if(myParameter === "true"){isTivan = true;}
+
+            drawDXXDateTime();
+            setInterval(drawDXXDateTime, refeshRate);
+
+        </script>
+    </body>
+</html>
