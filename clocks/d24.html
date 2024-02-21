@@ -62,13 +62,31 @@
                 var baseColor = "rgb(" + textOfficialColor.red + ", " + textOfficialColor.green + ", " + textOfficialColor.blue + ")";
                 var weekColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
             
-                var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: 4vw; color: " + baseColor + ";'>" + getOfficialUnit() + "</font></div>";
-                displayClock = displayClock + "<font style='font-size: 22vw; color: " + baseColor + ";'>" + getClockText(0, true, false) + "</font><br>";
+                var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: 4vw; color: " + baseColor + ";'>" + manageNumbersFont(getOfficialUnit(), isTivan) + "</font></div>";
+                displayClock = displayClock + "<font style='font-size: 22vw; color: " + baseColor + ";'>" + manageNumbersFont(getClockText(0, true, false),isTivan) + "</font><br>";
                 displayClock = displayClock + "<font style='font-size: 10vw; color: " + weekColor + ";'>" + getClockText(7, true, false) + "</font><br>";
-                displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + getClockText(4, true, false) + "</font>";
+                displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + manageNumbersFont(getClockText(4, true, false),isTivan) + "</font>";
                 obj.innerHTML = displayClock;
             }
 
+            function manageNumbersFont(text, isTivanFont) {
+                if (isTivanFont) {
+                    var i = 0;
+                    var numbersChar = "0123456789:";
+                    var newText = "";
+                    for (i = 0; i < text.length; i++) {
+                        if (numbersChar.indexOf(text.charAt(i)) !== -1){
+                            newText = newText + "<font style='font-family: FiraSans-SemiBold;'>" + text.charAt(i) + "</font>";
+                        } else {
+                            newText = newText + text.charAt(i);
+                        }
+                    }
+                    return newText;
+                } else {
+                    return text;
+                }
+            }
+            
             /*
              * Converts an HSL color value to RGB. Conversion formula
              * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
