@@ -152,7 +152,9 @@ function shuffleArray(arr) {
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
-    var items = location.search.substr(1).split("&");
+    var parameters = Script.resolvePath('').split("?")[1];
+    if (parameters === undefined) {return null;}
+    var items = parameters.split("&"); 
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
         if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
