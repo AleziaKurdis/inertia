@@ -33,7 +33,7 @@ var models = [
 
 function initiate() {
     
-    // Example of url: ..../ACspreader.js?px=1000&py=1000&pz=1000&radius=30&scaleMin=1&scaleMax=1
+    // Example of url: https://aleziakurdis.github.io/inertia/spreader/ACspreader.js?px=7&py=4&pz=-24&radius=30&scaleMin=1&scaleMax=1
     
     var px = findGetParameter("px");
     if (px === null) {
@@ -104,15 +104,15 @@ function spread() {
         }
     },"domain");
     
-    let nbrType = Math.floor(Math.random() * models.length));
-    let nbrItem = Math.floor(Math.random() * (models.length * 10))) + 10;
+    let nbrType = Math.floor(Math.random() * models.length);
+    let nbrItem = Math.floor(Math.random() * (models.length * 10)) + 10;
     let electedModels = shuffleArray(models);
     for (i = 0; i < nbrItem; i++) {
         scaleFactor = Math.random() * (generatorScaleMax - generatorScaleMin) + generatorScaleMin;
-        nType = Math.floor(Math.random() * (nbrType + 1)));
+        nType = Math.floor(Math.random() * (nbrType + 1));
         id = Entities.addEntity({
             "name": "Spreader Item " + i;
-            "lifetime": Math.floor(Math.random() * 70)) + 100,
+            "lifetime": Math.floor(Math.random() * 70) + 100,
             "type": "Model",
             "renderWithZone": [visibilityZoneID],
             "modelURL": ROOT + "models/" + electedModels[nType].modelFile,
