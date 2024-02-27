@@ -111,7 +111,7 @@ function spread() {
         scaleFactor = Math.random() * (generatorScaleMax - generatorScaleMin) + generatorScaleMin;
         nType = Math.floor(Math.random() * (nbrType + 1));
         id = Entities.addEntity({
-            "name": "Spreader Item " + i;
+            "name": "Spreader Item " + i,
             "lifetime": Math.floor(Math.random() * 70) + 100,
             "type": "Model",
             "renderWithZone": [visibilityZoneID],
