@@ -29,7 +29,8 @@ var models = [
     {"modelFile": "GEAR.fbx", "dimensions": {"x": 0.3032, "y": 0.1983, "z": 0.3032}},
     {"modelFile": "HOLOCRON.fbx", "dimensions": {"x": 0.2905, "y": 0.2367, "z": 0.2516}},
     {"modelFile": "SPICKY.fbx", "dimensions": {"x": 0.3024, "y": 0.3235, "z": 0.3185}},
-    {"modelFile": "TRIAXE.glb", "dimensions": {"x": 0.3096, "y": 0.3096, "z": 0.3096}}
+    {"modelFile": "TRIAXE.glb", "dimensions": {"x": 0.3096, "y": 0.3096, "z": 0.3096}},
+    {"modelFile": "OPHANIM.glb", "dimensions": {"x": 0.3015, "y": 0.2857, "z": 0.3015}}
 ];
 
 function initiate() {
