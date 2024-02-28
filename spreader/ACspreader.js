@@ -81,11 +81,11 @@ function initiate() {
 function myTimer(deltaTime) {
     var today = new Date();
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
-        print("SPREADER: Calling SPREAD.");
+        //print("SPREADER: Calling SPREAD.");
         spread();
 
-        updateTimerInterval = (180 + Math.floor(Math.random() * 300)) * 1000;
-        print("SPREADER: Next spread in " + (updateTimerInterval/1000) + " secondes.");
+        updateTimerInterval = (180 + Math.floor(Math.random() * 120)) * 1000;
+        //print("SPREADER: Next spread in " + (updateTimerInterval/1000) + " secondes.");
         today = new Date();
         processTimer = today.getTime();
     }  
@@ -167,9 +167,9 @@ function findGetParameter(parameterName) {
 }
 
 Script.scriptEnding.connect(function () {
-
     Script.update.disconnect(myTimer);
+    print("SPREADER: End running.");
 });
 
 initiate();
-print("SPREADER: End running.");
+
