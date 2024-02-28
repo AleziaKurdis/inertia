@@ -92,6 +92,9 @@ function myTimer(deltaTime) {
 }   
 
 function spread() {
+    if (!AvatarList.isAvatarInRange( generatorPosition, generatorRadius )) {
+        return;
+    }
     let i, id, nType, scaleFactor;
     let visibilityZoneID = Entities.addEntity({
         "name": "!!!%%%SPREADER%%%!!!",
@@ -125,8 +128,8 @@ function spread() {
                 "grabbable": true
             },
             "density":1000,
-            "velocity":{ "x": 0, "y": 0, "z": 0 },
-            "angularVelocity":{ "x": 0, "y": 0, "z": 0 },
+            "velocity":{ "x": (Math.random() * 3) - 1.5, "y": (Math.random() * 3) - 1.5, "z": (Math.random() * 3) - 1.5 },
+            "angularVelocity":{ "x": (Math.random() * (Math.PI/2)) - (Math.PI/4), "y": (Math.random() * (Math.PI/2)) - (Math.PI/4), "z": (Math.random() * (Math.PI/2)) - (Math.PI/4) },
             "gravity":{ "x": 0, "y": 0, "z": 0 },
             "damping":0,
             "angularDamping":0,
