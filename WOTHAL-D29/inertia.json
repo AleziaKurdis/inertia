@@ -116,11 +116,7 @@
             "animation": {
                 "allowTranslation": false
             },
-            "clientOnly": false,
-            "avatarEntity": false,
-            "localEntity": false,
-            "faceCamera": false,
-            "isFacingAvatar": false
+            "script": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/gotgPortal.js"
         },
         {
             "id": "{aa90dde3-1944-4b7e-8cce-29648a1680a5}",
