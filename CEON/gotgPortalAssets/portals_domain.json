@@ -7,7 +7,7 @@
     },
     {
         "name": "WOTHAL",
-        "localPosition": {"x": 551.68, "y": 82, "z":27.2},
+        "localPosition": {"x": -551.68, "y": 82, "z":27.2},
         "destinationURL": "",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/images/wothal_for_gotg_portal.jpg"
     }
