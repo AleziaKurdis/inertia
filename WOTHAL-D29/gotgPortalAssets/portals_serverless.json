@@ -1,8 +1,14 @@
 [
     {
-        "name": "WOTHAL",
-        "localPosition": {"x": 906.3857421875, "y": 205.67919921875, "z":-200.65283203125},
-        "destinationURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json?px=3754.81&py=3877.02&pz=4625.39&rx=0&ry=-0.202187&rz=0&rw=0.979347",
+        "name": "SANCTUARY",
+        "localPosition": {"x":392.96,"y":371.97,"z":530.97},
+        "destinationURL": "https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json?px=4812.7&py=4317.42&pz=4156.77&rx=0&ry=0.61215&rz=0&rw=0.790741",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/SANCTUARY/images/SANCTUARY_SKY_DEEPBLUE.jpg"
+    },
+    {
+        "name": "CEON",
+        "localPosition": {"x":-1659.56,"y":445.11,"z":1132.16},
+        "destinationURL": "https://aleziakurdis.github.io/inertia/CEON/inertia.json?px=3458.53&py=3920.12&pz=3972.74&rx=0&ry=-0.591651&rz=0&rw=0.806194",
+        "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/CEON/images/CEON_SKY.jpg"
     }
 ]
