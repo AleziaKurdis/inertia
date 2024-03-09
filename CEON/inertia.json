@@ -65,8 +65,8 @@
         "locked": true,
         "name": "CLOCK D29",
         "dimensions": {
-            "x": 1.8433825969696045,
-            "y": 1.3191678524017334,
+            "x": 1.0,
+            "y": 0.71,
             "z": 0.0052195824682712555
         },
         "rotation": {
@@ -75,7 +75,7 @@
             "z": 0,
             "w": -0.7071068286895752
         },
-        "position": {"x":3973.771484375,"y":3995.3310546875,"z":3993.081787109375},
+        "position": {"x":3973.771484375,"y":3994.4921875,"z":3994.467529296875},
         "renderWithZones": [
             "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
         ],
@@ -89,6 +89,34 @@
             "blue": 0
         },
         "shape": "Cube"
+    },
+    {
+        "id": "{7f35b9a5-b811-4af2-b3fd-b1bfdcc29b5f}",
+        "type": "Web",
+        "name": "clock D29 tivan",
+        "locked": true,
+        "dimensions": {
+            "x": 3.8251376152038574,
+            "y": 2.1603715419769287,
+            "z": 0.009999999776482582
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0.7071068286895752,
+            "z": 0,
+            "w": -0.7071068286895752
+        },
+        "position": {"x":3973.781982421875,"y":3997.33154296875,"z":3993.0361328125},
+        "grab": {
+            "grabbable": false
+        },
+        "renderWithZones": [
+            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
+        ],
+        "damping": 0,
+        "angularDamping": 0,
+        "sourceUrl": "https://aleziakurdis.github.io/inertia/clocks/d29.html?tivan=true",
+        "maxFPS": 1
     },
     {
         "id": "{3bdb456e-ff93-41ea-aeeb-e306fc1567ec}",
