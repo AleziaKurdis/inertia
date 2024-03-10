@@ -7,7 +7,7 @@
       {
          "type": "Zone",
          "name": "SATELLITE",
-         "description": "hifi://virz/3458.53,3920.12,3972.74/0,-0.700528,0,0.713625",
+         "description": "hifi://virz/3459.4,-4078.62,4024.84/0,-0.664438,0,0.747343",
          "dimensions": {
             "x":1000,
             "y":1000,
