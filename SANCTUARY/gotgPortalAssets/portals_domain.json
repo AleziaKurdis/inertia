@@ -2,13 +2,13 @@
     {
         "name": "CEON",
         "localPosition": {"x": -245.19, "y": -122.98, "z":638.39},
-        "destinationURL": "",
+        "destinationURL": "hifi://virz/4896.72,-3793.78,3800.88/0,0.765461,0,0.643483",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/CEON/images/CEON_SKY.jpg"
     },
     {
         "name": "WOTHAL",
         "localPosition": {"x": 820.26, "y": 315.32, "z":156.33},
-        "destinationURL": "",
+        "destinationURL": "hifi://virz/6913.12,6368.78,9145.76/0,0.313455,0,0.949603",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/images/wothal_for_gotg_portal.jpg"
     }
 ]
