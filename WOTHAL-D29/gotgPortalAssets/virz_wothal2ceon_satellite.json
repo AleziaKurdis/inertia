@@ -1,0 +1,38 @@
+{
+   "DataVersion": 3,
+   "Paths": {
+      "\/":"\/0,0,0"
+   },
+   "Entities": [
+      {
+         "type": "Zone",
+         "name": "SATELLITE",
+         "description": "hifi://virz/3458.53,3920.12,3972.74/0,-0.700528,0,0.713625",
+         "dimensions": {
+            "x":1000,
+            "y":1000,
+            "z":1000
+         },
+         "grab": {
+            "grabbable": false
+         },
+         "script": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/gotgPortalAssets/redirector.js",
+         "shapeType": "box",
+         "keyLight": {
+            "direction": {
+               "x": 0,
+               "y": -0.70710676908493,
+               "z": 0.70710676908493
+            },
+            "castShadows": true
+         },
+         "keyLightMode": "disabled",
+         "ambientLightMode": "disabled",
+         "skyboxMode": "enabled",
+         "hazeMode": "disabled",
+         "bloomMode": "disabled"
+      }
+   ],
+   "Id": "{d6851dfd-8931-4bd4-a4fd-b13c633cdc54}",
+   "Version": 120
+}
