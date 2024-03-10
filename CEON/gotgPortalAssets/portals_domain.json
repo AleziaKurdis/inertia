@@ -8,7 +8,7 @@
     {
         "name": "WOTHAL",
         "localPosition": {"x": -551.68, "y": -82, "z":27.2},
-        "destinationURL": "hifi://virz/4877.79,6444.04,9748.7/0,-0.46753,0,0.883977",
+        "destinationURL": "https://aleziakurdis.github.io/inertia/CEON/gotgPortalAssets/virz_ceon2wothal_satellite.json",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/images/wothal_for_gotg_portal.jpg"
     }
 ]
