@@ -12,7 +12,7 @@
 (function() {
     var jsMainFileName = "gotgPortal.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
-
+    
     //################################# PORTAL LIST #############################################################
    
     var portals;
@@ -113,6 +113,10 @@
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
         thisEntityID = entityID;
+        
+        if (Vec3.distance(thisPosition, MyAvatar.position) > 2500) {
+             Script.stop();
+        }
         
         if (portals.length !== 0) {
             for (i = 0; i < portals.length; i++) {
