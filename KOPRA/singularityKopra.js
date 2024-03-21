@@ -42,7 +42,7 @@
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
         
-        var visibilityZoneId = Entities.findEntitiesByName( "CEON_VISIBILITY_ZONE", singularityGeneratorPosition, 10);
+        var visibilityZoneId = Entities.findEntitiesByName( "KOPRA_VISIBILITY_ZONE", singularityGeneratorPosition, 10);
         var superZoneDimensions = Entities.getEntityProperties(visibilityZoneId[0], ["dimensions"]).dimensions;
         
         var sunCumputedValues = getCurrentSunPosition();
