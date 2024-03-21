@@ -21,6 +21,8 @@ https://aleziakurdis.github.io/inertia/SANCTUARY/inertia.json
   
 https://aleziakurdis.github.io/inertia/CEON/inertia.json  
 
+https://aleziakurdis.github.io/inertia/KOPRA/inertiaKopra.json    
+
 # Clocks
 **D19 (HUT)**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json  
