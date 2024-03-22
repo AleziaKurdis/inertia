@@ -42,9 +42,9 @@
             "name": "KOPRA CONCENTRATOR",
             "locked": true,
             "dimensions": {
-                "x": 4000,
-                "y": 4000,
-                "z": 4000
+                "x": 3000,
+                "y": 3000,
+                "z": 3000
             },
             "renderWithZones": [
                 "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
