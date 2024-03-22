@@ -105,7 +105,7 @@ function spread() {
 
     let nType = Math.floor(Math.random() * models.length);
     let scaleFactor = Math.random() * (generatorScaleMax - generatorScaleMin) + generatorScaleMin;
-    let duration = updateTimerInterval * MAX_NBR_ITEMS;
+    let duration = (updateTimerInterval/1000) * MAX_NBR_ITEMS;
     let id = Entities.addEntity({
         "name": "Spreaded Item " + itemCounter,
         "lifetime": duration,
