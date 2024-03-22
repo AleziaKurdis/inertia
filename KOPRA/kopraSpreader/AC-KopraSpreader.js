@@ -13,9 +13,9 @@ print("KOPRA-SPREADER: start running.");
 let ROOT = Script.resolvePath('').split("AC-KopraSpreader.js")[0];
 let thisEntity;
 
-const MAX_NBR_ITEMS = 60;
+const MAX_NBR_ITEMS = 80;
 
-let updateTimerInterval = 2000; // 2 sec
+let updateTimerInterval = 1000; // 2 sec
 let processTimer = 0;
 
 let visibilityZoneIds = [];
