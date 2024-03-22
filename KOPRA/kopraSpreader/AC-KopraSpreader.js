@@ -15,7 +15,7 @@ let thisEntity;
 
 const MAX_NBR_ITEMS = 60;
 
-let updateTimerInterval = 5000; // 5 sec
+let updateTimerInterval = 2000; // 2 sec
 let processTimer = 0;
 
 let visibilityZoneIds = [];
