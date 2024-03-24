@@ -32,19 +32,19 @@
             "script": "https://aleziakurdis.github.io/inertia/KOPRA/navigationAmbienceKopra.js"
         },
         {
-            "id": "{2ae29118-95e3-4daf-9c69-7da0ed7dd4a5}",
+            "id": "{5eda59c3-5a14-4e80-be58-df953c24326a}",
             "type": "Model",
-            "position": {
+            "position":  {
                 "x": 4000,
                 "y": 4000,
                 "z": 4000
             },
-            "name": "KOPRA CONCENTRATOR",
+            "name": "VOXCLOUD",
             "locked": true,
             "dimensions": {
-                "x": 3000,
-                "y": 3000,
-                "z": 3000
+                "x": 2432.49072265625,
+                "y": 1541.5205078125,
+                "z": 2602.2001953125
             },
             "renderWithZones": [
                 "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
@@ -55,7 +55,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/CONCENTRATOR.glb",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD.glb",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
         }
