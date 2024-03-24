@@ -143,8 +143,29 @@ function spread() {
     }, "domain");
     
     //light
-
-    
+    let lightId = Entities.addEntity({
+        "type": "Light",
+        "lifetime": duration,
+        "parentID": id,
+        "renderWithZones": visibilityZoneIds,
+        "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+        "name": "plasma-light",
+        "dimensions": {
+            "x": 100,
+            "y": 100,
+            "z": 100
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "color": {
+            "red": plasmaColor[0],
+            "green": plasmaColor[1],
+            "blue": plasmaColor[2]
+        },
+        "intensity": 30.0,
+        "falloffRadius": 5.0
+    }, "domain");
     
     //particle
     let fxId = Entities.addEntity({
