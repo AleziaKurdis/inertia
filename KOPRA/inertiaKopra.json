@@ -39,7 +39,7 @@
                 "y": 4000,
                 "z": 4000
             },
-            "name": "VOXCLOUD",
+            "name": "VOXCLOUD-A",
             "locked": true,
             "dimensions": {
                 "x": 2432.49072265625,
@@ -55,7 +55,63 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD.glb",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-A.glb",
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
+        },
+        {
+            "id": "{5eda59c3-5a14-4e80-be58-df953c24326a}",
+            "type": "Model",
+            "position":  {
+                "x": 4000,
+                "y": 4000,
+                "z": 4000
+            },
+            "name": "VOXCLOUD-B",
+            "locked": true,
+            "dimensions": {
+                "x": 2432.49072265625,
+                "y": 1541.5205078125,
+                "z": 2602.2001953125
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-B.glb",
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
+        },
+        {
+            "id": "{5eda59c3-5a14-4e80-be58-df953c24326a}",
+            "type": "Model",
+            "position":  {
+                "x": 4000,
+                "y": 4000,
+                "z": 4000
+            },
+            "name": "VOXCLOUD-C",
+            "locked": true,
+            "dimensions": {
+                "x": 2432.49072265625,
+                "y": 1541.5205078125,
+                "z": 2602.2001953125
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-C.glb",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
         }
