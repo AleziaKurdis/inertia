@@ -111,8 +111,7 @@ function spread() {
     let hue = Math.random();
     let fireColor = hslToRgb(hue, 1, 0.5);
     let plasmaColor = hslToRgb(hue, 1, 0.61);
-    let fireColorStart = hslToRgb(hue, 1, 0.9);
-    let fireColorFinish = hslToRgb(hue, 1, 0.15);
+    let colorStart = hslToRgb(hue, 1, 0.9);
     let bloomFactor = 4;
     
     //material           
@@ -145,7 +144,76 @@ function spread() {
     
     //light
 
+    
+    
     //particle
+    let fxId = Entities.addEntity({
+        "type": "ParticleEffect",
+        "lifetime": duration,
+        "parentID": id,
+        "renderWithZones": visibilityZoneIds,
+        "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+        "name": "plasma-fx",
+        "dimensions": {
+            "x": 381.0999755859375,
+            "y": 381.0999755859375,
+            "z": 381.0999755859375
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "shapeType": "ellipsoid",
+        "color": {
+            "red": plasmaColor[0],
+            "green": plasmaColor[1],
+            "blue": plasmaColor[2]
+        },
+        "alpha": 0.05,
+        "textures": ROOT + "images/fog.png",
+        "maxParticles": 4000,
+        "lifespan": 10,
+        "emitRate": 400,
+        "emitSpeed": 1.6,
+        "speedSpread": 0.7,
+        "emitOrientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+        },
+        "emitDimensions": Vec3.multiply( { "x": MAX_ITEM_SIZE, "y": MAX_ITEM_SIZE, "z": MAX_ITEM_SIZE }, scaleFactor ),
+        "polarFinish": 3.1415927410125732,
+        "emitAcceleration": {
+            "x": 0,
+            "y": 1.5,
+            "z": 0
+        },
+        "accelerationSpread": {
+            "x": 0,
+            "y": 0.6,
+            "z": 0
+        },
+        "particleRadius": 4,
+        "radiusSpread": 0.5,
+        "radiusStart": 1.5,
+        "radiusFinish": 60,
+        "colorStart": {
+            "red": colorStart[0],
+            "green": colorStart[1],
+            "blue": colorStart[2]
+        },
+        "colorFinish": {
+            "red": fireColor[0],
+            "green": fireColor[1],
+            "blue": fireColor[2]
+        },
+        "alphaStart": 0.2,
+        "alphaFinish": 0,
+        "emitterShouldTrail": true,
+        "spinSpread": 1.0499999523162842,
+        "spinStart": -1.5700000524520874,
+        "spinFinish": 1.5700000524520874
+    }, "domain");    
 }
 
 function findGetParameter(parameterName) {
