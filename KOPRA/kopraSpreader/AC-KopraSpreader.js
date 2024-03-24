@@ -14,6 +14,7 @@ let ROOT = Script.resolvePath('').split("AC-KopraSpreader.js")[0];
 let thisEntity;
 
 const MAX_NBR_ITEMS = 80;
+const MAX_ITEM_SIZE = 6; //6m of diameter
 
 let updateTimerInterval = 1000; // 2 sec
 let processTimer = 0;
@@ -23,23 +24,11 @@ let itemCounter = 0;
 
 let generatorPosition;
 let generatorRadius;
-let generatorScaleMin = 1;
-let generatorScaleMax = 1;
 
-let models = [
-    {"modelFile": "BOMB.fbx", "dimensions": {"x": 0.1763, "y": 0.3359, "z": 0.1763}},
-    {"modelFile": "CHAKRAM.fbx", "dimensions": {"x": 0.2870, "y": 0.0091, "z": 0.2854}},
-    {"modelFile": "DICE.fbx", "dimensions": {"x": 0.2002, "y": 0.2002, "z": 0.2002}},
-    {"modelFile": "GEAR.fbx", "dimensions": {"x": 0.3032, "y": 0.1983, "z": 0.3032}},
-    {"modelFile": "HOLOCRON.fbx", "dimensions": {"x": 0.2905, "y": 0.2367, "z": 0.2516}},
-    {"modelFile": "SPICKY.fbx", "dimensions": {"x": 0.3024, "y": 0.3235, "z": 0.3185}},
-    {"modelFile": "TRIAXE.glb", "dimensions": {"x": 0.3096, "y": 0.3096, "z": 0.3096}},
-    {"modelFile": "OPHANIM.glb", "dimensions": {"x": 0.3015, "y": 0.2857, "z": 0.3015}}
-];
 
 function initiate() {
     
-    // Example of url: https://aleziakurdis.github.io/inertia/KOPRA/kopraSpreader/AC-KopraSpreader.js?px=4000&py=4000&pz=4000&radius=1500&scaleMin=100&scaleMax=300
+    // Example of url: https://aleziakurdis.github.io/inertia/KOPRA/kopraSpreader/AC-KopraSpreader.js?px=4000&py=4000&pz=4000&radius=2200
     
     let px = findGetParameter("px");
     if (px === null) {
@@ -65,21 +54,7 @@ function initiate() {
         generatorRadius = parseFloat(radius);
     }
     
-    let scaleMin = findGetParameter("scaleMin");
-    if (scaleMin === null) {
-        generatorScaleMin = 1;
-    } else {
-        generatorScaleMin = parseFloat(scaleMin);
-    }
-
-    let scaleMax = findGetParameter("scaleMax");
-    if (scaleMax === null) {
-        generatorScaleMax = 1;
-    } else {
-        generatorScaleMax = parseFloat(scaleMax);
-    }    
-
-    visibilityZoneIds = Entities.findEntitiesByName( "KOPRA_VISIBILITY_ZONE", generatorPosition, 10);
+    visibilityZoneIds = Entities.findEntitiesByName( "KOPRA_VISIBILITY_ZONE", generatorPosition, 2000);
     
     let today = new Date();
     processTimer = today.getTime();
@@ -103,30 +78,27 @@ function spread() {
     }
     itemCounter = itemCounter + 1;
 
-    let nType = Math.floor(Math.random() * models.length);
-    let scaleFactor = Math.random() * (generatorScaleMax - generatorScaleMin) + generatorScaleMin;
+    let scaleFactor = (Math.random() * 0.75) + 0.25;
     let duration = (updateTimerInterval/1000) * MAX_NBR_ITEMS;
     let id = Entities.addEntity({
         "name": "Spreaded Item " + itemCounter,
         "lifetime": duration,
-        "type": "Model",
+        "type": "Shape",
+        "shape": "Sphere",
         "renderWithZone": visibilityZoneIds,
-        "modelURL": ROOT + "models/" + models[nType].modelFile,
-        "dimensions": Vec3.multiply( models[nType].dimensions, scaleFactor ),
-        "shapeType": "simple-hull",
-        "useOriginalPivot": false,
+        "dimensions": Vec3.multiply( { "x": MAX_ITEM_SIZE, "y": MAX_ITEM_SIZE, "z": MAX_ITEM_SIZE }, scaleFactor ),
         "position": generatorPosition,
         "grab": {
             "grabbable": true
         },
-        "density":1000,
-        "velocity": Vec3.multiply({ "x": (Math.random() * 3) - 1.5, "y": (Math.random() * 3) - 1.5, "z": (Math.random() * 3) - 1.5 }, scaleFactor),
-        "angularVelocity":{ "x": (Math.random() * (Math.PI/2)) - (Math.PI/4), "y": (Math.random() * (Math.PI/2)) - (Math.PI/4), "z": (Math.random() * (Math.PI/2)) - (Math.PI/4) },
-        "gravity":{ "x": 0, "y": 0, "z": 0 },
+        "density": 1000,
+        "velocity": { "x": (Math.random() * 3) - 1.5, "y": 0, "z": (Math.random() * 3) - 1.5 },
+        "angularVelocity": { "x": (Math.random() * (Math.PI/2)) - (Math.PI/4), "y": (Math.random() * (Math.PI/2)) - (Math.PI/4), "z": (Math.random() * (Math.PI/2)) - (Math.PI/4) },
+        "gravity":{ "x": 0, "y": -5, "z": 0 },
         "damping":0,
         "angularDamping":0,
         "restitution":0.99,
-        "friction":0.1,
+        "friction":0.0,
         "collisionless":false,
         "ignoreForCollisions":false,
         "collisionMask":31,
@@ -134,15 +106,45 @@ function spread() {
         "dynamic": true
     },"domain");
 
-}
 
-function shuffleArray(arr) {
-  let shuffledArr = arr.slice();
-  for (let i = shuffledArr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArr[i], shuffledArr[j]] = [shuffledArr[j], shuffledArr[i]];
-  }
-  return shuffledArr;
+    let hue = Math.random();
+    let fireColor = hslToRgb(hue, 1, 0.5);
+    let plasmaColor = hslToRgb(hue, 1, 0.61);
+    let fireColorStart = hslToRgb(hue, 1, 0.9);
+    let fireColorFinish = hslToRgb(hue, 1, 0.15);
+    let bloomFactor = 4;
+    
+    //material           
+    let materialContent = {
+        "materialVersion": 1,
+        "materials": [
+            {
+                "name": "plasma",
+                "albedo": [1, 1, 1],
+                "metallic": 1,
+                "roughness": 1,
+                "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                "cullFaceMode": "CULL_NONE",
+                "model": "hifi_pbr"
+            }
+        ]
+    };
+            
+    let fireMatId = Entities.addEntity({
+        "type": "Material",
+        "lifetime": duration,
+        "parentID": id,
+        "renderWithZones": visibilityZoneIds,
+        "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+        "name": "plasma-material",
+        "materialURL": "materialData",
+        "priority": 1,
+        "materialData": JSON.stringify(materialContent)
+    }, "domain");
+    
+    //light
+
+    //particle
 }
 
 function findGetParameter(parameterName) {
@@ -157,6 +159,42 @@ function findGetParameter(parameterName) {
         if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
     }
     return result;
+}
+
+/*
+ * Converts an HSL color value to RGB. Conversion formula
+ * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+ * Assumes h, s, and l are contained in the set [0, 1] and
+ * returns r, g, and b in the set [0, 255].
+ *
+ * @param   {number}  h       The hue
+ * @param   {number}  s       The saturation
+ * @param   {number}  l       The lightness
+ * @return  {Array}           The RGB representation
+ */
+function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 
 Script.scriptEnding.connect(function () {
