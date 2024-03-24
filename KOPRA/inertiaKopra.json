@@ -55,7 +55,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-A.glb",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-A.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
         },
@@ -83,9 +83,8 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-B.glb",
-            "useOriginalPivot": true,
-            "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-B.fst",
+            "useOriginalPivot": true
         },
         {
             "id": "{e096e033-92f0-4374-9bb4-dd39ac10ccae}",
@@ -111,9 +110,8 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-C.glb",
-            "useOriginalPivot": true,
-            "script": "https://aleziakurdis.github.io/inertia/KOPRA/singularityKopra.js"
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-C.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
