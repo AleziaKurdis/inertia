@@ -15,8 +15,9 @@ let thisEntity;
 
 const MAX_NBR_ITEMS = 80;
 const MAX_ITEM_SIZE = 6; //6m of diameter
+const MAX_SPEED = 15; // in m/s
 
-let updateTimerInterval = 1000; // 2 sec
+let updateTimerInterval = 3000; // 3 sec
 let processTimer = 0;
 
 let visibilityZoneIds = [];
@@ -92,7 +93,7 @@ function spread() {
             "grabbable": true
         },
         "density": 1000,
-        "velocity": { "x": (Math.random() * 3) - 1.5, "y": 0, "z": (Math.random() * 3) - 1.5 },
+        "velocity": { "x": (Math.random() * (MAX_SPEED * 2)) - MAX_SPEED, "y": 0, "z": (Math.random() * (MAX_SPEED * 2)) - MAX_SPEED },
         "angularVelocity": { "x": (Math.random() * (Math.PI/2)) - (Math.PI/4), "y": (Math.random() * (Math.PI/2)) - (Math.PI/4), "z": (Math.random() * (Math.PI/2)) - (Math.PI/4) },
         "gravity":{ "x": 0, "y": -5, "z": 0 },
         "damping":0,
