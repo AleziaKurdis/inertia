@@ -29,7 +29,7 @@ let generatorRadius;
 
 function initiate() {
     
-    // Example of url: https://aleziakurdis.github.io/inertia/KOPRA/kopraSpreader/AC-KopraSpreader.js?px=4000&py=4000&pz=4000&radius=2200
+    // Example of url: https://aleziakurdis.github.io/inertia/KOPRA/kopraSpreader/AC-KopraSpreader.js?px=-4000&py=-2900&pz=-4000&radius=4000
     
     let px = findGetParameter("px");
     if (px === null) {
