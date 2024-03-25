@@ -25,7 +25,7 @@ let itemCounter = 0;
 
 let generatorPosition;
 let generatorRadius;
-
+let itemIds = [];
 
 function initiate() {
     
@@ -67,11 +67,25 @@ function myTimer(deltaTime) {
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         spread();
-
+        keepAlive();
+        
         today = new Date();
         processTimer = today.getTime();
     }  
 }   
+
+function keepAlive() {
+    let i, properties;
+    let novaItemIds = [];
+    for (i = 0; i < itemIds.length; i++) {
+        properties = Entities.getEntityProperties(itemIds[i], ["velocity"]);
+        if (properties.length !== 0) {
+            Entities.editEntity(itemIds[i], {"velocity": { "x": (Math.random() * 0.2) - 0.1, "y": 0, "z": (Math.random() * 0.2) - 0.1 }});
+            novaItemIds.push(itemIds[i]);
+        }
+    }
+    itemIds = novaItemIds.slice();
+}
 
 function spread() {
     if (!AvatarList.isAvatarInRange( generatorPosition, generatorRadius )) {
@@ -106,7 +120,7 @@ function spread() {
         "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
         "dynamic": true
     },"domain");
-
+    itemIds.push(id);
 
     let hue = Math.random();
     let fireColor = hslToRgb(hue, 1, 0.5);
