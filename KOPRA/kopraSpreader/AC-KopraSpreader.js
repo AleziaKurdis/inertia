@@ -80,7 +80,7 @@ function keepAlive() {
     for (i = 0; i < itemIds.length; i++) {
         properties = Entities.getEntityProperties(itemIds[i], ["velocity"]);
         if (properties.length !== 0) {
-            Entities.editEntity(itemIds[i], {"velocity": { "x": (Math.random() * 0.2) - 0.1, "y": 0, "z": (Math.random() * 0.2) - 0.1 }});
+            Entities.editEntity(itemIds[i], {"velocity": { "x": (Math.random() * 0.5) - 0.25, "y": 0, "z": (Math.random() * 0.5) - 0.25 }});
             novaItemIds.push(itemIds[i]);
         }
     }
