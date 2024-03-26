@@ -58,6 +58,7 @@ function initiate() {
     
     visibilityZoneIds = Entities.findEntitiesByName( "KOPRA_VISIBILITY_ZONE", generatorPosition, 2000);
     
+    currentBolides = 0;
     for (i = 0; i < MAX_NBR_ITEMS; i++) {
         bolides[i] = Uuid.NULL;
     } 
