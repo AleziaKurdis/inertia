@@ -85,6 +85,7 @@ function myTimer(deltaTime) {
 
 function spread() {
     if (!AvatarList.isAvatarInRange( generatorPosition, generatorRadius )) {
+        print("KOPRA-SPREADER: NOBODY AROUND!"); //##################################### DEBUG
         return;
     }
 
