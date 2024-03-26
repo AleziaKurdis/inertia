@@ -71,7 +71,7 @@ function initiate() {
 function myTimer(deltaTime) {
     let today = new Date();
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
-        
+        print("KOPRA-SPREADER: PROCESSING: (" + currentBolides+ ")"); //##################################### DEBUG
         spread();
         currentBolides = currentBolides + 1;
         if (currentBolides === MAX_NBR_ITEMS) {
