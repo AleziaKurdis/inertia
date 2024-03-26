@@ -11,26 +11,27 @@
 //
 print("KOPRA-SPREADER: start running.");
 let ROOT = Script.resolvePath('').split("AC-KopraSpreader.js")[0];
-let thisEntity;
 
-const MAX_NBR_ITEMS = 80;
+const MAX_NBR_ITEMS = 40;
 const MAX_ITEM_SIZE = 6; //6m of diameter
 const MAX_SPEED = 15; // in m/s
 
-let updateTimerInterval = 3000; // 3 sec
+let updateTimerInterval = 1000; // 1 sec
 let processTimer = 0;
 
 let visibilityZoneIds = [];
-let itemCounter = 0;
 
 let generatorPosition;
 let generatorRadius;
-let itemIds = [];
+
+let bolides = [];
+let currentBolides = 0;
 
 function initiate() {
     
     // Example of url: https://aleziakurdis.github.io/inertia/KOPRA/kopraSpreader/AC-KopraSpreader.js?px=-4000&py=-2900&pz=-4000&radius=4000
     
+    let i;
     let px = findGetParameter("px");
     if (px === null) {
         print("KOPRA-SPREADER: no 'px' parameter provided. (position x)");
@@ -57,6 +58,10 @@ function initiate() {
     
     visibilityZoneIds = Entities.findEntitiesByName( "KOPRA_VISIBILITY_ZONE", generatorPosition, 2000);
     
+    for (i = 0; i < MAX_NBR_ITEMS; i++) {
+        bolides[i] = Uuid.NULL;
+    } 
+    
     let today = new Date();
     processTimer = today.getTime();
     Script.update.connect(myTimer);
@@ -65,38 +70,48 @@ function initiate() {
 function myTimer(deltaTime) {
     let today = new Date();
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
-
+        
         spread();
-        keepAlive();
+        currentBolides = currentBolides + 1;
+        if (currentBolides === MAX_NBR_ITEMS) {
+            currentBolides = 0;
+        }
         
         today = new Date();
         processTimer = today.getTime();
     }  
-}   
-
-function keepAlive() {
-    let i, properties;
-    let novaItemIds = [];
-    for (i = 0; i < itemIds.length; i++) {
-        properties = Entities.getEntityProperties(itemIds[i], ["velocity"]);
-        if (properties.length !== 0) {
-            Entities.editEntity(itemIds[i], {"velocity": { "x": (Math.random() * 0.5) - 0.25, "y": 0, "z": (Math.random() * 0.5) - 0.25 }});
-            novaItemIds.push(itemIds[i]);
-        }
-    }
-    itemIds = novaItemIds.slice();
 }
 
 function spread() {
     if (!AvatarList.isAvatarInRange( generatorPosition, generatorRadius )) {
         return;
     }
-    itemCounter = itemCounter + 1;
 
+    if (bolides[currentBolides] === Uuid.NULL) {
+        bolides[currentBolides] = createBolide();
+    } else {
+        let properties = Entities.getEntityProperties(itemIds[i], ["velocity", "position"]);
+            if (properties.length !== 0) {
+                if (Vec3.distance(properties.position, generatorPosition) > 4000) {
+                    Entities.deleteEntity(bolides[currentBolides]);
+                    bolides[currentBolides] = createBolide();
+                } else {
+                    if (Vec3.length(properties.velocity) < 0.0001) {
+                        Entities.editEntity(bolides[currentBolides], {"velocity": { "x": (Math.random() * 0.5) - 0.25, "y": 0, "z": (Math.random() * 0.5) - 0.25 }});
+                    }
+                }
+            } else {
+                bolides[currentBolides] = createBolide();
+            }
+        }
+    }
+}
+
+function createBolide() {
     let scaleFactor = (Math.random() * 0.75) + 0.25;
-    let duration = (updateTimerInterval/1000) * MAX_NBR_ITEMS;
+    let duration = (updateTimerInterval/1000) * MAX_NBR_ITEMS * 2;
     let id = Entities.addEntity({
-        "name": "Spreaded Item " + itemCounter,
+        "name": "Spreaded Item " + currentBolides,
         "lifetime": duration,
         "type": "Shape",
         "shape": "Sphere",
@@ -120,7 +135,6 @@ function spread() {
         "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
         "dynamic": true
     },"domain");
-    itemIds.push(id);
 
     let hue = Math.random();
     let fireColor = hslToRgb(hue, 1, 0.5);
@@ -248,7 +262,9 @@ function spread() {
         "spinSpread": 1.0499999523162842,
         "spinStart": -1.5700000524520874,
         "spinFinish": 1.5700000524520874
-    }, "domain");    
+    }, "domain");
+    
+    return id;
 }
 
 function findGetParameter(parameterName) {
