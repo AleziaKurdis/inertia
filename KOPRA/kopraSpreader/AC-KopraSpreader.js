@@ -104,11 +104,11 @@ function spread() {
                     print("KOPRA-SPREADER: Found STOPPED (" + currentBolides+ ") Vel: " + JSON.stringify(Vec3.length(properties.velocity))); //##################################### DEBUG
                     Entities.editEntity(bolides[currentBolides], {"velocity": { "x": (Math.random() * 0.5) - 0.25, "y": 0, "z": (Math.random() * 0.5) - 0.25 }});
                 } else {
-                    print("KOPRA-SPREADER: Found FALLING (" + currentBolides+ ")"); //##################################### DEBUG
+                    print("KOPRA-SPREADER: Found FALLING (" + currentBolides+ ") Vel: " + JSON.stringify(Vec3.length(properties.velocity))); //##################################### DEBUG
                 }
             }
         } else {
-            print("KOPRA-SPREADER: Found DEAD (" + currentBolides+ ") Vel: " + JSON.stringify(Vec3.length(properties.velocity))); //##################################### DEBUG
+            print("KOPRA-SPREADER: Found DEAD (" + currentBolides+ ")"); //##################################### DEBUG
             bolides[currentBolides] = createBolide();
         }
     }
