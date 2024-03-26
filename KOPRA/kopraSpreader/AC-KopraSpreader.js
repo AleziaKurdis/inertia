@@ -89,19 +89,23 @@ function spread() {
     }
 
     if (bolides[currentBolides] === Uuid.NULL) {
+        print("KOPRA-SPREADER: Found Uuid.NULL (" + currentBolides+ ")"); //##################################### DEBUG
         bolides[currentBolides] = createBolide();
     } else {
         let properties = Entities.getEntityProperties(itemIds[i], ["velocity", "position"]);
         if (properties.length !== 0) {
             if (Vec3.distance(properties.position, generatorPosition) > 4000) {
+                print("KOPRA-SPREADER: Found OUT OF RANGE (" + currentBolides+ ")"); //##################################### DEBUG
                 Entities.deleteEntity(bolides[currentBolides]);
                 bolides[currentBolides] = createBolide();
             } else {
                 if (Vec3.length(properties.velocity) < 0.0001) {
+                    print("KOPRA-SPREADER: Found STOPPED (" + currentBolides+ ")"); //##################################### DEBUG
                     Entities.editEntity(bolides[currentBolides], {"velocity": { "x": (Math.random() * 0.5) - 0.25, "y": 0, "z": (Math.random() * 0.5) - 0.25 }});
                 }
             }
         } else {
+            print("KOPRA-SPREADER: Found DEAD (" + currentBolides+ ")"); //##################################### DEBUG
             bolides[currentBolides] = createBolide();
         }
     }
