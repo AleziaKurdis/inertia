@@ -93,6 +93,7 @@ function spread() {
         bolides[currentBolides] = createBolide();
     } else {
         let properties = Entities.getEntityProperties(bolides[currentBolides], ["velocity", "position"]);
+        print("KOPRA-SPREADER: properties.length: " + properties.length + " (" + currentBolides + ")"); //##################################### DEBUG
         if (properties.length !== 0) {
             if (Vec3.distance(properties.position, generatorPosition) > 4000) {
                 print("KOPRA-SPREADER: Found OUT OF RANGE (" + currentBolides+ ")"); //##################################### DEBUG
