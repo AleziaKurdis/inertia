@@ -92,7 +92,7 @@ function spread() {
         print("KOPRA-SPREADER: Found Uuid.NULL (" + currentBolides+ ")"); //##################################### DEBUG
         bolides[currentBolides] = createBolide();
     } else {
-        let properties = Entities.getEntityProperties(itemIds[i], ["velocity", "position"]);
+        let properties = Entities.getEntityProperties(bolides[currentBolides], ["velocity", "position"]);
         if (properties.length !== 0) {
             if (Vec3.distance(properties.position, generatorPosition) > 4000) {
                 print("KOPRA-SPREADER: Found OUT OF RANGE (" + currentBolides+ ")"); //##################################### DEBUG
@@ -113,7 +113,7 @@ function spread() {
 
 function createBolide() {
     let scaleFactor = (Math.random() * 0.75) + 0.25;
-    let duration = (updateTimerInterval/1000) * MAX_NBR_ITEMS * 2;
+    let duration = 300;//(updateTimerInterval/1000) * MAX_NBR_ITEMS * 2;
     let id = Entities.addEntity({
         "name": "Spreaded Item " + currentBolides,
         "lifetime": duration,
