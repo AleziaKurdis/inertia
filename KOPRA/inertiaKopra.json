@@ -84,7 +84,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-B.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/phenomenonKopra.js"
         },
         {
             "id": "{e096e033-92f0-4374-9bb4-dd39ac10ccae}",
