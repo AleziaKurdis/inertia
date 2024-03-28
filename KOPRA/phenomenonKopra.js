@@ -99,6 +99,7 @@
             let gravity;
             let typeOfBolides = ["dropLight", "electro"];
             let thisBolideType = typeOfBolides[Math.floor(Math.random() * typeOfBolides.length)];
+            print("THIS TYPE OF BOLIDES: " + thisBolideType);
             let scaleFactor = (Math.random() * 0.75) + 0.25;
             let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
                     "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
@@ -300,6 +301,8 @@
                     "priority": 1,
                     "materialData": JSON.stringify(materialContentElectro)
                 }, entityHostType);
+                
+                //ADD SPARKLE FX HERE #######################
             }
             
             return id;
