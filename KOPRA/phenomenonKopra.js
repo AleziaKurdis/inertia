@@ -99,7 +99,6 @@
             let gravity;
             let typeOfBolides = ["dropLight", "electro"];
             let thisBolideType = typeOfBolides[Math.floor(Math.random() * typeOfBolides.length)];
-            print("THIS TYPE OF BOLIDES: " + thisBolideType);
             let scaleFactor = (Math.random() * 0.75) + 0.25;
             let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
                     "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
@@ -107,10 +106,10 @@
                     "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
                 }));
             switch(thisBolideType) {
-                case: "dropLight":
+                case "dropLight":
                     gravity = { "x": 0, "y": -5, "z": 0 };
                     break;
-                case: "electro":
+                case "electro":
                     gravity = { "x": 0, "y": 0, "z": 0 };
                     break;
                 default:
