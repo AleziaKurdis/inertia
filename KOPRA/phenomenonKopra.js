@@ -1,4 +1,3 @@
-"use strict";
 //
 //  phenomenonKopra.js
 //
@@ -13,7 +12,7 @@
 (function() {
     let ROOT = Script.resolvePath('').split("phenomenonKopra.js")[0];
 
-    let UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
+    let UPDATE_TIMER_INTERVAL = 3000; // 3 sec 
     let processTimer = 0;
 
     let thisEntity;
@@ -30,6 +29,7 @@
     const BOLIDE_NAME ="%%!!-BOLIDE-AK-!!%%";
     const SCENE_RADIUS = 2600; //meters
     const BOLIDE_INFLUENCE_RADIUS = 1200; //meters
+    const ENTITY_HOST_TYPE = "local";
 
     let bolides = [];
     let currentBolides = 0;
@@ -74,25 +74,13 @@
     }
 
     function processCurrentBolide() {
-        if (bolides[currentBolides] === Uuid.NULL) {
-            bolides[currentBolides] = createBolide();
-        } else {
-            let position = Entities.getEntityProperties(bolides[currentBolides], ["position"]).position;
-            if (Vec3.distance(position, generatorPosition) > SCENE_RADIUS) {
-                Entities.deleteEntity(bolides[currentBolides]);
-                bolides[currentBolides] = createBolide();
-            } else {
-                let velocity = { 
-                    "x": (Math.random() * (MAX_SPEED * 2)) - MAX_SPEED, 
-                    "y": (Math.random() * (MAX_SPEED * 2)) - MAX_SPEED, 
-                    "z": (Math.random() * (MAX_SPEED * 2)) - MAX_SPEED 
-                };
-                Entities.editEntity(bolides[currentBolides], {"velocity": velocity});
-            }
+        if (bolides[currentBolides] !== Uuid.NULL) {
+            Entities.deleteEntity(bolides[currentBolides]);
         }
+        bolides[currentBolides] = createBolide(ENTITY_HOST_TYPE);
     }
 
-    function createBolide() {
+    function createBolide(entityHostType) {
         if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS) {
             return Uuid.NULL;
         } else {
@@ -133,7 +121,7 @@
                 "collisionMask":31,
                 "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
                 "dynamic": true
-            },"local");
+            }, entityHostType);
 
             let hue = Math.random();
             let fireColor = hslToRgb(hue, 1, 0.5);
@@ -166,7 +154,7 @@
                 "materialURL": "materialData",
                 "priority": 1,
                 "materialData": JSON.stringify(materialContent)
-            }, "local");
+            }, entityHostType);
             
             //light
             let lightId = Entities.addEntity({
@@ -190,7 +178,7 @@
                 },
                 "intensity": 30.0,
                 "falloffRadius": 5.0
-            }, "local");
+            }, entityHostType);
             
             //particle
             let fxId = Entities.addEntity({
@@ -258,7 +246,7 @@
                 "spinSpread": 1.0499999523162842,
                 "spinStart": -1.5700000524520874,
                 "spinFinish": 1.5700000524520874
-            }, "local");
+            }, entityHostType);
             
             return id;
         }
