@@ -12,7 +12,7 @@
 (function() {
     let ROOT = Script.resolvePath('').split("phenomenonKopra.js")[0];
 
-    let UPDATE_TIMER_INTERVAL = 3000; // 3 sec 
+    let UPDATE_TIMER_INTERVAL = 4000; // 4 sec 
     let processTimer = 0;
 
     let thisEntity;
@@ -22,7 +22,8 @@
     let D29_DAY_DURATION = 104400; //sec
     let DEGREES_TO_RADIANS = Math.PI / 180.0;
 
-    const MAX_NBR_ITEMS = 5;
+    const MAX_NBR_ITEMS = 6;
+    let currentMaximumOfItem = MAX_NBR_ITEMS;
     const MAX_ITEM_SIZE = 6; //6m of diameter
     const MAX_SPEED = 15; // in m/s
     const MAX_RANGE_FOR_BOLIDES = 100; //meters
@@ -64,7 +65,7 @@
 
             processCurrentBolide();
             currentBolides = currentBolides + 1;
-            if (currentBolides === MAX_NBR_ITEMS) {
+            if (currentBolides >= MAX_NBR_ITEMS) {
                 currentBolides = 0;
             }
 
@@ -74,21 +75,32 @@
     }
 
     function processCurrentBolide() {
-        if (bolides[currentBolides] !== Uuid.NULL) {
+        currentMaximumOfItem = getNumbrOfItemPerVisitor();
+        if (currentBolides >= currentMaximumOfItem && bolides[currentBolides] !== Uuid.NULL) {
             Entities.deleteEntity(bolides[currentBolides]);
+            bolides[currentBolides] = Uuid.NULL;
+        } else {
+            if (bolides[currentBolides] !== Uuid.NULL) {
+                Entities.deleteEntity(bolides[currentBolides]);
+            }
+            bolides[currentBolides] = createBolide(ENTITY_HOST_TYPE);
         }
-        bolides[currentBolides] = createBolide(ENTITY_HOST_TYPE);
+    }
+
+    function getNumbrOfItemPerVisitor() {
+        let nbrAvatar = AvatarManager.getAvatarsInRange( generatorPosition, SCENE_RADIUS).length;
+        return Math.floor(MAX_NBR_ITEMS/nbrAvatar);
     }
 
     function createBolide(entityHostType) {
-        if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS) {
+        if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS ) {
             return Uuid.NULL;
         } else {
             let scaleFactor = (Math.random() * 0.75) + 0.25;
             let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
-                    "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES * 2)) - MAX_RANGE_FOR_BOLIDES, 
-                    "y": ((Math.random() * (MAX_RANGE_FOR_BOLIDES * 2)) - MAX_RANGE_FOR_BOLIDES)/2, 
-                    "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40 
+                    "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
+                    "y": (Math.random() * MAX_RANGE_FOR_BOLIDES) + 10, 
+                    "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
                 }));
             let id = Entities.addEntity({
                 "name": BOLIDE_NAME,
