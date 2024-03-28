@@ -88,7 +88,7 @@
             let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
                     "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES * 2)) - MAX_RANGE_FOR_BOLIDES, 
                     "y": ((Math.random() * (MAX_RANGE_FOR_BOLIDES * 2)) - MAX_RANGE_FOR_BOLIDES)/2, 
-                    "z": Math.random() * (- MAX_RANGE_FOR_BOLIDES) 
+                    "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40 
                 }));
             let id = Entities.addEntity({
                 "name": BOLIDE_NAME,
