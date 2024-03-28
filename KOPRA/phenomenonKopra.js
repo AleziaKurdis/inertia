@@ -96,12 +96,26 @@
         if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS ) {
             return Uuid.NULL;
         } else {
+            let gravity;
+            let typeOfBolides = ["dropLight", "electro"];
+            let thisBolideType = typeOfBolides[Math.floor(Math.random() * typeOfBolides.length)];
             let scaleFactor = (Math.random() * 0.75) + 0.25;
             let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
                     "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
                     "y": (Math.random() * MAX_RANGE_FOR_BOLIDES) + 10, 
                     "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
                 }));
+            switch(thisBolideType) {
+                case: "dropLight":
+                    gravity = { "x": 0, "y": -5, "z": 0 };
+                    break;
+                case: "electro":
+                    gravity = { "x": 0, "y": 0, "z": 0 };
+                    break;
+                default:
+                    gravity = { "x": 0, "y": 0, "z": 0 };
+            }
+
             let id = Entities.addEntity({
                 "name": BOLIDE_NAME,
                 "type": "Shape",
@@ -123,7 +137,7 @@
                     "y": (Math.random() * (Math.PI/2)) - (Math.PI/4), 
                     "z": (Math.random() * (Math.PI/2)) - (Math.PI/4) 
                 },
-                "gravity":{ "x": 0, "y": -5, "z": 0 },
+                "gravity": gravity,
                 "damping":0,
                 "angularDamping":0,
                 "restitution":0.99,
@@ -135,130 +149,158 @@
                 "dynamic": true
             }, entityHostType);
 
-            let hue = Math.random();
-            let fireColor = hslToRgb(hue, 1, 0.5);
-            let plasmaColor = hslToRgb(hue, 1, 0.61);
-            let colorStart = hslToRgb(hue, 1, 0.9);
-            let bloomFactor = 4;
-            
-            //material           
-            let materialContent = {
-                "materialVersion": 1,
-                "materials": [
-                    {
-                        "name": "plasma",
-                        "albedo": [1, 1, 1],
-                        "metallic": 1,
-                        "roughness": 1,
-                        "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
-                        "cullFaceMode": "CULL_NONE",
-                        "model": "hifi_pbr"
-                    }
-                ]
-            };
-                    
-            let fireMatId = Entities.addEntity({
-                "type": "Material",
-                "parentID": id,
-                "renderWithZones": renderWithZones,
-                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                "name": "plasma-material",
-                "materialURL": "materialData",
-                "priority": 1,
-                "materialData": JSON.stringify(materialContent)
-            }, entityHostType);
-            
-            //light
-            let lightId = Entities.addEntity({
-                "type": "Light",
-                "parentID": id,
-                "renderWithZones": renderWithZones,
-                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                "name": "plasma-light",
-                "dimensions": {
-                    "x": 100,
-                    "y": 100,
-                    "z": 100
-                },
-                "grab": {
-                    "grabbable": false
-                },
-                "color": {
-                    "red": plasmaColor[0],
-                    "green": plasmaColor[1],
-                    "blue": plasmaColor[2]
-                },
-                "intensity": 30.0,
-                "falloffRadius": 5.0
-            }, entityHostType);
-            
-            //particle
-            let fxId = Entities.addEntity({
-                "type": "ParticleEffect",
-                "parentID": id,
-                "renderWithZones": renderWithZones,
-                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                "name": "plasma-fx",
-                "dimensions": {
-                    "x": 381.0999755859375,
-                    "y": 381.0999755859375,
-                    "z": 381.0999755859375
-                },
-                "grab": {
-                    "grabbable": false
-                },
-                "shapeType": "ellipsoid",
-                "color": {
-                    "red": plasmaColor[0],
-                    "green": plasmaColor[1],
-                    "blue": plasmaColor[2]
-                },
-                "alpha": 0.05,
-                "textures": ROOT + "images/fog.png",
-                "maxParticles": 4000,
-                "lifespan": 10,
-                "emitRate": 400,
-                "emitSpeed": 1.6,
-                "speedSpread": 0.7,
-                "emitOrientation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                },
-                "emitDimensions": Vec3.multiply( { "x": MAX_ITEM_SIZE, "y": MAX_ITEM_SIZE, "z": MAX_ITEM_SIZE }, scaleFactor ),
-                "polarFinish": 3.1415927410125732,
-                "emitAcceleration": {
-                    "x": 0,
-                    "y": 1.5,
-                    "z": 0
-                },
-                "accelerationSpread": {
-                    "x": 0,
-                    "y": 0.6,
-                    "z": 0
-                },
-                "particleRadius": 4,
-                "radiusSpread": 0.5,
-                "radiusStart": 1.5,
-                "radiusFinish": 60,
-                "colorStart": {
-                    "red": colorStart[0],
-                    "green": colorStart[1],
-                    "blue": colorStart[2]
-                },
-                "colorFinish": {
-                    "red": fireColor[0],
-                    "green": fireColor[1],
-                    "blue": fireColor[2]
-                },
-                "alphaStart": 0.2,
-                "alphaFinish": 0,
-                "emitterShouldTrail": true,
-                "spinSpread": 1.0499999523162842,
-                "spinStart": -1.5700000524520874,
-                "spinFinish": 1.5700000524520874
-            }, entityHostType);
+            if (thisBolideType === "dropLight") {
+                let hue = Math.random();
+                let fireColor = hslToRgb(hue, 1, 0.5);
+                let plasmaColor = hslToRgb(hue, 1, 0.61);
+                let colorStart = hslToRgb(hue, 1, 0.9);
+                let bloomFactor = 4;
+                
+                //material           
+                let materialContent = {
+                    "materialVersion": 1,
+                    "materials": [
+                        {
+                            "name": "plasma",
+                            "albedo": [1, 1, 1],
+                            "metallic": 1,
+                            "roughness": 1,
+                            "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                            "cullFaceMode": "CULL_NONE",
+                            "model": "hifi_pbr"
+                        }
+                    ]
+                };
+                        
+                let fireMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)
+                }, entityHostType);
+                
+                //light
+                let lightId = Entities.addEntity({
+                    "type": "Light",
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "name": "plasma-light",
+                    "dimensions": {
+                        "x": 100,
+                        "y": 100,
+                        "z": 100
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "color": {
+                        "red": plasmaColor[0],
+                        "green": plasmaColor[1],
+                        "blue": plasmaColor[2]
+                    },
+                    "intensity": 30.0,
+                    "falloffRadius": 5.0
+                }, entityHostType);
+                
+                //particle
+                let fxId = Entities.addEntity({
+                    "type": "ParticleEffect",
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "name": "plasma-fx",
+                    "dimensions": {
+                        "x": 381.0999755859375,
+                        "y": 381.0999755859375,
+                        "z": 381.0999755859375
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "ellipsoid",
+                    "color": {
+                        "red": plasmaColor[0],
+                        "green": plasmaColor[1],
+                        "blue": plasmaColor[2]
+                    },
+                    "alpha": 0.05,
+                    "textures": ROOT + "images/fog.png",
+                    "maxParticles": 4000,
+                    "lifespan": 10,
+                    "emitRate": 400,
+                    "emitSpeed": 1.6,
+                    "speedSpread": 0.7,
+                    "emitOrientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                    },
+                    "emitDimensions": Vec3.multiply( { "x": MAX_ITEM_SIZE, "y": MAX_ITEM_SIZE, "z": MAX_ITEM_SIZE }, scaleFactor ),
+                    "polarFinish": 3.1415927410125732,
+                    "emitAcceleration": {
+                        "x": 0,
+                        "y": 1.5,
+                        "z": 0
+                    },
+                    "accelerationSpread": {
+                        "x": 0,
+                        "y": 0.6,
+                        "z": 0
+                    },
+                    "particleRadius": 4,
+                    "radiusSpread": 0.5,
+                    "radiusStart": 1.5,
+                    "radiusFinish": 60,
+                    "colorStart": {
+                        "red": colorStart[0],
+                        "green": colorStart[1],
+                        "blue": colorStart[2]
+                    },
+                    "colorFinish": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "alphaStart": 0.2,
+                    "alphaFinish": 0,
+                    "emitterShouldTrail": true,
+                    "spinSpread": 1.0499999523162842,
+                    "spinStart": -1.5700000524520874,
+                    "spinFinish": 1.5700000524520874
+                }, entityHostType);
+            } else if (thisBolideType === "electro") {
+                //material           
+                let materialContentElectro = {
+                    "materialVersion": 1,
+                    "materials": [
+                        {
+                            "name": "electro",
+                            "albedo": [1, 1, 1],
+                            "metallic": 1,
+                            "roughness": 0.0001,
+                            "cullFaceMode": "CULL_NONE",
+                            "model": "hifi_pbr"
+                        }
+                    ]
+                };
+                        
+                let electroMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "name": "electro-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContentElectro)
+                }, entityHostType);
+            }
             
             return id;
         }
