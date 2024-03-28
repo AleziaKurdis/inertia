@@ -50,7 +50,9 @@
         let possibleRemainsIds = Overlays.findOverlays( generatorPosition, SCENE_RADIUS * 2);
         print("ORPHAN BOLIDES FOUND: " + possibleRemainsIds.length);
         for (i = 0; i < possibleRemainsIds.length; i++) {
-            Entities.deleteEntity(possibleRemainsIds[i]);
+            if ( Entities.getEntityProperties(possibleRemainsIds[i], ["name"]).name === BOLIDE_NAME) {
+                Entities.deleteEntity(possibleRemainsIds[i]);
+            }
         }
 
         let today = new Date();
