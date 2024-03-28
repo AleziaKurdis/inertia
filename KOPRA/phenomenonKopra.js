@@ -29,7 +29,7 @@
     const BOLIDE_NAME ="%%!!-BOLIDE-AK-!!%%";
     const SCENE_RADIUS = 2600; //meters
     const BOLIDE_INFLUENCE_RADIUS = 1200; //meters
-    const ENTITY_HOST_TYPE = "local";
+    const ENTITY_HOST_TYPE = "avatar";
 
     let bolides = [];
     let currentBolides = 0;
@@ -47,12 +47,10 @@
         }
 
         //cleanup old remains here
-        let possibleRemainsIds = Overlays.findOverlays( generatorPosition, SCENE_RADIUS * 2);
+        let possibleRemainsIds = Entities.findEntitiesByName( BOLIDE_NAME, generatorPosition, SCENE_RADIUS * 2, true);
         print("ORPHAN BOLIDES FOUND: " + possibleRemainsIds.length);
         for (i = 0; i < possibleRemainsIds.length; i++) {
-            if ( Entities.getEntityProperties(possibleRemainsIds[i], ["name"]).name === BOLIDE_NAME) {
-                Entities.deleteEntity(possibleRemainsIds[i]);
-            }
+            Entities.deleteEntity(possibleRemainsIds[i]);
         }
 
         let today = new Date();
