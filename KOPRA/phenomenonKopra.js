@@ -294,7 +294,7 @@
                             "name": "electro",
                             "albedo": [1, 1, 1],
                             "metallic": 1,
-                            "roughness": 0.0001,
+                            "roughness": 0.001,
                             "cullFaceMode": "CULL_NONE",
                             "model": "hifi_pbr"
                         }
@@ -359,10 +359,10 @@
                         "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 6,
+                    "particleRadius": 7,
                     "radiusSpread": 2,
-                    "radiusStart": 6,
-                    "radiusFinish": 6,
+                    "radiusStart": 7,
+                    "radiusFinish": 7,
                     "colorStart": {
                         "red": 255,
                         "green": 255,
