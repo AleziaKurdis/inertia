@@ -96,24 +96,34 @@
         if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS ) {
             return Uuid.NULL;
         } else {
-            let gravity;
-            let typeOfBolides = ["dropLight", "electro"];
+            let gravity, newBolidePosition;
+            let typeOfBolides = ["dropLight", "dropLight", "dropLight", "dropLight", "electro"];
             let thisBolideType = typeOfBolides[Math.floor(Math.random() * typeOfBolides.length)];
             let scaleFactor = (Math.random() * 0.75) + 0.25;
-            let newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
-                    "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
-                    "y": (Math.random() * MAX_RANGE_FOR_BOLIDES) + 10, 
-                    "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
-                }));
             switch(thisBolideType) {
                 case "dropLight":
                     gravity = { "x": 0, "y": -5, "z": 0 };
+                    newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
+                            "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
+                            "y": (Math.random() * MAX_RANGE_FOR_BOLIDES) + 10, 
+                            "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
+                        }));
                     break;
                 case "electro":
                     gravity = { "x": 0, "y": 0, "z": 0 };
+                    newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
+                            "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
+                            "y": (Math.random() * 30) - 15, 
+                            "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
+                        }));
                     break;
                 default:
-                    gravity = { "x": 0, "y": 0, "z": 0 };
+                    gravity = { "x": 0, "y": -5, "z": 0 };
+                    newBolidePosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, { 
+                            "x": (Math.random() * (MAX_RANGE_FOR_BOLIDES)) - (MAX_RANGE_FOR_BOLIDES/2), 
+                            "y": (Math.random() * MAX_RANGE_FOR_BOLIDES) + 10, 
+                            "z": (Math.random() * (- MAX_RANGE_FOR_BOLIDES)) - 40
+                        }));                    
             }
 
             let id = Entities.addEntity({
@@ -148,14 +158,14 @@
                 "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
                 "dynamic": true
             }, entityHostType);
-
-            if (thisBolideType === "dropLight") {
-                let hue = Math.random();
-                let fireColor = hslToRgb(hue, 1, 0.5);
-                let plasmaColor = hslToRgb(hue, 1, 0.61);
-                let colorStart = hslToRgb(hue, 1, 0.9);
-                let bloomFactor = 4;
+            
+            let hue = Math.random();
+            let fireColor = hslToRgb(hue, 1, 0.5);
+            let plasmaColor = hslToRgb(hue, 1, 0.61);
+            let colorStart = hslToRgb(hue, 1, 0.9);
+            let bloomFactor = 4;
                 
+            if (thisBolideType === "dropLight") {
                 //material           
                 let materialContent = {
                     "materialVersion": 1,
@@ -274,6 +284,7 @@
                     "spinStart": -1.5700000524520874,
                     "spinFinish": 1.5700000524520874
                 }, entityHostType);
+                
             } else if (thisBolideType === "electro") {
                 //material           
                 let materialContentElectro = {
@@ -301,7 +312,73 @@
                     "materialData": JSON.stringify(materialContentElectro)
                 }, entityHostType);
                 
-                //ADD SPARKLE FX HERE #######################
+                //particle
+                let electroFxId = Entities.addEntity({
+                    "type": "ParticleEffect",
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "name": "electro-fx",
+                    "dimensions": {
+                        "x": 16,
+                        "y": 16,
+                        "z": 16
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "ellipsoid",
+                    "color": {
+                        "red": plasmaColor[0],
+                        "green": plasmaColor[1],
+                        "blue": plasmaColor[2]
+                    },
+                    "alpha": 0,
+                    "textures": ROOT + "images/electricArc.png",
+                    "maxParticles": 200,
+                    "lifespan": 0.1,
+                    "emitRate": 20,
+                    "emitSpeed": 0,
+                    "speedSpread": 0,
+                    "emitOrientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                    },
+                    "emitDimensions": Vec3.multiply( { "x": MAX_ITEM_SIZE/3, "y": MAX_ITEM_SIZE/3, "z": MAX_ITEM_SIZE/3 }, scaleFactor ),
+                    "emitRadiusStart": 0,
+                    "polarFinish": 3.1415927410125732,
+                    "emitAcceleration": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "accelerationSpread": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "particleRadius": 6,
+                    "radiusSpread": 2,
+                    "radiusStart": 6,
+                    "radiusFinish": 6,
+                    "colorStart": {
+                        "red": 255,
+                        "green": 255,
+                        "blue": 255
+                    },
+                    "colorFinish": {
+                        "red": fireColor[0],
+                        "green": fireColor[1],
+                        "blue": fireColor[2]
+                    },
+                    "alphaStart": 1,
+                    "alphaFinish": 1,
+                    "emitterShouldTrail": false,
+                    "spinSpread": 3.140000104904175
+                }, entityHostType);
+                
             }
             
             return id;
