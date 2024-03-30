@@ -48,11 +48,23 @@
         }
 
         //cleanup old remains here
-        let possibleRemainsIds = Entities.findEntitiesByName( BOLIDE_NAME, generatorPosition, SCENE_RADIUS * 2, true);
-        print("ORPHAN BOLIDES FOUND: " + possibleRemainsIds.length);
-        for (i = 0; i < possibleRemainsIds.length; i++) {
-            Entities.deleteEntity(possibleRemainsIds[i]);
+        let presentAvatarSessionUuids = [];
+        let presentAvatarData, entityOwnerSessionID;
+        let presentAvatarIDs= getAvatarsInRange( generatorPosition, SCENE_RADIUS * 2 );
+        for (i = 0; i < presentAvatarIDs.length; i++) {
+            presentAvatarData = AvatarManager.getAvatar(presentAvatarIDs[i]);
+            presentAvatarSessionUuids.push(presentAvatarData.sessionUUID);
         }
+        let possibleRemainsIds = Entities.findEntitiesByName( BOLIDE_NAME, generatorPosition, SCENE_RADIUS * 2, true);
+        let countOrphan = 0;
+        for (i = 0; i < possibleRemainsIds.length; i++) {
+            entityOwnerSessionID = Entities.getEntityProperties(possibleRemainsIds[i], ["owningAvatarID"]).owningAvatarID;
+            if (presentAvatarSessionUuids.indexOf(entityOwnerSessionID) === -1) {
+                Entities.deleteEntity(possibleRemainsIds[i]);
+                countOrphan++;
+            }
+        }
+        print("ORPHAN BOLIDES FOUND: " + countOrphan);
 
         let today = new Date();
         processTimer = today.getTime();
