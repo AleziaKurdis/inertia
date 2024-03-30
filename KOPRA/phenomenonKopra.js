@@ -50,7 +50,7 @@
         //cleanup old remains here
         let presentAvatarSessionUuids = [];
         let presentAvatarData, entityOwnerSessionID;
-        let presentAvatarIDs= getAvatarsInRange( generatorPosition, SCENE_RADIUS * 2 );
+        let presentAvatarIDs = AvatarManager.getAvatarsInRange( generatorPosition, SCENE_RADIUS * 2 );
         for (i = 0; i < presentAvatarIDs.length; i++) {
             presentAvatarData = AvatarManager.getAvatar(presentAvatarIDs[i]);
             presentAvatarSessionUuids.push(presentAvatarData.sessionUUID);
