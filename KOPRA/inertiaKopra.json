@@ -113,6 +113,161 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-C.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{78d10720-8a25-44f0-97b2-38c8e236d9a0}",
+            "type": "Model",
+            "position": {"x":-4348.04931640625,"y":-4032.705078125,"z":-3737.44921875},
+            "name": "BASE 2",
+            "locked": true,
+            "userData": "{\"hue\":0,\"name\":\"BASE 2\",\"model\":\"1X1\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 16
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_1X1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{2a06118b-c40e-4988-89e8-bfe7c9a14f25}",
+            "type": "Model",
+            "position": {"x":-3831.833984375,"y":-3636.7666015625,"z":-3829.380859375},
+            "name": "BASE 1",
+            "locked": true,
+            "userData": "{\"hue\":75,\"name\":\"BASE 1\",\"model\":\"2X2\"}",
+            "dimensions": {
+                "x": 30.07125473022461,
+                "y": 3.5447208881378174,
+                "z": 30.076251983642578
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X2.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5d0f6407-d6ae-465a-bae4-97dd4e32af9d}",
+            "type": "Model",
+            "position": {"x":-3188.366943359375,"y":-3976.24072265625,"z":-4515.3251953125},
+            "name": "BASE 3",
+            "locked": true,
+            "userData": "{\"hue\":120,\"name\":\"BASE 3\",\"model\":\"1X1\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 16
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_1X1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{8e72ce37-23ed-4517-9063-0c55e4a49a9e}",
+            "type": "Model",
+            "position": {"x":-3640.874267578125,"y":-4556.0546875,"z":-4571.90380859375},
+            "name": "BASE 4",
+            "locked": true,
+            "userData": "{\"hue\":320,\"name\":\"BASE 4\",\"model\":\"1X1\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 16
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_1X1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{af0358a2-5ca3-4938-adf9-4a04d7fe7e12}",
+            "type": "Model",
+            "position": {"x":-4567.25732421875,"y":-4202.46923828125,"z":-4232.50537109375},
+            "name": "BASE 5",
+            "locked": true,
+            "userData": "{\"hue\":210,\"name\":\"BASE 5\",\"model\":\"2X1\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 30.169464111328125
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": 0.7070878744125366,
+                "z": -0.0000457763671875,
+                "w": 0.7070878744125366
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X1.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
