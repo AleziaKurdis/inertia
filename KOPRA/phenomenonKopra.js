@@ -53,7 +53,9 @@
         let presentAvatarIDs = AvatarManager.getAvatarsInRange( generatorPosition, SCENE_RADIUS * 2 );
         for (i = 0; i < presentAvatarIDs.length; i++) {
             presentAvatarData = AvatarManager.getAvatar(presentAvatarIDs[i]);
-            presentAvatarSessionUuids.push(presentAvatarData.sessionUUID);
+            if (presentAvatarData.sessionUUID !== MyAvatar.sessionUUID) {
+                presentAvatarSessionUuids.push(presentAvatarData.sessionUUID);
+            }
         }
         let possibleRemainsIds = Entities.findEntitiesByName( BOLIDE_NAME, generatorPosition, SCENE_RADIUS * 2, true);
         let countOrphan = 0;
