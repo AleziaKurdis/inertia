@@ -268,6 +268,130 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X1.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{978d1a76-45c9-4c94-91b8-7b85abf81b48}",
+            "type": "Model",
+            "position": {"x":-4440.0390625,"y":-4287.2900390625,"z":-3299.052734375},
+            "name": "AREA 6",
+            "locked": true,
+            "userData": "{\"hue\":30,\"name\":\"AREA 6\",\"model\":\"2X1\",\"alignment\":\"center\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 30.169464111328125
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": 0.7070878744125366,
+                "z": -0.0000457763671875,
+                "w": 0.7070878744125366
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{f0c40a9f-e80f-478f-9fda-a70ca9a59a7d}",
+            "type": "Model",
+            "position": {"x":-3831.78173828125,"y":-3905.493408203125,"z":-4479.99365234375},
+            "name": "AREA 7",
+            "locked": true,
+            "userData": "{\"hue\":260,\"name\":\"AREA 7\",\"model\":\"2X2\",\"alignment\":\"center\"}",
+            "dimensions": {
+                "x": 30.07125473022461,
+                "y": 3.5447208881378174,
+                "z": 30.076251983642578
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X2.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{9fee8081-ebe0-4503-a0af-3165e4ab55db}",
+            "type": "Model",
+            "position": {"x":-3683.388671875,"y":-4244.884765625,"z":-3864.7763671875},
+            "name": "AREA 8",
+            "locked": true,
+            "userData": "{\"hue\":180,\"name\":\"AREA 8\",\"model\":\"1X1\",\"alignment\":\"center\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 16
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_1X1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{15a86a44-eca8-4386-852b-556e04c90725}",
+            "type": "Model",
+            "position": {"x":-5062.1962890625,"y":-3806.46875,"z":-4352.7626953125},
+            "name": "AREA 9",
+            "locked": true,
+            "userData": "{\"hue\":290,\"name\":\"AREA 9\",\"model\":\"2X2\",\"alignment\":\"center\"}",
+            "dimensions": {
+                "x": 30.07125473022461,
+                "y": 3.5447208881378174,
+                "z": 30.076251983642578
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_2X2.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
