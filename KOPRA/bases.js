@@ -96,7 +96,7 @@
         }
         
         let lineHeight = 1;
-        let dimensions = {"x": 3, "y": 1.05, "z": 0.01};
+        let dimensions = {"x": 6, "y": 1.05, "z": 0.01};
         //SIDE 1:
         id = Entities.addEntity({
             "type": "Text",
@@ -111,7 +111,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": alignX
+            "alignment": alignZ
         }, "local");
         baseItems.push(id);
 
@@ -129,7 +129,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": alignX
+            "alignment": alignZ
         }, "local");
         baseItems.push(id);
         
@@ -147,7 +147,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": alignZ
+            "alignment": alignX
         }, "local");
         baseItems.push(id);
         
@@ -165,7 +165,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": alignZ
+            "alignment": alignX
         }, "local");
         baseItems.push(id);
     };
