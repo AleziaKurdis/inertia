@@ -14,13 +14,14 @@
     let baseItems = [];
 
     this.preload = function(entityID) {
-        let color, name, model, userData, id;
+        let color, name, model, userData, id, alignment;
         let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
                 "hue": 0,
                 "name": "NAME",
-                "model": "1X1"
+                "model": "1X1",
+                "alignment": "center"
             };
             Entities.editEntity(entityID, {"userData": JSON.stringify(userData)});
         } else {
@@ -30,6 +31,11 @@
         name = userData.name;
         model = userData.model;
         
+        if (userData.alignment === undefined) {
+            alignment = "center";
+        } else {
+            alignment = userData.alignment;
+        }
         //material
         let bloomFactor = 3;
         let materialContent = {
@@ -61,24 +67,32 @@
         baseItems.push(id);
         
         //texts
-        let deltaX, deltaZ;
+        let deltaX, deltaZ, alignX, alignZ;
         let deltaY = 0.29;
         switch (model) {
             case "1X1":
                 deltaX = 8.01;
                 deltaZ = 8.01;
+                alignX = "center";
+                alignZ = "center";
                 break;
             case "2X1":
                 deltaX = 8.01;
                 deltaZ = 15.09;
+                alignX = "center";
+                alignZ = alignment;
                 break;
             case "2X2":
                 deltaX = 15.05;
                 deltaZ = 15.05;
+                alignX = alignment;
+                alignZ = alignment;
                 break;
             default:
                 deltaX = 8.01;
                 deltaZ = 8.01;
+                alignX = "center";
+                alignZ = "center";
         }
         
         let lineHeight = 1;
@@ -97,7 +111,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": "center"
+            "alignment": alignX
         }, "local");
         baseItems.push(id);
 
@@ -115,7 +129,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": "center"
+            "alignment": alignX
         }, "local");
         baseItems.push(id);
         
@@ -133,7 +147,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": "center"
+            "alignment": alignZ
         }, "local");
         baseItems.push(id);
         
@@ -151,7 +165,7 @@
             "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             "backgroundAlpha": 0,
             "unlit": true,
-            "alignment": "center"
+            "alignment": alignZ
         }, "local");
         baseItems.push(id);
     };
