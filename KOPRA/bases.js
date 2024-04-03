@@ -96,7 +96,7 @@
         }
         
         let lineHeight = 1;
-        let dimensions = {"x": 10, "y": 1.05, "z": 0.01};
+        let dimensions = {"x": 9, "y": 1.05, "z": 0.01};
         //SIDE 1:
         id = Entities.addEntity({
             "type": "Text",
