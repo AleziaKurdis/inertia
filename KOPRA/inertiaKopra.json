@@ -112,7 +112,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/VOXCLOUD-C.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/beacons.js"
         },
         {
             "id": "{78d10720-8a25-44f0-97b2-38c8e236d9a0}",
