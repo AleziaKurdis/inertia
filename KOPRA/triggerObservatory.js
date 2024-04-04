@@ -24,13 +24,13 @@
             "showOnlyEmphasis": false,
             "duration": 1200
         };
-        Messages.sendMessage(CHANNEL, message, true);
+        Messages.sendMessage(CHANNEL, JSON.stringify(message), true);
     };
 
     this.leaveEntity = function(entityID) {
         let message = {
             "action": "HIDE_BEACONS"
         };
-        Messages.sendMessage(CHANNEL, message, true);
+        Messages.sendMessage(CHANNEL, JSON.stringify(message), true);
     };
 })
