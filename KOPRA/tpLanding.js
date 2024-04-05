@@ -14,7 +14,7 @@
     let tpLandingItems = [];
 
     this.preload = function(entityID) {
-        let color, colorLight, name, model, userData, id, alignment;
+        let color, colorLight, name, model, userData, id, signImageUrl;
         let properties = Entities.getEntityProperties(entityID, ["position", "renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
@@ -30,8 +30,6 @@
         colorLight = hslToRgb((userData.hue/360), 1, 0.65);
         color = hslToRgb((userData.hue/360), 1, 0.5);
         
-        let signImageUrl = userData.signUrl;
-        if (userData.tpUrl === "back")
         switch(userData.tpUrl) {
             case "":
                 signImageUrl = ROOT + "images/undefinedDestination.jpg";
