@@ -209,6 +209,37 @@
             "useOriginalPivot": true
         },
         {
+            "id": "{62f9e767-e351-4578-9650-ff5c52d3573a}",
+            "type": "Model",
+            "position": {"x":-3174.180419921875,"y":-3976.20072265625,"z":-4501.1875},
+            "name": "AREA 3B",
+            "locked": true,
+            "userData": "{\"hue\":120,\"name\":\"AREA 3\",\"model\":\"1X1\"}",
+            "dimensions": {
+                "x": 16,
+                "y": 3.5447206497192383,
+                "z": 16
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/bases.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_1X1.fst",
+            "useOriginalPivot": true
+        },
+        {
             "id": "{8e72ce37-23ed-4517-9063-0c55e4a49a9e}",
             "type": "Model",
             "position": {"x":-3640.874267578125,"y":-4556.0146875,"z":-4571.90380859375},
@@ -304,7 +335,7 @@
         {
             "id": "{f0c40a9f-e80f-478f-9fda-a70ca9a59a7d}",
             "type": "Model",
-            "position": {"x":-3831.78173828125,"y":-3905.493408203125,"z":-4479.99365234375},
+            "position": {"x":-3831.78173828125,"y":-3905.453408203125,"z":-4479.99365234375},
             "name": "AREA 7",
             "locked": true,
             "userData": "{\"hue\":260,\"name\":\"AREA 7\",\"model\":\"2X2\",\"alignment\":\"center\"}",
@@ -369,7 +400,7 @@
             "position": {"x":-5062.1962890625,"y":-3806.46875,"z":-4352.7626953125},
             "name": "AREA 9",
             "locked": true,
-            "userData": "{\"hue\":290,\"name\":\"AREA 9\",\"model\":\"2X2\",\"alignment\":\"center\"}",
+            "userData": "{\"hue\":290,\"name\":\"AREA 9\",\"model\":\"2X2\",\"alignment\":\"right\"}",
             "dimensions": {
                 "x": 30.07125473022461,
                 "y": 3.5447208881378174,
