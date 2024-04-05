@@ -373,10 +373,10 @@
                         "y": 0,
                         "z": 0
                     },
-                    "particleRadius": 7,
-                    "radiusSpread": 2,
-                    "radiusStart": 7,
-                    "radiusFinish": 7,
+                    "particleRadius": 7 * scaleFactor,
+                    "radiusSpread": 2 * scaleFactor,
+                    "radiusStart": 7 * scaleFactor,
+                    "radiusFinish": 7 * scaleFactor,
                     "colorStart": {
                         "red": 255,
                         "green": 255,
