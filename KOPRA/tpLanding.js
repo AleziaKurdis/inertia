@@ -15,7 +15,7 @@
 
     this.preload = function(entityID) {
         let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl;
-        let properties = Entities.getEntityProperties(entityID, ["position", "renderWithZones", "userData"]);
+        let properties = Entities.getEntityProperties(entityID, ["position", "rotation", "renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
                 "hue": 0,
@@ -134,7 +134,6 @@
         id = Entities.addEntity({
             "type": "Light",
             "name": "ARRIVAL LIGHT " + userData.landingBay,
-            "locked": true,
             "parentID": entityID,
             "localPosition": {"x":-2.05, "y":1.5, "z":4.1},
             "dimensions": {
@@ -160,9 +159,8 @@
         id = Entities.addEntity({
             "type": "ParticleEffect",
             "name": "TP_ARRIVAL-FX " + userData.landingBay,
-            "locked": true,
             "parentID": entityID,
-            "localPosition": {"x":-2.05, "y":1.5, "z":4.1},
+            "localPosition": {"x":-2.05, "y":1.8, "z":2.7},
             "localRotation": Quat.fromVec3Degrees({"x":0, "y":0, "z":0}),
             "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
             "dimensions": {
@@ -183,6 +181,7 @@
             "lifespan": 2.7,
             "emitRate": 100,
             "emitSpeed": 0,
+            "emitRadiusStart": 0,
             "speedSpread": 0,
             "emitOrientation": {
                 "x": -0.0000152587890625,
@@ -191,19 +190,15 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 0.699999988079071,
+                "x": 1.5,
                 "y": 1.5,
-                "z": 0.25
+                "z": 0.01
             },
             "polarFinish": 3.1415927410125732,
-            "emitAcceleration": {
-                "x": -0.9,
-                "y": 0,
-                "z": 0
-            },
+            "emitAcceleration": Vec3.multiplyQbyV(properties.rotation, { "x": 0, "y": 0, "z": -0.9}),
             "particleRadius": 2,
             "radiusSpread": 0.3,
-            "radiusStart": 2,
+            "radiusStart": 1,
             "radiusFinish": 2,
             "colorSpread": {
                 "red": 0,
