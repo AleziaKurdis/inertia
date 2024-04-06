@@ -14,7 +14,7 @@
     let tpLandingItems = [];
 
     this.preload = function(entityID) {
-        let color, colorLight, name, model, userData, id, signImageUrl;
+        let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl;
         let properties = Entities.getEntityProperties(entityID, ["position", "renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
@@ -29,6 +29,8 @@
         }
         colorLight = hslToRgb((userData.hue/360), 1, 0.65);
         color = hslToRgb((userData.hue/360), 1, 0.5);
+        colorStart = hslToRgb((userData.hue/360), 1, 0.9);
+        colorEnd = hslToRgb((userData.hue/360), 1, 0.3);
         
         switch(userData.tpUrl) {
             case "":
@@ -155,99 +157,76 @@
         tpLandingItems.push(id);
         
         //tpfx & sound
-/*    {
-        "id": "{3b71e6ef-20f2-4114-adfb-7bdc5b7c931c}",
-        "type": "ParticleEffect",
-        "position": {"x":4018.66455078125,"y":3983.1923828125,"z":3980.369384765625},
-        "name": "TP_ARRIVAL-FX",
-        "locked": true,
-        "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CEON/sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
-        "dimensions": {
-            "x": 13.238809585571289,
-            "y": 13.238809585571289,
-            "z": 13.238809585571289
-        },
-        "rotation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-        },
-        "renderWithZones": [
-            "{00356305-f3d5-4395-834a-096bbbf4c4dc}"
-        ],
-        "grab": {
-            "grabbable": false
-        },
-        "damping": 0,
-        "angularDamping": 0,
-        "script": "https://aleziakurdis.github.io/inertia/CEON/soundplayer.js",
-        "shapeType": "box",
-        "color": {
-            "red": 255,
-            "green": 225,
-            "blue": 0
-        },
-        "alpha": 0.4000000059604645,
-        "textures": "https://aleziakurdis.github.io/inertia/CEON/images/PARTICULE_OPERA_007.png",
-        "maxParticles": 1536,
-        "lifespan": 2.700000047683716,
-        "emitRate": 100,
-        "emitSpeed": 0,
-        "speedSpread": 0,
-        "emitOrientation": {
-            "x": -0.0000152587890625,
-            "y": -0.0000152587890625,
-            "z": -0.0000152587890625,
-            "w": 1
-        },
-        "emitDimensions": {
-            "x": 0.699999988079071,
-            "y": 1.5,
-            "z": 0.25
-        },
-        "polarFinish": 3.1415927410125732,
-        "emitAcceleration": {
-            "x": -0.8999999761581421,
-            "y": 0,
-            "z": 0
-        },
-        "particleRadius": 2,
-        "radiusSpread": 0.30000001192092896,
-        "radiusStart": 2,
-        "radiusFinish": 2,
-        "colorSpread": {
-            "red": 0,
-            "green": 0,
-            "blue": 15
-        },
-        "colorStart": {
-            "red": 255,
-            "green": 245,
-            "blue": 166
-        },
-        "colorFinish": {
-            "red": 117,
-            "green": 104,
-            "blue": 0
-        },
-        "alphaSpread": 0.10000000149011612,
-        "alphaStart": 0.800000011920929,
-        "alphaFinish": 0,
-        "emitterShouldTrail": true,
-        "spinSpread": 0.05000000074505806,
-        "spinStart": -0.17000000178813934,
-        "spinFinish": 0.17000000178813934
-    },
-*/
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "name": "TP_ARRIVAL-FX " + userData.landingBay,
+            "locked": true,
+            "parentID": entityID,
+            "localPosition": {"x":-2.05, "y":1.5, "z":4.1},
+            "localRotation": Quat.fromVec3Degrees({"x":0, "y":0, "z":0}),
+            "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+            "dimensions": {
+                "x": 13.238809585571289,
+                "y": 13.238809585571289,
+                "z": 13.238809585571289
+            },
+            "renderWithZones": properties.renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "script": ROOT + "soundplayer.js",
+            "shapeType": "box",
+            "color": {"red": color[0], "green": color[1], "blue": color[2]},
+            "alpha": 0.4,
+            "textures": ROOT + "images/PARTICULE_OPERA_007.png",
+            "maxParticles": 1536,
+            "lifespan": 2.7,
+            "emitRate": 100,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.699999988079071,
+                "y": 1.5,
+                "z": 0.25
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": -0.9,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 2,
+            "radiusSpread": 0.3,
+            "radiusStart": 2,
+            "radiusFinish": 2,
+            "colorSpread": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
+            "colorFinish": {"red": colorEnd[0], "green": colorEnd[1], "blue": colorEnd[2]},
+            "alphaSpread": 0.1,
+            "alphaStart": 0.8,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 0.05000000074505806,
+            "spinStart": -0.17000000178813934,
+            "spinFinish": 0.17000000178813934
+        }, "local");
+        tpLandingItems.push(id);
     };
 
     this.unload = function(entityID) {
-        print("UNLOAD" + JSON.stringify(tpLandingItems)); //################################################################## DEBUG
         let i;
         for (i = 0; i < tpLandingItems.length; i++) {
             Entities.deleteEntity(tpLandingItems[i]);
-            print("DELETED" + tpLandingItems[i]);
         }
         tpLandingItems = [];
     };
