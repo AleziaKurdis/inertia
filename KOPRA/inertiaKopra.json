@@ -472,6 +472,198 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{6d14ff76-af23-49c1-bd46-8a7d816e48e2}",
+            "type": "Model",
+            "position": {"x":-3831.833984375,"y":-3636.7666015625,"z":-3829.380859375},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 1",
+            "locked": true,
+            "userData": "{\"hue\":75,\"landingBay\":\"1\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{af191c53-0763-48d7-b8fc-38009b440aa1}",
+            "type": "Model",
+            "position": {"x":-4348.04931640625,"y":-4032.705078125,"z":-3737.44921875},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 2",
+            "locked": true,
+            "userData": "{\"hue\":0,\"landingBay\":\"2\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{d9aa020c-ea7b-4298-87b2-ba2ff9257984}",
+            "type": "Model",
+            "position": {"x":-3188.366943359375,"y":-3976.20072265625,"z":-4515.3251953125},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 3",
+            "locked": true,
+            "userData": "{\"hue\":120,\"landingBay\":\"3\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{44ce44ea-1670-4693-bb9f-9dcdcde17925}",
+            "type": "Model",
+            "position": {"x":-3640.874267578125,"y":-4556.0146875,"z":-4571.90380859375},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 4",
+            "locked": true,
+            "userData": "{\"hue\":320,\"landingBay\":\"4\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{4d1713e0-b147-4d1e-9ed6-19daf048d293}",
+            "type": "Model",
+            "position": {"x":-4567.25732421875,"y":-4202.46923828125,"z":-4232.50537109375},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 5",
+            "locked": true,
+            "userData": "{\"hue\":210,\"landingBay\":\"5\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{9f86b912-434f-4d9e-9d78-3ebd255cbd7f}",
+            "type": "Model",
+            "position": {"x":-4440.0390625,"y":-4287.2900390625,"z":-3299.052734375},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 6",
+            "locked": true,
+            "userData": "{\"hue\":30,\"landingBay\":\"6\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5583bf82-52bb-476e-913e-19b969427bf2}",
+            "type": "Model",
+            "position": {"x":-3683.388671875,"y":-4244.884765625,"z":-3864.7763671875},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 8",
+            "locked": true,
+            "userData": "{\"hue\":180,\"landingBay\":\"8\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{ebe4d27d-3a0f-4220-84a0-7f2c80488ca5}",
+            "type": "Model",
+            "position": {"x":-5062.1962890625,"y":-3806.46875,"z":-4352.7626953125},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "name": "LANDING_BAY 9",
+            "locked": true,
+            "userData": "{\"hue\":290,\"landingBay\":\"9\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
+            "dimensions": {
+                "x": 8.999711990356445,
+                "y": 5.333667755126953,
+                "z": 14.377241134643555
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpLanding.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
