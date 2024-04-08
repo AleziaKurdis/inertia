@@ -129,6 +129,27 @@
         //tp intereactive box
         
         //observatory trigger
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cylinder",
+            "parentID": entityID,
+            "renderWithZones": properties.renderWithZones,
+            "localPosition": {"x": -2.43, "y": 6.2, "z": 2.38},
+            "localRotation": Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} ),
+            "name": "Observatory-" + userData.landingBay,
+            "dimensions": {"x": 4.6, "y": 4, "z": 4.6},
+            "visible": false,
+            "canCastShadow": false,
+            "collisionless": true,
+            "script": ROOT + "triggerObservatory.js",
+            "grab": {
+                "grabbable": false
+            }
+        }, "local");
+        tpLandingItems.push(id);
+
+
+        //sign observatory
         
         //tp light
         id = Entities.addEntity({
