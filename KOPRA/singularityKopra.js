@@ -18,6 +18,7 @@
     var processTimer = 0;
 
     var starId = Uuid.NULL;
+    var blackStarId = Uuid.NULL;
     var fireMatId = Uuid.NULL;
     var solarZoneId = Uuid.NULL;
     
@@ -29,11 +30,13 @@
     var lightTableID = Uuid.NULL;
     
     var D29_DAY_DURATION = 104400; //sec
+    var D19_DAY_DURATION = 68400;//sec
     var STAR_DIAMETER = 300; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
+    var currentBlackSunPosition = {"x": 0, "y": 0, "z": 0};
     //var nextSunPosition;
     
     this.preload = function(entityID) { 
@@ -47,6 +50,7 @@
         
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
+        currentBlackSunPosition = sunCumputedValues.blackLocalPosition;
 
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
         var sunColor = hslToRgb(hue, 1, 0.6);
@@ -67,8 +71,6 @@
             "renderWithZones": renderWithZones,
         }, "local");
         
-        //genMainAsteroidLightMaterial(thisEntity, renderWithZones);
-        
         starId = Entities.addEntity({
                 "name": "STAR",
                 "parentID": thisEntity,
@@ -79,6 +81,45 @@
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones,
                 "damping": 0
+        }, "local");
+
+        blackStarId = Entities.addEntity({
+                "name": "BLACK-STAR",
+                "parentID": thisEntity,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
+                "localPosition": currentBlackSunPosition,
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 0, "green": 0, "blue": 0},
+                "renderWithZones": renderWithZones,
+                "damping": 0
+        }, "local");
+
+        var blackMaterialContent = {
+                "materialVersion": 1,
+                "materials": [
+                    {
+                        "name": "blackSun",
+                        "albedo": [0, 0, 0],
+                        "metallic": 0.01,
+                        "roughness": 0.5,
+                        "unlit": true,
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+            
+
+        var blackMatId = Entities.addEntity({
+            "type": "Material",
+            "parentID": blackStarId,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "blackSun-matter",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(blackMaterialContent)
         }, "local");
 
         updateStar();
@@ -104,9 +145,11 @@
         if (starId !== Uuid.NULL) {
             var sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
-            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);         
+            currentBlackSunPosition = sunCumputedValues.blackLocalPosition;
+            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
             var sunColor = hslToRgb(hue, 1, 0.6);
             Entities.editEntity(starId, {"localPosition": currentSunPosition});
+            Entities.editEntity(blackStarId, {"localPosition": currentBlackSunPosition});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
@@ -117,86 +160,22 @@
     }
 
     function getCurrentSunPosition() {//elevation to adjust duration 400x sec
-        //var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 12))); //un cycle par 12 jours (1/3 de mois) D29. +/- 60 deg.
-        //var elevation = (Math.PI/6) + ((Math.PI/3.75) * Math.sin(GetCurrentCycleValue((2* Math.PI), 418.879))); //Matching the translation time.
         var elevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 3))); //un cycle de 3 jours
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
-        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2000});
+        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2600});
+
+        var blackElevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION * 3))); //un cycle de 3 jours
+        var blackAzimuth = GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION); //un tour par jour D29
+        var blackLocalPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": blackElevation,"y": blackAzimuth, "z": 0}), {"x": 0,"y": 0, "z": -2300});
+
         return { 
                     "elevation" : elevation,
                     "azimuth" : azimuth,
-                    "localPosition": localPosition
+                    "localPosition": localPosition,
+                    "blackLocalPosition": blackLocalPosition
                 };
     }
-/*
-    function genMainAsteroidLightMaterial(id, rwz) {
-        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-        var antiHue = 0.5 + hue;
-        if (antiHue > 1) {
-            antiHue = antiHue - 1;
-        }
-        var color = hslToRgb(antiHue, 1, 0.5);
-        var lightMatColor = hslToRgb(antiHue, 1, 0.61);
-        var bloomFactor = 4;
-        var materialContent = {
-            "materialVersion": 1,
-            "materials": [
-                {
-                    "name": "LIGHT",
-                    "albedo": [1, 1, 1],
-                    "metallic": 1,
-                    "roughness": 1,
-                    "emissive": [(lightMatColor[0]/255) * bloomFactor, (lightMatColor[1]/255) * bloomFactor, (lightMatColor[2]/255) * bloomFactor],
-                    "cullFaceMode": "CULL_NONE",
-                    "model": "hifi_pbr"
-                }
-            ]
-        };
 
-        matId = Entities.addEntity({
-            "type": "Material",
-            "parentID": id,
-            "renderWithZones": rwz,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "plasma-material",
-            "materialURL": "materialData",
-            "priority": 3,
-            "parentMaterialName": "mat::LIGHT",
-            "materialData": JSON.stringify(materialContent)
-        }, "local");
-        
-        lightTableID = Entities.addEntity({
-            "type": "Light",
-            "localPosition": {
-                "x": -53.3345,
-                "y": 4.5818,
-                "z": -38.0559
-            },
-            "parentID": id,
-            "name": "TABLE_LIGHT",
-            "dimensions": {
-                "x": 9,
-                "y": 9,
-                "z": 9
-            },
-            "rotation": {"x":0.7071068286895752,"y":0,"z":0,"w":0.7071068286895752},
-            "renderWithZones": rwz,
-            "grab": {
-                "grabbable": false
-            },
-            "color": {
-                "red": color[0],
-                "green": color[1],
-                "blue": color[2]
-            },
-            "isSpotlight": true,
-            "intensity": 10,
-            "exponent": 1,
-            "cutoff": 90,
-            "falloffRadius": 2
-        }, "local");
-    }
-*/
     function updateStar() {
         if (starId !== Uuid.NULL) {
             
@@ -237,6 +216,7 @@
                     "priority": 1,
                     "materialData": JSON.stringify(materialContent)
                 }, "local");
+            
             } else {
                 //UPDATE
                 Entities.editEntity(fireMatId, {
@@ -251,6 +231,10 @@
         if (starId !== Uuid.NULL) {
             Entities.deleteEntity(starId);
             starId = Uuid.NULL;
+        }
+        if (blackStarId !== Uuid.NULL) {
+            Entities.deleteEntity(blackStarId);
+            blackStarId = Uuid.NULL;
         }
         if (solarZoneId !== Uuid.NULL) {
             Entities.deleteEntity(solarZoneId);
