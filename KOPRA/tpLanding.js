@@ -14,7 +14,7 @@
     let tpLandingItems = [];
 
     this.preload = function(entityID) {
-        let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl;
+        let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl, scriptForTP;
         let properties = Entities.getEntityProperties(entityID, ["position", "rotation", "renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
@@ -35,9 +35,11 @@
         switch(userData.tpUrl) {
             case "":
                 signImageUrl = ROOT + "images/undefinedDestination.jpg";
+                scriptForTP = "";
                 break;
             case "back":
                 signImageUrl = ROOT + "images/back.jpg";
+                scriptForTP = ROOT + "back.js";
                 break;
             default:
                 if (userData.signUrl === "") {
@@ -45,6 +47,7 @@
                 } else {
                     signImageUrl = userData.signUrl;
                 }
+                scriptForTP = ROOT + "teleport.js";
         }
     
         //material Glow
@@ -127,7 +130,26 @@
         tpLandingItems.push(id);
 
         //tp intereactive box
-        
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "parentID": entityID,
+            "renderWithZones": properties.renderWithZones,
+            "localPosition": {"x": -1.96, "y": 1.8, "z": 3.68},
+            "localRotation": Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} ),
+            "name": "Teleporter-" + userData.landingBay,
+            "dimensions": {"x": 3.6, "y": 3.7, "z": 1.5},
+            "visible": false,
+            "canCastShadow": false,
+            "collisionless": true,
+            "script": scriptForTP,
+            "description": userData.tpUrl,
+            "grab": {
+                "grabbable": false
+            }
+        }, "local");
+        tpLandingItems.push(id);
+
         //observatory trigger
         id = Entities.addEntity({
             "type": "Shape",
@@ -148,9 +170,6 @@
         }, "local");
         tpLandingItems.push(id);
 
-
-        //sign observatory
-        
         //tp light
         id = Entities.addEntity({
             "type": "Light",
