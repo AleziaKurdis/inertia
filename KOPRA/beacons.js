@@ -101,7 +101,7 @@
         let radius;
         let visible = false;
         let eye = Camera.position;
-        let distance, position, color, innerRadius, dimFactor;
+        let distance, position, color, innerRadius, dimFactor, distFactor;
         if (areas.length !== 0) {
             for (i = 0; i < areas.length; i++) {
                 if ((emphasisNo === areas[i].name && showOnlyEmphasis) || !showOnlyEmphasis) {
@@ -112,7 +112,14 @@
                     } else {
                         visible = true;
                     }
-                    radius = 0.032 * distance;
+                    distFactor = 1 - ((distance-200)/2000);
+                    if (distFactor > 1) {
+                        distFactor = 1;
+                    }
+                    if (distFactor < 0.3) {
+                        distFactor = 0.3;
+                    }
+                    radius = (0.032 * distance) * distFactor;
                     dimensions = {"x": 0, "y": 0, "z": 0};
                     color = hslToRgb(areas[i].hue/360, 1, 0.5);
                     if (emphasisNo === areas[i].name) {
