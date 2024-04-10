@@ -688,6 +688,402 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_TP-LANDING.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c5d586aa-7ad0-4936-b0fd-322adff85921}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 1 no1",
+            "userData": "{\"hue\":75,\"sector\":\"1\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{2af961df-f8a7-4fbe-8ed1-a746952cc085}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 1 no2",
+            "userData": "{\"hue\":75,\"sector\":\"1\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{78291f11-ce7d-4d16-92e6-e7392501df3b}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 7 no1",
+            "userData": "{\"hue\":260,\"sector\":\"7\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{952c43f0-ce14-4676-b6ec-ee0cc742ed0e}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 7 no2",
+            "userData": "{\"hue\":260,\"sector\":\"7\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{d09eb767-641f-40e0-b8a9-b9cc122cb1a0}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 2 no1",
+            "userData": "{\"hue\":0,\"sector\":\"2\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5e6db557-77b7-4a4a-bcca-62e38ac00d55}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 2 no2",
+            "userData": "{\"hue\":0,\"sector\":\"2\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{85d47dbc-f2bd-4758-8aff-c6e701273da8}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 3 no1",
+            "userData": "{\"hue\":120,\"sector\":\"3\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{7fa177c7-a553-4d17-a968-da107f1e04c7}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 3 no2",
+            "userData": "{\"hue\":120,\"sector\":\"3\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{23b0b1cf-8cac-42b7-afbd-9ff6b0622787}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 4 no1",
+            "userData": "{\"hue\":320,\"sector\":\"4\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5d6e1dbb-67a1-4a14-b8a9-f763c8d02284}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 4 no2",
+            "userData": "{\"hue\":320,\"sector\":\"4\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{aafe2d38-a2cb-4049-a07c-fea86c654fae}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 5 no1",
+            "userData": "{\"hue\":210,\"sector\":\"5\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{fdd7a3dc-2617-4031-b5f0-4551685996b1}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 5 no2",
+            "userData": "{\"hue\":210,\"sector\":\"5\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5bd9e819-fc00-4e31-9c98-c306d3202558}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 6 no1",
+            "userData": "{\"hue\":30,\"sector\":\"6\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{fe6d0701-f102-44ce-9422-adcc9660d297}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 6 no2",
+            "userData": "{\"hue\":30,\"sector\":\"6\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{e7b1cec4-59d9-4cca-a052-6e1343c1f07b}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 8 no1",
+            "userData": "{\"hue\":180,\"sector\":\"8\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{f823579b-4794-4710-9eed-597a98062c4c}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 8 no2",
+            "userData": "{\"hue\":180,\"sector\":\"8\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{532f3efb-ce21-4238-9eee-8b156b2468b7}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 9 no1",
+            "userData": "{\"hue\":290,\"sector\":\"9\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{addb41d9-e2be-481c-8ecb-3ee9fa9dc079}",
+            "type": "Model",
+            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "name": "SERVICE POINT - SECTOR 9 no2",
+            "userData": "{\"hue\":290,\"sector\":\"9\"}",
+            "dimensions": {
+                "x": 7.22686243057251,
+                "y": 5.245532035827637,
+                "z": 7.22686243057251
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/KOPRA/servicePoint.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
