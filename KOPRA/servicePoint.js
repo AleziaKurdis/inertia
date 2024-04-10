@@ -98,6 +98,7 @@
             "localRotation": Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} ),
             "name": "Observatory-ServicePoint Sector " + userData.sector,
             "dimensions": {"x": 5, "y": 5, "z": 5},
+            "description": "" + userData.sector,
             "visible": false,
             "canCastShadow": false,
             "collisionless": true,
