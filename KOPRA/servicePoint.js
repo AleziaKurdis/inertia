@@ -28,7 +28,7 @@
         colorLight = hslToRgb((userData.hue/360), 1, 0.65);
         color = hslToRgb((userData.hue/360), 1, 0.5);
         
-        //material Glow & Sign
+        //material Glow
         let bloomFactor = 2.7;
         let materialContent = {
             "materialVersion": 1,
@@ -41,7 +41,27 @@
                     "emissive": [(colorLight[0]/255) * bloomFactor, (colorLight[1]/255) * bloomFactor, (colorLight[2]/255) * bloomFactor],
                     "cullFaceMode": "CULL_NONE",
                     "model": "hifi_pbr"
-                },
+                }
+            ]
+        };
+                
+        id = Entities.addEntity({
+            "type": "Material",
+            "parentID": entityID,
+            "renderWithZones": properties.renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "MaterialLight-ServicePoint Sector " + userData.sector,
+            "materialURL": "materialData",
+            "priority": 3,
+            "parentMaterialName": "mat::LIGHT",
+            "materialData": JSON.stringify(materialContent)
+        }, "local");
+        servicePointItems.push(id);
+
+        //material Sign
+        materialContent = {
+            "materialVersion": 1,
+            "materials": [
                 {
                     "name": "SIGN",
                     "albedo": [1, 1, 1],
@@ -60,10 +80,10 @@
             "parentID": entityID,
             "renderWithZones": properties.renderWithZones,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "Material-ServicePoint Sector " + userData.sector,
+            "name": "MaterialSign-ServicePoint Sector " + userData.sector,
             "materialURL": "materialData",
             "priority": 3,
-            "parentMaterialName": "[mat::LIGHT,mat::SIGN",
+            "parentMaterialName": "mat::SIGN",
             "materialData": JSON.stringify(materialContent)
         }, "local");
         servicePointItems.push(id);
