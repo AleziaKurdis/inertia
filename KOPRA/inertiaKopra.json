@@ -644,7 +644,7 @@
         {
             "id": "{5583bf82-52bb-476e-913e-19b969427bf2}",
             "type": "Model",
-            "position": {"x":-3683.388671875,"y":-4244.884765625,"z":-3864.7763671875},
+        	"position": {"x":-3682.598876953125,"y":-4244.884765625,"z":-3864.07470703125},
             "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
             "name": "LANDING_BAY 8",
             "locked": true,
@@ -668,8 +668,8 @@
         {
             "id": "{ebe4d27d-3a0f-4220-84a0-7f2c80488ca5}",
             "type": "Model",
-            "position": {"x":-5062.1962890625,"y":-3806.46875,"z":-4352.7626953125},
-            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+        	"position": {"x":-5064.32177734375,"y":-3806.46875,"z":-4344.54833984375},
+            "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
             "name": "LANDING_BAY 9",
             "locked": true,
             "userData": "{\"hue\":290,\"landingBay\":\"9\",\"tpUrl\":\"\",\"signUrl\":\"\"}",
@@ -692,7 +692,8 @@
         {
             "id": "{c5d586aa-7ad0-4936-b0fd-322adff85921}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-3785.78271484375,"y":-3735.66943359375,"z":-4165.77685546875},
             "name": "SERVICE POINT - SECTOR 1 no1",
             "userData": "{\"hue\":75,\"sector\":\"1\"}",
             "dimensions": {
@@ -714,7 +715,8 @@
         {
             "id": "{2af961df-f8a7-4fbe-8ed1-a746952cc085}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4095.563232421875,"y":-3684.026611328125,"z":-3865.555419921875},
             "name": "SERVICE POINT - SECTOR 1 no2",
             "userData": "{\"hue\":75,\"sector\":\"1\"}",
             "dimensions": {
@@ -736,7 +738,8 @@
         {
             "id": "{78291f11-ce7d-4d16-92e6-e7392501df3b}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-3645.070068359375,"y":-4054.61083984375,"z":-4540.14404296875},
             "name": "SERVICE POINT - SECTOR 7 no1",
             "userData": "{\"hue\":260,\"sector\":\"7\"}",
             "dimensions": {
@@ -758,7 +761,8 @@
         {
             "id": "{952c43f0-ce14-4676-b6ec-ee0cc742ed0e}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4082.720458984375,"y":-3845.248291015625,"z":-4396.1591796875},
             "name": "SERVICE POINT - SECTOR 7 no2",
             "userData": "{\"hue\":260,\"sector\":\"7\"}",
             "dimensions": {
@@ -780,7 +784,8 @@
         {
             "id": "{d09eb767-641f-40e0-b8a9-b9cc122cb1a0}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4069.659912109375,"y":-4017.740966796875,"z":-4183.59228515625},
             "name": "SERVICE POINT - SECTOR 2 no1",
             "userData": "{\"hue\":0,\"sector\":\"2\"}",
             "dimensions": {
@@ -802,7 +807,8 @@
         {
             "id": "{5e6db557-77b7-4a4a-bcca-62e38ac00d55}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4081.579345703125,"y":-4067.921875,"z":-3588.18408203125},
             "name": "SERVICE POINT - SECTOR 2 no2",
             "userData": "{\"hue\":0,\"sector\":\"2\"}",
             "dimensions": {
@@ -824,7 +830,8 @@
         {
             "id": "{85d47dbc-f2bd-4758-8aff-c6e701273da8}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-3374.33251953125,"y":-3886.6982421875,"z":-4256.25732421875},
             "name": "SERVICE POINT - SECTOR 3 no1",
             "userData": "{\"hue\":120,\"sector\":\"3\"}",
             "dimensions": {
@@ -846,6 +853,7 @@
         {
             "id": "{7fa177c7-a553-4d17-a968-da107f1e04c7}",
             "type": "Model",
+            "locked": true,
             "position": {"x":-2000,"y":-2000,"z":-2000},
             "name": "SERVICE POINT - SECTOR 3 no2",
             "userData": "{\"hue\":120,\"sector\":\"3\"}",
@@ -868,6 +876,7 @@
         {
             "id": "{23b0b1cf-8cac-42b7-afbd-9ff6b0622787}",
             "type": "Model",
+            "locked": true,
             "position": {"x":-2000,"y":-2000,"z":-2000},
             "name": "SERVICE POINT - SECTOR 4 no1",
             "userData": "{\"hue\":320,\"sector\":\"4\"}",
@@ -890,6 +899,7 @@
         {
             "id": "{5d6e1dbb-67a1-4a14-b8a9-f763c8d02284}",
             "type": "Model",
+            "locked": true,
             "position": {"x":-2000,"y":-2000,"z":-2000},
             "name": "SERVICE POINT - SECTOR 4 no2",
             "userData": "{\"hue\":320,\"sector\":\"4\"}",
@@ -912,7 +922,8 @@
         {
             "id": "{aafe2d38-a2cb-4049-a07c-fea86c654fae}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4330.75341796875,"y":-4153.8955078125,"z":-4062.778564453125},
             "name": "SERVICE POINT - SECTOR 5 no1",
             "userData": "{\"hue\":210,\"sector\":\"5\"}",
             "dimensions": {
@@ -934,7 +945,8 @@
         {
             "id": "{fdd7a3dc-2617-4031-b5f0-4551685996b1}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4344.166015625,"y":-4082.209228515625,"z":-4309.0849609375},
             "name": "SERVICE POINT - SECTOR 5 no2",
             "userData": "{\"hue\":210,\"sector\":\"5\"}",
             "dimensions": {
@@ -956,7 +968,8 @@
         {
             "id": "{5bd9e819-fc00-4e31-9c98-c306d3202558}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4194.22216796875,"y":-4138.12060546875,"z":-3493.74365234375},
             "name": "SERVICE POINT - SECTOR 6 no1",
             "userData": "{\"hue\":30,\"sector\":\"6\"}",
             "dimensions": {
@@ -978,7 +991,8 @@
         {
             "id": "{fe6d0701-f102-44ce-9422-adcc9660d297}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-4399.5400390625,"y":-4083.828369140625,"z":-3701.361328125},
             "name": "SERVICE POINT - SECTOR 6 no2",
             "userData": "{\"hue\":30,\"sector\":\"6\"}",
             "dimensions": {
@@ -1000,7 +1014,8 @@
         {
             "id": "{e7b1cec4-59d9-4cca-a052-6e1343c1f07b}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-3666.9052734375,"y":-4058.1962890625,"z":-4312.64404296875},
             "name": "SERVICE POINT - SECTOR 8 no1",
             "userData": "{\"hue\":180,\"sector\":\"8\"}",
             "dimensions": {
@@ -1022,7 +1037,8 @@
         {
             "id": "{f823579b-4794-4710-9eed-597a98062c4c}",
             "type": "Model",
-            "position": {"x":-2000,"y":-2000,"z":-2000},
+            "locked": true,
+            "position": {"x":-3937.57568359375,"y":-4136.18603515625,"z":-3879.970458984375},
             "name": "SERVICE POINT - SECTOR 8 no2",
             "userData": "{\"hue\":180,\"sector\":\"8\"}",
             "dimensions": {
@@ -1044,6 +1060,7 @@
         {
             "id": "{532f3efb-ce21-4238-9eee-8b156b2468b7}",
             "type": "Model",
+            "locked": true,
             "position": {"x":-2000,"y":-2000,"z":-2000},
             "name": "SERVICE POINT - SECTOR 9 no1",
             "userData": "{\"hue\":290,\"sector\":\"9\"}",
@@ -1066,6 +1083,7 @@
         {
             "id": "{addb41d9-e2be-481c-8ecb-3ee9fa9dc079}",
             "type": "Model",
+            "locked": true,
             "position": {"x":-2000,"y":-2000,"z":-2000},
             "name": "SERVICE POINT - SECTOR 9 no2",
             "userData": "{\"hue\":290,\"sector\":\"9\"}",
