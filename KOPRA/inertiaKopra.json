@@ -1102,6 +1102,37 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/SERVICE-POINT.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{0c69506c-3cad-4113-9b51-a2bbca49ce04}",
+            "type": "Box",
+            "locked": true,
+            "name": "CLOCK D29",
+            "dimensions": {
+                "x": 1.0,
+                "y": 0.71,
+                "z": 0.0052195824682712555
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "position": {"x":-3973.771484375,"y":-3994.4921875,"z":-3994.467529296875},
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
