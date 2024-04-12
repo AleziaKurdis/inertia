@@ -1113,13 +1113,34 @@
                 "y": 0.9939,
                 "z": 0.0073
             },
-            "rotation": {
-                "x": 0,
-                "y": 0.7071068286895752,
-                "z": 0,
-                "w": -0.7071068286895752
-            },
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
             "position": {"x":-3839.24755859375,"y":-3903.56298828125,"z":-4478.564453125},
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        },
+        {
+            "id": "{6fdb63e3-433c-42ae-8e76-2c3891dc0b79}",
+            "type": "Shape",
+            "locked": true,
+            "name": "CLOCK D29",
+            "dimensions": {
+                "x": 1.3998,
+                "y": 0.9939,
+                "z": 0.0073
+            },
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "position": {"x":-3823.177734375,"y":-3634.861083984375,"z":-3836.770263671875},
             "renderWithZones": [
                 "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
             ],
