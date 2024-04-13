@@ -64,7 +64,7 @@
             "priority": 3,
             "parentMaterialName": "mat::LIGHT",
             "materialData": JSON.stringify(materialContent),
-            "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/spSounds/" + currentTrackToPlay + ".mp3\",\n  \"soundVolume\": 0.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+            "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/spSounds/" + currentTrackToPlay + ".mp3\",\n  \"soundVolume\": 1.0,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
             "script": ROOT + "soundplayer.js",
         }, "local");
         servicePointItems.push(id);
