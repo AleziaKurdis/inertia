@@ -12,12 +12,15 @@
 (function(){
     const ROOT = Script.resolvePath('').split("servicePoint.js")[0];
     let servicePointItems = [];
+    let currentTrackToPlay = 0;
+    let D29_DAY_DURATION = 104400; //sec
 
     this.preload = function(entityID) {
         let color, colorLight, userData, id;
         let properties = Entities.getEntityProperties(entityID, ["position", "rotation", "renderWithZones", "userData"]);
         if (properties.userData === "") {
             userData = {
+                "track": 0,
                 "hue": 0,
                 "sector": "0"
             };
@@ -27,6 +30,12 @@
         }
         colorLight = hslToRgb((userData.hue/360), 1, 0.65);
         color = hslToRgb((userData.hue/360), 1, 0.5);
+        
+        let curTrackOffset = Math.floor(GetCurrentCycleValue(18, 9 * D29_DAY_DURATION));
+        currentTrackToPlay = userData.track + curTrackOffset;
+        if (currentTrackToPlay > 18) {
+            currentTrackToPlay = currentTrackToPlay - 18;
+        }
         
         //material Glow
         let bloomFactor = 2.7;
@@ -49,12 +58,14 @@
             "type": "Material",
             "parentID": entityID,
             "renderWithZones": properties.renderWithZones,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "localPosition": {"x": 0.0, "y": -7.0, "z": 0.0},
             "name": "MaterialLight-ServicePoint Sector " + userData.sector,
             "materialURL": "materialData",
             "priority": 3,
             "parentMaterialName": "mat::LIGHT",
-            "materialData": JSON.stringify(materialContent)
+            "materialData": JSON.stringify(materialContent),
+            "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/spSounds/" + currentTrackToPlay + ".mp3\",\n  \"soundVolume\": 0.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+            "script": ROOT + "soundplayer.js",
         }, "local");
         servicePointItems.push(id);
 
@@ -176,5 +187,12 @@
         }
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
+
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		let today = new Date();
+		let TodaySec = today.getTime()/1000;
+		let CurrentSec = TodaySec%cycleduration;
+		return (CurrentSec/cycleduration)*cyclelength;
+	}
 
 })
