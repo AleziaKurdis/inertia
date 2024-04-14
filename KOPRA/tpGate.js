@@ -65,11 +65,11 @@
             "shape": "Cube",
             "parentID": entityID,
             "renderWithZones": properties.renderWithZones,
-            "localPosition": {"x": -2.1, "y": 1.8, "z": -3.68},
+            "localPosition": {"x": -2.8, "y": 1.8, "z": -3.8},
             "localRotation": Quat.fromVec3Degrees( {"x": 0.0, "y": 90.0, "z": 0.0} ),
             "name": "Teleporter",
             "dimensions": {"x": 3.6, "y": 3.7, "z": 1.5},
-            "visible": true,//########################################################################
+            "visible": false,
             "canCastShadow": false,
             "collisionless": true,
             "script": scriptForTP,
@@ -85,11 +85,11 @@
             "type": "Light",
             "name": "ARRIVAL LIGHT",
             "parentID": entityID,
-            "localPosition": {"x":-2.05, "y":1.5, "z":4.1},
+            "localPosition": {"x": -2.8, "y": 1.8, "z": -3.8},
             "dimensions": {
-                "x": 5,
-                "y": 5,
-                "z": 5
+                "x": 7,
+                "y": 7,
+                "z": 7
             },
             "renderWithZones": properties.renderWithZones,
             "grab": {
