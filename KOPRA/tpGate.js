@@ -85,11 +85,11 @@
             "type": "Light",
             "name": "ARRIVAL LIGHT",
             "parentID": entityID,
-            "localPosition": {"x": -2.8, "y": 1.8, "z": -3.8},
+            "localPosition": {"x": -2.8, "y": 1.8, "z": -3},
             "dimensions": {
-                "x": 7,
-                "y": 7,
-                "z": 7
+                "x": 5,
+                "y": 5,
+                "z": 5
             },
             "renderWithZones": properties.renderWithZones,
             "grab": {
