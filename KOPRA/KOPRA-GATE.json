@@ -1,0 +1,25 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{89d8df45-ee60-4eb8-b64b-d74b3f299644}",
+    "type": "Model",
+    "name": "KOPRA-GATE",
+    "userData": "{\"hue\":75,\"tpUrl\":\"hifi://vankh/-3823.77,-3636.69,-3822.8/0,-0.661633,0,0.749828\"}",
+    "dimensions": {
+        "x": 7.761029243469238,
+        "y": 4.940338611602783,
+        "z": 8.280705451965332
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "script": "https://aleziakurdis.github.io/inertia/KOPRA/tpGate.js",
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/TP_GATE.fst",
+    "useOriginalPivot": true
+}
+    ],
+  "Id": "{b5ec1654-ba38-48b5-b21f-db4128e98d4b}",
+  "Version": 133
+}
