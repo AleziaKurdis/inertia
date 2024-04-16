@@ -1154,6 +1154,28 @@
                 "blue": 0
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{2743d407-b0d3-4bf3-86f4-99a797231ffc}",
+            "type": "Model",
+            "position": {"x":-3188.366943359375,"y":-3976.20068359375,"z":-4515.3251953125},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752},
+            "name": "AREA 3 - BRIDGE",
+            "locked": true,
+            "dimensions": {
+                "x": 14.130802154541016,
+                "y": 2.8721909523010254,
+                "z": 14.130802154541016
+            },
+            "renderWithZones": [
+                "{79a7f88b-1466-488d-a06e-1d3a43f5b498}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/KOPRA/models/BASE_CORNER_BRIDGE.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
