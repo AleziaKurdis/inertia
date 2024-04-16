@@ -195,6 +195,27 @@
         }, "local");
         tpLandingItems.push(id);
         
+        //Zone for Optimal Particle
+        id = Entities.addEntity({
+            "type":"Zone",
+            "name": "ZONE-PARTICLE-LANDING " + userData.landingBay,
+            "parentID": entityID,
+            "localPosition": {"x":0, "y":0, "z":0},
+            "renderWithZones": properties.renderWithZones,
+            "dimensions":{
+                "x":800,
+                "y":800,
+                "z":800
+            },
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere"
+        }, "local");
+        tpLandingItems.push(id);
+        let idZoneParticle = [];
+        idZoneParticle.push(id);
+        
         //tpfx & sound
         id = Entities.addEntity({
             "type": "ParticleEffect",
@@ -208,7 +229,7 @@
                 "y": 13.238809585571289,
                 "z": 13.238809585571289
             },
-            "renderWithZones": properties.renderWithZones,
+            "renderWithZones": idZoneParticle,
             "grab": {
                 "grabbable": false
             },
