@@ -203,9 +203,9 @@
             "localPosition": {"x":0, "y":0, "z":0},
             "renderWithZones": properties.renderWithZones,
             "dimensions":{
-                "x":800,
-                "y":800,
-                "z":800
+                "x":700,
+                "y":700,
+                "z":700
             },
             "grab":{
                 "grabbable":false
