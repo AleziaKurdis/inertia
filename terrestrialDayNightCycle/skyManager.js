@@ -25,12 +25,42 @@
     var hasAlreadyShutdown = false;
     
     var thisEntity;
-    var UNIVERSE_SOUND = "http://metaverse.bashora.com/sounds/DesertWindAmbient.mp3";
+    var UNIVERSE_SOUND = ROOT + "sounds/DesertWindAmbient.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.1;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
 
-    var DAY_DURATION_IN_SEC = 19 * 3600; //D19
+    
+    var DEFAULT_DAY = 19;
+
+    function getDayDuration() {
+        var index;
+        var obj;
+        var objResult = {};
+        var tmp;
+        var thisLocation = location.href;
+        var theParam = thisLocation.split("?");
+        if (theParam.length < 2) {
+            return DEFAULT_DAY; 
+        } else {
+            var items = theParam[1].split("&");
+            if (items.length !== 0) {
+                for (index = 0; index < items.length; index++) {
+                    tmp = items[index].split("=");
+                    objResult[tmp[0]] = tmp[1];
+                }
+                if (objResult.d !== undefined) {
+                    return parseInt(objResult.d, 10);
+                } else { 
+                    return DEFAULT_DAY;
+                }
+            } else {
+                return DEFAULT_DAY;
+            }
+        }
+    }
+
+    var DAY_DURATION_IN_SEC = getDayDuration() * 3600; //get the value from the parameter "d" in the url. 
 
     //Blindspot are place where you want the wind sound to be turn off. 
     //The occultation radius is pure silence, 
@@ -226,12 +256,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.3,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SL001_CLOUDY_SUNRISE.jpg"
+              "ambientURL": ROOT + "skies360/SL001_CLOUDY_SUNRISE.jpg"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SL001_CLOUDY_SUNRISE.jpg"
+              "url": ROOT + "skies360/SL001_CLOUDY_SUNRISE.jpg"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -267,12 +297,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.01,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKYGEN02.jpg"
+              "ambientURL": ROOT + "skies360/SKYGEN02.jpg"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKYGEN02.jpg"
+              "url": ROOT + "skies360/SKYGEN02.jpg"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -308,12 +338,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.5,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SL003_SANDY_SUNSET.jpg"
+              "ambientURL": ROOT + "skies360/SL003_SANDY_SUNSET.jpg"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SL003_SANDY_SUNSET.jpg"
+              "url": ROOT + "skies360/SL003_SANDY_SUNSET.jpg"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -349,12 +379,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.5,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/xoGVD3X.jpg"
+              "ambientURL": ROOT + "skies360/SUPER_DAY.jpg"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/xoGVD3X.jpg"
+              "url": ROOT + "skies360/SUPER_DAY.jpg"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -390,12 +420,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.35,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-E.png"
+              "ambientURL": ROOT + "skies360/SKY_SUNSET_10-2018-E.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-E.png"
+              "url": ROOT + "skies360/SKY_SUNSET_10-2018-E.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -431,12 +461,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.03,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_DUSK_10-2018-B.png"
+              "ambientURL": ROOT + "skies360/SKY_DUSK_10-2018-B.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_DUSK_10-2018-B.png"
+              "url": ROOT + "skies360/SKY_DUSK_10-2018-B.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -472,12 +502,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.25,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-E.png"
+              "ambientURL": ROOT + "skies360/SKY_MORNING_10-2018-E.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-E.png"
+              "url": ROOT + "skies360/SKY_MORNING_10-2018-E.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -513,12 +543,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.2,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SL002_SUNNY_13H.jpg"
+              "ambientURL": ROOT + "skies360/SL002_SUNNY_13H.jpg"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SL002_SUNNY_13H.jpg"
+              "url": ROOT + "skies360/SL002_SUNNY_13H.jpg"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -554,12 +584,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.32,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-C.png"
+              "ambientURL": ROOT + "skies360/SKY_SUNSET_10-2018-C.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-C.png"
+              "url": ROOT + "skies360/SKY_SUNSET_10-2018-C.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -595,12 +625,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.2,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-A.png"
+              "ambientURL": ROOT + "skies360/SKY_MORNING_10-2018-A.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-A.png"
+              "url": ROOT + "skies360/SKY_MORNING_10-2018-A.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -636,12 +666,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.45,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-D.png"
+              "ambientURL": ROOT + "skies360/SKY_DAY_10-2018-D.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-D.png"
+              "url": ROOT + "skies360/SKY_DAY_10-2018-D.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -677,12 +707,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.19,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-A.png"
+              "ambientURL": ROOT + "skies360/SKY_SUNSET_10-2018-A.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-A.png"
+              "url": ROOT + "skies360/SKY_SUNSET_10-2018-A.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -718,12 +748,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.1,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_DUSK_10-2018-A.png"
+              "ambientURL": ROOT + "skies360/SKY_DUSK_10-2018-A.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_DUSK_10-2018-A.png"
+              "url": ROOT + "skies360/SKY_DUSK_10-2018-A.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -759,12 +789,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.35,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-C.png"
+              "ambientURL": ROOT + "skies360/SKY_MORNING_10-2018-C.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-C.png"
+              "url": ROOT + "skies360/SKY_MORNING_10-2018-C.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -800,12 +830,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.6,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-F.png"
+              "ambientURL": ROOT + "skies360/SKY_DAY_10-2018-F.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-F.png"
+              "url": ROOT + "skies360/SKY_DAY_10-2018-F.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -841,12 +871,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.24,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-B.png"
+              "ambientURL": ROOT + "skies360/SKY_SUNSET_10-2018-B.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_SUNSET_10-2018-B.png"
+              "url": ROOT + "skies360/SKY_SUNSET_10-2018-B.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -882,12 +912,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.35,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-B.png"
+              "ambientURL": ROOT + "skies360/SKY_MORNING_10-2018-B.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_MORNING_10-2018-B.png"
+              "url": ROOT + "skies360/SKY_MORNING_10-2018-B.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -923,12 +953,12 @@
            "ambientLightMode": "enabled",
            "ambientLight": {
               "ambientIntensity": 0.4,
-              "ambientURL": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-C.png"
+              "ambientURL": ROOT + "skies360/SKY_DAY_10-2018-C.png"
            },
            "skyboxMode": "enabled",
            "skybox": {
               "color": { "red": 255, "green": 255, "blue": 255 },
-              "url": "http://metaverse.bashora.com/skyboxes/SKY_DAY_10-2018-C.png"
+              "url": ROOT + "skies360/SKY_DAY_10-2018-C.png"
            },
            "hazeMode": "enabled",
            "haze": {
@@ -956,7 +986,7 @@
         properties.position = universeCenter;
         properties.dimensions = {"x": universeDimensions.x - 100, "y": universeDimensions.y - 100, "z": universeDimensions.z - 100};
         properties.shapeType = "cylinder-y";
-        properties.name = "RANTAR-SKY";
+        properties.name = "SKY";
         properties.keyLight.shadowBias = 0.02;
         properties.keyLight.shadowMaxDistance = 200;
         
