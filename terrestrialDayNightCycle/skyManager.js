@@ -25,10 +25,6 @@
     var hasAlreadyShutdown = false;
     
     var thisEntity;
-    var UNIVERSE_SOUND = ROOT + "sounds/DesertWindAmbient.mp3";
-    var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.1;
-    var universeSound, universeSoundInjector;
-    var univerSoundPlaying = 0;
     var dayDurationInSec;
     var DEFAULT_DAY = 19;
 
@@ -58,58 +54,24 @@
         }
     }
 
-    //Blindspot are place where you want the wind sound to be turn off. 
-    //The occultation radius is pure silence, 
-    //and the influence radius is where it start to decrease
-    var blindspots = [
-    /*    {
-            "name": "RANTAR-CANTINA",
-            "position": {
-                "x": -1790.68,
-                "y": 5009.76,
-                "z": -1231.97,
-             },
-            "occultationRadius": 8,
-            "influenceRadius": 14
-        }*/
-    ];
-    
     var skyID = Uuid.NULL;
     var universeCenter;
     var universeDimensions;
     
     this.preload = function(entityID) {
         thisEntity = entityID;
-        universeSound = SoundCache.getSound(UNIVERSE_SOUND);
-
         if (!isInitiated){
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
-                  if (universeSound.downloaded) {
-                    initiate(thisEntity);
-                } else {
-                    universeSound.ready.connect(onSoundReady);
-                }
-                
+                initiate(thisEntity);
             }
         }  
         
     };
 
-    function onSoundReady() {
-        universeSound.ready.disconnect(onSoundReady);
-        if (!isInitiated) {
-            initiate(thisEntity);
-        }
-    }
-
     this.enterEntity = function(entityID) {
         thisEntity = entityID;
-        if (!isInitiated){            
-            if (universeSound.downloaded) {
-                initiate(thisEntity);
-            } else {
-                universeSound.ready.connect(onSoundReady);
-            }
+        if (!isInitiated){
+            initiate(thisEntity);
         }
     };
 
@@ -136,11 +98,6 @@
             hasAlreadyShutdown = true;
             if (isInitiated){            
                 Script.update.disconnect(myTimer);
-                
-                if (univerSoundPlaying == 1) {
-                    universeSoundInjector.stop();
-                    univerSoundPlaying = 0;
-                }
                 isInitiated = false;
             }
             if (skyID !== Uuid.NULL) {
@@ -1021,10 +978,8 @@
         isInitiated = true; 
         hasAlreadyShutdown = false;
         
-        univerSoundPlaying = 0;
-        
         dayDurationInSec = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
-        print("dayDurationInSec: " + dayDurationInSec);
+        //print("dayDurationInSec: " + dayDurationInSec);
         var today = new Date();
         processTimer = today.getTime();
         
