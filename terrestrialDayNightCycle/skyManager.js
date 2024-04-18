@@ -29,17 +29,15 @@
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.1;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
-
-    
+    var DAY_DURATION_IN_SEC;
     var DEFAULT_DAY = 19;
 
-    function getDayDuration() {
+    function getDayDuration(scriptUrl) {
         var index;
         var obj;
         var objResult = {};
         var tmp;
-        var thisLocation = location.href;
-        var theParam = thisLocation.split("?");
+        var theParam = scriptUrl.split("?");
         if (theParam.length < 2) {
             return DEFAULT_DAY; 
         } else {
@@ -59,8 +57,6 @@
             }
         }
     }
-
-    var DAY_DURATION_IN_SEC = getDayDuration() * 3600; //get the value from the parameter "d" in the url. 
 
     //Blindspot are place where you want the wind sound to be turn off. 
     //The occultation radius is pure silence, 
@@ -1017,7 +1013,7 @@
 
     function initiate(EntID) {
         
-        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones", "script"]);
         universeCenter = properties.position;
         universeDimensions = properties.dimensions;
         renderWithZones = properties.renderWithZones;
@@ -1026,7 +1022,9 @@
         hasAlreadyShutdown = false;
         
         univerSoundPlaying = 0;
-
+        
+        DAY_DURATION_IN_SEC = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
+        print("DAY_DURATION_IN_SEC: " + DAY_DURATION_IN_SEC);
         var today = new Date();
         processTimer = today.getTime();
         
