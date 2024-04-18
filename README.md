@@ -39,3 +39,18 @@ JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json
 WEB: https://aleziakurdis.github.io/inertia/clocks/d24.html  
 WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true  
   
+# Terrestrial Day/Night Cycle Sky
+
+**D19 (Day duration of 19h)**  
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=19   
+  
+**D29 (Day duration of 29h)**   
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29 
+  
+**D24  (Day duration of 24h, Not Recommended since regular people will be stuck in the same time forever)**  
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=24  
+  
+**Installation**  
+Create a Zone, name it and set the dimensions. This zone will be your visibility zone for your place.
+Then add the script of your choice (D19, D29 or D24) in the "script" property of that zone entity.
+The script will manage the sky as a local entity.
