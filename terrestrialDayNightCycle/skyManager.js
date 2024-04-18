@@ -29,7 +29,7 @@
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.1;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
-    var DAY_DURATION_IN_SEC;
+    var dayDurationInSec;
     var DEFAULT_DAY = 19;
 
     function getDayDuration(scriptUrl) {
@@ -163,7 +163,7 @@
 
         //current rotation
         var DEGREES_TO_RADIANS = Math.PI / 180.0;
-		var curRotAngle = 360.0 - GetCurrentCycleValue(360.0, DAY_DURATION_IN_SEC);
+		var curRotAngle = 360.0 - GetCurrentCycleValue(360.0, dayDurationInSec);
 		var curAngle = { x: 0, y: curRotAngle, z: 0 };
         var curRotation = Quat.fromVec3Degrees(curAngle);
 		        
@@ -223,7 +223,7 @@
         sky[6][5] = 5;
         sky[7][5] = 1;
         
-        var periodOfDayBrute = GetCurrentCycleValue(8, DAY_DURATION_IN_SEC);
+        var periodOfDayBrute = GetCurrentCycleValue(8, dayDurationInSec);
         var periodOfDay = Math.floor(periodOfDayBrute);
         var fraction = periodOfDayBrute - periodOfDay;
         var transiFog = 0.0;
@@ -234,7 +234,7 @@
             transiFog = 1- ((1 - fraction)/0.10);
         }
         
-        var dayOfWeek = Math.floor(GetCurrentCycleValue(6, DAY_DURATION_IN_SEC * 6));
+        var dayOfWeek = Math.floor(GetCurrentCycleValue(6, dayDurationInSec * 6));
         
         var skyIndex = sky[periodOfDay][dayOfWeek];
         //print("SKY: " + skyIndex + "(" + periodOfDay + " | " + dayOfWeek + ") - FRACTION: " + fraction + " TRANSIFOG: " + transiFog);
@@ -1023,8 +1023,8 @@
         
         univerSoundPlaying = 0;
         
-        DAY_DURATION_IN_SEC = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
-        print("DAY_DURATION_IN_SEC: " + DAY_DURATION_IN_SEC);
+        dayDurationInSec = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
+        print("dayDurationInSec: " + dayDurationInSec);
         var today = new Date();
         processTimer = today.getTime();
         
