@@ -51,6 +51,7 @@ https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=
 https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=24  
   
 **Installation**  
-Create a Zone, name it and set the dimensions. This zone will be your visibility zone for your place.
-Then add the script of your choice (D19, D29 or D24) in the "script" property of that zone entity.
-The script will manage the sky as a local entity.
+Create a Zone, name it and set the dimensions. (The dimensions need to be larger than 30m).   
+This zone will be your visibility zone for your place.  
+Then add the script of your choice (D19, D29 or D24) in the "script" property of that zone entity.  
+The script will manage the sky as a local entity.  
