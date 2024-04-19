@@ -17,7 +17,7 @@
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
 
-    var UPDATE_TIMER_INTERVAL = 10000; // 2 sec 
+    var UPDATE_TIMER_INTERVAL = 10000; // 10 sec 
     var processTimer = 0;
 
     var renderWithZones = [];
@@ -25,6 +25,10 @@
     var hasAlreadyShutdown = false;
     
     var thisEntity;
+    var skyID = Uuid.NULL;
+    var universeCenter;
+    var universeDimensions;
+    
     var dayDurationInSec;
     var DEFAULT_DAY = 19;
 
@@ -54,10 +58,6 @@
         }
     }
 
-    var skyID = Uuid.NULL;
-    var universeCenter;
-    var universeDimensions;
-    
     this.preload = function(entityID) {
         thisEntity = entityID;
         if (!isInitiated){
@@ -78,10 +78,30 @@
     this.leaveEntity = function(entityID) {
         shutdown();
     };
-    
+
     this.unload = function(entityID) {
         shutdown();
-    };    
+    };
+
+    function initiate(EntID) {
+        
+        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones", "script"]);
+        universeCenter = properties.position;
+        universeDimensions = properties.dimensions;
+        renderWithZones = properties.renderWithZones;
+
+        isInitiated = true; 
+        hasAlreadyShutdown = false;
+        
+        dayDurationInSec = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
+        //print("dayDurationInSec: " + dayDurationInSec);
+        var today = new Date();
+        processTimer = today.getTime();
+        
+        manageSky();
+        
+        Script.update.connect(myTimer);
+    }
 
     function myTimer(deltaTime) {
         var today = new Date();
@@ -119,9 +139,8 @@
         var skyproperty = [];
 
         //current rotation
-        var DEGREES_TO_RADIANS = Math.PI / 180.0;
 		var curRotAngle = 360.0 - GetCurrentCycleValue(360.0, dayDurationInSec);
-		var curAngle = { x: 0, y: curRotAngle, z: 0 };
+		var curAngle = {"x": 0.0, "y": curRotAngle, "z": 0.0};
         var curRotation = Quat.fromVec3Degrees(curAngle);
 		        
         //current sky index
@@ -967,27 +986,6 @@
             Entities.editEntity(skyID, properties);
         }
     }
-
-    function initiate(EntID) {
-        
-        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones", "script"]);
-        universeCenter = properties.position;
-        universeDimensions = properties.dimensions;
-        renderWithZones = properties.renderWithZones;
-
-        isInitiated = true; 
-        hasAlreadyShutdown = false;
-        
-        dayDurationInSec = getDayDuration(properties.script) * 3600; //get the value from the parameter "d" in the url. 
-        //print("dayDurationInSec: " + dayDurationInSec);
-        var today = new Date();
-        processTimer = today.getTime();
-        
-        manageSky();
-        
-        Script.update.connect(myTimer);
-    }
-    
 
     function positionIsInsideEntityBounds(entityID, targetPosition) {
         targetPosition = targetPosition || MyAvatar.position;
