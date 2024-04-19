@@ -956,7 +956,7 @@
         var properties = skyproperty[skyIndex];
         properties.rotation = curRotation;
         properties.position = universeCenter;
-        properties.dimensions = {"x": universeDimensions.x - 100, "y": universeDimensions.y - 100, "z": universeDimensions.z - 100};
+        properties.dimensions = {"x": universeDimensions.x - 10, "y": universeDimensions.y - 10, "z": universeDimensions.z - 10};
         properties.shapeType = "cylinder-y";
         properties.name = "SKY";
         properties.keyLight.shadowBias = 0.02;
