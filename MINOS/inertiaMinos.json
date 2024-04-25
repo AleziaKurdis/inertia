@@ -42,9 +42,9 @@
             "name": "CIRCULABYRINTH",
             "locked": true,
             "dimensions": {
-                "x": 1301.1,
-                "y": 1074.8215,
-                "z": 1202.1038
+                "x": 353.1601,
+                "y": 353.1601,
+                "z": 254.2083
             },
             "renderWithZones": [
                 "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
