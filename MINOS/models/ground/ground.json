@@ -1,0 +1,10 @@
+{"materials":[{
+    "albedo": [1, 1, 1],
+    "albedoMap": "BASE_GROUND_DARK_COLOR.jpg",
+    "roughness": 0.56,
+    "metallic": 0.01, 
+    "normalMap": "BASE_GROUND_DARK_NORMAL.jpg",
+    "cullFaceMode": "CULL_NONE", 
+    "model": "hifi_pbr",
+    "defaultFallthrough": true
+}]}
