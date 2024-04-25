@@ -31,7 +31,7 @@
     
     var D29_DAY_DURATION = 104400; //sec
     var D19_DAY_DURATION = 68400;//sec
-    var STAR_DIAMETER = 300; //m
+    var STAR_DIAMETER = 1200; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
@@ -86,7 +86,7 @@
         blackStarId = Entities.addEntity({
                 "name": "BLACK-STAR",
                 "parentID": thisEntity,
-                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
+                "dimensions": {"x": STAR_DIAMETER-30, "y": STAR_DIAMETER-30, "z": STAR_DIAMETER-30},
                 "localPosition": currentBlackSunPosition,
                 "type": "Shape",
                 "shape": "Sphere",
@@ -162,11 +162,11 @@
     function getCurrentSunPosition() {//elevation to adjust duration 400x sec
         var elevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 3))); //un cycle de 3 jours
         var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
-        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -2600});
+        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -8800});
 
         var blackElevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION * 3))); //un cycle de 3 jours
         var blackAzimuth = GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION); //un tour par jour D29
-        var blackLocalPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": blackElevation,"y": blackAzimuth, "z": 0}), {"x": 0,"y": 0, "z": -2300});
+        var blackLocalPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": blackElevation,"y": blackAzimuth, "z": 0}), {"x": 0,"y": 0, "z": -7300});
 
         return { 
                     "elevation" : elevation,
