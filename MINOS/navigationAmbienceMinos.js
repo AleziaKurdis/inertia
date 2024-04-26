@@ -144,7 +144,7 @@
 
     function generateSky(entityID) {
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
-        var skyTextureUrl = ROOT + "images/KOPRA_SKY.jpg";
+        var skyTextureUrl = ROOT + "images/MINOS_SKY.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
 
@@ -354,7 +354,7 @@
             var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
             //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
-            if ( d29CurrentHour > 18 && d29CurrentHour < 21 ) {
+            if ( d29CurrentHour > 2 && d29CurrentHour < 5 ) {
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
