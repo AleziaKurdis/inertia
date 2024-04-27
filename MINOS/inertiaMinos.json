@@ -58,6 +58,37 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/CIRCULABYRINTH.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/singularityMinos.js"
+        },
+        {
+            "id": "{acb0e9da-7417-4b50-8db9-96cb1e4be087}",
+            "type": "Shape",
+            "locked": true,
+            "visible": false,
+            "name": "GRAVITRON",
+            "dimensions": {
+                "x": 10,
+                "y": 10,
+                "z": 10
+            },
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/MINOS/cylindricalGravityWithHollowGravity.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "collisionless": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
