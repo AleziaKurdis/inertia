@@ -74,7 +74,47 @@
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones,
+                "damping": 0,
+                "angularDamping": 0,
+                "angularVelocity": {"x": 0.0, "y": 0.03, "z": 0.2}
+        }, "local");
+
+        var compagnonStarId = Entities.addEntity({
+                "name": "STAR B",
+                "parentID": starId,
+                "dimensions": {"x": STAR_DIAMETER/5, "y": STAR_DIAMETER/5, "z": STAR_DIAMETER/5},
+                "localPosition": {"x": 0, "y": 0, "z": (-STAR_DIAMETER * 3)},
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": renderWithZones,
                 "damping": 0
+        }, "local");
+        
+        var compagnonMatContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "plasma",
+                    "albedo": [1, 1, 1],
+                    "metallic": 0.01,
+                    "roughness": 1,
+                    "emissive": [2, 2, 2],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+
+        var compagnonMatId = Entities.addEntity({
+            "type": "Material",
+            "parentID": compagnonStarId,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-material",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(compagnonMatContent)
         }, "local");
 
         updateStar();
@@ -194,14 +234,6 @@
             lightTableID = Uuid.NULL;
         }
 
-/*        var i;
-        for (i = 0; i < asteroidIds.length; i++) {
-            if (asteroidIds[i] !== Uuid.NULL) {
-                Entities.deleteEntity(asteroidIds[i]);
-                asteroidIds[i] = Uuid.NULL;
-            }
-        }
-*/        
         Script.update.disconnect(myTimer);
     };
 
