@@ -60,35 +60,61 @@
             "script": "https://aleziakurdis.github.io/inertia/MINOS/singularityMinos.js"
         },
         {
-            "id": "{acb0e9da-7417-4b50-8db9-96cb1e4be087}",
-            "type": "Shape",
-            "locked": true,
-            "visible": false,
-            "name": "GRAVITRON",
-            "dimensions": {
-                "x": 10,
-                "y": 10,
-                "z": 10
-            },
-            "position": {
+            "id": "{19aad4a0-e048-4fbb-92f1-f62795cdad3e}",
+            "type": "Zone",
+            "position":  {
                 "x": -4000,
                 "y": -4000,
                 "z": -4000
             },
+            "name": "NOFLY_ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 350,
+                "y": 254.2082977294922,
+                "z": 350
+            },
+            "rotation": {"x":0.7071067690849304,"y":0,"z":0,"w":0.7071067690849304},
             "renderWithZones": [
                 "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
             ],
             "grab": {
                 "grabbable": false
             },
-            "script": "https://aleziakurdis.github.io/inertia/MINOS/cylindricalGravityWithHollowGravity.js",
-            "color": {
-                "red": 0,
-                "green": 0,
-                "blue": 0
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
+            "script": "https://aleziakurdis.github.io/inertia/MINOS/cylindricalGravityWithHollowGravity.js"
+        },
+        {
+            "id": "{f7a52d22-4c27-40fa-a99d-61b14def538b}",
+            "type": "Zone",
+            "position":  {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
             },
-            "shape": "Cube",
-            "collisionless": true
+            "name": "FLY_ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 260,
+                "y": 254.2082977294922,
+                "z": 260
+            },
+            "rotation": {"x":0.7071067690849304,"y":0,"z":0,"w":0.7071067690849304},
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "flyingAllowed": true,
+            "ghostingAllowed": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
