@@ -1,8 +1,8 @@
 {"materials":[{
-    "albedo": [0.1, 0.1, 0.1],
-    "roughness": 0.49,
+    "albedo": [0, 0, 0],
+    "roughness": 0.3,
     "metallic": 0.01, 
-    "normalMap": "BROKENWALL_normal.jpg",
+    "normalMap": "Concrete6_512_normal.jpg",
     "cullFaceMode": "CULL_NONE", 
     "model": "hifi_pbr",
     "defaultFallthrough": true
