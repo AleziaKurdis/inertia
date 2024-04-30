@@ -20,10 +20,10 @@
                  "z": -4000
             },         
             "rotation":{
-                "x":-1.52587890625e-5,
-                "y":-1.52587890625e-5,
-                "z":-1.52587890625e-5,
-                "w":1
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
             },
             "grab":{
                 "grabbable":false
@@ -115,6 +115,174 @@
             "shapeType": "cylinder-y",
             "flyingAllowed": true,
             "ghostingAllowed": true
+        },
+        {
+            "id": "{c541ac83-98d5-4fce-8f21-d29b3fbb5154}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "name": "TOWER OF GREEN",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
+        },
+        {
+            "id": "{2d569b62-c9f8-45ca-903e-bdce121d30cc}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":0,"y":0,"z":0.5086658000946045,"w":0.8609640598297119},
+            "name": "TOWER OF YELLOW",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
+        },
+        {
+            "id": "{b7fb9068-92ef-4142-af8a-9751c360a41b}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":5.983468298609296e-8,"y":1.5530019936704775e-8,"z":-0.8620717525482178,"w":-0.5067862868309021},
+            "name": "TOWER OF RED",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
+        },
+        {
+            "id": "{48c01795-2fcf-428a-94e3-23df0e048123}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":0,"y":0,"z":1,"w":0},
+            "name": "TOWER OF PUPLE",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
+        },
+        {
+            "id": "{71281a5f-2746-4837-80d4-545318b99067}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":1.539944705086782e-8,"y":5.98684266606142e-8,"z":-0.8609640598297119,"w":0.5086658000946045},
+            "name": "TOWER OF BLUE",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
+        },
+        {
+            "id": "{a1b30c85-a3bc-434c-8e63-f6ad66f7fef4}",
+            "type": "Model",
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "rotation": {"x":0,"y":0,"z":-0.5090413689613342,"w":0.8607420325279236},
+            "name": "TOWER OF CYAN",
+            "locked": true,
+            "dimensions": {
+                "x": 13,
+                "y": 20.57354736328125,
+                "z": 13
+            },
+            "renderWithZones": [
+                "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "useOriginalPivot": true,
+            "script": "",
+            "userData": ""
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",

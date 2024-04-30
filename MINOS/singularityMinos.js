@@ -82,7 +82,7 @@
         var compagnonStarId = Entities.addEntity({
                 "name": "STAR B",
                 "parentID": starId,
-                "dimensions": {"x": STAR_DIAMETER/5, "y": STAR_DIAMETER/5, "z": STAR_DIAMETER/5},
+                "dimensions": {"x": STAR_DIAMETER/4, "y": STAR_DIAMETER/4, "z": STAR_DIAMETER/4},
                 "localPosition": {"x": 0, "y": 0, "z": (-STAR_DIAMETER * 3)},
                 "type": "Shape",
                 "shape": "Sphere",
@@ -99,7 +99,7 @@
                     "albedo": [1, 1, 1],
                     "metallic": 0.01,
                     "roughness": 1,
-                    "emissive": [2, 2, 2],
+                    "emissive": [2, 2, 3],
                     "cullFaceMode": "CULL_NONE",
                     "model": "hifi_pbr"
                 }
