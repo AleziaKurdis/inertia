@@ -82,7 +82,8 @@
         var compagnonStarId = Entities.addEntity({
                 "name": "STAR B",
                 "parentID": starId,
-                "dimensions": {"x": STAR_DIAMETER/4, "y": STAR_DIAMETER/4, "z": STAR_DIAMETER/4},
+                //"dimensions": {"x": STAR_DIAMETER/4, "y": STAR_DIAMETER/4, "z": STAR_DIAMETER/4},
+                "dimensions": {"x": STAR_DIAMETER*0.618, "y": STAR_DIAMETER*0.618, "z": STAR_DIAMETER*0.618},
                 "localPosition": {"x": 0, "y": 0, "z": (-STAR_DIAMETER * 3)},
                 "type": "Shape",
                 "shape": "Sphere",
