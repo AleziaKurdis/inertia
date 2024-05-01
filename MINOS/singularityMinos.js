@@ -76,7 +76,7 @@
                 "renderWithZones": renderWithZones,
                 "damping": 0,
                 "angularDamping": 0,
-                "angularVelocity": {"x": 0.0, "y": 0.03, "z": 0.2}
+                "angularVelocity": {"x": 0.2, "y": 0.03, "z": 0.0}
         }, "local");
 
         var compagnonStarId = Entities.addEntity({
