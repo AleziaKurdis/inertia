@@ -19,7 +19,7 @@
         if (properties.userData === "") {
             userData = {
                 "hue": 0,
-                "tpHeight": 140
+                "tpHeight": 146
             };
             Entities.editEntity(entityID, {"userData": JSON.stringify(userData)});
         } else {
@@ -33,7 +33,7 @@
         scriptForTPdown = ROOT + "towerTeleportDown.js";
         scriptForTPup = ROOT + "towerTeleportUp.js";
     
-        const FLOOR_LEVEL = 160; //m
+        const FLOOR_LEVEL = 156; //m
     
         //material Glow
         let bloomFactor = 2.7;

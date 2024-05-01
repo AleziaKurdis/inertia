@@ -142,7 +142,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 120, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 120, \"tpHeight\": 146 }"
         },
         {
             "id": "{2d569b62-c9f8-45ca-903e-bdce121d30cc}",
@@ -170,7 +170,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 60, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 60, \"tpHeight\": 146 }"
         },
         {
             "id": "{b7fb9068-92ef-4142-af8a-9751c360a41b}",
@@ -198,7 +198,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 0, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 0, \"tpHeight\": 146 }"
         },
         {
             "id": "{48c01795-2fcf-428a-94e3-23df0e048123}",
@@ -226,7 +226,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 300, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 300, \"tpHeight\": 146 }"
         },
         {
             "id": "{71281a5f-2746-4837-80d4-545318b99067}",
@@ -254,7 +254,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 240, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 240, \"tpHeight\": 146 }"
         },
         {
             "id": "{a1b30c85-a3bc-434c-8e63-f6ad66f7fef4}",
@@ -282,7 +282,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
-            "userData": "{ \"hue\": 180, \"tpHeight\": 140 }"
+            "userData": "{ \"hue\": 180, \"tpHeight\": 146 }"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
