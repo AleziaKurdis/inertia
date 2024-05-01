@@ -31,7 +31,7 @@
         colorEnd = hslToRgb((userData.hue/360), 1, 0.3);
         
         scriptForTPdown = ROOT + "towerTeleportDown.js";
-        criptForTPup = ROOT + "towerTeleportUp.js";
+        scriptForTPup = ROOT + "towerTeleportUp.js";
     
         const FLOOR_LEVEL = 200; //m
     
