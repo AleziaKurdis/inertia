@@ -29,7 +29,7 @@
     const MAX_RANGE_FOR_BOLIDES = 100; //meters
     const BOLIDE_NAME ="%%!!-BOLIDE-AK-!!%%";
     const SCENE_RADIUS = 2600; //meters
-    const BOLIDE_INFLUENCE_RADIUS = 1200; //meters
+    const BOLIDE_INFLUENCE_RADIUS = 2000; //meters
     const ENTITY_HOST_TYPE = "avatar";
 
     let bolides = [];
