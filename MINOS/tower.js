@@ -19,7 +19,7 @@
         if (properties.userData === "") {
             userData = {
                 "hue": 0,
-                "tpHeight": 40
+                "tpHeight": 140
             };
             Entities.editEntity(entityID, {"userData": JSON.stringify(userData)});
         } else {
