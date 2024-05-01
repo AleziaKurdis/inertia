@@ -33,7 +33,7 @@
         scriptForTPdown = ROOT + "towerTeleportDown.js";
         scriptForTPup = ROOT + "towerTeleportUp.js";
     
-        const FLOOR_LEVEL = 200; //m
+        const FLOOR_LEVEL = 160; //m
     
         //material Glow
         let bloomFactor = 2.7;
