@@ -10,7 +10,7 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
-    const ROOT = Script.resolvePath('').split("tpLanding.js")[0];
+    const ROOT = Script.resolvePath('').split("tower.js")[0];
     let towerItems = [];
 
     this.preload = function(entityID) {
@@ -124,7 +124,7 @@
             "localPosition": {"x": 0, "y": FLOOR_LEVEL, "z": 0},
             "name": "Teleporter-FLOOR",
             "dimensions": {"x": 3, "y": 4, "z": 3},
-            "visible": true,
+            "visible": false,
             "canCastShadow": false,
             "collisionless": true,
             "script": scriptForTPup,
@@ -143,7 +143,7 @@
             "localPosition": {"x": 0, "y": userData.tpHeight, "z": 0},
             "name": "Teleporter-TOWER",
             "dimensions": {"x": 3, "y": 4, "z": 3},
-            "visible": true,
+            "visible": false,
             "canCastShadow": false,
             "collisionless": true,
             "script": scriptForTPdown,
