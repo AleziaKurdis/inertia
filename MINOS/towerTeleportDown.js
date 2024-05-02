@@ -19,7 +19,7 @@
 
     this.enterEntity = function(entityID) {
         //if (!justTP) {
-            MyAvatar.position = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, {"x": 0, "y": -14.75, "z": 0}));
+            MyAvatar.position = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, {"x": 0, "y": -15, "z": -3}));
         //}
     }; 
     
