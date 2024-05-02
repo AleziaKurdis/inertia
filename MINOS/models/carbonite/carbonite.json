@@ -1,6 +1,6 @@
 {"materials":[{
     "albedo": [1, 1, 1],
-    "roughness": 0.13,
+    "roughness": 0.17,
     "metallic": 1, 
     "normalMap": "CARBONITE_NORMAL.jpg",
     "cullFaceMode": "CULL_NONE", 
