@@ -15,7 +15,7 @@
 
     this.preload = function(entityID) {
         let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl, scriptForTP;
-        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
+        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData", "rotation"]);
         if (properties.userData === "") {
             userData = {
                 "hue": 0,
@@ -153,52 +153,51 @@
         }, "local");
         towerItems.push(id);
         
-        /*
-        //tpfx & sound
+        //tpfx & sound UP
         id = Entities.addEntity({
             "type": "ParticleEffect",
-            "name": "TP_ARRIVAL-FX " + userData.landingBay,
+            "name": "TP_FLOOR FX " + userData.hue,
             "parentID": entityID,
-            "localPosition": {"x":-2.05, "y":1.8, "z":2.7},
+            "localPosition": {"x": 0, "y": FLOOR_LEVEL - 2, "z": 0},
             "localRotation": Quat.fromVec3Degrees({"x":0, "y":0, "z":0}),
             "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
             "dimensions": {
-                "x": 13.238809585571289,
-                "y": 13.238809585571289,
-                "z": 13.238809585571289
+                "x": 6.745000839233398,
+                "y": 6.745000839233398,
+                "z": 6.745000839233398
             },
-            "renderWithZones": idZoneParticle,
+            "renderWithZones": properties.renderWithZones,
             "grab": {
                 "grabbable": false
             },
             "script": ROOT + "soundplayer.js",
-            "shapeType": "box",
+            "shapeType": "cylinder-y",
             "color": {"red": color[0], "green": color[1], "blue": color[2]},
-            "alpha": 0.4,
-            "textures": ROOT + "images/PARTICULE_OPERA_007.png",
-            "maxParticles": 1536,
-            "lifespan": 2.7,
-            "emitRate": 100,
-            "emitSpeed": 0,
+            "alpha": 0.2,
+            "textures": ROOT + "images/PARTICLE_OPERA_121.png",
+            "maxParticles": 600,
+            "lifespan": 1.5,
+            "emitRate": 400,
+            "emitSpeed": 0.1,
             "emitRadiusStart": 0,
-            "speedSpread": 0,
+            "speedSpread": 0.2,
             "emitOrientation": {
-                "x": -0.0000152587890625,
-                "y": -0.0000152587890625,
-                "z": -0.0000152587890625,
+                "x": 0,
+                "y": 0,
+                "z": 0,
                 "w": 1
             },
             "emitDimensions": {
-                "x": 0.7,
-                "y": 1.5,
-                "z": 0.01
+                "x": 1,
+                "y": 0.1,
+                "z": 1
             },
             "polarFinish": 3.1415927410125732,
-            "emitAcceleration": Vec3.multiplyQbyV(properties.rotation, { "x": 0, "y": 0, "z": -0.9}),
-            "particleRadius": 2,
-            "radiusSpread": 0.3,
-            "radiusStart": 1,
-            "radiusFinish": 2,
+            "emitAcceleration": Vec3.multiplyQbyV(properties.rotation, { "x": 0, "y": 2, "z": 0}),
+            "particleRadius": 0.5,
+            "radiusSpread": 0.1,
+            "radiusStart": 0.5,
+            "radiusFinish": 0.5,
             "colorSpread": {
                 "red": 0,
                 "green": 0,
@@ -206,17 +205,76 @@
             },
             "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
             "colorFinish": {"red": colorEnd[0], "green": colorEnd[1], "blue": colorEnd[2]},
-            "alphaSpread": 0.1,
-            "alphaStart": 0.8,
+            "alphaSpread": 0.01,
+            "alphaStart": 0.2,
             "alphaFinish": 0,
             "emitterShouldTrail": true,
-            "spinSpread": 0.05000000074505806,
-            "spinStart": -0.17000000178813934,
-            "spinFinish": 0.17000000178813934
+            "spinStart": null,
+            "spinFinish": null
         }, "local");
         towerItems.push(id);
-        
-        */
+
+        //tpfx & sound DOWN
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "name": "TP_TOWER FX " + userData.hue,
+            "parentID": entityID,
+            "localPosition": {"x": 0, "y": userData.tpHeight + 2, "z": 0},
+            "localRotation": Quat.fromVec3Degrees({"x":0, "y":0, "z":0}),
+            "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+            "dimensions": {
+                "x": 6.745000839233398,
+                "y": 6.745000839233398,
+                "z": 6.745000839233398
+            },
+            "renderWithZones": properties.renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "script": ROOT + "soundplayer.js",
+            "shapeType": "cylinder-y",
+            "color": {"red": color[0], "green": color[1], "blue": color[2]},
+            "alpha": 0.2,
+            "textures": ROOT + "images/PARTICLE_OPERA_121.png",
+            "maxParticles": 600,
+            "lifespan": 1.5,
+            "emitRate": 400,
+            "emitSpeed": 0.1,
+            "emitRadiusStart": 0,
+            "speedSpread": 0.2,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 1,
+                "y": 0.1,
+                "z": 1
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": Vec3.multiplyQbyV(properties.rotation, { "x": 0, "y": -2, "z": 0}),
+            "particleRadius": 0.5,
+            "radiusSpread": 0.1,
+            "radiusStart": 0.5,
+            "radiusFinish": 0.5,
+            "colorSpread": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
+            "colorFinish": {"red": colorEnd[0], "green": colorEnd[1], "blue": colorEnd[2]},
+            "alphaSpread": 0.01,
+            "alphaStart": 0.2,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinStart": null,
+            "spinFinish": null
+        }, "local");
+        towerItems.push(id);
+
     };
 
     this.unload = function(entityID) {
