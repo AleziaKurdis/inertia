@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "rusting-textured-metal_albedo.jpg",
+         "metallicMap": "rusting-textured-metal_metallic.jpg",
+         "roughnessMap": "rusting-textured-metal_roughness.jpg",
+         "normalMap": "rusting-textured-metal_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
