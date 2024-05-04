@@ -209,8 +209,10 @@
             "alphaStart": 0.2,
             "alphaFinish": 0,
             "emitterShouldTrail": true,
-            "spinStart": null,
-            "spinFinish": null
+            "particleSpin": 0.0,
+            "spinSpread": Math.PI,
+            "spinStart": 0.0,
+            "spinFinish": 0.0
         }, "local");
         towerItems.push(id);
 
@@ -270,8 +272,10 @@
             "alphaStart": 0.2,
             "alphaFinish": 0,
             "emitterShouldTrail": true,
-            "spinStart": null,
-            "spinFinish": null
+            "particleSpin": 0.0,
+            "spinSpread": Math.PI,
+            "spinStart": 0.0,
+            "spinFinish": 0.0
         }, "local");
         towerItems.push(id);
 
