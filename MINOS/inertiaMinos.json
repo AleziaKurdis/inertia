@@ -127,11 +127,7 @@
             "rotation": {"x":0,"y":0,"z":0,"w":1},
             "name": "TOWER OF GREEN",
             "locked": true,
-            "dimensions": {
-                "x": 13,
-                "y": 20.57354736328125,
-                "z": 13
-            },
+            "dimensions": {"x":31.32567024230957,"y":124.90079498291016,"z":31.32567024230957},
             "renderWithZones": [
                 "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
             ],
@@ -139,7 +135,7 @@
                 "grabbable": false
             },
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/TOWER.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
             "userData": "{ \"hue\": 120, \"tpHeight\": -144 }"
@@ -183,11 +179,7 @@
             "rotation": {"x":5.983468298609296e-8,"y":1.5530019936704775e-8,"z":-0.8620717525482178,"w":-0.5067862868309021},
             "name": "TOWER OF RED",
             "locked": true,
-            "dimensions": {
-                "x": 13,
-                "y": 20.57354736328125,
-                "z": 13
-            },
+            "dimensions": {"x":31.32567024230957,"y":124.90079498291016,"z":31.32567024230957},
             "renderWithZones": [
                 "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
             ],
@@ -195,7 +187,7 @@
                 "grabbable": false
             },
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/TOWER.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
             "userData": "{ \"hue\": 0, \"tpHeight\": -144 }"
@@ -239,11 +231,7 @@
             "rotation": {"x":1.539944705086782e-8,"y":5.98684266606142e-8,"z":-0.8609640598297119,"w":0.5086658000946045},
             "name": "TOWER OF BLUE",
             "locked": true,
-            "dimensions": {
-                "x": 13,
-                "y": 20.57354736328125,
-                "z": 13
-            },
+            "dimensions": {"x":31.32567024230957,"y":124.90079498291016,"z":31.32567024230957},
             "renderWithZones": [
                 "{c92b240f-578c-49d5-85fd-1f2abe819a3c}"
             ],
@@ -251,7 +239,7 @@
                 "grabbable": false
             },
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/OBSERVATORY.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/MINOS/models/TOWER.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/MINOS/tower.js",
             "userData": "{ \"hue\": 240, \"tpHeight\": -144 }"
