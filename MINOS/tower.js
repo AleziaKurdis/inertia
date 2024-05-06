@@ -14,7 +14,7 @@
     let towerItems = [];
 
     this.preload = function(entityID) {
-        let color, colorLight, colorStart, colorEnd, name, model, userData, id, signImageUrl, scriptForTP;
+        let color, colorLight, colorStart, colorEnd, name, model, userData, id;
         let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData", "rotation"]);
         if (properties.userData === "") {
             userData = {
@@ -30,9 +30,11 @@
         colorStart = hslToRgb((userData.hue/360), 1, 0.9);
         colorEnd = hslToRgb((userData.hue/360), 1, 0.3);
         
-        scriptForTPdown = ROOT + "towerTeleportDown.js";
-        scriptForTPup = ROOT + "towerTeleportUp.js";
-    
+        let scriptForTPdown = ROOT + "towerTeleportDown.js";
+        let scriptForTPup = ROOT + "towerTeleportUp.js";
+        let scriptForTPeliteDown = ROOT + "towerTeleportEliteDown.js";
+        let scriptForTPeliteUp = ROOT + "towerTeleportEliteUp.js";
+        
         const FLOOR_LEVEL = -158.25; //m
     
         //material Glow
@@ -279,6 +281,140 @@
         }, "local");
         towerItems.push(id);
 
+        if (userData.hue === 0 || userData.hue === 120 || userData.hue === 240) {
+            //This is specific for towers
+            
+            //tpfx & sound DOWN
+            id = Entities.addEntity({
+                "type": "ParticleEffect",
+                "name": "TP_TOWER ELITE FX " + userData.hue,
+                "parentID": entityID,
+                "localPosition": {"x": 0, "y": -87, "z": 0},
+                "localRotation": Quat.fromVec3Degrees({"x":0, "y":0, "z":0}),
+                "userData": "{\n  \"soundURL\": \"" + ROOT + "sounds/metaspaceportPortalSound.mp3\",\n  \"soundVolume\": 0.15,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+                "dimensions": {
+                    "x": 6.745000839233398,
+                    "y": 6.745000839233398,
+                    "z": 6.745000839233398
+                },
+                "renderWithZones": properties.renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "script": ROOT + "soundplayer.js",
+                "shapeType": "cylinder-y",
+                "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                "alpha": 0.2,
+                "textures": ROOT + "images/PARTICLE_OPERA_121.png",
+                "maxParticles": 600,
+                "lifespan": 1.5,
+                "emitRate": 400,
+                "emitSpeed": 0.1,
+                "emitRadiusStart": 0,
+                "speedSpread": 0.2,
+                "emitOrientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                },
+                "emitDimensions": {
+                    "x": 1,
+                    "y": 0.1,
+                    "z": 1
+                },
+                "polarFinish": 3.1415927410125732,
+                "emitAcceleration": Vec3.multiplyQbyV(properties.rotation, { "x": 0, "y": -2, "z": 0}),
+                "particleRadius": 0.5,
+                "radiusSpread": 0.1,
+                "radiusStart": 0.5,
+                "radiusFinish": 0.5,
+                "colorSpread": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 0
+                },
+                "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
+                "colorFinish": {"red": colorEnd[0], "green": colorEnd[1], "blue": colorEnd[2]},
+                "alphaSpread": 0.01,
+                "alphaStart": 0.2,
+                "alphaFinish": 0,
+                "emitterShouldTrail": true,
+                "particleSpin": 0.0,
+                "spinSpread": Math.PI,
+                "spinStart": 0.0,
+                "spinFinish": 0.0
+            }, "local");
+            towerItems.push(id);
+
+            //tp light ELITE
+            id = Entities.addEntity({
+                "type": "Light",
+                "name": "Elite TP LIGHT " + userData.hue,
+                "parentID": entityID,
+                "localPosition": {"x":0, "y": -87.3, "z":0},
+                "dimensions": {
+                    "x": 20,
+                    "y": 20,
+                    "z": 20
+                },
+                "renderWithZones": properties.renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                "isSpotlight": false,
+                "intensity": 15,
+                "exponent": 1,
+                "cutoff": 35,
+                "falloffRadius": 1
+            }, "local");
+            towerItems.push(id);
+
+            //MEGA light 
+            id = Entities.addEntity({
+                "type": "Light",
+                "name": "MEGA LIGHT " + userData.hue,
+                "parentID": entityID,
+                "localPosition": {"x":0, "y": -54, "z":0},
+                "dimensions": {
+                    "x": 300,
+                    "y": 300,
+                    "z": 300
+                },
+                "renderWithZones": properties.renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                "isSpotlight": false,
+                "intensity": 40,
+                "exponent": 1,
+                "cutoff": 35,
+                "falloffRadius": 8
+            }, "local");
+            towerItems.push(id);
+
+            //tp intereactive box TOWER
+            id = Entities.addEntity({
+                "type": "Shape",
+                "shape": "Cylinder",
+                "parentID": entityID,
+                "renderWithZones": properties.renderWithZones,
+                "localPosition": {"x": 0, "y": -88, "z": 0},
+                "name": "Teleporter-ELITE-DOWN",
+                "dimensions": {"x": 3, "y": 4, "z": 3},
+                "visible": false,
+                "canCastShadow": false,
+                "collisionless": true,
+                "script": scriptForTPeliteDown,
+                "grab": {
+                    "grabbable": false
+                }
+            }, "local");
+            towerItems.push(id);
+
+        }
     };
 
     this.unload = function(entityID) {
