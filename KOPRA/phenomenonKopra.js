@@ -36,6 +36,7 @@
     let currentBolides = 0;
 
     this.preload = function(entityID) {
+        Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         let i;
         thisEntity = entityID;
         let prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
@@ -409,6 +410,7 @@
         }
 
         Script.update.disconnect(myTimer);
+        Workload.getConfig("controlViews")["regulateViewRanges"] = true;
     };
 
     /*
