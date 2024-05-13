@@ -40,6 +40,7 @@
     //var nextSunPosition;
     
     this.preload = function(entityID) { 
+        Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         thisEntity = entityID;
         var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = prop.renderWithZones;
@@ -550,6 +551,7 @@
             }
         }
         Script.update.disconnect(myTimer);
+        Workload.getConfig("controlViews")["regulateViewRanges"] = true;
     };
 
     function genTroyanAsteroid() {
