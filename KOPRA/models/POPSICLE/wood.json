@@ -1,0 +1,9 @@
+{"materials":[{
+    "albedo": [0.901, 0.487, 0.530],
+    "roughness": 0.26, 
+    "metallic": 0.01, 
+    "normalMap": "fineWoodNormal.jpg",
+    "cullFaceMode": "CULL_NONE", 
+    "model": "hifi_pbr",
+    "defaultFallthrough": false
+}]}
