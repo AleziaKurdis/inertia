@@ -171,7 +171,8 @@
                 "ignoreForCollisions":false,
                 "collisionMask":31,
                 "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
-                "dynamic": true
+                "dynamic": true,
+                "collisionSoundURL": ROOT + "sounds/deepBoom.mp3" 
             }, entityHostType);
             
             let hue = Math.random();
