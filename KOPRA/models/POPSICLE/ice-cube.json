@@ -1,9 +1,12 @@
 {"materials":[{
-    "albedo": [1, 0.012, 0.357],
-    "roughness": 0.15, 
-    "metallic": 0.01, 
+    "albedo": [0.8, 0.99, 1],
+    "roughness": 0.24, 
+    "metallic": 0.972, 
     "normalMap": "GLASS-BRUTE-NORMAL.jpg",
-    "cullFaceMode": "CULL_NONE", 
+    "opacity": 0.82,
+    "emissive": [0.0196, 0.1333, 0.2313],
+    "scattering": 0,
+    "cullFaceMode": "CULL_BACK", 
     "model": "hifi_pbr",
     "defaultFallthrough": false
 }]}
