@@ -58,7 +58,7 @@
             if ((processTimer - beginingOfExistence) > 120000) {
                 let id = Entities.addEntity({
                     "type": "Model",
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "localPosition": {"x": 0.0, "y": 0.15, "z": 0.0},
                     "parentID": MyAvatar.SELF_ID,
                     "name": "ICE CUBE",
                     "locked": true,
