@@ -19,6 +19,7 @@
     let this_entityID;
     let isTimerRuning = false;
     const ICE_CUBE_URL = ROOT + "models/ice-cube.fst";
+    let textureBank = ["fractal1.png", "fractal2.png", "floral.png", "quantum.png", "quantumWeb.png", "brainfog.png", "echo.png", "particles.png", "globular.png"];
     
     this.preload = function(entityID) {
         print("POPSICLE PRELOADED!");
@@ -50,18 +51,65 @@
     }
 
     function popsicleProcess() {
-        let properties = Entities.getEntityProperties(this_entityID, ["lifetime", "position"]);
-        if (properties.lifetime !== -1 && Vec3.distance(properties.position, MyAvatar.position) < DISTANCE_EFFECTIVE && (processTimer - beginingOfExistence) > 15000) {
-            Window.displayAnnouncement("BUZZZ!");
-            //Generate an effect that last 1.3 X UPDATE_TIMER_INTERVAL
-            
+        let properties = Entities.getEntityProperties(this_entityID, ["lifetime", "position", "lastEditedBy"]);
+        if (properties.lastEditedBy === MyAvatar.sessionUUID && properties.lifetime !== -1 && Vec3.distance(properties.position, MyAvatar.position) < DISTANCE_EFFECTIVE && (processTimer - beginingOfExistence) > 15000) {
+            let lifespan = Math.random() * UPDATE_TIMER_INTERVAL;
+            let emitRate = 5 + (Math.random() * 200);
+            let emitSpeed = (Math.random() * 4) - 2;
+            let electedTexture = ROOT + "images/icepops/" + textureBank[(Math.random() * textureBank.length)];
+            let color = hslToRgb(Math.random(), 1, 0.5);
+            let colorStart = hslToRgb(Math.random(), 1, 0.5);
+            let colorFinish = hslToRgb(Math.random(), 1, 0.5);
+            let partFxID = Entities.addEntity({
+                    "lifetime": 1.3 * UPDATE_TIMER_INTERVAL,
+                    "name": "icePopFX",
+                    "type": "ParticleEffect",
+                    "isEmitting": true,
+                    "maxParticles": Math.ceil(lifespan * emitRate),
+                    "lifespan": lifespan,
+                    "emitRate": emitRate,
+                    "emitSpeed": emitSpeed,
+                    "speedSpread": Math.abs(Math.random() * emitSpeed),
+                    "emitAcceleration": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "dimensions": { "x": 2, "y": 2, "z": 2},
+                    "emitterShouldTrail": false,
+                    "shapeType": "ellipsoid",
+                    "emitRadiusStart": Math.random(),
+                    "polarStart": 0,
+                    "polarFinish": Math.PI,
+                    "azimuthStart": -Math.PI,
+                    "azimuthFinish": Math.PI,
+                    "texture": electedTexture,
+                    "particleRadius": Math.random(),
+                    "radiusStart": Math.random(),
+                    "radiusFinish": Math.random(),
+                    "radiusSpread": Math.random(),
+                    "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                    "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
+                    "colorFinish": {"red": colorFinish[0], "green": colorFinish[1], "blue": colorFinish[2]},
+                    "colorSpread": {"red": Math.floor(Math.random() * 30), "green": Math.floor(Math.random() * 30), "blue": Math.floor(Math.random() * 30)},
+                    "alpha": Math.random() * 0.2,
+                    "alphaStart": Math.random() * 0.2,
+                    "alphaFinish": Math.random() * 0.2,
+                    "alphaSpread": Math.random() * 0.1,
+                    "spinSpread": (Math.random() * Math.PI),
+                    "rotateWithEntity": true,
+                    "localPosition": {"x": 0.0, "y": 0.05, "z": 0.0},
+                    "parentID": this_entityID,
+                    "locked": false,
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                }, "local");
+                
             if ((processTimer - beginingOfExistence) > 120000) {
                 let id = Entities.addEntity({
                     "type": "Model",
                     "localPosition": {"x": 0.0, "y": 0.15, "z": 0.0},
                     "parentID": MyAvatar.SELF_ID,
                     "name": "ICE CUBE",
-                    "locked": true,
+                    "locked": false,
                     "dimensions": {
                         "x": 0.4,
                         "y": 0.4,
