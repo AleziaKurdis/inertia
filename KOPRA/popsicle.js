@@ -11,7 +11,7 @@
 //
 (function(){
     const ROOT = Script.resolvePath('').split("popsicle.js")[0];
-    const UPDATE_TIMER_INTERVAL = 4000; // 4 sec
+    const UPDATE_TIMER_INTERVAL = 5000; // 4 sec
     const DISTANCE_EFFECTIVE = 1.2; //m
     let processTimer = 0;
     let renderWithZones = [];
@@ -61,7 +61,7 @@
             let colorStart = hslToRgb(Math.random(), 1, 0.5);
             let colorFinish = hslToRgb(Math.random(), 1, 0.5);
             let partFxID = Entities.addEntity({
-                    "lifetime": 1.3 * UPDATE_TIMER_INTERVAL,
+                    "lifetime": Math.ceil(1.3 * UPDATE_TIMER_INTERVAL),
                     "name": "icePopFX",
                     "type": "ParticleEffect",
                     "isEmitting": true,
@@ -106,7 +106,7 @@
             if ((processTimer - beginingOfExistence) > 120000) {
                 let id = Entities.addEntity({
                     "type": "Model",
-                    "localPosition": {"x": 0.0, "y": 0.15, "z": 0.0},
+                    "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
                     "parentID": MyAvatar.SELF_ID,
                     "name": "ICE CUBE",
                     "locked": false,
