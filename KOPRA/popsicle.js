@@ -61,7 +61,7 @@
             let lifespan = Math.random() * UPDATE_TIMER_INTERVAL;
             let emitRate = 5 + (Math.random() * 200);
             let emitSpeed = (Math.random() * 4) - 2;
-            let electedTexture = ROOT + "images/icepops/" + textureBank[(Math.random() * textureBank.length)];
+            let electedTexture = ROOT + "images/icepops/" + textureBank[Math.floor(Math.random() * textureBank.length)];
             let color = hslToRgb(Math.random(), 1, 0.5);
             let colorStart = hslToRgb(Math.random(), 1, 0.5);
             let colorFinish = hslToRgb(Math.random(), 1, 0.5);
