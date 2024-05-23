@@ -20,6 +20,8 @@
     let isTimerRuning = false;
     const ICE_CUBE_URL = ROOT + "models/ice-cube.fst";
     let textureBank = ["fractal1.png", "fractal2.png", "floral.png", "quantum.png", "quantumWeb.png", "brainfog.png", "echo.png", "particles.png", "globular.png"];
+    let entitiesToDelete = [];
+    
     
     this.preload = function(entityID) {
         print("POPSICLE PRELOADED!");
@@ -107,6 +109,9 @@
                         "grabbable": false
                     },
                 }, "local");
+                let today = new Date();
+                let timestamp = today.getTime();
+                entitiesToDelete.push({"id": partFxID, "expiration": timestamp + (1000 * Math.ceil(1.3 * UPDATE_TIMER_INTERVAL))});
                 
             if ((processTimer - beginingOfExistence) > 120000) {
                 let id = Entities.addEntity({
@@ -136,11 +141,33 @@
                 isTimerRuning = false;
                 processTimer = 0;
             }
+            deleteLocalEntities(false);
+        } 
+    }
+
+    function deleteLocalEntities(allEntity) {
+        let i;
+        let today = new Date();
+        let timestamp = today.getTime();
+        
+        for (i = 0; i < entitiesToDelete.lenght; i++) {
+            if (allEntity) {
+                Entities.deleteEntity(entitiesToDelete[i].id);
+            } else {
+                if (entitiesToDelete[i].expiration < timestamp) {
+                    Entities.deleteEntity(entitiesToDelete[i].id);
+                    entitiesToDelete.splice(i, 1);
+                }
+            }
+        }
+        if (allEntity) {
+            entitiesToDelete = [];
         }
     }
 
     this.unload = function(entityID) {
         //cleanup
+        deleteLocalEntities(true);
         if (isTimerRuning) {
             Script.update.disconnect(myTimer);
         }
