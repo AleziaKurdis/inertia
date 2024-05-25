@@ -97,9 +97,10 @@
                     "alphaSpread": Math.random() * 0.1,
                     "spinSpread": (Math.random() * Math.PI),
                     "rotateWithEntity": true,
-                    "localPosition": {"x": 0.0, "y": 0.05, "z": 0.0},
-                    "parentID": this_entityID,
+                    "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
+                    "parentID": MyAvatar.SELF_ID,
                     "renderWithZones": renderWithZones,
+                    "parentJointIndex": MyAvatar.getJointIndex("Head"),
                     "grab": {
                         "grabbable": false
                     }
