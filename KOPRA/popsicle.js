@@ -63,6 +63,14 @@
             let color = hslToRgb(Math.random(), 1, 0.5);
             let colorStart = hslToRgb(Math.random(), 1, 0.5);
             let colorFinish = hslToRgb(Math.random(), 1, 0.5);
+            
+            print("DEBUG POPSICLE: electedTexture: " + electedTexture);
+            print("DEBUG POPSICLE: emitRate: " + emitRate);
+            print("DEBUG POPSICLE: emitSpeed: " + emitSpeed);
+            print("DEBUG POPSICLE: color: " + JSON.stringify(color));
+            print("DEBUG POPSICLE: colorStart: " + JSON.stringify(colorStart));
+            print("DEBUG POPSICLE: colorFinish: " + JSON.stringify(colorFinish));
+            
             let partFxID = Entities.addEntity({
                     "lifetime": Math.ceil(1.3 * UPDATE_TIMER_INTERVAL),
                     "name": "icePopFX",
@@ -98,13 +106,16 @@
                     "spinSpread": (Math.random() * Math.PI),
                     "rotateWithEntity": true,
                     "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
-                    "parentID": MyAvatar.SELF_ID,
+                    "parentID": this_entityID, //MyAvatar.SELF_ID,
                     "renderWithZones": renderWithZones,
-                    "parentJointIndex": MyAvatar.getJointIndex("Head"),
+                    //"parentJointIndex": MyAvatar.getJointIndex("Head"),
                     "grab": {
                         "grabbable": false
                     }
                 }, "local");
+                
+                print("DEBUG POPSICLE: entity ID: " + partFxID);
+                
                 let today = new Date();
                 let timestamp = today.getTime();
                 entitiesToDelete.push({"id": partFxID, "expiration": timestamp + (1000 * Math.ceil(1.3 * UPDATE_TIMER_INTERVAL))});
