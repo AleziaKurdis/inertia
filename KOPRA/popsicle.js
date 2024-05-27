@@ -56,7 +56,7 @@
         let properties = Entities.getEntityProperties(this_entityID, ["lifetime", "position", "lastEditedBy"]);
         
         if (properties.lastEditedBy === MyAvatar.sessionUUID && properties.lifetime !== -1 && (Vec3.distance(properties.position, MyAvatar.position) < DISTANCE_EFFECTIVE) && (processTimer - beginingOfExistence) > 15000) {
-            let lifespan = Math.random() * UPDATE_TIMER_INTERVAL;
+            let lifespan = Math.random() * (UPDATE_TIMER_INTERVAL / 1000);
             let emitRate = 5 + Math.floor(Math.random() * 200);
             let emitSpeed = (Math.random() * 1) - 0.5;
             let electedTexture = ROOT + "images/icepops/" + textureBank[Math.floor(Math.random() * textureBank.length)];
