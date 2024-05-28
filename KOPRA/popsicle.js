@@ -64,62 +64,58 @@
             let colorStart = hslToRgb(Math.random(), 1, 0.5);
             let colorFinish = hslToRgb(Math.random(), 1, 0.5);
             
-            print("DEBUG POPSICLE: electedTexture: " + electedTexture);
-            print("DEBUG POPSICLE: emitRate: " + emitRate);
-            print("DEBUG POPSICLE: emitSpeed: " + emitSpeed);
-            print("DEBUG POPSICLE: color: " + JSON.stringify(color));
-            print("DEBUG POPSICLE: colorStart: " + JSON.stringify(colorStart));
-            print("DEBUG POPSICLE: colorFinish: " + JSON.stringify(colorFinish));
+            let partProperties = {
+                "lifetime": Math.ceil(1.3 * (UPDATE_TIMER_INTERVAL / 1000)),
+                "name": "icePopFX",
+                "type": "ParticleEffect",
+                "isEmitting": true,
+                "maxParticles": Math.ceil(lifespan * emitRate),
+                "lifespan": lifespan,
+                "emitRate": emitRate,
+                "emitSpeed": emitSpeed,
+                "speedSpread": Math.abs(Math.random() * emitSpeed),
+                "emitAcceleration": {"x": 0.0, "y": 0.0, "z": 0.0},
+                //"dimensions": { "x": 2, "y": 2, "z": 2},
+                "emitterShouldTrail": false,
+                "shapeType": "ellipsoid",
+                "emitRadiusStart": Math.random(),
+                "polarStart": 0,
+                "polarFinish": Math.PI,
+                "azimuthStart": -Math.PI,
+                "azimuthFinish": Math.PI,
+                "texture": electedTexture,
+                "particleRadius": Math.random(),
+                "radiusStart": Math.random(),
+                "radiusFinish": Math.random(),
+                "radiusSpread": Math.random(),
+                "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
+                "colorFinish": {"red": colorFinish[0], "green": colorFinish[1], "blue": colorFinish[2]},
+                "colorSpread": {"red": Math.floor(Math.random() * 30), "green": Math.floor(Math.random() * 30), "blue": Math.floor(Math.random() * 30)},
+                "alpha": Math.random() * 0.2,
+                "alphaStart": Math.random() * 0.2,
+                "alphaFinish": Math.random() * 0.2,
+                "alphaSpread": Math.random() * 0.1,
+                "spinSpread": (Math.random() * Math.PI),
+                "rotateWithEntity": true,
+                "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
+                "parentID": this_entityID, //MyAvatar.SELF_ID,
+                "renderWithZones": renderWithZones,
+                //"parentJointIndex": MyAvatar.getJointIndex("Head"),
+                "grab": {
+                    "grabbable": false
+                }
+            };
+                
+            let partFxID = Entities.addEntity(partProperties, "local");
             
-            let partFxID = Entities.addEntity({
-                    "lifetime": Math.ceil(1.3 * UPDATE_TIMER_INTERVAL),
-                    "name": "icePopFX",
-                    "type": "ParticleEffect",
-                    "isEmitting": true,
-                    "maxParticles": Math.ceil(lifespan * emitRate),
-                    "lifespan": lifespan,
-                    "emitRate": emitRate,
-                    "emitSpeed": emitSpeed,
-                    "speedSpread": Math.abs(Math.random() * emitSpeed),
-                    "emitAcceleration": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    //"dimensions": { "x": 2, "y": 2, "z": 2},
-                    "emitterShouldTrail": false,
-                    "shapeType": "ellipsoid",
-                    "emitRadiusStart": Math.random(),
-                    "polarStart": 0,
-                    "polarFinish": Math.PI,
-                    "azimuthStart": -Math.PI,
-                    "azimuthFinish": Math.PI,
-                    "texture": electedTexture,
-                    "particleRadius": Math.random(),
-                    "radiusStart": Math.random(),
-                    "radiusFinish": Math.random(),
-                    "radiusSpread": Math.random(),
-                    "color": {"red": color[0], "green": color[1], "blue": color[2]},
-                    "colorStart": {"red": colorStart[0], "green": colorStart[1], "blue": colorStart[2]},
-                    "colorFinish": {"red": colorFinish[0], "green": colorFinish[1], "blue": colorFinish[2]},
-                    "colorSpread": {"red": Math.floor(Math.random() * 30), "green": Math.floor(Math.random() * 30), "blue": Math.floor(Math.random() * 30)},
-                    "alpha": Math.random() * 0.2,
-                    "alphaStart": Math.random() * 0.2,
-                    "alphaFinish": Math.random() * 0.2,
-                    "alphaSpread": Math.random() * 0.1,
-                    "spinSpread": (Math.random() * Math.PI),
-                    "rotateWithEntity": true,
-                    "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
-                    "parentID": this_entityID, //MyAvatar.SELF_ID,
-                    "renderWithZones": renderWithZones,
-                    //"parentJointIndex": MyAvatar.getJointIndex("Head"),
-                    "grab": {
-                        "grabbable": false
-                    }
-                }, "local");
-                
-                print("DEBUG POPSICLE: entity ID: " + partFxID);
-                
-                let today = new Date();
-                let timestamp = today.getTime();
-                entitiesToDelete.push({"id": partFxID, "expiration": timestamp + (1000 * Math.ceil(1.3 * UPDATE_TIMER_INTERVAL))});
-                
+            print("DEBUG POPSICLE: properties: " + JSON.stringify(partProperties));
+            print("DEBUG POPSICLE: entity ID: " + partFxID);
+            
+            let today = new Date();
+            let timestamp = today.getTime();
+            entitiesToDelete.push({"id": partFxID, "expiration": timestamp + (Math.ceil(1.3 * UPDATE_TIMER_INTERVAL))});
+            
             if ((processTimer - beginingOfExistence) > 120000) {
                 let id = Entities.addEntity({
                     "type": "Model",
