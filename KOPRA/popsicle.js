@@ -83,7 +83,7 @@
                 "polarFinish": Math.PI,
                 "azimuthStart": -Math.PI,
                 "azimuthFinish": Math.PI,
-                "texture": electedTexture,
+                "textures": electedTexture,
                 "particleRadius": Math.random(),
                 "radiusStart": Math.random(),
                 "radiusFinish": Math.random(),
@@ -99,9 +99,9 @@
                 "spinSpread": (Math.random() * Math.PI),
                 "rotateWithEntity": true,
                 "localPosition": {"x": 0.0, "y": 0.1, "z": 0.0},
-                "parentID": this_entityID, //MyAvatar.SELF_ID,
+                "parentID": MyAvatar.SELF_ID, //this_entityID, //MyAvatar.SELF_ID,
                 "renderWithZones": renderWithZones,
-                //"parentJointIndex": MyAvatar.getJointIndex("Head"),
+                "parentJointIndex": MyAvatar.getJointIndex("Head"),
                 "grab": {
                     "grabbable": false
                 }
@@ -109,8 +109,8 @@
                 
             let partFxID = Entities.addEntity(partProperties, "local");
             
-            print("DEBUG POPSICLE: properties: " + JSON.stringify(partProperties));
-            print("DEBUG POPSICLE: entity ID: " + partFxID);
+            //print("DEBUG POPSICLE: properties: " + JSON.stringify(partProperties));
+            //print("DEBUG POPSICLE: entity ID: " + partFxID);
             
             let today = new Date();
             let timestamp = today.getTime();
