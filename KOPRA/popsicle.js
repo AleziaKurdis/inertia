@@ -37,6 +37,7 @@
             processTimer = today.getTime();
             beginingOfExistence = processTimer;
             Script.update.connect(myTimer);
+            Camera.modeUpdated.connect(onCameraModeUpdated);
             isTimerRuning = true;
         }
     };
@@ -44,11 +45,19 @@
     function myTimer(deltaTime) {
         let today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
-
-            popsicleProcess();
-            
+            if (Camera.mode === "first person" || Camera.mode === "first person look at") {
+                popsicleProcess();
+            } else {
+                deleteLocalEntities(true);
+            }
             today = new Date();
             processTimer = today.getTime();
+        }
+    }
+
+    function onCameraModeUpdated(newMode) {
+        if (newMode !== "first person" && newMode !== "first person look at") {
+            deleteLocalEntities(true);
         }
     }
 
@@ -141,6 +150,7 @@
                 }, "avatar");
                 //delete unnecessary things.
                 Script.update.disconnect(myTimer);
+                Camera.modeUpdated.disconnect(onCameraModeUpdated);
                 isTimerRuning = false;
                 processTimer = 0;
             }
@@ -173,6 +183,7 @@
         deleteLocalEntities(true);
         if (isTimerRuning) {
             Script.update.disconnect(myTimer);
+            Camera.modeUpdated.disconnect(onCameraModeUpdated);
         }
         processTimer = 0;
     };
