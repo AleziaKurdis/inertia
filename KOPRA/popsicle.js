@@ -56,7 +56,7 @@
     }
 
     function onCameraModeUpdated(newMode) {
-        print("onCameraModeUpdated = " + newMode);
+        //print("onCameraModeUpdated = " + newMode);
         if (newMode !== "first person" && newMode !== "first person look at") {
             deleteLocalEntities(true);
         }
