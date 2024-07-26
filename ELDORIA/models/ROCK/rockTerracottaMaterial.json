@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1, 1, 1],
+         "albedoMap": "ROCKWALL_COLOR.jpg"
+         "metallic": 0.001,
+         "roughness": 0.75,
+         "normalMap": "ROCKWALL_NORMAL.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
