@@ -25,6 +25,8 @@ https://aleziakurdis.github.io/inertia/KOPRA/inertiaKopra.json
   
 https://aleziakurdis.github.io/inertia/MINOS/inertiaMinos.json   
   
+https://aleziakurdis.github.io/inertia/ELDORIA/inertiaEldoria.json   
+     
 # Clocks
 **D19 (HUT)**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json  
