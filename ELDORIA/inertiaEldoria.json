@@ -54,6 +54,122 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_CENTER.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/ELDORIA/navigationAmbienceEldoria.js"
+        },
+        {
+            "id": "{912e7f1b-1b41-4ba6-8182-c869efd850e6}",
+            "type": "Model",
+            "position": {"x":4004.551513671875,"y":4000,"z":-3648.22900390625},
+            "name": "ELDORIA_ELEMENT_1",
+            "locked": true,
+            "dimensions": {
+                "x": 192.0333251953125,
+                "y": 115.91053009033203,
+                "z": 202.72488403320312
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.3420201539993286,
+                "z": 0,
+                "w": 0.9396926760673523
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_1.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{42cc3b41-de23-444b-aed9-8aae2eb412d7}",
+            "type": "Model",
+            "position": {"x":3799.77978515625,"y":4000,"z":-3526.57861328125},
+            "name": "ELDORIA_ELEMENT_2",
+            "locked": true,
+            "dimensions": {
+                "x": 285.0167541503906,
+                "y": 119.07669067382812,
+                "z": 277.83056640625
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.19080901145935059,
+                "z": 0,
+                "w": 0.9816272258758545
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_2.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{3cd0c785-4efd-4e6c-8ed9-edbb8262c5e2}",
+            "type": "Model",
+            "position": {"x":3557.5361328125,"y":4000,"z":-3518.91064453125},
+            "name": "ELDORIA_ELEMENT_3",
+            "locked": true,
+            "dimensions": {
+                "x": 178.58599853515625,
+                "y": 99.25222778320312,
+                "z": 183.4613037109375
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.9832549095153809,
+                "z": 0,
+                "w": 0.18223556876182556
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_3.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{fd72025a-f1c2-49cc-9ed6-1c2586a19c45}",
+            "type": "Model",
+            "position": {"x":3534.454833984375,"y":4000,"z":-3746.581298828125},
+            "name": "ELDORIA_ELEMENT_4",
+            "locked": true,
+            "dimensions": {
+                "x": 251.13583374023438,
+                "y": 130.98193359375,
+                "z": 252.4052734375
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7489557266235352,
+                "z": 0,
+                "w": 0.6626200675964355
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_4.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
