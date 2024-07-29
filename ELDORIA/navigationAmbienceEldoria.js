@@ -15,10 +15,14 @@
     var isInitiated = false;
     var universeDimension;
     var universeCenter;
+    var renderWithZones;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
+    var tideUpdateLap = 0;
+    var waterDirection = 1;
+    var WATER_SPEED = 0.04; // m/sec
 
     var astrolithID = Uuid.NULL;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -27,10 +31,11 @@
     var airSound, injector;    
     var playing = 0;
     var FLYING_AIR_MAX_VOLUME = 0.5;
-
-    var UFO_TIDE_CYCLE_DURATION = 18720; //5.2 hours
     
     var DAY_DURATION = 104400; //D29
+    var NBR_LAP_TIDE = 30; //N lap of UPDATE_TIMER_INTERVAL sec
+    var seaId = Uuid.NULL;
+    var TIDE_AMPLITUDE = 4; //in meter
 
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/desertWindAmbient.mp3";
@@ -83,6 +88,11 @@
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             updateNavigation();
+            tideUpdateLap++;
+            if (tideUpdateLap === NBR_LAP_TIDE) {
+                genWater();
+                tideUpdateLap = 0;
+            }
             today = new Date();
             processTimer = today.getTime();
         }  
@@ -99,25 +109,62 @@
                 universeSoundInjector.stop();
                 univerSoundPlaying = 0;
             }
-
+            if (seaId != Uuid.NULL){
+                Entities.deleteEntity(seaId);
+                seaId = Uuid.NULL;
+            }
         }
         isInitiated = false;
     }
 
     function initiate(EntID) {
-        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "dimensions", "renderWithZones"]);
         universeCenter = properties.position;
         universeDimension = properties.dimensions;
+        renderWithZones = properties.renderWithZones;
 
         isInitiated = true; 
  
         univerSoundPlaying = 0;
-
+        tideUpdateLap = 0;
+        waterDirection = 1;
+        genWater();
 
         var today = new Date();
         processTimer = today.getTime();
     
         Script.update.connect(myTimer);
+    }
+
+    function genWater() {
+        var tide = (TIDE_AMPLITUDE/2) + Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 12.41/24))) * TIDE_AMPLITUDE;
+        currentOffset = waterDirection * NBR_LAP_TIDE * UPDATE_TIMER_INTERVAL * WATER_SPEED;
+        waterDirection = -waterDirection;
+        var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
+        var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide,"z":universeCenter.z + currentOffset};
+        
+        if (seaId === Uuid.NULL) {
+            seaId = Entities.addEntity({
+                "type": "Model",
+                "name": "SEA",
+                "renderWithZone": renderWithZones,
+                "dimensions": {"x":18000,"y":0.01,"z":18000},
+                "position": waterPosition,
+                "modelURL": ROOT + "models/AQUASPHERE.fst",
+                "useOriginalPivot": true,
+                "shapeType": "none",
+                "grab": {
+                    "grabbable": false
+                },
+                "velocity": velocity
+            }, "local");
+            
+        } else {
+            Entities.editEntity(seaId,{
+                "position": waterPosition,
+                "velocity": velocity
+            });
+        }
     }
 
     function updateNavigation() {
