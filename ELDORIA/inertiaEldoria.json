@@ -29,6 +29,36 @@
                 "grabbable":false
             },
             "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/ELDORIA/navigationAmbienceEldoria.js"
+        },
+        {
+            "id":"{55999b81-afbf-4df5-a675-a1b7496e5b8a}",
+            "type":"Zone",
+            "name":"ELDORIA_SKY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":3998,
+                "y":3998,
+                "z":3998
+            },
+            "position": {
+                 "x": 4000,
+                 "y": 4000,
+                 "z": -4000
+            },         
+            "rotation":{
+                "x":-1.52587890625e-5,
+                "y":-1.52587890625e-5,
+                "z":-1.52587890625e-5,
+                "w":1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
         },
         {
@@ -52,8 +82,7 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/ELDORIA/models/ELDORIA_ELEMENT_CENTER.fst",
-            "useOriginalPivot": true,
-            "script": "https://aleziakurdis.github.io/inertia/ELDORIA/navigationAmbienceEldoria.js"
+            "useOriginalPivot": true
         },
         {
             "id": "{912e7f1b-1b41-4ba6-8182-c869efd850e6}",
