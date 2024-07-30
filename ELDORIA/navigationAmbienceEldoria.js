@@ -22,7 +22,7 @@
     var processTimer = 0;
     var tideUpdateLap = 0;
     var waterDirection = 1;
-    var WATER_SPEED = 0.2; // m/sec
+    var WATER_SPEED = 0.3; // m/sec
 
     var astrolithID = Uuid.NULL;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
