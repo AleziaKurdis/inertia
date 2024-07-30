@@ -2,7 +2,7 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[0.2, 0.2, 0.3],
+         "albedo":[0.569, 0.831, 0.859],
          "metallic": 1.0,
          "roughness": 0.02,
          "normalMap": "AQUASPHERE_NORMAL.jpg",
