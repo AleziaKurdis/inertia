@@ -158,7 +158,8 @@
                 "grab": {
                     "grabbable": false
                 },
-                "velocity": velocity
+                "velocity": velocity,
+                "damping": 0
             }, "local");
             
         } else {
