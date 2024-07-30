@@ -22,7 +22,7 @@
     var processTimer = 0;
     var tideUpdateLap = 0;
     var waterDirection = 1;
-    var WATER_SPEED = 0.04; // m/sec
+    var WATER_SPEED = 0.08; // m/sec
 
     var astrolithID = Uuid.NULL;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -138,7 +138,7 @@
 
     function genWater() {
         var tide = (TIDE_AMPLITUDE/2) + Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 12.41/24))) * TIDE_AMPLITUDE;
-        currentOffset = waterDirection * NBR_LAP_TIDE * UPDATE_TIMER_INTERVAL * WATER_SPEED;
+        currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
         waterDirection = -waterDirection;
         var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
         var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide,"z":universeCenter.z + currentOffset};
