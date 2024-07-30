@@ -58,6 +58,7 @@
     
    
     this.preload = function(entityID) {
+        Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         thisEntityID = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
@@ -99,7 +100,7 @@
     }
 
     function shutdown() {
-        if (isInitiated){            
+        if (isInitiated){
             Script.update.disconnect(myTimer);
             if (astrolithID != Uuid.NULL){
                 Entities.deleteEntity(astrolithID);
@@ -115,6 +116,7 @@
             }
         }
         isInitiated = false;
+        Workload.getConfig("controlViews")["regulateViewRanges"] = true;
     }
 
     function initiate(EntID) {
