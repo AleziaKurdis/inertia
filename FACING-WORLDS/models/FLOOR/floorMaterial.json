@@ -2,7 +2,7 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[0.278, 0.278, 0.278],
+         "albedo":[0.178, 0.178, 0.178],
          "metallic": 0.01,
          "roughness": 0.4,
          "normalMap": "BROKENWALL_normal.jpg",
