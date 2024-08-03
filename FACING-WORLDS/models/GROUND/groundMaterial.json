@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "aerial_rocks_04_diff_2k.jpg",
+         "metallic": 0.01,
+         "roughnessMap": "aerial_rocks_04_rough_2k.jpg",
+         "normalMap": "aerial_rocks_04_nor_2k.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
