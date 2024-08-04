@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.35,0.35,0.35],
+         "albedoMap": "Concrete6_512_albedo.jpg",
+         "metallic": 0.01,
+         "roughnessMap": "Concrete6_512_roughness.jpg",
+         "normalMap": "Concrete6_512_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
