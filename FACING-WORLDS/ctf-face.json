@@ -60,6 +60,66 @@
             },
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
+        },
+        {
+            "id": "{933279ba-638e-4d6d-91e8-d617e5327d02}",
+            "type": "Model",
+            "position": {
+                 "x": -4000,
+                 "y": 4000,
+                 "z": -4000
+            },
+            "name": "RED WORLD",
+            "locked": true,
+            "dimensions": {
+                "x": 134.51747131347656,
+                "y": 120.35289001464844,
+                "z": 64.30458068847656
+            },
+            "rotation": {
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FACING-WORLDS_red.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c9f74769-db41-4dfd-a1e3-eb3b4f434546}",
+            "type": "Model",
+            "position": {
+                 "x": -4000,
+                 "y": 4000,
+                 "z": -4000
+            },
+            "name": "BLUE WORLD",
+            "locked": true,
+            "dimensions": {
+                "x": 134.51747131347656,
+                "y": 120.35289001464844,
+                "z": 64.30458068847656
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FACING-WORLDS_blue.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
