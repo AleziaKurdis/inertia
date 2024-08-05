@@ -31,17 +31,17 @@
             "flyingAllowed": false,
             "ghostingAllowed": false,
             "shapeType":"sphere",
-            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/navigationAmbienceCTFface.js"
+            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
         },
         {
             "id":"{55999b81-afbf-4df5-a675-a1b7496e5b8a}",
             "type":"Zone",
-            "name":"FACING_WORLDS_SKY_ZONE",
+            "name":"FACING_WORLDS_GAME_ZONE",
             "locked":true,
             "dimensions":{
-                "x":3998,
-                "y":3998,
-                "z":3998
+                "x":3800,
+                "y":3800,
+                "z":3800
             },
             "position": {
                  "x": -4000,
@@ -60,8 +60,10 @@
             "grab":{
                 "grabbable":false
             },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
             "shapeType":"sphere",
-            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/navigationAmbienceCTFface.js"
         },
         {
             "id": "{933279ba-638e-4d6d-91e8-d617e5327d02}",
