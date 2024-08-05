@@ -28,6 +28,8 @@
             "grab":{
                 "grabbable":false
             },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/navigationAmbienceCTFface.js"
         },
