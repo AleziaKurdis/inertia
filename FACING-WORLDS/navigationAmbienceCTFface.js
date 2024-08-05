@@ -23,7 +23,7 @@
     var tideUpdateLap = 0;
     var waterDirection = 1;
     var WATER_SPEED = 0.3; // m/sec
-    var SEA_DELTA_Y_BELOW = 300; //m
+    var SEA_DELTA_Y_BELOW = 120; //m
 
     var astrolithID = Uuid.NULL;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
