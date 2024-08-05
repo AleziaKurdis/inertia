@@ -23,6 +23,7 @@
     var tideUpdateLap = 0;
     var waterDirection = 1;
     var WATER_SPEED = 0.3; // m/sec
+    var SEA_DELTA_Y_BELOW = 300; //m
 
     var astrolithID = Uuid.NULL;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -143,7 +144,7 @@
         currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
         waterDirection = -waterDirection;
         var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
-        var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide,"z":universeCenter.z + currentOffset};
+        var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide - SEA_DELTA_Y_BELOW,"z":universeCenter.z + currentOffset};
         
         if (seaId === Uuid.NULL) {
             seaId = Entities.addEntity({
