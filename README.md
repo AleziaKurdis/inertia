@@ -26,6 +26,8 @@ https://aleziakurdis.github.io/inertia/KOPRA/inertiaKopra.json
 https://aleziakurdis.github.io/inertia/MINOS/inertiaMinos.json   
   
 https://aleziakurdis.github.io/inertia/ELDORIA/inertiaEldoria.json   
+  
+https://aleziakurdis.github.io/inertia/FACING-WORLDS/ctf-face.json   
      
 # Clocks
 **D19 (HUT)**  
