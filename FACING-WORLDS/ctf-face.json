@@ -74,6 +74,7 @@
                  "z": -4000
             },
             "name": "RED WORLD",
+            "description": "RED",
             "locked": true,
             "dimensions": {
                 "x": 134.51747131347656,
@@ -96,7 +97,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FACING-WORLDS_red.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/tower.js"
         },
         {
             "id": "{c9f74769-db41-4dfd-a1e3-eb3b4f434546}",
@@ -107,6 +109,7 @@
                  "z": -4000
             },
             "name": "BLUE WORLD",
+            "description": "BLUE",
             "locked": true,
             "dimensions": {
                 "x": 134.51747131347656,
@@ -123,7 +126,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FACING-WORLDS_blue.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/tower.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
