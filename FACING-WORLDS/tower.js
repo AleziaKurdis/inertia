@@ -310,7 +310,7 @@
             "damping": 0,
             "angularDamping": 0,
             "color": lightColor,
-            "isSpotlight": true,
+            "isSpotlight": false,
             "intensity": 10,
             "exponent": 15,
             "cutoff": 40,
@@ -318,6 +318,214 @@
         }, "local");
         entitiesToDelete.push(id);
 
+        id = Entities.addEntity({
+            "type": "Model",
+            "localPosition": {
+                "x": 67.1079,
+                "y": -5.5293,
+                "z": 5.9536
+            },
+            "name": "LAMPADAIRE_1R_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 0.2867816984653473,
+                "y": 3.595228433609009,
+                "z": 0.3295843005180359
+            },
+            "renderWithZones": renderWithZones,
+            "parentID": entityID,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": ROOT + "models/lantern" + team + ".fst",
+            "useOriginalPivot": true
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 67.1079,
+                "y": -5.5293,
+                "z": 5.9536
+            },
+            "name": "LAMPADAIRE_1R_LIGHT_" + team,
+            "dimensions": {"x":45.148406982421875,"y":45.148406982421875,"z":45.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Model",
+            "localPosition": {
+                "x": 41.9575,
+                "y": -1.1699,
+                "z": 14.9473
+            },
+            "name": "LAMPADAIRE_2R_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 0.2867816984653473,
+                "y": 3.595228433609009,
+                "z": 0.3295843005180359
+            },
+            "renderWithZones": renderWithZones,
+            "parentID": entityID,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": ROOT + "models/lantern" + team + ".fst",
+            "useOriginalPivot": true
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 41.9575,
+                "y": -1.1699,
+                "z": 14.9473
+            },
+            "name": "LAMPADAIRE_2R_LIGHT_" + team,
+            "dimensions": {"x":45.148406982421875,"y":45.148406982421875,"z":45.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Model",
+            "localPosition": {
+                "x": 37.9287,
+                "y": 0.8435,
+                "z": -12.0247
+            },
+            "name": "LAMPADAIRE_2L_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 0.2867816984653473,
+                "y": 3.595228433609009,
+                "z": 0.3295843005180359
+            },
+            "renderWithZones": renderWithZones,
+            "parentID": entityID,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": ROOT + "models/lantern" + team + ".fst",
+            "useOriginalPivot": true
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 37.9287,
+                "y": 0.8435,
+                "z": -12.0247
+            },
+            "name": "LAMPADAIRE_2L_LIGHT_" + team,
+            "dimensions": {"x":45.148406982421875,"y":45.148406982421875,"z":45.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "Model",
+            "localPosition": {
+                "x": 74.1296,
+                "y": -6.7546,
+                "z": -12.0247
+            },
+            "name": "LAMPADAIRE_1L_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 0.2867816984653473,
+                "y": 3.595228433609009,
+                "z": 0.3295843005180359
+            },
+            "renderWithZones": renderWithZones,
+            "parentID": entityID,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": ROOT + "models/lantern" + team + ".fst",
+            "useOriginalPivot": true
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 74.1296,
+                "y": -6.7546,
+                "z": -12.0247
+            },
+            "name": "LAMPADAIRE_1L_LIGHT_" + team,
+            "dimensions": {"x":45.148406982421875,"y":45.148406982421875,"z":45.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+        
     };
 
     this.unload = function(entityID) {
