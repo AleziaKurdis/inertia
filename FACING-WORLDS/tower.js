@@ -20,9 +20,9 @@
         if (team === "") {
             team = "RED";
         }
-        var lightColor = {"red": 255, "green": 72, "blue": 0 };
+        var lightColor = {"red": 255, "green": 108, "blue": 0 };
         if (team === "BLUE") {
-            lightColor = {"red": 0, "green": 72, "blue": 255 };
+            lightColor = {"red": 0, "green": 32, "blue": 255 };
         }
         
         var id = Entities.addEntity({
