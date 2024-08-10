@@ -19,7 +19,6 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description", "position", "rotation"]);
         var data = JSON.parse(properties.description);
         var teamColor = data.teamColor;
-        var renderWithZones = properties.renderWithZones;
         arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( properties.rotation, data.localPosition ));
         //arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
@@ -42,7 +41,7 @@
                 "y": 3,
                 "z": 1.5
             },
-            "renderWithZones": renderWithZones,
+            "renderWithZones": properties.renderWithZones,
             "grab": {
                 "grabbable": false
             },
@@ -61,7 +60,7 @@
                 "y": 1,
                 "z": 1
             },
-            "renderWithZones": renderWithZones,
+            "renderWithZones": properties.renderWithZones,
             "grab": {
                 "grabbable": false
             }
@@ -86,7 +85,7 @@
                 "y": 3,
                 "z": 1.5
             },
-            "renderWithZones": renderWithZones,
+            "renderWithZones": properties.renderWithZones,
             "grab": {
                 "grabbable": false
             },
