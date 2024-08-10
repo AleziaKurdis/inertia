@@ -23,6 +23,7 @@
         arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
         
+        print("arrivalPosition: " + JSON.stringify(arrivalPosition));
         //############################################# DEBUG ##############
         //TEST TP Origin
         id = Entities.addEntity({
