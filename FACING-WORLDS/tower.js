@@ -526,6 +526,177 @@
         }, "local");
         entitiesToDelete.push(id);
         
+        //TELEPORTERS
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 116.04,
+                "y": -6.9600,
+                "z": 10.9646
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_LEFT_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 116.04, "y": -6.9854, "z": 9.5129}, "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}}'
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 116.04,
+                "y": -6.9600,
+                "z": -7.8650
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_RIGHT_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 116.04, "y": -6.9854, "z": 6.2944}, "localRotation": {"x":0,"y":0,"z":0,"w":1.0000001192092896}}'
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 123.2969,
+                "y": -6.9600,
+                "z": 1.5942
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_FLAG_ROOM_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 124.5439, "y": -6.9854, "z": 1.6064}, "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 108.2891,
+                "y": 9.6707,
+                "z": 1.5942
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_GATE_KEEPER_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 107.2422, "y": 9.7195, "z": 1.6064}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 115.0034,
+                "y": 27.6858,
+                "z": 1.5942
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_SNIPER_ROOM_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 113.8828, "y": 27.6958, "z": 1.6064}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition": {
+                "x": 114.2847,
+                "y": 46.0959,
+                "z": -1.8455
+            },
+            "parentID": entityID,
+            "visible": false,
+            "name": "TELEPORTER_ROOF_" + team,
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "localTeleporter.js",
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 114.2847, "y": 46.0959, "z": -1.8455}, "localRotation": {"x":0,"y":-4.371139183945161e-8,"z":0,"w":-1.0000001192092896}}'
+        }, "local");
+        entitiesToDelete.push(id);
+
+
     };
 
     this.unload = function(entityID) {
