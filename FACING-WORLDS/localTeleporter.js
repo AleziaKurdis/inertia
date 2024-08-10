@@ -28,11 +28,7 @@
         //TEST TP Origin
         id = Entities.addEntity({
             "type": "Shape",
-            "localPosition": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
+            "position": properties.position,
             "parentID": entityID,
             "visible": true,
             "name": "TELEPORTER_IN",
