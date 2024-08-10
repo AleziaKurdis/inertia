@@ -19,8 +19,8 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description", "position", "rotation"]);
         var data = JSON.parse(properties.description);
         var teamColor = data.teamColor;
-        //arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( properties.rotation, data.localPosition ));
-        arrivalPosition = Vec3.sum(properties.position, data.localPosition);
+        arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( properties.rotation, data.localPosition ));
+        //arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
         
         print("arrivalPosition: " + JSON.stringify(arrivalPosition));
@@ -35,7 +35,7 @@
             },
             "parentID": entityID,
             "visible": true,
-            "name": "TELEPORTER_FX",
+            "name": "TELEPORTER_IN",
             "locked": true,
             "dimensions": {
                 "x": 1.5,
@@ -54,7 +54,7 @@
             "position": arrivalPosition,
             "parentID": entityID,
             "visible": true,
-            "name": "TELEPORTER_FX",
+            "name": "TELEPORTER_ARRIVAL",
             "locked": true,
             "dimensions": {
                 "x": 1,
