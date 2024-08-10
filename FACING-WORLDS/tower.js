@@ -552,7 +552,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 113.8828, "y": 27.6958, "z": 1.6064}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 2.1572, "y": 34.6558, "z": 9.3582}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -580,7 +580,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 114.2847, "y": 46.0959, "z": -1.8455}, "localRotation": {"x":0,"y":-4.371139183945161e-8,"z":0,"w":-1.0000001192092896}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -7.3364}, "localRotation": {"x":0,"y":-4.371139183945161e-8,"z":0,"w":-1.0000001192092896}}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -608,7 +608,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 107.2422, "y": 9.7195, "z": 1.6064}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 16.0547, "y": 16.6794, "z": -0.0122}, "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
         }, "local");
         entitiesToDelete.push(id);
         
@@ -636,7 +636,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 124.5439, "y": -6.9854, "z": 1.6064}, "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -16.2549, "y": -16.6560, "z": -0.0122}, "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -664,7 +664,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 116.04, "y": -6.9854, "z": 9.5129}, "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.0366, "y": -34.6711, "z": -7.9187}, "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -692,7 +692,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 116.04, "y": -6.9854, "z": 6.2944}, "localRotation": {"x":0,"y":0,"z":0,"w":1.0000001192092896}}'
+            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.7554, "y": -53.0813, "z": 4.4490}, "localRotation": {"x":0,"y":0,"z":0,"w":1.0000001192092896}}'
         }, "local");
         entitiesToDelete.push(id);
 
