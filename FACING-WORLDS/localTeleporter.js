@@ -16,9 +16,10 @@
     
     this.preload = function(entityID) {
 
-        var properties = Entities.getEntityProperties(entityID, ["description", "position", "rotation"]);
+        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description", "position", "rotation"]);
         var data = JSON.parse(properties.description);
         var teamColor = data.teamColor;
+        var renderWithZones = properties.renderWithZones;
         arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( properties.rotation, data.localPosition ));
         //arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
