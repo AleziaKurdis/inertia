@@ -51,7 +51,7 @@
 
         id = Entities.addEntity({
             "type": "Shape",
-            "localPosition": arrivalPosition,
+            "position": arrivalPosition,
             "parentID": entityID,
             "visible": true,
             "name": "TELEPORTER_FX",
