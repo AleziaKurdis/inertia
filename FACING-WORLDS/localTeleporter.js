@@ -23,6 +23,51 @@
         //arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
         
+        //############################################# DEBUG ##############
+        //TEST TP Origin
+        id = Entities.addEntity({
+            "type": "Shape",
+            "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "parentID": entityID,
+            "visible": true,
+            "name": "TELEPORTER_FX",
+            "locked": true,
+            "dimensions": {
+                "x": 1.5,
+                "y": 3,
+                "z": 1.5
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": teamColor
+        }, "local");
+
+        id = Entities.addEntity({
+            "type": "Shape",
+            "localPosition": arrivalPosition,
+            "parentID": entityID,
+            "visible": true,
+            "name": "TELEPORTER_FX",
+            "locked": true,
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            }
+        }, "local");
+        //############################################# END DEBUG ##############
+        
+        
         //generate Local FX here
         id = Entities.addEntity({
             "type": "ParticleEffect",
