@@ -29,47 +29,7 @@
             });
         }
         arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( sideRotation, data.localPosition ));
-        arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
-        
-        print("arrivalPosition: " + JSON.stringify(arrivalPosition));
-        //############################################# DEBUG ##############
-        //TEST TP Origin
-        id = Entities.addEntity({
-            "type": "Shape",
-            "position": properties.position,
-            "visible": true,
-            "name": "TELEPORTER_IN",
-            "locked": true,
-            "dimensions": {
-                "x": 1.5,
-                "y": 3,
-                "z": 1.5
-            },
-            "renderWithZones": properties.renderWithZones,
-            "grab": {
-                "grabbable": false
-            },
-            "color": teamColor
-        }, "local");
-
-        id = Entities.addEntity({
-            "type": "Shape",
-            "position": arrivalPosition,
-            "visible": true,
-            "name": "TELEPORTER_ARRIVAL",
-            "locked": true,
-            "dimensions": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-            },
-            "renderWithZones": properties.renderWithZones,
-            "grab": {
-                "grabbable": false
-            }
-        }, "local");
-        //############################################# END DEBUG ##############
-        
+        arrivalRotation = Quat.multiply( data.localRotation, sideRotation );
         
         //generate Local FX here
         id = Entities.addEntity({
