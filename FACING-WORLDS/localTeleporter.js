@@ -20,14 +20,14 @@
         var data = JSON.parse(properties.description);
         var teamColor = data.teamColor;
         var team = data.team;
-        var sideRotation = Quat.IDENTITY;
-        if (team === "RED") {
-            sideRotation = fromVec3Degrees({
+        //var sideRotation = Quat.IDENTITY;
+        //if (team === "RED") {
+            var sideRotation = fromVec3Degrees({
                 "x": 0,
                 "y": 180,
                 "z": 0
             });
-        }
+        //}
         arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( sideRotation, data.localPosition ));
         //arrivalPosition = Vec3.sum(properties.position, data.localPosition);
         arrivalRotation = Quat.multiply( data.localRotation, properties.rotation );
