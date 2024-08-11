@@ -57,7 +57,7 @@
         }        
     ];
     var originalGravity;
-    var GAME_GAVITY = -5.0;
+    var GAME_GAVITY = -3.0;
    
     this.preload = function(entityID) {
         Workload.getConfig("controlViews")["regulateViewRanges"] = false;
