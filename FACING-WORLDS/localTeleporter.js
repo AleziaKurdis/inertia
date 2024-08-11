@@ -29,7 +29,6 @@
         id = Entities.addEntity({
             "type": "Shape",
             "position": properties.position,
-            "parentID": entityID,
             "visible": true,
             "name": "TELEPORTER_IN",
             "locked": true,
@@ -48,7 +47,6 @@
         id = Entities.addEntity({
             "type": "Shape",
             "position": arrivalPosition,
-            "parentID": entityID,
             "visible": true,
             "name": "TELEPORTER_ARRIVAL",
             "locked": true,
