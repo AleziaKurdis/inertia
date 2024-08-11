@@ -56,10 +56,13 @@
             "astroids": true
         }        
     ];
-    
+    var originalGravity;
+    var GAME_GAVITY = 5.0;
    
     this.preload = function(entityID) {
         Workload.getConfig("controlViews")["regulateViewRanges"] = false;
+        originalGravity = MyAvatar.getGravity();
+        MyAvatar.setGravity(GAME_GAVITY);
         thisEntityID = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
@@ -117,6 +120,7 @@
             }
         }
         isInitiated = false;
+        MyAvatar.setGravity(originalGravity);
         Workload.getConfig("controlViews")["regulateViewRanges"] = true;
     }
 
