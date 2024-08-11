@@ -24,7 +24,7 @@
         if (team === "RED") {
             sideRotation = fromVec3Degrees({
                 "x": 0,
-                "y": -180,
+                "y": 180,
                 "z": 0
             });
         }
