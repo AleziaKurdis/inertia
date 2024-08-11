@@ -27,7 +27,7 @@
         arrivalRotation = Quat.multiply( data.localRotation, sideRotation );
         arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( sideRotation, data.localPosition ));
         
-        //generate Local FX here
+        //FX
         id = Entities.addEntity({
             "type": "ParticleEffect",
             "localPosition": {
@@ -48,7 +48,48 @@
             "grab": {
                 "grabbable": false
             },
-            "color": teamColor
+            "color": teamColor,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": teamColor,
+            "alpha": 0.1,
+            "alphaStart": 0.0,
+            "alphaFinish": 0.0,
+            "alphaSpread": 0.05,
+            "isEmitting": true,
+            "emitRate": 300,
+            "lifespan": 1.0,
+            "maxParticles": 300,
+            "emitSpeed": 0,
+            "speedSpread": 0.1,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.4,
+                "z": 0
+            },
+            "emitDimensions":  {
+                "x": 0.6,
+                "y": 0.1,
+                "z": 0.6
+            },
+            "emitRadiusStart": 0,
+            "textures": ROOT + "images/PARTICULE_OPERA_007.png",
+            "particleRadius": 0.25,
+            "radiusStart": 0.1,
+            "radiusFinish": 0.2,
+            "radiusSpread": 0.1,
+            "particleSpin": 0,
+            "spinStart": -Math.PI,
+            "spinFinish": Math.PI,
+            "spinSpread": 0.0
         }, "local");
     }
 
