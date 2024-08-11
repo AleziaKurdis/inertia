@@ -567,7 +567,7 @@
             "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
-            "name": "TELEPORTER_RIGHT_" + team, //To Test
+            "name": "TELEPORTER_RIGHT_" + team, //pass
             "locked": true,
             "dimensions": {
                 "x": 1.5,
@@ -611,7 +611,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 16.0547, "y": 16.6794, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 90, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 16.0547, "y": 16.6794, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 270, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
         
@@ -669,7 +669,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.0366, "y": -34.6711, "z": -7.9187}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 270, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.0366, "y": -34.6711, "z": -7.9187}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 180, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -683,7 +683,7 @@
             "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
-            "name": "TELEPORTER_ROOF_" + team, //to test
+            "name": "TELEPORTER_ROOF_" + team, //pass
             "locked": true,
             "dimensions": {
                 "x": 1.5,
