@@ -72,7 +72,7 @@
             },
             "accelerationSpread": {
                 "x": 0,
-                "y": 0.4,
+                "y": 0.8,
                 "z": 0
             },
             "emitDimensions":  {
@@ -82,7 +82,7 @@
             },
             "emitRadiusStart": 0,
             "textures": ROOT + "images/PARTICULE_OPERA_007.png",
-            "particleRadius": 0.25,
+            "particleRadius": 0.7,
             "radiusStart": 0.1,
             "radiusFinish": 0.2,
             "radiusSpread": 0.1,
