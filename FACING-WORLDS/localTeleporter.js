@@ -22,14 +22,10 @@
         var team = data.team;
         var sideRotation = Quat.IDENTITY;
         if (team === "BLUE") {
-            var sideRotation = Quat.fromVec3Degrees({
-                "x": 0,
-                "y": 180,
-                "z": 0
-            });
+            sideRotation = Quat.fromVec3Degrees({"x": 0, "y": 180, "z": 0});
         }
-        arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( sideRotation, data.localPosition ));
         arrivalRotation = Quat.multiply( data.localRotation, sideRotation );
+        arrivalPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV( sideRotation, data.localPosition ));
         
         //generate Local FX here
         id = Entities.addEntity({
