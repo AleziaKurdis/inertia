@@ -20,7 +20,7 @@
         if (team === "") {
             team = "RED";
         }
-        var lightColor = {"red": 255, "green": 32, "blue": 0 };
+        var lightColor = {"red": 255, "green": 24, "blue": 0 };
         if (team === "BLUE") {
             lightColor = {"red": 0, "green": 108, "blue": 255 };
         }
