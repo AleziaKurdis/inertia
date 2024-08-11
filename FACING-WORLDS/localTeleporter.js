@@ -55,13 +55,13 @@
                 "blue": 255
             },
             "colorFinish": teamColor,
-            "alpha": 0.1,
+            "alpha": 0.06,
             "alphaStart": 0.0,
             "alphaFinish": 0.0,
             "alphaSpread": 0.05,
             "isEmitting": true,
-            "emitRate": 300,
-            "lifespan": 1.0,
+            "emitRate": 200,
+            "lifespan": 1.5,
             "maxParticles": 300,
             "emitSpeed": 0,
             "speedSpread": 0.1,
@@ -76,9 +76,9 @@
                 "z": 0
             },
             "emitDimensions":  {
-                "x": 0.6,
-                "y": 0.1,
-                "z": 0.6
+                "x": 0.7,
+                "y": 0.15,
+                "z": 0.7
             },
             "emitRadiusStart": 0,
             "textures": ROOT + "images/PARTICULE_OPERA_007.png",
