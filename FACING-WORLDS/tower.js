@@ -553,7 +553,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 2.1572, "y": 34.6558, "z": 9.3582}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 90, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 2.1572, "y": 34.6558, "z": 9.3582}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 90, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -582,7 +582,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -7.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 90, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -7.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 90, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -611,7 +611,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 16.0547, "y": 16.6794, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 180, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 16.0547, "y": 16.6794, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 180, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
         
@@ -640,7 +640,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -16.2549, "y": -16.6560, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": -90, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -16.2549, "y": -16.6560, "z": -0.0122}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": -90, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -669,7 +669,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.0366, "y": -34.6711, "z": -7.9187}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 0, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.0366, "y": -34.6711, "z": -7.9187}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 0, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -698,7 +698,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.7554, "y": -53.0813, "z": 4.4490}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 180, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": -1.7554, "y": -53.0813, "z": 4.4490}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 180, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
