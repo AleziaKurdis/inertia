@@ -535,6 +535,7 @@
                 "y": -6.9600,
                 "z": 10.9646
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_LEFT_" + team,
@@ -563,6 +564,7 @@
                 "y": -6.9600,
                 "z": -7.8650
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_RIGHT_" + team,
@@ -591,6 +593,7 @@
                 "y": -6.9600,
                 "z": 1.5942
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_FLAG_ROOM_" + team,
@@ -619,6 +622,7 @@
                 "y": 9.6707,
                 "z": 1.5942
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_GATE_KEEPER_" + team,
@@ -647,6 +651,7 @@
                 "y": 27.6858,
                 "z": 1.5942
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_SNIPER_ROOM_" + team,
@@ -675,6 +680,7 @@
                 "y": 46.0959,
                 "z": -1.8455
             },
+            "localRotation": Quat.IDENTITY,
             "parentID": entityID,
             "visible": false,
             "name": "TELEPORTER_ROOF_" + team,
