@@ -2,7 +2,7 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[0.476,0.536,0.617],
+         "albedo":[1, 0.957, 0.631],
          "metallic": 1.0,
          "roughness": 0.13,
          "normalMap": "metalNormal512c.jpg",
