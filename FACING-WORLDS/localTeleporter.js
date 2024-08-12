@@ -101,7 +101,7 @@
             "loop": false,
             "localOnly": false
         };
-        var injector = Audio.playSound(SOUND_COIN_COLLECT, injectorOptions);
+        var injector = Audio.playSound(TP_SOUND, injectorOptions);
             
         MyAvatar.position = arrivalPosition;
         MyAvatar.orientation = arrivalRotation;
