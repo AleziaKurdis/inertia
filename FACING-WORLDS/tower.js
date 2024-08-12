@@ -702,7 +702,338 @@
         }, "local");
         entitiesToDelete.push(id);
 
-
+        //4 fires
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 94.8875,
+                "y": -7.0762,
+                "z": -2.8420
+            },
+            "name": "RIGHT_FIRE_LIGHT_" + team,
+            "dimensions": {"x":35.148406982421875,"y":35.148406982421875,"z":35.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "localPosition": {
+                "x": 94.8875,
+                "y": -7.0762,
+                "z": 5.9294
+            },
+            "name": "LEFT_FIRE_LIGHT_" + team,
+            "dimensions": {"x":35.148406982421875,"y":35.148406982421875,"z":35.148406982421875},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": lightColor,
+            "isSpotlight": false,
+            "intensity": 10,
+            "exponent": 15,
+            "cutoff": 40,
+            "falloffRadius": 1
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 94.8875,
+                "y": -8.4553,
+                "z": -2.8420
+            },
+            "name": "FIRE_1_" + team,
+            "dimensions": {
+                "x": 11.211999893188477,
+                "y": 11.211999893188477,
+                "z": 11.211999893188477
+            },
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": lightColor,
+            "shapeType": "ellipsoid",
+            "alpha": 0.10000000149011612,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 400,
+            "lifespan": 2,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.10000000149011612,
+                "z": 0.30000001192092896
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 1.399999976158142,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.4000000059604645,
+                "z": 0
+            },
+            "particleRadius": 1,
+            "radiusSpread": 0.20000000298023224,
+            "radiusStart": 0.30000001192092896,
+            "radiusFinish": 0.5,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": lightColor,
+            "alphaSpread": 0.07000000029802322,
+            "alphaStart": 0.15000000596046448,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.5700000524520874,
+            "spinStart": null,
+            "spinFinish": null
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 94.8875,
+                "y": -8.4553,
+                "z": 5.9294
+            },
+            "name": "FIRE_2_" + team,
+            "dimensions": {
+                "x": 11.211999893188477,
+                "y": 11.211999893188477,
+                "z": 11.211999893188477
+            },
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": lightColor,
+            "shapeType": "ellipsoid",
+            "alpha": 0.10000000149011612,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 400,
+            "lifespan": 2,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.10000000149011612,
+                "z": 0.30000001192092896
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 1.399999976158142,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.4000000059604645,
+                "z": 0
+            },
+            "particleRadius": 1,
+            "radiusSpread": 0.20000000298023224,
+            "radiusStart": 0.30000001192092896,
+            "radiusFinish": 0.5,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": lightColor,
+            "alphaSpread": 0.07000000029802322,
+            "alphaStart": 0.15000000596046448,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.5700000524520874,
+            "spinStart": null,
+            "spinFinish": null
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 111.4995,
+                "y": 48.4709,
+                "z": 4.9456
+            },
+            "name": "FIRE_3_" + team,
+            "dimensions": {
+                "x": 11.211999893188477,
+                "y": 11.211999893188477,
+                "z": 11.211999893188477
+            },
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": lightColor,
+            "shapeType": "ellipsoid",
+            "alpha": 0.10000000149011612,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 400,
+            "lifespan": 2,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.10000000149011612,
+                "z": 0.30000001192092896
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 1.399999976158142,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.4000000059604645,
+                "z": 0
+            },
+            "particleRadius": 1,
+            "radiusSpread": 0.20000000298023224,
+            "radiusStart": 0.30000001192092896,
+            "radiusFinish": 0.5,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": lightColor,
+            "alphaSpread": 0.07000000029802322,
+            "alphaStart": 0.15000000596046448,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.5700000524520874,
+            "spinStart": null,
+            "spinFinish": null
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "localPosition": {
+                "x": 111.4995,
+                "y": 48.4709,
+                "z": -1.7961
+            },
+            "name": "FIRE_4_" + team,
+            "dimensions": {
+                "x": 11.211999893188477,
+                "y": 11.211999893188477,
+                "z": 11.211999893188477
+            },
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": lightColor,
+            "shapeType": "ellipsoid",
+            "alpha": 0.10000000149011612,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 400,
+            "lifespan": 2,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.10000000149011612,
+                "z": 0.30000001192092896
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 1.399999976158142,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.4000000059604645,
+                "z": 0
+            },
+            "particleRadius": 1,
+            "radiusSpread": 0.20000000298023224,
+            "radiusStart": 0.30000001192092896,
+            "radiusFinish": 0.5,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": lightColor,
+            "alphaSpread": 0.07000000029802322,
+            "alphaStart": 0.15000000596046448,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.5700000524520874,
+            "spinStart": null,
+            "spinFinish": null
+        }, "local");
+        entitiesToDelete.push(id);
+        
     };
 
     this.unload = function(entityID) {
