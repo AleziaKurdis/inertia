@@ -57,12 +57,10 @@
         }        
     ];
     var originalGravity;
-    var GAME_GAVITY = -3.0;
    
     this.preload = function(entityID) {
         Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         originalGravity = MyAvatar.getGravity();
-        MyAvatar.setGravity(GAME_GAVITY);
         thisEntityID = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
@@ -96,6 +94,7 @@
             tideUpdateLap++;
             if (tideUpdateLap === NBR_LAP_TIDE) {
                 genWater();
+                updateGravityTide();
                 tideUpdateLap = 0;
             }
             today = new Date();
@@ -136,11 +135,17 @@
         tideUpdateLap = 0;
         waterDirection = 1;
         genWater();
+        updateGravityTide();
 
         var today = new Date();
         processTimer = today.getTime();
     
         Script.update.connect(myTimer);
+    }
+    
+    function updateGravityTide() {
+        var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
+        MyAvatar.setGravity(currentGravity);
     }
 
     function genWater() {
