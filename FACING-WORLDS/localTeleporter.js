@@ -13,6 +13,7 @@
 
     var ROOT = Script.resolvePath('').split("localTeleporter.js")[0];
     var arrivalPosition, arrivalRotation;
+    var TP_SOUND = SoundCache.getSound(ROOT + "sounds/teleportSound.mp3");
     
     this.preload = function(entityID) {
 
@@ -94,10 +95,16 @@
     }
 
     this.enterEntity = function(entityID) {
+        var injectorOptions = {
+            "position": MyAvatar.position,
+            "volume": 0.3,
+            "loop": false,
+            "localOnly": false
+        };
+        var injector = Audio.playSound(SOUND_COIN_COLLECT, injectorOptions);
+            
         MyAvatar.position = arrivalPosition;
         MyAvatar.orientation = arrivalRotation;
-        
-        //PLAY SOUND HERE
         
     }; 
     
