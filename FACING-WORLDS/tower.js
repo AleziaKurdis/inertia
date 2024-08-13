@@ -1047,7 +1047,7 @@
                 "y": 0.607806384563446,
                 "z": 0.002970418892800808
             },
-            "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "localRotation": {"x":0,"y":0,"z":0,"w":1},
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "grab": {
@@ -1067,16 +1067,16 @@
             "type": "Box",
             "localPosition":{
                 "x": 119.1147,
-                "y": -7.0654,
+                "y": -8.0654,
                 "z": -6.3276
             },
             "name": "CLOCK D29",
             "dimensions": {
-                "x": 1.8433825969696045,
-                "y": 1.3191678524017334,
+                "x": 0.7,
+                "y": 0.5,
                 "z": 0.01
             },
-            "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "localRotation": {"x":0,"y":0,"z":0,"w":1},
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "grab": {
