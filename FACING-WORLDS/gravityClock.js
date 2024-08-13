@@ -57,7 +57,7 @@
 
 
     function shutdown() {
-        if (clockID !== Uuid.NULL){
+        if (gravityID !== Uuid.NULL){
             Script.update.disconnect(myTimer);
             
             Entities.deleteEntity(gravityID);
