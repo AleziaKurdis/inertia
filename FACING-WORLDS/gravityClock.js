@@ -79,7 +79,7 @@
         var progression = "+ UP";
         var progressionColor = {"red": 140, "green": 255, "blue": 138};
         
-        if (angle > (Math.PI/2) && angle < (3 * Math.PI/2)) {
+        if (angle < (Math.PI/2) && angle > (3 * Math.PI/2)) {
             progression = "- DOWN";
             progressionColor = {"red": 255, "green": 82, "blue": 82};
         }
