@@ -99,7 +99,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.3, 
+                    "y": 0, //(thisDimensions.y * 0.5) * -0.3, 
                     "z": 0.02
                 },
                 "grab": {
@@ -125,13 +125,13 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.60, 
+                    "y": (thisDimensions.y * 0.5) * 0.30, 
                     "z": 0.02
                 },
                 "grab": {
                     "grabbable": false
                 },
-                "text": "GRAVITATIONAL TIDE\n(1.618 hours cycle)",
+                "text": "GRAVITATIONAL TIDE (1.618 hours cycle)",
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.2,
                 "textColor": textOfficialColor,
@@ -151,7 +151,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.60, 
+                    "y": (thisDimensions.y * 0.5) * -0.30, 
                     "z": 0.02
                 },
                 "grab": {
