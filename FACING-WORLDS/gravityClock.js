@@ -20,8 +20,7 @@
     var thisPosition;
     var thisRenderWithZones;
     var thisDimensions;
-    
-    var clockID = Uuid.NULL;
+
     var gravityID = Uuid.NULL;
     var progressionID = Uuid.NULL;
     var tideID = Uuid.NULL;
@@ -60,8 +59,6 @@
     function shutdown() {
         if (clockID !== Uuid.NULL){
             Script.update.disconnect(myTimer);
-            Entities.deleteEntity(clockID);
-            clockID = Uuid.NULL;
             
             Entities.deleteEntity(gravityID);
             gravityID = Uuid.NULL;
@@ -89,34 +86,8 @@
 
         var textOfficialColor = {"red": 255, "green": 255, "blue": 255};
         
-        if (clockID === Uuid.NULL){
+        if (gravityID === Uuid.NULL){
             //create clock
-            clockID = Entities.addEntity({
-                "type": "Text",
-                "name": "CYCLE",
-                "dimensions": {
-                    "x": thisDimensions.x * 0.9,
-                    "y": thisDimensions.y * 0.09,
-                    "z": 0.01
-                },
-                "parentID": thisID,
-                "localPosition": {
-                    "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.60, 
-                    "z": 0.02
-                },
-                "grab": {
-                    "grabbable": false
-                },
-                "text": "(1.618 hours cycle)",
-                "renderWithZones": thisRenderWithZones,
-                "lineHeight": thisDimensions.y * 0.12,
-                "textColor": textOfficialColor,
-                "backgroundAlpha": 0,
-                "unlit": true,
-                "alignment": "right"
-            },"local");
-            
             gravityID = Entities.addEntity({
                 "type": "Text",
                 "name": "GRAVITY",
@@ -148,7 +119,7 @@
                 "name": "Tide",
                 "dimensions": {
                     "x": thisDimensions.x * 0.9,
-                    "y": thisDimensions.y * 0.22,
+                    "y": thisDimensions.y * 0.5,
                     "z": 0.01
                 },
                 "parentID": thisID,
@@ -160,7 +131,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "text": "GRAVITATIONAL TIDE",
+                "text": "GRAVITATIONAL TIDE\n(1.618 hours cycle)",
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.2,
                 "textColor": textOfficialColor,
