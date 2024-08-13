@@ -102,7 +102,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.80, 
+                    "y": (thisDimensions.y * 0.5) * 0.60, 
                     "z": 0.02
                 },
                 "grab": {
@@ -110,7 +110,7 @@
                 },
                 "text": "(1.618 days cycle)",
                 "renderWithZones": thisRenderWithZones,
-                "lineHeight": thisDimensions.y * 0.07,
+                "lineHeight": thisDimensions.y * 0.12,
                 "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
@@ -136,7 +136,7 @@
                 },
                 "text": "GRAVITY: " + gravityPercent.toFixed(1) + " %",
                 "renderWithZones": thisRenderWithZones,
-                "lineHeight": thisDimensions.y * 0.5,
+                "lineHeight": thisDimensions.y * 0.4,
                 "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
@@ -148,21 +148,21 @@
                 "name": "Tide",
                 "dimensions": {
                     "x": thisDimensions.x * 0.9,
-                    "y": thisDimensions.y * 0.17,
+                    "y": thisDimensions.y * 0.22,
                     "z": 0.01
                 },
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.80, 
+                    "y": (thisDimensions.y * 0.5) * 0.80, 
                     "z": 0.02
                 },
                 "grab": {
                     "grabbable": false
                 },
-                "text": "Gavitational Tide",
+                "text": "GRAVITATIONAL TIDE",
                 "renderWithZones": thisRenderWithZones,
-                "lineHeight": thisDimensions.y * 0.15,
+                "lineHeight": thisDimensions.y * 0.2,
                 "textColor": textOfficialColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
