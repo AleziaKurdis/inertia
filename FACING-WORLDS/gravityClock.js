@@ -215,7 +215,17 @@
             
         }
     } 
-
+    
+    // ################## CYLCE AND TIME FUNCTIONS ###########################
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
+    
 	/*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.

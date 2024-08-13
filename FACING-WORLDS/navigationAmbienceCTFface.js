@@ -332,7 +332,7 @@
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
-	}    
+	}
     // ################## END CYLCE AND TIME FUNCTIONS ###########################   
 
     function edgeOfUniverse() {
