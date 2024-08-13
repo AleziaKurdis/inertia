@@ -99,7 +99,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": 0, //(thisDimensions.y * 0.5) * 0.3, 
+                    "y": (thisDimensions.y * 0.5) * -0.3, 
                     "z": 0.02
                 },
                 "grab": {
@@ -125,7 +125,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.80, 
+                    "y": (thisDimensions.y * 0.5) * 0.60, 
                     "z": 0.02
                 },
                 "grab": {
@@ -151,7 +151,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.40, 
+                    "y": (thisDimensions.y * 0.5) * -0.60, 
                     "z": 0.02
                 },
                 "grab": {
