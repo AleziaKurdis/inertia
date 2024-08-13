@@ -75,11 +75,13 @@
         var angle = GetCurrentCycleValue(Math.PI * 2, Math.floor((D29_DAY_LENGTH/24) * 1.618));
         var currentGravity = (Math.sin(angle) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
         var gravityPercent = 100 * (Math.abs(currentGravity)/9.8);
+        var progression;
+        var progressionColor;
         
-        var progression = "+ UP";
-        var progressionColor = {"red": 140, "green": 255, "blue": 138};
-        
-        if (angle < (Math.PI/2) && angle > (3 * Math.PI/2)) {
+        if (angle > (Math.PI/2) && angle < (3 * Math.PI/2)) {
+            progression = "+ UP";
+            progressionColor = {"red": 140, "green": 255, "blue": 138};
+        } else {
             progression = "- DOWN";
             progressionColor = {"red": 255, "green": 82, "blue": 82};
         }
@@ -125,7 +127,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.30, 
+                    "y": (thisDimensions.y * 0.5) * 0.40, 
                     "z": 0.02
                 },
                 "grab": {
