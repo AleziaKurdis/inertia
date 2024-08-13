@@ -75,7 +75,7 @@
     }
 
     function updateClock() {
-        var angle = GetCurrentCycleValue(Math.PI * 2, Math.floor(D29_DAY_LENGTH * 1.618));
+        var angle = GetCurrentCycleValue(Math.PI * 2, Math.floor((D29_DAY_LENGTH/24) * 1.618));
         var currentGravity = (Math.sin(angle) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
         var gravityPercent = 100 * (Math.abs(currentGravity)/9.8);
         
@@ -108,7 +108,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "text": "(1.618 days cycle)",
+                "text": "(1.618 hours cycle)",
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.12,
                 "textColor": textOfficialColor,

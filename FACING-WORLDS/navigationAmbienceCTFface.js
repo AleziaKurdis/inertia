@@ -144,7 +144,7 @@
     }
     
     function updateGravityTide() {
-        var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
+        var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
         MyAvatar.setGravity(currentGravity);
     }
 
