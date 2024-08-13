@@ -1034,6 +1034,65 @@
         }, "local");
         entitiesToDelete.push(id);
         
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition":{
+                "x": 119.1147,
+                "y": -7.0654,
+                "z": -6.3276
+            },
+            "name": "GRAVITY CLOCK",
+            "dimensions": {
+                "x": 2.367738723754883,
+                "y": 0.607806384563446,
+                "z": 0.002970418892800808
+            },
+            "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "script": ROOT + "gravityClock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        }, "local");
+        entitiesToDelete.push(id);
+
+        id = Entities.addEntity({
+            "type": "Box",
+            "localPosition":{
+                "x": 119.1147,
+                "y": -7.0654,
+                "z": -6.3276
+            },
+            "name": "CLOCK D29",
+            "dimensions": {
+                "x": 1.8433825969696045,
+                "y": 1.3191678524017334,
+                "z": 0.01
+            },
+            "localRotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        
     };
 
     this.unload = function(entityID) {
