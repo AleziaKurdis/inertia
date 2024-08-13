@@ -106,6 +106,13 @@
         MyAvatar.position = arrivalPosition;
         MyAvatar.orientation = arrivalRotation;
         
+        var injectorOptionsLocalAfter = {
+            "position": MyAvatar.position,
+            "volume": 0.3,
+            "loop": false,
+            "localOnly": true
+        };
+        var injectorLocalAfter = Audio.playSound(TP_SOUND, injectorOptionsLocalAfter);
     }; 
     
     this.leaveEntity = function(entityID) {
