@@ -86,16 +86,8 @@
             progression = "- DOWN";
             progressionColor = {"red": 255, "green": 82, "blue": 82};
         }
-        progression
-        progressionColor
-        
-        //color value
-        var HUE_DAY_DURATION = D29Lib.getDayLenghtInSec();
-        var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
-        var hue = D29Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
-        var color = hslToRgb(hue, 1, 0.5);
-        //=======================================
-        var textOfficialColor = D29Lib.getOfficialColor();
+
+        var textOfficialColor = {"red": 255, "green": 255, "blue": 255};
         
         if (clockID === Uuid.NULL){
             //create clock
