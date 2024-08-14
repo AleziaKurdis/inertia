@@ -79,10 +79,10 @@
         var progressionColor;
         
         if (angle > (Math.PI/2) && angle < (3 * Math.PI/2)) {
-            progression = "+ UP";
+            progression = "+ INCREASING";
             progressionColor = {"red": 140, "green": 255, "blue": 138};
         } else {
-            progression = "- DOWN";
+            progression = "- DECREASING";
             progressionColor = {"red": 255, "green": 82, "blue": 82};
         }
 
@@ -101,7 +101,7 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.1, 
+                    "y": (thisDimensions.y * 0.5) * -0.05, 
                     "z": 0.02
                 },
                 "grab": {
@@ -127,13 +127,13 @@
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * 0.40, 
+                    "y": (thisDimensions.y * 0.5) * 0.45, 
                     "z": 0.02
                 },
                 "grab": {
                     "grabbable": false
                 },
-                "text": "GRAVITATIONAL TIDE (1.618 hours cycle)",
+                "text": "GRAVITATIONAL TIDE (Cycle: 1.6 h)",
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.2,
                 "textColor": textOfficialColor,
@@ -146,14 +146,14 @@
                 "type": "Text",
                 "name": "PROGRESSION",
                 "dimensions": {
-                    "x": thisDimensions.x * 0.9,
+                    "x": thisDimensions.x * 0.7,
                     "y": thisDimensions.y * 0.22,
                     "z": 0.01
                 },
                 "parentID": thisID,
                 "localPosition": {
                     "x": 0, 
-                    "y": (thisDimensions.y * 0.5) * -0.50, 
+                    "y": (thisDimensions.y * 0.5) * -0.55, 
                     "z": 0.02
                 },
                 "grab": {
@@ -165,7 +165,7 @@
                 "textColor": progressionColor,
                 "backgroundAlpha": 0,
                 "unlit": true,
-                "alignment": "center"
+                "alignment": "right"
             },"local");
             
         } else {
