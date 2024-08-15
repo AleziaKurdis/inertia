@@ -10,21 +10,20 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
-
     var ROOT = Script.resolvePath('').split("fallensCollector.js")[0];
-
-    
-    this.preload = function(entityID) {
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description", "position", "rotation"]);
-        
-    }
+    var channelComm = "ak.ctf.ac.communication";
+    var oneTimeOnly = false;
 
     this.enterEntity = function(entityID) {
+       if (oneTimeOnly === false) {
+            var message = {
+                "action": "REVIVE",
+                "avatarID": MyAvatar.sessionUUID
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(message));
 
+            oneTimeOnly = true;
+        }
     }; 
-    
-    this.leaveEntity = function(entityID) {
-        //do nothing.
-    };
     
 })
