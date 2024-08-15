@@ -582,7 +582,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -7.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 0, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -6.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 270, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
