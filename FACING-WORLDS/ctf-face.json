@@ -128,6 +128,72 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FACING-WORLDS_blue.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/tower.js"
+        },
+        {
+            "id": "{e308edff-256d-4aeb-822c-e87d5060dc6f}",
+            "type": "Box",
+            "position": {
+                 "x": -4000,
+                 "y": 4000,
+                 "z": -4000
+            },
+            "visible": false,
+            "name": "LOCAL MANAGER",
+            "locked": true,
+            "dimensions": {
+                "x": 30,
+                "y": 30,
+                "z": 30
+            },
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/localManager.js",
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "shape": "Cube"
+        },
+        {
+            "id": "{77032957-45b8-4666-be2d-7eba5ae66980}",
+            "type": "Box",
+            "position": {"x":-4000,"y":3700,"z":-4000},
+            "visible": false,
+            "name": "FALLENS COLLECTOR",
+            "locked": true,
+            "dimensions": {
+                "x": 1000,
+                "y": 500,
+                "z": 1000
+            },
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/fallensCollector.js",
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
