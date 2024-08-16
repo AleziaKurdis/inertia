@@ -75,11 +75,86 @@
                     assignLandingPoint(team);
                 } else {
                     assignLandingPoint(team);
+                    showDeath();
                 }
             } else if (data.action === "PLAYER_LIST") {
                 players = data.players;
             }
         }
+    }
+
+    function showDeath() {
+        var deathID = Entities.addEntity({
+            "type": "ParticleEffect",
+            "name": "DEATH",
+            "dimensions": {
+                "x": 2.9000000953674316,
+                "y": 2.9000000953674316,
+                "z": 2.9000000953674316
+            },
+            "parentID": MyAvatar.sessionUUID,
+            "localPosition": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 255,
+                "green": 0,
+                "blue": 0
+            },
+            "alpha": 0,
+            "textures": ROOT + "images/skull.png",
+            "maxParticles": 240,
+            "lifespan": 2,
+            "emitRate": 80,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 2,
+                "z": 2
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 0.3499999940395355,
+            "radiusSpread": 0.10000000149011612,
+            "radiusStart": 0,
+            "radiusFinish": null,
+            "colorStart": {
+                "red": 255,
+                "green": 166,
+                "blue": 166
+            },
+            "colorFinish": {
+                "red": null,
+                "green": null,
+                "blue": null
+            },
+            "alphaStart": 1,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinStart": null,
+            "spinFinish": null,
+            "rotateWithEntity": true
+        },"local");
+        Script.setTimeout(function () {
+            Entities.deleteEntity(deathID);
+        }, 4000);
     }
 
     function isPlayerKnown(avatarID) {
@@ -129,8 +204,32 @@
     }
 
     function assignLandingPoint(team) {
-        //Determine a landing point from 2 list of landing points... then tp MyAvatar there
+        var tp;
+        var redTP = [
+            {"position": {"x": -126.31, "y": -8.42, "z": 4.08}, "azimuth": 90},
+            {"position": {"x": -126.31, "y": -8.42, "z": -6.95}, "azimuth": 90},
+            {"position": {"x": -113.15, "y": -8.42, "z": -8.83}, "azimuth": 180},
+            {"position": {"x": -113.5, "y": -8.42, "z": 5.7}, "azimuth": 0}, 
+            {"position": {"x": -104.66, "y": 26.25, "z": -3.16}, "azimuth": 270}, 
+            {"position": {"x": -121.52, "y": -9.71, "z": -17.29}, "azimuth": 0}
+        ];
         
+        var blueTP = [
+            {"position": {"x": 126.08, "y": -8.42, "z": -3.89}, "azimuth": 270},
+            {"position": {"x": 126.06, "y": -8.42, "z": 7.23}, "azimuth": 270},
+            {"position": {"x": 113.71, "y": -8.42, "z": 9.13}, "azimuth": 0}, 
+            {"position": {"x": 113.74, "y": -8.42, "z": -5.68}, "azimuth": 180}, 
+            {"position": {"x": 104.79, "y": 26.25, "z": 3.06}, "azimuth": 90},
+            {"position": {"x": 121.23, "y": -9.74, "z": 17.15}, "azimuth": 180}
+        ];
+        
+        if (team === "RED") {
+            tp = redTP[Math.random() * redTP.length];
+        } else {
+            tp = redTP[Math.random() * blueTP.length];
+        }
+        MyAvatar.position = Vec3.sum(thisPosition, tp.position);
+        MyAvatar.orientation = Quat.fromVec3Degrees({ "x": 0, "y": tp.azimuth, "z": 0 });
         
     }
 

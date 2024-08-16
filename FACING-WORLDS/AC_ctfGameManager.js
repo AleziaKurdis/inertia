@@ -16,12 +16,13 @@ var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
 
 var channelComm = "ak.ctf.ac.communication";
 
+var ORIGIN_POSITION = { "x": -4000, "y": 4000, "z": -4000};
+var EFFECTIVE_RANGE = 800; //in meters
 
 var updateTimerInterval = 4000; //4sec.
 var processTimer = 0;
 
 var players = [];
-
 
 
 
@@ -74,6 +75,25 @@ function isPlayerKnown(avatarID) {
         return team;
     } else {
         return "NONE";
+    }
+}
+
+function updatePlayersList() {
+    var processedPlayers = [];
+    if (players.length > 0) {
+        var presentAvatarIDs = AvatarList.getAvatarsInRange(ORIGIN_POSITION, EFFECTIVE_RANGE);
+        for (var i = 0; i < players.length; i++) {
+            if (presentAvatarIDs.indexOf(players[i].avatarID) !== -1) {
+                processedPlayers.push(players[i]);
+            }
+        }
+        players = processedPlayers.slice();
+        
+        var message = {
+            "action": "PLAYER_LIST",
+            "players": players,
+        };
+        Messages.sendMessage(channelComm, JSON.stringify(message));
     }
 }
 
@@ -226,6 +246,7 @@ function myTimer(deltaTime) {
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         //processing here
+        updatePlayersList();
 
         today = new Date();
         processTimer = today.getTime();
