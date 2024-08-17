@@ -194,6 +194,32 @@
                 "blue": 239
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{b05b5b39-0c71-4a4b-b267-4d2b096fd00b}",
+            "type": "Box",
+            "position": {"x":-4000,"y":3875.7119140625,"z":-4000},
+            "name": "FALLEN_BLOCKER",
+            "locked": true,
+            "dimensions": {
+                "x": 800,
+                "y": 4,
+                "z": 800
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": {
+                "red": 0,
+                "green": 35,
+                "blue": 43
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
