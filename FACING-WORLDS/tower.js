@@ -1141,7 +1141,7 @@
         if (team === "RED") {
             localColor = RED_COLOR;
             visitorColor = BLUE_COLOR;
-        } else
+        } else {
             localColor = BLUE_COLOR;
             visitorColor = RED_COLOR;
         }
