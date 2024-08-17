@@ -33,7 +33,7 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description"]);
         renderWithZones = properties.renderWithZones;
         team = properties.description; // (RED | BLUE)
-        
+        print("Team:" + team ); //####################################################### DEBUG TO REMOVE #####################
         if (team === "") {
             team = "RED";
         }
@@ -1132,9 +1132,9 @@
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
             if (players[i].team === team) {
-                localList = localList + "\n  " + name;
+                localList = localList + "\n - " + name;
             } else {
-                visitorList = visitorList + "\n  " + name;
+                visitorList = visitorList + "\n - " + name;
             }
         }
         
