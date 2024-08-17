@@ -13,16 +13,36 @@
     var ROOT = Script.resolvePath('').split("tower.js")[0];
     var entitiesToDelete = [];
 
+    var channelComm = "ak.ctf.ac.communication";
+    var team;
+    var otherTeam;
+    var renderWithZones;
+    var thisEntityID;
+    
+    var RED_COLOR = {"red": 255, "green": 24, "blue": 0 };
+    var BLUE_COLOR = {"red": 0, "green": 108, "blue": 255 };
+    
+    var localPlayerListID = Uuid.NULL;
+    var visitorPlayerListID = Uuid.NULL;
+    
     this.preload = function(entityID) {
+        thisEntityID = entityID;
+        Messages.subscribe(channelComm);
+        Messages.messageReceived.connect(onMessageReceived);
+        
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description"]);
-        var renderWithZones = properties.renderWithZones;
-        var team = properties.description; // (RED | BLUE)
+        renderWithZones = properties.renderWithZones;
+        team = properties.description; // (RED | BLUE)
+        
         if (team === "") {
             team = "RED";
         }
-        var lightColor = {"red": 255, "green": 24, "blue": 0 };
+        var lightColor = RED_COLOR;
         if (team === "BLUE") {
-            lightColor = {"red": 0, "green": 108, "blue": 255 };
+            otherTeam = "RED";
+            lightColor = BLUE_COLOR;
+        } else {
+            otherTeam = "BLUE";
         }
         
         var id = Entities.addEntity({
@@ -1095,6 +1115,96 @@
         
     };
 
+    function onMessageReceived(channel, message, sender, localOnly) {
+        if (channel === channelComm) {
+            var data = JSON.parse(message);
+            if (data.action === "PLAYER_LIST") {
+                updatePlayersDashboard(data.players);
+            }
+        }
+    }
+
+    function updatePlayersDashboard(players) {
+        var i, localColor, visitorColor;
+        var localList = team + " TEAM:";
+        var visitorList = otherTeam + " TEAM:";
+        var name;
+        for (i = 0; i < players.length: i++) {
+            name = AvatarManager.getAvatar(players[i].avatarID).displayName;
+            if (players[i].team === team) {
+                localList = localList + "\n" + name;
+            } else {
+                visitorList = visitorList + "\n" + name;
+            }
+        }
+        
+        if (team === "RED") {
+            localColor = RED_COLOR;
+            visitorColor = BLUE_COLOR;
+        } else
+            localColor = BLUE_COLOR;
+            visitorColor = RED_COLOR;
+        }
+        if (localPlayerListID === Uuid.NULL) {
+            //create
+            localPlayerListID = Entities.addEntity({
+                "type": "Text",
+                "name": "LOCAL PLAYERS - " + team,
+                "dimensions": {"x":2.506094217300415,"y":2.581923007965088,"z":0.009999999776482582},
+                "localPosition": {
+                    "x": 122.5337,
+                    "y": -6.5530,
+                    "z": 0.0056
+                },
+                "parentID": thisEntityID,
+                "text": localList,
+                "textColor": localColor,
+                "lineHeight": 0.2,
+                "leftMargin": 0.1,
+                "rightMargin": 0.1,
+                "topMargin": 0.05,
+                "bottomMargin": 0.05,
+                "unlit": true,
+                "renderWithZones": renderWithZones
+            }, "local");
+        } else {
+            //update
+            Entities.editEntity(localPlayerListID, {
+                "text": localList
+            });
+        }
+
+        if (visitorPlayerListID === Uuid.NULL) {
+            //create
+            visitorPlayerListID = Entities.addEntity({
+                "type": "Text",
+                "name": "VISITOR PLAYERS - " + team,
+                "dimensions": {"x":2.506094217300415,"y":2.581923007965088,"z":0.009999999776482582},
+                "localPosition": {
+                    "x": 122.5337,
+                    "y": -6.5530,
+                    "z": 3.1409
+                },
+                "parentID": thisEntityID,
+                "text": visitorList,
+                "textColor": visitorColor,
+                "lineHeight": 0.2,
+                "leftMargin": 0.1,
+                "rightMargin": 0.1,
+                "topMargin": 0.05,
+                "bottomMargin": 0.05,
+                "unlit": true,
+                "renderWithZones": renderWithZones
+            }, "local");
+        } else {
+            //update
+            Entities.editEntity(localPlayerListID, {
+                "text": visitorList
+            });
+        }
+
+    }
+
     this.unload = function(entityID) {
         var i;
         for (i=0; i < entitiesToDelete.length; i++) {
@@ -1102,6 +1212,19 @@
             
         }
         entitiesToDelete = [];
+        
+        if (localPlayerListID !== Uuid.NULL) {
+            Entities.deleteEntity(localPlayerListID);
+            localPlayerListID = Uuid.NULL;
+        }
+        
+        if (visitorPlayerListID !== Uuid.NULL) {
+            Entities.deleteEntity(visitorPlayerListID);
+            visitorPlayerListID = Uuid.NULL;
+        }
+      
+        Messages.messageReceived.disconnect(onMessageReceived);
+        Messages.unsubscribe(channelComm);
     };
 
 })

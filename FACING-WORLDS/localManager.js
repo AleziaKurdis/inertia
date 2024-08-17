@@ -58,7 +58,7 @@
     }
 */
     function onMessageReceived(channel, message, sender, localOnly) {
-        var message;
+        var messageToSent;
         var displayText = "";
         if (channel === channelComm) {
             var data = JSON.parse(message);
@@ -66,12 +66,12 @@
                 var team = isPlayerKnown(data.avatarID);
                 if (team === "NONE") {
                     team = determineTeamForNewPlayer();
-                    message = {
+                    messageToSent = {
                         "action": "SET_PLAYER_TEAM",
                         "avatarID": data.avatarID,
                         "team": team
                     };
-                    Messages.sendMessage(channelComm, JSON.stringify(message));
+                    Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
                     assignLandingPoint(team);
                 } else {
                     assignLandingPoint(team);

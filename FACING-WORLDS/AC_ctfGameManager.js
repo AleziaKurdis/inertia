@@ -27,23 +27,23 @@ var players = [];
 
 
 function onMessageReceived(channel, message, sender, localOnly) {
-    var message;
+    var messageToSent;
     if (channel === channelComm) {
         var data = JSON.parse(message);
         if (data.action === "GET_PLAYER_LIST") { 
-            message = {
+            messageToSent = {
                 "action": "PLAYER_LIST",
                 "players": players,
             };
-            Messages.sendMessage(channelComm, JSON.stringify(message));
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             
         } else if (data.action === "SET_PLAYER_TEAM") {
             addPlayer(data.avatarID, data.team);
-            message = {
+            messageToSent = {
                 "action": "PLAYER_LIST",
                 "players": players,
             };
-            Messages.sendMessage(channelComm, JSON.stringify(message));
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         }
     }
 }
