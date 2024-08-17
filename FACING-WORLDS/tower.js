@@ -1200,7 +1200,7 @@
             }, "local");
         } else {
             //update
-            Entities.editEntity(localPlayerListID, {
+            Entities.editEntity(visitorPlayerListID, {
                 "text": visitorList
             });
         }

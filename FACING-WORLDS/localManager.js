@@ -206,21 +206,21 @@
     function assignLandingPoint(team) {
         var tp;
         var redTP = [
-            {"position": {"x": -126.31, "y": -8.22, "z": 4.08}, "azimuth": 90},
-            {"position": {"x": -126.31, "y": -8.22, "z": -6.95}, "azimuth": 90},
-            {"position": {"x": -113.15, "y": -8.22, "z": -8.83}, "azimuth": 180},
-            {"position": {"x": -113.5, "y": -8.22, "z": 5.7}, "azimuth": 0}, 
-            {"position": {"x": -104.66, "y": 26.45, "z": -3.16}, "azimuth": 270}, 
-            {"position": {"x": -121.52, "y": -9.51, "z": -17.29}, "azimuth": 0}
+            {"position": {"x": -126.31, "y": -8.02, "z": 4.08}, "azimuth": 90},
+            {"position": {"x": -126.31, "y": -8.02, "z": -6.95}, "azimuth": 90},
+            {"position": {"x": -113.15, "y": -8.02, "z": -8.83}, "azimuth": 180},
+            {"position": {"x": -113.5, "y": -8.02, "z": 5.7}, "azimuth": 0}, 
+            {"position": {"x": -104.66, "y": 26.65, "z": -3.16}, "azimuth": 270}, 
+            {"position": {"x": -121.52, "y": -9.31, "z": -17.29}, "azimuth": 0}
         ];
         
         var blueTP = [
-            {"position": {"x": 126.08, "y": -8.22, "z": -3.89}, "azimuth": 270},
-            {"position": {"x": 126.06, "y": -8.22, "z": 7.23}, "azimuth": 270},
-            {"position": {"x": 113.71, "y": -8.22, "z": 9.13}, "azimuth": 0}, 
-            {"position": {"x": 113.74, "y": -8.22, "z": -5.68}, "azimuth": 180}, 
-            {"position": {"x": 104.79, "y": 26.45, "z": 3.06}, "azimuth": 90},
-            {"position": {"x": 121.23, "y": -9.54, "z": 17.15}, "azimuth": 180}
+            {"position": {"x": 126.08, "y": -8.02, "z": -3.89}, "azimuth": 270},
+            {"position": {"x": 126.06, "y": -8.02, "z": 7.23}, "azimuth": 270},
+            {"position": {"x": 113.71, "y": -8.02, "z": 9.13}, "azimuth": 0}, 
+            {"position": {"x": 113.74, "y": -8.02, "z": -5.68}, "azimuth": 180}, 
+            {"position": {"x": 104.79, "y": 26.65, "z": 3.06}, "azimuth": 90},
+            {"position": {"x": 121.23, "y": -9.34, "z": 17.15}, "azimuth": 180}
         ];
         
         if (team === "RED") {
