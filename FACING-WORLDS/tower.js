@@ -33,7 +33,7 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "description"]);
         renderWithZones = properties.renderWithZones;
         team = properties.description; // (RED | BLUE)
-        print("Team:" + team ); //####################################################### DEBUG TO REMOVE #####################
+
         if (team === "") {
             team = "RED";
         }
