@@ -1129,7 +1129,7 @@
         var localList = team + " TEAM:";
         var visitorList = otherTeam + " TEAM:";
         var name;
-        for (i = 0; i < players.length: i++) {
+        for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
             if (players[i].team === team) {
                 localList = localList + "\n" + name;
