@@ -1156,7 +1156,7 @@
                     "y": -6.5530,
                     "z": 0.0056
                 },
-                "rotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 90,"z": 0.0} ),
+                "rotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "parentID": thisEntityID,
                 "text": localList,
                 "textColor": localColor,
@@ -1186,7 +1186,7 @@
                     "y": -6.5530,
                     "z": 3.1409
                 },
-                "rotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 90,"z": 0.0} ),
+                "rotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "parentID": thisEntityID,
                 "text": visitorList,
                 "textColor": visitorColor,
