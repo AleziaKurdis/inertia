@@ -200,7 +200,7 @@
         if (Math.random() < 0.5) {
             team = "BLUE";
         }
-        return Team;
+        return team;
     }
 
     function assignLandingPoint(team) {
