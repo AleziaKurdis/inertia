@@ -602,7 +602,7 @@
             "ignoreForCollisions": true,
             "shape": "Cube",
             "script": ROOT + "localTeleporter.js",
-            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -6.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 270, "z": 0} ))+ '}'
+            "description": '{"team": "' + team + '", "teamColor": ' + JSON.stringify(lightColor) + ', "localPosition": { "x": 1.7554, "y": 53.0559, "z": -3.3364}, "localRotation": ' + JSON.stringify(Quat.fromVec3Degrees( { "x": 0, "y": 270, "z": 0} ))+ '}'
         }, "local");
         entitiesToDelete.push(id);
 
@@ -1132,9 +1132,9 @@
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
             if (players[i].team === team) {
-                localList = localList + "\n" + name;
+                localList = localList + "\n  " + name;
             } else {
-                visitorList = visitorList + "\n" + name;
+                visitorList = visitorList + "\n  " + name;
             }
         }
         
@@ -1152,7 +1152,7 @@
                 "name": "LOCAL PLAYERS - " + team,
                 "dimensions": {"x":2.506094217300415,"y":2.581923007965088,"z":0.009999999776482582},
                 "localPosition": {
-                    "x": 122.5337,
+                    "x": 122.51,
                     "y": -6.5530,
                     "z": 0.0056
                 },
@@ -1182,7 +1182,7 @@
                 "name": "VISITOR PLAYERS - " + team,
                 "dimensions": {"x":2.506094217300415,"y":2.581923007965088,"z":0.009999999776482582},
                 "localPosition": {
-                    "x": 122.5337,
+                    "x": 122.51,
                     "y": -6.5530,
                     "z": 3.1409
                 },
