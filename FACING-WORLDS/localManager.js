@@ -224,9 +224,9 @@
         ];
         
         if (team === "RED") {
-            tp = redTP[Math.random() * redTP.length];
+            tp = redTP[Math.floor(Math.random() * redTP.length)];
         } else {
-            tp = redTP[Math.random() * blueTP.length];
+            tp = blueTP[Math.floor(Math.random() * blueTP.length)];
         }
         MyAvatar.position = Vec3.sum(thisPosition, tp.position);
         MyAvatar.orientation = Quat.fromVec3Degrees({ "x": 0, "y": tp.azimuth, "z": 0 });
