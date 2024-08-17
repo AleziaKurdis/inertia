@@ -1112,7 +1112,7 @@
         }, "local");
         entitiesToDelete.push(id);
         
-        
+        updatePlayersDashboard([]);
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
