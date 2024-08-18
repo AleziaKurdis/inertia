@@ -540,6 +540,35 @@
             "emitterShouldTrail": true,
             "spinStart": null,
             "spinFinish": null
+        },
+        {
+            "id": "{5d859e2f-ac85-451b-8363-87de2d2a7557}",
+            "type": "Model",
+            "position": {"x":-3984.84716796875,"y":4016.01318359375,"z":-3940.92822265625},
+            "name": "ARRIVAL",
+            "locked": true,
+            "dimensions": {
+                "x": 14.484094619750977,
+                "y": 18.110748291015625,
+                "z": 13.64443588256836
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": 1,
+                "z": -0.0000457763671875,
+                "w": -0.0000152587890625
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/ARRIVAL.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
