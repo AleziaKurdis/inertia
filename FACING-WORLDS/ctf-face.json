@@ -571,9 +571,6 @@
             "useOriginalPivot": true
         },
         {
-          "DataVersion": 0,
-          "Entities": [
-            {
             "id": "{9f71ec2b-9ddc-4fe4-995e-b06edb1c4e40}",
             "type": "Zone",
             "position": {"x":-3984.84716796875,"y":4016.01318359375,"z":-3940.92822265625},
