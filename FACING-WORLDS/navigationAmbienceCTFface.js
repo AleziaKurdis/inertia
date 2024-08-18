@@ -325,6 +325,10 @@
                 }
             } else {
                 if (universeVolume > 0 && universeSound.downloaded && universeSoundDark.downloaded) {
+                    if (univerSoundPlaying === 1) {
+                        universeSoundInjector.stop();
+                        univerSoundPlaying = 0;
+                    }
                     if (univerSoundSide === "LIGHT") {
                         universeSoundInjector = Audio.playSound(universeSound, {
                                 "loop": true,
@@ -339,7 +343,7 @@
                                 });
                     }
                     univerSoundPlaying = 1;
-                }   
+                }
             }
             // ######### END UNIVERSE SOUND VOLUME MANAGEMENT ######## 
 
