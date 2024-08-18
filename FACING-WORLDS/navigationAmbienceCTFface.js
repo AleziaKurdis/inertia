@@ -40,9 +40,11 @@
 
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/desertWindAmbient.mp3";
+    var UNIVERSE_SOUND_DARK = ROOT + "sounds/behind_the_mirror_ambience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
-    var universeSound, universeSoundInjector;
+    var universeSound, universeSoundDark, universeSoundInjector;
     var univerSoundPlaying = 0;
+    var univerSoundSide = "LIGHT";
     var blindspots = [
         {
             "name": "AK003-1 METASPACEPORT",
@@ -64,6 +66,7 @@
         thisEntityID = entityID;
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
+        universeSoundDark = SoundCache.getSound(UNIVERSE_SOUND_DARK);
 
         if (!isInitiated){
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
@@ -302,7 +305,18 @@
                     }
                 }
             }
-            if (univerSoundPlaying === 1) {
+            var newSoundSide;
+            var sideHasChanged = false;
+            if (myAvPos.x >== universeCenter.x) {
+                newSoundSide = "LIGHT";
+            } else {
+                newSoundSide = "DARK";
+            }
+            if (univerSoundSide !== newSoundSide) {
+                sideHasChanged = true;
+                univerSoundSide = newSoundSide;
+            }
+            if (univerSoundPlaying === 1 && !sideHasChanged) {
                 if (universeVolume > 0) {
                     universeSoundInjector.setOptions({"volume": universeVolume});
                 } else {
@@ -310,12 +324,20 @@
                     univerSoundPlaying = 0;
                 }
             } else {
-                if (universeVolume > 0 && universeSound.downloaded) {
-                    universeSoundInjector = Audio.playSound(universeSound, {
-                            "loop": true,
-                            "localOnly": true,
-                            "volume": universeVolume
-                            });
+                if (universeVolume > 0 && universeSound.downloaded && universeSoundDark.downloaded) {
+                    if (univerSoundSide === "LIGHT") {
+                        universeSoundInjector = Audio.playSound(universeSound, {
+                                "loop": true,
+                                "localOnly": true,
+                                "volume": universeVolume
+                                });
+                    } else {
+                        universeSoundInjector = Audio.playSound(universeSoundDark, {
+                                "loop": true,
+                                "localOnly": true,
+                                "volume": universeVolume
+                                });
+                    }
                     univerSoundPlaying = 1;
                 }   
             }
