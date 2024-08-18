@@ -12,18 +12,13 @@
 (function(){
     var ROOT = Script.resolvePath('').split("fallensCollector.js")[0];
     var channelComm = "ak.ctf.ac.communication";
-    var oneTimeOnly = false;
 
     this.enterEntity = function(entityID) {
-       if (oneTimeOnly === false) {
-            var message = {
-                "action": "REVIVE",
-                "avatarID": MyAvatar.sessionUUID
-            };
-            Messages.sendMessage(channelComm, JSON.stringify(message));
-
-            oneTimeOnly = true;
-        }
+        var message = {
+            "action": "REVIVE",
+            "avatarID": MyAvatar.sessionUUID
+        };
+        Messages.sendMessage(channelComm, JSON.stringify(message));
     }; 
     
 })
