@@ -569,6 +569,33 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/ARRIVAL.fst",
             "useOriginalPivot": true
+        },
+        {
+          "DataVersion": 0,
+          "Entities": [
+            {
+            "id": "{9f71ec2b-9ddc-4fe4-995e-b06edb1c4e40}",
+            "type": "Zone",
+            "position": {"x":-3984.84716796875,"y":4016.01318359375,"z":-3940.92822265625},
+            "name": "ARRIVAL_ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 8.478630065917969,
+                "y": 14.136823654174805,
+                "z": 8.478630065917969
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
