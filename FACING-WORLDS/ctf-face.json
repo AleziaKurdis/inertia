@@ -312,6 +312,7 @@
             "type": "ParticleEffect",
             "position": {"x":-4023.675537109375,"y":4002.32080078125,"z":-4000},
             "name": "DARK-FX",
+            "locked": true,
             "dimensions": {
                 "x": 54.467002868652344,
                 "y": 54.467002868652344,
@@ -390,6 +391,7 @@
             "type": "ParticleEffect",
             "position": {"x":-4073.203857421875,"y":3997.44482421875,"z":-4000},
             "name": "DARK-FX",
+            "locked": true,
             "dimensions": {
                 "x": 54.467002868652344,
                 "y": 54.467002868652344,
