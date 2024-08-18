@@ -220,6 +220,248 @@
                 "blue": 43
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{ae7336ce-8108-4b72-ae65-0613124d4a3c}",
+            "type": "Zone",
+            "position": {"x":-4400,"y":4000,"z":-4000},
+            "name": "DARKSIDE",
+            "locked": true,
+            "dimensions": {
+                "x": 800,
+                "y": 800,
+                "z": 800
+            },
+            "rotation": {
+                "x": -0.2202962189912796,
+                "y": -0.2202962189912796,
+                "z": -0.6719148755073547,
+                "w": 0.6719148755073547
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "angularVelocity": {
+                "x": -0.013962999917566776,
+                "y": 0,
+                "z": 0
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "keyLight": {
+                "color": {
+                    "red": 255,
+                    "green": 0,
+                    "blue": 0
+                },
+                "direction": {
+                    "x": -0.8632094264030457,
+                    "y": 0,
+                    "z": -0.5048460364341736
+                },
+                "castShadows": true,
+                "shadowBias": 0.019999999552965164,
+                "shadowMaxDistance": 100
+            },
+            "ambientLight": {
+                "ambientIntensity": 0,
+                "ambientURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/DARKSIDE_SKY.jpg"
+            },
+            "skybox": {
+                "color": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "url": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/DARKSIDE_SKY.jpg"
+            },
+            "haze": {
+                "hazeRange": 600,
+                "hazeColor": {
+                    "red": 255,
+                    "green": 0,
+                    "blue": 0
+                },
+                "hazeGlareColor": {
+                    "red": 255,
+                    "green": 68,
+                    "blue": 0
+                },
+                "hazeEnableGlare": true,
+                "hazeGlareAngle": 19,
+                "hazeAltitudeEffect": true,
+                "hazeCeiling": 4040,
+                "hazeBaseRef": 3950
+            },
+            "bloom": {
+                "bloomIntensity": 0.3499999940395355,
+                "bloomThreshold": 0.5,
+                "bloomSize": 0.5
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "enabled",
+            "bloomMode": "enabled"
+        },
+        {
+            "id": "{306c861e-5275-4e03-9684-58e81e609e5c}",
+            "type": "ParticleEffect",
+            "position": {"x":-4023.675537109375,"y":4002.32080078125,"z":-4000},
+            "name": "DARK-FX",
+            "dimensions": {
+                "x": 54.467002868652344,
+                "y": 54.467002868652344,
+                "z": 54.467002868652344
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{ae7336ce-8108-4b72-ae65-0613124d4a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 255,
+                "green": 138,
+                "blue": 112
+            },
+            "alpha": 0.6000000238418579,
+            "textures": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/ASTROLITHE.png",
+            "maxParticles": 3000,
+            "emitRate": 1000,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 50,
+                "y": 20,
+                "z": 50
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0.30000001192092896,
+                "y": 0.30000001192092896,
+                "z": 0.30000001192092896
+            },
+            "particleRadius": 0.5,
+            "radiusSpread": 0.10000000149011612,
+            "radiusStart": 0.10000000149011612,
+            "radiusFinish": 0.10000000149011612,
+            "colorStart": {
+                "red": 255,
+                "green": 217,
+                "blue": 161
+            },
+            "colorFinish": {
+                "red": 255,
+                "green": 0,
+                "blue": 0
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "spinStart": null,
+            "spinFinish": null
+        },
+        {
+            "id": "{306c861e-5275-4e03-9684-58e81e609e5c}",
+            "type": "ParticleEffect",
+            "position": {"x":-4073.203857421875,"y":3997.44482421875,"z":-4000},
+            "name": "DARK-FX",
+            "dimensions": {
+                "x": 54.467002868652344,
+                "y": 54.467002868652344,
+                "z": 54.467002868652344
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{ae7336ce-8108-4b72-ae65-0613124d4a3c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 255,
+                "green": 138,
+                "blue": 112
+            },
+            "alpha": 0.6000000238418579,
+            "textures": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/ASTROLITHE.png",
+            "maxParticles": 3000,
+            "emitRate": 1000,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 50,
+                "y": 20,
+                "z": 50
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0.30000001192092896,
+                "y": 0.30000001192092896,
+                "z": 0.30000001192092896
+            },
+            "particleRadius": 0.5,
+            "radiusSpread": 0.10000000149011612,
+            "radiusStart": 0.10000000149011612,
+            "radiusFinish": 0.10000000149011612,
+            "colorStart": {
+                "red": 255,
+                "green": 217,
+                "blue": 161
+            },
+            "colorFinish": {
+                "red": 255,
+                "green": 0,
+                "blue": 0
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "spinStart": null,
+            "spinFinish": null
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
