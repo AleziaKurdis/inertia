@@ -464,6 +464,82 @@
             "alphaFinish": 0,
             "spinStart": null,
             "spinFinish": null
+        },
+        {
+            "id": "{d166d9ea-02b6-4b6a-9912-8d6e40a270af}",
+            "type": "ParticleEffect",
+            "position": {"x":-4000,"y":4000,"z":-4000},
+            "name": "INTERWORLD",
+            "locked": true,
+            "dimensions": {
+                "x": 28.360000610351562,
+                "y": 28.360000610351562,
+                "z": 28.360000610351562
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 60,
+                "green": 255,
+                "blue": 0
+            },
+            "alpha": 0.20000000298023224,
+            "textures": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/ASTROLITHE.png",
+            "maxParticles": 1200,
+            "lifespan": 2,
+            "emitRate": 600,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.009999999776482582,
+                "y": 0.009999999776482582,
+                "z": 28
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0.4000000059604645,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.30000001192092896,
+                "z": 0
+            },
+            "particleRadius": 0.15000000596046448,
+            "radiusSpread": 0.029999999329447746,
+            "radiusStart": 0.009999999776482582,
+            "radiusFinish": null,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": 13,
+                "green": 255,
+                "blue": 0
+            },
+            "alphaSpread": 0.10000000149011612,
+            "alphaStart": 0.05000000074505806,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinStart": null,
+            "spinFinish": null
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
