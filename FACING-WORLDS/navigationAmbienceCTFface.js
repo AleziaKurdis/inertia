@@ -307,7 +307,7 @@
             }
             var newSoundSide;
             var sideHasChanged = false;
-            if (myAvPos.x >== universeCenter.x) {
+            if (myAvPos.x > universeCenter.x) {
                 newSoundSide = "LIGHT";
             } else {
                 newSoundSide = "DARK";
