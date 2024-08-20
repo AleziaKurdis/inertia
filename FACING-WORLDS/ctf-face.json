@@ -629,6 +629,305 @@
                 "blue": 0
             },
             "shape": "Cylinder"
+        },
+        {
+            "id": "{5888191c-7234-4187-af65-cd91cdea5ccd}",
+            "type": "ParticleEffect",
+            "position": {"x":-3984.707763671875,"y":4017.455322265625,"z":-3940.25},
+            "name": "ARRIVAL-FX",
+            "locked": true,
+            "dimensions": {
+                "x": 9.84002685546875,
+                "y": 9.84002685546875,
+                "z": 9.84002685546875
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false,
+                "equippableLeftRotation": {
+                    "x": -0.0000152587890625,
+                    "y": -0.0000152587890625,
+                    "z": -0.0000152587890625,
+                    "w": 1
+                },
+                "equippableRightRotation": {
+                    "x": -0.0000152587890625,
+                    "y": -0.0000152587890625,
+                    "z": -0.0000152587890625,
+                    "w": 1
+                }
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 0,
+                "green": 255,
+                "blue": 0
+            },
+            "alpha": 0.009999999776482582,
+            "textures": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/PARTICULE_OPERA_007.png",
+            "maxParticles": 900,
+            "lifespan": 2,
+            "emitRate": 450,
+            "emitSpeed": 0,
+            "speedSpread": 0.20000000298023224,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.10000000149011612,
+                "y": 2,
+                "z": 0.10000000149011612
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "particleRadius": 0.5,
+            "radiusSpread": 0.5,
+            "radiusStart": 0.10000000149011612,
+            "radiusFinish": 1,
+            "colorStart": {
+                "red": 224,
+                "green": 255,
+                "blue": 224
+            },
+            "colorFinish": {
+                "red": 0,
+                "green": 255,
+                "blue": 0
+            },
+            "alphaStart": 0.4000000059604645,
+            "alphaFinish": 0.008999999612569809,
+            "emitterShouldTrail": true,
+            "spinSpread": 3.140000104904175,
+            "spinStart": -1.5700000524520874,
+            "spinFinish": 1.5700000524520874
+        },
+        {
+            "id": "{95bb4731-a213-40ae-a76b-262c440bd6d6}",
+            "type": "Light",
+            "position": {"x":-3984.707763671875,"y":4017.455322265625,"z":-3940.25},
+            "name": "ARRIVAL_LIGHT",
+            "locked": true,
+            "dimensions": {
+                "x": 5.313211441040039,
+                "y": 5.313211441040039,
+                "z": 5.313211441040039
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 255,
+                "blue": 0
+            },
+            "intensity": 10,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 1
+        },
+,
+        {
+            "id": "{eea02bd4-5564-4024-bede-fda63d125b49}",
+            "type": "ParticleEffect",
+            "position": {"x":-3984.707763671875,"y":4017.455322265625,"z":-3940.25},
+            "name": "JOINING-FX",
+            "locked": true,
+            "dimensions": {
+                "x": 9.84002685546875,
+                "y": 9.84002685546875,
+                "z": 9.84002685546875
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false,
+                "equippableLeftRotation": {
+                    "x": -0.0000152587890625,
+                    "y": -0.0000152587890625,
+                    "z": -0.0000152587890625,
+                    "w": 1
+                },
+                "equippableRightRotation": {
+                    "x": -0.0000152587890625,
+                    "y": -0.0000152587890625,
+                    "z": -0.0000152587890625,
+                    "w": 1
+                }
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 128,
+                "green": 0,
+                "blue": 255
+            },
+            "alpha": 0.009999999776482582,
+            "textures": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/PARTICULE_OPERA_007.png",
+            "maxParticles": 900,
+            "lifespan": 2,
+            "emitRate": 450,
+            "emitSpeed": 0,
+            "speedSpread": 0.20000000298023224,
+            "emitOrientation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.10000000149011612,
+                "y": 2,
+                "z": 0.10000000149011612
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "particleRadius": 0.5,
+            "radiusSpread": 0.5,
+            "radiusStart": 0.10000000149011612,
+            "radiusFinish": 1,
+            "colorStart": {
+                "red": 224,
+                "green": 255,
+                "blue": 224
+            },
+            "colorFinish": {
+                "red": 128,
+                "green": 0,
+                "blue": 255
+            },
+            "alphaStart": 0.4000000059604645,
+            "alphaFinish": 0.008999999612569809,
+            "emitterShouldTrail": true,
+            "spinSpread": 3.140000104904175,
+            "spinStart": -1.5700000524520874,
+            "spinFinish": 1.5700000524520874
+        },
+        {
+            "id": "{f104804e-7015-4dbb-aae9-e2497505865a}",
+            "type": "Light",
+            "position": {"x":-3984.707763671875,"y":4017.455322265625,"z":-3940.25},
+            "name": "JOINING_LIGHT",
+            "locked": true,
+            "dimensions": {
+                "x": 5.313211441040039,
+                "y": 5.313211441040039,
+                "z": 5.313211441040039
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 128,
+                "green": 0,
+                "blue": 255
+            },
+            "intensity": 10,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 1
+        },
+        {
+            "id": "{aa99a640-ebc5-443e-8206-1c6cdb2abc4e}",
+            "type": "Shape",
+            "visible": false,
+            "name": "JOINING",
+            "locked": true,
+            "dimensions": {
+                "x": 3,
+                "y": 3,
+                "z": 3
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "position": {"x":-3988.85205078125,"y":4017.414306640625,"z":-3941.802490234375},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/fallensCollector.js",
+            "color": {
+                "red": 43,
+                "green": 255,
+                "blue": 0
+            },
+            "shape": "Cylinder"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
