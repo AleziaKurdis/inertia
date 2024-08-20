@@ -593,6 +593,42 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "box"
+        },
+        {
+            "id": "{38d33ee8-e33a-4b52-a8da-70c155eaa2cf}",
+            "type": "Shape",
+            "visible": false,
+            "name": "TP_BACK",
+            "locked": true,
+            "dimensions": {
+                "x": 3,
+                "y": 3,
+                "z": 3
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "position": {"x":-3984.875,"y":4017.414306640625,"z":-3938.997802734375},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/back.js",
+            "color": {
+                "red": 43,
+                "green": 255,
+                "blue": 0
+            },
+            "shape": "Cylinder"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
