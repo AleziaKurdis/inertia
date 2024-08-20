@@ -25,6 +25,8 @@
     var localPlayerListID = Uuid.NULL;
     var visitorPlayerListID = Uuid.NULL;
     
+    var startButtonID = Uuid.NULL;
+    
     this.preload = function(entityID) {
         thisEntityID = entityID;
         Messages.subscribe(channelComm);
@@ -1120,9 +1122,40 @@
             var data = JSON.parse(message);
             if (data.action === "PLAYER_LIST") {
                 updatePlayersDashboard(data.players);
+            } else if (data.action === "MANAGE_START_BUTTON") {
+                manageStartButton(data.visible); //true|false
             }
         }
     }
+
+    function manageStartButton(visible) {
+        if (startButtonID !=== Uuid.NULL) {
+            Entities.deleteEntity(startButtonID);
+            startButtonID = Uuid.NULL;
+        }
+        if (visible) {
+            startButtonID  = Entities.addEntity({
+                "name": "START_BUTTON_" + team,
+                "renderWithZones": renderWithZones
+                "parentID": thisEntityID,
+                "script": ROOT + "start.js",
+                "type": "Text",
+                "dimensions": {"x":1,"y":0.5,"z":0.01},
+                "backgroundColor": {"red": 0, "green": 160, "blue": 0},
+                "alignment": "center",
+                "localPosition": {
+                    "x": 122.51,
+                    "y": -6.5530,
+                    "z": 0.0056
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "text": "START GAME",
+                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "unlit": true,
+            },"local");
+        }
+    }
+    manageStartButton(true); //########################################################################### DEBUG to trash after
 
     function updatePlayersDashboard(players) {
         var i, localColor, visitorColor;
@@ -1224,7 +1257,9 @@
             Entities.deleteEntity(visitorPlayerListID);
             visitorPlayerListID = Uuid.NULL;
         }
-      
+
+        manageStartButton(false);
+        
         Messages.messageReceived.disconnect(onMessageReceived);
         Messages.unsubscribe(channelComm);
     };
