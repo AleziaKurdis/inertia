@@ -761,7 +761,6 @@
             "cutoff": 75,
             "falloffRadius": 1
         },
-,
         {
             "id": "{eea02bd4-5564-4024-bede-fda63d125b49}",
             "type": "ParticleEffect",
