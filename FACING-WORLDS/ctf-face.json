@@ -920,7 +920,7 @@
             "angularDamping": 0,
             "collisionless": true,
             "ignoreForCollisions": true,
-            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/fallensCollector.js",
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/join.js",
             "color": {
                 "red": 43,
                 "green": 255,

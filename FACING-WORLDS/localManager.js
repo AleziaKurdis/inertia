@@ -62,7 +62,7 @@
         var displayText = "";
         if (channel === channelComm) {
             var data = JSON.parse(message);
-            if (data.action === "REVIVE" && data.avatarID === MyAvatar.sessionUUID) {
+            if ((data.action === "REVIVE" || data.action === "JOIN") && data.avatarID === MyAvatar.sessionUUID) {
                 var team = isPlayerKnown(data.avatarID);
                 if (team === "NONE") {
                     team = determineTeamForNewPlayer();
@@ -75,7 +75,9 @@
                     assignLandingPoint(team);
                 } else {
                     assignLandingPoint(team);
-                    showDeath();
+                    if (data.action === "REVIVE") {
+                        showDeath();
+                    }
                 }
             } else if (data.action === "PLAYER_LIST") {
                 players = data.players;
