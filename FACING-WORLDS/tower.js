@@ -26,6 +26,7 @@
     var visitorPlayerListID = Uuid.NULL;
     
     var startButtonID = Uuid.NULL;
+    var swapButtonID = Uuid.NULL;
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
@@ -1133,9 +1134,11 @@
         if (startButtonID !== Uuid.NULL) {
             Entities.deleteEntity(startButtonID);
             startButtonID = Uuid.NULL;
+            Entities.deleteEntity(swapButtonID);
+            swapButtonID = Uuid.NULL;
         }
         if (visible) {
-            startButtonID  = Entities.addEntity({
+            startButtonID = Entities.addEntity({
                 "name": "START_BUTTON_" + team,
                 "renderWithZones": renderWithZones,
                 "parentID": thisEntityID,
@@ -1155,6 +1158,29 @@
                 "angularDamping": 0,
                 "shapeType": "static-mesh",
                 "modelURL": ROOT + "models/startButton.glb",
+                "useOriginalPivot": true
+            },"local");
+            
+            swapButtonID = Entities.addEntity({
+                "name": "SWAP_BUTTON_" + team,
+                "renderWithZones": renderWithZones,
+                "parentID": thisEntityID,
+                "script": ROOT + "swap.js",
+                "type": "Model",
+                "dimensions": {"x":0.395,"y":0.395,"z":0.08},
+                "localPosition": {
+                    "x": 122.51,
+                    "y": -7.1494,
+                    "z": 1.57325
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "grab": {
+                    "grabbable": false
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "shapeType": "static-mesh",
+                "modelURL": ROOT + "models/swapButton.glb",
                 "useOriginalPivot": true
             },"local");
         }
