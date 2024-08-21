@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 //
 //  start.js
 //
@@ -11,10 +11,11 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function() {
+    var ROOT = Script.resolvePath('').split("start.js")[0]; 
     var MAX_CLICKABLE_DISTANCE_M = 4;
     var channelComm = "ak.ctf.ac.communication"; 
     var oneTimeOnly = false;
-    var SOUND_FLIP = SoundCache.getSound(ROOT + "sounds/pressButton.mp3");
+    var SOUND = SoundCache.getSound(ROOT + "sounds/pressButton.mp3");
     
     // Constructor
     var _this = null;
@@ -38,7 +39,7 @@
                 "loop": false,
                 "localOnly": false
             };
-            var injector = Audio.playSound(SOUND_FLIP, injectorOptions);
+            var injector = Audio.playSound(SOUND, injectorOptions);
             
             oneTimeOnly = true;
         }
