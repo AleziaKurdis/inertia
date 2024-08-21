@@ -1145,8 +1145,8 @@
                 "alignment": "center",
                 "localPosition": {
                     "x": 122.51,
-                    "y": -6.5530,
-                    "z": 0.0056
+                    "y": -7.1494,
+                    "z": 5.2881
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "text": "START GAME",
