@@ -1129,7 +1129,7 @@
     }
 
     function manageStartButton(visible) {
-        if (startButtonID !=== Uuid.NULL) {
+        if (startButtonID !== Uuid.NULL) {
             Entities.deleteEntity(startButtonID);
             startButtonID = Uuid.NULL;
         }
