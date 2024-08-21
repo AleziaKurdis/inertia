@@ -1115,6 +1115,7 @@
         entitiesToDelete.push(id);
         
         updatePlayersDashboard([]);
+        manageStartButton(true); //########################################################################### DEBUG to trash after
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
@@ -1155,7 +1156,6 @@
             },"local");
         }
     }
-    manageStartButton(true); //########################################################################### DEBUG to trash after
 
     function updatePlayersDashboard(players) {
         var i, localColor, visitorColor;
