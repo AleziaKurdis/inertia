@@ -30,7 +30,7 @@
                 "action": "START"
             };
             Messages.sendMessage(channelComm, JSON.stringify(message));
-            print("START"):
+            print("START");
             
             var injectorOptions = {
                 "position": MyAvatar.position,
