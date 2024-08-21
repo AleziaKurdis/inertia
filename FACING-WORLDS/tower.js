@@ -1136,7 +1136,7 @@
         if (visible) {
             startButtonID  = Entities.addEntity({
                 "name": "START_BUTTON_" + team,
-                "renderWithZones": renderWithZones
+                "renderWithZones": renderWithZones,
                 "parentID": thisEntityID,
                 "script": ROOT + "start.js",
                 "type": "Text",
@@ -1151,7 +1151,7 @@
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "text": "START GAME",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
-                "unlit": true,
+                "unlit": true
             },"local");
         }
     }
