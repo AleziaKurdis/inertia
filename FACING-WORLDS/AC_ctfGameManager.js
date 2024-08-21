@@ -19,12 +19,13 @@ var channelComm = "ak.ctf.ac.communication";
 var ORIGIN_POSITION = { "x": -4000, "y": 4000, "z": -4000};
 var EFFECTIVE_RANGE = 800; //in meters
 
-//var updateTimerInterval = 4000; //4sec.
-//var processTimer = 0;
+var updateTimerInterval = 1000; //1sec.
+var processTimer = 0;
 
 var players = [];
 
-
+var gameStatus = "IDLE"; //IDLE | PLAYING
+var gameStartTime;
 
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
@@ -44,9 +45,39 @@ function onMessageReceived(channel, message, sender, localOnly) {
                 "players": players,
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+        } else if (data.action === "START") {
+            messageToSent = {
+                "action": "MANAGE_START_BUTTON",
+                "visible": false,
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+            initiateGame();
+            
         }
     }
 }
+
+function initiateGame() {
+    var today = new Date();
+    gameStartTime = today.getTime();
+    Script.update.connect(myTimer);
+    //set flags
+    gameStatus = "PLAYING";
+}
+
+
+function myTimer(deltaTime) {
+    var today = new Date();
+    
+    if ((today.getTime() - processTimer) > updateTimerInterval ) {
+
+        //processing here to sent remining time
+
+        today = new Date();
+        processTimer = today.getTime();
+    }
+}
+
 
 function addPlayer(avatarID, team) {
     var currentTeam = isPlayerKnown(avatarID);
@@ -263,23 +294,8 @@ function playLoopingSound(sound, position, volume) {
     return injector = Audio.playSound(sound, injectorOptions);
 }
 
-/*
-function myTimer(deltaTime) {
-    var today = new Date();
-    
-    if ((today.getTime() - processTimer) > updateTimerInterval ) {
-
-        //processing here
-
-        today = new Date();
-        processTimer = today.getTime();
-    }
-}
-*/
-
 Messages.subscribe(channelComm);
 Messages.messageReceived.connect(onMessageReceived);
-//Script.update.disconnect(myTimer);
 AvatarList.avatarRemovedEvent.connect(updatePlayersList);
 
 var SOUND_AVATAR_KILLED = SoundCache.getSound(ROOT + "sounds/avatarKilled.wav");
@@ -288,7 +304,9 @@ var SOUND_AVATAR_KILLED = SoundCache.getSound(ROOT + "sounds/avatarKilled.wav");
 Script.scriptEnding.connect(function () {
     Messages.messageReceived.disconnect(onMessageReceived);
     Messages.unsubscribe(channelComm);
-    //Script.update.disconnect(myTimer);
+    if (gameStatus === "PLAYING") {
+        Script.update.disconnect(myTimer);
+    }
     AvatarList.avatarRemovedEvent.disconnect(updatePlayersList);
 });
 
