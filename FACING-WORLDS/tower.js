@@ -1140,20 +1140,22 @@
                 "renderWithZones": renderWithZones,
                 "parentID": thisEntityID,
                 "script": ROOT + "start.js",
-                "type": "Text",
-                "dimensions": {"x":1,"y":0.5,"z":0.01},
-                "backgroundColor": {"red": 0, "green": 160, "blue": 0},
-                "alignment": "center",
+                "type": "Model",
+                "dimensions": {"x":1,"y":0.5,"z":0.1},
                 "localPosition": {
                     "x": 122.51,
                     "y": -7.1494,
                     "z": 5.2881
                 },
-                "lineHeight": 0.25,
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
-                "text": "START GAME",
-                "textColor": {"red": 255, "green": 255, "blue": 255},
-                "unlit": true
+                "grab": {
+                    "grabbable": false
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "shapeType": "static-mesh",
+                "modelURL": ROOT + "models/startButton.glb",
+                "useOriginalPivot": true
             },"local");
         }
     }
