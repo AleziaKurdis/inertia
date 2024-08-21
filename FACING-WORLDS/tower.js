@@ -1149,7 +1149,7 @@
                     "y": -7.1494,
                     "z": 5.2881
                 },
-                "lineHeight": 0.2,
+                "lineHeight": 0.25,
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "text": "START GAME",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
