@@ -38,42 +38,20 @@
     }; 
 
     var MAX_CLICKABLE_DISTANCE_M = 3;
-
-    // Constructor
-    var _this = null;
-
-    function clickableUI() {
-        _this = this;
-        this.entityID = null;
-    }
-
-    // Entity methods
-    clickableUI.prototype = {
-        preload: function (id) {
-            _this.entityID = id;
-            HMD.displayModeChanged.connect(this.displayModeChangedCallback);
-        },
-
-        displayModeChangedCallback: function() {
-            if (_this && _this.entityID) {
-                //Nothing
-            }
-        },
-
-        mousePressOnEntity: function (entityID, event) {
-            if (event.isPrimaryButton && 
-                Vec3.distance(MyAvatar.position, Entities.getEntityProperties(_this.entityID, ["position"]).position) <= MAX_CLICKABLE_DISTANCE_M) {
-                    trigger(_this.entityID);
-            }
-        },
-
-        unload: function () {
-            HMD.displayModeChanged.disconnect(this.displayModeChangedCallback);
-        }
+    
+    this.preload = function(entityID) {
+        Entities.mousePressOnEntity.connect(onMousePressOnEntity);
+    };
+    
+    this.unload = function(entityID) {
+        Entities.mousePressOnEntity.disconnect(onMousePressOnEntity);
     };
 
-    
-    return new clickableUI();
-
+    function onMousePressOnEntity(entityID, event) {
+        if (event.isPrimaryButton && 
+            Vec3.distance(MyAvatar.position, Entities.getEntityProperties(_this.entityID, ["position"]).position) <= MAX_CLICKABLE_DISTANCE_M) {
+                trigger(entityID);
+        }
+    }
 
 })
