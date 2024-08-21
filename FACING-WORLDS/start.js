@@ -1,3 +1,4 @@
+"use strict";
 //
 //  start.js
 //
@@ -9,13 +10,20 @@
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
-(function(){
-    var jsMainFileName = "start.js";
-    var ROOT = Script.resolvePath('').split(jsMainFileName)[0];    
+(function() {
+    var MAX_CLICKABLE_DISTANCE_M = 4;
     var channelComm = "ak.ctf.ac.communication"; 
     var oneTimeOnly = false;
     var SOUND_FLIP = SoundCache.getSound(ROOT + "sounds/pressButton.mp3");
     
+    // Constructor
+    var _this = null;
+
+    function clickableUI() {
+        _this = this;
+        this.entityID = null;
+    }
+
     function trigger(entityID) {
         if (oneTimeOnly === false) {
             var message = {
@@ -37,21 +45,32 @@
 
     }; 
 
-    var MAX_CLICKABLE_DISTANCE_M = 3;
-    
-    this.preload = function(entityID) {
-        Entities.mousePressOnEntity.connect(onMousePressOnEntity);
-    };
-    
-    this.unload = function(entityID) {
-        Entities.mousePressOnEntity.disconnect(onMousePressOnEntity);
-    };
+    // Entity methods
+    clickableUI.prototype = {
+        preload: function (id) {
+            _this.entityID = id;
+            HMD.displayModeChanged.connect(this.displayModeChangedCallback);
+        },
 
-    function onMousePressOnEntity(entityID, event) {
-        if (event.isPrimaryButton && 
-            Vec3.distance(MyAvatar.position, Entities.getEntityProperties(_this.entityID, ["position"]).position) <= MAX_CLICKABLE_DISTANCE_M) {
-                trigger(entityID);
+        displayModeChangedCallback: function() {
+            if (_this && _this.entityID) {
+                //Nothing
+            }
+        },
+
+        mousePressOnEntity: function (entityID, event) {
+            if (event.isPrimaryButton && 
+                Vec3.distance(MyAvatar.position, Entities.getEntityProperties(_this.entityID, ["position"]).position) <= MAX_CLICKABLE_DISTANCE_M) {
+                    trigger(entityID);
+            }
+        },
+
+        unload: function () {
+            HMD.displayModeChanged.disconnect(this.displayModeChangedCallback);
         }
-    }
+    };
 
-})
+    
+    return new clickableUI();
+
+});
