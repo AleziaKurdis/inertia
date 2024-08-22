@@ -1299,9 +1299,9 @@
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
             if (players[i].team === team) {
-                localList = localList + "\n - " + name;
+                localList = localList + "\n - " + name + "  (KIA: " + players[i].death + ")";
             } else {
-                visitorList = visitorList + "\n - " + name;
+                visitorList = visitorList + "\n - " + name + "  (KIA: " + players[i].death + ")";
             }
         }
         
