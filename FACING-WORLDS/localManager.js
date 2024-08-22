@@ -59,7 +59,6 @@
         var messageToSent;
         var displayText = "";
         if (channel === channelComm) {
-            print("message: " + message);
             var data = JSON.parse(message);
             if ((data.action === "REVIVE" || data.action === "JOIN") && data.avatarID === MyAvatar.sessionUUID) {
                 var team = isPlayerKnown(data.avatarID);

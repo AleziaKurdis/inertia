@@ -111,7 +111,6 @@ function myTimer(deltaTime) {
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         } else {
-            print("CTF: " + getSecInMinuteFormat(remainingDuration));
             messageToSent = {
                 "action": "DISPLAY_GAME_TIME",
                 "value": getSecInMinuteFormat(remainingDuration)
@@ -127,7 +126,7 @@ function myTimer(deltaTime) {
 
 function getSecInMinuteFormat(sec) {
     var nbrMinutes = Math.floor(sec/60);
-    var nbrSec = Sec - (nbrMinutes * 60);
+    var nbrSec = sec - (nbrMinutes * 60);
     if (nbrSec < 10) {
         return nbrMinutes + ":" + "0" + nbrSec;
     } else {
