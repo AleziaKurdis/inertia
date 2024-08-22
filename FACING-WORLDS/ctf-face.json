@@ -932,6 +932,7 @@
             "id": "{814246bf-ceae-47c4-910a-8bed3972bd9c}",
             "type": "Box",
             "name": "ARRIVAL_FLOOR",
+            "visible": false,
             "locked": true,
             "position": {"x":-3983.8759765625,"y":4015.523193359375,"z":-3941.911376953125},
             "dimensions": {
