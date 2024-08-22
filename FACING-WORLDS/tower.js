@@ -1139,7 +1139,7 @@
             gameTimeID = Entities.addEntity({
                 "type": "Text",
                 "name": "GAME TIME - " + team,
-                "dimensions": {"x":5,"y":1,"z":0.009999999776482582},
+                "dimensions": {"x":5.8,"y":1,"z":0.009999999776482582},
                 "localPosition": {
                     "x": 122.51,
                     "y": -4.0,
@@ -1147,7 +1147,7 @@
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "parentID": thisEntityID,
-                "text": strValue,
+                "text": "" + strValue,
                 "textColor": {"red": 255,  "green": 255, "blue": 255 },
                 "lineHeight": 0.8,
                 "leftMargin": 0.1,
