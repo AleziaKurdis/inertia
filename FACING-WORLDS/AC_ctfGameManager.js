@@ -27,6 +27,8 @@ var players = [];
 var gameStatus = "IDLE"; //IDLE | PLAYING
 var gameStartTime;
 var GAME_DURATION = 15 * 60 * 1000; //15 minutes
+var scoreRed = 0;
+var scoreBlue = 0;
 
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
@@ -72,6 +74,10 @@ function onMessageReceived(channel, message, sender, localOnly) {
                 "players": players,
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+        } else if (data.action === "DECLARE_A_DEATH") {
+            if (gameStatus === "PLAYING") {
+                registerADeath(data.avatarID);
+            }
         }
     }
 }
@@ -79,8 +85,16 @@ function onMessageReceived(channel, message, sender, localOnly) {
 function initiateGame() {
     var today = new Date();
     gameStartTime = today.getTime();
+    swapTeamColorAndResetDeath();
+    var messageToSent = {
+        "action": "PLAYER_LIST",
+        "players": players,
+    };
+    Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+    joinEveryPlayer();
+    scoreRed = 0;
+    scoreBlue = 0;
     //set flags
-    //flip team and call join
     gameStatus = "PLAYING";
     processTimer = 0;
     Script.update.connect(myTimer);
@@ -101,8 +115,10 @@ function myTimer(deltaTime) {
             //clear game items
             //analyse the winner and post it
             /*messageToSent = {
-                "action": "DISPLAY_WINNER",
-                "value": "";
+                "action": "DISPLAY_GAME_TIME",
+                "value": "",
+                "scoreRed": scoreRed,
+                "scoreBlue": scoreBlue
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));*/
             messageToSent = {
@@ -113,7 +129,9 @@ function myTimer(deltaTime) {
         } else {
             messageToSent = {
                 "action": "DISPLAY_GAME_TIME",
-                "value": getSecInMinuteFormat(remainingDuration)
+                "value": getSecInMinuteFormat(remainingDuration),
+                "scoreRed": scoreRed,
+                "scoreBlue": scoreBlue
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         }
@@ -134,10 +152,43 @@ function getSecInMinuteFormat(sec) {
     }
 }
 
+function joinEveryPlayer() {
+    var i, messageToSent;
+    for (i = 0; i < players.length; i++) {
+        messageToSent = {
+            "action": "JOIN",
+            "avatarID": players[i].avatarID
+        };
+        Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+    }
+}
+
+function swapTeamColorAndResetDeath() {
+    var i;
+    for (i = 0; i < players.length; i++) {
+        if (players[i].team === "RED") {
+            players[i].team = "BLUE";
+        } else {
+            players[i].team = "RED";
+        }
+        players[i].death = 0;
+    }
+}
+
+function registerADeath(avatarID) {
+    var i;
+    for (i = 0; i < players.length; i++) {
+        if (players[i].avatarID === avatarID) {
+            players[i].death = players[i].death + 1;
+            break;
+        }
+    }
+}
+
 function addPlayer(avatarID, team) {
     var currentTeam = isPlayerKnown(avatarID);
     if (currentTeam === "NONE") {
-        var player = {"avatarID": avatarID, "team": team };
+        var player = {"avatarID": avatarID, "team": team, "death": 0 };
         players.push(player);
     } else {
         for (var i = 0; i < players.length; i++) {

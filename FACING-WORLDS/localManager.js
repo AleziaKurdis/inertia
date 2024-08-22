@@ -75,6 +75,11 @@
                     assignLandingPoint(team);
                     if (data.action === "REVIVE") {
                         showDeath();
+                        messageToSent = {
+                            "action": "DECLARE_A_DEATH",
+                            "avatarID": data.avatarID
+                        };
+                        Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
                     }
                 }
             } else if (data.action === "PLAYER_LIST") {

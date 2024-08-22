@@ -25,6 +25,8 @@
     var localPlayerListID = Uuid.NULL;
     var visitorPlayerListID = Uuid.NULL;
     var gameTimeID = Uuid.NULL;
+    var localScoreID = Uuid.NULL;
+    var visitorScoreID = Uuid.NULL;
     
     var startButtonID = Uuid.NULL;
     var swapButtonID = Uuid.NULL;
@@ -1117,7 +1119,7 @@
         entitiesToDelete.push(id);
         
         updatePlayersDashboard([]);
-        displayFameTime("");
+        displayGameTime("");
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
@@ -1128,12 +1130,79 @@
             } else if (data.action === "MANAGE_START_BUTTON") {
                 manageStartButton(data.visible); //true|false
             } else if (data.action === "DISPLAY_GAME_TIME") {
-                displayFameTime(data.value);
+                displayGameTime(data.value);
+                displayScore(data.redScore, data.blueScore);
             }
         }
     }
     
-    function displayFameTime(strValue) {
+    function displayScore(redScore, blueScore) {
+        var localScore, visitorScore, localColor, visitorColor;
+        if (team === "RED") {
+            localScore = redScore;
+            visitorScore = blueScore;
+            localColor = RED_COLOR;
+            visitorColor = BLUE_COLOR;
+        } else {
+            localScore = blueScore;
+            visitorScore = redScore;
+            localColor = BLUE_COLOR;
+            visitorColor = RED_COLOR;
+        }
+        if (localScoreID === Uuid.NULL) {
+            localScoreID = Entities.addEntity({
+                "type": "Text",
+                "name": "LOCAL SCORE - " + team,
+                "dimensions": {"x":5.8,"y":1,"z":0.009999999776482582},
+                "localPosition": {
+                    "x": 122.51,
+                    "y": -3.0,
+                    "z": 0.0056
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "parentID": thisEntityID,
+                "text": "" + localScore,
+                "textColor": localColor,
+                "backgroundAlpha": 0.0,
+                "lineHeight": 0.8,
+                "alignment": "center",
+                "unlit": true,
+                "renderWithZones": renderWithZones
+            }, "local");
+        } else {
+            Entities.editEntity(localScoreID, {
+                "text": "" + localScore
+            });
+        }
+
+        if (visitorScoreID === Uuid.NULL) {
+            visitorScoreID = Entities.addEntity({
+                "type": "Text",
+                "name": "VISITOR SCORE - " + team,
+                "dimensions": {"x":5.8,"y":1,"z":0.009999999776482582},
+                "localPosition": {
+                    "x": 122.51,
+                    "y": -3.0,
+                    "z": 3.1409
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "parentID": thisEntityID,
+                "text": "" + visitorScore,
+                "textColor": visitorColor,
+                "backgroundAlpha": 0.0,
+                "lineHeight": 0.8,
+                "alignment": "center",
+                "unlit": true,
+                "renderWithZones": renderWithZones
+            }, "local");
+        } else {
+            Entities.editEntity(visitorScoreID, {
+                "text": "" + visitorScore
+            });
+        }
+    }
+    
+    function displayGameTime(strValue) {
         if (gameTimeID === Uuid.NULL) {
             //create
             gameTimeID = Entities.addEntity({
@@ -1321,6 +1390,16 @@
         if (visitorPlayerListID !== Uuid.NULL) {
             Entities.deleteEntity(visitorPlayerListID);
             visitorPlayerListID = Uuid.NULL;
+        }
+
+        if (localScoreID !== Uuid.NULL) {
+            Entities.deleteEntity(localScoreID);
+            localScoreID = Uuid.NULL;
+        }
+        
+        if (visitorScoreID !== Uuid.NULL) {
+            Entities.deleteEntity(visitorScoreID);
+            visitorScoreID = Uuid.NULL;
         }
 
         if (gameTimeID !== Uuid.NULL) {
