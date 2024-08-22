@@ -1142,7 +1142,7 @@
                 "dimensions": {"x":5,"y":1,"z":0.009999999776482582},
                 "localPosition": {
                     "x": 122.51,
-                    "y": -2.0,
+                    "y": -4.0,
                     "z": 1.57325
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),

@@ -26,6 +26,7 @@ var players = [];
 
 var gameStatus = "IDLE"; //IDLE | PLAYING
 var gameStartTime;
+var GAME_DURATION = 15 * 60 * 1000; //15 minutes
 
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
@@ -35,6 +36,17 @@ function onMessageReceived(channel, message, sender, localOnly) {
             messageToSent = {
                 "action": "PLAYER_LIST",
                 "players": players,
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+            
+            
+            var visible = true;
+            if (gameStatus === "PLAYING") {
+                visible = false;
+            }
+            messageToSent = {
+                "action": "MANAGE_START_BUTTON",
+                "visible": visible,
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             
@@ -53,6 +65,13 @@ function onMessageReceived(channel, message, sender, localOnly) {
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             initiateGame();
             
+        } else if (data.action === "SWAP") {
+            swapPlayer(data.avatarID);
+            messageToSent = {
+                "action": "PLAYER_LIST",
+                "players": players,
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         }
     }
 }
@@ -68,16 +87,50 @@ function initiateGame() {
 
 function myTimer(deltaTime) {
     var today = new Date();
-    
+    var messageToSent, remainingDuration;
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         //processing here to sent remining time
+        remainingDuration = Math.floor(((gameStartTime + GAME_DURATION) - (today.getTime() - gameStartTime)) / 1000);
+        if (remainingDuration < 0) {
+            //END OF GAME HERE
+            Script.update.disconnect(myTimer);
+            gameStatus = "IDLE";
+            //clear game items
+            //analyse the winner and post it
+            /*messageToSent = {
+                "action": "DISPLAY_WINNER",
+                "value": "";
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));*/
+            messageToSent = {
+                "action": "MANAGE_START_BUTTON",
+                "visible": true,
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+        } else {
+            messageToSent = {
+                "action": "DISPLAY_GAME_TIME",
+                "value": getSecInMinuteFormat(remainingDuration)
+            };
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+        }
+
 
         today = new Date();
         processTimer = today.getTime();
     }
 }
 
+function getSecInMinuteFormat(sec) {
+    var nbrMinutes = Math.floor(sec/60);
+    var nbrSec = Sec - (nbrMinutes * 60);
+    if (nbrSec < 10) {
+        return nbrMinutes + ":" + "0" + nbrSec;
+    } else {
+        return nbrMinutes + ":" + nbrSec;
+    }
+}
 
 function addPlayer(avatarID, team) {
     var currentTeam = isPlayerKnown(avatarID);
@@ -90,6 +143,20 @@ function addPlayer(avatarID, team) {
                 players[i].team = team;
                 break;
             }
+        }
+    }
+}
+
+function swapPlayer(avatarID) {
+    var i;
+    for (i = 0; i < players.length; i++) {
+        if (players[i].avatarID === avatarID) {
+            if (players[i].team === "RED") {
+                players[i].team = "BLUE";
+            } else {
+                players[i].team = "RED";
+            }
+            break;
         }
     }
 }
