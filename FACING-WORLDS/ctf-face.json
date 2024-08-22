@@ -927,6 +927,94 @@
                 "blue": 0
             },
             "shape": "Cylinder"
+        },
+        {
+            "id": "{814246bf-ceae-47c4-910a-8bed3972bd9c}",
+            "type": "Box",
+            "name": "ARRIVAL_FLOOR",
+            "locked": true,
+            "position": {"x":-3983.8759765625,"y":4015.523193359375,"z":-3941.911376953125},
+            "dimensions": {
+                "x": 4.680810451507568,
+                "y": 1,
+                "z": 4.680810451507568
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": {
+                "red": 255,
+                "green": 213,
+                "blue": 0
+            },
+            "shape": "Cube"
+        },
+            {
+            "id": "{90f577dd-1d0e-422f-8750-5bdf1eec92b8}",
+            "type": "Model",
+            "name": "Framed Sign - JOIN THE GAME",
+            "locked": true,
+            "position": {"x":-3988.78466796875,"y":4017.7353515625,"z":-3944.045166015625},
+            "dimensions": {
+                "x": 1.0361340045928955,
+                "y": 0.6320418119430542,
+                "z": 0.020722679793834686
+            },
+            "rotation": {
+                "x": -0.0000762939453125,
+                "y": -0.8973983526229858,
+                "z": -0.0000152587890625,
+                "w": -0.4412756562232971
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/join.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/join.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{48c8f870-d99e-4bb6-a79b-5dd664574d90}",
+            "type": "Model",
+            "name": "Sign - arrival",
+            "locked": true,
+            "position": {"x":-3985.0458984375,"y":4015.968017578125,"z":-3943.025146484375},
+            "dimensions": {
+                "x": 0.7255640625953674,
+                "y": 2.0129308700561523,
+                "z": 0.033516447991132736
+            },
+            "rotation": {
+                "x": -0.022140860557556152,
+                "y": 0.014145135879516602,
+                "z": -0.03651481866836548,
+                "w": 0.99896240234375
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/arrival-back.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
