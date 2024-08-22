@@ -79,9 +79,11 @@ function onMessageReceived(channel, message, sender, localOnly) {
 function initiateGame() {
     var today = new Date();
     gameStartTime = today.getTime();
-    Script.update.connect(myTimer);
     //set flags
+    //flip team and call join
     gameStatus = "PLAYING";
+    processTimer = 0;
+    Script.update.connect(myTimer);
 }
 
 
@@ -109,6 +111,7 @@ function myTimer(deltaTime) {
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         } else {
+            print("CTF: " + getSecInMinuteFormat(remainingDuration));
             messageToSent = {
                 "action": "DISPLAY_GAME_TIME",
                 "value": getSecInMinuteFormat(remainingDuration)

@@ -1161,7 +1161,7 @@
         } else {
             //update
             Entities.editEntity(gameTimeID, {
-                "text": strValue
+                "text": "" + strValue
             });
         }
     }
