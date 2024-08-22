@@ -1131,8 +1131,7 @@
                 manageStartButton(data.visible); //true|false
             } else if (data.action === "DISPLAY_GAME_TIME") {
                 displayGameTime(data.value);
-                displayScore(data.redScore, data.blueScore);
-                print("score: " + data.redScore + "|" + data.blueScore); //########################################### DEBUG TO REMOVE
+                displayScore(data.scoreRed, data.scoreBlue);
             }
         }
     }
