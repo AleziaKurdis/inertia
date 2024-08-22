@@ -26,6 +26,8 @@
     
     this.preload = function(entityID) {
         Workload.getConfig("controlViews")["regulateViewRanges"] = false;
+        Messages.subscribe(channelComm);
+        Messages.messageReceived.connect(onMessageReceived);
         
         thisEntityID = entityID;
         var properties = Entities.getEntityProperties(entityID,["renderWithZones", "position"]);
@@ -38,10 +40,6 @@
         };
         Messages.sendMessage(channelComm, JSON.stringify(message));
         
-        
-        
-        Messages.subscribe(channelComm);
-        Messages.messageReceived.connect(onMessageReceived);
         //Script.update.connect(myTimer);
         
     }
