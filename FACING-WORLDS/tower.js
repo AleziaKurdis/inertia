@@ -24,6 +24,7 @@
     
     var localPlayerListID = Uuid.NULL;
     var visitorPlayerListID = Uuid.NULL;
+    var gameTimeID = Uuid.NULL;
     
     var startButtonID = Uuid.NULL;
     var swapButtonID = Uuid.NULL;
@@ -1116,7 +1117,7 @@
         entitiesToDelete.push(id);
         
         updatePlayersDashboard([]);
-        manageStartButton(true); //########################################################################### DEBUG to trash after
+        displayFameTime("");
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
@@ -1126,10 +1127,45 @@
                 updatePlayersDashboard(data.players);
             } else if (data.action === "MANAGE_START_BUTTON") {
                 manageStartButton(data.visible); //true|false
+            } else if (data.action === "DISPLAY_GAME_TIME") {
+                displayFameTime(data.value);
             }
         }
     }
-
+    
+    function displayFameTime(strValue) {
+        if (gameTimeID === Uuid.NULL) {
+            //create
+            gameTimeID = Entities.addEntity({
+                "type": "Text",
+                "name": "GAME TIME - " + team,
+                "dimensions": {"x":5,"y":1,"z":0.009999999776482582},
+                "localPosition": {
+                    "x": 122.51,
+                    "y": -2.0,
+                    "z": 1.57325
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "parentID": thisEntityID,
+                "text": strValue,
+                "textColor": {"red": 255,  "green": 255, "blue": 255 },
+                "lineHeight": 0.8,
+                "leftMargin": 0.1,
+                "rightMargin": 0.1,
+                "topMargin": 0.05,
+                "bottomMargin": 0.05,
+                "alignment": "center",
+                "unlit": true,
+                "renderWithZones": renderWithZones
+            }, "local");
+        } else {
+            //update
+            Entities.editEntity(gameTimeID, {
+                "text": strValue
+            });
+        }
+    }
+    
     function manageStartButton(visible) {
         if (startButtonID !== Uuid.NULL) {
             Entities.deleteEntity(startButtonID);
@@ -1285,6 +1321,11 @@
         if (visitorPlayerListID !== Uuid.NULL) {
             Entities.deleteEntity(visitorPlayerListID);
             visitorPlayerListID = Uuid.NULL;
+        }
+
+        if (gameTimeID !== Uuid.NULL) {
+            Entities.deleteEntity(gameTimeID);
+            gameTimeID = Uuid.NULL;
         }
 
         manageStartButton(false);
