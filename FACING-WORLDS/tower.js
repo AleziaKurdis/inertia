@@ -1132,6 +1132,7 @@
             } else if (data.action === "DISPLAY_GAME_TIME") {
                 displayGameTime(data.value);
                 displayScore(data.redScore, data.blueScore);
+                print("score: " + data.redScore + "|" + data.blueScore); //########################################### DEBUG TO REMOVE
             }
         }
     }
@@ -1156,7 +1157,7 @@
                 "dimensions": {"x":5.8,"y":1,"z":0.009999999776482582},
                 "localPosition": {
                     "x": 122.51,
-                    "y": -3.0,
+                    "y": -5.0,
                     "z": 0.0056
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
@@ -1182,7 +1183,7 @@
                 "dimensions": {"x":5.8,"y":1,"z":0.009999999776482582},
                 "localPosition": {
                     "x": 122.51,
-                    "y": -3.0,
+                    "y": -5.0,
                     "z": 3.1409
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),

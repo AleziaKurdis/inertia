@@ -77,6 +77,11 @@ function onMessageReceived(channel, message, sender, localOnly) {
         } else if (data.action === "DECLARE_A_DEATH") {
             if (gameStatus === "PLAYING") {
                 registerADeath(data.avatarID);
+                messageToSent = {
+                    "action": "PLAYER_LIST",
+                    "players": players,
+                };
+                Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             }
         }
     }
