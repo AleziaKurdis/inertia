@@ -93,7 +93,7 @@ function myTimer(deltaTime) {
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         //processing here to sent remining time
-        remainingDuration = Math.floor(((gameStartTime + GAME_DURATION) - (today.getTime() - gameStartTime)) / 1000);
+        remainingDuration = Math.floor((gameStartTime + GAME_DURATION - today.getTime()) / 1000);
         if (remainingDuration < 0) {
             //END OF GAME HERE
             Script.update.disconnect(myTimer);
