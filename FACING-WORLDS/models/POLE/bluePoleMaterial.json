@@ -7,6 +7,7 @@
          "metallicMap": "POLE_metallic.jpg",
          "roughnessMap": "POLE_roughness.jpg",
          "normalMap": "POLE_normal-ogl.jpg",
+         "emissiveMap": "POLE_emissive_blue.jpg",
          "cullFaceMode":"CULL_BACK"
       }
    ]
