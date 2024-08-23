@@ -1,4 +1,4 @@
 name = FLAG_RED
 filename = FLAG.glb
-materialMap = [{"mat::POLE":"ROCK/redPoleMaterial.json#POLE"},{"mat::GEM":"GEM/redGemMaterial.json#GEM"}]
+materialMap = [{"mat::POLE":"POLE/redPoleMaterial.json#POLE"},{"mat::GEM":"GEM/redGemMaterial.json#GEM"}]
 
