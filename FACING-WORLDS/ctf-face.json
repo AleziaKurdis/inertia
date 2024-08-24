@@ -1132,6 +1132,69 @@
             "shapeType": "simple-hull",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_TRAP_RED.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{92d2f4b3-0989-48ce-9242-4f7fbb6e28d0}",
+            "type": "Light",
+            "position": {"x":-3983.33154296875,"y":4019.201171875,"z":-3946.546630859375},
+            "name": "ARRIVAL_LAMPADAIRE_LIGHT",
+            "locked": true,
+            "dimensions": {
+                "x": 32.57854461669922,
+                "y": 32.57854461669922,
+                "z": 32.57854461669922
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": {
+                "red": 255,
+                "green": 232,
+                "blue": 184
+            },
+            "intensity": 9,
+            "exponent": 1,
+            "cutoff": 75,
+            "falloffRadius": 0.699999988079071
+        },
+        {
+            "id": "{f501e4d5-93b1-4fbc-ad09-518cff2b36f3}",
+            "type": "Model",
+            "position": {"x":-3983.33154296875,"y":4019.201171875,"z":-3946.546630859375},
+            "name": "LAMPADAIRE_ARRIVAL",
+            "locked": true,
+            "dimensions": {
+                "x": 0.2867816984653473,
+                "y": 3.595228433609009,
+                "z": 0.3295843005180359
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/lanternWHITE.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
