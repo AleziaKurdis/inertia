@@ -1016,6 +1016,122 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/FACING-WORLDS/images/arrival-back.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{2fa89550-ec6b-40f3-a87a-1e094e94f905}",
+            "type": "Model",
+            "name": "FLAG_STAND_BLUE",
+            "locked": true,
+            "position": {"x":-3869.2294921875,"y":3992.830810546875,"z":-3998.3427734375},
+            "dimensions": {
+                "x": 0.9912267923355103,
+                "y": 0.674868643283844,
+                "z": 0.9912267923355103
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": 0.7070878744125366,
+                "z": -0.0000457763671875,
+                "w": 0.7070878744125366
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_STAND_BLUE.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{daad639c-8835-4363-b7cd-65cc555eb662}",
+            "type": "Model",
+            "position": {"x":-4130.7705078125,"y":3992.830810546875,"z":-4001.6572265625},
+            "name": "FLAG_STAND_RED",
+            "locked": true,
+            "dimensions": {
+                "x": 0.9912267923355103,
+                "y": 0.674868643283844,
+                "z": 0.9912267923355103
+            },
+            "rotation": {
+                "x": -0.0000457763671875,
+                "y": 0.7070878744125366,
+                "z": 0.0000152587890625,
+                "w": -0.7071488499641418
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_STAND_RED.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{4ffe29fc-6cbd-4970-a33f-dcbc080a6aac}",
+            "type": "Model",
+            "name": "FLAG_TRAP_BLUE_SIDE",
+            "locked": true,
+            "position": {"x":-3871.45703125,"y":3992.830810546875,"z":-3998.3427734375},
+            "dimensions": {
+                "x": 1.2515593767166138,
+                "y": 0.2982969880104065,
+                "z": 1.2515593767166138
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "simple-hull",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_TRAP_BLUE.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{059eba89-bed3-45ea-9f90-910e83a4b7c1}",
+            "type": "Model",
+            "position": {"x":-4128.54296875,"y":3992.830810546875,"z":-4001.6572265625},
+            "name": "FLAG_TRAP_RED_SIDE",
+            "locked": true,
+            "dimensions": {
+                "x": 1.2515593767166138,
+                "y": 0.2982969880104065,
+                "z": 1.2515593767166138
+            },
+            "rotation": {
+                "x": -0.0000152587890625,
+                "y": -0.0000152587890625,
+                "z": -0.0000152587890625,
+                "w": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "simple-hull",
+            "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_TRAP_RED.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
