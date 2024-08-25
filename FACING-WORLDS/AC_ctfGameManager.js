@@ -123,12 +123,7 @@ function initiateGame() {
             "y": 1.7259058952331543,
             "z": 0.04999999701976776
         },
-        "rotation": {
-            "x": -0.0000152587890625,
-            "y": -0.0000152587890625,
-            "z": -0.0000152587890625,
-            "w": 1
-        },
+        "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
         "ignorePickIntersection": true,
         "grab": {
             "grabbable": true
@@ -154,12 +149,7 @@ function initiateGame() {
             "y": 1.7259058952331543,
             "z": 0.04999999701976776
         },
-        "rotation": {
-            "x": -0.0000152587890625,
-            "y": -0.0000152587890625,
-            "z": -0.0000152587890625,
-            "w": 1
-        },
+        "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
         "ignorePickIntersection": true,
         "grab": {
             "grabbable": true
