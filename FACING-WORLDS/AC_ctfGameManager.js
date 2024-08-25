@@ -19,6 +19,14 @@ var channelComm = "ak.ctf.ac.communication";
 var ORIGIN_POSITION = { "x": -4000, "y": 4000, "z": -4000};
 var EFFECTIVE_RANGE = 800; //in meters
 
+var FLAG_HOME_RED = Vec3.sum(ORIGIN_POSITION, { "x": -130.7705078125, "y": -7.169189453125, "z": -1.6572265625});
+var FLAG_HOME_BLUE = Vec3.sum(ORIGIN_POSITION, { "x": 130.7705078125, "y": -7.169189453125, "z": 1.6572265625});
+var FLAG_TRAP_RED_SIDE = Vec3.sum(ORIGIN_POSITION, { "x": -128.54296875, "y": -7.169189453125, "z": -1.6572265625});
+var FLAG_TRAP_BLUE_SIDE = Vec3.sum(ORIGIN_POSITION, { "x": 128.54296875, "y": -7.169189453125, "z": 1.6572265625});
+
+var flagBlueID = Uuid.NULL;
+var flagRedID = Uuid.NULL;
+
 var updateTimerInterval = 1000; //1sec.
 var processTimer = 0;
 
@@ -29,6 +37,8 @@ var gameStartTime;
 var GAME_DURATION = 15 * 60 * 1000; //15 minutes
 var scoreRed = 0;
 var scoreBlue = 0;
+
+var DAY_DURATION = 104400;// D29
 
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
@@ -88,6 +98,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
 }
 
 function initiateGame() {
+    //clearFlagGarbadge();
     var today = new Date();
     gameStartTime = today.getTime();
     swapTeamColorAndResetDeath();
@@ -99,7 +110,72 @@ function initiateGame() {
     joinEveryPlayer();
     scoreRed = 0;
     scoreBlue = 0;
+    
+    var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
+    
     //set flags
+    flagBlueID = Entities.addEntity({
+        "type": "Model",
+        "position": FLAG_HOME_BLUE,
+        "name": "x!!==$%CTF-FLAG%$==!!x",
+        "dimensions": {
+            "x": 0.16388998925685883,
+            "y": 1.7259058952331543,
+            "z": 0.04999999701976776
+        },
+        "rotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "ignorePickIntersection": true,
+        "grab": {
+            "grabbable": true
+        },
+        "gravity": {
+            "x": 0,
+            "y": currentGravity,
+            "z": 0
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": ROOT + "models/FLAG_BLUE.fst",
+        "useOriginalPivot": true
+    }, "domain");
+    
+    flagRedID = Entities.addEntity({
+        "type": "Model",
+        "position": FLAG_HOME_RED,
+        "name": "x!!==$%CTF-FLAG%$==!!x",
+        "dimensions": {
+            "x": 0.16388998925685883,
+            "y": 1.7259058952331543,
+            "z": 0.04999999701976776
+        },
+        "rotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "ignorePickIntersection": true,
+        "grab": {
+            "grabbable": true
+        },
+        "gravity": {
+            "x": 0,
+            "y": currentGravity,
+            "z": 0
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "shapeType": "box",
+        "modelURL": ROOT + "models/FLAG_RED.fst",
+        "useOriginalPivot": true
+    }, "domain");
+    
     gameStatus = "PLAYING";
     processTimer = 0;
     Script.update.connect(myTimer);
@@ -114,18 +190,35 @@ function myTimer(deltaTime) {
         //processing here to sent remining time
         remainingDuration = Math.floor((gameStartTime + GAME_DURATION - today.getTime()) / 1000);
         if (remainingDuration < 0) {
-            //END OF GAME HERE
+            //#### END OF GAME HERE #######################
             Script.update.disconnect(myTimer);
             gameStatus = "IDLE";
-            //clear game items
-            //analyse the winner and post it
-            /*messageToSent = {
+
+            if (flagBlueID !== Uuid.NULL) {
+                Entities.deleteEntity(flagBlueID);
+                flagBlueID = Uuid.NULL;
+            }
+            if (flagRedID !== Uuid.NULL) {
+                Entities.deleteEntity(flagRedID);
+                flagRedID = Uuid.NULL;
+            }
+
+            var winner; 
+            if (scoreRed > scoreBlue) {
+                winner = "RED TEAM HAS WON!";
+            } else if (scoreRed === scoreBlue) {
+                winner = "EVEN GAME!";
+            } else {
+                winner = "BLUE TEAM HAS WON!";
+            }
+            
+            messageToSent = {
                 "action": "DISPLAY_GAME_TIME",
-                "value": "",
+                "value": winner,
                 "scoreRed": scoreRed,
                 "scoreBlue": scoreBlue
             };
-            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));*/
+            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             messageToSent = {
                 "action": "MANAGE_START_BUTTON",
                 "visible": true,
@@ -154,6 +247,16 @@ function getSecInMinuteFormat(sec) {
         return nbrMinutes + ":" + "0" + nbrSec;
     } else {
         return nbrMinutes + ":" + nbrSec;
+    }
+}
+
+function clearFlagGarbadge() {
+    var i;
+    var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
+    if (entityIDs.length > 0) {
+        for (i = 0; i < entityIDs.length; i++) {
+            Entities.deleteEntity(entityIDs[i]);
+        }
     }
 }
 
@@ -419,14 +522,34 @@ function playLoopingSound(sound, position, volume) {
     return injector = Audio.playSound(sound, injectorOptions);
 }
 
+// ################## CYLCE AND TIME FUNCTIONS ###########################
+function GetCurrentCycleValue(cyclelength, cycleduration){
+    var today = new Date();
+    var TodaySec = today.getTime()/1000;
+    var CurrentSec = TodaySec%cycleduration;
+    
+    return (CurrentSec/cycleduration)*cyclelength;
+    
+}
+// ################## END CYLCE AND TIME FUNCTIONS ###########################
+
 Messages.subscribe(channelComm);
 Messages.messageReceived.connect(onMessageReceived);
 AvatarList.avatarRemovedEvent.connect(updatePlayersList);
 
 var SOUND_AVATAR_KILLED = SoundCache.getSound(ROOT + "sounds/avatarKilled.wav");
-
+clearFlagGarbadge();
 
 Script.scriptEnding.connect(function () {
+    if (flagBlueID !== Uuid.NULL) {
+        Entities.deleteEntity(flagBlueID);
+        flagBlueID = Uuid.NULL;
+    }
+    if (flagRedID !== Uuid.NULL) {
+        Entities.deleteEntity(flagRedID);
+        flagRedID = Uuid.NULL;
+    }
+    
     Messages.messageReceived.disconnect(onMessageReceived);
     Messages.unsubscribe(channelComm);
     if (gameStatus === "PLAYING") {
