@@ -98,7 +98,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
 }
 
 function initiateGame() {
-    //clearFlagGarbadge();
+    clearFlagGarbadge();
     var today = new Date();
     gameStartTime = today.getTime();
     swapTeamColorAndResetDeath();
