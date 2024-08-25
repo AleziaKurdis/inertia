@@ -138,7 +138,8 @@ function initiateGame() {
         "shapeType": "box",
         "modelURL": ROOT + "models/FLAG_BLUE.fst",
         "useOriginalPivot": true,
-        "dynamic": true
+        "dynamic": true,
+        "serverScripts": ROOT + "dummy.js"
     }, "domain");
     
     flagRedID = Entities.addEntity({
@@ -165,7 +166,8 @@ function initiateGame() {
         "shapeType": "box",
         "modelURL": ROOT + "models/FLAG_RED.fst",
         "useOriginalPivot": true,
-        "dynamic": true
+        "dynamic": true,
+        "serverScripts": ROOT + "dummy.js"
     }, "domain");
     
     gameStatus = "PLAYING";
