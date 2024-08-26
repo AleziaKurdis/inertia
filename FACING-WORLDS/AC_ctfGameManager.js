@@ -197,7 +197,7 @@ function myTimer(deltaTime) {
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
             //flag possibly taken
-            if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) > 0.3) {
+            if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3) {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
                 Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
@@ -208,7 +208,7 @@ function myTimer(deltaTime) {
                 holder = "";
                 for (i = 0; i < players.length; i++) {
                     player = AvatarList.getAvatar(players[i].avatarID);
-                    if (Vec3.distance(currentRedFlagPosition, player.position) > 0.3) {
+                    if (Vec3.distance(currentRedFlagPosition, player.position) < 1.0) {
                         if (holder !== "BLUE") {
                             holder = player.team;
                         }
@@ -243,7 +243,7 @@ function myTimer(deltaTime) {
         }
         if (Vec3.distance(currentBlueFlagPosition, FLAG_HOME_BLUE) > 0.3) {
             //flag possibly taken
-            if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) > 0.3) {
+            if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3) {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
                 Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
@@ -254,7 +254,7 @@ function myTimer(deltaTime) {
                 holder = "";
                 for (i = 0; i < players.length; i++) {
                     player = AvatarList.getAvatar(players[i].avatarID);
-                    if (Vec3.distance(currentBlueFlagPosition, player.position) > 0.3) {
+                    if (Vec3.distance(currentBlueFlagPosition, player.position) < 1.0) {
                         if (holder !== "RED") {
                             holder = player.team;
                         }
