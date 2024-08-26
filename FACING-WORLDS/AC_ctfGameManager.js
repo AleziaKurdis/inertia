@@ -27,8 +27,18 @@ var FLAG_TRAP_BLUE_SIDE = Vec3.sum(ORIGIN_POSITION, { "x": 128.54296875, "y": -7
 var flagBlueID = Uuid.NULL;
 var flagRedID = Uuid.NULL;
 
+var flagRedLapCounter = 0;
+var flagBlueLapCounter = 0;
+var ABANDON_TIME_RECOVER = 21;
+
+var flagBlueStatus = "HOME"; //HOME, TAKEN, ABANDONNED
+var flagRedStatus = "HOME"; //HOME, TAKEN, ABANDONNED
+
 var updateTimerInterval = 1000; //1sec.
 var processTimer = 0;
+
+var gameTimerInterval = 700; //0.7sec.
+var processGameTimer = 0;
 
 var players = [];
 
@@ -169,7 +179,8 @@ function initiateGame() {
         "dynamic": true,
         "serverScripts": ROOT + "dummy.js"
     }, "domain");
-    
+    flagBlueStatus = "HOME";
+    flagRedStatus = "HOME";
     gameStatus = "PLAYING";
     processTimer = 0;
     Script.update.connect(myTimer);
@@ -177,8 +188,110 @@ function initiateGame() {
 
 
 function myTimer(deltaTime) {
+    var i, holder, player;
     var today = new Date();
     var messageToSent, remainingDuration;
+    
+    if ((today.getTime() - processGameTimer) > gameTimerInterval ) {
+        var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
+        var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
+        if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
+            //flag possibly taken
+            if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) > 0.3) {
+                //flag getting captured
+                scoreBlue = scoreBlue + 1;
+                Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                flagRedStatus = "HOME";
+                //emit RED FLAG CAPTURED
+            } else {
+                //check users... flag is potentially TAKEN or ABANDONNED
+                holder = "";
+                for (i = 0; i < players.length; i++) {
+                    player = AvatarList.getAvatar(players[i].avatarID);
+                    if (Vec3.distance(currentRedFlagPosition, player.position) > 0.3) {
+                        if (holder !== "BLUE") {
+                            holder = player.team;
+                        }
+                    }
+                }
+                if (holder === "") {
+                    //abandonned
+                    if (flagRedStatus !== "ABANDONNED") {
+                        flagRedLapCounter = ABANDON_TIME_RECOVER;
+                        flagRedStatus = "ABANDONNED";
+                    } else {
+                        flagRedLapCounter = flagRedLapCounter - 1;
+                        if (flagRedLapCounter < 1) {
+                            //Returning the flag
+                            Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                            flagRedStatus = "HOME";
+                            //emit RED FLAG RETURNED
+                        }
+                    }
+                } else if (holder === "RED") {
+                    //Returning the flag
+                    Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                    flagRedStatus = "HOME";
+                    //emit RED FLAG RETURNED
+                } else {
+                    if (flagRedStatus !== "TAKEN") {
+                        //emit RED FLAG TAKEN
+                    }
+                    flagRedStatus = "TAKEN";
+                }
+            }
+        }
+        if (Vec3.distance(currentBlueFlagPosition, FLAG_HOME_BLUE) > 0.3) {
+            //flag possibly taken
+            if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) > 0.3) {
+                //flag getting captured
+                scoreRed = scoreRed + 1;
+                Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                flagBlueStatus = "HOME";
+                //emit BLUE FLAG CAPTURED
+            } else {
+                //check users... flag is potentially TAKEN or ABANDONNED
+                holder = "";
+                for (i = 0; i < players.length; i++) {
+                    player = AvatarList.getAvatar(players[i].avatarID);
+                    if (Vec3.distance(currentBlueFlagPosition, player.position) > 0.3) {
+                        if (holder !== "RED") {
+                            holder = player.team;
+                        }
+                    }
+                }
+                if (holder === "") {
+                    //abandonned
+                    if (flagBlueStatus !== "ABANDONNED") {
+                        flagBlueLapCounter = ABANDON_TIME_RECOVER;
+                        flagBlueStatus = "ABANDONNED";
+                    } else {
+                        flagBlueLapCounter = flagBlueLapCounter - 1;
+                        if (flagBlueLapCounter < 1) {
+                            //Returning the flag
+                            Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                            flagBlueStatus = "HOME";
+                            //emit BLUE FLAG RETURNED
+                        }
+                    }
+                } else if (holder === "BLUE") {
+                    //Returning the flag
+                    Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                    flagBlueStatus = "HOME";
+                    //emit BLUE FLAG RETURNED
+                } else {
+                    if (flagBlueStatus !== "TAKEN") {
+                        //emit BLUE FLAG TAKEN
+                    }
+                    flagBlueStatus = "TAKEN";
+                }
+            }
+        }
+
+        today = new Date();
+        processGameTimer = today.getTime();
+    }
+    
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         //processing here to sent remining time
