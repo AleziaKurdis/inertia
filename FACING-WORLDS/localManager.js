@@ -24,6 +24,20 @@
     
     var players = [];
     
+    var RED_FLAG_CAPTURED = SoundCache.getSound(ROOT + "sounds/RED_FLAG_CAPTURED.mp3");
+    var BLUE_FLAG_CAPTURED = SoundCache.getSound(ROOT + "sounds/BLUE_FLAG_CAPTURED.mp3");
+    var RED_FLAG_RETURNED = SoundCache.getSound(ROOT + "sounds/RED_FLAG_RETURNED.mp3");
+    var BLUE_FLAG_RETURNED = SoundCache.getSound(ROOT + "sounds/BLUE_FLAG_RETURNED.mp3");
+    var RED_FLAG_TAKEN = SoundCache.getSound(ROOT + "sounds/RED_FLAG_TAKEN.mp3");
+    var BLUE_FLAG_TAKEN = SoundCache.getSound(ROOT + "sounds/BLUE_FLAG_TAKEN.mp3");
+    var GAME_BEGIN = SoundCache.getSound(ROOT + "sounds/GAME_BEGIN.mp3");
+    var RED_TEAM_IS_THE_WINNER = SoundCache.getSound(ROOT + "sounds/RED_TEAM_IS_THE_WINNER.mp3");
+    var BLUE_TEAM_IS_THE_WINNER = SoundCache.getSound(ROOT + "sounds/BLUE_TEAM_IS_THE_WINNER.mp3");
+    var FIVE_MINUTES_REMAIN = SoundCache.getSound(ROOT + "sounds/FIVE_MINUTES_REMAIN.mp3");
+    var ONE_MINUTES_REMAIN = SoundCache.getSound(ROOT + "sounds/ONE_MINUTES_REMAIN.mp3");
+    var EVEN_GAME = SoundCache.getSound(ROOT + "sounds/EVEN_GAME.mp3");
+    
+    
     this.preload = function(entityID) {
         Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         Messages.subscribe(channelComm);
@@ -84,8 +98,44 @@
                 }
             } else if (data.action === "PLAYER_LIST") {
                 players = data.players;
+            } else if (data.action === "RED_FLAG_CAPTURED") {
+                playAnouncement(RED_FLAG_CAPTURED);
+            } else if (data.action === "BLUE_FLAG_CAPTURED") {
+                playAnouncement(BLUE_FLAG_CAPTURED);
+            } else if (data.action === "RED_FLAG_RETURNED") {
+                playAnouncement(RED_FLAG_RETURNED);
+            } else if (data.action === "BLUE_FLAG_RETURNED") {
+                playAnouncement(BLUE_FLAG_RETURNED);
+            } else if (data.action === "RED_FLAG_TAKEN") {
+                playAnouncement(RED_FLAG_TAKEN);
+            } else if (data.action === "BLUE_FLAG_TAKEN") {
+                playAnouncement(BLUE_FLAG_TAKEN);
+            } else if (data.action === "GAME_BEGIN") {
+                playAnouncement(GAME_BEGIN);
+            } else if (data.action === "RED_TEAM_IS_THE_WINNER") {
+                playAnouncement(RED_TEAM_IS_THE_WINNER);
+            } else if (data.action === "BLUE_TEAM_IS_THE_WINNER") {
+                playAnouncement(BLUE_TEAM_IS_THE_WINNER);
+            } else if (data.action === "FIVE_MINUTES_REMAIN") {
+                playAnouncement(FIVE_MINUTES_REMAIN);
+            } else if (data.action === "ONE_MINUTES_REMAIN") {
+                playAnouncement(ONE_MINUTES_REMAIN);
+            } else if (data.action === "EVEN_GAME") {
+                playAnouncement(EVEN_GAME);
             }
+
         }
+    }
+
+    function playAnouncement(soundCode) {
+        var injectorOptions = {
+            "position": MyAvatar.position,
+            "volume": 0.4,
+            "loop": false,
+            "localOnly": false
+        };
+        var injector = Audio.playSound(soundCode, injectorOptions);
+        
     }
 
     function showDeath() {
