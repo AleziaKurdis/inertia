@@ -184,6 +184,7 @@ function initiateGame() {
     gameStatus = "PLAYING";
     processTimer = 0;
     Script.update.connect(myTimer);
+    audioAnnouncement("GAME_BEGIN");
 }
 
 
@@ -197,12 +198,12 @@ function myTimer(deltaTime) {
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
             //flag possibly taken
-            if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3) {
+            if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
                 Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
                 flagRedStatus = "HOME";
-                //emit RED FLAG CAPTURED
+                audioAnnouncement("RED_FLAG_CAPTURED");
             } else {
                 //check users... flag is potentially TAKEN or ABANDONNED
                 holder = "";
@@ -225,17 +226,17 @@ function myTimer(deltaTime) {
                             //Returning the flag
                             Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
                             flagRedStatus = "HOME";
-                            //emit RED FLAG RETURNED
+                            audioAnnouncement("RED_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
                     Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
                     flagRedStatus = "HOME";
-                    //emit RED FLAG RETURNED
+                    audioAnnouncement("RED_FLAG_RETURNED");
                 } else {
                     if (flagRedStatus !== "TAKEN") {
-                        //emit RED FLAG TAKEN
+                        audioAnnouncement("RED_FLAG_TAKEN");
                     }
                     flagRedStatus = "TAKEN";
                 }
@@ -243,12 +244,12 @@ function myTimer(deltaTime) {
         }
         if (Vec3.distance(currentBlueFlagPosition, FLAG_HOME_BLUE) > 0.3) {
             //flag possibly taken
-            if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3) {
+            if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3 && flagRedStatus === "HOME") {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
                 Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
                 flagBlueStatus = "HOME";
-                //emit BLUE FLAG CAPTURED
+                audioAnnouncement("BLUE_FLAG_CAPTURED");
             } else {
                 //check users... flag is potentially TAKEN or ABANDONNED
                 holder = "";
@@ -271,17 +272,17 @@ function myTimer(deltaTime) {
                             //Returning the flag
                             Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
                             flagBlueStatus = "HOME";
-                            //emit BLUE FLAG RETURNED
+                            audioAnnouncement("BLUE_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
                     Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
                     flagBlueStatus = "HOME";
-                    //emit BLUE FLAG RETURNED
+                    audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else {
                     if (flagBlueStatus !== "TAKEN") {
-                        //emit BLUE FLAG TAKEN
+                        audioAnnouncement("BLUE_FLAG_TAKEN");
                     }
                     flagBlueStatus = "TAKEN";
                 }
@@ -313,10 +314,13 @@ function myTimer(deltaTime) {
             var winner; 
             if (scoreRed > scoreBlue) {
                 winner = "RED TEAM HAS WON!";
+                audioAnnouncement("RED_TEAM_IS_THE_WINNER");
             } else if (scoreRed === scoreBlue) {
                 winner = "EVEN GAME!";
+                audioAnnouncement("EVEN_GAME");
             } else {
                 winner = "BLUE TEAM HAS WON!";
+                audioAnnouncement("BLUE_TEAM_IS_THE_WINNER");
             }
             
             messageToSent = {
@@ -345,6 +349,14 @@ function myTimer(deltaTime) {
         today = new Date();
         processTimer = today.getTime();
     }
+}
+
+function audioAnnouncement(recordingCode) {
+    var messageToSent = {
+        "action": "PLAY_AUDIO_TEXT",
+        "code": recordingCode
+    };
+    Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
 }
 
 function getSecInMinuteFormat(sec) {
