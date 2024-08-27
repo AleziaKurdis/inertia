@@ -343,6 +343,11 @@ function myTimer(deltaTime) {
                 "scoreBlue": scoreBlue
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+            if (remainingDuration === 300) {
+                audioAnnouncement("FIVE_MINUTES_REMAIN");
+            } else if (remainingDuration === 60) {
+                audioAnnouncement("ONE_MINUTES_REMAIN");
+            }
         }
 
 
