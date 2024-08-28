@@ -80,12 +80,15 @@ function onMessageReceived(channel, message, sender, localOnly) {
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         } else if (data.action === "START") {
-            messageToSent = {
-                "action": "MANAGE_START_BUTTON",
-                "visible": false,
-            };
-            Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
-            initiateGame();
+            if (gameStatus === "IDLE") {
+                gameStatus = "PLAYING";
+                messageToSent = {
+                    "action": "MANAGE_START_BUTTON",
+                    "visible": false,
+                };
+                Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+                initiateGame();
+            }
             
         } else if (data.action === "SWAP") {
             swapPlayer(data.avatarID);
@@ -378,6 +381,7 @@ function getSecInMinuteFormat(sec) {
 function clearFlagGarbadge() {
     var i;
     var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
+    print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //####################################################################################################### DEBUG
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
             Entities.deleteEntity(entityIDs[i]);
