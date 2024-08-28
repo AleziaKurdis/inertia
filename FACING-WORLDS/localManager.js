@@ -128,6 +128,7 @@
     }
 
     function playAnouncement(soundCode) {
+        print("PLAYING A SOUND!"); //#####################################################################
         var injectorOptions = {
             "position": MyAvatar.position,
             "volume": 0.4,

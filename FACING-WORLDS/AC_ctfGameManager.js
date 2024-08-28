@@ -197,6 +197,7 @@ function myTimer(deltaTime) {
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
+            print("CTF: RED FLAG FOUND NOT HOME"); //################################################################################################# DEGUB
             //flag possibly taken
             if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
