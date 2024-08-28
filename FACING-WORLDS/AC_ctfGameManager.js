@@ -359,8 +359,7 @@ function myTimer(deltaTime) {
 
 function audioAnnouncement(recordingCode) {
     var messageToSent = {
-        "action": "PLAY_AUDIO_TEXT",
-        "code": recordingCode
+        "action": recordingCode
     };
     Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
 }
