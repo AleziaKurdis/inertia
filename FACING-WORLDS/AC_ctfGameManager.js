@@ -380,7 +380,7 @@ function getSecInMinuteFormat(sec) {
 
 function clearFlagGarbadge() {
     var i;
-    var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
+    var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, false);
     print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //####################################################################################################### DEBUG
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
