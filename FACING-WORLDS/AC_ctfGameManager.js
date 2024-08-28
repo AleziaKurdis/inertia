@@ -200,6 +200,7 @@ function myTimer(deltaTime) {
         print("CTF: GAME TIMER!!! " + deltaTime); //################################################################################################# DEGUB
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
+        print("CTF: DIST-RED_FLAG-HOMEBASE:" + Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED)); //###################################################################################################################################DEBUG
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
             print("CTF: RED FLAG FOUND NOT HOME"); //################################################################################################# DEGUB
             //flag possibly taken
@@ -380,7 +381,7 @@ function getSecInMinuteFormat(sec) {
 
 function clearFlagGarbadge() {
     var i;
-    var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, false);
+    var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
     print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //####################################################################################################### DEBUG
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
