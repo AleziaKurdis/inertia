@@ -50,9 +50,6 @@ var scoreBlue = 0;
 
 var DAY_DURATION = 104400;// D29
 
-print("CTF: FRUSTRUM POSITION: " + JSON.stringify(EntityViewer.getPosition()));
-print("CTF: FRUSTRUM ORIENTATION: " + JSON.stringify(EntityViewer.getOrientation()));
-
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
     if (channel === channelComm) {
@@ -202,14 +199,9 @@ function myTimer(deltaTime) {
     var messageToSent, remainingDuration;
     EntityViewer.queryOctree();
     if ((today.getTime() - processGameTimer) > gameTimerInterval ) {
-        //print("CTF: GAME TIMER!!! " + deltaTime); //################################################################################################# DEGUB
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
-        print("CTF: DIST-RED_FLAG-HOMEBASE:" + Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED)); //###################################################################################################################################DEBUG
-        print("CTF: RED_FLAG ID:" + flagRedID); //###################################################################################################################################DEBUG
-        print("CTF: RED_FLAG POSITION:" + JSON.stringify(currentRedFlagPosition)); //###################################################################################################################################DEBUG
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
-            //print("CTF: RED FLAG FOUND NOT HOME"); //################################################################################################# DEGUB
             //flag possibly taken
             if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
@@ -247,7 +239,7 @@ function myTimer(deltaTime) {
                     Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
-                } else {
+                } else if (holder === "BLUE") {
                     if (flagRedStatus !== "TAKEN") {
                         audioAnnouncement("RED_FLAG_TAKEN");
                     }
@@ -293,7 +285,7 @@ function myTimer(deltaTime) {
                     Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
-                } else {
+                } else if (holder === "RED") {
                     if (flagBlueStatus !== "TAKEN") {
                         audioAnnouncement("BLUE_FLAG_TAKEN");
                     }
@@ -390,7 +382,6 @@ function clearFlagGarbadge() {
     EntityViewer.queryOctree();
     var i;
     var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
-    print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //####################################################################################################### DEBUG
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
             Entities.deleteEntity(entityIDs[i]);
