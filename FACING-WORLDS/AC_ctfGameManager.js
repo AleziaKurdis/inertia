@@ -52,7 +52,6 @@ var DAY_DURATION = 104400;// D29
 
 print("CTF: FRUSTRUM POSITION: " + JSON.stringify(EntityViewer.getPosition()));
 print("CTF: FRUSTRUM ORIENTATION: " + JSON.stringify(EntityViewer.getOrientation()));
-print("CTF: FRUSTRUM ORIENTATION: " + JSON.stringify(EntityViewer.getOrientation()));
 
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
@@ -201,7 +200,7 @@ function myTimer(deltaTime) {
     var i, holder, player;
     var today = new Date();
     var messageToSent, remainingDuration;
-    
+    EntityViewer.queryOctree();
     if ((today.getTime() - processGameTimer) > gameTimerInterval ) {
         //print("CTF: GAME TIMER!!! " + deltaTime); //################################################################################################# DEGUB
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
@@ -388,6 +387,7 @@ function getSecInMinuteFormat(sec) {
 }
 
 function clearFlagGarbadge() {
+    EntityViewer.queryOctree();
     var i;
     var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
     print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //####################################################################################################### DEBUG
