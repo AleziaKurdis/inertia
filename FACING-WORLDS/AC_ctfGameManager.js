@@ -50,6 +50,10 @@ var scoreBlue = 0;
 
 var DAY_DURATION = 104400;// D29
 
+print("CTF: FRUSTRUM POSITION: " + JSON.stringify(EntityViewer.getPosition()));
+print("CTF: FRUSTRUM ORIENTATION: " + JSON.stringify(EntityViewer.getOrientation()));
+print("CTF: FRUSTRUM ORIENTATION: " + JSON.stringify(EntityViewer.getOrientation()));
+
 function onMessageReceived(channel, message, sender, localOnly) {
     var messageToSent;
     if (channel === channelComm) {
