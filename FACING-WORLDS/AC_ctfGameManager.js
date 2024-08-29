@@ -152,6 +152,7 @@ function initiateGame() {
         "modelURL": ROOT + "models/FLAG_BLUE.fst",
         "useOriginalPivot": true,
         //"dynamic": true,
+        "lifetime": 920,
         "serverScripts": ROOT + "dummy.js"
     }, "domain");
     
@@ -180,6 +181,7 @@ function initiateGame() {
         "modelURL": ROOT + "models/FLAG_RED.fst",
         "useOriginalPivot": true,
         //"dynamic": true,
+        "lifetime": 920,
         "serverScripts": ROOT + "dummy.js"
     }, "domain");
     flagBlueStatus = "HOME";
@@ -200,9 +202,9 @@ function myTimer(deltaTime) {
         //print("CTF: GAME TIMER!!! " + deltaTime); //################################################################################################# DEGUB
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
-        //print("CTF: DIST-RED_FLAG-HOMEBASE:" + Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED)); //###################################################################################################################################DEBUG
-        //print("CTF: RED_FLAG ID:" + flagRedID); //###################################################################################################################################DEBUG
-        //print("CTF: RED_FLAG POSITION:" + JSON.stringify(currentRedFlagPosition)); //###################################################################################################################################DEBUG
+        print("CTF: DIST-RED_FLAG-HOMEBASE:" + Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED)); //###################################################################################################################################DEBUG
+        print("CTF: RED_FLAG ID:" + flagRedID); //###################################################################################################################################DEBUG
+        print("CTF: RED_FLAG POSITION:" + JSON.stringify(currentRedFlagPosition)); //###################################################################################################################################DEBUG
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
             //print("CTF: RED FLAG FOUND NOT HOME"); //################################################################################################# DEGUB
             //flag possibly taken
