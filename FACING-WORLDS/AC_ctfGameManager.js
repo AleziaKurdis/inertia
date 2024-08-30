@@ -216,7 +216,7 @@ function myTimer(deltaTime) {
                     player = AvatarList.getAvatar(players[i].avatarID);
                     if (Vec3.distance(currentRedFlagPosition, player.position) < 1.0) {
                         if (holder !== "BLUE") {
-                            holder = player.team;
+                            holder = players[i].team;
                         }
                     }
                 }
@@ -265,7 +265,7 @@ function myTimer(deltaTime) {
                     player = AvatarList.getAvatar(players[i].avatarID);
                     if (Vec3.distance(currentBlueFlagPosition, player.position) < 1.0) {
                         if (holder !== "RED") {
-                            holder = player.team;
+                            holder = players[i].team;
                         }
                     }
                 }
