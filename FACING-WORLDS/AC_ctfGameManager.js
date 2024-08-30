@@ -206,7 +206,7 @@ function myTimer(deltaTime) {
             if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
-                Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                 flagRedStatus = "HOME";
                 audioAnnouncement("RED_FLAG_CAPTURED");
             } else {
@@ -220,6 +220,7 @@ function myTimer(deltaTime) {
                         }
                     }
                 }
+                print("CTF: Red Flag Holder: " + holder); //########################################################################## DEBUG TO REMOVE
                 if (holder === "") {
                     //abandonned
                     if (flagRedStatus !== "ABANDONNED") {
@@ -229,14 +230,14 @@ function myTimer(deltaTime) {
                         flagRedLapCounter = flagRedLapCounter - 1;
                         if (flagRedLapCounter < 1) {
                             //Returning the flag
-                            Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                            Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                             flagRedStatus = "HOME";
                             audioAnnouncement("RED_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
-                    Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED});
+                    Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
                 } else if (holder === "BLUE") {
@@ -252,7 +253,7 @@ function myTimer(deltaTime) {
             if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3 && flagRedStatus === "HOME") {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
-                Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                 flagBlueStatus = "HOME";
                 audioAnnouncement("BLUE_FLAG_CAPTURED");
             } else {
@@ -275,14 +276,14 @@ function myTimer(deltaTime) {
                         flagBlueLapCounter = flagBlueLapCounter - 1;
                         if (flagBlueLapCounter < 1) {
                             //Returning the flag
-                            Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                            Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                             flagBlueStatus = "HOME";
                             audioAnnouncement("BLUE_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
-                    Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE});
+                    Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else if (holder === "RED") {
