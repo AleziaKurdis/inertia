@@ -230,6 +230,7 @@ function myTimer(deltaTime) {
                         flagRedLapCounter = flagRedLapCounter - 1;
                         if (flagRedLapCounter < 1) {
                             //Returning the flag
+                            EntityViewer.queryOctree();
                             Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                             flagRedStatus = "HOME";
                             audioAnnouncement("RED_FLAG_RETURNED");
@@ -237,6 +238,7 @@ function myTimer(deltaTime) {
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
+                    EntityViewer.queryOctree();
                     Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
@@ -276,6 +278,7 @@ function myTimer(deltaTime) {
                         flagBlueLapCounter = flagBlueLapCounter - 1;
                         if (flagBlueLapCounter < 1) {
                             //Returning the flag
+                            EntityViewer.queryOctree();
                             Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                             flagBlueStatus = "HOME";
                             audioAnnouncement("BLUE_FLAG_RETURNED");
@@ -283,6 +286,7 @@ function myTimer(deltaTime) {
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
+                    EntityViewer.queryOctree();
                     Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
