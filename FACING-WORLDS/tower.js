@@ -1288,6 +1288,22 @@
                 "modelURL": ROOT + "models/swapButton.glb",
                 "useOriginalPivot": true
             },"local");
+            
+            var swapAdviceId = Entities.addEntity({
+                "type": "Model",
+                "name": "Framed Sign - SWAP TEAM ADVICE",
+                "parentID": startButtonID,
+                "localPosition": {"x":0,"y":1,"z":0},
+                "dimensions": {"x":1,"y":0.5,"z":0.03},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "box",
+                "textures": "{\"base_color_texture\":\"" + ROOT + "images/swapAdvice.jpg\",\"emission_color_texture\":\"" + ROOT + "images/swapAdvice.jpg\"}",
+                "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+                "useOriginalPivot": true
+            },"local");
         }
     }
 
