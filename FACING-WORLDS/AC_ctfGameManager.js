@@ -197,8 +197,9 @@ function myTimer(deltaTime) {
     var i, holder, player;
     var today = new Date();
     var messageToSent, remainingDuration;
-    EntityViewer.queryOctree();
+    
     if ((today.getTime() - processGameTimer) > gameTimerInterval ) {
+        EntityViewer.queryOctree();
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
@@ -207,6 +208,7 @@ function myTimer(deltaTime) {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
                 Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                EntityViewer.queryOctree();
                 flagRedStatus = "HOME";
                 audioAnnouncement("RED_FLAG_CAPTURED");
             } else {
@@ -229,16 +231,16 @@ function myTimer(deltaTime) {
                         flagRedLapCounter = flagRedLapCounter - 1;
                         if (flagRedLapCounter < 1) {
                             //Returning the flag
-                            //EntityViewer.queryOctree();
                             Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                            EntityViewer.queryOctree();
                             flagRedStatus = "HOME";
                             audioAnnouncement("RED_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
-                    //EntityViewer.queryOctree();
                     Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                    EntityViewer.queryOctree();
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
                 } else if (holder === "BLUE") {
@@ -255,6 +257,7 @@ function myTimer(deltaTime) {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
                 Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                EntityViewer.queryOctree();
                 flagBlueStatus = "HOME";
                 audioAnnouncement("BLUE_FLAG_CAPTURED");
             } else {
@@ -277,16 +280,16 @@ function myTimer(deltaTime) {
                         flagBlueLapCounter = flagBlueLapCounter - 1;
                         if (flagBlueLapCounter < 1) {
                             //Returning the flag
-                            //EntityViewer.queryOctree();
                             Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                            EntityViewer.queryOctree();
                             flagBlueStatus = "HOME";
                             audioAnnouncement("BLUE_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
-                    //EntityViewer.queryOctree();
                     Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
+                    EntityViewer.queryOctree();
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else if (holder === "RED") {
@@ -313,22 +316,24 @@ function myTimer(deltaTime) {
 
             if (flagBlueID !== Uuid.NULL) {
                 Entities.deleteEntity(flagBlueID);
+                EntityViewer.queryOctree();
                 flagBlueID = Uuid.NULL;
             }
             if (flagRedID !== Uuid.NULL) {
                 Entities.deleteEntity(flagRedID);
+                EntityViewer.queryOctree();
                 flagRedID = Uuid.NULL;
             }
 
             var winner; 
             if (scoreRed > scoreBlue) {
-                winner = "RED TEAM HAS WON!";
+                winner = "RED HAVE WON!";
                 audioAnnouncement("RED_TEAM_IS_THE_WINNER");
             } else if (scoreRed === scoreBlue) {
                 winner = "EVEN GAME!";
                 audioAnnouncement("EVEN_GAME");
             } else {
-                winner = "BLUE TEAM HAS WON!";
+                winner = "BLUE HAVE WON!";
                 audioAnnouncement("BLUE_TEAM_IS_THE_WINNER");
             }
             
@@ -383,12 +388,13 @@ function getSecInMinuteFormat(sec) {
 }
 
 function clearFlagGarbadge() {
-    EntityViewer.queryOctree();
     var i;
+    EntityViewer.queryOctree();
     var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
             Entities.deleteEntity(entityIDs[i]);
+            EntityViewer.queryOctree();
         }
     }
 }
@@ -633,7 +639,11 @@ function ejectBones(position){
 */
 
 
-
+function setUpEntityViewer() {
+    EntityViewer.setPosition({"x": -1, "y": 1, "z": -1});
+    EntityViewer.setOrientation(Quat.lookAtSimple({"x": -1, "y": 1, "z": -1}, ORIGIN_POSITION));
+    EntityViewer.queryOctree();
+}
 
 function playSound(sound, position, volume) {
     var injectorOptions = {
@@ -671,15 +681,18 @@ Messages.messageReceived.connect(onMessageReceived);
 AvatarList.avatarRemovedEvent.connect(updatePlayersList);
 
 var SOUND_AVATAR_KILLED = SoundCache.getSound(ROOT + "sounds/avatarKilled.wav");
+setUpEntityViewer();
 clearFlagGarbadge();
 
 Script.scriptEnding.connect(function () {
     if (flagBlueID !== Uuid.NULL) {
         Entities.deleteEntity(flagBlueID);
+        EntityViewer.queryOctree();
         flagBlueID = Uuid.NULL;
     }
     if (flagRedID !== Uuid.NULL) {
         Entities.deleteEntity(flagRedID);
+        EntityViewer.queryOctree();
         flagRedID = Uuid.NULL;
     }
     
