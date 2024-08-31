@@ -201,7 +201,7 @@ function myTimer(deltaTime) {
     if ((today.getTime() - processGameTimer) > gameTimerInterval ) {
         EntityViewer.queryOctree();
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
-        //EntityViewer.queryOctree();
+        EntityViewer.queryOctree();
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
         print("CTF: currentRedFlagPosition:" + JSON.stringify(currentRedFlagPosition)); //##################################################################
         print("CTF: currentBlueFlagPosition" + JSON.stringify(currentBlueFlagPosition)); //##################################################################
@@ -402,6 +402,7 @@ function clearFlagGarbadge() {
     var i;
     EntityViewer.queryOctree();
     var entityIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", ORIGIN_POSITION, 3000, true);
+    print("CTF: clearFlagGarbadge: " + JSON.stringify(entityIDs)); //##############################################################
     if (entityIDs.length > 0) {
         for (i = 0; i < entityIDs.length; i++) {
             EntityViewer.queryOctree();
