@@ -1293,8 +1293,8 @@
                 "type": "Model",
                 "name": "Framed Sign - SWAP TEAM ADVICE",
                 "parentID": startButtonID,
-                "localPosition": {"x":0,"y":0.7,"z":0},
-                "dimensions": {"x":1,"y":0.5,"z":0.03},
+                "localPosition": {"x":0,"y":1.1,"z":0},
+                "dimensions": {"x":1,"y":1,"z":0.03},
                 "renderWithZones": renderWithZones,
                 "grab": {
                     "grabbable": false
