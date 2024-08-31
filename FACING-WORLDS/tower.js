@@ -1293,7 +1293,7 @@
                 "type": "Model",
                 "name": "Framed Sign - SWAP TEAM ADVICE",
                 "parentID": startButtonID,
-                "localPosition": {"x":0,"y":1,"z":0},
+                "localPosition": {"x":0,"y":0.7,"z":0},
                 "dimensions": {"x":1,"y":0.5,"z":0.03},
                 "renderWithZones": renderWithZones,
                 "grab": {
@@ -1311,13 +1311,17 @@
         var i, localColor, visitorColor;
         var localList = team + " TEAM:";
         var visitorList = otherTeam + " TEAM:";
-        var name;
+        var name, death;
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
+            death = "";
+            if (players[i].death !== 0) {
+                death = " (death:" + players[i].death + ")";
+            }
             if (players[i].team === team) {
-                localList = localList + "\n - " + name + "  (KIA: " + players[i].death + ")";
+                localList = localList + "\n - " + name + death;
             } else {
-                visitorList = visitorList + "\n - " + name + "  (KIA: " + players[i].death + ")";
+                visitorList = visitorList + "\n - " + name + death;
             }
         }
         
