@@ -1251,7 +1251,7 @@
                 "type": "Model",
                 "dimensions": {"x":1,"y":0.5,"z":0.1},
                 "localPosition": {
-                    "x": 122.51,
+                    "x": 122.54,
                     "y": -7.1494,
                     "z": 5.2881
                 },
@@ -1274,7 +1274,7 @@
                 "type": "Model",
                 "dimensions": {"x":0.395,"y":0.395,"z":0.08},
                 "localPosition": {
-                    "x": 122.51,
+                    "x": 122.54,
                     "y": -7.1494,
                     "z": 1.57325
                 },
@@ -1293,8 +1293,8 @@
                 "type": "Model",
                 "name": "Framed Sign - SWAP TEAM ADVICE",
                 "parentID": startButtonID,
-                "localPosition": {"x":0,"y":1.1,"z":0},
-                "dimensions": {"x":1,"y":1,"z":0.03},
+                "localPosition": {"x":0,"y":1.0,"z":0},
+                "dimensions": {"x":1,"y":1,"z":0.05},
                 "renderWithZones": renderWithZones,
                 "grab": {
                     "grabbable": false
