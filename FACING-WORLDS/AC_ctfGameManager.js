@@ -654,9 +654,9 @@ function ejectBones(position){
 
 function setUpEntityViewer() {
     //EntityViewer.setPosition({"x": -1, "y": 1, "z": -1});
-    EntityViewer.setPosition({"x": 0, "y": 0, "z": 0});
+    EntityViewer.setPosition(ORIGIN_POSITION);
     //EntityViewer.setOrientation(Quat.lookAtSimple({"x": -1, "y": 1, "z": -1}, ORIGIN_POSITION));
-    EntityViewer.setCenterRadius(60000);
+    EntityViewer.setCenterRadius(8000);
     EntityViewer.queryOctree();
 }
 
