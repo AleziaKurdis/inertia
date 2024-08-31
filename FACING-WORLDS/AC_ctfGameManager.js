@@ -275,17 +275,12 @@ function myTimer(deltaTime) {
         var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
         EntityViewer.queryOctree();
         var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
-        print("CTF: currentRedFlagPosition:" + JSON.stringify(currentRedFlagPosition)); //##################################################################
-        print("CTF: currentBlueFlagPosition" + JSON.stringify(currentBlueFlagPosition)); //##################################################################
         if (Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) > 0.3) {
             //flag possibly taken
             if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
-                //EntityViewer.queryOctree();
                 returnFlagHome("RED");
-                //Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                //EntityViewer.queryOctree();
                 flagRedStatus = "HOME";
                 audioAnnouncement("RED_FLAG_CAPTURED");
             } else {
@@ -308,20 +303,14 @@ function myTimer(deltaTime) {
                         flagRedLapCounter = flagRedLapCounter - 1;
                         if (flagRedLapCounter < 1) {
                             //Returning the flag
-                            //EntityViewer.queryOctree();
                             returnFlagHome("RED");
-                            //Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                            //EntityViewer.queryOctree();
                             flagRedStatus = "HOME";
                             audioAnnouncement("RED_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
-                    //EntityViewer.queryOctree();
                     returnFlagHome("RED");
-                    //Entities.editEntity(flagRedID, {"position": FLAG_HOME_RED, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                    //EntityViewer.queryOctree();
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
                 } else if (holder === "BLUE") {
@@ -337,10 +326,7 @@ function myTimer(deltaTime) {
             if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3 && flagRedStatus === "HOME") {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
-                //EntityViewer.queryOctree();
                 returnFlagHome("BLUE");
-                //Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                //EntityViewer.queryOctree();
                 flagBlueStatus = "HOME";
                 audioAnnouncement("BLUE_FLAG_CAPTURED");
             } else {
@@ -363,20 +349,14 @@ function myTimer(deltaTime) {
                         flagBlueLapCounter = flagBlueLapCounter - 1;
                         if (flagBlueLapCounter < 1) {
                             //Returning the flag
-                            //EntityViewer.queryOctree();
                             returnFlagHome("BLUE");
-                            //Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                            //EntityViewer.queryOctree();
                             flagBlueStatus = "HOME";
                             audioAnnouncement("BLUE_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
-                    //EntityViewer.queryOctree();
                     returnFlagHome("BLUE");
-                    //Entities.editEntity(flagBlueID, {"position": FLAG_HOME_BLUE, "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ), "velocity": {"x": 0, "y": 0, "z": 0 }});
-                    //EntityViewer.queryOctree();
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else if (holder === "RED") {
