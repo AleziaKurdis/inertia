@@ -99,6 +99,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
             Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
         } else if (data.action === "DECLARE_A_DEATH") {
             if (gameStatus === "PLAYING") {
+                EntityViewer.queryOctree();
                 registerADeath(data.avatarID);
                 messageToSent = {
                     "action": "PLAYER_LIST",
@@ -314,7 +315,7 @@ function myTimer(deltaTime) {
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
                 } else if (holder === "BLUE") {
-                    if (flagRedStatus !== "TAKEN") {
+                    if (flagRedStatus !== "TAKEN" && Vec3.distance(currentRedFlagPosition, FLAG_HOME_RED) < 5) {
                         audioAnnouncement("RED_FLAG_TAKEN");
                     }
                     flagRedStatus = "TAKEN";
@@ -360,7 +361,7 @@ function myTimer(deltaTime) {
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else if (holder === "RED") {
-                    if (flagBlueStatus !== "TAKEN") {
+                    if (flagBlueStatus !== "TAKEN" && Vec3.distance(currentBlueFlagPosition, FLAG_HOME_BLUE) < 5) {
                         audioAnnouncement("BLUE_FLAG_TAKEN");
                     }
                     flagBlueStatus = "TAKEN";
