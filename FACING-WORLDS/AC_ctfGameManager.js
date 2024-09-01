@@ -493,9 +493,29 @@ function swapTeamColorAndResetDeath() {
 }
 
 function registerADeath(avatarID) {
-    var i;
+    var i, player;
+    EntityViewer.queryOctree();
+    var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
+    EntityViewer.queryOctree();
+    var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
     for (i = 0; i < players.length; i++) {
         if (players[i].avatarID === avatarID) {
+            player = AvatarList.getAvatar(players[i].avatarID);
+            if (players[i].team === "RED") {
+                if (Vec3.distance(currentBlueFlagPosition, player.position) < 1.0) {
+                    //return blue flag
+                    returnFlagHome("BLUE");
+                    flagBlueStatus = "HOME";
+                    audioAnnouncement("BLUE_FLAG_RETURNED");
+                }
+            } else {
+                if (Vec3.distance(currentRedFlagPosition, player.position) < 1.0) {
+                    //return red flag
+                    returnFlagHome("RED");
+                    flagRedStatus = "HOME";
+                    audioAnnouncement("RED_FLAG_RETURNED");
+                }
+            }
             players[i].death = players[i].death + 1;
             break;
         }
@@ -710,9 +730,7 @@ function ejectBones(position){
 
 
 function setUpEntityViewer() {
-    //EntityViewer.setPosition({"x": -1, "y": 1, "z": -1});
     EntityViewer.setPosition(ORIGIN_POSITION);
-    //EntityViewer.setOrientation(Quat.lookAtSimple({"x": -1, "y": 1, "z": -1}, ORIGIN_POSITION));
     EntityViewer.setCenterRadius(8000);
     EntityViewer.queryOctree();
 }
