@@ -36,6 +36,7 @@
     var FIVE_MINUTES_REMAIN = SoundCache.getSound(ROOT + "sounds/FIVE_MINUTES_REMAIN.mp3");
     var ONE_MINUTES_REMAIN = SoundCache.getSound(ROOT + "sounds/ONE_MINUTES_REMAIN.mp3");
     var EVEN_GAME = SoundCache.getSound(ROOT + "sounds/EVEN_GAME.mp3");
+    var JOIN = SoundCache.getSound(ROOT + "sounds/JOIN.mp3");
     
     
     this.preload = function(entityID) {
@@ -71,6 +72,7 @@
 */
     function onMessageReceived(channel, message, sender, localOnly) {
         var messageToSent;
+        var i;
         var displayText = "";
         if (channel === channelComm) {
             var data = JSON.parse(message);
@@ -85,13 +87,32 @@
                     };
                     Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
                     assignLandingPoint(team);
+                    playAnouncement(JOIN);
                 } else {
+                    var flagPosition, distFlag;
+                    var closer = 100;
+                    var flagFoundID = "";
+                    var flagFoundPosition = {"x": 0.0, "y": 0.0, "z": 0.0};
+                    var flagIDs = Entities.findEntitiesByName("x!!==$%CTF-FLAG%$==!!x", MyAvatar.position, 1.2, true );
+                    if (flagIDs.length > 0) {
+                        for (i = 0 ; i < flagIDs.length; i++) {
+                            flagPosition = Entities.getEntityProperties( flagIDs[i], ["position"] ).position;
+                            distFlag = Vec3.distance(flagPosition, MyAvatar.position);
+                            if (distFlag < closer) {
+                                closer = distFlag;
+                                flagFoundID = flagIDs[i];
+                                flagFoundPosition = flagPosition;
+                            }
+                        }
+                    }
                     assignLandingPoint(team);
                     if (data.action === "REVIVE") {
                         showDeath();
                         messageToSent = {
                             "action": "DECLARE_A_DEATH",
-                            "avatarID": data.avatarID
+                            "avatarID": data.avatarID,
+                            "flagFoundID": flagFoundID,
+                            "flagFoundPosition": flagFoundPosition
                         };
                         Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
                     }

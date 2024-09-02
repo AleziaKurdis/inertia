@@ -100,7 +100,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
         } else if (data.action === "DECLARE_A_DEATH") {
             if (gameStatus === "PLAYING") {
                 EntityViewer.queryOctree();
-                registerADeath(data.avatarID);
+                registerADeath(data.avatarID, data.flagFoundID, data.flagFoundPosition);
                 messageToSent = {
                     "action": "PLAYER_LIST",
                     "players": players,
@@ -124,67 +124,10 @@ function initiateGame() {
     joinEveryPlayer();
     scoreRed = 0;
     scoreBlue = 0;
-    
-    var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
-    
-    //set flags
-    flagBlueID = Entities.addEntity({
-        "type": "Model",
-        "position": FLAG_HOME_BLUE,
-        "name": "x!!==$%CTF-FLAG%$==!!x",
-        "dimensions": {
-            "x": 0.16388998925685883,
-            "y": 1.7259058952331543,
-            "z": 0.04999999701976776
-        },
-        "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
-        "ignorePickIntersection": true,
-        "grab": {
-            "grabbable": true
-        },
-        "gravity": {
-            "x": 0,
-            "y": currentGravity,
-            "z": 0
-        },
-        "damping": 0,
-        "angularDamping": 0,
-        "shapeType": "box",
-        "modelURL": ROOT + "models/FLAG_BLUE.fst",
-        "useOriginalPivot": true,
-        //"dynamic": true,
-        "lifetime": 920,
-        "serverScripts": ROOT + "dummy.js"
-    }, "domain");
-    
-    flagRedID = Entities.addEntity({
-        "type": "Model",
-        "position": FLAG_HOME_RED,
-        "name": "x!!==$%CTF-FLAG%$==!!x",
-        "dimensions": {
-            "x": 0.16388998925685883,
-            "y": 1.7259058952331543,
-            "z": 0.04999999701976776
-        },
-        "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
-        "ignorePickIntersection": true,
-        "grab": {
-            "grabbable": true
-        },
-        "gravity": {
-            "x": 0,
-            "y": currentGravity,
-            "z": 0
-        },
-        "damping": 0,
-        "angularDamping": 0,
-        "shapeType": "box",
-        "modelURL": ROOT + "models/FLAG_RED.fst",
-        "useOriginalPivot": true,
-        //"dynamic": true,
-        "lifetime": 920,
-        "serverScripts": ROOT + "dummy.js"
-    }, "domain");
+    flagBlueID = Uuid.NULL;
+    flagRedID = Uuid.NULL;
+    regenerateFlag("BLUE", FLAG_HOME_BLUE);
+    regenerateFlag("RED", FLAG_HOME_RED);
     flagBlueStatus = "HOME";
     flagRedStatus = "HOME";
     gameStatus = "PLAYING";
@@ -193,15 +136,17 @@ function initiateGame() {
     audioAnnouncement("GAME_BEGIN");
 }
 
-function returnFlagHome(flagColor) {
+function regenerateFlag(flagColor, flagPosition) {
     var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
     switch(flagColor) {
         case "RED":
-            Entities.deleteEntity(flagRedID);
-            EntityViewer.queryOctree();
+            if (flagRedID !== Uuid.NULL) {
+                Entities.deleteEntity(flagRedID);
+                EntityViewer.queryOctree();
+            }
             flagRedID = Entities.addEntity({
                 "type": "Model",
-                "position": FLAG_HOME_RED,
+                "position": flagPosition,
                 "name": "x!!==$%CTF-FLAG%$==!!x",
                 "dimensions": {
                     "x": 0.16388998925685883,
@@ -229,11 +174,13 @@ function returnFlagHome(flagColor) {
             }, "domain");
             break;
         case "BLUE":
-            Entities.deleteEntity(flagBlueID);
-            EntityViewer.queryOctree();
+            if (flagBlueID !== Uuid.NULL) {
+                Entities.deleteEntity(flagBlueID);
+                EntityViewer.queryOctree();
+            }
             flagBlueID = Entities.addEntity({
                 "type": "Model",
-                "position": FLAG_HOME_BLUE,
+                "position": flagPosition,
                 "name": "x!!==$%CTF-FLAG%$==!!x",
                 "dimensions": {
                     "x": 0.16388998925685883,
@@ -265,7 +212,6 @@ function returnFlagHome(flagColor) {
     }
 }
 
-
 function myTimer(deltaTime) {
     var i, holder, player;
     var today = new Date();
@@ -281,7 +227,7 @@ function myTimer(deltaTime) {
             if (Vec3.distance(currentRedFlagPosition, FLAG_TRAP_BLUE_SIDE) < 0.3 && flagBlueStatus === "HOME") {
                 //flag getting captured
                 scoreBlue = scoreBlue + 1;
-                returnFlagHome("RED");
+                regenerateFlag("RED", FLAG_HOME_RED);
                 flagRedStatus = "HOME";
                 audioAnnouncement("RED_FLAG_CAPTURED");
             } else {
@@ -304,14 +250,14 @@ function myTimer(deltaTime) {
                         flagRedLapCounter = flagRedLapCounter - 1;
                         if (flagRedLapCounter < 1) {
                             //Returning the flag
-                            returnFlagHome("RED");
+                            regenerateFlag("RED", FLAG_HOME_RED);
                             flagRedStatus = "HOME";
                             audioAnnouncement("RED_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "RED") {
                     //Returning the flag
-                    returnFlagHome("RED");
+                    regenerateFlag("RED", FLAG_HOME_RED);
                     flagRedStatus = "HOME";
                     audioAnnouncement("RED_FLAG_RETURNED");
                 } else if (holder === "BLUE") {
@@ -327,7 +273,7 @@ function myTimer(deltaTime) {
             if (Vec3.distance(currentBlueFlagPosition, FLAG_TRAP_RED_SIDE) < 0.3 && flagRedStatus === "HOME") {
                 //flag getting captured
                 scoreRed = scoreRed + 1;
-                returnFlagHome("BLUE");
+                regenerateFlag("BLUE", FLAG_HOME_BLUE);
                 flagBlueStatus = "HOME";
                 audioAnnouncement("BLUE_FLAG_CAPTURED");
             } else {
@@ -350,14 +296,14 @@ function myTimer(deltaTime) {
                         flagBlueLapCounter = flagBlueLapCounter - 1;
                         if (flagBlueLapCounter < 1) {
                             //Returning the flag
-                            returnFlagHome("BLUE");
+                            regenerateFlag("BLUE", FLAG_HOME_BLUE);
                             flagBlueStatus = "HOME";
                             audioAnnouncement("BLUE_FLAG_RETURNED");
                         }
                     }
                 } else if (holder === "BLUE") {
                     //Returning the flag
-                    returnFlagHome("BLUE");
+                    regenerateFlag("BLUE", FLAG_HOME_BLUE);
                     flagBlueStatus = "HOME";
                     audioAnnouncement("BLUE_FLAG_RETURNED");
                 } else if (holder === "RED") {
@@ -493,29 +439,16 @@ function swapTeamColorAndResetDeath() {
     }
 }
 
-function registerADeath(avatarID) {
-    var i, player;
-    EntityViewer.queryOctree();
-    var currentBlueFlagPosition = Entities.getEntityProperties(flagBlueID,["position"]).position;
-    EntityViewer.queryOctree();
-    var currentRedFlagPosition = Entities.getEntityProperties(flagRedID,["position"]).position;
+function registerADeath(avatarID, flagFoundID, flagFoundPosition) {
+    var i;
     for (i = 0; i < players.length; i++) {
         if (players[i].avatarID === avatarID) {
-            player = AvatarList.getAvatar(players[i].avatarID);
-            if (players[i].team === "RED") {
-                if (Vec3.distance(currentBlueFlagPosition, player.position) < 1.0) {
-                    //return blue flag
-                    returnFlagHome("BLUE");
-                    flagBlueStatus = "HOME";
-                    audioAnnouncement("BLUE_FLAG_RETURNED");
-                }
-            } else {
-                if (Vec3.distance(currentRedFlagPosition, player.position) < 1.0) {
-                    //return red flag
-                    returnFlagHome("RED");
-                    flagRedStatus = "HOME";
-                    audioAnnouncement("RED_FLAG_RETURNED");
-                }
+            if (flagFoundID === flagRedID) {
+                //red flag
+                regenerateFlag("RED", flagFoundPosition);
+            } else if (flagFoundID === flagBlueID) {
+                //blue flag
+                regenerateFlag("BLUE", flagFoundPosition);
             }
             players[i].death = players[i].death + 1;
             break;
