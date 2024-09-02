@@ -38,7 +38,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "compound",
-            "compoundShapeURL": ROOT + "models/FLAG.glb",
+            "compoundShapeURL": ROOT + "models/FLAG4fx.glb",
             "color": color,
             "alpha": 0.800000011920929,
             "textures": ROOT + "images/ASTROLITHE.png",
