@@ -17,7 +17,7 @@
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID,["renderWithZones", "name"]);
         var color = RED_COLOR;
-        if (properties.name === "FLAG_TRAP_BLUE_SIDE") {
+        if (properties.name === "FLAG_TRAP_RED_SIDE") {
             color = BLUE_COLOR;
         }
         
