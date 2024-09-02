@@ -57,7 +57,7 @@
         
         //Script.update.connect(myTimer);
         
-    }
+    };
 /*
     function myTimer(deltaTime) {
         var today = new Date();
