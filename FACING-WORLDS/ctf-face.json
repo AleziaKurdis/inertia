@@ -1101,6 +1101,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "simple-hull",
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/goalFx.js",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_TRAP_BLUE.fst",
             "useOriginalPivot": true
         },
@@ -1130,6 +1131,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "simple-hull",
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/goalFx.js",
             "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/models/FLAG_TRAP_RED.fst",
             "useOriginalPivot": true
         },
