@@ -1120,10 +1120,10 @@
         
         id = Entities.addEntity({
             "type": "Box",
-            "localRotation": {"x":115.6641,"y":-4.5088,"z":1.6084},
+            "localPosition": {"x":115.6641,"y":-4.5088,"z":1.6084},
             "parentID": entityID,
             "renderWithZones": renderWithZones,
-            "visible": true, //false,
+            "visible": false,
             "name": "ALARM_DETECTOR_" + team,
             "description": team,
             "dimensions": {
