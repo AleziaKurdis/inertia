@@ -1125,7 +1125,6 @@
             "renderWithZones": renderWithZones,
             "visible": false,
             "name": "ALARM_DETECTOR_" + team,
-            "locked": true,
             "description": team,
             "dimensions": {
                 "x": 32.64384841918945,
