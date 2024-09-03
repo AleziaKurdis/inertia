@@ -1118,6 +1118,32 @@
         }, "local");
         entitiesToDelete.push(id);
         
+        id = Entities.addEntity({
+            "type": "Box",
+            "localRotation": {"x":115.6641,"y":-4.5088,"z":1.6084},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "visible": false,
+            "name": "ALARM_DETECTOR_" + team,
+            "locked": true,
+            "description": team,
+            "dimensions": {
+                "x": 32.64384841918945,
+                "y": 8.050341606140137,
+                "z": 16.095752716064453
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cube",
+            "script": ROOT + "alarmZone.js"
+        }, "local");
+        entitiesToDelete.push(id);
+
         updatePlayersDashboard([]);
         displayGameTime("");
     };
