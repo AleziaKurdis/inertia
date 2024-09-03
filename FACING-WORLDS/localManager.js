@@ -304,6 +304,8 @@
         } else {
             tp = blueTP[Math.floor(Math.random() * blueTP.length)];
         }
+        MyAvatar.velocity = {"x": 0.0, "y": 0.0, "z": 0.0};
+        MyAvatar.angularVelocity = {"x": 0.0, "y": 0.0, "z": 0.0};
         MyAvatar.position = Vec3.sum(thisPosition, tp.position);
         MyAvatar.orientation = Quat.fromVec3Degrees({ "x": 0, "y": tp.azimuth, "z": 0 });
         
