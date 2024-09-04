@@ -1123,7 +1123,7 @@
             "localPosition": {"x":115.6641,"y":-4.5088,"z":1.6084},
             "parentID": entityID,
             "renderWithZones": renderWithZones,
-            "visible": false,
+            "visible": true,
             "name": "ALARM_DETECTOR_" + team,
             "description": team,
             "dimensions": {
