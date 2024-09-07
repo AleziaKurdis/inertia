@@ -5,12 +5,12 @@
         "dimensions": {"x":0.11555665731430054,"y":0.2598230838775635,"z":0.48354044556617737},
         "useOriginalPivot": true,
         "grab": {
-            "grabbable": false,
+            "grabbable": true,
             "equippable": true,
             "equippableLeftPosition": {
-                "x": -0.019999999552965164,
-                "y": 0.1599999964237213,
-                "z": 0.03999999910593033
+                "x": 0,
+                "y": 0.13,
+                "z": -0.01
             },
             "equippableLeftRotation": {
                 "w": 0.49999237060546875,
@@ -19,9 +19,9 @@
                 "z": 0.49999237060546875
             },
             "equippableRightPosition": {
-                "x": 0.019999999552965164,
-                "y": 0.1599999964237213,
-                "z": 0.03999999910593033
+                "x": 0,
+                "y": 0.13,
+                "z": -0.01
             },
             "equippableRightRotation": {
                 "w": 0.49999237060546875,
