@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "rocketGun_Albedo_4M.jpg",
+         "metallicMap": "rocketGun_Metallic.jpg",
+         "roughnessMap": "rocketGun_Roughness_4M.jpg",
+         "normalMap": "rocketGun_NormalOgl_4M.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
