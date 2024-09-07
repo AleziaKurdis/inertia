@@ -35,7 +35,7 @@
     },
     "lifetime": 900,
     "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/ANIL-4M.fst",
-    "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/rocketGun.js",
+    "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/rocketGun.js"
   }],
   "Version": 69
 }
