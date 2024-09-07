@@ -8,8 +8,8 @@
             "grabbable": true,
             "equippable": true,
             "equippableLeftPosition": {
-                "x": -0.01,
-                "y": 0.17,
+                "x": -0.03,
+                "y": 0.15,
                 "z": -0.01
             },
             "equippableLeftRotation": {
@@ -19,8 +19,8 @@
                 "z": 0.49999237060546875
             },
             "equippableRightPosition": {
-                "x": -0.01,
-                "y": 0.17,
+                "x": -0.03,
+                "y": 0.15,
                 "z": -0.01
             },
             "equippableRightRotation": {
