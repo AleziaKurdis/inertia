@@ -13,22 +13,28 @@
     var ROOT = Script.resolvePath('').split("rocketGun.js")[0];
     var channelComm = "ak.ctf.ac.communication";
 
-  var RELOAD_THRESHOLD = 0.95;
-  var RELOAD_TIME = 2;
-  var GUN_TIP_FWD_OFFSET = 0.05;
-  var GUN_TIP_UP_OFFSET = 0.05;
+    var ammunitions = 0;
+    var lethalRadius = 0;
+    var model = "";
+    var thisEntityID;
+    var lightMaterialID = Uuid.NULL;
 
-  var TRIGGER_CONTROLS = [
-    Controller.Standard.LT,
-    Controller.Standard.RT
-  ];
+    var RELOAD_THRESHOLD = 0.95;
+    var RELOAD_TIME = 2;
+    var GUN_TIP_FWD_OFFSET = 0.05;
+    var GUN_TIP_UP_OFFSET = 0.05;
 
-  var GUN_FORCE = 3;
+    var TRIGGER_CONTROLS = [
+        Controller.Standard.LT,
+        Controller.Standard.RT
+    ];
 
-  var LOCAL_AUDIOPLAYBACK = {
-    volume: 1,
-    position: Vec3.sum(Camera.getPosition(), Quat.getFront(Camera.getOrientation()))
-  };
+    var GUN_FORCE = 3;
+
+    var LOCAL_AUDIOPLAYBACK = {
+        volume: 1,
+        position: Vec3.sum(Camera.getPosition(), Quat.getFront(Camera.getOrientation()))
+    };
 /*
   var GRAVITY = {
     x: 0,
@@ -127,7 +133,10 @@
             var self = this;
             Script.setTimeout(function() {
                 self.canShoot = true
-            }, 2000);
+            }, 3000);
+            if (ammunitions > 0) {
+                
+             
                     /*      var size = SHOOT_SOUNDS.length - 1;
                           var rand = Math.random();
                           var co = Math.round(Math.random() * size);
@@ -145,6 +154,9 @@
                           });*/
             Controller.triggerShortHapticPulse(1, this.hand);
             print("BANG!"); //#############################################################################
+            ammunitions = ammunitions -1;
+            setAmmunitionsColor();
+
                 /*
 
                       for (var x = 0; x < particleCount; x++) {
@@ -187,11 +199,99 @@
                           lifetime: 15
                         }, true);
                 
-            }*/
+                }*/
+            }
         },
         preload: function(entityID) {
             this.entityID = entityID;
+            thisEntityID = entityID;
+            model = Entities.getEntityProperties( entityID, ["name"] ).name;
+            switch(model) {
+                case "ANIL-4M":
+                    ammunitions = 6;
+                    lethalRadius = 2;
+                    break;
+                case "ANIL-8M":
+                    ammunitions = 3;
+                    lethalRadius = 4;
+                    break;
+                case "ANIL-16M":
+                    ammunitions = 1;
+                    lethalRadius = 8;
+                    break;
+                default:
+                    print("Error: unkown gun model!");
+            }
+            setAmmunitionsColor();
         }
+    }
+
+    function setAmmunitionsColor() {
+        var color = hslToRgb(((ammunitions/6)*120)/360, 1.0, 0.6);
+        var bloomFactor = 3;
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "plasma",
+                    "albedo": [1, 1, 1],
+                    "metallic": 1,
+                    "roughness": 1,
+                    "emissive": [(color[0]/255) * bloomFactor, (color[1]/255) * bloomFactor, (color[2]/255) * bloomFactor],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };        
+        if (lightMaterialID === Uuid.NULL) {
+            //create
+            lightMaterialID = Entities.addEntity({
+                "type": "Material",
+                "parentID": thisEntityID,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "name": "ANIL-XM-material",
+                "materialURL": "materialData",
+                "priority": 3,
+                "parentMaterialName": "mat::LIGHT",
+                "materialData": JSON.stringify(materialContent)
+            }, "local");
+        } else {
+            //edit
+            Entities.editEntity(lightMaterialID, {"materialData": JSON.stringify(materialContent)});
+        }
+    }
+
+    /*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        let r, g, b;
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            let hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+            let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            let p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
     Messages.subscribe(channelComm);
