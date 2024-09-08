@@ -21,7 +21,8 @@
     
     var DAY_DURATION = 104400; //D29
     var justEquiped = false;
-
+    var bulletHue = 0;
+    
     var RELOAD_THRESHOLD = 0.95;
     var RELOAD_TIME = 2;
     var GUN_TIP_FWD_OFFSET = 0.05;
@@ -150,78 +151,12 @@
 
             if (!justEquiped) {
                 if (ammunitions > 0) {
-                    
-                 
-                        /*      var size = SHOOT_SOUNDS.length - 1;
-                              var rand = Math.random();
-                              var co = Math.round(Math.random() * size);
-                              var sound = SHOOT_SOUNDS[co];
-                              var entityCount = ENTITY_AMOUNT;
-                              var particleCount = PARTICLE_AMOUNT;
-                              if (0.95 < rand) {
-                                sound = SUPRISE_SOUND;
-                                entityCount = 5;
-                                particleCount = 1;
-                              }
-                              Audio.playSound(sound, {
-                                volume: 1,
-                                position: gunProperties.position
-                              });*/
                     playAnouncement(FIRE_SOUND);
                     var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
                     Controller.triggerShortHapticPulse(1, this.hand);
-                    print("BANG!"); //#############################################################################
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    //departure position = this.getGunTipPosition(gunProperties);
-                    //departure direction/rotation = gunProperties.rotation;
-                
-                
-                
-                
-                    /*
-
-                          for (var x = 0; x < particleCount; x++) {
-                            var part = PLASTIC;
-
-                            part.colorStart = randColor();
-                            part.colorFinish = part.colorStart;
-                            part.color = part.colorStart;
-                            part.dimensions= {
-                              x:Math.random()*0.5,
-                              y:Math.random()*0.5,
-                              z:Math.random()*0.5,
-                            }
-                            part.position = this.getGunTipPosition(gunProperties);
-                            part.rotation = gunProperties.rotation;
-                            Entities.addEntity(part, true);
-                          }
-
-                          for (var i = 0; i < entityCount; i++) {
-                            //  Controller.triggerShortHapticPulse(1, this.hand)
-                            var forwardVec = Quat.multiply(randCone(45), Quat.getFront(Quat.multiply(gunProperties.rotation, Quat.fromPitchYawRollDegrees(0, 0, 0))));
-                            forwardVec = Vec3.normalize(forwardVec);
-                            forwardVec = Vec3.multiply(forwardVec, GUN_FORCE);
-                            Entities.addEntity({
-                              type: 'Box',
-                              name: 'Confetti',
-                              position: Vec3.sum(randVec(0.05), this.getGunTipPosition(gunProperties)),
-                              color: randColor(),
-                              collisionless: 1,
-                              rotation: randCone(180),
-                              script: "(function() { return { preload: function(e) { Script.setTimeout(function(){ Entities.editEntity(e, { 'collisionless': 0, 'script':'' }) },50); } } })",
-                              dynamic: true,
-                              dimensions: Math.ceil(Math.random() * 12) % 2 === 0 ? DIMENSIONS : DIMENSIONS_VARIANT,
-                              gravity: GRAVITY,
-                              velocity: forwardVec,
-                              angularVelocity: randVec(25),
-                              angularDamping: FRICTION,
-                              gravity: GRAVITY,
-                              dynamic: true,
-                              lifetime: 15
-                            }, true);
-                    
-                    }*/
+                    var bulletId = createBullet(this.getGunTipPosition(gunProperties), gunProperties.rotation, {"x": 0.0, "y": 0.0, "z": -10}, {"x": 0.0, "y": currentGravity, "z": 0.0});
                 } else {
                     playAnouncement(EMPTY_CLENCH_SOUND);
                     Controller.triggerShortHapticPulse(0.5, this.hand);
@@ -238,14 +173,17 @@
                 case "ANIL-4M":
                     ammunitions = 6;
                     lethalRadius = 2;
+                    bulletHue = 150;
                     break;
                 case "ANIL-8M":
                     ammunitions = 3;
                     lethalRadius = 4;
+                    bulletHue = 66;
                     break;
                 case "ANIL-16M":
                     ammunitions = 1;
                     lethalRadius = 8;
+                    bulletHue = 36;
                     break;
                 default:
                     print("Error: unkown gun model!");
@@ -299,6 +237,164 @@
             Entities.editEntity(lightMaterialID, {"materialData": JSON.stringify(materialContent)});
         }
     }
+
+    function createBullet(position, rotation, velocity, gravity) {
+        var BULLET_SIZE = 0.12;
+        var id = Entities.addEntity({
+            "name": bullet,
+            "type": "Shape",
+            "shape": "Sphere",
+            "dimensions": { "x": BULLET_SIZE, "y": BULLET_SIZE, "z": BULLET_SIZE },
+            "position": position,
+            "rotation": rotation,
+            "grab": {
+                "grabbable": false
+            },
+            "density": 1000,
+            "velocity": velocity,
+            "angularVelocity": { 
+                "x": 0, 
+                "y": 0, 
+                "z": 0 
+            },
+            "gravity": gravity,
+            "damping":0,
+            "angularDamping":0,
+            "restitution":0.99,
+            "friction":0.0,
+            "collisionless": false,
+            "ignoreForCollisions": false,
+            "collisionMask":31,
+            "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
+            "dynamic": true,
+            "lifetime": 60;
+            "script": ""
+        }, "avatar");
+            
+        var fireColor = hslToRgb(bulletHue, 1, 0.5);
+        var plasmaColor = hslToRgb(bulletHue, 1, 0.61);
+        var colorStart = hslToRgb(bulletHue, 1, 0.9);
+        var bloomFactor = 4;
+
+        //material           
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "plasma",
+                    "albedo": [1, 1, 1],
+                    "metallic": 1,
+                    "roughness": 1,
+                    "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+                
+        var fireMatId = Entities.addEntity({
+            "type": "Material",
+            "parentID": id,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-material",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(materialContent)
+        }, "avatar");
+        
+        //light
+        var lightId = Entities.addEntity({
+            "type": "Light",
+            "parentID": id,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-light",
+            "dimensions": {
+                "x": 50,
+                "y": 50,
+                "z": 50
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": plasmaColor[0],
+                "green": plasmaColor[1],
+                "blue": plasmaColor[2]
+            },
+            "intensity": 25.0,
+            "falloffRadius": 3.0
+        }, "avatar");
+        
+        //particle
+        let fxId = Entities.addEntity({
+            "type": "ParticleEffect",
+            "parentID": id,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-fx",
+            "dimensions": {
+                "x": 381.0999755859375,
+                "y": 381.0999755859375,
+                "z": 381.0999755859375
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": plasmaColor[0],
+                "green": plasmaColor[1],
+                "blue": plasmaColor[2]
+            },
+            "alpha": 0.05,
+            "textures": ROOT + "fog.png",
+            "maxParticles": 4000,
+            "lifespan": 10,
+            "emitRate": 400,
+            "emitSpeed": 1.6,
+            "speedSpread": 0.7,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": { "x": BULLET_SIZE, "y": BULLET_SIZE, "z": BULLET_SIZE },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 1.5,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.6,
+                "z": 0
+            },
+            "particleRadius": 2,
+            "radiusSpread": 0.1,
+            "radiusStart": BULLET_SIZE,
+            "radiusFinish": 30,
+            "colorStart": {
+                "red": colorStart[0],
+                "green": colorStart[1],
+                "blue": colorStart[2]
+            },
+            "colorFinish": {
+                "red": fireColor[0],
+                "green": fireColor[1],
+                "blue": fireColor[2]
+            },
+            "alphaStart": 0.2,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.0499999523162842,
+            "spinStart": -1.5700000524520874,
+            "spinFinish": 1.5700000524520874
+        }, "avatar");
+        
+        return id;
+    }
+
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(cyclelength, cycleduration){
