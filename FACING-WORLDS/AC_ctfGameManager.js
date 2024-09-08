@@ -44,12 +44,12 @@ var gunsTimerInterval = 60000; //minutes.
 var processGunsTimer = 0;
 
 var guns = [
-    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 60000}, //#RED 1
-    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 60000}, //#RED 2
+    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 20000}, //#RED 1
+    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 20000}, //#RED 2
     {"model": "ANIL-8M", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 180000}, //#RED
     {"model": "ANIL-16M", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 300000}, //#RED
-    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 60000}, //#BLUE 1
-    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 60000}, //#BLUE 2
+    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
+    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
     {"model": "ANIL-8M", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 180000}, //#BLUE
     {"model": "ANIL-16M", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 300000}, //#BLUE
 ];
