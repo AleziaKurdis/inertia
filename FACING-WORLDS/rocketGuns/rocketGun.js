@@ -108,6 +108,13 @@
             var _this = this;
             this.equipped = false;
             this.canShoot = false;
+            if (ammunitions === 0) {
+                var messageToSent = {
+                    "action": "DELETE_GUN",
+                    "entityID": thisEntityID
+                };
+                Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+            }
         },
         checkTriggerPressure: function(gunHand) {
             this.triggerValue = Controller.getValue(TRIGGER_CONTROLS[gunHand]);
@@ -134,92 +141,93 @@
             return gunTipPosition;
         },
         fire: function(gunProperties) {
-            if (justEquiped) {
-                justEquiped = false;
-                return;
-            }
             this.canShoot = false;
 
             var self = this;
             Script.setTimeout(function() {
                 self.canShoot = true
             }, 2000);
-            if (ammunitions > 0) {
+
+            if (!justEquiped) {
+                if (ammunitions > 0) {
+                    
+                 
+                        /*      var size = SHOOT_SOUNDS.length - 1;
+                              var rand = Math.random();
+                              var co = Math.round(Math.random() * size);
+                              var sound = SHOOT_SOUNDS[co];
+                              var entityCount = ENTITY_AMOUNT;
+                              var particleCount = PARTICLE_AMOUNT;
+                              if (0.95 < rand) {
+                                sound = SUPRISE_SOUND;
+                                entityCount = 5;
+                                particleCount = 1;
+                              }
+                              Audio.playSound(sound, {
+                                volume: 1,
+                                position: gunProperties.position
+                              });*/
+                    playAnouncement(FIRE_SOUND);
+                    var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
+                    Controller.triggerShortHapticPulse(1, this.hand);
+                    print("BANG!"); //#############################################################################
+                    ammunitions = ammunitions -1;
+                    setAmmunitionsColor();
+                    //departure position = this.getGunTipPosition(gunProperties);
+                    //departure direction/rotation = gunProperties.rotation;
                 
-             
-                    /*      var size = SHOOT_SOUNDS.length - 1;
-                          var rand = Math.random();
-                          var co = Math.round(Math.random() * size);
-                          var sound = SHOOT_SOUNDS[co];
-                          var entityCount = ENTITY_AMOUNT;
-                          var particleCount = PARTICLE_AMOUNT;
-                          if (0.95 < rand) {
-                            sound = SUPRISE_SOUND;
-                            entityCount = 5;
-                            particleCount = 1;
+                
+                
+                
+                    /*
+
+                          for (var x = 0; x < particleCount; x++) {
+                            var part = PLASTIC;
+
+                            part.colorStart = randColor();
+                            part.colorFinish = part.colorStart;
+                            part.color = part.colorStart;
+                            part.dimensions= {
+                              x:Math.random()*0.5,
+                              y:Math.random()*0.5,
+                              z:Math.random()*0.5,
+                            }
+                            part.position = this.getGunTipPosition(gunProperties);
+                            part.rotation = gunProperties.rotation;
+                            Entities.addEntity(part, true);
                           }
-                          Audio.playSound(sound, {
-                            volume: 1,
-                            position: gunProperties.position
-                          });*/
-                playAnouncement(FIRE_SOUND);
-                var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
-                Controller.triggerShortHapticPulse(1, this.hand);
-                print("BANG!"); //#############################################################################
-                ammunitions = ammunitions -1;
-                setAmmunitionsColor();
-                //departure position = this.getGunTipPosition(gunProperties);
-                //departure direction/rotation = gunProperties.rotation;
-            
-            
-            
-            
-                /*
 
-                      for (var x = 0; x < particleCount; x++) {
-                        var part = PLASTIC;
-
-                        part.colorStart = randColor();
-                        part.colorFinish = part.colorStart;
-                        part.color = part.colorStart;
-                        part.dimensions= {
-                          x:Math.random()*0.5,
-                          y:Math.random()*0.5,
-                          z:Math.random()*0.5,
-                        }
-                        part.position = this.getGunTipPosition(gunProperties);
-                        part.rotation = gunProperties.rotation;
-                        Entities.addEntity(part, true);
-                      }
-
-                      for (var i = 0; i < entityCount; i++) {
-                        //  Controller.triggerShortHapticPulse(1, this.hand)
-                        var forwardVec = Quat.multiply(randCone(45), Quat.getFront(Quat.multiply(gunProperties.rotation, Quat.fromPitchYawRollDegrees(0, 0, 0))));
-                        forwardVec = Vec3.normalize(forwardVec);
-                        forwardVec = Vec3.multiply(forwardVec, GUN_FORCE);
-                        Entities.addEntity({
-                          type: 'Box',
-                          name: 'Confetti',
-                          position: Vec3.sum(randVec(0.05), this.getGunTipPosition(gunProperties)),
-                          color: randColor(),
-                          collisionless: 1,
-                          rotation: randCone(180),
-                          script: "(function() { return { preload: function(e) { Script.setTimeout(function(){ Entities.editEntity(e, { 'collisionless': 0, 'script':'' }) },50); } } })",
-                          dynamic: true,
-                          dimensions: Math.ceil(Math.random() * 12) % 2 === 0 ? DIMENSIONS : DIMENSIONS_VARIANT,
-                          gravity: GRAVITY,
-                          velocity: forwardVec,
-                          angularVelocity: randVec(25),
-                          angularDamping: FRICTION,
-                          gravity: GRAVITY,
-                          dynamic: true,
-                          lifetime: 15
-                        }, true);
-                
-                }*/
+                          for (var i = 0; i < entityCount; i++) {
+                            //  Controller.triggerShortHapticPulse(1, this.hand)
+                            var forwardVec = Quat.multiply(randCone(45), Quat.getFront(Quat.multiply(gunProperties.rotation, Quat.fromPitchYawRollDegrees(0, 0, 0))));
+                            forwardVec = Vec3.normalize(forwardVec);
+                            forwardVec = Vec3.multiply(forwardVec, GUN_FORCE);
+                            Entities.addEntity({
+                              type: 'Box',
+                              name: 'Confetti',
+                              position: Vec3.sum(randVec(0.05), this.getGunTipPosition(gunProperties)),
+                              color: randColor(),
+                              collisionless: 1,
+                              rotation: randCone(180),
+                              script: "(function() { return { preload: function(e) { Script.setTimeout(function(){ Entities.editEntity(e, { 'collisionless': 0, 'script':'' }) },50); } } })",
+                              dynamic: true,
+                              dimensions: Math.ceil(Math.random() * 12) % 2 === 0 ? DIMENSIONS : DIMENSIONS_VARIANT,
+                              gravity: GRAVITY,
+                              velocity: forwardVec,
+                              angularVelocity: randVec(25),
+                              angularDamping: FRICTION,
+                              gravity: GRAVITY,
+                              dynamic: true,
+                              lifetime: 15
+                            }, true);
+                    
+                    }*/
+                } else {
+                    playAnouncement(EMPTY_CLENCH_SOUND);
+                    Controller.triggerShortHapticPulse(0.5, this.hand);
+                }
             } else {
-                playAnouncement(EMPTY_CLENCH_SOUND);
-                Controller.triggerShortHapticPulse(0.5, this.hand);
+                justEquiped = false;
             }
         },
         preload: function(entityID) {
