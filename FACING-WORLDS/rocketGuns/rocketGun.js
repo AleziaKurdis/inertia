@@ -18,6 +18,8 @@
     var model = "";
     var thisEntityID;
     var lightMaterialID = Uuid.NULL;
+    
+    var DAY_DURATION = 104400; //D29
 
     var RELOAD_THRESHOLD = 0.95;
     var RELOAD_TIME = 2;
@@ -30,6 +32,7 @@
     ];
 
     var EMPTY_CLENCH_SOUND = SoundCache.getSound(ROOT + "sounds/emptyClench.mp3");
+    var FIRE_SOUND = SoundCache.getSound(ROOT + "sounds/fireTrigger.mp3");
 
     //var GUN_FORCE = 3;
 
@@ -154,11 +157,17 @@
                             volume: 1,
                             position: gunProperties.position
                           });*/
-            Controller.triggerShortHapticPulse(1, this.hand);
-            print("BANG!"); //#############################################################################
-            ammunitions = ammunitions -1;
-            setAmmunitionsColor();
-
+                playAnouncement(FIRE_SOUND);
+                var currentGravity = (Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor((DAY_DURATION/24) * 1.618))) * 3.5) - 6.3; // -9.8 to -2.8 m/s2
+                Controller.triggerShortHapticPulse(1, this.hand);
+                print("BANG!"); //#############################################################################
+                ammunitions = ammunitions -1;
+                setAmmunitionsColor();
+                //departure position = this.getGunTipPosition(gunProperties);
+                //departure direction/rotation = gunProperties.rotation;
+            
+            
+            
             
                 /*
 
@@ -277,6 +286,17 @@
             Entities.editEntity(lightMaterialID, {"materialData": JSON.stringify(materialContent)});
         }
     }
+
+    // ################## CYLCE AND TIME FUNCTIONS ###########################
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
+    // ################## END CYLCE AND TIME FUNCTIONS ########################### 
 
     /*
      * Converts an HSL color value to RGB. Conversion formula
