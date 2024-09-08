@@ -122,6 +122,9 @@ function onMessageReceived(channel, message, sender, localOnly) {
                 };
                 Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
             }
+        } else if (data.action === "DELETE_GUN") {
+            Entities.deleteEntity(data.entityID);
+            EntityViewer.queryOctree();
         }
     }
 }
