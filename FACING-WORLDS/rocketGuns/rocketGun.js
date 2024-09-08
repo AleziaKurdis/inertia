@@ -29,7 +29,9 @@
         Controller.Standard.RT
     ];
 
-    var GUN_FORCE = 3;
+    var EMPTY_CLENCH_SOUND = SoundCache.getSound(ROOT + "sounds/emptyClench.mp3");
+
+    //var GUN_FORCE = 3;
 
     var LOCAL_AUDIOPLAYBACK = {
         volume: 1,
@@ -133,7 +135,7 @@
             var self = this;
             Script.setTimeout(function() {
                 self.canShoot = true
-            }, 3000);
+            }, 2000);
             if (ammunitions > 0) {
                 
              
@@ -157,6 +159,7 @@
             ammunitions = ammunitions -1;
             setAmmunitionsColor();
 
+            
                 /*
 
                       for (var x = 0; x < particleCount; x++) {
@@ -200,6 +203,9 @@
                         }, true);
                 
                 }*/
+            } else {
+                playAnouncement(EMPTY_CLENCH_SOUND);
+                Controller.triggerShortHapticPulse(0.5, this.hand);
             }
         },
         preload: function(entityID) {
@@ -224,6 +230,17 @@
             }
             setAmmunitionsColor();
         }
+    }
+
+    function playAnouncement(soundCode) {
+        var position = Entities.getEntityProperties(thisEntityID, ["position"]).position;
+        var injectorOptions = {
+            "position": position,
+            "volume": 0.6,
+            "loop": false,
+            "localOnly": false
+        };
+        var injector = Audio.playSound(soundCode, injectorOptions);
     }
 
     function setAmmunitionsColor() {
