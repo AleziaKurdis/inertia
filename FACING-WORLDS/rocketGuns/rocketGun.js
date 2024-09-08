@@ -20,6 +20,7 @@
     var lightMaterialID = Uuid.NULL;
     
     var DAY_DURATION = 104400; //D29
+    var justEquiped = false;
 
     var RELOAD_THRESHOLD = 0.95;
     var RELOAD_TIME = 2;
@@ -95,6 +96,7 @@
         equipped: false,
         firedProjectiles: [],
         startEquip: function(entityID, args) {
+            justEquiped = true;
             this.hand = args[0] == "left" ? 0 : 1;
         },
 
@@ -132,7 +134,10 @@
             return gunTipPosition;
         },
         fire: function(gunProperties) {
-
+            if (justEquiped) {
+                justEquiped = false;
+                return;
+            }
             this.canShoot = false;
 
             var self = this;
