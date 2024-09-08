@@ -620,96 +620,10 @@ function updatePlayersList() {
     }
 }
 
-/*
-function killPlayer(avatarID, ghostNo, deathPosition) {
-    var playerNo = getPlayerNoFromSessionID(avatarID);
-    var message;
-    if (playerNo === -1 || gameStatus === "NOT_STARTED") {
-        message = {
-            "action": "TELEPORT_USER",
-            "avatarID": avatarID,
-            "position": determineExitGameToPosition(),
-            "orientation": Quat.fromVec3Degrees({"x": 0, "y": (Math.random() * 360), "z": 0})        
-        };
-        Messages.sendMessage(channelComm, JSON.stringify(message));        
-    } else {
-        var tpPosition;
-        var isGameEnded = false;
-        if (life === 0) {
-            players[playerNo].state = "DEAD";
-            tpPosition = determineExitGameToPosition();
-            if (isAllPlayerDead()) {
-                endGame();
-                isGameEnded = true;
-            }
-        } else {
-            players[playerNo].state = "ALIVE";
-            tpPosition = determinePlayerInitialPosition();
-        }
-
-        life = life - 1;
-        if (life < 0) { 
-            life = 0; 
-        }
-        
-        if (!isGameEnded) {
-            message = {
-                "action": "LIFE_COUNT_UPDATE",
-                "life": life      
-            };
-            Messages.sendMessage(channelComm, JSON.stringify(message));
-        }
-
-        message = {
-            "action": "TELEPORT_USER",
-            "avatarID": avatarID,
-            "position": tpPosition,
-            "orientation": Quat.fromVec3Degrees({"x": 0, "y": (Math.random() * 360), "z": 0})        
-        };
-        Messages.sendMessage(channelComm, JSON.stringify(message));
-        playSound(SOUND_AVATAR_KILLED, deathPosition, 1);
-        if (!isGameEnded) {
-            var properties = Entities.getEntityProperties(ghost[ghostNo].id, ["velocity", "position"]);
-            var ghostVelocity = properties.velocity;
-            var ghostPosition = properties.position;
-            Entities.deleteEntity(ghost[ghostNo].id);       
-            ghost[ghostNo].id = Entities.addEntity({
-                    "name": "VOXECUTOR-" + (ghostNo + 1),
-                    "description": ghostNo,
-                    "type": "Model",
-                    "modelURL": getHunterModel(ghostNo + 1),
-                    "useOriginalPivot": true,
-                    "shapeType": "box",
-                    "dimensions": {"x": GRID_POINT_SIDE_SIZE, "y": GRID_POINT_SIDE_SIZE, "z": GRID_POINT_SIDE_SIZE},
-                    "position": ghostPosition,
-                    "grab": {
-                        "grabbable": false
-                    },            
-                    "collisionless": true,
-                    "dynamic": true,
-                    "damping": 0,
-                    "friction": 0,
-                    "script": ROOT + "attackMode.js",
-                    "velocity": ghostVelocity,
-                    "lifetime": LIFE_TIME_ANTI_JUNK,
-                    "billboardMode": "none",
-                    "angularDamping": 0, 
-                    "angularVelocity": {"x": 0, "y": 10, "z": 0},
-                    "renderWithZones": visibilityZone            
-                }, "domain");
-        }
-        ejectBones(deathPosition);
-        message = {
-            "action": "I_DIED",
-            "avatarID": avatarID       
-        };
-        Messages.sendMessage(channelComm, JSON.stringify(message));
-    }
-    
-}
-
 function ejectBones(position){
-    for (var i = 0; i < 40; i++) {
+    var i;
+    playSound(SOUND_AVATAR_KILLED, position, 1);
+    for (i = 0; i < 40; i++) {
         var ejectionBoneVelocity = {"x": (Math.random() * 10)-5, "y": (Math.random() * 10)-5, "z": (Math.random() * 10)-5};
         var angularBoneVelocity = {"x": (Math.random() * 6)-3, "y": (Math.random() * 6)-3, "z": (Math.random() * 6)-3};
         var boneScale = 0.9 + (Math.random() * 1.4);
@@ -717,7 +631,7 @@ function ejectBones(position){
             boneID = Entities.addEntity({
                 "name": "AVATAR-BONE",
                 "type": "Model",
-                "modelURL": ROOT + "AVATAR_BONE.fbx",
+                "modelURL": ROOT + "models/AVATAR_BONE.fbx",
                 "useOriginalPivot": false,
                 "shapeType": "box",
                 "dimensions": Vec3.multiply({"x": 0.035, "y": 0.2, "z": 0.035}, boneScale),
@@ -731,8 +645,7 @@ function ejectBones(position){
                 "friction": 0.3,
                 "angularVelocity": angularBoneVelocity,
                 "velocity": ejectionBoneVelocity,
-                "lifetime": 20 + (Math.floor(Math.random() * 21)),
-                "renderWithZones": visibilityZone
+                "lifetime": 20 + (Math.floor(Math.random() * 21))
             }, "domain");
         } else {
             boneID = Entities.addEntity({
@@ -755,13 +668,11 @@ function ejectBones(position){
                 "friction": 0.3,
                 "angularVelocity": angularBoneVelocity,
                 "velocity": ejectionBoneVelocity,
-                "lifetime": 10 + (Math.floor(Math.random() * 8)),
-                "renderWithZones": visibilityZone
-            }, "domain");            
+                "lifetime": 10 + (Math.floor(Math.random() * 8))
+            }, "domain");
         }
     }
 }
-*/
 
 function clearGuns() {
     var i;
