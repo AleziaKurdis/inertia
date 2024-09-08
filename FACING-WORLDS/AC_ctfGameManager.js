@@ -426,6 +426,7 @@ function myTimer(deltaTime) {
 
 function initializeGuns() {
     var id, g;
+    var today = new Date();
     remainingDuration = Math.floor((gameStartTime + GAME_DURATION - today.getTime()) / 1000);
     for (g = 0; g < guns.length; g++) {
         id = generateGun(guns[g].model, Vec3.sum(ORIGIN_POSITION, guns[g].position), 0, remainingDuration);
