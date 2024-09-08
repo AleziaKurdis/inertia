@@ -40,6 +40,21 @@ var processTimer = 0;
 var gameTimerInterval = 700; //0.7sec.
 var processGameTimer = 0;
 
+var gunsTimerInterval = 60000; //minutes.
+var processGunsTimer = 0;
+
+var guns = [
+    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 60000}, //#RED 1
+    {"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 60000}, //#RED 2
+    {"model": "ANIL-8M", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 180000}, //#RED
+    {"model": "ANIL-16M", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 300000}, //#RED
+    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 60000}, //#BLUE 1
+    {"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 60000}, //#BLUE 2
+    {"model": "ANIL-8M", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 180000}, //#BLUE
+    {"model": "ANIL-16M", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 300000}, //#BLUE
+];
+var gunsIDtoDelete = [];
+
 var players = [];
 
 var gameStatus = "IDLE"; //IDLE | PLAYING
@@ -131,7 +146,10 @@ function initiateGame() {
     flagBlueStatus = "HOME";
     flagRedStatus = "HOME";
     gameStatus = "PLAYING";
+    processGameTimer = 0;
     processTimer = 0;
+    processGunsTimer = 0;
+    initializeGuns();
     Script.update.connect(myTimer);
     audioAnnouncement("GAME_BEGIN");
 }
@@ -319,6 +337,25 @@ function myTimer(deltaTime) {
         processGameTimer = today.getTime();
     }
     
+    if ((today.getTime() - processGunsTimer) > gunsTimerInterval ) {
+        //GUNS LOOP
+        var id, g, entityFoundIDs;
+        remainingDuration = Math.floor((gameStartTime + GAME_DURATION - today.getTime()) / 1000);
+        for (g = 0; g < guns.length; g++) {
+            EntityViewer.queryOctree();
+            entityFoundIDs = Entities.findEntitiesByName(guns[g].model, Vec3.sum(ORIGIN_POSITION, guns[g].position), 0.2, true);
+            if (entityFoundIDs.length === 0) {
+                id = generateGun(guns[g].model, Vec3.sum(ORIGIN_POSITION, guns[g].position), guns[g].rezDelay, remainingDuration);
+                if (id !== Uuid.NULL) {
+                    gunsIDtoDelete.push(id);
+                }
+            }
+        }
+        
+        today = new Date();
+        processGunsTimer = today.getTime();
+    }
+    
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
         //processing here to sent remining time
@@ -327,6 +364,7 @@ function myTimer(deltaTime) {
             //#### END OF GAME HERE #######################
             Script.update.disconnect(myTimer);
             gameStatus = "IDLE";
+            clearGuns();
 
             if (flagBlueID !== Uuid.NULL) {
                 EntityViewer.queryOctree();
@@ -383,6 +421,68 @@ function myTimer(deltaTime) {
 
         today = new Date();
         processTimer = today.getTime();
+    }
+}
+
+function initializeGuns() {
+    var id, g;
+    remainingDuration = Math.floor((gameStartTime + GAME_DURATION - today.getTime()) / 1000);
+    for (g = 0; g < guns.length; g++) {
+        id = generateGun(guns[g].model, Vec3.sum(ORIGIN_POSITION, guns[g].position), 0, remainingDuration);
+        if (id !== Uuid.NULL) {
+            gunsIDtoDelete.push(id);
+        }
+    }
+}
+
+function generateGun(model, position, rezDelay, remainingDuration) {
+    var id, properties;
+    if ((remainingDuration - Math.floor(rezDelay/1000)) > 0) {
+        Script.setTimeout(function () {
+            id = Entities.addEntity({
+                "name": model,
+                "position": position,
+                "shapeType": "box",
+                "type": "Model",
+                "dimensions": {"x":0.11555665731430054,"y":0.2598230838775635,"z":0.48354044556617737},
+                "useOriginalPivot": true,
+                "grab": {
+                    "grabbable": true,
+                    "equippable": true,
+                    "equippableLeftPosition": {
+                        "x": 0.035,
+                        "y": 0.10,
+                        "z": 0.02
+                    },
+                    "equippableLeftRotation": {
+                        "w": 0.49999237060546875,
+                        "x": 0.49999237060546875,
+                        "y": -0.5000228881835938,
+                        "z": 0.49999237060546875
+                    },
+                    "equippableRightPosition": {
+                        "x": 0.035,
+                        "y": 0.10,
+                        "z": 0.02
+                    },
+                    "equippableRightRotation": {
+                        "w": 0.49999237060546875,
+                        "x": 0.49999237060546875,
+                        "y": 0.49999237060546875,
+                        "z": -0.5000228881835938
+                    },
+                    "equippableIndicatorURL": ROOT + "rocketGuns/instructions.glb",
+                    "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                    "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
+                },
+                "lifetime": remainingDuration - Math.floor(rezDelay/1000),
+                "modelURL": ROOT + "rocketGuns/" + model + ".fst",
+                "script": ROOT + "rocketGuns/rocketGun.js?model=" + model
+            }, "domain");
+            return id;
+        }, rezDelay);
+    } else {
+        return Uuid.NULL;
     }
 }
 
@@ -662,6 +762,14 @@ function ejectBones(position){
 }
 */
 
+function clearGuns() {
+    var i;
+    for (i=0; i < gunsIDtoDelete.length; i++) {
+        Entities.deleteEntity(gunsIDtoDelete[i]);
+        EntityViewer.queryOctree();
+    }
+    gunsIDtoDelete = [];
+}
 
 function setUpEntityViewer() {
     EntityViewer.setPosition(ORIGIN_POSITION);
@@ -721,6 +829,8 @@ Script.scriptEnding.connect(function () {
         EntityViewer.queryOctree();
         flagRedID = Uuid.NULL;
     }
+    
+    clearGuns();
     
     Messages.messageReceived.disconnect(onMessageReceived);
     Messages.unsubscribe(channelComm);
