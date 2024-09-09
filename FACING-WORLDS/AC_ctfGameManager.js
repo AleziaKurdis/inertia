@@ -478,8 +478,8 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                         "z": -0.5000228881835938
                     },
                     "equippableIndicatorURL": ROOT + "rocketGuns/instructions.glb",
-                    "equippableIndicatorScale": {"x": 0.3, "y": 0.15, "z": 0.3},
-                    "equippableIndicatorOffset": {"x": 0.0, "y": 0.4, "z": 0.0}
+                    "equippableIndicatorScale": {"x": 0.12, "y": 0.06, "z": 0.12},
+                    "equippableIndicatorOffset": {"x": 0.0, "y": 0.3, "z": 0.0}
                 },
                 "lifetime": remainingDuration - Math.floor(rezDelay/1000),
                 "modelURL": ROOT + "rocketGuns/" + model + ".fst",
