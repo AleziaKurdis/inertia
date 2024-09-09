@@ -34,6 +34,10 @@
             print("EXPLOSION AT: " + JSON.stringify(position));
             print("By: " + ownerID );
             var victimes = AvatarManager.getAvatarsInRange( position, lethalRadius );
+            Entities.editEntity(myID, {"dynamic": false, "dimension": {"x": lethalRadius * 2, "y": lethalRadius * 2, "z": lethalRadius * 2}});
+            Script.setTimeout(function() {
+                Entities.editEntity(myID, {"visible": false, "dimension": {"x": lethalRadius * 2.2, "y": lethalRadius * 2.2, "z": lethalRadius * 2.2}});
+            }, 700);
             for (i = 0; i < victimes.length; i++) {
                 messageSent = {
                     "action": "REVIVE",
@@ -48,6 +52,7 @@
                 };
                 Messages.sendMessage(channelComm, JSON.stringify(messageSent));
             }
+
             Script.clearTimeout(timer);
             Entities.deleteEntity(myID);
         }
