@@ -28,11 +28,12 @@
     }; 
 
     this.collisionWithEntity = function (myID, otherID, collision) {
+        print("AT LEAST IT COLLIDE." ); //######################################################### REMOVE ##
         var i, messageSent;
         var position = Entities.getEntityProperties(myID, ["position"]).position;
         if (ownerID === MyAvatar.sessionUUID) {
-            print("EXPLOSION AT: " + JSON.stringify(position));
-            print("By: " + ownerID );
+            print("EXPLOSION AT: " + JSON.stringify(position)); //######################################################### REMOVE ##
+            print("By: " + ownerID ); //######################################################### REMOVE ##
             var victimes = AvatarManager.getAvatarsInRange( position, lethalRadius );
             Entities.editEntity(myID, {"dynamic": false, "dimension": {"x": lethalRadius * 2, "y": lethalRadius * 2, "z": lethalRadius * 2}});
             Script.setTimeout(function() {
