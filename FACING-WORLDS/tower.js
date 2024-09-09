@@ -1336,17 +1336,21 @@
         var i, localColor, visitorColor;
         var localList = team + " TEAM:";
         var visitorList = otherTeam + " TEAM:";
-        var name, death;
+        var name, death, kill;
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
             death = "";
+            kill = "";
             if (players[i].death !== 0) {
                 death = " (death:" + players[i].death + ")";
             }
+            if (players[i].kill !== 0) {
+                kill = " (killed:" + players[i].kill + ")";
+            }
             if (players[i].team === team) {
-                localList = localList + "\n - " + name + death;
+                localList = localList + "\n - " + name + kill + death;
             } else {
-                visitorList = visitorList + "\n - " + name + death;
+                visitorList = visitorList + "\n - " + name + kill + death;
             }
         }
         

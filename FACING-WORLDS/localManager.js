@@ -112,7 +112,8 @@
                             "action": "DECLARE_A_DEATH",
                             "avatarID": data.avatarID,
                             "flagFoundID": flagFoundID,
-                            "flagFoundPosition": flagFoundPosition
+                            "flagFoundPosition": flagFoundPosition,
+                            "by": data.by
                         };
                         Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
                     }

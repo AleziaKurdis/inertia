@@ -115,7 +115,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
         } else if (data.action === "DECLARE_A_DEATH") {
             if (gameStatus === "PLAYING") {
                 EntityViewer.queryOctree();
-                registerADeath(data.avatarID, data.flagFoundID, data.flagFoundPosition);
+                registerADeath(data.avatarID, data.flagFoundID, data.flagFoundPosition, data.by);
                 messageToSent = {
                     "action": "PLAYER_LIST",
                     "players": players,
@@ -125,6 +125,8 @@ function onMessageReceived(channel, message, sender, localOnly) {
         } else if (data.action === "DELETE_GUN") {
             Entities.deleteEntity(data.entityID);
             EntityViewer.queryOctree();
+        } else if (data.action === "KILL") {
+            ejectBones(data.position);
         }
     }
 }
@@ -540,10 +542,11 @@ function swapTeamColorAndResetDeath() {
             players[i].team = "RED";
         }
         players[i].death = 0;
+        players[i].kill = 0;
     }
 }
 
-function registerADeath(avatarID, flagFoundID, flagFoundPosition) {
+function registerADeath(avatarID, flagFoundID, flagFoundPosition, by) {
     var i;
     for (i = 0; i < players.length; i++) {
         if (players[i].avatarID === avatarID) {
@@ -557,13 +560,16 @@ function registerADeath(avatarID, flagFoundID, flagFoundPosition) {
             players[i].death = players[i].death + 1;
             break;
         }
+        if (players[i].avatarID === by) {
+            players[i].kill = players[i].kill + 1;
+        }
     }
 }
 
 function addPlayer(avatarID, team) {
     var currentTeam = isPlayerKnown(avatarID);
     if (currentTeam === "NONE") {
-        var player = {"avatarID": avatarID, "team": team, "death": 0 };
+        var player = {"avatarID": avatarID, "team": team, "death": 0, "kill": 0 };
         players.push(player);
     } else {
         for (var i = 0; i < players.length; i++) {
