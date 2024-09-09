@@ -24,7 +24,6 @@
     var bulletHue = 0;
     
     var RELOAD_THRESHOLD = 0.95;
-    var RELOAD_TIME = 2;
     var GUN_TIP_FWD_OFFSET = 0.05;
     var GUN_TIP_UP_OFFSET = 0.05;
 
@@ -35,57 +34,7 @@
 
     var EMPTY_CLENCH_SOUND = SoundCache.getSound(ROOT + "sounds/emptyClench.mp3");
     var FIRE_SOUND = SoundCache.getSound(ROOT + "sounds/fireTrigger.mp3");
-
-    //var GUN_FORCE = 3;
-
-    var LOCAL_AUDIOPLAYBACK = {
-        volume: 1,
-        position: Vec3.sum(Camera.getPosition(), Quat.getFront(Camera.getOrientation()))
-    };
-/*
-  var GRAVITY = {
-    x: 0,
-    y: -1,
-    z: 0
-  };
-  var DIMENSIONS = {
-    x: 0.04,
-    y: 0.002,
-    z: 0.04
-  }
-
-  var DIMENSIONS_VARIANT = {
-    x: 0.02,
-    y: 0.002,
-    z: 0.02
-  }
-*/
-  //var FRICTION = 0.05;
-  //var DENSITY = 100;
-
-  //var PARTICLE_AMOUNT = 8;
-  //var ENTITY_AMOUNT = 20;
-/*
-  var randColor = function() {
-    return {
-      red: Math.random() * 255,
-      green: Math.random() * 255,
-      blue: Math.random() * 255
-    }
-  };
-  var randVec = function(amount) {
-    return Vec3.multiply({
-      x: Math.random() - Math.random(),
-      y: Math.random() - Math.random(),
-      z: Math.random() - Math.random()
-    }, amount)
-  }
-  var randCone = function(size) {
-    return Quat.fromVec3Degrees(randVec(size));
-  }
-*/
-    //var rotation = Quat.fromVec3Degrees({x:0,y:90,z:0});
-
+    
     function RocketGun() {
         return;
     }
@@ -242,6 +191,7 @@
         var BULLET_SIZE = 0.12;
         var id = Entities.addEntity({
             "name": bullet,
+            "description": "" + lethalRadius,
             "type": "Shape",
             "shape": "Sphere",
             "dimensions": { "x": BULLET_SIZE, "y": BULLET_SIZE, "z": BULLET_SIZE },
@@ -267,8 +217,8 @@
             "collisionMask":31,
             "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
             "dynamic": true,
-            "lifetime": 60;
-            "script": ""
+            "lifetime": 60,
+            "script": ROOT + "bullet.js"
         }, "avatar");
             
         var fireColor = hslToRgb(bulletHue, 1, 0.5);
