@@ -190,7 +190,7 @@
     function createBullet(position, rotation, velocity, gravity) {
         var BULLET_SIZE = 0.12;
         var id = Entities.addEntity({
-            "name": bullet,
+            "name": "bullet",
             "description": "" + lethalRadius,
             "type": "Shape",
             "shape": "Sphere",
