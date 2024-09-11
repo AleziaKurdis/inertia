@@ -213,7 +213,6 @@
             "restitution":0.99,
             "friction":0.0,
             "collisionless": false,
-            "ignoreForCollisions": false,
             "collisionMask":31,
             "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
             "dynamic": true,
