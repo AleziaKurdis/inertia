@@ -15,7 +15,7 @@
     var ownerID;
     var timer;
     var lethalRadius;
-    
+    print("AT LEAST IT STARTS." ); //######################################################### REMOVE ##
     var Bullet = function() {};
 
     Bullet.prototype = {
@@ -23,6 +23,7 @@
             var properties = Entities.getEntityProperties(entityID, ["owningAvatarID", "description"]);
             ownerID = properties.owningAvatarID;
             lethalRadius = parseInt(properties.description, 10);
+            print("AT LEAST IT PRELOADS." ); //######################################################### REMOVE ##
             if (ownerID === MyAvatar.sessionUUID) {
                 timer = Script.setTimeout(function() {
                     Entities.deleteEntity(entityID);
@@ -30,7 +31,7 @@
             }
         },
         collisionWithEntity: function(myID, otherID, collision) {
-            print("AT LEAST IT COLLIDE." ); //######################################################### REMOVE ##
+            print("AT LEAST IT COLLIDES." ); //######################################################### REMOVE ##
             var i, messageSent;
             var position = Entities.getEntityProperties(myID, ["position"]).position;
             if (ownerID === MyAvatar.sessionUUID) {
