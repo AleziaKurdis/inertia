@@ -105,7 +105,7 @@
                     Controller.triggerShortHapticPulse(1, this.hand);
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    var bulletId = createBullet(this.getGunTipPosition(gunProperties), gunProperties.rotation, Vec3.multiply(Quat.getForward(gunProperties.rotation), 10), {"x": 0.0, "y": currentGravity, "z": 0.0});
+                    var bulletId = createBullet(this.getGunTipPosition(gunProperties), gunProperties.rotation, Vec3.multiply(Quat.getForward(gunProperties.rotation), 30), {"x": 0.0, "y": currentGravity, "z": 0.0});
                 } else {
                     playAnouncement(EMPTY_CLENCH_SOUND);
                     Controller.triggerShortHapticPulse(0.5, this.hand);
@@ -271,8 +271,8 @@
                 "green": plasmaColor[1],
                 "blue": plasmaColor[2]
             },
-            "intensity": 25.0,
-            "falloffRadius": 3.0
+            "intensity": 20.0,
+            "falloffRadius": 2.0
         }, "avatar");
         
         //particle
@@ -300,8 +300,8 @@
             "maxParticles": 3200,
             "lifespan": 8,
             "emitRate": 400,
-            "emitSpeed": 0.2,
-            "speedSpread": 0.1,
+            "emitSpeed": 0.1,
+            "speedSpread": 0.05,
             "emitRadiusStart": 0,
             "emitOrientation": {
                 "x": 0,
