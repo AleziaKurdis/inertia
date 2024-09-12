@@ -12,7 +12,7 @@
 (function() {
     var ROOT = Script.resolvePath('').split("svrRocketGun.js")[0];
 
-    this.createBulletServerSide = function (entityID, params) {
+    function createBulletServerSide(entityID, params) {
         var position = params[0];
         var rotation = params[1];
         var velocity = params[2];
@@ -172,11 +172,7 @@
             "spinStart": -1.5700000524520874,
             "spinFinish": 1.5700000524520874
         }, "domain");
-    };
-    
-    this.remotelyCallable = [
-        "createBulletServerSide"
-    ];
+    }
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(cyclelength, cycleduration){
@@ -222,7 +218,24 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
     
-    Script.scriptEnding.connect(function () {
-        //do nothing
-    });
+    this.remotelyCallable = [
+        "createBulletServerSide"
+    ];    
+
+    // Constructor
+    var _this = null;
+    function BulletServer() {
+        _this = this;
+        this.entityID = null;
+    }
+
+    // Entity methods
+    BulletServer.prototype = {
+        remotelyCallable: [
+            "createBulletServerSide"
+        ],
+        createBulletServerSide: createBulletServerSide
+    };
+
+    return new BulletServer();
 });
