@@ -1,0 +1,41 @@
+{
+    "Entities": [{
+        "shapeType": "box",
+        "type": "Model",
+        "dimensions": {"x":0.11555665731430054,"y":0.2598230838775635,"z":0.48354044556617737},
+        "useOriginalPivot": true,
+        "grab": {
+            "grabbable": true,
+            "equippable": true,
+            "equippableLeftPosition": {
+                "x": 0.035,
+                "y": 0.08,
+                "z": 0.02
+            },
+            "equippableLeftRotation": {
+                "w": 0.49999237060546875,
+                "x": 0.49999237060546875,
+                "y": -0.5000228881835938,
+                "z": 0.49999237060546875
+            },
+            "equippableRightPosition": {
+                "x": 0.035,
+                "y": 0.08,
+                "z": 0.02
+            },
+            "equippableRightRotation": {
+                "w": 0.49999237060546875,
+                "x": 0.49999237060546875,
+                "y": 0.49999237060546875,
+                "z": -0.5000228881835938
+            },
+            "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/ANIL-4M.fst",
+            "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+            "equippableIndicatorOffset": {"x": 0.0, "y": 1.0, "z": 0.0}
+        },
+        "lifetime": 900,
+        "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/ANIL-4M.fst",
+        "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/rocketGun.js"
+    }],
+    "Version": 69
+}
