@@ -483,7 +483,8 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                 },
                 "lifetime": remainingDuration - Math.floor(rezDelay/1000),
                 "modelURL": ROOT + "rocketGuns/" + model + ".fst",
-                "script": ROOT + "rocketGuns/rocketGun.js?model=" + model
+                "script": ROOT + "rocketGuns/rocketGun.js",
+                "serverScripts": ROOT + "rocketGuns/svrRocketGun.js"
             }, "domain");
             return id;
         }, rezDelay);
