@@ -29,9 +29,9 @@
                 "y": 0.49999237060546875,
                 "z": -0.5000228881835938
             },
-            "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/ANIL-4M.fst",
-            "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
-            "equippableIndicatorOffset": {"x": 0.0, "y": 1.0, "z": 0.0}
+            "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/instructions.glb",
+            "equippableIndicatorScale": {"x": 0.12, "y": 0.06, "z": 0.12},
+            "equippableIndicatorOffset": {"x": 0.0, "y": 0.3, "z": 0.0}
         },
         "lifetime": 900,
         "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/rocketGuns/ANIL-4M.fst",
