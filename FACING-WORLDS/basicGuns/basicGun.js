@@ -13,15 +13,15 @@
     var ROOT = Script.resolvePath('').split("basicGun.js")[0];
     var channelComm = "ak.ctf.ac.communication";
 
+    var shots = [];
+
     var ammunitions = 0;
-    //var lethalRadius = 0;
-    //var model = "";
     var thisEntityID;
     var lightMaterialID = Uuid.NULL;
     
     var DAY_DURATION = 104400; //D29
     var justEquiped = false;
-    //var bulletHue = 0;
+    var NBR_SHOT_TO_DIE = 2;
     
     var RELOAD_THRESHOLD = 0.95;
     var GUN_TIP_FWD_OFFSET = 0.05;
@@ -96,7 +96,7 @@
             var self = this;
             Script.setTimeout(function() {
                 self.canShoot = true
-            }, 2000);
+            }, 1000);
 
             if (!justEquiped) {
                 if (ammunitions > 0) {
@@ -104,8 +104,36 @@
                     Controller.triggerShortHapticPulse(1, this.hand);
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    genShotFX(this.getGunTipPosition(gunProperties), gunProperties.rotation);
-                    //shot here
+                    genShotFX(this.getGunTipPosition(gunProperties), gunProperties.rotation); // ################# TODO
+                    var pick = Picks.createPick(PickType.Ray, {
+                        "enabled": true,
+                        "filter": Picks.PICK_AVATARS,
+                        "maxDistance": 400,
+                        "joint": "static",
+                        "position": this.getGunTipPosition(gunProperties),
+                        "orientation": gunProperties.rotation
+                    });
+                    var rayPickResult = Picks.getPrevPickResult(pick);
+                    if (rayPickResult.intersects) {
+                        var impactPosition = rayPickResult.intersection;
+                        //impact FX call here ########################################################################## TODO
+                        var killed = getHitNumber(rayPickResult.objectID);
+                        if (killed) {
+                            var messageSent = {
+                                "action": "REVIVE",
+                                "avatarID": rayPickResult.objectID,
+                                "by": ownerID
+                            };
+                            Messages.sendMessage(channelComm, JSON.stringify(messageSent));
+
+                            messageSent = {
+                                "action": "KILL",
+                                "position": impactPosition
+                            };
+                            Messages.sendMessage(channelComm, JSON.stringify(messageSent));
+                        }
+                    }
+                    Picks.removePick(pick);
                 } else {
                     playAnouncement(EMPTY_CLENCH_SOUND);
                     Controller.triggerShortHapticPulse(0.5, this.hand);
@@ -119,6 +147,27 @@
             thisEntityID = entityID;
             ammunitions = 12;
             setAmmunitionsColor();
+        }
+    }
+
+    function getHitNumber(avatarID) {
+        var i, rez;
+        if (shots.length > 0) {
+            rez = false;
+            for (i = 0; i < shots.length; i++ ) {
+                if (shots[i].id === avatarID) {
+                    shots[i].hits = shots[i].hits + 1;
+                    if (shots[i].hits > NBR_SHOT_TO_DIE - 1) {
+                        rez = true;
+                        shots[i].hits = 0;
+                    }
+                    break;
+                }
+            }
+            return rez;
+        } else {
+            shots.push({"id": avatarID, "hits": 1});
+            return false;
         }
     }
 
