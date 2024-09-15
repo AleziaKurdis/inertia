@@ -104,7 +104,7 @@
                     Controller.triggerShortHapticPulse(1, this.hand);
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    genShotFX(this.getGunTipPosition(gunProperties), gunProperties.rotation); // ################# TODO
+                    genShotFX(this.getGunTipPosition(gunProperties));
                     var pick = Picks.createPick(PickType.Ray, {
                         "enabled": true,
                         "filter": Picks.PICK_AVATARS,
@@ -217,109 +217,33 @@
         }
     }
 
-    function genShotFX(position, rotation) {
-/*        var id = Entities.addEntity({
-            "name": "bulletFX",
-            "type": "Shape",
-            "shape": "Sphere",
-            "dimensions": { "x": 0.1, "y": 0.1, "z":0.6 },
-            "position": position,
-            "rotation": rotation,
-            "grab": {
-                "grabbable": false
-            },
-            "damping":0,
-            "angularDamping":0,
-            "restitution":0.99,
-            "friction":0.0,
-            "collisionless": false,
-            "collisionMask":31,
-            "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
-            "dynamic": true,
-            "lifetime": 60
-        }, "avatar");
-            
-        var fireColor = hslToRgb(bulletHue/360, 1, 0.5);
-        var plasmaColor = hslToRgb(bulletHue/360, 1, 0.61);
-        var colorStart = hslToRgb(bulletHue/360, 1, 0.9);
-        var bloomFactor = 4;
-
-        //material           
-        var materialContent = {
-            "materialVersion": 1,
-            "materials": [
-                {
-                    "name": "plasma",
-                    "albedo": [1, 1, 1],
-                    "metallic": 1,
-                    "roughness": 1,
-                    "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
-                    "cullFaceMode": "CULL_NONE",
-                    "model": "hifi_pbr"
-                }
-            ]
-        };
-                
-        var fireMatId = Entities.addEntity({
-            "type": "Material",
-            "parentID": id,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "plasma-material",
-            "materialURL": "materialData",
-            "priority": 1,
-            "materialData": JSON.stringify(materialContent)
-        }, "avatar");
-        
-        //light
-        var lightId = Entities.addEntity({
-            "type": "Light",
-            "parentID": id,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "plasma-light",
-            "dimensions": {
-                "x": 50,
-                "y": 50,
-                "z": 50
-            },
-            "grab": {
-                "grabbable": false
-            },
-            "color": {
-                "red": plasmaColor[0],
-                "green": plasmaColor[1],
-                "blue": plasmaColor[2]
-            },
-            "intensity": 20.0,
-            "falloffRadius": 2.0
-        }, "avatar");
-        
-        //particle
+    function genShotFX(position) {
         var fxId = Entities.addEntity({
             "type": "ParticleEffect",
-            "parentID": id,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "plasma-fx",
+            "parentID": thisEntityID,
+            "position": position,
+            "name": "gun-fx",
             "dimensions": {
-                "x": 381.0999755859375,
-                "y": 381.0999755859375,
-                "z": 381.0999755859375
+                "x": 1.1200000047683716,
+                "y": 1.1200000047683716,
+                "z": 1.1200000047683716
             },
             "grab": {
                 "grabbable": false
             },
             "shapeType": "ellipsoid",
             "color": {
-                "red": plasmaColor[0],
-                "green": plasmaColor[1],
-                "blue": plasmaColor[2]
+                "red": 255,
+                "green": 196,
+                "blue": 0
             },
-            "alpha": 0.05,
+            "alpha": 0.1,
             "textures": ROOT + "fog.png",
-            "maxParticles": 3200,
-            "lifespan": 8,
-            "emitRate": 400,
-            "emitSpeed": 0.1,
-            "speedSpread": 0.05,
+            "maxParticles": 30,
+            "lifespan": 0.2,
+            "emitRate": 5,
+            "emitSpeed": 0,
+            "speedSpread": 0,
             "emitRadiusStart": 0,
             "emitOrientation": {
                 "x": 0,
@@ -327,40 +251,43 @@
                 "z": 0,
                 "w": 1
             },
-            "emitDimensions": { "x": BULLET_SIZE, "y": BULLET_SIZE, "z": BULLET_SIZE },
+            "emitDimensions": { "x": 0.1, "y": 0.1, "z": 0.1 },
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
                 "x": 0,
-                "y": 1.5,
+                "y": 0,
                 "z": 0
             },
             "accelerationSpread": {
                 "x": 0,
-                "y": 0.6,
+                "y": 0,
                 "z": 0
             },
-            "particleRadius": 1,
-            "radiusSpread": 0.1,
-            "radiusStart": BULLET_SIZE * 0.7,
-            "radiusFinish": 20,
+            "particleRadius": 0.25,
+            "radiusSpread": 0.01,
+            "radiusStart": 0,
+            "radiusFinish": 0.5,
             "colorStart": {
-                "red": colorStart[0],
-                "green": colorStart[1],
-                "blue": colorStart[2]
+                "red": 255,
+                "green": 255,
+                "blue": 0
             },
             "colorFinish": {
-                "red": fireColor[0],
-                "green": fireColor[1],
-                "blue": fireColor[2]
+                "red": 255,
+                "green": 255,
+                "blue": 255
             },
             "alphaStart": 0.2,
             "alphaFinish": 0,
             "emitterShouldTrail": true,
-            "spinSpread": 1.0499999523162842,
-            "spinStart": -1.5700000524520874,
-            "spinFinish": 1.5700000524520874
+            "spinSpread": 0.3499999940395355,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
         }, "avatar");
-*/
+        
+        Script.setTimeout(function () {
+            Entities.deleteEntity(fxId);
+        }, 700);
     }
 
 
