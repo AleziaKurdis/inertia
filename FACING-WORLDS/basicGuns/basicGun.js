@@ -22,6 +22,8 @@
     var DAY_DURATION = 104400; //D29
     var justEquiped = false;
     var NBR_SHOT_TO_DIE = 2;
+    var DEFAULT_NBR_AMMUNITIONS = 12;
+    var PICK_FILTER = Picks.PICK_AVATARS | Picks.PICK_DOMAIN_ENTITIES | Picks.PICK_INCLUDE_VISIBLE | Picks.PICK_INCLUDE_COLLIDABLE | Picks.PICK_PRECISE;
     
     var RELOAD_THRESHOLD = 0.95;
     var GUN_TIP_FWD_OFFSET = 0.05;
@@ -34,6 +36,7 @@
 
     var EMPTY_CLENCH_SOUND = SoundCache.getSound(ROOT + "sounds/emptyClench.mp3");
     var FIRE_SOUND = SoundCache.getSound(ROOT + "sounds/fireTrigger.mp3");
+    var IMPACT_SOUND = SoundCache.getSound(ROOT + "sounds/impact.mp3");
     
     function BasicGun() {
         return;
@@ -107,16 +110,16 @@
                     genShotFX(this.getGunTipPosition(gunProperties));
                     var pick = Picks.createPick(PickType.Ray, {
                         "enabled": true,
-                        "filter": Picks.PICK_AVATARS,
+                        "filter": PICK_FILTER,
                         "maxDistance": 400,
                         "joint": "static",
                         "position": this.getGunTipPosition(gunProperties),
-                        "orientation": gunProperties.rotation
+                        "direction": Quat.getForward(gunProperties.rotation)
                     });
                     var rayPickResult = Picks.getPrevPickResult(pick);
-                    if (rayPickResult.intersects) {
+                    if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
                         var impactPosition = rayPickResult.intersection;
-                        //impact FX call here ########################################################################## TODO
+                        doImpactFX(true, impactPosition);
                         var killed = getHitNumber(rayPickResult.objectID);
                         if (killed) {
                             var messageSent = {
@@ -132,6 +135,8 @@
                             };
                             Messages.sendMessage(channelComm, JSON.stringify(messageSent));
                         }
+                    } else if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_ENTITY) {
+                        doImpactFX(false, rayPickResult.intersection);
                     }
                     Picks.removePick(pick);
                 } else {
@@ -145,9 +150,78 @@
         preload: function(entityID) {
             this.entityID = entityID;
             thisEntityID = entityID;
-            ammunitions = 12;
+            ammunitions = DEFAULT_NBR_AMMUNITIONS;
             setAmmunitionsColor();
         }
+    }
+
+    function doImpactFX(isBlood, position) {
+        var color = {
+            "red": 255,
+            "green": 255,
+            "blue": 255
+        };
+        if (isBlood) {
+            color = {
+                "red": 200,
+                "green": 0,
+                "blue": 0
+            };
+        }
+        playAnouncement(IMPACT_SOUND);
+        var fxId = Entities.addEntity({
+            "type": "ParticleEffect",
+            "position": position,
+            "name": "impact-fx",
+            "dimensions": {"x":0.6940000057220459,"y":0.6940000057220459,"z":0.6940000057220459},
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "ellipsoid",
+            "color": color,
+            "alpha": 0.4,
+            "textures": ROOT + "ASTROLITHE.png",
+            "maxParticles": 1500,
+            "lifespan": 0.2,
+            "emitRate": 300,
+            "emitSpeed": 1.0,
+            "speedSpread": 0.2,
+            "emitRadiusStart": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": { "x": 0.01, "y": 0.01, "z": 0.01 },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 0.1,
+            "radiusSpread": 0.0,
+            "radiusStart": 0.1,
+            "radiusFinish": 0.1,
+            "colorStart": color,
+            "colorFinish": color,
+            "alphaStart": 0.4,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 0.3499999940395355,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
+        }, "avatar");
+        
+        Script.setTimeout(function () {
+            Entities.deleteEntity(fxId);
+        }, 500);
     }
 
     function getHitNumber(avatarID) {
@@ -183,7 +257,7 @@
     }
 
     function setAmmunitionsColor() {
-        var color = hslToRgb(((ammunitions/6)*120)/360, 1.0, 0.6);
+        var color = hslToRgb(((ammunitions/DEFAULT_NBR_AMMUNITIONS)*120)/360, 1.0, 0.6);
         var bloomFactor = 3;
         var materialContent = {
             "materialVersion": 1,
@@ -287,7 +361,7 @@
         
         Script.setTimeout(function () {
             Entities.deleteEntity(fxId);
-        }, 700);
+        }, 500);
     }
 
 
