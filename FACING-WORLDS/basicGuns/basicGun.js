@@ -117,6 +117,7 @@
                         "direction": Quat.getForward(gunProperties.rotation)
                     });
                     var rayPickResult = Picks.getPrevPickResult(pick);
+                    print("RAYPICK2024: " + JSON.stringify(rayPickResult)); //##############################################################DEBUG/REMOVE
                     if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
                         var impactPosition = rayPickResult.intersection;
                         doImpactFX(true, impactPosition);
