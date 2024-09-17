@@ -82,15 +82,7 @@
             return;
         },
         getGunTipPosition: function(properties) {
-            //the tip of the gun is going to be in a different place than the center, so we move in space relative to the model to find that position
-            var frontVector = Quat.getFront(properties.rotation);
-            var frontOffset = Vec3.multiply(frontVector, {"y": 0, "y": 0.14, "z": -0.18758061});
-            //var upVector = Quat.getUp(properties.rotation);
-            //var upOffset = Vec3.multiply(upVector, GUN_TIP_UP_OFFSET);
-
-            var gunTipPosition = Vec3.sum(properties.position, frontOffset);
-            //gunTipPosition = Vec3.sum(gunTipPosition, upOffset);
-
+            var gunTipPosition = Vec3.sum(properties.position, Vec3.multiply(properties.rotation, {"y": 0, "y": 0.14, "z": -0.18758061}));
             return gunTipPosition;
         },
         fire: function(gunProperties) {
