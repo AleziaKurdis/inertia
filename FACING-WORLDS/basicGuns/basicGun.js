@@ -84,12 +84,12 @@
         getGunTipPosition: function(properties) {
             //the tip of the gun is going to be in a different place than the center, so we move in space relative to the model to find that position
             var frontVector = Quat.getFront(properties.rotation);
-            var frontOffset = Vec3.multiply(frontVector, GUN_TIP_FWD_OFFSET);
-            var upVector = Quat.getUp(properties.rotation);
-            var upOffset = Vec3.multiply(upVector, GUN_TIP_UP_OFFSET);
+            var frontOffset = Vec3.multiply(frontVector, {"y": 0, "y": 0.14, "z": -0.18758061});
+            //var upVector = Quat.getUp(properties.rotation);
+            //var upOffset = Vec3.multiply(upVector, GUN_TIP_UP_OFFSET);
 
             var gunTipPosition = Vec3.sum(properties.position, frontOffset);
-            gunTipPosition = Vec3.sum(gunTipPosition, upOffset);
+            //gunTipPosition = Vec3.sum(gunTipPosition, upOffset);
 
             return gunTipPosition;
         },
@@ -109,10 +109,10 @@
                     var pick = Picks.createPick(PickType.Ray, {
                         "enabled": true,
                         "filter": PICK_FILTER,
-                        "maxDistance": 400,
+                        //"maxDistance": 400,
                         //"joint": "static",
                         "position": this.getGunTipPosition(gunProperties),
-                        "direction": Quat.getForward(gunProperties.rotation)
+                        "orientation": gunProperties.rotation
                     });
                     
                     ammunitions = ammunitions -1;
@@ -120,6 +120,7 @@
                     genShotFX(this.getGunTipPosition(gunProperties));
                     
                     var rayPickResult = Picks.getPrevPickResult(pick);
+                    rayPickResult = Picks.getPrevPickResult(pick); //######################################### JUST IN CASE IT WAS TOO FAST THEN NOTHING TO RETURN
                     print("RAYPICK2024: " + JSON.stringify(rayPickResult)); //##############################################################DEBUG/REMOVE
                     if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
                         var impactPosition = rayPickResult.intersection;
