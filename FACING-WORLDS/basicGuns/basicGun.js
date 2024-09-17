@@ -99,23 +99,26 @@
             var self = this;
             Script.setTimeout(function() {
                 self.canShoot = true
-            }, 1000);
+            }, 500);
 
             if (!justEquiped) {
                 if (ammunitions > 0) {
                     playAnouncement(FIRE_SOUND);
                     Controller.triggerShortHapticPulse(1, this.hand);
-                    ammunitions = ammunitions -1;
-                    setAmmunitionsColor();
-                    genShotFX(this.getGunTipPosition(gunProperties));
+                    
                     var pick = Picks.createPick(PickType.Ray, {
                         "enabled": true,
                         "filter": PICK_FILTER,
                         "maxDistance": 400,
-                        "joint": "static",
+                        //"joint": "static",
                         "position": this.getGunTipPosition(gunProperties),
                         "direction": Quat.getForward(gunProperties.rotation)
                     });
+                    
+                    ammunitions = ammunitions -1;
+                    setAmmunitionsColor();
+                    genShotFX(this.getGunTipPosition(gunProperties));
+                    
                     var rayPickResult = Picks.getPrevPickResult(pick);
                     print("RAYPICK2024: " + JSON.stringify(rayPickResult)); //##############################################################DEBUG/REMOVE
                     if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
