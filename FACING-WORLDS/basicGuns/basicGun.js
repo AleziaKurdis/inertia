@@ -82,7 +82,7 @@
             return;
         },
         getGunTipPosition: function(properties) {
-            var gunTipPosition = Vec3.sum(properties.position, Vec3.multiply(properties.rotation, {"y": 0, "y": 0.14, "z": -0.18758061}));
+            var gunTipPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV(properties.rotation, {"y": 0, "y": 0.14, "z": -0.18758061}));
             return gunTipPosition;
         },
         fire: function(gunProperties) {
