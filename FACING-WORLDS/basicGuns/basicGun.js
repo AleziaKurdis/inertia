@@ -18,6 +18,7 @@
     var ammunitions = 0;
     var thisEntityID;
     var lightMaterialID = Uuid.NULL;
+    var pick;
     
     var DAY_DURATION = 104400; //D29
     var justEquiped = false;
@@ -49,6 +50,7 @@
         equipped: false,
         firedProjectiles: [],
         startEquip: function(entityID, args) {
+            Picks.enablePick(pick);
             justEquiped = true;
             this.hand = args[0] == "left" ? 0 : 1;
         },
@@ -59,6 +61,7 @@
 
         releaseEquip: function(entityID, args) {
             var _this = this;
+            Picks.disablePick(pick);
             this.equipped = false;
             this.canShoot = false;
             if (ammunitions === 0) {
@@ -97,23 +100,11 @@
                 if (ammunitions > 0) {
                     playAnouncement(FIRE_SOUND);
                     Controller.triggerShortHapticPulse(1, this.hand);
-                    
-                    var pick = Picks.createPick(PickType.Ray, {
-                        "enabled": true,
-                        "filter": PICK_FILTER,
-                        "maxDistance": 400,
-                        "parentID": thisEntityID,
-                        //"joint": "static",
-                        "position": CANON_EXIT_LOCAL_POSITION,
-                        //"orientation": gunProperties.rotation
-                    });
-                    
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     
                     var rayPickResult = Picks.getPrevPickResult(pick);
-                    rayPickResult = Picks.getPrevPickResult(pick); //######################################### JUST IN CASE IT WAS TOO FAST THEN NOTHING TO RETURN
                     print("RAYPICK2024: " + JSON.stringify(rayPickResult)); //##############################################################DEBUG/REMOVE
                     if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
                         var impactPosition = rayPickResult.intersection;
@@ -136,7 +127,6 @@
                     } else if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_ENTITY) {
                         doImpactFX(false, rayPickResult.intersection);
                     }
-                    Picks.removePick(pick);
                 } else {
                     playAnouncement(EMPTY_CLENCH_SOUND);
                     Controller.triggerShortHapticPulse(0.5, this.hand);
@@ -150,6 +140,15 @@
             thisEntityID = entityID;
             ammunitions = DEFAULT_NBR_AMMUNITIONS;
             setAmmunitionsColor();
+            var pick = Picks.createPick(PickType.Ray, {
+                "enabled": false,
+                "filter": PICK_FILTER,
+                "maxDistance": 400,
+                "parentID": thisEntityID,
+                //"joint": "static",
+                "position": CANON_EXIT_LOCAL_POSITION,
+                //"orientation": gunProperties.rotation
+            });
         }
     }
 
@@ -412,7 +411,7 @@
     return self;
     
     Script.scriptEnding.connect(function () {
-        //do nothing
+        Picks.removePick(pick);
         Messages.unsubscribe(channelComm);
     });
 });
