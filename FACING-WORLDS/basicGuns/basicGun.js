@@ -26,7 +26,7 @@
     var DEFAULT_NBR_AMMUNITIONS = 12;
     var PICK_FILTER = Picks.PICK_AVATARS | Picks.PICK_DOMAIN_ENTITIES | Picks.PICK_INCLUDE_VISIBLE | Picks.PICK_INCLUDE_COLLIDABLE | Picks.PICK_PRECISE;
     
-    var CANON_EXIT_LOCAL_POSITION = {"y": 0, "y": 0.14, "z": -0.18758061};
+    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.14, "z": -0.18758061};
     
     var RELOAD_THRESHOLD = 0.95;
 
@@ -85,8 +85,8 @@
             return;
         },
         getGunTipPosition: function(properties) {
-            var gunTipPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV(properties.rotation, {"y": 0, "y": 0.14, "z": -0.18758061}));
-            return gunTipPosition;
+            //var gunTipPosition = Vec3.sum(properties.position, Vec3.multiplyQbyV(properties.rotation, CANON_EXIT_LOCAL_POSITION));
+            //return gunTipPosition;
         },
         fire: function(gunProperties) {
             this.canShoot = false;
