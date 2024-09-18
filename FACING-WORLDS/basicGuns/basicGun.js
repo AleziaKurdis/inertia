@@ -26,8 +26,6 @@
     var PICK_FILTER = Picks.PICK_AVATARS | Picks.PICK_DOMAIN_ENTITIES | Picks.PICK_INCLUDE_VISIBLE | Picks.PICK_INCLUDE_COLLIDABLE | Picks.PICK_PRECISE;
     
     var RELOAD_THRESHOLD = 0.95;
-    var GUN_TIP_FWD_OFFSET = 0.05;
-    var GUN_TIP_UP_OFFSET = 0.05;
 
     var TRIGGER_CONTROLS = [
         Controller.Standard.LT,
@@ -101,10 +99,11 @@
                     var pick = Picks.createPick(PickType.Ray, {
                         "enabled": true,
                         "filter": PICK_FILTER,
-                        //"maxDistance": 400,
+                        "maxDistance": 400,
+                        "parentID": thisEntityID,
                         //"joint": "static",
-                        "position": this.getGunTipPosition(gunProperties),
-                        "orientation": gunProperties.rotation
+                        "position": {"y": 0, "y": 0.14, "z": -0.18758061}//, //this.getGunTipPosition(gunProperties),
+                        //"orientation": gunProperties.rotation
                     });
                     
                     ammunitions = ammunitions -1;
