@@ -25,6 +25,8 @@
     var DEFAULT_NBR_AMMUNITIONS = 12;
     var PICK_FILTER = Picks.PICK_AVATARS | Picks.PICK_DOMAIN_ENTITIES | Picks.PICK_INCLUDE_VISIBLE | Picks.PICK_INCLUDE_COLLIDABLE | Picks.PICK_PRECISE;
     
+    var CANON_EXIT_LOCAL_POSITION = {"y": 0, "y": 0.14, "z": -0.18758061};
+    
     var RELOAD_THRESHOLD = 0.95;
 
     var TRIGGER_CONTROLS = [
@@ -102,13 +104,13 @@
                         "maxDistance": 400,
                         "parentID": thisEntityID,
                         //"joint": "static",
-                        "position": {"y": 0, "y": 0.14, "z": -0.18758061}//, //this.getGunTipPosition(gunProperties),
+                        "position": CANON_EXIT_LOCAL_POSITION,
                         //"orientation": gunProperties.rotation
                     });
                     
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    genShotFX(this.getGunTipPosition(gunProperties));
+                    genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     
                     var rayPickResult = Picks.getPrevPickResult(pick);
                     rayPickResult = Picks.getPrevPickResult(pick); //######################################### JUST IN CASE IT WAS TOO FAST THEN NOTHING TO RETURN
@@ -287,11 +289,11 @@
         }
     }
 
-    function genShotFX(position) {
+    function genShotFX(parentID, localPosition) {
         var fxId = Entities.addEntity({
             "type": "ParticleEffect",
-            "parentID": thisEntityID,
-            "position": position,
+            "parentID": parentID,
+            "localPosition": localPosition,
             "name": "gun-fx",
             "dimensions": {
                 "x": 1.1200000047683716,
