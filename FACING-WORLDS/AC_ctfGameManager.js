@@ -462,7 +462,7 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                             "grabbable": true,
                             "equippable": true,
                             "equippableLeftPosition": {
-                                "x": 0.05,
+                                "x": -0.01,
                                 "y": 0.16,
                                 "z": 0.025
                             },
@@ -473,7 +473,7 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                                 "z": 0.49999237060546875
                             },
                             "equippableRightPosition": {
-                                "x": -0.05,
+                                "x": 0.01,
                                 "y": 0.16,
                                 "z": 0.025
                             },
