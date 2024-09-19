@@ -457,7 +457,7 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                         "shapeType": "box",
                         "type": "Model",
                         "dimensions": {"x":0.033772632479667664,"y":0.1770840883255005,"z":0.37516123056411743},
-                        "useOriginalPivot": true,
+                        "useOriginalPivot": false,
                         "grab": {
                             "grabbable": true,
                             "equippable": true,
