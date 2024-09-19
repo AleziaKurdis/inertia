@@ -107,8 +107,7 @@
                     var rayPickResult = Picks.getPrevPickResult(pick);
                     print("RAYPICK2024: " + JSON.stringify(rayPickResult)); //##############################################################DEBUG/REMOVE
                     if (rayPickResult.intersects && rayPickResult.type === Picks.INTERSECTED_AVATAR) {
-                        var impactPosition = rayPickResult.intersection;
-                        doImpactFX(true, impactPosition);
+                        doImpactFX(true, rayPickResult.intersection);
                         var killed = getHitNumber(rayPickResult.objectID);
                         if (killed) {
                             var messageSent = {
@@ -120,7 +119,7 @@
 
                             messageSent = {
                                 "action": "KILL",
-                                "position": impactPosition
+                                "position": rayPickResult.intersection
                             };
                             Messages.sendMessage(channelComm, JSON.stringify(messageSent));
                         }
@@ -322,7 +321,7 @@
                 "z": 0,
                 "w": 1
             },
-            "emitDimensions": { "x": 0.1, "y": 0.1, "z": 0.1 },
+            "emitDimensions": { "x": 0.01, "y": 0.01, "z": 0.01 },
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
                 "x": 0,
