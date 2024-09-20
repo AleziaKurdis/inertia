@@ -1,0 +1,41 @@
+{
+    "Entities": [{
+        "shapeType": "box",
+        "type": "Model",
+        "dimensions": {"x":0.033772632479667664,"y":0.1770840883255005,"z":0.37516123056411743},
+        "useOriginalPivot": false,
+        "grab": {
+            "grabbable": true,
+            "equippable": true,
+            "equippableLeftPosition": {
+                "x": 0.035,
+                "y": 0.08,
+                "z": 0.02
+            },
+            "equippableLeftRotation": {
+                "w": 0.49999237060546875,
+                "x": 0.49999237060546875,
+                "y": -0.5000228881835938,
+                "z": 0.49999237060546875
+            },
+            "equippableRightPosition": {
+                "x": 0.035,
+                "y": 0.08,
+                "z": 0.02
+            },
+            "equippableRightRotation": {
+                "w": 0.49999237060546875,
+                "x": 0.49999237060546875,
+                "y": 0.49999237060546875,
+                "z": -0.5000228881835938
+            },
+            "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/electroGuns/instructions.glb",
+            "equippableIndicatorScale": {"x": 0.12, "y": 0.06, "z": 0.12},
+            "equippableIndicatorOffset": {"x": 0.0, "y": 0.3, "z": 0.0}
+        },
+        "lifetime": 900,
+        "modelURL": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/electroGuns/electroGun.fst",
+        "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/electroGuns/electroGun.js"
+    }],
+    "Version": 69
+}
