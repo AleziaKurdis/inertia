@@ -693,7 +693,7 @@ function ejectBones(position){
             boneID = Entities.addEntity({
                 "name": "AVATAR-BONE",
                 "type": "Model",
-                "modelURL": ROOT + "models/AVATAR_BONE.fbx",
+                "modelURL": ROOT + "models/avatarBone.fst",
                 "useOriginalPivot": false,
                 "shapeType": "box",
                 "dimensions": Vec3.multiply({"x": 0.035, "y": 0.2, "z": 0.035}, boneScale),
