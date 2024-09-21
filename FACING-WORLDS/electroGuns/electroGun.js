@@ -100,6 +100,7 @@
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
+                    debugSensors(Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION))); //################################DEBUG/TO REMOVE
                     var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION)), 1);
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION)), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION)), 1));
@@ -139,6 +140,18 @@
             setAmmunitionsColor();
         }
     }
+    
+//****************************************************************************DEBUG TO REMOVE
+    function debugSensors(position) {
+        var debugId = Entities.addEntity({
+            "position": position,
+            "type": "Shape",
+            "shape": "Sphere",
+            "dimensions": { "x": 0.05, "y": 0.05, "z": 0.05 },
+            "lifetime": 6
+        }, "domain");
+    }
+//****************************************************************************DEBUG TO REMOVE
 
     function remove_duplicates_safe(arr) {
         var seen = {};
@@ -203,6 +216,7 @@
             "type": "ParticleEffect",
             "parentID": parentID,
             "localPosition": localPosition,
+            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180, "z": 0 }),
             "name": "gun-fx",
             "dimensions": {
                 "x": 21.720001220703125,
