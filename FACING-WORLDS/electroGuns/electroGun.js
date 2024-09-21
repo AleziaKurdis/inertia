@@ -137,26 +137,8 @@
             thisEntityID = entityID;
             ammunitions = DEFAULT_NBR_AMMUNITIONS;
             setAmmunitionsColor();
-            //DEBUG##########################################################################################################
-            debugSensors(entityID, LETHAL_POINT_1_LOCAL_POSITION);
-            debugSensors(entityID, LETHAL_POINT_2_LOCAL_POSITION);
-            debugSensors(entityID, LETHAL_POINT_3_LOCAL_POSITION);
-            debugSensors(entityID, LETHAL_POINT_4_LOCAL_POSITION);
-            //DEBUG##########################################################################################################
         }
     }
-
-//DEBUG##########################################################################################################
-    function debugSensors(theParent, position) {
-        var debugId = Entities.addEntity({
-            "localPosition": position,
-            "parentID": theParent,
-            "type": "Shape",
-            "shape": "Sphere",
-            "dimensions": { "x": 0.05, "y": 0.05, "z": 0.05 }
-        }, "local");
-    }
-//DEBUG##########################################################################################################
 
     function remove_duplicates_safe(arr) {
         var seen = {};
