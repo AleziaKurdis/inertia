@@ -100,10 +100,10 @@
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
-                    var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION), 1);
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION), 1));
+                    var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION)), 1);
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION)), 1));
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION)), 1));
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION)), 1));
                     var victimes = remove_duplicates_safe(victimesIDs);
                     if (victimes.length > 0) {
                         for (j = 0; j < victimes.length; j++) {
