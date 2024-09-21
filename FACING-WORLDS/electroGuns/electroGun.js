@@ -104,21 +104,24 @@
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION), 1));
-                    if (victimesIDs.length > 0) {
-                        for (j = 0; j < victimesIDs.length; j++) {
-                            var victimePosition = AvatarManager.getAvatar(victimesIDs[j]).position;
-                            messageSent = {
-                                "action": "REVIVE",
-                                "avatarID": victimesIDs[j],
-                                "by": MyAvatar.sessionUUID
-                            };
-                            Messages.sendMessage(channelComm, JSON.stringify(messageSent));
-
-                            messageSent = {
-                                "action": "KILL",
-                                "position": victimePosition
-                            };
-                            Messages.sendMessage(channelComm, JSON.stringify(messageSent));
+                    var victimes = remove_duplicates_safe(victimesIDs);
+                    if (victimes.length > 0) {
+                        for (j = 0; j < victimes.length; j++) {
+                            //if (victimes[j] !== MyAvatar.sessionUUID) {
+                                var victimePosition = AvatarManager.getAvatar(victimes[j]).position;
+                                messageSent = {
+                                    "action": "REVIVE",
+                                    "avatarID": victimes[j],
+                                    "by": MyAvatar.sessionUUID
+                                };
+                                Messages.sendMessage(channelComm, JSON.stringify(messageSent));
+                                
+                                messageSent = {
+                                    "action": "KILL",
+                                    "position": victimePosition
+                                };
+                                Messages.sendMessage(channelComm, JSON.stringify(messageSent));
+                            //}
                         }
                     }
                 } else {
@@ -134,7 +137,37 @@
             thisEntityID = entityID;
             ammunitions = DEFAULT_NBR_AMMUNITIONS;
             setAmmunitionsColor();
+            //DEBUG##########################################################################################################
+            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION));
+            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION));
+            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION));
+            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION));
+            //DEBUG##########################################################################################################
         }
+    }
+
+//DEBUG##########################################################################################################
+    function debugSensors(theParent, position) {
+        var debugId = Entities.addEntity({
+            "localPosition": position,
+            "parentID": theParent,
+            "type": "Shape",
+            "shape": "Sphere",
+            "dimensions": { "x": 0.05, "y": 0.05, "z": 0.05 }
+        }, "local");
+    }
+//DEBUG##########################################################################################################
+
+    function remove_duplicates_safe(arr) {
+        var seen = {};
+        var ret_arr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (!(arr[i] in seen)) {
+                ret_arr.push(arr[i]);
+                seen[arr[i]] = true;
+            }
+        }
+        return ret_arr;
     }
 
     function playAnouncement(soundCode) {
@@ -189,11 +222,7 @@
             "parentID": parentID,
             "localPosition": localPosition,
             "name": "gun-fx",
-            "dimensions": {
-                "x": 1.1200000047683716,
-                "y": 1.1200000047683716,
-                "z": 1.1200000047683716
-            },
+            "dimensions": {"x":22.380001068115234,"y":22.380001068115234,"z":22.380001068115234},
             "grab": {
                 "grabbable": false
             },
@@ -203,11 +232,11 @@
                 "green": 255,
                 "blue": 96
             },
-            "alpha": 0.1,
+            "alpha": 0.5,
             "textures": ROOT + "electricArc.png",
-            "maxParticles": 30,
-            "lifespan": 0.2,
-            "emitRate": 5,
+            "maxParticles": 300,
+            "lifespan": 1.0,
+            "emitRate": 300,
             "emitSpeed": 0,
             "speedSpread": 0,
             "emitRadiusStart": 0,
@@ -217,18 +246,18 @@
                 "z": 0,
                 "w": 1
             },
-            "emitDimensions": { "x": 0.01, "y": 0.01, "z": 0.01 },
+            "emitDimensions": { "x": 0.02, "y": 0.02, "z": 0.02 },
             "polarFinish": 3.1415927410125732,
-            "emitAcceleration": Vec3.multiplyQbyV(rotation,{ "x": 0, "y": 0, "z": -2 }),
+            "emitAcceleration": Vec3.multiplyQbyV(rotation,{ "x": 0, "y": 0, "z": -16 }),
             "accelerationSpread": {
                 "x": 0,
                 "y": 0,
                 "z": 0
             },
-            "particleRadius": 0.25,
-            "radiusSpread": 0.01,
-            "radiusStart": 0,
-            "radiusFinish": 0.5,
+            "particleRadius": 1.0,
+            "radiusSpread": 0.5,
+            "radiusStart": 0.02,
+            "radiusFinish": 1.0,
             "colorStart": {
                 "red": 255,
                 "green": 255,
@@ -239,12 +268,14 @@
                 "green": 255,
                 "blue": 0
             },
-            "alphaStart": 0.2,
-            "alphaFinish": 0,
-            "emitterShouldTrail": true,
-            "spinSpread": 0.3499999940395355,
-            "spinStart": -0.5199999809265137,
-            "spinFinish": 0.5199999809265137
+            "alphaStart": 0.5,
+            "alphaFinish": 0.0,
+            "alphaSpread": 0.2,
+            "emitterShouldTrail": false,
+            "particleSpin": 0.0,
+            "spinSpread": 1.5708,
+            "spinStart": -0.523599,
+            "spinFinish": 0.523599
         }, "avatar");
         
         Script.setTimeout(function () {
