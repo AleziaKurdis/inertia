@@ -98,7 +98,7 @@
                     Controller.triggerShortHapticPulse(2, this.hand);
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
-                    genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION, gunProperties.rotation);
+                    genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
                     var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION), 1);
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION), 1));
@@ -138,10 +138,10 @@
             ammunitions = DEFAULT_NBR_AMMUNITIONS;
             setAmmunitionsColor();
             //DEBUG##########################################################################################################
-            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION));
-            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION));
-            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION));
-            debugSensors(entityID, Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION));
+            debugSensors(entityID, LETHAL_POINT_1_LOCAL_POSITION);
+            debugSensors(entityID, LETHAL_POINT_2_LOCAL_POSITION);
+            debugSensors(entityID, LETHAL_POINT_3_LOCAL_POSITION);
+            debugSensors(entityID, LETHAL_POINT_4_LOCAL_POSITION);
             //DEBUG##########################################################################################################
         }
     }
@@ -216,13 +216,17 @@
         }
     }
 
-    function genShotFX(parentID, localPosition, rotation) {
+    function genShotFX(parentID, localPosition) {
         var fxId = Entities.addEntity({
             "type": "ParticleEffect",
             "parentID": parentID,
             "localPosition": localPosition,
             "name": "gun-fx",
-            "dimensions": {"x":22.380001068115234,"y":22.380001068115234,"z":22.380001068115234},
+            "dimensions": {
+                "x": 21.720001220703125,
+                "y": 21.720001220703125,
+                "z": 21.720001220703125
+            },
             "grab": {
                 "grabbable": false
             },
@@ -237,8 +241,8 @@
             "maxParticles": 300,
             "lifespan": 1.0,
             "emitRate": 300,
-            "emitSpeed": 0,
-            "speedSpread": 0,
+            "emitSpeed": 6.5,
+            "speedSpread": 2.0,
             "emitRadiusStart": 0,
             "emitOrientation": {
                 "x": 0,
@@ -247,13 +251,9 @@
                 "w": 1
             },
             "emitDimensions": { "x": 0.02, "y": 0.02, "z": 0.02 },
-            "polarFinish": 3.1415927410125732,
-            "emitAcceleration": Vec3.multiplyQbyV(rotation,{ "x": 0, "y": 0, "z": -16 }),
-            "accelerationSpread": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            },
+            "polarFinish": 0.019999999552965164,
+            "emitAcceleration": {"x": 0,"y": 0,"z": 0},
+            "accelerationSpread": {"x": 0,"y": 0,"z": 0},
             "particleRadius": 1.0,
             "radiusSpread": 0.5,
             "radiusStart": 0.02,
