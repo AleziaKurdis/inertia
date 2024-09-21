@@ -95,16 +95,16 @@
             if (!justEquiped) {
                 if (ammunitions > 0) {
                     playAnouncement(FIRE_SOUND);
-                    Controller.triggerShortHapticPulse(2, this.hand);
+                    Controller.triggerShortHapticPulse(1.8, this.hand);
                     ammunitions = ammunitions -1;
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
-                    debugSensors(Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION))); //################################DEBUG/TO REMOVE
-                    var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_1_LOCAL_POSITION)), 1);
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_2_LOCAL_POSITION)), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_3_LOCAL_POSITION)), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.multiplyQbyV(gunProperties.rotation, Vec3.sum(gunProperties.position, LETHAL_POINT_4_LOCAL_POSITION)), 1));
+                    debugSensors( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION))); //################################DEBUG/TO REMOVE
+                    var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION)), 1);
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_2_LOCAL_POSITION)), 1));
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1));
+                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_4_LOCAL_POSITION)), 1));
                     var victimes = remove_duplicates_safe(victimesIDs);
                     if (victimes.length > 0) {
                         for (j = 0; j < victimes.length; j++) {
@@ -276,7 +276,7 @@
         
         Script.setTimeout(function () {
             Entities.deleteEntity(fxId);
-        }, 2000);
+        }, 1800);
     }
 
 
