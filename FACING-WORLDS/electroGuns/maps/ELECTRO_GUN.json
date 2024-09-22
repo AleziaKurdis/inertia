@@ -3,10 +3,10 @@
    "materials":[
       {
          "albedo":[1,1,1],
-         "albedoMap": "basicGun_ALBEDO.jpg",
-         "metallicMap": "basicGun_METALLIC.jpg",
-         "roughnessMap": "basicGun_ROUGHNESS.jpg",
-         "normalMap": "basicGun_NORMAL.jpg",
+         "albedoMap": "electroGun_ALBEDO.jpg",
+         "metallicMap": "electroGun_METALLIC.jpg",
+         "roughnessMap": "electroGun_ROUGHNESS.jpg",
+         "normalMap": "electroGun_NORMAL.jpg",
          "cullFaceMode":"CULL_BACK"
       }
    ]
