@@ -2,7 +2,7 @@
     "Entities": [{
         "shapeType": "box",
         "type": "Model",
-        "dimensions": {"x":0.033772632479667664,"y":0.1770840883255005,"z":0.37516123056411743},
+        "dimensions": {"x":0.09806843847036362,"y":0.1949957311153412,"z":0.6852444410324097},
         "useOriginalPivot": false,
         "grab": {
             "grabbable": true,
@@ -19,7 +19,7 @@
                 "z": 0.49999237060546875
             },
             "equippableRightPosition": {
-                "x": 0.035,
+                "x": -0.035,
                 "y": 0.08,
                 "z": 0.02
             },
