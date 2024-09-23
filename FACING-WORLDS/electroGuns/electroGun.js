@@ -105,6 +105,7 @@
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_4_LOCAL_POSITION)), 1));
                     var victimes = remove_duplicates_safe(victimesIDs);
+                    print("VICTIMES: " + JSON.stringify(victimes)); //########################################################################## DEBUG/REMOVE
                     if (victimes.length > 0) {
                         for (j = 0; j < victimes.length; j++) {
                             //if (victimes[j] !== MyAvatar.sessionUUID) {
