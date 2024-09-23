@@ -20,12 +20,12 @@
     var DAY_DURATION = 104400; //D29
     var justEquiped = false;
     var DEFAULT_NBR_AMMUNITIONS = 8;
-   
-    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -0.18758061};
-    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -1.18758061};
-    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -3.18758061};
-    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -5.18758061};
-    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -7.18758061};
+
+    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -0.3426};
+    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -1.3426};
+    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -3.3426};
+    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -5.3426};
+    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -7.3426};
     
     var RELOAD_THRESHOLD = 0.95;
 
@@ -100,7 +100,6 @@
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
-                    debugSensors( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION))); //################################DEBUG/TO REMOVE
                     var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION)), 1);
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_2_LOCAL_POSITION)), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1));
@@ -140,18 +139,6 @@
             setAmmunitionsColor();
         }
     }
-    
-//****************************************************************************DEBUG TO REMOVE
-    function debugSensors(position) {
-        var debugId = Entities.addEntity({
-            "position": position,
-            "type": "Shape",
-            "shape": "Sphere",
-            "dimensions": { "x": 0.05, "y": 0.05, "z": 0.05 },
-            "lifetime": 6
-        }, "domain");
-    }
-//****************************************************************************DEBUG TO REMOVE
 
     function remove_duplicates_safe(arr) {
         var seen = {};
