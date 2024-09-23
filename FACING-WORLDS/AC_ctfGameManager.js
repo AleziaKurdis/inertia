@@ -43,20 +43,43 @@ var processGameTimer = 0;
 var gunsTimerInterval = 60000; //minutes.
 var processGunsTimer = 0;
 
-var guns = [
+//PLANNED:
+/*var guns = [
     {"model": "BASIC", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 20000}, //#RED 1
     {"model": "BASIC", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 20000}, //#RED 2
-    //{"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 20000}, //#RED 1
-    //{"model": "ANIL-4M", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 20000}, //#RED 2
     {"model": "ANIL-8M", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 180000}, //#RED
     {"model": "ANIL-16M", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 300000}, //#RED
+    {"model": "ANIL-4M", "position": {"x": -118.6899,"y": -8.7787, "z": -18.3021}, "rezDelay": 20000}, //#RED
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#RED 1
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#RED 1 
     {"model": "BASIC", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
     {"model": "BASIC", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
-    //{"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
-    //{"model": "ANIL-4M", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
     {"model": "ANIL-8M", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 180000}, //#BLUE
     {"model": "ANIL-16M", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 300000}, //#BLUE
+    {"model": "ANIL-4M", "position": {"x": 118.6899,"y": -8.7787, "z": 18.3021}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#BLUE 
+    
+];*/
+//Temporary cause only Electro is working for now.
+var guns = [
+    {"model": "ELECTRO", "position": {"x": -115.3169,"y": -7.3716, "z": 2.2122}, "rezDelay": 20000}, //#RED 1
+    {"model": "ELECTRO", "position": {"x": -115.3169,"y": -7.3716, "z": -5.3416}, "rezDelay": 20000}, //#RED 2
+    {"model": "ELECTRO", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 20000}, //#RED
+    {"model": "ELECTRO", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 20000}, //#RED
+    {"model": "ELECTRO", "position": {"x": -118.6899,"y": -8.7787, "z": -18.3021}, "rezDelay": 20000}, //#RED
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#RED 1
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#RED 1 
+    {"model": "ELECTRO", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
+    {"model": "ELECTRO", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
+    {"model": "ELECTRO", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 118.6899,"y": -8.7787, "z": 18.3021}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#BLUE 
+    
 ];
+
 var gunsIDtoDelete = [];
 
 var players = [];
@@ -450,6 +473,48 @@ function generateGun(model, position, rezDelay, remainingDuration) {
     if ((remainingDuration - Math.floor(rezDelay/1000)) > 0) {
         Script.setTimeout(function () {
             switch (model) {
+                case "ELECTRO":
+                    id = Entities.addEntity({
+                        "name": model,
+                        "position": position,
+                        "shapeType": "box",
+                        "type": "Model",
+                        "dimensions": {"x":0.09806843847036362,"y":0.1949957311153412,"z":0.6852444410324097},
+                        "useOriginalPivot": false,
+                        "grab": {
+                            "grabbable": true,
+                            "equippable": true,
+                            "equippableLeftPosition": {
+                                "x": 0.035,
+                                "y": 0.08,
+                                "z": 0.02
+                            },
+                            "equippableLeftRotation": {
+                                "w": 0.49999237060546875,
+                                "x": 0.49999237060546875,
+                                "y": -0.5000228881835938,
+                                "z": 0.49999237060546875
+                            },
+                            "equippableRightPosition": {
+                                "x": -0.035,
+                                "y": 0.08,
+                                "z": 0.02
+                            },
+                            "equippableRightRotation": {
+                                "w": 0.49999237060546875,
+                                "x": 0.49999237060546875,
+                                "y": 0.49999237060546875,
+                                "z": -0.5000228881835938
+                            },
+                            "equippableIndicatorURL": ROOT + "electroGuns/instructions.glb",
+                            "equippableIndicatorScale": {"x": 0.12, "y": 0.06, "z": 0.12},
+                            "equippableIndicatorOffset": {"x": 0.0, "y": 0.3, "z": 0.0}
+                        },
+                        "lifetime": remainingDuration - Math.floor(rezDelay/1000),
+                        "modelURL": ROOT + "electroGuns/electroGun.fst",
+                        "script": ROOT + "electroGuns/electroGun.js"
+                    }, "domain");
+                    break;
                 case "BASIC":
                     id = Entities.addEntity({
                         "name": model,
