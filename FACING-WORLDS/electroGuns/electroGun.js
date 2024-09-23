@@ -21,11 +21,11 @@
     var justEquiped = false;
     var DEFAULT_NBR_AMMUNITIONS = 8;
 
-    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -0.3426};
-    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -1.3426};
-    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -3.3426};
-    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -5.3426};
-    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.07, "z": -7.3426};
+    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -0.3426};
+    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -1.3426};
+    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -3.3426};
+    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -5.3426};
+    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -7.3426};
     
     var RELOAD_THRESHOLD = 0.95;
 
