@@ -50,15 +50,15 @@ var processGunsTimer = 0;
     {"model": "ANIL-8M", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 180000}, //#RED
     {"model": "ANIL-16M", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 300000}, //#RED
     {"model": "ANIL-4M", "position": {"x": -118.6899,"y": -8.7787, "z": -18.3021}, "rezDelay": 20000}, //#RED
-    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#RED 1
-    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#RED 1 
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#RED 1
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#RED 1 
     {"model": "BASIC", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
     {"model": "BASIC", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
     {"model": "ANIL-8M", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 180000}, //#BLUE
     {"model": "ANIL-16M", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 300000}, //#BLUE
     {"model": "ANIL-4M", "position": {"x": 118.6899,"y": -8.7787, "z": 18.3021}, "rezDelay": 20000}, //#BLUE
-    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#BLUE
-    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#BLUE 
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#BLUE 
     
 ];*/
 //Temporary cause only Electro is working for now.
@@ -68,15 +68,15 @@ var guns = [
     {"model": "ELECTRO", "position": {"x": -99.8276,"y": 9.3313, "z": -3.4102}, "rezDelay": 20000}, //#RED
     {"model": "ELECTRO", "position": {"x": -108.0322,"y": 27.4490, "z": 0.9851}, "rezDelay": 20000}, //#RED
     {"model": "ELECTRO", "position": {"x": -118.6899,"y": -8.7787, "z": -18.3021}, "rezDelay": 20000}, //#RED
-    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#RED 1
-    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#RED 1 
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#RED 1
+    {"model": "ELECTRO", "position": {"x": -124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#RED 1 
     {"model": "ELECTRO", "position": {"x": 115.3169,"y": -7.3716, "z": -2.2122}, "rezDelay": 20000}, //#BLUE 1
     {"model": "ELECTRO", "position": {"x": 115.3169,"y": -7.3716, "z": 5.3416}, "rezDelay": 20000}, //#BLUE 2
     {"model": "ELECTRO", "position": {"x": 99.8276,"y": 9.3313, "z": 3.4731}, "rezDelay": 20000}, //#BLUE
     {"model": "ELECTRO", "position": {"x": 108.0322,"y": 27.4490, "z": -1.1755}, "rezDelay": 20000}, //#BLUE
     {"model": "ELECTRO", "position": {"x": 118.6899,"y": -8.7787, "z": 18.3021}, "rezDelay": 20000}, //#BLUE
-    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 1.0249}, "rezDelay": 20000}, //#BLUE
-    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -4.3853}, "rezDelay": 20000}, //#BLUE 
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": -1.0249}, "rezDelay": 20000}, //#BLUE
+    {"model": "ELECTRO", "position": {"x": 124.4175,"y": -7.3716, "z": 4.3853}, "rezDelay": 20000}, //#BLUE 
     
 ];
 
@@ -485,7 +485,7 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                             "grabbable": true,
                             "equippable": true,
                             "equippableLeftPosition": {
-                                "x": 0.035,
+                                "x": -0.035,
                                 "y": 0.08,
                                 "z": 0.02
                             },
@@ -496,7 +496,7 @@ function generateGun(model, position, rezDelay, remainingDuration) {
                                 "z": 0.49999237060546875
                             },
                             "equippableRightPosition": {
-                                "x": -0.035,
+                                "x": 0.035,
                                 "y": 0.08,
                                 "z": 0.02
                             },
