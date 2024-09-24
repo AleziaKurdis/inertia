@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    tag.html
+
+    Created by Alezia Kurdis, September 23rd, 2024.
+    Copyright 2024 Overte e.V.
+
+    UI for tag app.
+
+    Distributed under the Apache License, Version 2.0.
+    See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var channel = "ak.client.application.tag.communication";
+            var cftRedAvatar = "";
+            var cftBlueAvatar = "";
+
+
+            //LISTENER FROM JS FILE. This is where you recieved message from the action call ed by the application (.js)
+            EventBridge.scriptEventReceived.connect(function(message){
+                messageObj = JSON.parse(message);
+                if (messageObj.channel === channel) {
+                    if (messageObj.action === "TAG_APP_DATA") {
+                        cftRedAvatar = messageObj.cftRedAvatar;
+                        cftBlueAvatar = messageObj.cftBlueAvatar;
+                        document.getElementById("cftRedAvatar").value = cftRedAvatar;
+                        document.getElementById("cftBlueAvatar").value = cftBlueAvatar;
+                    }
+                }
+            });
+            
+
+        </script>
+        <style>
+            @font-face {
+                font-family: FiraSans-SemiBold;
+                src: url(fonts/FiraSans-SemiBold.ttf);
+            }
+
+            @font-face {
+                font-family: FiraSans-Regular;
+                src: url(fonts/FiraSans-Regular.ttf);
+            }
+
+            html {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                background: #454545;
+                font-family: FiraSans-Regular;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-decoration: none;
+                font-style: normal;
+                font-variant: normal;
+                text-transform: none;
+            }
+            
+            #uninstall {
+                font-family: FiraSans-SemiBold;
+                background-color: #222222;
+                font-size: 9px;
+                color: #cccccc;
+                border-radius: 3px;
+                border: 0px solid #000000;
+                transition-duration: 0.2s;
+                width: 100px;
+                padding: 3px;
+            }
+
+            #uninstall:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            #uninstall:focus {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        It will used the color tag unless an avatar is defined.<br><br><br>
+        RED AVATAR: <br>
+        <input type="text" id="cftRedAvatar" onInput="updateSettings('RED');"><br><br>
+        BLUE AVATAR: <br>
+        <input type="text" id="cftBlueAvatar" onInput="updateSettings('BLUE');"><br><br><br><hr>
+
+        <script>
+            function updateSettings(setting) {
+                var value;
+                if (setting === "RED") {
+                    cftRedAvatar = document.getElementById('cftRedAvatar').value;
+                    value = cftRedAvatar;
+                } else {
+                    cftBlueAvatar = document.getElementById('cftBlueAvatar').value;
+                    value = cftBlueAvatar;
+                }
+                var messageSent = {
+                    "channel": channel,
+                    "action": "UPDATE_SETTING_" + setting,
+                    "avatarUrl": value
+                };
+                EventBridge.emitWebEvent(JSON.stringify(messageSent));
+            
+            }
+
+            
+            var message = {
+                    "channel": channel,
+                    "action": "UI_READY"
+                };
+            EventBridge.emitWebEvent(JSON.stringify(message));
+        </script>
+    </body>
+</html>
