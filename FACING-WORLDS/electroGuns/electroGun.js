@@ -21,11 +21,11 @@
     var justEquiped = false;
     var DEFAULT_NBR_AMMUNITIONS = 8;
 
-    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -0.3426};
-    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -1.3426};
-    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -3.3426};
-    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -5.3426};
-    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.04, "z": -7.3426};
+    var CANON_EXIT_LOCAL_POSITION = {"x": 0, "y": 0.02, "z": -0.3426};
+    var LETHAL_POINT_1_LOCAL_POSITION = {"x": 0, "y": 0.02, "z": -1.3426};
+    var LETHAL_POINT_2_LOCAL_POSITION = {"x": 0, "y": 0.02, "z": -3.3426};
+    var LETHAL_POINT_3_LOCAL_POSITION = {"x": 0, "y": 0.02, "z": -5.3426};
+    var LETHAL_POINT_4_LOCAL_POSITION = {"x": 0, "y": 0.02, "z": -7.3426};
     
     var RELOAD_THRESHOLD = 0.95;
 
@@ -104,8 +104,9 @@
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_2_LOCAL_POSITION)), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1));
                     victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_4_LOCAL_POSITION)), 1));
+                    print("victimesIDs: " + JSON.stringify(victimesIDs)); //########################################################################## DEBUG/REMOVE
                     var victimes = remove_duplicates_safe(victimesIDs);
-                    print("VICTIMES: " + JSON.stringify(victimes)); //########################################################################## DEBUG/REMOVE
+                    print("victimes: " + JSON.stringify(victimes)); //########################################################################## DEBUG/REMOVE
                     if (victimes.length > 0) {
                         for (j = 0; j < victimes.length; j++) {
                             //if (victimes[j] !== MyAvatar.sessionUUID) {
