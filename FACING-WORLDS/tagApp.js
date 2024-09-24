@@ -27,7 +27,7 @@
     var BLUE_AVARTAR_SETTING = "CTF-FACE-AK-BlueAvatarUrl";
 
     var ICON_CAPTION_COLOR = "#ffae00";
-
+    var APP_URL = ROOT + "tag/tag.html";
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
