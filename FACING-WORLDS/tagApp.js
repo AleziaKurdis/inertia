@@ -31,6 +31,10 @@
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
+    var tagID = Uuid.NULL;
+    var cftRedAvatar = Settings.getValue(RED_AVARTAR_SETTING, "");
+    var cftBlueAvatar = Settings.getValue(BLUE_AVARTAR_SETTING, "");
+    
     var button;
     
     this.preload = function(entityID) {
@@ -67,6 +71,11 @@
     }
 
     function terminate() {
+        if (tagID !== Uuid.NULL) {
+            Entities.deleteEntity(tagID);
+            tagID = Uuid.NULL;
+        }
+        
         if (initiated) {
             //shutdown app
             if (appStatus) {
@@ -99,7 +108,53 @@
     }
 
     function manageTag(players) {
-        //TODO
+        var i;
+        var team = "";
+        for (i = 0; i < players.length; i++) {
+            if (players[i].avatarID === MyAvatar.sessionUUID) {
+                team = players[i].team;
+                break;
+            }
+        }
+        if (tagID !== Uuid.NULL) {
+            Entities.deleteEntity(tagID);
+            tagID = Uuid.NULL;
+        }
+        var height = MyAvatar.getHeight();
+        switch(team) {
+            case "RED":
+                if (cftRedAvatar === "") {
+                    tagID = Entities.addEntity({
+                        "type": "Shape",
+                        "shape": "Dodecahedron",
+                        "name": "redTag",
+                        "parentID": MyAvatar.sessionUUID,
+                        "localPosition": {"x": 0.0, "y": height * 0.65, "z": 0.0},
+                        "color": {"red": 200, "green": 0, "blue": 0},
+                        "dimensions": {"x": 0.07, "y": 0.07, "z": 0.07}
+                    }, "avatar");
+                } else {
+                    MyAvatar.useFullAvatarURL(cftRedAvatar);
+                }
+                break;
+            case "BLUE":
+                if (cftBlueAvatar === "") {
+                    tagID = Entities.addEntity({
+                        "type": "Shape",
+                        "shape": "Dodecahedron",
+                        "name": "redTag",
+                        "parentID": MyAvatar.sessionUUID,
+                        "localPosition": {"x": 0.0, "y": height * 0.65, "z": 0.0},
+                        "color": {"red": 0, "green": 0, "blue": 200},
+                        "dimensions": {"x": 0.07, "y": 0.07, "z": 0.07}
+                    }, "avatar");
+                } else {
+                    MyAvatar.useFullAvatarURL(cftBlueAvatar);
+                }
+                break;
+            case "":
+                //do nothing
+        } 
     }
 
     function onAppWebEventReceived(message) {
@@ -128,8 +183,10 @@
                     tablet.emitScriptEvent(JSON.stringify(messageSent));
                 } else if (instruction.action === "UPDATE_SETTING_RED") {
                     Settings.setValue(RED_AVARTAR_SETTING, instruction.avatarUrl);
+                    cftRedAvatar = instruction.avatarUrl;
                 } else if (instruction.action === "UPDATE_SETTING_BLUE") {
                     Settings.setValue(BLUE_AVARTAR_SETTING, instruction.avatarUrl);
+                    cftBlueAvatar = instruction.avatarUrl;
                 }
             }
         }
