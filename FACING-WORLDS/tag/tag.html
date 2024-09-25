@@ -84,12 +84,13 @@
         </style>
     </head>
     <body>
-        It will used the color tag unless an avatar is defined.<br><br><br>
+        <br><br><br>It will used the color tag unless an avatar is defined.<br><br><br>
         RED AVATAR: <br>
         <input type="text" id="cftRedAvatar" onInput="updateSettings('RED');"><br><br>
         BLUE AVATAR: <br>
-        <input type="text" id="cftBlueAvatar" onInput="updateSettings('BLUE');"><br><br><br><hr>
-
+        <input type="text" id="cftBlueAvatar" onInput="updateSettings('BLUE');"><br><br><br><hr><br><br>
+        If you are stuck in a wall or fail to resurrect, this button will return you in game:<br>
+        <button onClick="joinBack();">JOIN BACK</button>
         <script>
             function updateSettings(setting) {
                 var value;
