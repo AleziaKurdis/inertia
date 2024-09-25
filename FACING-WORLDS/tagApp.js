@@ -102,6 +102,7 @@
     }
 
     function onAppWebEventReceived(message) {
+        var messageSent;
         if (typeof message === "string") {
             var d = new Date();
             var n = d.getTime();
@@ -111,15 +112,19 @@
                     d = new Date();
                     timestamp = d.getTime();
                     //Call a function to do something here TODO
-                    
+                    messageSent = {
+                        "action": "JOIN",
+                        "avatarID": MyAvatar.sessionUUID
+                    };
+                    Messages.sendMessage(channelComm, JSON.stringify(messageSent));
                 } else if (instruction.action === "UI_READY") {
-                    var message = {
+                    messageSent = {
                         "channel": channel,
                         "action": "TAG_APP_DATA",
                         "cftRedAvatar": Settings.getValue(RED_AVARTAR_SETTING, ""),
                         "cftBlueAvatar": Settings.getValue(BLUE_AVARTAR_SETTING, "")
                     };
-                    tablet.emitScriptEvent(JSON.stringify(message));
+                    tablet.emitScriptEvent(JSON.stringify(messageSent));
                 } else if (instruction.action === "UPDATE_SETTING_RED") {
                     Settings.setValue(RED_AVARTAR_SETTING, instruction.avatarUrl);
                 } else if (instruction.action === "UPDATE_SETTING_BLUE") {
