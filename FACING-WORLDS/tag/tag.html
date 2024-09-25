@@ -121,6 +121,13 @@
             
             }
 
+            function joinBack() {
+                var messageSent = {
+                    "channel": channel,
+                    "action": "JOIN_BACK"
+                };
+                EventBridge.emitWebEvent(JSON.stringify(messageSent));
+            }
             
             var message = {
                     "channel": channel,
