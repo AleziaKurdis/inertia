@@ -35,6 +35,8 @@
     var cftRedAvatar = Settings.getValue(RED_AVARTAR_SETTING, "");
     var cftBlueAvatar = Settings.getValue(BLUE_AVARTAR_SETTING, "");
     
+    var timestamp = 0;
+    var INTERCALL_DELAY = 200; //0.3 sec
     var button;
     
     this.preload = function(entityID) {
