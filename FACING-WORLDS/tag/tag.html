@@ -61,33 +61,33 @@
                 text-transform: none;
             }
             
-            #uninstall {
+            #joinback {
                 font-family: FiraSans-SemiBold;
                 background-color: #222222;
-                font-size: 9px;
+                font-size: 12px;
                 color: #cccccc;
-                border-radius: 3px;
+                border-radius: 6px;
                 border: 0px solid #000000;
                 transition-duration: 0.2s;
-                width: 100px;
-                padding: 3px;
+                width: 160px;
+                padding: 8px;
             }
 
-            #uninstall:hover {
+            #joinback:hover {
                 background-color: #000000;
                 color: #ffffff;
             }
 
-            #uninstall:focus {
+            #joinback:focus {
                 outline: none;
             }
             #cftRedAvatar {
-                width: 100%;
+                width: 95%;
                 background-color: #ff0000;
                 color: #ffffff;
             }
             #cftBlueAvatar {
-                width: 100%;
+                width: 95%;
                 background-color: #0000ff;
                 color: #ffffff;
             }
@@ -100,8 +100,8 @@
         <input type="text" id="cftRedAvatar" onInput="updateSettings('RED');"><br><br>
         BLUE AVATAR: <br>
         <input type="text" id="cftBlueAvatar" onInput="updateSettings('BLUE');"><br><br><br><hr><br><br>
-        If you are stuck in a wall or fail to resurrect, this button will return you in game:<br>
-        <button onClick="joinBack();">JOIN BACK</button>
+        If you are stuck in a wall or fail to resurrect, this button will return you in game:<br><br>
+        <button id="joinback" onClick="joinBack();">JOIN BACK</button>
         <script>
             function updateSettings(setting) {
                 var value;
