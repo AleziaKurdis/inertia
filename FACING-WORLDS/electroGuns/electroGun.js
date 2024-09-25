@@ -100,13 +100,11 @@
                     setAmmunitionsColor();
                     genShotFX(thisEntityID, CANON_EXIT_LOCAL_POSITION);
                     var j, messageSent;
-                    var victimesIDs = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION)), 1);
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_2_LOCAL_POSITION)), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1));
-                    victimesIDs.push(AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_4_LOCAL_POSITION)), 1));
-                    print("victimesIDs: " + JSON.stringify(victimesIDs)); //########################################################################## DEBUG/REMOVE
-                    var victimes = remove_duplicates_safe(victimesIDs);
-                    print("victimes: " + JSON.stringify(victimes)); //########################################################################## DEBUG/REMOVE
+                    var victimesIDsOne = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_1_LOCAL_POSITION)), 1);
+                    var victimesIDsTwo = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_2_LOCAL_POSITION)), 1);
+                    var victimesIDsThree = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_3_LOCAL_POSITION)), 1);
+                    var victimesIDsFoor = AvatarManager.getAvatarsInRange( Vec3.sum(gunProperties.position, Vec3.multiplyQbyV(gunProperties.rotation, LETHAL_POINT_4_LOCAL_POSITION)), 1);
+                    var victimes = remove_duplicates_safe(victimesIDsOne.concat(victimesIDsTwo, victimesIDsThree, victimesIDsFoor));
                     if (victimes.length > 0) {
                         for (j = 0; j < victimes.length; j++) {
                             //if (victimes[j] !== MyAvatar.sessionUUID) {
@@ -145,7 +143,8 @@
     function remove_duplicates_safe(arr) {
         var seen = {};
         var ret_arr = [];
-        for (var i = 0; i < arr.length; i++) {
+        var i;
+        for (i = 0; i < arr.length; i++) {
             if (!(arr[i] in seen)) {
                 ret_arr.push(arr[i]);
                 seen[arr[i]] = true;
