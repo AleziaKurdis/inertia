@@ -82,12 +82,12 @@
                 outline: none;
             }
             #cftRedAvatar {
-                width: 95%;
+                width: 97%;
                 background-color: #ff0000;
                 color: #ffffff;
             }
             #cftBlueAvatar {
-                width: 95%;
+                width: 97%;
                 background-color: #0000ff;
                 color: #ffffff;
             }
@@ -101,7 +101,7 @@
         BLUE AVATAR: <br>
         <input type="text" id="cftBlueAvatar" onInput="updateSettings('BLUE');"><br><br><br><hr><br><br>
         If you are stuck in a wall or fail to resurrect, this button will return you in game:<br><br>
-        <button id="joinback" onClick="joinBack();">JOIN BACK</button>
+        <div style="width: 100%; text-align: center;"><button id="joinback" onClick="joinBack();">JOIN BACK</button></div>
         <script>
             function updateSettings(setting) {
                 var value;
