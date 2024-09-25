@@ -853,7 +853,8 @@
             "emitterShouldTrail": true,
             "spinSpread": 3.140000104904175,
             "spinStart": -1.5700000524520874,
-            "spinFinish": 1.5700000524520874
+            "spinFinish": 1.5700000524520874,
+            "script": "https://aleziakurdis.github.io/inertia/FACING-WORLDS/tagApp.js"
         },
         {
             "id": "{f104804e-7015-4dbb-aae9-e2497505865a}",
