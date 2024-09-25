@@ -63,6 +63,7 @@
         initiated = true;
         Messages.subscribe(channelComm);
         Messages.messageReceived.connect(onMessageReceived);
+        tablet.screenChanged.connect(onScreenChanged);
     }
 
     function terminate() {
