@@ -52,7 +52,7 @@
 
     function initiate() {
         //set
-        button; = tablet.addButton({
+        button = tablet.addButton({
             "text": APP_NAME,
             "icon": APP_ICON_INACTIVE,
             "activeIcon": APP_ICON_ACTIVE,
