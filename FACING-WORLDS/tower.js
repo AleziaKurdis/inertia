@@ -30,6 +30,7 @@
     
     var startButtonID = Uuid.NULL;
     var swapButtonID = Uuid.NULL;
+    var startKcButtonID = Uuid.NULL;
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
@@ -1266,6 +1267,8 @@
             startButtonID = Uuid.NULL;
             Entities.deleteEntity(swapButtonID);
             swapButtonID = Uuid.NULL;
+            Entities.deleteEntity(startKcButtonID);
+            startKcButtonID = Uuid.NULL;
         }
         if (visible) {
             startButtonID = Entities.addEntity({
@@ -1288,6 +1291,29 @@
                 "angularDamping": 0,
                 "shapeType": "static-mesh",
                 "modelURL": ROOT + "models/startButton.glb",
+                "useOriginalPivot": true
+            },"local");
+            
+            startKcButtonID = Entities.addEntity({
+                "name": "START_KC_BUTTON_" + team,
+                "renderWithZones": renderWithZones,
+                "parentID": thisEntityID,
+                "script": ROOT + "startKc.js",
+                "type": "Model",
+                "dimensions": {"x":1,"y":0.5,"z":0.1},
+                "localPosition": {
+                    "x": 122.54,
+                    "y": -7.1494,
+                    "z": 5.2881
+                },
+                "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
+                "grab": {
+                    "grabbable": false
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "shapeType": "static-mesh",
+                "modelURL": ROOT + "models/startButtonKC.glb",
                 "useOriginalPivot": true
             },"local");
             
@@ -1316,7 +1342,7 @@
             
             var swapAdviceId = Entities.addEntity({
                 "type": "Model",
-                "name": "Framed Sign - SWAP TEAM ADVICE",
+                "name": "Framed Sign - SWAP TEAM COLOR ADVICE",
                 "parentID": startButtonID,
                 "localPosition": {"x":0,"y":1.0,"z":0},
                 "dimensions": {"x":1,"y":1,"z":0.05},
@@ -1326,6 +1352,22 @@
                 },
                 "shapeType": "box",
                 "textures": "{\"base_color_texture\":\"" + ROOT + "images/swapAdvice.jpg\",\"emission_color_texture\":\"" + ROOT + "images/swapAdvice.jpg\"}",
+                "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+                "useOriginalPivot": true
+            },"local");
+            
+            var swapAdviceKcId = Entities.addEntity({
+                "type": "Model",
+                "name": "Framed Sign - KEEP TEAM COLOR ADVICE",
+                "parentID": startKcButtonID,
+                "localPosition": {"x":0,"y":1.0,"z":0},
+                "dimensions": {"x":1,"y":1,"z":0.05},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "box",
+                "textures": "{\"base_color_texture\":\"" + ROOT + "images/keepColor.jpg\",\"emission_color_texture\":\"" + ROOT + "images/keepColor.jpg\"}",
                 "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
                 "useOriginalPivot": true
             },"local");
