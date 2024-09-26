@@ -1304,7 +1304,7 @@
                 "localPosition": {
                     "x": 122.54,
                     "y": -7.1494,
-                    "z": 5.2881
+                    "z": -2.14165
                 },
                 "localRotation": Quat.fromVec3Degrees( {"x": 0.0,"y": 270,"z": 0.0} ),
                 "grab": {
