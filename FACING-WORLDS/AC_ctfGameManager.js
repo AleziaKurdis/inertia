@@ -129,7 +129,18 @@ function onMessageReceived(channel, message, sender, localOnly) {
                     "visible": false,
                 };
                 Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
-                initiateGame();
+                initiateGame(true);
+            }
+            
+        } else if (data.action === "START_KC") {
+            if (gameStatus === "IDLE") {
+                gameStatus = "PLAYING";
+                messageToSent = {
+                    "action": "MANAGE_START_BUTTON",
+                    "visible": false,
+                };
+                Messages.sendMessage(channelComm, JSON.stringify(messageToSent));
+                initiateGame(false);
             }
             
         } else if (data.action === "SWAP") {
@@ -158,11 +169,11 @@ function onMessageReceived(channel, message, sender, localOnly) {
     }
 }
 
-function initiateGame() {
+function initiateGame(mustSwap) {
     clearFlagGarbadge();
     var today = new Date();
     gameStartTime = today.getTime();
-    swapTeamColorAndResetDeath();
+    swapTeamColorAndResetDeath(mustSwap);
     var messageToSent = {
         "action": "PLAYER_LIST",
         "players": players,
@@ -651,13 +662,15 @@ function joinEveryPlayer() {
     }
 }
 
-function swapTeamColorAndResetDeath() {
+function swapTeamColorAndResetDeath(mustSwap) {
     var i;
     for (i = 0; i < players.length; i++) {
-        if (players[i].team === "RED") {
-            players[i].team = "BLUE";
-        } else {
-            players[i].team = "RED";
+        if (mustSwap) {
+            if (players[i].team === "RED") {
+                players[i].team = "BLUE";
+            } else {
+                players[i].team = "RED";
+            }
         }
         players[i].death = 0;
         players[i].kill = 0;
