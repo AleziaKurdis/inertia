@@ -16,7 +16,8 @@
     this.enterEntity = function(entityID) {
         var message = {
             "action": "REVIVE",
-            "avatarID": MyAvatar.sessionUUID
+            "avatarID": MyAvatar.sessionUUID,
+            "by": Uuid.NULL
         };
         Messages.sendMessage(channelComm, JSON.stringify(message));
     }; 
