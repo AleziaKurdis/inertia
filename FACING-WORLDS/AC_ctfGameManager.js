@@ -489,11 +489,11 @@ function getTeamsKilledAndDeath() {
     var i;
     for (i = 0; i < players.length; i++) {
         if (players[i].team === "RED") {
-            redKilled = redKilled + players[i}.kill;
-            redDeath = redDeath + players[i}.death;
+            redKilled = redKilled + players[i].kill;
+        redDeath = redDeath + players[i].death;
         } else {
-            blueKilled = blueKilled + players[i}.kill;
-            blueDeath = blueDeath + players[i}.death;
+            blueKilled = blueKilled + players[i].kill;
+            blueDeath = blueDeath + players[i].death;
         }
     }
     return {
