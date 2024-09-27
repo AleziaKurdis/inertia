@@ -1378,21 +1378,17 @@
         var i, localColor, visitorColor;
         var localList = team + " TEAM:";
         var visitorList = otherTeam + " TEAM:";
-        var name, death, kill;
+        var name, lifeData;
         for (i = 0; i < players.length; i++) {
             name = AvatarManager.getAvatar(players[i].avatarID).displayName;
-            death = "";
-            kill = "";
-            if (players[i].death !== 0) {
-                death = " (death:" + players[i].death + ")";
-            }
-            if (players[i].kill !== 0) {
-                kill = " (killed:" + players[i].kill + ")";
+            lifeData = "";
+            if (players[i].death !== 0 || players[i].kill !== 0) {
+                lifeData = " (K:" + players[i].kill + " D:" + players[i].death + ")";
             }
             if (players[i].team === team) {
-                localList = localList + "\n - " + name + kill + death;
+                localList = localList + "\n - " + name + lifeData;
             } else {
-                visitorList = visitorList + "\n - " + name + kill + death;
+                visitorList = visitorList + "\n - " + name + lifeData;
             }
         }
         
