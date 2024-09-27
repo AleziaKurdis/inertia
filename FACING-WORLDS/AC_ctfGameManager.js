@@ -432,7 +432,7 @@ function myTimer(deltaTime) {
                     winner = "RED HAVE WON!";
                     audioAnnouncement("RED_TEAM_IS_THE_WINNER");
                 } else if (teamsStat.redKilled === teamsStat.blueKilled) {
-                    if (teamsStat.redDeath > teamsStat.blueDeath) {
+                    if (teamsStat.redDeath < teamsStat.blueDeath) {
                         winner = "RED HAVE WON!";
                         audioAnnouncement("RED_TEAM_IS_THE_WINNER");
                     } else if (teamsStat.redDeath === teamsStat.blueDeath) {
