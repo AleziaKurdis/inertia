@@ -427,8 +427,25 @@ function myTimer(deltaTime) {
                 winner = "RED HAVE WON!";
                 audioAnnouncement("RED_TEAM_IS_THE_WINNER");
             } else if (scoreRed === scoreBlue) {
-                winner = "EVEN GAME!";
-                audioAnnouncement("EVEN_GAME");
+                var teamsStat = getTeamsKilledAndDeath();
+                if (teamsStat.redKilled > teamsStat.blueKilled) {
+                    winner = "RED HAVE WON!";
+                    audioAnnouncement("RED_TEAM_IS_THE_WINNER");
+                } else if (teamsStat.redKilled === teamsStat.blueKilled) {
+                    if (teamsStat.redDeath > teamsStat.blueDeath) {
+                        winner = "RED HAVE WON!";
+                        audioAnnouncement("RED_TEAM_IS_THE_WINNER");
+                    } else if (teamsStat.redDeath === teamsStat.blueDeath) {
+                        winner = "EVEN GAME!";
+                        audioAnnouncement("EVEN_GAME");
+                    } else {
+                        winner = "BLUE HAVE WON!";
+                        audioAnnouncement("BLUE_TEAM_IS_THE_WINNER");
+                    }
+                } else {
+                    winner = "BLUE HAVE WON!";
+                    audioAnnouncement("BLUE_TEAM_IS_THE_WINNER");
+                }
             } else {
                 winner = "BLUE HAVE WON!";
                 audioAnnouncement("BLUE_TEAM_IS_THE_WINNER");
@@ -465,6 +482,26 @@ function myTimer(deltaTime) {
         today = new Date();
         processTimer = today.getTime();
     }
+}
+
+function getTeamsKilledAndDeath() {
+    var blueKilled, blueDeath, redKilled, redDeath;
+    var i;
+    for (i = 0; i < players.length; i++) {
+        if (players[i].team === "RED") {
+            redKilled = redKilled + players[i}.kill;
+            redDeath = redDeath + players[i}.death;
+        } else {
+            blueKilled = blueKilled + players[i}.kill;
+            blueDeath = blueDeath + players[i}.death;
+        }
+    }
+    return {
+        "blueDeath": blueDeath,
+        "blueKilled": blueKilled,
+        "redDeath": redDeath,
+        "redKilled": redKilled
+    };
 }
 
 function initializeGuns() {
