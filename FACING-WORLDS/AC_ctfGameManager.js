@@ -715,6 +715,8 @@ function swapTeamColorAndResetDeath(mustSwap) {
 }
 
 function registerADeath(avatarID, flagFoundID, flagFoundPosition, by) {
+    var victimeTeam = isPlayerKnown(avatarID);
+    var byTeam = isPlayerKnown(by);
     var i;
     for (i = 0; i < players.length; i++) {
         if (players[i].avatarID === avatarID) {
@@ -729,7 +731,9 @@ function registerADeath(avatarID, flagFoundID, flagFoundPosition, by) {
             break;
         }
         if (players[i].avatarID === by) {
-            players[i].kill = players[i].kill + 1;
+            if (victimeTeam !== byTeam && victimeTeam !== "NONE" && byTeam !== "NONE") {
+                players[i].kill = players[i].kill + 1;
+            }
         }
     }
 }
