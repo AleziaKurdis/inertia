@@ -215,14 +215,14 @@ function regenerateFlag(flagColor, flagPosition) {
                     "z": 0.04999999701976776
                 },
                 "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
-                "ignorePickIntersection": true,
+                "ignorePickIntersection": false,
                 "grab": {
                     "grabbable": true,
                     "equippable": true,
                     "equippableLeftPosition": {
                         "x": 0,
                         "y": 0,
-                        "z": 0
+                        "z": 0.06
                     },
                     "equippableLeftRotation": {
                         "w": 0.49999237060546875,
@@ -233,7 +233,7 @@ function regenerateFlag(flagColor, flagPosition) {
                     "equippableRightPosition": {
                         "x": 0,
                         "y": 0,
-                        "z": 0
+                        "z": 0.06
                     },
                     "equippableRightRotation": {
                         "w": 0.49999237060546875,
@@ -272,14 +272,14 @@ function regenerateFlag(flagColor, flagPosition) {
                     "z": 0.04999999701976776
                 },
                 "rotation": Quat.fromVec3Degrees( {"x": 0, "y": 90, "z": 0 } ),
-                "ignorePickIntersection": true,
+                "ignorePickIntersection": false,
                 "grab": {
                     "grabbable": true,
                     "equippable": true,
                     "equippableLeftPosition": {
                         "x": 0,
                         "y": 0,
-                        "z": 0
+                        "z": 0.06
                     },
                     "equippableLeftRotation": {
                         "w": 0.49999237060546875,
@@ -290,7 +290,7 @@ function regenerateFlag(flagColor, flagPosition) {
                     "equippableRightPosition": {
                         "x": 0,
                         "y": 0,
-                        "z": 0
+                        "z": 0.06
                     },
                     "equippableRightRotation": {
                         "w": 0.49999237060546875,
