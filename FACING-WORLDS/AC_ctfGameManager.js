@@ -220,9 +220,9 @@ function regenerateFlag(flagColor, flagPosition) {
                     "grabbable": true,
                     "equippable": true,
                     "equippableLeftPosition": {
-                        "x": 0,
+                        "x": -0.06,
                         "y": 0,
-                        "z": 0.06
+                        "z": 0.01
                     },
                     "equippableLeftRotation": {
                         "w": 0.49999237060546875,
@@ -231,9 +231,9 @@ function regenerateFlag(flagColor, flagPosition) {
                         "z": 0.49999237060546875
                     },
                     "equippableRightPosition": {
-                        "x": 0,
+                        "x": 0.06,
                         "y": 0,
-                        "z": 0.06
+                        "z": 0.01
                     },
                     "equippableRightRotation": {
                         "w": 0.49999237060546875,
@@ -277,9 +277,9 @@ function regenerateFlag(flagColor, flagPosition) {
                     "grabbable": true,
                     "equippable": true,
                     "equippableLeftPosition": {
-                        "x": 0,
+                        "x": -0.06,
                         "y": 0,
-                        "z": 0.06
+                        "z": 0.01
                     },
                     "equippableLeftRotation": {
                         "w": 0.49999237060546875,
@@ -288,9 +288,9 @@ function regenerateFlag(flagColor, flagPosition) {
                         "z": 0.49999237060546875
                     },
                     "equippableRightPosition": {
-                        "x": 0,
+                        "x": 0.06,
                         "y": 0,
-                        "z": 0.06
+                        "z": 0.01
                     },
                     "equippableRightRotation": {
                         "w": 0.49999237060546875,
