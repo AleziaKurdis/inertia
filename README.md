@@ -61,3 +61,11 @@ Create a Zone, name it and set the dimensions. (The dimensions need to be larger
 This zone will be your visibility zone for your place.  
 Then add the script of your choice (D19, D29 or D24) in the "script" property of that zone entity.  
 The script will manage the sky as a local entity.  
+
+# Gravity Configurator  
+Use this application to configure the gravity: Persistently on a domain, temporary to everyone arround you anywhere, or just for yourself as a superpower.  
+  
+**Installation**  
+Edit > Running Scripts...   
+Load scripts > Click "From URL" button.  
+Enter: https://aleziakurdis.github.io/inertia/gravityConfigurator/app-gravityConfigurator.js
