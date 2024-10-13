@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+    gravityConfigurator.html
+
+    Created by Alezia Kurdis, October 1st, 2024.
+    Copyright 2024 Overte e.V.
+  
+    UI for the gravityConfigurator application.
+
+    Distributed under the Apache License, Version 2.0.
+    See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var channel = "overte.application.more.gravityConfigurator";
+            
+            //Paths
+            var thisPageName = "gravityConfigurator.html";        
+            var currentPath = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var ROOTPATH = currentPath.replace(thisPageName, "");
+
+            
+            EventBridge.scriptEventReceived.connect(function(message){
+                var messageObj = JSON.parse(message);
+                if (messageObj.channel === channel) {
+                    if (messageObj.action === "MESSAGE_TO_USER") {
+                        document.getElementById("message").innerHTML = messageObj.message; 
+                    }
+                }
+            });
+            
+
+        </script>
+        <style>
+            @font-face {
+                font-family: FiraSans-SemiBold;
+                src: url(fonts/FiraSans-SemiBold.ttf);
+            }
+
+            @font-face {
+                font-family: FiraSans-Regular;
+                src: url(fonts/FiraSans-Regular.ttf);
+            }
+
+            html {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                background: #454545;
+                font-family: FiraSans-Regular;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-decoration: none;
+                font-style: normal;
+                font-variant: normal;
+                text-transform: none;
+            }
+            
+            #uninstall {
+                font-family: FiraSans-SemiBold;
+                background-color: #222222;
+                font-size: 9px;
+                color: #cccccc;
+                border-radius: 3px;
+                border: 0px solid #000000;
+                transition-duration: 0.2s;
+                width: 100px;
+                padding: 3px;
+            }
+
+            #uninstall:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            #uninstall:focus {
+                outline: none;
+            }
+
+            button.preset {
+                font-family: FiraSans-SemiBold;
+                color: #ffffff;
+                font-size: 12px;
+                background: #808080;
+                padding: 4px 20px 4px 20px;
+                text-decoration: none;
+                width: 180px;
+                text-align: left;
+                border: 0px;
+                margin-left: 230px;
+                margin-top: 1px;
+            }
+            
+            font.presetLabel {
+                margin-left: 230px;
+            }
+            
+            button.preset:hover {
+                background: #c2c2c2;
+                text-decoration: none;
+            }
+            
+            button.preset:focus {
+                outline: none;
+            }
+            
+            #gen {
+                font-family: FiraSans-SemiBold;
+                background: #666666;
+                background-image: linear-gradient(to bottom, #666666, #111111);
+                border-radius: 11px;
+                border: 0px;
+                color: #ffffff;
+                font-size: 20px;
+                padding: 6px 20px 6px 20px;
+                border: solid #1f628d 0px;
+                text-decoration: none;
+            }
+            
+            #gen:hover {
+                background: #777777;
+                background-image: linear-gradient(to bottom, #777777, #222222);
+                text-decoration: none;
+            }
+            
+            #gen:focus {
+                outline: none;
+            }
+            
+            h1 {
+                font-size: 28px;
+                color: #999999;
+            }
+            
+            #gravity, #radius{
+                font-family: FiraSans-SemiBold;
+                font-size: 24px;
+            }
+            
+            .gravityLabel {
+                font-family: FiraSans-SemiBold;
+                font-size: 24px;
+            }
+            
+            .radioLabel {
+                font-family: FiraSans-SemiBold;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>GRAVITY CONFIGURATOR</h1> 
+        <label class="gravityLabel" for="gravity">Gravity: <input type="text" size="4" id="gravity" value="100"> %</label><br><br>
+        
+
+        <font class="presetLabel">PRESETS:</font><br>
+        <button class = "preset" onclick = "setGravity(112);">Neptune (112%)</button><br>
+        <button class = "preset" onclick = "setGravity(100);">Earth (100%)</button><br>
+        <button class = "preset" onclick = "setGravity(90);">Venus (90%)</button><br>
+        <button class = "preset" onclick = "setGravity(38);">Mars/Mercury (38%)</button><br>
+        <button class = "preset" onclick = "setGravity(18);">Io (18%)</button><br>
+        <button class = "preset" onclick = "setGravity(16);">Moon (16%)</button><br>
+        <button class = "preset" onclick = "setGravity(7);">Pluto (7%)</button><br>
+        <br><hr><br>
+        <label class="gravityLabel" for="radius">Effective radius: <input type="text" size="6" id="radius" value="2000"> meters</label><br>
+        <br><hr><br>
+        <label class="gravityLabel">Entity Host Type:</label> <br>
+          <input type="radio" id="entityHostTypeDomain" name="entityHostType" value="domain" checked>
+          <label class="radioLabel" for="entityHostTypeDomain">Domain</label> <i>(Affect everyone, for persistent installation)</i><br>
+          <input type="radio" id="entityHostTypeAvatar" name="entityHostType" value="avatar">
+          <label class="radioLabel" for="entityHostTypeAvatar">Avatar</label> <i>(Affect everyone, attached to you.)</i><br>  
+          <input type="radio" id="entityHostTypeLocal" name="entityHostType" value="local">
+          <label class="radioLabel" for="entityHostTypeLocal">Only You</label> <i>(As a superpower)</i>
+        <br><br><hr><br>
+        <div style="text-align: center; width: 99%;"><button onClick="generateGravity();" id="gen">Generate</button></div>
+        <br><br>
+        <div id="message" style="text-align: center; width: 99%;"></div>
+        <br><br><br><hr>
+        <div style="text-align: right; width:100%;">
+            <button id="uninstall" onClick = "uninstall();">Uninstall this app</button>
+        </div>
+        <script>
+            function generateGravity() {
+                var gravity = parseInt(document.getElementById("gravity").value, 10);
+                var radius = parseInt(document.getElementById("radius").value, 10);
+                var entityHostType = getEntityHostTypeValue();
+                
+                if (radius <= 0) {
+                    alert("Error: Effective radius can not be less than or equal to zero.")
+                } else {
+                    var message = {
+                        "channel": channel,
+                        "action": "INSTALL_GRAVITY",
+                        "gravity": gravity,
+                        "radius": radius,
+                        "entityHostType": entityHostType
+                    };
+                    EventBridge.emitWebEvent(JSON.stringify(message));
+                }
+                document.getElementById("message").innerHTML = "";
+            }
+
+            function getEntityHostTypeValue() {
+                var hostType = "";
+                var ele = document.getElementsByName("entityHostType");
+                var i;
+                for (i = 0; i < ele.length; i++) {
+                    if (ele[i].checked) {
+                        hostType = ele[i].value;
+                        break;
+                    }
+                }
+                return hostType;
+            }
+
+            function setGravity(percent) {
+                document.getElementById("gravity").value = percent;
+            }
+
+            function uninstall() { 
+                var message = {
+                    "channel": channel,
+                    "action": "SELF_UNINSTALL"
+                };
+                EventBridge.emitWebEvent(JSON.stringify(message));
+            }
+        </script>
+    </body>
+</html>
