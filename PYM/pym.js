@@ -20,7 +20,7 @@
     var updateTimerInterval = 200; //0.2sec.
     var processTimer = 0;
     var MIN_SCALE = 0.2;
-    var MAX_SCALE = 10;
+    var MAX_SCALE = 20;
     
     this.preload = function (entityID) {
         thisEntityID = entityID;
