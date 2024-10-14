@@ -1,10 +1,10 @@
 //
 //  pym.js
 //
-//  Created by Alezia Kurdis, August 14th, 2024.
+//  Created by Alezia Kurdis, Octorber 12th, 2024.
 //  Copyright 2024, Overte e.V.
 //
-//  Collecting player that fall and make then revive.
+//  PYM CORRIDOR (UP 1 to 20 and DOWN 1 to 0.2).
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
