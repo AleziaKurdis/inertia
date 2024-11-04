@@ -55,7 +55,7 @@
         }, "local");
     }
     
-    computeUrl() {
+    function computeUrl() {
         return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
     }
     
