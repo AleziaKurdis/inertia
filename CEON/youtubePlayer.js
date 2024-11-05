@@ -32,12 +32,12 @@
     var webID = Uuid.NONE;
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
-    print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
     
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
         renderWithZones = properties.renderWithZones;
+        print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
         playlist = JSON.parse(properties.userData);
         print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
         refreshWeb();
