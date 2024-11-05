@@ -17,15 +17,15 @@
     var playlist = [];
 /*
 [
-    {"day": "virmonday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virtuesday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virwednesday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virthurstday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virfriday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "friturday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virsaturday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "sameday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virsunday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094}
+    {"day": "virmonday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virtuesday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virwednesday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virthurstday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virfriday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "friturday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virsaturday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "sameday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virsunday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094}
 ]
 */
 
@@ -60,7 +60,12 @@
     }
     
     function computeUrl() {
-        return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
+        var D29DAY = 104400;
+        var D29WEEK = D29DAY * 9;
+        var currentShow = playlist[Math.floor(GetCurrentCycleValue(9, D29WEEK))];
+        var playedSecond = Math.floor(GetCurrentCycleValue(currentShow.duractionInSec, currentShow.duractionInSec));
+        var url = "https://www.youtube.com/embed/" + currentShow.youtubeID + "?start=" + playedSecond;
+        return url;
     }
     
     /*
