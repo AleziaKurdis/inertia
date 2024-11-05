@@ -10,7 +10,7 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
-
+    print("YOUTUBE PLAYER STARTED!");
     var ROOT = Script.resolvePath('').split("youtubePlayer.js")[0];
     var thisEntity;
     var renderWithZones;
@@ -29,7 +29,7 @@
 ]
 */
 
-    var webID = Uuid.NONE;
+    var webID = null; //Uuid.NONE;
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
     
