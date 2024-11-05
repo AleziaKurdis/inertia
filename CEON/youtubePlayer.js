@@ -34,6 +34,7 @@
     var MAX_CLICKABLE_DISTANCE_M = 9;
     
     function refreshWeb() {
+        print("YOUTUBE PLAYER - REFRESH CALLED!");//################################### DEBUG
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
@@ -57,6 +58,7 @@
             "dpi": 8,
             "maxFPS": 60
         }, "local");
+        print("YOUTUBE PLAYER - END REFRESH!");//################################### DEBUG
     }
     
     function computeUrl() {
@@ -150,6 +152,5 @@
         }
     };
 
-    print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
     return new clickableUI();
 })
