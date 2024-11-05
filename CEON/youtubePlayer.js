@@ -37,7 +37,6 @@
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
         renderWithZones = properties.renderWithZones;
-        print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
         playlist = JSON.parse(properties.userData);
         print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
         refreshWeb();
@@ -161,5 +160,5 @@
     
     return new clickableUI();
 
-
+    print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
 })
