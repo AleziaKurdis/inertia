@@ -29,9 +29,10 @@
 ]
 */
 
-    var webID = null; //Uuid.NONE;
+    var webID = Uuid.NONE;
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
+    print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
     
     this.preload = function(entityID) {
         thisEntity = entityID;
