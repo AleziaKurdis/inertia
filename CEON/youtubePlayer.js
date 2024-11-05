@@ -34,7 +34,6 @@
     var MAX_CLICKABLE_DISTANCE_M = 9;
     
     function refreshWeb() {
-        print("YOUTUBE PLAYER - REFRESH CALLED!");//################################### DEBUG
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
@@ -43,7 +42,7 @@
             "type": "Web",
             "name": "The Edge - Show Screen",
             "parentID": thisEntity,
-            "localPosition": {"x": 0, "y": 0, "z": -0.01},
+            "localPosition": {"x": 0, "y": 0, "z": 0.01},
             "dimensions": {
                 "x": 4.724425792694092,
                 "y": 2.657489538192749,
@@ -58,7 +57,6 @@
             "dpi": 8,
             "maxFPS": 60
         }, "local");
-        print("YOUTUBE PLAYER - END REFRESH!" + webID);//################################### DEBUG
     }
     
     function computeUrl() {
