@@ -32,7 +32,7 @@
     var webID = Uuid.NONE;
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
-/*    
+    
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
@@ -41,8 +41,8 @@
         print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
         refreshWeb();
     }
-*/
-    function refreshWeb() {
+
+/*    function refreshWeb() {
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
@@ -67,7 +67,7 @@
             "maxFPS": 60
         }, "local");
     }
-    
+*/    
     function computeUrl() {
         return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
     }
@@ -78,7 +78,8 @@
             webID = Uuid.NONE;
         }
     }
-*/    
+*/
+    
     /*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -137,6 +138,7 @@
         preload: function (id) {
             _this.entityID = id;
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
+            print("PRELOAD");
         },
 
         displayModeChangedCallback: function() {
@@ -154,6 +156,7 @@
 
         unload: function () {
             HMD.displayModeChanged.disconnect(this.displayModeChangedCallback);
+            print("UNLOAD");
         }
     };
 
