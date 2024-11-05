@@ -18,15 +18,20 @@
 /*
 [
     {"day": "virmonday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virtuesday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virwednesday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virthurstday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virtuesday", "youtubeID": "JaR0GZMWbr0", "duractionInSec": 4333},
+    {"day": "virwednesday", "youtubeID": "K2fNxWG8E0o", "duractionInSec": 6100},
+    {"day": "virthurstday", "youtubeID": "b3_TQKdksyc", "duractionInSec": 5243},
     {"day": "virfriday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "friturday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virsaturday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "sameday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094},
-    {"day": "virsunday", "youtubeID": "0i-i00P9k8c", "duractionInSec": 4094}
+    {"day": "friturday", "youtubeID": "JaR0GZMWbr0", "duractionInSec": 4333},
+    {"day": "virsaturday", "youtubeID": "K2fNxWG8E0o", "duractionInSec": 6100},
+    {"day": "sameday", "youtubeID": "b3_TQKdksyc", "duractionInSec": 5243},
+    {"day": "virsunday", "youtubeID": "JaR0GZMWbr0", "duractionInSec": 4333}
 ]
+0i-i00P9k8c //OSEES 4094
+JaR0GZMWbr0 //GOAT 4333
+K2fNxWG8E0o //OSEE Pressuredrop 6100
+b3_TQKdksyc //Santana 5243
+
 */
 
     var webID = Uuid.NONE;
