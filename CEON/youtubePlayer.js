@@ -122,8 +122,8 @@
         preload: function (id) {
             _this.entityID = id;
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
-            thisEntity = entityID;
-            var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
+            thisEntity = id;
+            var properties = Entities.getEntityProperties(id, ["renderWithZones", "userData"]);
             renderWithZones = properties.renderWithZones;
             playlist = JSON.parse(properties.userData);
             print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
