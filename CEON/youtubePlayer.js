@@ -31,10 +31,10 @@
 
     var webID = Uuid.NONE;
     
-    var MAX_CLICKABLE_DISTANCE_M = 6;
+    var MAX_CLICKABLE_DISTANCE_M = 9;
     
     function refreshWeb() {
-/*        if (webID !== Uuid.NONE) {
+        if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
@@ -51,17 +51,16 @@
             "localRotation": Quat.IDENTITY,
             "renderWithZones": renderWithZones,
             "grab": {
-                "grabbable": false,
+                "grabbable": false
             },
             "sourceUrl": computeUrl(),
             "dpi": 8,
             "maxFPS": 60
         }, "local");
-*/
     }
     
     function computeUrl() {
-        //return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
+        return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
     }
     
     /*
@@ -126,7 +125,6 @@
             var properties = Entities.getEntityProperties(id, ["renderWithZones", "userData"]);
             renderWithZones = properties.renderWithZones;
             playlist = JSON.parse(properties.userData);
-            print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
             refreshWeb();
         },
 
@@ -152,8 +150,6 @@
         }
     };
 
-    
-    return new clickableUI();
-
     print("YOUTUBE PLAYER - REACH HERE!"); //########################################################
+    return new clickableUI();
 })
