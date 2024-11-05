@@ -32,7 +32,7 @@
     var webID = Uuid.NONE;
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
-    
+/*    
     this.preload = function(entityID) {
         thisEntity = entityID;
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
@@ -41,7 +41,7 @@
         print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
         refreshWeb();
     }
-
+*/
     function refreshWeb() {
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
@@ -71,14 +71,14 @@
     function computeUrl() {
         return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
     }
-    
+/*    
     this.unload = function(entityID) {
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
     }
-    
+*/    
     /*
      * Converts an HSL color value to RGB. Conversion formula
      * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -115,7 +115,7 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
-    function GetCurrentCycleValue(cyclelength, cycleduration){
+    function GetCurrentCycleValue(cyclelength, cycleduration) {
 		var today = new Date();
 		var TodaySec = today.getTime()/1000;
 		var CurrentSec = TodaySec%cycleduration;
