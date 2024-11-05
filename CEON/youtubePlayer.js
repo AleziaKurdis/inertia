@@ -33,17 +33,8 @@
     
     var MAX_CLICKABLE_DISTANCE_M = 6;
     
-    this.preload = function(entityID) {
-        thisEntity = entityID;
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
-        renderWithZones = properties.renderWithZones;
-        playlist = JSON.parse(properties.userData);
-        print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
-        refreshWeb();
-    }
-
-/*    function refreshWeb() {
-        if (webID !== Uuid.NONE) {
+    function refreshWeb() {
+/*        if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
@@ -66,19 +57,12 @@
             "dpi": 8,
             "maxFPS": 60
         }, "local");
-    }
-*/    
-    function computeUrl() {
-        return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
-    }
-/*    
-    this.unload = function(entityID) {
-        if (webID !== Uuid.NONE) {
-            Entities.deleteEntity(webID);
-            webID = Uuid.NONE;
-        }
-    }
 */
+    }
+    
+    function computeUrl() {
+        //return "https://www.youtube.com/watch_popup?v=0i-i00P9k8c&t=1772";
+    }
     
     /*
      * Converts an HSL color value to RGB. Conversion formula
@@ -138,7 +122,12 @@
         preload: function (id) {
             _this.entityID = id;
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
-            print("PRELOAD");
+            thisEntity = entityID;
+            var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
+            renderWithZones = properties.renderWithZones;
+            playlist = JSON.parse(properties.userData);
+            print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
+            refreshWeb();
         },
 
         displayModeChangedCallback: function() {
@@ -156,7 +145,10 @@
 
         unload: function () {
             HMD.displayModeChanged.disconnect(this.displayModeChangedCallback);
-            print("UNLOAD");
+            if (webID !== Uuid.NONE) {
+                Entities.deleteEntity(webID);
+                webID = Uuid.NONE;
+            }
         }
     };
 
