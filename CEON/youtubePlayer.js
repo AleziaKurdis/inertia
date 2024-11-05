@@ -15,6 +15,19 @@
     var thisEntity;
     var renderWithZones;
     var playlist = [];
+/*
+[
+    {"day": "virmonday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virtuesday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virwednesday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virthurstday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virfriday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "friturday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virsaturday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "sameday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094},
+    {"day": "virsunday", "url": "https://www.youtube.com/watch_popup?v=0i-i00P9k8c", "duractionInSec": 4094}
+]
+*/
 
     var webID = Uuid.NONE;
     
@@ -25,7 +38,7 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
         renderWithZones = properties.renderWithZones;
         playlist = JSON.parse(properties.userData);
-
+        print("PLAYLIST: " + JSON.stringify(playlist)); //###############################################
         refreshWeb();
     }
 
