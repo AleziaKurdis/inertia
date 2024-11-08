@@ -1,0 +1,65 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/-3839.83,-3905.38,-4476.69\/0,0.718412,0,0.695618"
+   },
+   "Entities":[
+        {
+            "id":"{9b978973-416d-4af7-b32b-a4211d2d2cf8}",
+            "type":"Zone",
+            "name":"PENTACLE_VISIBILITY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":4000,
+                "y":4000,
+                "z":4000
+            },
+            "position": {
+                 "x": -4000,
+                 "y": -4000,
+                 "z": 4000
+            },         
+            "rotation":{
+                "x":-1.52587890625e-5,
+                "y":-1.52587890625e-5,
+                "z":-1.52587890625e-5,
+                "w":1
+            },
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/PENTACLE/navigationAmbiencePentacle.js"
+        },
+        {
+            "id": "{10ab22fc-7323-4bc2-8e93-a3b330b38f66}",
+            "type": "Model",
+            "position":  {
+                 "x": -4000,
+                 "y": -4000,
+                 "z": 4000
+            },
+            "name": "pentacleFloor",
+            "locked": true,
+            "dimensions": {
+                "x": 1301.1,
+                "y": 1074.8215,
+                "z": 1202.1038
+            },
+            "renderWithZones": [
+                "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/PENTACLE/models/pentacleFloor.fst",
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/PENTACLE/pentacle.js"
+        }
+   ],
+   "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
+   "Version":120
+}
