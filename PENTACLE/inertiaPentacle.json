@@ -41,11 +41,7 @@
             },
             "name": "pentacleFloor",
             "locked": true,
-            "dimensions": {
-                "x": 1301.1,
-                "y": 1074.8215,
-                "z": 1202.1038
-            },
+            "dimensions": {"x":31.16157341003418,"y":1.373131513595581,"z":31.16157341003418},
             "renderWithZones": [
                 "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
             ],
