@@ -26,8 +26,10 @@
                 "w":1
             },
             "grab":{
-                "grabbable":false
+                "grabbable": false
             },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/PENTACLE/navigationAmbiencePentacle.js"
         },
