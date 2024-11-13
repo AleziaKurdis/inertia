@@ -254,19 +254,18 @@
         manageAstre(zoneRotation, zoneID, hue);
     }
     
-    function manageAstre(rotation, parentID, hue) {
+    function manageAstre(rotation, hue) {
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
                 "name": "STAR",
-                "parentID": parentID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
                 "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
                 "localRotation": rotation,
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": [parentID],
+                "renderWithZones": [zoneID],
                 "damping": 0
             }, "local");
         } else {
