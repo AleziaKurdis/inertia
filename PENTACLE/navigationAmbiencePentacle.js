@@ -255,10 +255,9 @@
     }
     
     function manageAstre(rotation, parentID, hue) {
-        print("PENTACLE: Manage Astre!");//############################################### DEBUG
         if (starID === Uuid.NONE) {
             //create
-            starID = Entities.AddEntity({
+            starID = Entities.addEntity({
                 "name": "STAR",
                 "parentID": parentID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
