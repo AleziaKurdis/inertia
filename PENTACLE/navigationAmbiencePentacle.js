@@ -11,6 +11,8 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
+    print("Uuid.NONE = " + Uuid.NONE);
+    print("Uuid.NULL = " + Uuid.NULL);
     var ROOT = Script.resolvePath('').split("navigationAmbiencePentacle.js")[0];
     var isInitiated = false;
     var universeDimension;
