@@ -46,6 +46,7 @@
     var starID = Uuid.NONE;
     var fireMatId = Uuid.NONE;
     var STAR_DIAMETER = 500;
+    var STAR_DIST = 4000;
     
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
@@ -260,7 +261,7 @@
                 "name": "STAR",
                 "parentID": parentID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
                 "localRotation": rotation,
                 "type": "Shape",
                 "shape": "Sphere",
@@ -271,6 +272,7 @@
         } else {
             //edit
             Entities.editEntity(starID, {
+                "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
                 "localRotation": rotation
             });
         }
