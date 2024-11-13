@@ -255,6 +255,7 @@
     }
     
     function manageAstre(rotation, parentID, hue) {
+        print("PENTACLE: Manage Astre!");//############################################### DEBUG
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.AddEntity({
@@ -309,7 +310,7 @@
                     "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
                     "name": "plasma-material",
                     "materialURL": "materialData",
-                    "priority": 1,
+                    "priority": 2,
                     "materialData": JSON.stringify(materialContent)
                 }, "local");
             } else {
