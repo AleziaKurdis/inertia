@@ -19,6 +19,7 @@
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
+    var skyLap = 20;
 
     var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -42,6 +43,10 @@
     var thunderInjector;
 
     var zoneID = Uuid.NONE;
+    var starID = Uuid.NONE;
+    var fireMatId = Uuid.NONE;
+    var STAR_DIAMETER = 500;
+    
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
@@ -98,13 +103,18 @@
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             updateNavigation();
+            skyLap = skyLap - 1;
+            if (skyLap <= 0) {
+                skyLap = 20;
+                generateSky(thisEntityID);
+            }
             today = new Date();
             processTimer = today.getTime();
         }  
     }
 
     function shutdown() {
-        if (isInitiated){            
+        if (isInitiated){
             Script.update.disconnect(myTimer);
             if (astrolithID != Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
@@ -118,6 +128,12 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NONE;
             }
+            if (starID !== Uuid.NONE) {
+                Entities.deleteEntity(starID);
+                starID = Uuid.NONE;
+            }
+            fireMatId = Uuid.NONE;
+            
             if (lightningsID !== Uuid.NONE) {
                 Entities.deleteEntity(lightningsID);
                 lightningsID = Uuid.NONE;
@@ -138,7 +154,8 @@
 
         var today = new Date();
         processTimer = today.getTime();
-    
+        skyLap = 20;
+        
         Script.update.connect(myTimer);
     }
 
@@ -149,66 +166,159 @@
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
 
-        
-        zoneID = Entities.addEntity({
-            "type": "Zone",
-            "name": "PENTACLE_(!)_Z0N3",
-            "dimensions": {
-                "x": universeDimension.x - 20,
-                "y": universeDimension.y - 20,
-                "z": universeDimension.z - 20
-            },
-            "parentID": entityID,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": zoneRotation,
-            "grab": {
-                "grabbable": false
-            },
-            "shapeType": "sphere",
-            "keyLight": {
-                "color": {
-                    "red": skycolor[0],
-                    "green": skycolor[1],
-                    "blue": skycolor[2]
+        if (zoneID === Uuid.NONE) {
+            zoneID = Entities.addEntity({
+                "type": "Zone",
+                "name": "PENTACLE_(!)_Z0N3",
+                "dimensions": {
+                    "x": universeDimension.x - 20,
+                    "y": universeDimension.y - 20,
+                    "z": universeDimension.z - 20
                 },
-                "intensity": 2,
-                "direction": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 1
+                "parentID": entityID,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "localRotation": zoneRotation,
+                "grab": {
+                    "grabbable": false
                 },
-                "castShadows": true,
-                "shadowBias": 0.02,
-                "shadowMaxDistance": 100
-            },
-            "ambientLight": {
-                "ambientIntensity": 0.5,
-                "ambientURL": skyTextureUrl,
-                "ambientColor": {
-                    "red": skycolor[0],
-                    "green": skycolor[1],
-                    "blue": skycolor[2]
+                "shapeType": "sphere",
+                "keyLight": {
+                    "color": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    },
+                    "intensity": 2,
+                    "direction": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "castShadows": true,
+                    "shadowBias": 0.02,
+                    "shadowMaxDistance": 100
+                },
+                "ambientLight": {
+                    "ambientIntensity": 0.5,
+                    "ambientURL": skyTextureUrl,
+                    "ambientColor": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    }
+                },
+                "skybox": {
+                    "color": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    },
+                    "url": skyTextureUrl
+                },
+                "bloom": {
+                    "bloomIntensity": 0.5
+                },
+                "keyLightMode": "enabled",
+                "ambientLightMode": "enabled",
+                "skyboxMode": "enabled",
+                "hazeMode": "disabled",
+                "bloomMode": "enabled"
+            },"local");
+        } else {
+            Entities.editEntity(zoneID, {
+                "localRotation": zoneRotation,
+                "keyLight": {
+                    "color": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    }
+                },
+                "ambientLight": {
+                    "ambientColor": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    }
+                },
+                "skybox": {
+                    "color": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    }
                 }
-            },
-            "skybox": {
-                "color": {
-                    "red": skycolor[0],
-                    "green": skycolor[1],
-                    "blue": skycolor[2]
-                },
-                "url": skyTextureUrl
-            },
-            "bloom": {
-                "bloomIntensity": 0.5
-            },
-            "keyLightMode": "enabled",
-            "ambientLightMode": "enabled",
-            "skyboxMode": "enabled",
-            "hazeMode": "disabled",
-            "bloomMode": "enabled"
-        },"local");
+            });
+        }
+        manageAstre(zoneRotation, zoneID, hue);
     }
     
+    function manageAstre(rotation, parentID, hue) {
+        if (starID === Uuid.NONE) {
+            //create
+            starID = Entities.AddEntity({
+                "name": "STAR",
+                "parentID": parentID,
+                "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "localRotation": rotation,
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
+                "renderWithZones": [parentID],
+                "damping": 0
+            }, "local");
+        } else {
+            //edit
+            Entities.editEntity(starID, {
+                "localRotation": rotation
+            });
+        }
+        manageStarMaterial(hue);
+    }
+
+   function manageStarMaterial(hue) {
+        if (starId !== Uuid.NONE) {
+            
+            var plasmaColor = hslToRgb(hue, 1, 0.61);
+            var bloomFactor = 4;
+            
+            var materialContent = {
+                "materialVersion": 1,
+                "materials": [
+                    {
+                        "name": "plasma",
+                        "albedo": [1, 1, 1],
+                        "metallic": 1,
+                        "roughness": 1,
+                        "emissive": [(plasmaColor[0]/255) * bloomFactor, (plasmaColor[1]/255) * bloomFactor, (plasmaColor[2]/255) * bloomFactor],
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+            
+            if (fireMatId === Uuid.NONE) {
+                //CREATE
+                fireMatId = Entities.addEntity({
+                    "type": "Material",
+                    "parentID": starId,
+                    "renderWithZones": [zoneID],
+                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "name": "plasma-material",
+                    "materialURL": "materialData",
+                    "priority": 1,
+                    "materialData": JSON.stringify(materialContent)
+                }, "local");
+            } else {
+                //UPDATE
+                Entities.editEntity(fireMatId, {
+                    "materialData": JSON.stringify(materialContent)
+                });
+            }
+        }
+    }
+
     function updateNavigation() {
         if (isInitiated){
             var myAvPos = MyAvatar.position;
