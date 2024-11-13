@@ -280,7 +280,7 @@
     }
 
    function manageStarMaterial(hue) {
-        if (starId !== Uuid.NONE) {
+        if (starID !== Uuid.NONE) {
             
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var bloomFactor = 4;
@@ -304,7 +304,7 @@
                 //CREATE
                 fireMatId = Entities.addEntity({
                     "type": "Material",
-                    "parentID": starId,
+                    "parentID": starID,
                     "renderWithZones": [zoneID],
                     "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
                     "name": "plasma-material",
