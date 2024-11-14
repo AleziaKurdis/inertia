@@ -11,8 +11,6 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
-    print("Uuid.NONE = " + Uuid.NONE);
-    print("Uuid.NULL = " + Uuid.NULL);
     var ROOT = Script.resolvePath('').split("navigationAmbiencePentacle.js")[0];
     var isInitiated = false;
     var universeDimension;
@@ -262,13 +260,14 @@
         if (offsetAzimuth >= 360.00) { 
             offsetAzimuth = offsetAzimuth - 360.00;
         }
-        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": offsetAzimuth, "z": 0.0} );
+        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": 0.0, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
                 "name": "STAR",
+                "parentID": zoneID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "position": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
+                "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
