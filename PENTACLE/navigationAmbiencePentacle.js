@@ -258,7 +258,7 @@
     
     function manageAstre(hue) {
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
-        var rotation = Quat.fromVec3Degrees( {"x": 42.0, "y": azimuth + 7, "z": 0.0} );
+        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": azimuth + 12, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
