@@ -253,17 +253,18 @@
                 }
             });
         }
-        manageAstre(zoneRotation, zoneID, hue);
+        manageAstre(hue);
     }
     
-    function manageAstre(rotation, hue) {
+    function manageAstre(hue) {
+        var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
+        var rotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth + 4, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
                 "name": "STAR",
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
-                "localRotation": rotation,
+                "position": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
@@ -274,7 +275,6 @@
             //edit
             Entities.editEntity(starID, {
                 "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
-                "localRotation": rotation
             });
         }
         manageStarMaterial(hue);
@@ -307,7 +307,7 @@
                     "type": "Material",
                     "parentID": starID,
                     "renderWithZones": [zoneID],
-                    "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
+                    "position": universeCenter,
                     "name": "plasma-material",
                     "materialURL": "materialData",
                     "priority": 2,
