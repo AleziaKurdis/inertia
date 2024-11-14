@@ -260,7 +260,7 @@
         if (offsetAzimuth >= 360.00) { 
             offsetAzimuth = offsetAzimuth - 360.00;
         }
-        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": 0.0, "z": 0.0} );
+        var rotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
