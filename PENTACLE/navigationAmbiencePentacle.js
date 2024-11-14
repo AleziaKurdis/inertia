@@ -45,7 +45,7 @@
     var zoneID = Uuid.NONE;
     var starID = Uuid.NONE;
     var fireMatId = Uuid.NONE;
-    var STAR_DIAMETER = 200;
+    var STAR_DIAMETER = 90;
     var STAR_DIST = 6000;
     
     var thisEntityID;
