@@ -258,6 +258,7 @@
     
     function manageAstre(hue) {
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
+        print("azimuth:" + azimuth);//############################################################################### DEBUG-REMOVE
         var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": azimuth + 12, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
