@@ -47,7 +47,7 @@
     var zoneID = Uuid.NONE;
     var starID = Uuid.NONE;
     var fireMatId = Uuid.NONE;
-    var STAR_DIAMETER = 450;
+    var STAR_DIAMETER = 400;
     var STAR_DIST = 4000;
     
     var thisEntityID;
@@ -258,7 +258,7 @@
     
     function manageAstre(hue) {
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
-        var rotation = Quat.fromVec3Degrees( {"x": 41.0, "y": azimuth + 5, "z": 0.0} );
+        var rotation = Quat.fromVec3Degrees( {"x": 42.0, "y": azimuth + 7, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
