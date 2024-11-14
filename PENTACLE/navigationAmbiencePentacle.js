@@ -163,7 +163,7 @@
     }
 
     function generateSky(entityID) {
-        var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
+        var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
         var zoneRotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/darkness.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
@@ -257,9 +257,12 @@
     }
     
     function manageAstre(hue) {
-        var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 9);
-        print("azimuth:" + azimuth);//############################################################################### DEBUG-REMOVE
-        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": azimuth + 12, "z": 0.0} );
+        var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
+        var offsetAzimuth = azimuth + 12;
+        if (offsetAzimuth >= 360.00) { 
+            offsetAzimuth = offsetAzimuth - 360.00;
+        }
+        var rotation = Quat.fromVec3Degrees( {"x": 44.0, "y": offsetAzimuth, "z": 0.0} );
         if (starID === Uuid.NONE) {
             //create
             starID = Entities.addEntity({
