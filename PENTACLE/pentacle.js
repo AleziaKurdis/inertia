@@ -56,7 +56,7 @@
         if (antiHue >= 1) {
             antiHue = antiHue - 1;
         }
-        var plasmaColor = hslToRgb(antiHue, 1, 0.61);
+        var plasmaColor = hslToRgb(antiHue, 1, 0.55);
         var bloomFactor = 3;
         
         var materialContent = {

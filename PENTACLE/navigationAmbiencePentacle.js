@@ -375,7 +375,7 @@
     function manageStarMaterial(hue) {
         if (starID !== Uuid.NONE) {
             
-            var plasmaColor = hslToRgb(hue, 1, 0.61);
+            var plasmaColor = hslToRgb(hue, 1, 0.55);
             var bloomFactor = 4;
             
             var materialContent = {
