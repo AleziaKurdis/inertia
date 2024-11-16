@@ -45,6 +45,9 @@
     var zoneID = Uuid.NONE;
     var starID = Uuid.NONE;
     var fireMatId = Uuid.NONE;
+    var starLightID = Uuid.NONE;
+    var monthaID = Uuid.NONE;
+    var yeraID = Uuid.NONE;
     var STAR_DIAMETER = 90;
     var STAR_DIST = 6000;
     
@@ -134,6 +137,9 @@
                 starID = Uuid.NONE;
             }
             fireMatId = Uuid.NONE;
+            starLightID = Uuid.NONE;
+            monthaID = Uuid.NONE;
+            yeraID = Uuid.NONE;
             
             if (lightningsID !== Uuid.NONE) {
                 Entities.deleteEntity(lightningsID);
@@ -280,10 +286,93 @@
                 "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
             });
         }
+        manageStarLight(hue);
+        managePlanets(); //Montha and Yera
         manageStarMaterial(hue);
     }
-
-   function manageStarMaterial(hue) {
+    
+    function manageStarLight(hue) {
+        if (starID !== Uuid.NONE) {
+            var lightColor = hslToRgb(hue, 1, 0.57);
+            if (starLightID === Uuid.NONE) {
+                starLightID = Entities.addEntity({
+                    "name": "Star Light",
+                    "parentID": starID,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "type": "Light",
+                    "dimensions": {"x": 1000.0, "y": 1000.0, "z": 1000.0},
+                    "color": {
+                        "red": lightColor[0],
+                        "green": lightColor[1],
+                        "blue": lightColor[2]
+                    },
+                    "intensity": 30,
+                    "falloffRadius": 8
+                }, "local");
+            } else {
+                Entities.editEntity(starLightID, {
+                    "color": {
+                        "red": lightColor[0],
+                        "green": lightColor[1],
+                        "blue": lightColor[2]
+                    }
+                });
+            }
+        }
+    }
+    
+    function managePlanets() {
+        if (starID !== Uuid.NONE) {
+            //Montha
+            var MONTHA_DISTANCE = 300;
+            var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 36);
+            var rotation = Quat.fromVec3Degrees( {"x": 0.0, "y": azimuth, "z": 0.0} );
+            if (monthaID === Uuid.NONE) {
+                monthaID = Entities.addEntity({
+                    "name": "Planet  Montha",
+                    "parentID": starID,
+                    "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -300}),
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "dimensions": {"x": 20, "y": 20, "z": 20},
+                    "color": {
+                        "red": 220,
+                        "green": 220,
+                        "blue": 220
+                    }
+                }, "local");
+            } else {
+                Entities.editEntity(monthaID, {
+                    "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -MONTHA_DISTANCE}),
+                });
+            }
+            //Yera
+            var YERA_DISTANCE = 600;
+            azimuth = GetCurrentCycleValue(360, DAY_DURATION * 360);
+            rotation = Quat.fromVec3Degrees( {"x": 0.0, "y": azimuth, "z": 0.0} );
+            if (yeraID === Uuid.NONE) {
+                yeraID = Entities.addEntity({
+                    "name": "Planet Yera",
+                    "parentID": starID,
+                    "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -YERA_DISTANCE}),
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
+                    "color": {
+                        "red": 180,
+                        "green": 180,
+                        "blue": 180
+                    }
+                }, "local");
+            } else {
+                Entities.editEntity(yeraID, {
+                    "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -YERA_DISTANCE}),
+                });
+            }
+        }
+    }
+    
+    function manageStarMaterial(hue) {
         if (starID !== Uuid.NONE) {
             
             var plasmaColor = hslToRgb(hue, 1, 0.61);
