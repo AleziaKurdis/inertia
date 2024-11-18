@@ -16,7 +16,7 @@
 var ROOT = Script.resolvePath('').split("aCAgentTest-1.js")[0];
 var origin = {x: -11, y: 1.1, z: -6};
 var spread = 20; // meters
-var turnSpread = 90; // How many degrees should turn from front range over.
+var turnSpread = 90.0; // How many degrees should turn from front range over.
 var animationData = {
     "url": ROOT + "animations/walk_fwd.fbx", 
     "lastFrame": 35
@@ -36,7 +36,7 @@ Agent.isAvatar = true;
 function coord() { return (Math.random() * spread) - (spread / 2); }  // randomly distribute a coordinate zero += spread/2.
 Script.setTimeout(function () {
     Avatar.position = Vec3.sum(origin, {x: coord(), y: 0, z: coord()});
-    Avatar.orientation = Quat.fromPitchYawRollDegrees(0, turnSpread * (Math.random() - 0.5), 0);
+    Avatar.orientation = Quat.fromVec3Degrees({"x": 0.0, "y": turnSpread * (Math.random() - 0.5),"z": 0.0});
     print("Starting at", JSON.stringify(Avatar.position));
     Avatar.startAnimation(animationData.url, animationData.fps || 30, 1, true, false, animationData.firstFrame || 0, animationData.lastFrame);
 }, millisecondsToWaitBeforeStarting);
