@@ -172,6 +172,7 @@
         var skyTextureUrl = ROOT + "images/darkness.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
+        var fullColor = hslToRgb(hue, 1, 0.5);
 
         if (zoneID === Uuid.NONE) {
             zoneID = Entities.addEntity({
@@ -209,16 +210,16 @@
                     "ambientIntensity": 0.5,
                     "ambientURL": skyTextureUrl,
                     "ambientColor": {
-                        "red": skycolor[0],
-                        "green": skycolor[1],
-                        "blue": skycolor[2]
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
                     }
                 },
                 "skybox": {
                     "color": {
-                        "red": skycolor[0],
-                        "green": skycolor[1],
-                        "blue": skycolor[2]
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
                     },
                     "url": skyTextureUrl
                 },
@@ -243,16 +244,16 @@
                 },
                 "ambientLight": {
                     "ambientColor": {
-                        "red": skycolor[0],
-                        "green": skycolor[1],
-                        "blue": skycolor[2]
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
                     }
                 },
                 "skybox": {
                     "color": {
-                        "red": skycolor[0],
-                        "green": skycolor[1],
-                        "blue": skycolor[2]
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
                     }
                 }
             });
