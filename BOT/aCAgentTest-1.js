@@ -14,7 +14,7 @@
 // In Domain Server Settings, go to scripts and give the url of this script. Press '+', and then 'Save and restart'.
 
 var ROOT = Script.resolvePath('').split("aCAgentTest-1.js")[0];
-var origin = {x: -11, y: 0.1, z: -6};
+var origin = {x: -11, y: 1.1, z: -6};
 var spread = 20; // meters
 var turnSpread = 90; // How many degrees should turn from front range over.
 var animationData = {
