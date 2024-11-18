@@ -275,6 +275,7 @@
                 "parentID": zoneID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
                 "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
+                "localRotation": Quat.fromVec3Degrees( {"x": 30.0, "y": 0.0, "z": 0.0} ),
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
@@ -325,7 +326,7 @@
     function managePlanets() {
         if (starID !== Uuid.NONE) {
             //Montha
-            var MONTHA_DISTANCE = 300;
+            var MONTHA_DISTANCE = 400;
             var azimuth = GetCurrentCycleValue(360, DAY_DURATION * 36);
             var rotation = Quat.fromVec3Degrees( {"x": 0.0, "y": azimuth, "z": 0.0} );
             if (monthaID === Uuid.NONE) {
@@ -335,7 +336,7 @@
                     "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -300}),
                     "type": "Shape",
                     "shape": "Sphere",
-                    "dimensions": {"x": 20, "y": 20, "z": 20},
+                    "dimensions": {"x": 30, "y": 30, "z": 30},
                     "color": {
                         "red": 220,
                         "green": 220,
@@ -348,7 +349,7 @@
                 });
             }
             //Yera
-            var YERA_DISTANCE = 600;
+            var YERA_DISTANCE = 900;
             azimuth = GetCurrentCycleValue(360, DAY_DURATION * 360);
             rotation = Quat.fromVec3Degrees( {"x": 0.0, "y": azimuth, "z": 0.0} );
             if (yeraID === Uuid.NONE) {
@@ -358,7 +359,7 @@
                     "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -YERA_DISTANCE}),
                     "type": "Shape",
                     "shape": "Sphere",
-                    "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
+                    "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
                     "color": {
                         "red": 180,
                         "green": 180,
