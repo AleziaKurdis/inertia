@@ -24,7 +24,7 @@ var animationData = {
 
 var models = [ 
     {"url": "http://metaverse.bashora.com/avatars/ALEZIA/avatar.fst?dna=AE_AA_AA_AB_AG_AA_AA", "displayName": "Nebula"}
-};
+];
 
 var chosenAvatar = Math.round(Math.random() * (models.length - 1));
 Avatar.skeletonModelURL = models[chosenAvatar].url;
