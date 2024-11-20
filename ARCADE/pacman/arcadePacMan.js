@@ -40,7 +40,7 @@
         }
     };
 
-    webID.webEventReceived.connect(function (message) {
+    Entities.webEventReceived.connect(function (message) {
         if (typeof message === "string") {
             var d = new Date();
             var n = d.getTime();
