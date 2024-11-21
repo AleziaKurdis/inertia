@@ -29,7 +29,7 @@
             "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
             "localPosition": {"x": 0.0, "y": 1.0, "z": 0.0},
             "sourceUrl": ROOT + "index.html",
-            "dpi": 24,
+            "dpi": 30,
             "maxFPS": 60
         }, "local");
         print("webID: " + webID); //######################################### DEBUG/REMOVE
