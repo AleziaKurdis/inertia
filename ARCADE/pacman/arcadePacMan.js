@@ -30,6 +30,7 @@
             "dpi": 12,
             "maxFPS": 60
         }, "local");
+        print("webID: " + webID); //######################################### DEBUG/REMOVE
     };
 
     this.unload = function(entityID) {
