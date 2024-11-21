@@ -25,11 +25,10 @@
             "name": "arcade game screen",
             "parentID": entityID,
             "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
-            "localPosition":  {"x": 0.0, "y": 0.0, "z": 0.0},
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
             "sourceUrl": ROOT + "index.html",
             "dpi": 12,
-            "maxFPS": 60,
-            "ignorePickIntersection": true
+            "maxFPS": 60
         }, "local");
     };
 
