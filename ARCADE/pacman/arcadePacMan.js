@@ -9,7 +9,9 @@
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
-(function() {
+(function(){
+    print("PACMAN STARTED!");
+    
     var jsMainFileName = "arcadePacMan.js"; 
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     
@@ -57,4 +59,4 @@
     webID.emitScriptEvent(stringmessage);
 */
 
-}());
+})
