@@ -18,21 +18,41 @@
     var channel = "overte.ak.arcadeGame.pacman";
     var webID = Uuid.NONE;
     var thisEntityID;
+    var thisPosition;
+    
+    var UPDATE_TIMER_INTERVAL = 500;
+    var processTimer = 0;
+    
+    var SCREEN_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0});
+    
+    var INTERACTION_DISTANCE = 0.03;
+    var BUTTON_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var MOVE_UP_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var MOVE_DOWN_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var MOVE_LEFT_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var MOVE_RIGHT_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
+        thisPosition = Entities.getEntityProperties(entityID, ["position"]).position;
         
         webID = Entities.addEntity({
             "type": "Web",
             "name": "arcade game screen",
             "parentID": entityID,
             "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
-            "localPosition": {"x": 0.0, "y": 1.0, "z": 0.0},
+            "localPosition": SCREEN_RELATIVE_POSITION,
+            "localRoatation": SCREEN_RELATIVE_ROTATION,
             "sourceUrl": ROOT + "index.html",
-            "dpi": 30,
+            "dpi": 40,
             "maxFPS": 60
         }, "local");
-        print("webID: " + webID); //######################################### DEBUG/REMOVE
+        
+        var today = new Date();
+        processTimer = today.getTime();
+        
+        Script.update.connect(myTimer);
     };
 
     this.unload = function(entityID) {
@@ -40,7 +60,36 @@
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
+        
+        Script.update.disconnect(myTimer);
     };
+
+    function myTimer(deltaTime) {
+        var today = new Date();
+        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+            
+            checkHands();
+            
+            today = new Date();
+            processTimer = today.getTime();
+        }  
+    }
+
+    function checkHands() {
+        var rightHandWorldPosition = Vec3.sum(MyAvatar.Position, MyAvatar.rightHandPosition);
+        var leftHandWorldPosition = Vec3.sum(MyAvatar.Position, MyAvatar.leftHandPosition);
+        var messageToSend;
+        
+        if (Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE ||
+            Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE) {
+            messageToSend = {
+                "channel": channel,
+                "action": "START-PAUSE"
+            }
+            webID.emitScriptEvent(messageToSend);
+        }
+        
+    }
 
     Entities.webEventReceived.connect(function (message) {
         if (typeof message === "string") {
