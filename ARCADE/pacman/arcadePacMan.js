@@ -27,7 +27,7 @@
     var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0});
     
     var INTERACTION_DISTANCE = 0.03;
-    var BUTTON_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
+    var BUTTON_RELATIVE_POSITION = {"x": 0.0, "y": 0.08, "z": 0.0};
     var MOVE_UP_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
     var MOVE_DOWN_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
     var MOVE_LEFT_RELATIVE_POSITION = {"x": 0.0, "y": 1.0, "z": 0.0};
@@ -45,7 +45,7 @@
             "localPosition": SCREEN_RELATIVE_POSITION,
             "localRoatation": SCREEN_RELATIVE_ROTATION,
             "sourceUrl": ROOT + "index.html",
-            "dpi": 40,
+            "dpi": 50,
             "maxFPS": 60
         }, "local");
         
@@ -85,7 +85,8 @@
             messageToSend = {
                 "channel": channel,
                 "action": "START-PAUSE"
-            }
+            };
+            
             webID.emitScriptEvent(messageToSend);
         }
         
