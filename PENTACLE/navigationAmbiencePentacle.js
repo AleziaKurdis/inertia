@@ -302,14 +302,14 @@
                     "parentID": starID,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "type": "Light",
-                    "dimensions": {"x": 1000.0, "y": 1000.0, "z": 1000.0},
+                    "dimensions": {"x": 1500.0, "y": 1500.0, "z": 1500.0},
                     "color": {
                         "red": lightColor[0],
                         "green": lightColor[1],
                         "blue": lightColor[2]
                     },
                     "intensity": 30,
-                    "falloffRadius": 8
+                    "falloffRadius": 500
                 }, "local");
             } else {
                 Entities.editEntity(starLightID, {
