@@ -275,7 +275,7 @@
                 "parentID": zoneID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
                 "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
-                "localRotation": Quat.fromVec3Degrees( {"x": 30.0, "y": 0.0, "z": 0.0} ),
+                "localRotation": Quat.fromVec3Degrees( {"x": 20.0, "y": 0.0, "z": 0.0} ),
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
@@ -302,13 +302,13 @@
                     "parentID": starID,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "type": "Light",
-                    "dimensions": {"x": 1500.0, "y": 1500.0, "z": 1500.0},
+                    "dimensions": {"x": 2000.0, "y": 2000.0, "z": 2000.0},
                     "color": {
                         "red": lightColor[0],
                         "green": lightColor[1],
                         "blue": lightColor[2]
                     },
-                    "intensity": 30,
+                    "intensity": 18,
                     "falloffRadius": 500
                 }, "local");
             } else {
@@ -338,9 +338,9 @@
                     "shape": "Sphere",
                     "dimensions": {"x": 30, "y": 30, "z": 30},
                     "color": {
-                        "red": 220,
-                        "green": 220,
-                        "blue": 220
+                        "red": 210,
+                        "green": 210,
+                        "blue": 210
                     }
                 }, "local");
             } else {
@@ -361,9 +361,9 @@
                     "shape": "Sphere",
                     "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
                     "color": {
-                        "red": 180,
-                        "green": 180,
-                        "blue": 180
+                        "red": 190,
+                        "green": 190,
+                        "blue": 190
                     }
                 }, "local");
             } else {
@@ -377,7 +377,7 @@
     function manageStarMaterial(hue) {
         if (starID !== Uuid.NONE) {
             
-            var plasmaColor = hslToRgb(hue, 1, 0.55);
+            var plasmaColor = hslToRgb(hue, 1, 0.6);
             var bloomFactor = 4;
             
             var materialContent = {
