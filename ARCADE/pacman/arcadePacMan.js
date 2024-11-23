@@ -76,11 +76,9 @@
     }
 
     function checkHands() {
-        print("RIGHT HAND: " + JSON.stringify(MyAvatar.rightHandPosition));
-        
-        /*
-        var rightHandWorldPosition = Vec3.sum(MyAvatar.Position, MyAvatar.rightHandPosition);
-        var leftHandWorldPosition = Vec3.sum(MyAvatar.Position, MyAvatar.leftHandPosition);
+
+        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, MyAvatar.rightHandPosition);
+        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, MyAvatar.leftHandPosition);
         
         var messageToSend;
         
@@ -95,7 +93,7 @@
             print("RIGHT: " + JSON.stringify(Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE)); //################# DEBUG TRASH
             print("LEFT: " + JSON.stringify(Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE)); //################# DEBUG TRASH
         }
-        */
+        
     }
 
     Entities.webEventReceived.connect(function (message) {
