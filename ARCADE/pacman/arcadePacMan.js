@@ -100,7 +100,7 @@
     }
 
     Entities.webEventReceived.connect(function (message) {
-        if (typeof message === "string") {
+        if (typeof message === "string" && message.indexOf(channel) > -1) {
             var d = new Date();
             var n = d.getTime();
             var instruction = JSON.parse(message);
@@ -109,8 +109,6 @@
                     //Call a function to do something here maybe to play sounds
                 }
             }
-        } else {
-            print("Type of" + typeof message); 
         }
     });
 
