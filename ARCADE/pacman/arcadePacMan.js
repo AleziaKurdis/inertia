@@ -100,16 +100,18 @@
     }
 
     Entities.webEventReceived.connect(function (message) {
-        //if (typeof message === "string") {
+        if (typeof message === "string") {
             var d = new Date();
             var n = d.getTime();
             var instruction = JSON.parse(message);
             if (instruction.channel === channel) {
                 if (instruction.action === "ACTION_NAME") {
-                    //Call a function to do something here
+                    //Call a function to do something here maybe to play sounds
                 }
             }
-        //}
+        } else {
+            print("Type of" + typeof message); 
+        }
     });
 
 
