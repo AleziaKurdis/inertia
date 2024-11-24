@@ -89,7 +89,7 @@
                 "action": "START-PAUSE"
             };
             
-            webID.emitScriptEvent(messageToSend);
+            Entities.emitScriptEvent(thisEntityID, messageToSend);
             print("RIGHT: " + JSON.stringify(Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
             print("LEFT: " + JSON.stringify(Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
         }
@@ -112,8 +112,5 @@
         }
     });
 
-/*    //to send
-    webID.emitScriptEvent(stringmessage);
-*/
 
 })
