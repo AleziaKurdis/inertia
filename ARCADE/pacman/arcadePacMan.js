@@ -77,8 +77,8 @@
 
     function checkHands() {
 
-        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, MyAvatar.rightHandPosition);
-        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, MyAvatar.leftHandPosition);
+        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
+        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
         
         var messageToSend;
         
