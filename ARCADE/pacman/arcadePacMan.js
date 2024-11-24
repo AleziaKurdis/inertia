@@ -100,7 +100,7 @@
     }
 
     Entities.webEventReceived.connect(function (message) {
-        if (typeof message === "string") {
+        //if (typeof message === "string") {
             var d = new Date();
             var n = d.getTime();
             var instruction = JSON.parse(message);
@@ -109,7 +109,7 @@
                     //Call a function to do something here
                 }
             }
-        }
+        //}
     });
 
 
