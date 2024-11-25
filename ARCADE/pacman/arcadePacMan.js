@@ -76,27 +76,33 @@
     }
 
     function checkHands() {
-
+        var RIGHT_HAND_INDEX = 1;
+        var LEFT_HAND_INDEX = 0;
+        
         var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
         var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
         
         var messageToSend;
         
-        if (Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE ||
-            Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)) < INTERACTION_DISTANCE) {
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
             messageToSend = {
                 "channel": channel,
                 "action": "START-PAUSE"
             };
             
             Entities.emitScriptEvent(thisEntityID, messageToSend);
-            print("RIGHT: " + JSON.stringify(Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
-            print("LEFT: " + JSON.stringify(Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
+            if (rightDistance < leftDistance) {
+                Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
+            } else {
+                Controller.triggerShortHapticPulse(0.3, LEFT_HAND_INDEX);
+            }
+            
+            print("RIGHT: " + rightDistance); //################# DEBUG TRASH
+            print("LEFT: " + leftDistance); //################# DEBUG TRASH
         }
         
-        //print("RIGHT: " + JSON.stringify(Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
-        //print("LEFT: " + JSON.stringify(Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION)))); //################# DEBUG TRASH
-
     }
 
     Entities.webEventReceived.connect(function (message) {
