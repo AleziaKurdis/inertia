@@ -43,7 +43,7 @@
             "parentID": entityID,
             "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
             "localPosition": SCREEN_RELATIVE_POSITION,
-            "localRoatation": SCREEN_RELATIVE_ROTATION,
+            "localRotation": SCREEN_RELATIVE_ROTATION,
             "sourceUrl": ROOT + "index.html",
             "dpi": 50,
             "maxFPS": 60
