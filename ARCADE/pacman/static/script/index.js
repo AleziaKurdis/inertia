@@ -10,6 +10,9 @@
 
 //Main program, business logic
 (function(){
+    var channel = "overte.ak.arcadeGame.pacman";
+    var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
+    
 	var _COIGIG = [		//Levels
 		{				//Level 1
 			'map':[
@@ -582,7 +585,7 @@
 			x:game.width-10,
 			y:game.height-5,
 			draw:function(context){
-				var text = '©passer-by.com';
+				var text = '© passer-by.com';
 				context.font = '12px/20px PressStart2P';
 				context.textAlign = 'left';
 				context.textBaseline = 'top';
@@ -593,7 +596,7 @@
 				context.fillText(text,this.x,this.y);
 			}
 		}).bind('click',function(){
-			window.open('https://passer-by.com');
+			//window.open('https://passer-by.com');
 		});
 		//event binding
 		stageA.bind('keydown',function(e){
@@ -604,6 +607,17 @@
 				break;
 			}
 		});
+        
+        EventBridge.scriptEventReceived.connect(function (message) {
+            //alert("MESSAGE NEW FROM IDLE: " + message); //=================DEBUG/REMOVE
+            var messageObj = JSON.parse(message);
+            if (messageObj.channel === channel) {
+                if (messageObj.action === "START-PAUSE") {
+                    game.nextStage();
+                }
+            }
+        });
+        
 	})();
 	//Game main program
     var stageC;
@@ -1036,6 +1050,25 @@
 					break;
 				}
 			});
+            
+            EventBridge.scriptEventReceived.connect(function (message) {
+                var messageObj = JSON.parse(message);
+                if (messageObj.channel === channel) {
+                    if (messageObj.action === "UP") {
+                        player.control = {orientation:3};
+                    } else if (messageObj.action === "DOWN") {
+                        player.control = {orientation:1};
+                    } else if (messageObj.action === "LEFT") {
+                        player.control = {orientation:2};
+                    } else if (messageObj.action === "RIGHT") {
+                        player.control = {orientation:0};
+                    } else if (messageObj.action === "START-PAUSE") {
+                        stageC.status = stageC.status==2?1:2;
+                    }
+                }
+            });
+            
+            
 		});
 	})();
 	//end screen
@@ -1079,6 +1112,18 @@
 				break;
 			}
 		});
+        
+        EventBridge.scriptEventReceived.connect(function (message) {
+            var messageObj = JSON.parse(message);
+            if (messageObj.channel === channel) {
+                if (messageObj.action === "START-PAUSE") {
+                    _SCORE = 0;
+                    _LIFE = 5;
+                    game.setStage(1);
+                }
+            }
+        });
+
 	})();
 
 	const myFont = new FontFace('PressStart2P', 'url(./static/font/PressStart2P.ttf)');

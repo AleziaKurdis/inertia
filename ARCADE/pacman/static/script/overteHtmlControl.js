@@ -12,7 +12,7 @@ var channel = "overte.ak.arcadeGame.pacman";
 var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
 
 
-EventBridge.scriptEventReceived.connect(function(message){
+EventBridge.scriptEventReceived.connect(function (message) {
     var messageObj = JSON.parse(message);
     if (messageObj.channel === channel) {
         if (messageObj.action === "UP") {
@@ -32,6 +32,7 @@ EventBridge.scriptEventReceived.connect(function(message){
                 player.control = {orientation:0};
             }
         } else if (messageObj.action === "START-PAUSE") {
+            alert("WOW! AYOYE!");
             switch(gameStatus) {
                 case "IDLE":
                     game.nextStage();
