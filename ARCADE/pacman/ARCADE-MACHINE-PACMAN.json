@@ -1,0 +1,27 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+        "id": "{a12191c5-4b4a-40ef-a654-e55be4684178}",
+        "type": "Model",
+        "lastEdited": 1732588319020160,
+        "name": "ARCADE MACHINE - PACMAN",
+        "dimensions": {
+            "x": 0.8256508111953735,
+            "y": 2.031501054763794,
+            "z": 0.7313109636306763
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "script": "https://aleziakurdis.github.io/inertia/ARCADE/pacman/arcadePacMan.js",
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/ARCADE/pacman/models/arcade_machine_single_PACMAN.fst",
+        "useOriginalPivot": false
+    }
+    ],
+  "Id": "{2a4fd1c1-44a1-4ece-a2f7-66d7847b3203}",
+  "Version": 147
+}
