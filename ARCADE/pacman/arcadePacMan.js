@@ -24,7 +24,7 @@
     var UPDATE_TIMER_INTERVAL = 500;
     var processTimer = 0;
     
-    var SCREEN_RELATIVE_POSITION = {"x": 0.0, "y": 0.52, "z": 0.13};
+    var SCREEN_RELATIVE_POSITION = {"x": 0.13, "y": 0.52, "z": 0.0};
     var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -18.0, "y": 90.0, "z": 0.0});
     
     var INTERACTION_DISTANCE = 0.07;
