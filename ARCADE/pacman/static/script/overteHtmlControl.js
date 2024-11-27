@@ -57,6 +57,8 @@ EventBridge.scriptEventReceived.connect(function (message) {
         };
         EventBridge.emitWebEvent(JSON.stringify(messageToSend));
     }
+    
+    document.write("LOADED!");
 });
 
 
