@@ -15,7 +15,8 @@ var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
 EventBridge.scriptEventReceived.connect(function (message) {
     var messageObj = JSON.parse(message);
     if (messageObj.channel === channel) {
-        if (messageObj.action === "UP") {
+        alert("WOW! AYOYE!");
+/*        if (messageObj.action === "UP") {
             if (gameStatus === "PLAYING") {
                 player.control = {orientation:3};
             }
@@ -32,7 +33,6 @@ EventBridge.scriptEventReceived.connect(function (message) {
                 player.control = {orientation:0};
             }
         } else if (messageObj.action === "START-PAUSE") {
-            alert("WOW! AYOYE!");
             switch(gameStatus) {
                 case "IDLE":
                     game.nextStage();
@@ -46,6 +46,7 @@ EventBridge.scriptEventReceived.connect(function (message) {
                     game.setStage(1);
             } 
         }
+        */
     }
 });
 
