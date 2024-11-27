@@ -54,8 +54,10 @@
         processTimer = today.getTime();
         
         Script.update.connect(myTimer);
-        webEntityObject = Entities.getEntityObject(webID);
-        webEntityObject.webEventReceived.connect(onWebEventReceived);
+        Script.setTimeout(function () {
+            webEntityObject = Entities.getEntityObject(webID);
+            webEntityObject.webEventReceived.connect(onWebEventReceived);
+        }, 500);
     };
 
     this.unload = function(entityID) {
@@ -96,7 +98,9 @@
                 "action": "START-PAUSE"
             };
             
-            webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
+            EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+            //webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
+            
             if (rightDistance < leftDistance) {
                 Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
             } else {
@@ -109,8 +113,8 @@
         
     }
 
-    function onWebEventReceived(message) {
-        if (typeof message === "string" && message.indexOf(channel) > -1) {
+    function onWebEventReceived(entityID, message) {
+        if (typeof message === "string" &&  entityID === webID) {
             var d = new Date();
             var n = d.getTime();
             var instruction = JSON.parse(message);
@@ -129,7 +133,8 @@
             "action": "START-PAUSE"
         };
         
-        webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
+        EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+        //webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
     }, 5000);
 
 })
