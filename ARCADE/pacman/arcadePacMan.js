@@ -17,6 +17,7 @@
     
     var channel = "overte.ak.arcadeGame.pacman";
     var webID = Uuid.NONE;
+    var webEntityObject;
     var thisEntityID;
     var thisPosition;
     
@@ -53,6 +54,7 @@
         processTimer = today.getTime();
         
         Script.update.connect(myTimer);
+        webEntityObject.webEventReceived.connect(onWebEventReceived);
     };
 
     this.unload = function(entityID) {
@@ -62,6 +64,7 @@
         }
         
         Script.update.disconnect(myTimer);
+        webEntityObject.webEventReceived.disconnect(onWebEventReceived);
     };
 
     function myTimer(deltaTime) {
@@ -105,7 +108,7 @@
         
     }
 
-    Entities.webEventReceived.connect(function (message) {
+    function onWebEventReceived(message) {
         if (typeof message === "string" && message.indexOf(channel) > -1) {
             var d = new Date();
             var n = d.getTime();
@@ -116,7 +119,7 @@
                 }
             }
         }
-    });
+    }
 
     Script.setTimeout(function () {
         print("triggered!");
