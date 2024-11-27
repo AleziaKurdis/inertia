@@ -50,17 +50,17 @@ EventBridge.scriptEventReceived.connect(function (message) {
         */
     }
     
-    function test() {
-        var messageToSend = {
-            "channel": channel,
-            "action": "TEST"
-        };
-        EventBridge.emitWebEvent(JSON.stringify(messageToSend));
-    }
-    
-    document.write("LOADED!");
+
 });
 
+function test() {
+    var messageToSend = {
+        "channel": channel,
+        "action": "TEST"
+    };
+    EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+}
 
+document.write("<font color='#ffffff'>LOADED!</font>");
 
 
