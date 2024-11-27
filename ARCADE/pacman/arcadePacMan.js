@@ -119,6 +119,7 @@
     });
 
     Script.setTimeout(function () {
+        print("triggered!");
         var messageToSend = {
             "channel": channel,
             "action": "START-PAUSE"
