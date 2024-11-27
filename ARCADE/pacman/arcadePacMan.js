@@ -118,5 +118,13 @@
         }
     });
 
+    Script.setTimeout(function () {
+        var messageToSend = {
+            "channel": channel,
+            "action": "START-PAUSE"
+        };
+        
+        Entities.emitScriptEvent(thisEntityID, messageToSend);
+    }, 5000);
 
 })
