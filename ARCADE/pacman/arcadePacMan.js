@@ -59,13 +59,13 @@
     };
 
     this.unload = function(entityID) {
+        Script.update.disconnect(myTimer);
+        webEntityObject.webEventReceived.disconnect(onWebEventReceived);
+        
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
-        
-        Script.update.disconnect(myTimer);
-        webEntityObject.webEventReceived.disconnect(onWebEventReceived);
     };
 
     function myTimer(deltaTime) {
@@ -96,7 +96,7 @@
                 "action": "START-PAUSE"
             };
             
-            webEntityObject.emitScriptEvent(thisEntityID, JSON.stringify(messageToSend));
+            webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
             if (rightDistance < leftDistance) {
                 Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
             } else {
@@ -129,7 +129,7 @@
             "action": "START-PAUSE"
         };
         
-        webEntityObject.emitScriptEvent(thisEntityID, JSON.stringify(messageToSend));
+        webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
     }, 5000);
 
 })
