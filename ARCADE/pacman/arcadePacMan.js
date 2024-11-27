@@ -96,7 +96,7 @@
                 "action": "START-PAUSE"
             };
             
-            Entities.emitScriptEvent(thisEntityID, messageToSend);
+            webEntityObject.emitScriptEvent(thisEntityID, messageToSend);
             if (rightDistance < leftDistance) {
                 Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
             } else {
@@ -129,7 +129,7 @@
             "action": "START-PAUSE"
         };
         
-        Entities.emitScriptEvent(thisEntityID, messageToSend);
+        webEntityObject.emitScriptEvent(thisEntityID, messageToSend);
     }, 5000);
 
 })
