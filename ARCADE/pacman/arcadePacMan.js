@@ -54,6 +54,7 @@
         processTimer = today.getTime();
         
         Script.update.connect(myTimer);
+        webEntityObject = Entities.getEntityObject(webID);
         webEntityObject.webEventReceived.connect(onWebEventReceived);
     };
 
