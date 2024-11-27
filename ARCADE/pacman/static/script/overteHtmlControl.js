@@ -15,6 +15,7 @@ var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
 EventBridge.scriptEventReceived.connect(function (message) {
     var messageObj = JSON.parse(message);
     if (messageObj.channel === channel) {
+        test();
         alert("WOW! AYOYE!");
 /*        if (messageObj.action === "UP") {
             if (gameStatus === "PLAYING") {
@@ -48,14 +49,16 @@ EventBridge.scriptEventReceived.connect(function (message) {
         }
         */
     }
+    
+    function test() {
+        var messageToSend = {
+            "channel": channel,
+            "action": "TEST"
+        };
+        EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+    }
 });
 
-/*
-function uninstall() { //Example of a action called to the application (.js) (you can add the property you need to this, but minimally the channel and the action.
-    var message = {
-        "channel": channel,
-        "action": "SELF_UNINSTALL"
-    };
-    EventBridge.emitWebEvent(JSON.stringify(message));
-}
-*/
+
+
+

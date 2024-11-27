@@ -111,8 +111,8 @@
             var n = d.getTime();
             var instruction = JSON.parse(message);
             if (instruction.channel === channel) {
-                if (instruction.action === "ACTION_NAME") {
-                    //Call a function to do something here maybe to play sounds
+                if (instruction.action === "TEST") {
+                    print("YES!");
                 }
             }
         }
