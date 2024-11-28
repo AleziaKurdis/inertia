@@ -114,13 +114,13 @@
             var n = d.getTime();
             var instruction = JSON.parse(message);
             if (instruction.channel === channel) {
-                if (instruction.action === "TEST") {
-                    print("YES!");
-                }
+                //if (instruction.action === "TEST") {
+                //    print("YES!");
+                //}
             }
         }
     }
-
+/*
     Script.setTimeout(function () {
         print("triggered!");
         var messageToSend = {
@@ -130,5 +130,5 @@
         
         Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
     }, 5000);
-
+*/
 })
