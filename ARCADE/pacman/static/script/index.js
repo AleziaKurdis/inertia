@@ -606,7 +606,7 @@
 			}
 		});
         
-/*        EventBridge.scriptEventReceived.connect(function (message) {
+        EventBridge.scriptEventReceived.connect(function (message) {
             //alert("MESSAGE NEW FROM IDLE: " + message); //=================DEBUG/REMOVE
             var messageObj = JSON.parse(message);
             if (messageObj.channel === channel) {
@@ -614,7 +614,7 @@
                     game.nextStage();
                 }
             }
-        });*/
+        });
         
 	})();
 	//Game main program
@@ -1049,7 +1049,7 @@
 				}
 			});
             
-/*            EventBridge.scriptEventReceived.connect(function (message) {
+            EventBridge.scriptEventReceived.connect(function (message) {
                 var messageObj = JSON.parse(message);
                 if (messageObj.channel === channel) {
                     if (messageObj.action === "UP") {
@@ -1064,7 +1064,7 @@
                         stageC.status = stageC.status==2?1:2;
                     }
                 }
-            });*/
+            });
             
             
 		});
@@ -1111,7 +1111,7 @@
 			}
 		});
         
-/*        EventBridge.scriptEventReceived.connect(function (message) {
+        EventBridge.scriptEventReceived.connect(function (message) {
             var messageObj = JSON.parse(message);
             if (messageObj.channel === channel) {
                 if (messageObj.action === "START-PAUSE") {
@@ -1120,7 +1120,7 @@
                     game.setStage(1);
                 }
             }
-        });*/
+        });
 
 	})();
 

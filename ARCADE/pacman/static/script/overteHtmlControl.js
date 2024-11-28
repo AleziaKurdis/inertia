@@ -11,7 +11,7 @@
 var channel = "overte.ak.arcadeGame.pacman";
 var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
 
-
+/*
 EventBridge.scriptEventReceived.connect(function (message) {
     var messageObj = JSON.parse(message);
     if (messageObj.channel === channel) {
@@ -61,6 +61,6 @@ function test() {
     EventBridge.emitWebEvent(JSON.stringify(messageToSend));
     document.write("<font color='#ffffff'>I've replied!</font>");
 }
-
+*/
 
 
