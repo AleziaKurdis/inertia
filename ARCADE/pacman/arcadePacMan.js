@@ -17,7 +17,6 @@
     
     var channel = "overte.ak.arcadeGame.pacman";
     var webID = Uuid.NONE;
-    var webEntityObject;
     var thisEntityID;
     var thisPosition;
     
@@ -54,15 +53,12 @@
         processTimer = today.getTime();
         
         Script.update.connect(myTimer);
-        Script.setTimeout(function () {
-            webEntityObject = Entities.getEntityObject(webID);
-            webEntityObject.webEventReceived.connect(onWebEventReceived);
-        }, 500);
+        Entities.webEventReceived.connect(onWebEventReceived);
     };
 
     this.unload = function(entityID) {
         Script.update.disconnect(myTimer);
-        webEntityObject.webEventReceived.disconnect(onWebEventReceived);
+        Entities.webEventReceived.disconnect(onWebEventReceived);
         
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
@@ -98,8 +94,7 @@
                 "action": "START-PAUSE"
             };
             
-            EventBridge.emitWebEvent(JSON.stringify(messageToSend));
-            //webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
+            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
             
             if (rightDistance < leftDistance) {
                 Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
@@ -133,8 +128,7 @@
             "action": "START-PAUSE"
         };
         
-        EventBridge.emitWebEvent(JSON.stringify(messageToSend));
-        //webEntityObject.emitScriptEvent(JSON.stringify(messageToSend));
+        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
     }, 5000);
 
 })
