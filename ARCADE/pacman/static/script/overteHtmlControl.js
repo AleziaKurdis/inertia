@@ -59,8 +59,8 @@ function test() {
         "action": "TEST"
     };
     EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+    document.write("<font color='#ffffff'>I've replied!</font>");
 }
 
-document.write("<font color='#ffffff'>LOADED!</font>");
 
 
