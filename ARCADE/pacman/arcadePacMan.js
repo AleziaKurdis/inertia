@@ -44,7 +44,7 @@
             "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
             "localPosition": SCREEN_RELATIVE_POSITION,
             "localRotation": SCREEN_RELATIVE_ROTATION,
-            "sourceUrl": ROOT + "index.html",
+            "sourceUrl": ROOT + "index.html",//ajouter grab false
             "dpi": 50,
             "maxFPS": 60
         }, "local");
@@ -86,6 +86,7 @@
         
         var messageToSend;
         
+        //START BUTTON
         var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
         var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
         if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
@@ -102,8 +103,85 @@
                 Controller.triggerShortHapticPulse(0.3, LEFT_HAND_INDEX);
             }
             
-            print("RIGHT: " + rightDistance); //################# DEBUG TRASH
-            print("LEFT: " + leftDistance); //################# DEBUG TRASH
+        }
+        
+        print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
+        //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
+        
+        //UP
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_UP_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_UP_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
+            messageToSend = {
+                "channel": channel,
+                "action": "UP"
+            };
+            
+            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+            
+            if (rightDistance < leftDistance) {
+                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+            } else {
+                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+            }
+            
+        }
+        
+        //DOWN
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_DOWN_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_DOWN_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
+            messageToSend = {
+                "channel": channel,
+                "action": "DOWN"
+            };
+            
+            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+            
+            if (rightDistance < leftDistance) {
+                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+            } else {
+                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+            }
+            
+        }
+        
+        //RIGHT
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RIGHT_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RIGHT_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
+            messageToSend = {
+                "channel": channel,
+                "action": "RIGHT"
+            };
+            
+            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+            
+            if (rightDistance < leftDistance) {
+                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+            } else {
+                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+            }
+            
+        }
+        
+        //LEFT
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_LEFT_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_LEFT_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
+            messageToSend = {
+                "channel": channel,
+                "action": "LEFT"
+            };
+            
+            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+            
+            if (rightDistance < leftDistance) {
+                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+            } else {
+                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+            }
+            
         }
         
     }
