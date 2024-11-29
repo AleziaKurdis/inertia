@@ -44,7 +44,10 @@
             "dimensions": {"x": 0.63, "y": 0.42, "z": 0.01},
             "localPosition": SCREEN_RELATIVE_POSITION,
             "localRotation": SCREEN_RELATIVE_ROTATION,
-            "sourceUrl": ROOT + "index.html",//ajouter grab false
+            "sourceUrl": ROOT + "index.html",
+            "grab": {
+                "grabbable": false
+            },
             "dpi": 50,
             "maxFPS": 60
         }, "local");
