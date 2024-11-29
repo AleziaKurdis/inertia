@@ -108,7 +108,7 @@
             
         }
         
-        print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
+        //print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
         //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
         
         //UP
