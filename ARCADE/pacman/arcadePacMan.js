@@ -27,11 +27,11 @@
     var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -12.5, "y": 90.0, "z": 0.0});
     
     var INTERACTION_DISTANCE = 0.06;
-    var BUTTON_RELATIVE_POSITION = {"x": 0.2983, "y": 0.2205, "z": 0.1856};
-    var MOVE_UP_RELATIVE_POSITION = {"x": 0.2285, "y": 0.2999, "z": -0.0037};
-    var MOVE_DOWN_RELATIVE_POSITION = {"x": 0.3867, "y": 0.2819, "z": -0.0037};
-    var MOVE_LEFT_RELATIVE_POSITION = {"x": 0.3044, "y": 0.2937, "z": 0.0833};
-    var MOVE_RIGHT_RELATIVE_POSITION = {"x": 0.3044, "y": 0.2937, "z": -0.0856};
+    var BUTTON_RELATIVE_POSITION = {"x": 0.3583, "y": 0.2205, "z": 0.1856};
+    var MOVE_UP_RELATIVE_POSITION = {"x": 0.2885, "y": 0.2999, "z": -0.0037};
+    var MOVE_DOWN_RELATIVE_POSITION = {"x": 0.4467, "y": 0.2819, "z": -0.0037};
+    var MOVE_LEFT_RELATIVE_POSITION = {"x": 0.3644, "y": 0.2937, "z": 0.0833};
+    var MOVE_RIGHT_RELATIVE_POSITION = {"x": 0.3644, "y": 0.2937, "z": -0.0856};
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
