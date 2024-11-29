@@ -1061,7 +1061,15 @@
                     } else if (messageObj.action === "RIGHT") {
                         player.control = {orientation:0};
                     } else if (messageObj.action === "START-PAUSE") {
-                        stageC.status = stageC.status==2?1:2;
+                        if ( gameStatus === "PLAYING") {
+                            stageC.status = stageC.status==2?1:2;
+                    	} else if (gameStatus === "OVER") {
+                            _SCORE = 0;
+                            _LIFE = 5;
+                            game.setStage(1);
+                        } else if (gameStatus === "IDLE") {
+                            alert("AH! OUIN!");
+                        }
                     }
                 }
             });
@@ -1110,7 +1118,7 @@
 				break;
 			}
 		});
-        
+        /*
         EventBridge.scriptEventReceived.connect(function (message) {
             var messageObj = JSON.parse(message);
             if (messageObj.channel === channel) {
@@ -1121,7 +1129,7 @@
                 }
             }
         });
-
+        */
 	})();
 
 	const myFont = new FontFace('PressStart2P', 'url(./static/font/PressStart2P.ttf)');
