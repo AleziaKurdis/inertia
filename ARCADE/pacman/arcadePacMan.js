@@ -24,7 +24,7 @@
     var processTimer = 0;
     
     var SCREEN_RELATIVE_POSITION = {"x": 0.105, "y": 0.49, "z": 0.0};
-    var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -13.0, "y": 90.0, "z": 0.0});
+    var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -12.5, "y": 90.0, "z": 0.0});
     
     var INTERACTION_DISTANCE = 0.06;
     var BUTTON_RELATIVE_POSITION = {"x": 0.2983, "y": 0.2205, "z": 0.1856};
@@ -41,7 +41,7 @@
             "type": "Web",
             "name": "arcade game screen",
             "parentID": entityID,
-            "dimensions": {"x": 0.6, "y": 0.4, "z": 0.01},
+            "dimensions": {"x": 0.63, "y": 0.42, "z": 0.01},
             "localPosition": SCREEN_RELATIVE_POSITION,
             "localRotation": SCREEN_RELATIVE_ROTATION,
             "sourceUrl": ROOT + "index.html",//ajouter grab false
