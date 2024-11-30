@@ -20,7 +20,7 @@
     var thisEntityID;
     var thisPosition;
     
-    var UPDATE_TIMER_INTERVAL = 500;
+    var UPDATE_TIMER_INTERVAL = 200;
     var processTimer = 0;
     
     var SCREEN_RELATIVE_POSITION = {"x": 0.105, "y": 0.49, "z": 0.0};
