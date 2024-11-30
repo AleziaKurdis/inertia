@@ -605,7 +605,7 @@
 				break;
 			}
 		});
-        
+/*        
         EventBridge.scriptEventReceived.connect(function (message) {
             //alert("MESSAGE NEW FROM IDLE: " + message); //=================DEBUG/REMOVE
             var messageObj = JSON.parse(message);
@@ -615,7 +615,7 @@
                 }
             }
         });
-        
+        */
 	})();
 	//Game main program
     var stageC;
@@ -1068,7 +1068,7 @@
                             _LIFE = 5;
                             game.setStage(1);
                         } else if (gameStatus === "IDLE") {
-                            alert("AH! OUIN!");
+                            game.nextStage();
                         }
                     }
                 }
