@@ -26,12 +26,11 @@
     var SCREEN_RELATIVE_POSITION = {"x": 0.105, "y": 0.49, "z": 0.0};
     var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -12.5, "y": 90.0, "z": 0.0});
     
-    var INTERACTION_DISTANCE = 0.06;
+    var INTERACTION_DISTANCE_BUTTON = 0.06;
+    var INTERACTION_DISTANCE_MOVE = 0.1;
     var BUTTON_RELATIVE_POSITION = {"x": 0.3583, "y": 0.2205, "z": 0.1856};
-    var MOVE_UP_RELATIVE_POSITION = {"x": 0.2885, "y": 0.2999, "z": -0.0037};
-    var MOVE_DOWN_RELATIVE_POSITION = {"x": 0.4467, "y": 0.2819, "z": -0.0037};
-    var MOVE_LEFT_RELATIVE_POSITION = {"x": 0.3644, "y": 0.2937, "z": 0.0833};
-    var MOVE_RIGHT_RELATIVE_POSITION = {"x": 0.3644, "y": 0.2937, "z": -0.0856};
+    var MOVE_RELATIVE_POSITION = {"x": 0.2885, "y": 0.2999, "z": -0.0037};
+    
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
@@ -84,15 +83,15 @@
         var RIGHT_HAND_INDEX = 1;
         var LEFT_HAND_INDEX = 0;
         
-        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
-        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
+        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandTipPosition));
+        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandTipPosition));
         
         var messageToSend;
         
         //START BUTTON
         var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
         var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
+        if (rightDistance < INTERACTION_DISTANCE_BUTTON || leftDistance < INTERACTION_DISTANCE_BUTTON) {
             messageToSend = {
                 "channel": channel,
                 "action": "START-PAUSE"
@@ -111,82 +110,64 @@
         //print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
         //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
         
-        //UP
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_UP_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_UP_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
-            messageToSend = {
-                "channel": channel,
-                "action": "UP"
-            };
-            
-            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-            
+        //MOVES
+        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+        if (rightDistance < INTERACTION_DISTANCE_MOVE || leftDistance < INTERACTION_DISTANCE_MOVE) {
+            //find the azimut and the distance
+            var vecFromJoystick, handActing;
+            var interact = false;
             if (rightDistance < leftDistance) {
-                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+                //RIGHT HAND
+                vecFromJoystick = Vec3.subtract(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                handActing = "RIGHT";
             } else {
-                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+                //LEFT HAND
+                vecFromJoystick = Vec3.subtract(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                handActing = "LEFT";
+            }
+            var polar = Vec3.toPolar(vecFromJoystick);
+            if (polar.z > (INTERACTION_DISTANCE_MOVE/3) && polar.x < Math.PI/3) {
+                if (polar.y > (Math.PI/4) && polar.y <= (3 * Math.PI/4)) {
+                    messageToSend = {
+                        "channel": channel,
+                        "action": "UP"
+                    };
+                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                    interact = true;
+                } else if (polar.y > (3 * Math.PI/4) && polar.y <= (5 * Math.PI/4)) {
+                    messageToSend = {
+                        "channel": channel,
+                        "action": "LEFT"
+                    };
+                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                    interact = true;
+                } else if (polar.y > (5 * Math.PI/4) && polar.y <= (7 * Math.PI/4)) {
+                    messageToSend = {
+                        "channel": channel,
+                        "action": "DOWN"
+                    };
+                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                    interact = true;
+                } else if (polar.y > (7 * Math.PI/4) || polar.y <= (Math.PI/4)) {
+                    messageToSend = {
+                        "channel": channel,
+                        "action": "RIGHT"
+                    };
+                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                    interact = true;
+                }
+
+            }
+            if (interact) {
+                if (handActing === "RIGHT) {
+                    Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+                } else {
+                    Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+                }
             }
             
         }
-        
-        //DOWN
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_DOWN_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_DOWN_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
-            messageToSend = {
-                "channel": channel,
-                "action": "DOWN"
-            };
-            
-            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-            
-            if (rightDistance < leftDistance) {
-                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
-            } else {
-                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
-            }
-            
-        }
-        
-        //RIGHT
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RIGHT_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RIGHT_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
-            messageToSend = {
-                "channel": channel,
-                "action": "RIGHT"
-            };
-            
-            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-            
-            if (rightDistance < leftDistance) {
-                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
-            } else {
-                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
-            }
-            
-        }
-        
-        //LEFT
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_LEFT_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_LEFT_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE || leftDistance < INTERACTION_DISTANCE) {
-            messageToSend = {
-                "channel": channel,
-                "action": "LEFT"
-            };
-            
-            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-            
-            if (rightDistance < leftDistance) {
-                Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
-            } else {
-                Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
-            }
-            
-        }
-        
     }
 
     function onWebEventReceived(entityID, message) {
