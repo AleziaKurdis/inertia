@@ -160,7 +160,7 @@
 
             }
             if (interact) {
-                if (handActing === "RIGHT) {
+                if (handActing === "RIGHT") {
                     Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
                 } else {
                     Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
