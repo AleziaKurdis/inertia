@@ -28,8 +28,8 @@
     
     var INTERACTION_DISTANCE_BUTTON = 0.06;
     var INTERACTION_DISTANCE_MOVE = 0.1;
-    var BUTTON_RELATIVE_POSITION = {"x": 0.3583, "y": 0.2205, "z": 0.1856};
-    var MOVE_RELATIVE_POSITION = {"x": 0.2885, "y": 0.2999, "z": -0.0037};
+    var BUTTON_RELATIVE_POSITION = {"x": 0.2966, "y": 0.2266, "z": 0.2674};
+    var MOVE_RELATIVE_POSITION = {"x": 0.3104, "y": 0.2745, "z": 0.0033};
     
     
     this.preload = function(entityID) {
@@ -83,8 +83,8 @@
         var RIGHT_HAND_INDEX = 1;
         var LEFT_HAND_INDEX = 0;
         
-        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandTipPosition));
-        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandTipPosition));
+        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
+        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
         
         var messageToSend;
         
