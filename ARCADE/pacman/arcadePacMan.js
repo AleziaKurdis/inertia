@@ -127,29 +127,33 @@
                 handActing = "LEFT";
             }
             var polar = Vec3.toPolar(vecFromJoystick);
+            var polarAzimuth = polar.y;
+            if (polarAzimuth < 0) {
+                polarAzimuth = (Math.PI * 2) - polarAzimuth;
+            }
             if (polar.z > (INTERACTION_DISTANCE_MOVE/3) && polar.x < Math.PI/3) {
-                if (polar.y > (Math.PI/4) && polar.y <= (3 * Math.PI/4)) {
+                if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                     messageToSend = {
                         "channel": channel,
                         "action": "UP"
                     };
                     Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                     interact = true;
-                } else if (polar.y > (3 * Math.PI/4) && polar.y <= (5 * Math.PI/4)) {
+                } else if (polarAzimuth > (3 * Math.PI/4) && polarAzimuth <= (5 * Math.PI/4)) {
                     messageToSend = {
                         "channel": channel,
                         "action": "LEFT"
                     };
                     Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                     interact = true;
-                } else if (polar.y > (5 * Math.PI/4) && polar.y <= (7 * Math.PI/4)) {
+                } else if (polarAzimuth > (5 * Math.PI/4) && polarAzimuth <= (7 * Math.PI/4)) {
                     messageToSend = {
                         "channel": channel,
                         "action": "DOWN"
                     };
                     Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                     interact = true;
-                } else if (polar.y > (7 * Math.PI/4) || polar.y <= (Math.PI/4)) {
+                } else if (polarAzimuth > (7 * Math.PI/4) || polarAzimuth <= (Math.PI/4)) {
                     messageToSend = {
                         "channel": channel,
                         "action": "RIGHT"
