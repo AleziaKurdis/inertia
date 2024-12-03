@@ -97,8 +97,8 @@
         var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
         var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
         
-        var rightHandler = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale));
-        var leftHandler = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale));
+        var rightHandler = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
+        var leftHandler = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
         
         var messageToSend;
         
