@@ -601,21 +601,12 @@
 			switch(e.keyCode){
 				case 13:
 				case 32:
+                playSound("BEGIN");
 				game.nextStage();
 				break;
 			}
 		});
-/*        
-        EventBridge.scriptEventReceived.connect(function (message) {
-            //alert("MESSAGE NEW FROM IDLE: " + message); //=================DEBUG/REMOVE
-            var messageObj = JSON.parse(message);
-            if (messageObj.channel === channel) {
-                if (messageObj.action === "START-PAUSE") {
-                    game.nextStage();
-                }
-            }
-        });
-        */
+
 	})();
 	//Game main program
     var stageC;
@@ -625,13 +616,13 @@
 			stageC = game.createStage({
 				update:function(){
 					var stageC = this;
-					if(stageC.status==1){ //Scene runs normally
+					if(stageC.status == 1){ //Scene runs normally
 						items.forEach(function(item){
-							if(map&&!map.get(item.coord.x,item.coord.y)&&!map.get(player.coord.x,player.coord.y)){
+							if(map && !map.get(item.coord.x,item.coord.y) && !map.get(player.coord.x,player.coord.y)){
 								var dx = item.x-player.x;
 								var dy = item.y-player.y;
-								if(dx*dx+dy*dy<750&&item.status!=4){ //Object detection
-									if(item.status==3){
+								if(dx*dx+dy*dy < 750 && item.status != 4){ //Object detection
+									if(item.status == 3){
 										item.status = 4;
 										_SCORE += 10;
 									}else{
@@ -641,10 +632,11 @@
 								}
 							}
 						});
-						if(JSON.stringify(beans.data).indexOf(0)<0){ //When there are no items, go to the next level
+						if(JSON.stringify(beans.data).indexOf(0) < 0){ //When there are no items, go to the next level
+                            playSound("INTERMISSION");
 							game.nextStage();
 						}
-					}else if(stageC.status==3){ //scene temporary state
+					}else if(stageC.status == 3){ //scene temporary state
 						if(!stageC.timeout){
 							_LIFE--;
 							if(_LIFE){
@@ -860,7 +852,7 @@
 										this.vector = this.path[0];
 									}
 								}
-							}else if(this.status==3){
+							}else if(this.status == 3){
 								new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g,0));
 								var id = this._id;
 								items.forEach(function(item){
@@ -877,7 +869,7 @@
 								if(this.path.length){
 									this.vector = this.path[Math.floor(Math.random()*this.path.length)];
 								}
-							}else if(this.status==4){
+							}else if(this.status == 4){
 								new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g,0));
 								this.path = map.finder({
 									map:new_map,
@@ -991,8 +983,10 @@
 					}else{
 						if(!beans.get(this.coord.x,this.coord.y)){	//Pac beans
 							_SCORE++;
+                            playSound("CHOMP");
 							beans.set(this.coord.x,this.coord.y,1);
 							if(config['goods'][this.coord.x+','+this.coord.y]){	//Eat energy beans
+                                playSound("ENERGY");
 								items.forEach(function(item){
 									if(item.status==1||item.status==3){	//If the NPC is in normal state, set it to temporary state
 										item.timeout = 450;
@@ -1018,6 +1012,7 @@
 							context.arc(this.x,this.y,this.width/2,(.5*this.orientation+.01)*Math.PI,(.5*this.orientation-.01)*Math.PI,false);
 						}
 					}else{	//Player is eaten
+                        playSound("DEATH");
 						if(stageC.timeout) {
 							context.arc(this.x,this.y,this.width/2,(.5*this.orientation+1-.02*stageC.timeout)*Math.PI,(.5*this.orientation-1+.02*stageC.timeout)*Math.PI,false);
 						}
@@ -1066,8 +1061,10 @@
                     	} else if (gameStatus === "OVER") {
                             _SCORE = 0;
                             _LIFE = 5;
+                            playSound("BEGIN");
                             game.setStage(1);
                         } else if (gameStatus === "IDLE") {
+                            playSound("BEGIN");
                             game.nextStage();
                         }
                     }
@@ -1114,22 +1111,11 @@
 				case 32: //SPACE
 				_SCORE = 0;
 				_LIFE = 5;
+                playSound("BEGIN");
 				game.setStage(1);
 				break;
 			}
 		});
-        /*
-        EventBridge.scriptEventReceived.connect(function (message) {
-            var messageObj = JSON.parse(message);
-            if (messageObj.channel === channel) {
-                if (messageObj.action === "START-PAUSE") {
-                    _SCORE = 0;
-                    _LIFE = 5;
-                    game.setStage(1);
-                }
-            }
-        });
-        */
 	})();
 
 	const myFont = new FontFace('PressStart2P', 'url(./static/font/PressStart2P.ttf)');

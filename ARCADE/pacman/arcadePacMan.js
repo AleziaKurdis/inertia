@@ -31,6 +31,13 @@
     var BUTTON_RELATIVE_POSITION = {"x": 0.2966, "y": 0.2266, "z": 0.2674};
     var MOVE_RELATIVE_POSITION = {"x": 0.3104, "y": 0.2745, "z": 0.0033};
     
+    var BEGIN_SOUND = SoundCache.getSound(ROOT + "sounds/BEGIN.wav");
+    var CHOMP_SOUND = SoundCache.getSound(ROOT + "sounds/CHOMP.wav");
+    var DEATH_SOUND = SoundCache.getSound(ROOT + "sounds/DEATH.wav");
+    var ENERGY_SOUND = SoundCache.getSound(ROOT + "sounds/ENERGY.wav");
+    var EAT_GHOST_SOUND = SoundCache.getSound(ROOT + "sounds/EAT_GHOST.wav");
+    var EXTRA_SOUND = SoundCache.getSound(ROOT + "sounds/EXTRA.wav");
+    var INTERMISSION_SOUND = SoundCache.getSound(ROOT + "sounds/INTERMISSION.wav");
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
@@ -187,21 +194,43 @@
             var n = d.getTime();
             var instruction = JSON.parse(message);
             if (instruction.channel === channel) {
-                //if (instruction.action === "TEST") {
-                //    print("YES!");
-                //}
+                if (instruction.action === "PLAYSOUND") {
+                    switch(instruction.sound) {
+                        case "BEGIN":
+                            playSoundFX(BEGIN_SOUND);
+                            break;
+                        case "CHOMP":
+                            playSoundFX(CHOMP_SOUND);
+                            break;
+                        case "DEATH":
+                            playSoundFX(DEATH_SOUND);
+                            break;
+                        case "ENERGY":
+                            playSoundFX(ENERGY_SOUND);
+                            break;
+                        case "EAT_GHOST":
+                            playSoundFX(EAT_GHOST_SOUND);
+                            break;
+                        case "INTERMISSION":
+                            playSoundFX(INTERMISSION_SOUND);
+                            break;
+                        case "EXTRA":
+                            playSoundFX(EXTRA_SOUND);
+                    } 
+                }
             }
         }
     }
-/*
-    Script.setTimeout(function () {
-        print("triggered!");
-        var messageToSend = {
-            "channel": channel,
-            "action": "START-PAUSE"
+
+    function playSoundFX(soundCode) {
+        var injectorOptions = {
+            "position": MyAvatar.position,
+            "volume": 0.25,
+            "loop": false,
+            "localOnly": false
         };
+        var injector = Audio.playSound(soundCode, injectorOptions);
         
-        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-    }, 5000);
-*/
+    }
+    
 })
