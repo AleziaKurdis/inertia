@@ -82,15 +82,22 @@
     function checkHands() {
         var RIGHT_HAND_INDEX = 1;
         var LEFT_HAND_INDEX = 0;
+        var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
+        
+        var rightRotHand = Quat.lookAt(MyAvatar.rightHandPosition, MyAvatar.rightHandTipPosition, Vec3.UNIT_NEG_Y);
+        var leftRotHand = Quat.lookAt(MyAvatar.leftHandPosition, MyAvatar.leftHandTipPosition, Vec3.UNIT_NEG_Y);
         
         var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
         var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
         
+        var rightHandler = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale));
+        var leftHandler = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale));
+        
         var messageToSend;
         
         //START BUTTON
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+        var rightDistance = Vec3.distance(rightHandler, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandler, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
         if (rightDistance < INTERACTION_DISTANCE_BUTTON || leftDistance < INTERACTION_DISTANCE_BUTTON) {
             messageToSend = {
                 "channel": channel,
@@ -111,19 +118,19 @@
         //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
         
         //MOVES
-        var rightDistance = Vec3.distance(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+        var rightDistance = Vec3.distance(rightHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+        var leftDistance = Vec3.distance(leftHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
         if (rightDistance < INTERACTION_DISTANCE_MOVE || leftDistance < INTERACTION_DISTANCE_MOVE) {
             //find the azimut and the distance
             var vecFromJoystick, handActing;
             var interact = false;
             if (rightDistance < leftDistance) {
                 //RIGHT HAND
-                vecFromJoystick = Vec3.subtract(rightHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                vecFromJoystick = Vec3.subtract(rightHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
                 handActing = "RIGHT";
             } else {
                 //LEFT HAND
-                vecFromJoystick = Vec3.subtract(leftHandWorldPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                vecFromJoystick = Vec3.subtract(leftHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
                 handActing = "LEFT";
             }
             var polar = Vec3.toPolar(vecFromJoystick);
