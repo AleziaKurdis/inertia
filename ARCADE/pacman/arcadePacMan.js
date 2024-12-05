@@ -89,7 +89,7 @@
     function checkHands() {
         var RIGHT_HAND_INDEX = 1;
         var LEFT_HAND_INDEX = 0;
-        var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
+/*        var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
         
         var rightRotHand = Quat.lookAt(MyAvatar.rightHandPosition, MyAvatar.rightHandTipPosition, Vec3.UNIT_NEG_Y);
         var leftRotHand = Quat.lookAt(MyAvatar.leftHandPosition, MyAvatar.leftHandTipPosition, Vec3.UNIT_NEG_Y);
@@ -99,6 +99,9 @@
         
         var rightHandler = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
         var leftHandler = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
+        */
+        var rightHandler = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, getJointPosition("RightHandMiddle1")));
+        var leftHandler = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, getJointPosition("LeftHandMiddle1")));
         
         var messageToSend;
         
