@@ -104,14 +104,14 @@
             if (rightHandleID === Uuid.NONE) {
                 var rightBoneIndex = MyAvatar.getJointIndex("RightHandMiddle1");
                 var leftBoneIndex = MyAvatar.getJointIndex("LeftHandMiddle1");
-                print("rightBoneIndex: " + rightBoneIndex); //##########################################TRASH DEBUG
+
                 rightHandleID = Entities.addEntity({
                     "name": "right PacMan handle",
                     "type": "Shape",
                     "shape": "Sphere",
                     "dimensions": {"x": 0.02, "y": 0.02, "z": 0.02 },
                     "color": {"red": 255, "green": 0, "blue": 0},
-                    "visible": true,
+                    "visible": false,
                     "parentID": MyAvatar.sessionUUID,
                     "parentJointIndex": rightBoneIndex,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
@@ -126,7 +126,7 @@
                     "shape": "Sphere",
                     "dimensions": {"x": 0.02, "y": 0.02, "z": 0.02 },
                     "color": {"red": 255, "green": 0, "blue": 0},
-                    "visible": true,
+                    "visible": false,
                     "parentID": MyAvatar.sessionUUID,
                     "parentJointIndex": leftBoneIndex,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
@@ -136,18 +136,6 @@
                 }, "local");
                 
             }
-            /*
-            var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
-            
-            var rightRotHand = Quat.lookAt(MyAvatar.rightHandPosition, MyAvatar.rightHandTipPosition, Vec3.UNIT_NEG_Y);
-            var leftRotHand = Quat.lookAt(MyAvatar.leftHandPosition, MyAvatar.leftHandTipPosition, Vec3.UNIT_NEG_Y);
-            
-            var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
-            var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
-            
-            var rightHandlerPosition = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
-            var leftHandlerPosition = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
-            */
 
             var rightHandlerPosition = Entities.getEntityProperties(rightHandleID, ["position"]).position;
             var leftHandlerPosition = Entities.getEntityProperties(leftHandleID, ["position"]).position;
@@ -172,9 +160,6 @@
                 }
                 
             }
-            
-            //print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
-            //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
             
             //MOVES
             var rightDistance = Vec3.distance(rightHandlerPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
