@@ -26,6 +26,9 @@
     var SCREEN_RELATIVE_POSITION = {"x": 0.105, "y": 0.49, "z": 0.0};
     var SCREEN_RELATIVE_ROTATION = Quat.fromVec3Degrees({"x": -12.5, "y": 90.0, "z": 0.0});
     
+    var rightHandleID = Uuid.NONE;
+    var leftHandleID = Uuid.NONE;
+    
     var INTERACTION_DISTANCE_BUTTON = 0.06;
     var INTERACTION_DISTANCE_MOVE = 0.1;
     var BUTTON_RELATIVE_POSITION = {"x": 0.2966, "y": 0.2266, "z": 0.2674};
@@ -69,6 +72,13 @@
         Script.update.disconnect(myTimer);
         Entities.webEventReceived.disconnect(onWebEventReceived);
         
+        if (rightHandleID !== Uuid.NONE) {
+            Entities.deleteEntity(rightHandleID);
+            Entities.deleteEntity(leftHandleID);
+            rightHandleID = Uuid.NONE;
+            leftHandleID = Uuid.NONE;
+        }
+        
         if (webID !== Uuid.NONE) {
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
@@ -89,106 +99,155 @@
     function checkHands() {
         var RIGHT_HAND_INDEX = 1;
         var LEFT_HAND_INDEX = 0;
-/*        var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
         
-        var rightRotHand = Quat.lookAt(MyAvatar.rightHandPosition, MyAvatar.rightHandTipPosition, Vec3.UNIT_NEG_Y);
-        var leftRotHand = Quat.lookAt(MyAvatar.leftHandPosition, MyAvatar.leftHandTipPosition, Vec3.UNIT_NEG_Y);
-        
-        var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
-        var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
-        
-        var rightHandler = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
-        var leftHandler = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
-        */
-        var rightHandler = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, getJointPosition("RightHandMiddle1")));
-        var leftHandler = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, getJointPosition("LeftHandMiddle1")));
-        
-        var messageToSend;
-        
-        //START BUTTON
-        var rightDistance = Vec3.distance(rightHandler, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandler, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE_BUTTON || leftDistance < INTERACTION_DISTANCE_BUTTON) {
-            messageToSend = {
-                "channel": channel,
-                "action": "START-PAUSE"
-            };
-            
-            Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-            
-            if (rightDistance < leftDistance) {
-                Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
-            } else {
-                Controller.triggerShortHapticPulse(0.3, LEFT_HAND_INDEX);
-            }
-            
-        }
-        
-        //print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
-        //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
-        
-        //MOVES
-        var rightDistance = Vec3.distance(rightHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
-        var leftDistance = Vec3.distance(leftHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
-        if (rightDistance < INTERACTION_DISTANCE_MOVE || leftDistance < INTERACTION_DISTANCE_MOVE) {
-            //find the azimut and the distance
-            var vecFromJoystick, handActing;
-            var interact = false;
-            if (rightDistance < leftDistance) {
-                //RIGHT HAND
-                vecFromJoystick = Vec3.subtract(rightHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
-                handActing = "RIGHT";
-            } else {
-                //LEFT HAND
-                vecFromJoystick = Vec3.subtract(leftHandler, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
-                handActing = "LEFT";
-            }
-            var polar = Vec3.toPolar(vecFromJoystick);
-            var polarAzimuth = polar.y;
-            if (polarAzimuth < 0) {
-                polarAzimuth = (Math.PI * 2) - polarAzimuth;
-            }
-            if (polar.z > (INTERACTION_DISTANCE_MOVE/3) && polar.x < Math.PI/3) {
-                if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
-                    messageToSend = {
-                        "channel": channel,
-                        "action": "UP"
-                    };
-                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-                    interact = true;
-                } else if (polarAzimuth > (3 * Math.PI/4) && polarAzimuth <= (5 * Math.PI/4)) {
-                    messageToSend = {
-                        "channel": channel,
-                        "action": "LEFT"
-                    };
-                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-                    interact = true;
-                } else if (polarAzimuth > (5 * Math.PI/4) && polarAzimuth <= (7 * Math.PI/4)) {
-                    messageToSend = {
-                        "channel": channel,
-                        "action": "DOWN"
-                    };
-                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-                    interact = true;
-                } else if (polarAzimuth > (7 * Math.PI/4) || polarAzimuth <= (Math.PI/4)) {
-                    messageToSend = {
-                        "channel": channel,
-                        "action": "RIGHT"
-                    };
-                    Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
-                    interact = true;
-                }
+        if (Vec3.distance(thisPosition, MyAvatar.position) < 2) {
+            if (rightHandleID === Uuid.NONE) {
+                var rightBoneIndex = MyAvatar.getJointIndex("RightHandMiddle1");
+                var leftBoneIndex = MyAvatar.getJointIndex("LeftHandMiddle1");
 
+                rightHandleID = Entities.addEntity({
+                    "name": "right PacMan handle",
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "dimensions": {"x": 0.02, "y": 0.02, "z": 0.02 },
+                    "color": {"red": 255, "green": 0, "blue": 0},
+                    "visible": true,
+                    "parentID": MyAvatar.sessionUUID,
+                    "parentJointIndex": rightBoneIndex,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "grab": {
+                        "grabbable": false
+                    }
+                }, "local");
+                
+                leftHandleID = Entities.addEntity({
+                    "name": "left PacMan handle",
+                    "type": "Shape",
+                    "shape": "Sphere",
+                    "dimensions": {"x": 0.02, "y": 0.02, "z": 0.02 },
+                    "color": {"red": 255, "green": 0, "blue": 0},
+                    "visible": true,
+                    "parentID": MyAvatar.sessionUUID,
+                    "parentJointIndex": leftBoneIndex,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "grab": {
+                        "grabbable": false
+                    }
+                }, "local");
+                
             }
-            if (interact) {
-                if (handActing === "RIGHT") {
-                    Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+            /*
+            var VEC3_PALM = {"x": 0.0, "y": 0.0, "z": 0.05};
+            
+            var rightRotHand = Quat.lookAt(MyAvatar.rightHandPosition, MyAvatar.rightHandTipPosition, Vec3.UNIT_NEG_Y);
+            var leftRotHand = Quat.lookAt(MyAvatar.leftHandPosition, MyAvatar.leftHandTipPosition, Vec3.UNIT_NEG_Y);
+            
+            var rightHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.rightHandPosition));
+            var leftHandWorldPosition = Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, MyAvatar.leftHandPosition));
+            
+            var rightHandlerPosition = Vec3.sum(rightHandWorldPosition,Vec3.multiplyQbyV(rightRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
+            var leftHandlerPosition = Vec3.sum(leftHandWorldPosition,Vec3.multiplyQbyV(leftRotHand, Vec3.multiply(VEC3_PALM * MyAvatar.scale)));
+            */
+
+            var rightHandlerPosition = Entities.getEntityProperties(rightHandleID, ["position"]).position;
+            var leftHandlerPosition = Entities.getEntityProperties(leftHandleID, ["position"]).position;
+            
+            var messageToSend;
+            
+            //START BUTTON
+            var rightDistance = Vec3.distance(rightHandlerPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+            var leftDistance = Vec3.distance(leftHandlerPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+            if (rightDistance < INTERACTION_DISTANCE_BUTTON || leftDistance < INTERACTION_DISTANCE_BUTTON) {
+                messageToSend = {
+                    "channel": channel,
+                    "action": "START-PAUSE"
+                };
+                
+                Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                
+                if (rightDistance < leftDistance) {
+                    Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
                 } else {
-                    Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+                    Controller.triggerShortHapticPulse(0.3, LEFT_HAND_INDEX);
                 }
+                
             }
             
+            //print("RIGHT: " + rightDistance); //########################################### DEBUG TRASH
+            //print("LEFT: " + leftDistance); //############################################# DEBUG TRASH
+            
+            //MOVES
+            var rightDistance = Vec3.distance(rightHandlerPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+            var leftDistance = Vec3.distance(leftHandlerPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+            if (rightDistance < INTERACTION_DISTANCE_MOVE || leftDistance < INTERACTION_DISTANCE_MOVE) {
+                //find the azimut and the distance
+                var vecFromJoystick, handActing;
+                var interact = false;
+                if (rightDistance < leftDistance) {
+                    //RIGHT HAND
+                    vecFromJoystick = Vec3.subtract(rightHandlerPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                    handActing = "RIGHT";
+                } else {
+                    //LEFT HAND
+                    vecFromJoystick = Vec3.subtract(leftHandlerPosition, Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION));
+                    handActing = "LEFT";
+                }
+                var polar = Vec3.toPolar(vecFromJoystick);
+                var polarAzimuth = polar.y;
+                if (polarAzimuth < 0) {
+                    polarAzimuth = (Math.PI * 2) - polarAzimuth;
+                }
+                if (polar.z > (INTERACTION_DISTANCE_MOVE/3) && polar.x < Math.PI/3) {
+                    if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
+                        messageToSend = {
+                            "channel": channel,
+                            "action": "UP"
+                        };
+                        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                        interact = true;
+                    } else if (polarAzimuth > (3 * Math.PI/4) && polarAzimuth <= (5 * Math.PI/4)) {
+                        messageToSend = {
+                            "channel": channel,
+                            "action": "LEFT"
+                        };
+                        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                        interact = true;
+                    } else if (polarAzimuth > (5 * Math.PI/4) && polarAzimuth <= (7 * Math.PI/4)) {
+                        messageToSend = {
+                            "channel": channel,
+                            "action": "DOWN"
+                        };
+                        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                        interact = true;
+                    } else if (polarAzimuth > (7 * Math.PI/4) || polarAzimuth <= (Math.PI/4)) {
+                        messageToSend = {
+                            "channel": channel,
+                            "action": "RIGHT"
+                        };
+                        Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
+                        interact = true;
+                    }
+
+                }
+                if (interact) {
+                    if (handActing === "RIGHT") {
+                        Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+                    } else {
+                        Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+                    }
+                }
+                
+            }
+
+        } else {
+            if (rightHandleID !== Uuid.NONE) {
+                Entities.deleteEntity(rightHandleID);
+                Entities.deleteEntity(leftHandleID);
+                rightHandleID = Uuid.NONE;
+                leftHandleID = Uuid.NONE;
+            }
         }
+
     }
 
     function onWebEventReceived(entityID, message) {
