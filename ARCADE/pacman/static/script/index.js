@@ -1067,7 +1067,7 @@
                         player.control = {orientation:0};
                     } else if (messageObj.action === "START-PAUSE") {
                         if ( gameStatus === "PLAYING") {
-                            stageC.status = stageC.status==2?1:2;
+                            //stageC.status = stageC.status==2?1:2;
                     	} else if (gameStatus === "OVER") {
                             _SCORE = 0;
                             _LIFE = 5;
