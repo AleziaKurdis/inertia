@@ -607,6 +607,16 @@
 			}
 		});
 
+        EventBridge.scriptEventReceived.connect(function (message) {
+            var messageObj = JSON.parse(message);
+            if (messageObj.channel === channel) {
+                if (messageObj.action === "START-PAUSE") {
+                    playSound("BEGIN");
+                    game.nextStage();
+                }
+            }
+        });
+
 	})();
 	//Game main program
     var stageC;
