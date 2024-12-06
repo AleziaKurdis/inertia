@@ -104,7 +104,7 @@
             if (rightHandleID === Uuid.NONE) {
                 var rightBoneIndex = MyAvatar.getJointIndex("RightHandMiddle1");
                 var leftBoneIndex = MyAvatar.getJointIndex("LeftHandMiddle1");
-
+                print("rightBoneIndex: " + rightBoneIndex); //##########################################TRASH DEBUG
                 rightHandleID = Entities.addEntity({
                     "name": "right PacMan handle",
                     "type": "Shape",
