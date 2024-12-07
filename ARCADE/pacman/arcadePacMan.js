@@ -20,7 +20,7 @@
     var thisEntityID;
     var thisPosition;
     
-    var UPDATE_TIMER_INTERVAL = 200;
+    var UPDATE_TIMER_INTERVAL = 100;
     var processTimer = 0;
     
     var SCREEN_RELATIVE_POSITION = {"x": 0.105, "y": 0.49, "z": 0.0};
@@ -190,28 +190,28 @@
                     if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                         messageToSend = {
                             "channel": channel,
-                            "action": "UP"
+                            "action": "DOWN"
                         };
                         Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                         interact = true;
                     } else if (polarAzimuth > (3 * Math.PI/4) && polarAzimuth <= (5 * Math.PI/4)) {
                         messageToSend = {
                             "channel": channel,
-                            "action": "LEFT"
+                            "action": "RIGHT"
                         };
                         Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                         interact = true;
                     } else if (polarAzimuth > (5 * Math.PI/4) && polarAzimuth <= (7 * Math.PI/4)) {
                         messageToSend = {
                             "channel": channel,
-                            "action": "DOWN"
+                            "action": "UP"
                         };
                         Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                         interact = true;
                     } else if (polarAzimuth > (7 * Math.PI/4) || polarAzimuth <= (Math.PI/4)) {
                         messageToSend = {
                             "channel": channel,
-                            "action": "RIGHT"
+                            "action": "LEFT"
                         };
                         Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                         interact = true;
@@ -276,7 +276,7 @@
     function playSoundFX(soundCode) {
         var injectorOptions = {
             "position": Vec3.sum(thisPosition, SCREEN_RELATIVE_POSITION),
-            "volume": 1.0,
+            "volume": 0.5,
             "loop": false,
             "localOnly": false
         };
