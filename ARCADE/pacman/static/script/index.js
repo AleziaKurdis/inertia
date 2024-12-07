@@ -607,7 +607,7 @@
 			}
 		});
 
-        EventBridge.scriptEventReceived.connect(function (message) {
+/*        EventBridge.scriptEventReceived.connect(function (message) {
             var messageObj = JSON.parse(message);
             if (messageObj.channel === channel) {
                 if (messageObj.action === "START-PAUSE") {
@@ -615,7 +615,7 @@
                     game.nextStage();
                 }
             }
-        });
+        });*/
 
 	})();
 	//Game main program
@@ -1066,6 +1066,7 @@
                     } else if (messageObj.action === "RIGHT") {
                         player.control = {orientation:0};
                     } else if (messageObj.action === "START-PAUSE") {
+                        alert("WOW!"); //########################################DEBUG
                         if ( gameStatus === "PLAYING") {
                             //stageC.status = stageC.status==2?1:2;
                     	} else if (gameStatus === "OVER") {
