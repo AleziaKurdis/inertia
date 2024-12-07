@@ -154,9 +154,9 @@
                 Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                 
                 if (rightDistance < leftDistance) {
-                    Controller.triggerShortHapticPulse(0.3, RIGHT_HAND_INDEX);
+                    Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
                 } else {
-                    Controller.triggerShortHapticPulse(0.3, LEFT_HAND_INDEX);
+                    Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
                 }
                 
             }
@@ -216,9 +216,9 @@
                 }
                 if (interact) {
                     if (handActing === "RIGHT") {
-                        Controller.triggerShortHapticPulse(0.2, RIGHT_HAND_INDEX);
+                        Controller.triggerShortHapticPulse(0.1, RIGHT_HAND_INDEX);
                     } else {
-                        Controller.triggerShortHapticPulse(0.2, LEFT_HAND_INDEX);
+                        Controller.triggerShortHapticPulse(0.1, LEFT_HAND_INDEX);
                     }
                 }
                 
