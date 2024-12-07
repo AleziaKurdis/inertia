@@ -270,6 +270,7 @@
     }
 
     function playSoundFX(soundCode) {
+        print("playSoundFX");
         var injectorOptions = {
             "position": MyAvatar.position,
             "volume": 0.25,
