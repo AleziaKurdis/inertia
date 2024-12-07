@@ -1075,7 +1075,7 @@
                             playSound("BEGIN");
                             game.setStage(1);
                         } else if (gameStatus === "IDLE") {
-                            playSound("BEGIN");
+                            //playSound("BEGIN");
                             game.nextStage();
                         }
                     }
