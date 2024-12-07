@@ -11,7 +11,7 @@
 var channel = "overte.ak.arcadeGame.pacman";
 var gameStatus = "IDLE"; //IDLE | PLAYING | OVER
 
-function playSound(sound); {
+function playSound(sound) {
     var messageToSend = {
         "channel": channel,
         "action": "PLAYSOUND",

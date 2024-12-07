@@ -606,17 +606,7 @@
 				break;
 			}
 		});
-
-/*        EventBridge.scriptEventReceived.connect(function (message) {
-            var messageObj = JSON.parse(message);
-            if (messageObj.channel === channel) {
-                if (messageObj.action === "START-PAUSE") {
-                    playSound("BEGIN");
-                    game.nextStage();
-                }
-            }
-        });*/
-
+        
 	})();
 	//Game main program
     var stageC;
@@ -1066,7 +1056,6 @@
                     } else if (messageObj.action === "RIGHT") {
                         player.control = {orientation:0};
                     } else if (messageObj.action === "START-PAUSE") {
-                        alert("WOW!"); //########################################DEBUG
                         if ( gameStatus === "PLAYING") {
                             //stageC.status = stageC.status==2?1:2;
                     	} else if (gameStatus === "OVER") {
@@ -1075,7 +1064,7 @@
                             playSound("BEGIN");
                             game.setStage(1);
                         } else if (gameStatus === "IDLE") {
-                            //playSound("BEGIN");
+                            playSound("BEGIN");
                             game.nextStage();
                         }
                     }
