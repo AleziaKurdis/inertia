@@ -1058,15 +1058,15 @@
                     } else if (messageObj.action === "START-PAUSE") {
                         if ( gameStatus === "PLAYING") {
                             //stageC.status = stageC.status==2?1:2;
-                    	} else if (gameStatus === "OVER") {
+                    	} else if (gameStatus === "OVER" || gameStatus === "IDLE") {
                             _SCORE = 0;
                             _LIFE = 5;
                             playSound("BEGIN");
                             game.setStage(1);
-                        } else if (gameStatus === "IDLE") {
+                        }/* else if (gameStatus === "IDLE") {
                             playSound("BEGIN");
                             game.nextStage();
-                        }
+                        }*/
                     }
                 }
             });

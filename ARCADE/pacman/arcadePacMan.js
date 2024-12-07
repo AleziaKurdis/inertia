@@ -34,18 +34,20 @@
     var BUTTON_RELATIVE_POSITION = {"x": 0.2966, "y": 0.2266, "z": 0.2674};
     var MOVE_RELATIVE_POSITION = {"x": 0.3104, "y": 0.2745, "z": 0.0033};
     
-    var BEGIN_SOUND = SoundCache.getSound(ROOT + "sounds/BEGIN.wav");
-    var CHOMP_SOUND = SoundCache.getSound(ROOT + "sounds/CHOMP.wav");
-    var DEATH_SOUND = SoundCache.getSound(ROOT + "sounds/DEATH.wav");
-    var ENERGY_SOUND = SoundCache.getSound(ROOT + "sounds/ENERGY.wav");
-    var EAT_GHOST_SOUND = SoundCache.getSound(ROOT + "sounds/EAT_GHOST.wav");
-    var EXTRA_SOUND = SoundCache.getSound(ROOT + "sounds/EXTRA.wav");
-    var INTERMISSION_SOUND = SoundCache.getSound(ROOT + "sounds/INTERMISSION.wav");
+    var BEGIN_SOUND, CHOMP_SOUND, DEATH_SOUND, ENERGY_SOUND, EAT_GHOST_SOUND, EXTRA_SOUND, INTERMISSION_SOUND;
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
         thisPosition = Entities.getEntityProperties(entityID, ["position"]).position;
-        
+
+        BEGIN_SOUND = SoundCache.getSound(ROOT + "sounds/BEGIN.wav");
+        CHOMP_SOUND = SoundCache.getSound(ROOT + "sounds/CHOMP.wav");
+        DEATH_SOUND = SoundCache.getSound(ROOT + "sounds/DEATH.wav");
+        ENERGY_SOUND = SoundCache.getSound(ROOT + "sounds/ENERGY.wav");
+        EAT_GHOST_SOUND = SoundCache.getSound(ROOT + "sounds/EAT_GHOST.wav");
+        EXTRA_SOUND = SoundCache.getSound(ROOT + "sounds/EXTRA.wav");
+        INTERMISSION_SOUND = SoundCache.getSound(ROOT + "sounds/INTERMISSION.wav");
+
         webID = Entities.addEntity({
             "type": "Web",
             "name": "arcade game screen",
@@ -182,7 +184,8 @@
                 if (polarAzimuth < 0) {
                     polarAzimuth = (Math.PI * 2) - polarAzimuth;
                 }
-                if (polar.z > (INTERACTION_DISTANCE_MOVE/3) && polar.x < Math.PI/3) {
+                print("polarAzimuth: " +  polarAzimuth); //################################################# DEBUG/REMOVE
+                if (polar.z > (INTERACTION_DISTANCE_MOVE/2) && polar.x < Math.PI/3) {
                     if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                         messageToSend = {
                             "channel": channel,
