@@ -270,10 +270,9 @@
     }
 
     function playSoundFX(soundCode) {
-        print("playSoundFX");
         var injectorOptions = {
-            "position": MyAvatar.position,
-            "volume": 0.25,
+            "position": Vec3.sum(thisPosition, SCREEN_RELATIVE_POSITION),
+            "volume": 1.0,
             "loop": false,
             "localOnly": false
         };
