@@ -623,6 +623,7 @@
 								var dy = item.y-player.y;
 								if(dx*dx+dy*dy < 750 && item.status != 4){ //Object detection
 									if(item.status == 3){
+                                        playSound("EAT_GHOST");
 										item.status = 4;
 										_SCORE += 10;
 									}else{
@@ -638,6 +639,7 @@
 						}
 					}else if(stageC.status == 3){ //scene temporary state
 						if(!stageC.timeout){
+                            playSound("DEATH");
 							_LIFE--;
 							if(_LIFE){
 								stageC.resetItems();
@@ -1012,7 +1014,6 @@
 							context.arc(this.x,this.y,this.width/2,(.5*this.orientation+.01)*Math.PI,(.5*this.orientation-.01)*Math.PI,false);
 						}
 					}else{	//Player is eaten
-                        playSound("DEATH");
 						if(stageC.timeout) {
 							context.arc(this.x,this.y,this.width/2,(.5*this.orientation+1-.02*stageC.timeout)*Math.PI,(.5*this.orientation-1+.02*stageC.timeout)*Math.PI,false);
 						}
