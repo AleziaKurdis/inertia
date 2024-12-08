@@ -244,6 +244,7 @@
             var instruction = JSON.parse(message);
             if (instruction.channel === channel) {
                 if (instruction.action === "PLAYSOUND") {
+                    print("PLAY: " + instruction.sound); //################################# DEBUG/REMOVE
                     switch(instruction.sound) {
                         case "BEGIN":
                             playSoundFX(BEGIN_SOUND);
