@@ -111,13 +111,14 @@
                     "name": "right PacMan handle",
                     "type": "Shape",
                     "shape": "Sphere",
-                    "dimensions": {"x": 0.03, "y": 0.03, "z": 0.03 },
+                    "dimensions": {"x": 0.05, "y": 0.05, "z": 0.05 },
                     "color": {"red": 255, "green": 0, "blue": 0},
-                    "alpha": 0.3,
+                    "alpha": 0.2,
+                    "unlit": true,
                     "visible": true,
                     "parentID": MyAvatar.sessionUUID,
                     "parentJointIndex": rightBoneIndex,
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": -0.015},
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.028},
                     "primitiveMode": "lines",
                     "grab": {
                         "grabbable": false
@@ -128,13 +129,14 @@
                     "name": "left PacMan handle",
                     "type": "Shape",
                     "shape": "Sphere",
-                    "dimensions": {"x": 0.03, "y": 0.03, "z": 0.03 },
+                    "dimensions": {"x": 0.05, "y": 0.05, "z": 0.05 },
                     "color": {"red": 255, "green": 0, "blue": 0},
-                    "alpha": 0.3,
+                    "alpha": 0.2,
+                    "unlit": true,
                     "visible": true,
                     "parentID": MyAvatar.sessionUUID,
                     "parentJointIndex": leftBoneIndex,
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": -0.015},
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.028},
                     "primitiveMode": "lines",
                     "grab": {
                         "grabbable": false
@@ -169,7 +171,7 @@
             
             //MOVES
             var joyStickPosition = Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION);
-            if (Math.abs(rightHandlerPosition.y - joyStickPosition.y) < 0.04 || Math.abs(leftHandlerPosition.y - joyStickPosition.y) < 0.04) {
+            if (Math.abs(rightHandlerPosition.y - joyStickPosition.y) < 0.08 || Math.abs(leftHandlerPosition.y - joyStickPosition.y) < 0.08) {
                 var rightSameLeveljoyStickPosition = {"x": joyStickPosition.x, "y": rightHandlerPosition.y, "z": joyStickPosition.z};
                 var leftSameLeveljoyStickPosition = {"x": joyStickPosition.x, "y": leftHandlerPosition.y, "z": joyStickPosition.z};
                 var rightDistance = Vec3.distance(rightHandlerPosition, rightSameLeveljoyStickPosition);
@@ -193,7 +195,7 @@
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
                     }
-                    if (polar.z > (INTERACTION_DISTANCE_MOVE/2)) {
+                    if (polar.z > (INTERACTION_DISTANCE_MOVE * 0.382)) {
                         if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                             messageToSend = {
                                 "channel": channel,
@@ -227,9 +229,9 @@
                     }
                     if (interact) {
                         if (handActing === "RIGHT") {
-                            Controller.triggerShortHapticPulse(0.1, RIGHT_HAND_INDEX);
+                            Controller.triggerShortHapticPulse(0.08, RIGHT_HAND_INDEX);
                         } else {
-                            Controller.triggerShortHapticPulse(0.1, LEFT_HAND_INDEX);
+                            Controller.triggerShortHapticPulse(0.08, LEFT_HAND_INDEX);
                         }
                     }
                 }
