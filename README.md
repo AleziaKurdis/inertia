@@ -71,3 +71,8 @@ Use this application to configure the gravity: Persistently on a domain, tempora
 Edit > Running Scripts...   
 Load scripts > Click "From URL" button.  
 Enter: https://aleziakurdis.github.io/inertia/gravityConfigurator/app-gravityConfigurator.js
+
+# ARCADE MACHINES  
+**PacMan**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/ARCADE/pacman/ARCADE-MACHINE-PACMAN.json  
+  
