@@ -270,12 +270,20 @@
     }
 
     function playMusic() {
-        
+        if (musicInjector === Uuid.NONE) {
+            var injectorOptions = {
+                "position": Vec3.sum(thisPosition, SCREEN_RELATIVE_POSITION),
+                "volume": 0.3,
+                "loop": true,
+                "localOnly": false
+            };
+            musicInjector = Audio.playSound(MUSIC_SOUND, injectorOptions);
+        }
     }
 
     function stopMusic() {
         if (musicInjector !== Uuid.NONE) {
-            //stop mucic
+            musicInjector.stop();
             musicInjector = Uuid.NONE;
         }
     }
