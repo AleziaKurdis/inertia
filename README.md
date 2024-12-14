@@ -75,4 +75,6 @@ Enter: https://aleziakurdis.github.io/inertia/gravityConfigurator/app-gravityCon
 # ARCADE MACHINES  
 **PacMan**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/ARCADE/pacman/ARCADE-MACHINE-PACMAN.json  
+**Tetris**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/ARCADE/tetris/ARCADE-MACHINE-TETRIS.json  
   
