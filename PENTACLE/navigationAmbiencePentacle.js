@@ -19,7 +19,8 @@
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
-    var skyLap = 20;
+    var SKY_LAPS_BEFORE_PROCESS = 3;
+    var skyLap = SKY_LAPS_BEFORE_PROCESS;
 
     var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -109,7 +110,7 @@
             updateNavigation();
             skyLap = skyLap - 1;
             if (skyLap <= 0) {
-                skyLap = 20;
+                skyLap = SKY_LAPS_BEFORE_PROCESS;
                 generateSky(thisEntityID);
             }
             today = new Date();
