@@ -92,14 +92,15 @@
         },
         {
             "id": "{b05b5b39-0c71-4a4b-b267-4d2b096fd00b}",
-            "type": "Box",
+            "type": "Shape",
+            "shape" : "Cylinder",
             "position": {"x":-4000,"y": -4300,"z": 4000},
             "name": "FALLEN_BLOCKER",
             "locked": true,
             "dimensions": {
-                "x": 800,
+                "x": 2000,
                 "y": 4,
-                "z": 800
+                "z": 2000
             },
             "renderWithZones": [
                 "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
@@ -113,9 +114,8 @@
                 "red": 0,
                 "green": 0,
                 "blue": 0
-            },
-            "shape": "Cube"
-        },
+            }
+        }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
