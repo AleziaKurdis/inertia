@@ -22,6 +22,14 @@
     var SKY_LAPS_BEFORE_PROCESS = 3;
     var skyLap = SKY_LAPS_BEFORE_PROCESS;
 
+    var tideUpdateLap = 0;
+    var waterDirection = 1;
+    var WATER_SPEED = 0.3; // m/sec
+    var SEA_DELTA_Y_BELOW = 299.2; //m
+    var seaId = Uuid.NONE;
+    var NBR_LAP_TIDE = 30; //N lap of UPDATE_TIMER_INTERVAL sec
+    var TIDE_AMPLITUDE = 0.5; //in meter
+
     var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
     
@@ -113,6 +121,11 @@
                 skyLap = SKY_LAPS_BEFORE_PROCESS;
                 generateSky(thisEntityID);
             }
+            tideUpdateLap++;
+            if (tideUpdateLap === NBR_LAP_TIDE) {
+                genWater();
+                tideUpdateLap = 0;
+            }
             today = new Date();
             processTimer = today.getTime();
         }  
@@ -133,6 +146,11 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NONE;
             }
+            if (seaId != Uuid.NONE){
+                Entities.deleteEntity(seaId);
+                seaId = Uuid.NONE;
+            }
+            
             if (starID !== Uuid.NONE) {
                 Entities.deleteEntity(starID);
                 starID = Uuid.NONE;
@@ -150,6 +168,38 @@
         isInitiated = false;
     }
 
+    function genWater() {
+        var tide = (TIDE_AMPLITUDE/2) + Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 12.41/24))) * TIDE_AMPLITUDE;
+        currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
+        waterDirection = -waterDirection;
+        var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
+        var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide - SEA_DELTA_Y_BELOW,"z":universeCenter.z + currentOffset};
+        
+        if (seaId === Uuid.NULL) {
+            seaId = Entities.addEntity({
+                "type": "Model",
+                "name": "SEA",
+                "renderWithZone": renderWithZones,
+                "dimensions": {"x":18000,"y":0.01,"z":18000},
+                "position": waterPosition,
+                "modelURL": ROOT + "models/AQUASPHERE.fst",
+                "useOriginalPivot": true,
+                "shapeType": "none",
+                "grab": {
+                    "grabbable": false
+                },
+                "velocity": velocity,
+                "damping": 0
+            }, "local");
+            
+        } else {
+            Entities.editEntity(seaId,{
+                "position": waterPosition,
+                "velocity": velocity
+            });
+        }
+    }
+
     function initiate(EntID) {
         var properties = Entities.getEntityProperties(EntID, ["position", "dimensions"]);
         universeCenter = properties.position;
@@ -159,6 +209,7 @@
  
         univerSoundPlaying = 0;
         generateSky(EntID);
+        genWater();
 
         var today = new Date();
         processTimer = today.getTime();

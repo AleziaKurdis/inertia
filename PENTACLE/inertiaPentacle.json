@@ -56,7 +56,66 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/PENTACLE/models/pentacleFloor.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/PENTACLE/pentacle.js"
-        }
+        },
+        {
+            "id": "{f5a6de59-a9e3-405e-bccb-bb1ab848a26c}",
+            "type": "Model",
+            "name": "LANDSCAPE",
+            "locked": true,
+            "dimensions": {
+                "x": 1641.264892578125,
+                "y": 450,
+                "z": 1590.1260986328125
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.7660444378852844,
+                "z": 0,
+                "w": 0.6427876353263855
+            },
+            "position": {
+                "x": -4000,
+                "y": -4000,
+                "z": 4000
+            },
+            "renderWithZones": [
+                "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/PENTACLE/models/pentacleLandscape.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{b05b5b39-0c71-4a4b-b267-4d2b096fd00b}",
+            "type": "Box",
+            "position": {"x":-4000,"y": -4300,"z": 4000},
+            "name": "FALLEN_BLOCKER",
+            "locked": true,
+            "dimensions": {
+                "x": 800,
+                "y": 4,
+                "z": 800
+            },
+            "renderWithZones": [
+                "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        },
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120

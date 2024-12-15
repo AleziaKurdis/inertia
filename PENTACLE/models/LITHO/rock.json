@@ -1,0 +1,11 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "normalMap": "TexturesCom_Rock_CliffGranite_1K_normal.jpg",
+         "cullFaceMode":"CULL_BACK",
+         "defaultFallthrough": true
+      }
+   ]
+}

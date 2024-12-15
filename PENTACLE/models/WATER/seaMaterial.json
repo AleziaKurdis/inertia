@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.01, 0.01, 0.03],
+         "metallic": 1.0,
+         "roughness": 0.01,
+         "normalMap": "AQUASPHERE_NORMAL.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
