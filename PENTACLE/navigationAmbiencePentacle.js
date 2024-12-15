@@ -175,7 +175,7 @@
         var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
         var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide - SEA_DELTA_Y_BELOW,"z":universeCenter.z + currentOffset};
         
-        if (seaId === Uuid.NULL) {
+        if (seaId === Uuid.NONE) {
             seaId = Entities.addEntity({
                 "type": "Model",
                 "name": "SEA",
