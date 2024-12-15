@@ -204,6 +204,10 @@
                     print("polar.y: " + polar.y);
                     print("rotationYajuster: " + rotationYajuster);
                     
+                    var polarAzimuth = polar.y;
+                    if (polarAzimuth < 0) {
+                        polarAzimuth = (Math.PI * 2) + polarAzimuth;
+                    }
                     var polarAzimuth = polar.y - rotationYajuster;
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
