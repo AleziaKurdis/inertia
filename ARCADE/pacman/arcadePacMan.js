@@ -196,7 +196,7 @@
                         vecFromJoystick = Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition);
                         handActing = "LEFT";
                     }
-                    var rotationYajuster = Quat.safeEulerAngles(thisRotation);
+                    var rotationYajuster = Quat.safeEulerAngles(thisRotation).y;
                     var polar = Vec3.toPolar(vecFromJoystick);
                     var polarAzimuth = polar.y + rotationYajuster;
                     if (polarAzimuth < 0) {
