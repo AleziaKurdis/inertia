@@ -179,7 +179,7 @@
             seaId = Entities.addEntity({
                 "type": "Model",
                 "name": "SEA",
-                "renderWithZone": renderWithZones,
+                "renderWithZones": renderWithZones,
                 "dimensions": {"x":18000,"y":0.01,"z":18000},
                 "position": waterPosition,
                 "modelURL": ROOT + "models/AQUASPHERE.fst",
@@ -204,7 +204,8 @@
         var properties = Entities.getEntityProperties(EntID, ["position", "dimensions"]);
         universeCenter = properties.position;
         universeDimension = properties.dimensions;
-
+        renderWithZones = [EntID];
+        
         isInitiated = true; 
  
         univerSoundPlaying = 0;
@@ -336,7 +337,7 @@
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
-                "renderWithZones": [zoneID],
+                "renderWithZones": renderWithZones,
                 "damping": 0
             }, "local");
         } else {
@@ -365,6 +366,7 @@
                         "green": lightColor[1],
                         "blue": lightColor[2]
                     },
+                    "renderWithZones": renderWithZones,
                     "intensity": 18,
                     "falloffRadius": 500
                 }, "local");
@@ -394,6 +396,7 @@
                     "type": "Shape",
                     "shape": "Sphere",
                     "dimensions": {"x": 30, "y": 30, "z": 30},
+                    "renderWithZones": renderWithZones,
                     "color": {
                         "red": 210,
                         "green": 210,
@@ -417,6 +420,7 @@
                     "type": "Shape",
                     "shape": "Sphere",
                     "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
+                    "renderWithZones": renderWithZones,
                     "color": {
                         "red": 190,
                         "green": 190,
