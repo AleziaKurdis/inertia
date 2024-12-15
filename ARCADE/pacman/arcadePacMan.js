@@ -200,7 +200,7 @@
                     if (rotationYajuster < 0) {
                         rotationYajuster = (Math.PI * 2) + rotationYajuster;
                     }
-                    var polar = Vec3.toPolar(vecFromJoystick);                    
+                    var polar = Vec3.toPolar(vecFromJoystick);
                     var polarAzimuth = polar.y;
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
@@ -210,6 +210,7 @@
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
                     }
+                    print("polarAzimuth: " + polarAzimuth);
                     if (polar.z > (INTERACTION_DISTANCE_MOVE * 0.382)) {
                         if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                             messageToSend = {
