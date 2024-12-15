@@ -189,15 +189,16 @@
                     var interact = false;
                     if (rightDistance < leftDistance) {
                         //RIGHT HAND
-                        vecFromJoystick = Vec3.multiplyQbyV(thisRotation, Vec3.subtract(rightHandlerPosition, rightSameLeveljoyStickPosition));
+                        vecFromJoystick = Vec3.subtract(rightHandlerPosition, rightSameLeveljoyStickPosition);
                         handActing = "RIGHT";
                     } else {
                         //LEFT HAND
-                        vecFromJoystick = Vec3.multiplyQbyV(thisRotation, Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition));
+                        vecFromJoystick = Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition);
                         handActing = "LEFT";
                     }
+                    var rotationYajuster = Quat.safeEulerAngles(thisRotation);
                     var polar = Vec3.toPolar(vecFromJoystick);
-                    var polarAzimuth = polar.y;
+                    var polarAzimuth = polar.y + rotationYajuster;
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
                     }
