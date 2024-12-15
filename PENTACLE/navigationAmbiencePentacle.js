@@ -236,8 +236,10 @@
                     "z": universeDimension.z - 20
                 },
                 "parentID": entityID,
-                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                "localRotation": zoneRotation,
+                //"localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "position": MyAvatar.position,
+                //"localRotation": zoneRotation,
+                "rotation": zoneRotation,
                 "grab": {
                     "grabbable": false
                 },
@@ -286,7 +288,9 @@
             },"local");
         } else {
             Entities.editEntity(zoneID, {
-                "localRotation": zoneRotation,
+                "position": MyAvatar.position, //there was no position change before
+                //"localRotation": zoneRotation,
+                "rotation": zoneRotation,
                 "keyLight": {
                     "color": {
                         "red": skycolor[0],
