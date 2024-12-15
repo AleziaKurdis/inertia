@@ -219,6 +219,7 @@
     }
 
     function generateSky(entityID) {
+        print("GENSKY");//################################################## DEBUG
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
         var zoneRotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/darkness.jpg";
