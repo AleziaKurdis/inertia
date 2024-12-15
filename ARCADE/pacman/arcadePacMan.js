@@ -197,11 +197,14 @@
                         handActing = "LEFT";
                     }
                     var rotationYajuster = Quat.safeEulerAngles(thisRotation).y;
+                    if (rotationYajuster < 0) {
+                        rotationYajuster = (Math.PI * 2) + rotationYajuster;
+                    }
                     var polar = Vec3.toPolar(vecFromJoystick);
                     print("polar.y: " + polar.y);
                     print("rotationYajuster: " + rotationYajuster);
                     
-                    var polarAzimuth = polar.y + rotationYajuster;
+                    var polarAzimuth = polar.y - rotationYajuster;
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
                     }
