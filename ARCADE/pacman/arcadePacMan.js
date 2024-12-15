@@ -19,6 +19,8 @@
     var webID = Uuid.NONE;
     var thisEntityID;
     var thisPosition;
+    var thisRotation;
+    var thisRenderWithZones;
     
     var UPDATE_TIMER_INTERVAL = 100;
     var processTimer = 0;
@@ -38,7 +40,10 @@
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
-        thisPosition = Entities.getEntityProperties(entityID, ["position"]).position;
+        var properties = Entities.getEntityProperties(entityID, ["position", "rotation", "renderWithZones"]);
+        thisPosition = properties.position;
+        thisRotation = properties.rotation;
+        thisRenderWithZones = properties.renderWithZones;
 
         BEGIN_SOUND = SoundCache.getSound(ROOT + "sounds/BEGIN.wav");
         CHOMP_SOUND = SoundCache.getSound(ROOT + "sounds/CHOMP.wav");
@@ -56,6 +61,7 @@
             "localPosition": SCREEN_RELATIVE_POSITION,
             "localRotation": SCREEN_RELATIVE_ROTATION,
             "sourceUrl": ROOT + "index.html",
+            "renderWithZones": thisRenderWithZones,
             "grab": {
                 "grabbable": false
             },
@@ -151,8 +157,8 @@
             var messageToSend;
             
             //START BUTTON
-            var rightDistance = Vec3.distance(rightHandlerPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
-            var leftDistance = Vec3.distance(leftHandlerPosition, Vec3.sum(thisPosition, BUTTON_RELATIVE_POSITION));
+            var rightDistance = Vec3.distance(rightHandlerPosition, Vec3.sum(thisPosition, Vec3.multiplyQbyV(thisRotation, BUTTON_RELATIVE_POSITION)));
+            var leftDistance = Vec3.distance(leftHandlerPosition, Vec3.sum(thisPosition, Vec3.multiplyQbyV(thisRotation, BUTTON_RELATIVE_POSITION)));
             if (rightDistance < INTERACTION_DISTANCE_BUTTON || leftDistance < INTERACTION_DISTANCE_BUTTON) {
                 messageToSend = {
                     "channel": channel,
@@ -170,7 +176,7 @@
             }
             
             //MOVES
-            var joyStickPosition = Vec3.sum(thisPosition, MOVE_RELATIVE_POSITION);
+            var joyStickPosition = Vec3.sum(thisPosition, Vec3.multiplyQbyV(thisRotation, MOVE_RELATIVE_POSITION));
             if (Math.abs(rightHandlerPosition.y - joyStickPosition.y) < 0.08 || Math.abs(leftHandlerPosition.y - joyStickPosition.y) < 0.08) {
                 var rightSameLeveljoyStickPosition = {"x": joyStickPosition.x, "y": rightHandlerPosition.y, "z": joyStickPosition.z};
                 var leftSameLeveljoyStickPosition = {"x": joyStickPosition.x, "y": leftHandlerPosition.y, "z": joyStickPosition.z};
