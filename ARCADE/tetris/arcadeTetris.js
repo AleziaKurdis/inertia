@@ -195,9 +195,16 @@
                         vecFromJoystick = Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition);
                         handActing = "LEFT";
                     }
-                    var rotationYajuster = Quat.safeEulerAngles(thisRotation).y;
+                    var rotationYajuster = (Quat.safeEulerAngles(thisRotation).y) * Math.PI/180;
+                    if (rotationYajuster < 0) {
+                        rotationYajuster = (Math.PI * 2) + rotationYajuster;
+                    }
                     var polar = Vec3.toPolar(vecFromJoystick);
-                    var polarAzimuth = polar.y + rotationYajuster;
+                    var polarAzimuth = polar.y;
+                    if (polarAzimuth < 0) {
+                        polarAzimuth = (Math.PI * 2) + polarAzimuth;
+                    }
+                    var polarAzimuth = polar.y - rotationYajuster;
                     if (polarAzimuth < 0) {
                         polarAzimuth = (Math.PI * 2) + polarAzimuth;
                     }
@@ -205,28 +212,28 @@
                         if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
                             messageToSend = {
                                 "channel": channel,
-                                "action": "UP"
+                                "action": "DOWN"
                             };
                             Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                             interact = true;
                         } else if (polarAzimuth > (3 * Math.PI/4) && polarAzimuth <= (5 * Math.PI/4)) {
                             messageToSend = {
                                 "channel": channel,
-                                "action": "LEFT"
+                                "action": "RIGHT"
                             };
                             Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                             interact = true;
                         } else if (polarAzimuth > (5 * Math.PI/4) && polarAzimuth <= (7 * Math.PI/4)) {
                             messageToSend = {
                                 "channel": channel,
-                                "action": "DOWN"
+                                "action": "UP"
                             };
                             Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                             interact = true;
                         } else if (polarAzimuth > (7 * Math.PI/4) || polarAzimuth <= (Math.PI/4)) {
                             messageToSend = {
                                 "channel": channel,
-                                "action": "RIGHT"
+                                "action": "LEFT"
                             };
                             Entities.emitScriptEvent(webID, JSON.stringify(messageToSend));
                             interact = true;
