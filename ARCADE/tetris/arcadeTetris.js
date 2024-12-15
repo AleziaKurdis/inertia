@@ -188,11 +188,11 @@
                     var interact = false;
                     if (rightDistance < leftDistance) {
                         //RIGHT HAND
-                        vecFromJoystick = Vec3.subtract(rightHandlerPosition, rightSameLeveljoyStickPosition);
+                        vecFromJoystick = Vec3.multiplyQbyV(thisRotation, Vec3.subtract(rightHandlerPosition, rightSameLeveljoyStickPosition));
                         handActing = "RIGHT";
                     } else {
                         //LEFT HAND
-                        vecFromJoystick = Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition);
+                        vecFromJoystick = Vec3.multiplyQbyV(thisRotation, Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition));
                         handActing = "LEFT";
                     }
                     var polar = Vec3.toPolar(vecFromJoystick);
