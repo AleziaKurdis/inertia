@@ -196,20 +196,11 @@
                         vecFromJoystick = Vec3.subtract(leftHandlerPosition, leftSameLeveljoyStickPosition);
                         handActing = "LEFT";
                     }
-                    var rotationYajuster = (Quat.safeEulerAngles(thisRotation).y) * Math.PI/180;
-                    if (rotationYajuster < 0) {
-                        rotationYajuster = (Math.PI * 2) + rotationYajuster;
-                    }
+                    var rotationYajuster = normalizeAngle((Quat.safeEulerAngles(thisRotation).y) * Math.PI/180);
                     var polar = Vec3.toPolar(vecFromJoystick);
-                    var polarAzimuth = polar.y;
-                    if (polarAzimuth < 0) {
-                        polarAzimuth = (Math.PI * 2) + polarAzimuth;
-                    }
-                    
-                    var polarAzimuth = polar.y - rotationYajuster;
-                    if (polarAzimuth < 0) {
-                        polarAzimuth = (Math.PI * 2) + polarAzimuth;
-                    }
+                    var polarAzimuth = normalizeAngle(polar.y);
+                    var polarAzimuth = normalizeAngle(polar.y - rotationYajuster);
+
                     print("polarAzimuth: " + polarAzimuth);
                     if (polar.z > (INTERACTION_DISTANCE_MOVE * 0.382)) {
                         if (polarAzimuth > (Math.PI/4) && polarAzimuth <= (3 * Math.PI/4)) {
@@ -263,7 +254,16 @@
         }
 
     }
-
+    
+    function normalizeAngle(angle) {
+        const twoPi = 2 * Math.PI;
+        let normalized = angle % twoPi;
+        if (normalized < 0) {
+            normalized += twoPi;
+        }
+        return normalized;
+    }
+    
     function onWebEventReceived(entityID, message) {
         if (typeof message === "string" &&  entityID === webID) {
             var d = new Date();
