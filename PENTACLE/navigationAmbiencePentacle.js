@@ -220,7 +220,6 @@
     }
 
     function generateSky(entityID) {
-        print("GENSKY");//################################################## DEBUG
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
         var zoneRotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/darkness.jpg";
@@ -332,8 +331,8 @@
                 "name": "STAR",
                 //"parentID": zoneID,
                 "dimensions": {"x": STAR_DIAMETER, "y": STAR_DIAMETER, "z": STAR_DIAMETER},
-                "localPosition": Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST})),
-                "localRotation": Quat.fromVec3Degrees( {"x": 20.0, "y": 0.0, "z": 0.0} ),
+                "position": Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST})),
+                "rotation": Quat.fromVec3Degrees( {"x": 20.0, "y": 0.0, "z": 0.0} ),
                 "type": "Shape",
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
@@ -343,7 +342,7 @@
         } else {
             //edit
             Entities.editEntity(starID, {
-                "localPosition": Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}),
+                "position": Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV( rotation, {"x": 0.0, "y": 0.0, "z": -STAR_DIST}))
             });
         }
         manageStarLight(hue);
