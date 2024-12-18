@@ -169,12 +169,13 @@
         <label class="gravityLabel" for="radius">Effective radius: <input type="text" size="6" id="radius" value="2000"> meters</label><br>
         <br><hr><br>
         <label class="gravityLabel">Entity Host Type:</label> <br>
-          <input type="radio" id="entityHostTypeDomain" name="entityHostType" value="domain" checked>
-          <label class="radioLabel" for="entityHostTypeDomain">Domain</label> <i>(Affect everyone, for persistent installation)</i><br>
+          <input type="radio" id="entityHostTypeLocal" name="entityHostType" value="local" checked>
+          <label class="radioLabel" for="entityHostTypeLocal">Only You</label> <i>(As a superpower)</i><br>
           <input type="radio" id="entityHostTypeAvatar" name="entityHostType" value="avatar">
-          <label class="radioLabel" for="entityHostTypeAvatar">Avatar</label> <i>(Affect everyone, attached to you.)</i><br>  
-          <input type="radio" id="entityHostTypeLocal" name="entityHostType" value="local">
-          <label class="radioLabel" for="entityHostTypeLocal">Only You</label> <i>(As a superpower)</i>
+          <label class="radioLabel" for="entityHostTypeAvatar">Avatar</label> <i>(Affect everyone, attached to you.)</i><br>
+          <input type="radio" id="entityHostTypeDomain" name="entityHostType" value="domain">
+          <label class="radioLabel" for="entityHostTypeDomain">Domain</label> <i>(Affect everyone, for persistent installation)</i>
+
         <br><br><hr><br>
         <div style="text-align: center; width: 99%;"><button onClick="generateGravity();" id="gen">Generate</button></div>
         <br><br>
