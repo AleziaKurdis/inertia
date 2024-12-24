@@ -90,9 +90,9 @@
             "name": "FALLEN_BLOCKER",
             "locked": true,
             "dimensions": {
-                "x": 2000,
+                "x": 4000,
                 "y": 4,
-                "z": 2000
+                "z": 4000
             },
             "renderWithZones": [
                 "{9b978973-416d-4af7-b32b-a4211d2d2cf8}"
