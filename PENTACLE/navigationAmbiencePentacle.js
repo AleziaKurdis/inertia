@@ -725,7 +725,16 @@
             }
             
             //############## END NOCTURN LIGHTNINGS AND THUNDER #############
+
+            //###################### ASTEROIDS ##############################
+            var astroidEventFrequency = 0.015 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.007);
             
+            if (Math.random() < astroidEventFrequency && astroidFXstatus) { //0.02 = 1 fois par 33 sec
+                //trigger an astroid
+                genAsteroid(myAvPos);
+            }
+            //###################### END ASTEROIDS ##########################
+
         }
     } 
 
@@ -779,6 +788,85 @@
             && targetPosition.z >= minZ && targetPosition.z <= maxZ);
     }
     
+
+    function genAsteroid(avatarPosition) {
+        var nowDate = new Date();
+		var catalogNumber = nowDate.getTime();
+        var i;
+        for (i=0; i > asteroidStack.length; i++) {
+            if (asteroidStack[i].expiration < catalogNumber) {
+                Entities.deleteEntity(asteroidStack[i].id);
+                asteroidStack.splice(i, 1);
+            }
+        }
+        
+        var FOG_DISTANCE = 2400;
+        
+        var astFromCap = Math.random() * (Math.PI * 2);
+        var astFromInclinaison = (Math.random() * Math.PI) - (Math.PI / 2);
+        var astPolarVec = Vec3.fromPolar({"x": astFromInclinaison,"y": astFromCap,"z": (FOG_DISTANCE * 1.2)});
+        var astStartPoint = {"x": (avatarPosition.x + astPolarVec.x), "y": (avatarPosition.y + astPolarVec.y), "z": (avatarPosition.z + astPolarVec.z)}; 
+            
+        var astVelocity = (Math.random()* 150) + 25;
+        var astLife = ((FOG_DISTANCE * 2.5) * 2) / astVelocity; 
+
+        var asteroidMaxSize = 900;
+        var asteroidScale = asteroidMaxSize + ((Math.random() * asteroidMaxSize/4) - asteroidMaxSize/8);
+        var angVeloc = {
+            x: 0,
+            y: 0,
+            z: (Math.random()*1.5) - 0.75
+        };  
+
+        var excentricity, astDimension;
+        astDimension = {
+            "x": (1 + Math.random() - 0.5) * asteroidScale,
+            "y": (1 + Math.random() - 0.5) * asteroidScale,
+            "z": 0.01
+        };
+        
+        var asteroidImageURL = ROOT + "images/darkMater_1.png";
+        
+        var targetPoint = Vec3.sum(avatarPosition, Vec3.multiply( Vec3.multiplyQbyV(MyAvatar.orientation, Vec3.UNIT_NEG_Z), (250 + Math.random() * 500 )));
+        
+        var veloVec = Vec3.multiply(Vec3.normalize({"x": (targetPoint.x - astStartPoint.x), "y": (targetPoint.y - astStartPoint.y), "z": (targetPoint.z - astStartPoint.z)}), astVelocity);
+        
+		var properties = {
+			"type": "Image",
+			"name": "SKY_EVENT-" + catalogNumber,
+			"position": astStartPoint,
+			"dimensions": astDimension,
+			"velocity": veloVec,
+			"damping": 0,
+			"angularVelocity": angVeloc,
+			"angularDamping": 0,
+			"restitution": 1,
+			"friction": 0,
+			"gravity": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+            "grab": {
+                "grabbable": false
+            },
+			"density": 10,
+			"dynamic": true,
+			"collisionless": true,
+			"imageURL": asteroidImageURL,
+			"emissive": false,
+            "color": {"red": 0, "green": 0, "blue": 0},
+            "alpha": 0.99,
+            "renderWithZones": [thisEntityID],
+            "billboardMode": "full"
+		};
+
+
+		print("SKY_EVENT-" + catalogNumber + " : " + astVelocity + " | " + astLife);
+
+		var id = Entities.addEntity(properties, "local");
+        asteroidStack.push({"id": id, "expiration": catalogNumber + astLife});
+    }
 
 
     /*
