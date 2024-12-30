@@ -50,6 +50,7 @@
     var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
     var thunderSound = []; 
     var thunderInjector;
+    var asteroidStack = [];
 
     var zoneID = Uuid.NONE;
     var starID = Uuid.NONE;
@@ -164,6 +165,13 @@
                 Entities.deleteEntity(lightningsID);
                 lightningsID = Uuid.NONE;
             }
+            
+            var i;
+            for (i=0; i < asteroidStack.length; i++) {
+                Entities.deleteEntity(asteroidStack[i].id);
+                
+            }
+            asteroidStack = [];
         }
         isInitiated = false;
     }
