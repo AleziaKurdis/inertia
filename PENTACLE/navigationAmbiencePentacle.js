@@ -735,12 +735,12 @@
             //############## END NOCTURN LIGHTNINGS AND THUNDER #############
 
             //###################### ASTEROIDS ##############################
-            var astroidEventFrequency = 0.015 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.007);
+/*            var astroidEventFrequency = 0.015 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.007);
             
             if (Math.random() < astroidEventFrequency && astroidFXstatus) { //0.02 = 1 fois par 33 sec
                 //trigger an astroid
                 genAsteroid(myAvPos);
-            }
+            }*/
             //###################### END ASTEROIDS ##########################
 
         }
