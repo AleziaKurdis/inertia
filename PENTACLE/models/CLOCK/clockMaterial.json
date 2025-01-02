@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1, 0.961, 0.671],
+         "metallic": 1.0,
+         "roughness": 0.12,
+         "normalMap": "HORLOGE-SOLAIRE-D29_NORMAL.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
