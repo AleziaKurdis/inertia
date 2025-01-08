@@ -43,7 +43,7 @@ function myTimer(deltaTime) {
         xhr.setRequestHeader("Accept", "application/vnd.github.v3+json");
 
         // Handle the response
-        xhr.onload = function () {
+        xhr.onreadystatechange = function () {
             if (xhr.status >= 200 && xhr.status < 300) {
                 var pageData = JSON.parse(xhr.responseText);
                 data = data.concat(pageData);
@@ -57,9 +57,9 @@ function myTimer(deltaTime) {
             }
         };
 
-        xhr.onerror = function () {
+/*        xhr.onerror = function () {
             print("OIT: Request failed");
-        };
+        };*/
 
         xhr.send();
     }
