@@ -36,6 +36,7 @@ function myTimer(deltaTime) {
     var today = new Date();
     if ((today.getTime() - processTimer) > updateTimerInterval ) {
 
+        data = [];
         getGitHubIssues(1, owner, repo);
 
         today = new Date();
@@ -351,7 +352,6 @@ function GetCurrentCycleValue(cyclelength, cycleduration){
 }
 // ################## END CYLCE AND TIME FUNCTIONS ###########################
 
-getGitHubIssues(1, owner, repo);
 Script.update.connect(myTimer);
 
 Script.scriptEnding.connect(function () {
