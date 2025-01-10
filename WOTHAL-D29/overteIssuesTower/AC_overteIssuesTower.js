@@ -3,7 +3,7 @@
 //  AC_overteIssuesTower.js
 //
 //  Created by Alezia Kurdis on January 7th, 2025
-//  Copyright 2025 Alezia Kurdis.
+//  Copyright 2025 Overte e.V.
 //
 //  Server side manager for Overte Issues Tower (OIT).
 //
@@ -14,9 +14,10 @@ print("OIT: start running.");
 var jsMainFileName = "AC_overteIssuesTower.js";
 var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
 
-var ORIGIN_POSITION = { "x": -4000, "y": 4000, "z": -4000};
+var positionZero = { "x": 3384.25, "y": 6059.19, "z": 10164.4}; //<=== SET THE POSITION IN YOUR DOMAIN
 
-var updateTimerInterval = 1200000; //20minutes.
+var REFRESH_INTERVAL = 1200; //20 minutes in sec.
+var updateTimerInterval = REFRESH_INTERVAL * 1000; //20minutes in millisec
 var processTimer = 0;
 
 const owner = "overte-org";
@@ -24,6 +25,12 @@ const repo = "overte";
 
 var labels = [];
 var data = [];
+var forFastDeletion = []; 
+
+var STEP_HEIGHT = 0.2;
+var PARK_INTERVAL = 19;
+
+var CONSIDERED_AS_OLD_STUFF = 12960000; //15 d24 days
 
 function myTimer(deltaTime) {
     var today = new Date();
@@ -41,8 +48,7 @@ function myTimer(deltaTime) {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.setRequestHeader("Accept", "application/vnd.github.v3+json");
-
-        // Handle the response
+        
         xhr.onreadystatechange = function () {
             if (xhr.status >= 200 && xhr.status < 300) {
                 var pageData = JSON.parse(xhr.responseText);
@@ -56,10 +62,6 @@ function myTimer(deltaTime) {
                 print("OIT: Error: " + xhr.status + " - " + xhr.statusText);
             }
         };
-
-/*        xhr.onerror = function () {
-            print("OIT: Request failed");
-        };*/
 
         xhr.send();
     }
@@ -84,8 +86,164 @@ function myTimer(deltaTime) {
                 tiles.push(record);
             }
         }
-        //generateTower(tiles);
-        print("OIT: " + JSON.stringify(tiles));
+        generateTower(tiles);
+        //print("OIT: " + JSON.stringify(tiles));
+    }
+    
+    function generateTower(tilesData) {
+        forFastDeletion = [];
+        var i;
+        var radius = 9;
+        var espacement = 4.5;
+        var angleRad = 0;
+        var corridorFactor = 1.7;
+        var coy = 0.0;
+        
+        var placeArea = 0;
+        for (i = 0;i < tilesData.length; i++) {
+            
+            var numbrePossiblePerRing, cox, coz, relativePosition;
+
+            if ((i%PARK_INTERVAL) === 0 && i !== 0) {
+                placeArea++;
+                numbrePossiblePerRing = (radius * 2 * Math.PI) / espacement;
+                radius = radius + (espacement/numbrePossiblePerRing) * corridorFactor;
+                angleRad = angleRad + ((2 * Math.PI)/numbrePossiblePerRing);
+                cox = Math.cos(angleRad) * radius;
+                coz = Math.sin(angleRad) * radius;
+                relativePosition = {"x": cox, "y": coy, "z": coz };
+                
+                var parkId = Entities.addEntity({
+                    "type": "Model",
+                    "name": "PARK-" + i,
+                    "position": Vec3.sum(positionZero, relativePosition),
+                    "rotation": Quat.fromVec3Radians( {"x": 0.0, "y": -angleRad + Math.PI, "z": 0.0} ),
+                    "locked": false,
+                    "dimensions": {
+                        "x": 7.8822,
+                        "y": 501.1473,
+                        "z": 5.7883
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "static-mesh",
+                    "script": ROOT + "areas/area_" + placeArea + ".js",
+                    "modelURL": ROOT + "models/PARK.fst",
+                    "useOriginalPivot": true,
+                    "lifetime": REFRESH_INTERVAL + 1
+                }, "domain");
+                
+                forFastDeletion.push(parkId);
+                
+                var areaTextId = Entities.addEntity({
+                        "type": "Text",
+                        "parentID": parkId,
+                        "name": "AREA " + placeArea,
+                        "dimensions": {
+                            "x": 4,
+                            "y": 0.9,
+                            "z": 0.01
+                        },
+                        "localPosition": {"x": 0.7, "y": 0, "z": 0},
+                        "localRotation": Quat.fromVec3Radians( {"x": -Math.PI/2, "y": Math.PI/2, "z": 0} ),
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "textColor": {
+                            "red": 255,
+                            "green": 200,
+                            "blue": 0
+                        },                        
+                        "text": "AREA " + placeArea,
+                        "lineHeight": 0.6,
+                        "backgroundAlpha": 0.0,
+                        "topMargin": 0.0,
+                        "unlit": false,
+                        "alignment": "center",
+                        "locked": false,
+                        "collisionless": true,
+                        "ignoreForCollisions": true,
+                        "lifetime": REFRESH_INTERVAL + 1
+                    }, "domain");
+
+                coy = coy - STEP_HEIGHT;
+            }
+            
+            placeArea++;
+            numbrePossiblePerRing = (radius * 2 * Math.PI) / espacement;
+            radius = radius + (espacement/numbrePossiblePerRing) * corridorFactor;
+            angleRad = angleRad + ((2 * Math.PI)/numbrePossiblePerRing);
+            cox = Math.cos(angleRad) * radius;
+            coz = Math.sin(angleRad) * radius;
+            relativePosition = {"x": cox, "y": coy, "z": coz };
+            
+            var today = new Date();
+            var curTime = today.getTime();
+            var hecatePortalModelUrl;
+            if (tilesData[i].creationDate >= tilesData[i].updateDate) {
+                if (curTime - tilesData[i].updateDate < CONSIDERED_AS_OLD_STUFF) {
+                    hecatePortalModelUrl = ROOT + "models/TILE_RED.fst";
+                } else {
+                    hecatePortalModelUrl = ROOT + "models/TILE_STANDARD.fst";
+                }
+            } else {
+                if (curTime - tilesData[i].updateDate < CONSIDERED_AS_OLD_STUFF) {
+                    hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
+                } else {
+                    hecatePortalModelUrl = ROOT + "models/TILE_STANDARD.fst";
+                }
+            }
+            
+            var portalId = Entities.addEntity({
+                "type": "Model",
+                "name": "ISSUE - " + tilesData[i].number,
+                "position": Vec3.sum(positionZero, relativePosition),
+                "rotation": Quat.fromVec3Radians( {"x": 0.0, "y": -angleRad + Math.PI, "z": 0.0} ),
+                "locked": false,
+                "dimensions": {
+                    "x": 8.0673,
+                    "y": 505.7698,
+                    "z": 5.7883
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "static-mesh",
+                "modelURL": hecatePortalModelUrl,
+                "useOriginalPivot": true,
+                "lifetime": REFRESH_INTERVAL + 1
+            }, "domain");
+            
+            forFastDeletion.push(portalId);
+            
+            coy = coy - STEP_HEIGHT;
+
+            if (i === (tilesData.length - 1)) {
+                var deadEndId = Entities.addEntity({
+                    "type": "Model",
+                    "name": "DEADEND",
+                    "parentID": portalId,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    //"position": Vec3.sum(positionZero, relativePosition),
+                    //"rotation": Quat.fromVec3Radians( {"x": 0.0, "y": -angleRad + Math.PI, "z": 0.0} ),
+                    "locked": false,
+                    "dimensions": {
+                        "x": 2.9488,
+                        "y": 1.2709,
+                        "z": 0.1825
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "static-mesh",
+                    "modelURL": ROOT + "models/deadend.fbx",
+                    "useOriginalPivot": true,
+                    "lifetime": REFRESH_INTERVAL + 1
+                }, "domain");
+            }
+
+        }
     }
     
     function dateToTimestamp(dateString) {
@@ -197,7 +355,12 @@ getGitHubIssues(1, owner, repo);
 Script.update.connect(myTimer);
 
 Script.scriptEnding.connect(function () {
-    //DELETIONS HERE
+    var i;
+    for (i = 0; i < forFastDeletion.length; i++) {
+        Entities.deleteEntity(forFastDeletion[i]);
+    }
+    forFastDeletion = [];
+    
     Script.update.disconnect(myTimer);
 });
 
