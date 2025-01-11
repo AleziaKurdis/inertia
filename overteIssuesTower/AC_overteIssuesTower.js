@@ -96,6 +96,8 @@ function myTimer(deltaTime) {
         forFastDeletion = [];
         var zoneID = genVisibilityZone();
         forFastDeletion.push(zoneID);
+        var renderWithZones = [];
+        renderWithZones.push(zoneID);
         var i;
         var radius = 9;
         var espacement = 4.5;
@@ -136,7 +138,7 @@ function myTimer(deltaTime) {
                     "modelURL": ROOT + "models/PARK.fst",
                     "useOriginalPivot": true,
                     "lifetime": REFRESH_INTERVAL + 1,
-                    "renderWithZones": [zoneID]
+                    "renderWithZones": renderWithZones
                 }, "domain");
                 
                 forFastDeletion.push(parkId);
@@ -170,7 +172,7 @@ function myTimer(deltaTime) {
                         "collisionless": true,
                         "ignoreForCollisions": true,
                         "lifetime": REFRESH_INTERVAL + 1,
-                        "renderWithZones": [zoneID]
+                        "renderWithZones": renderWithZones
                     }, "domain");
 
                 coy = coy - STEP_HEIGHT;
@@ -219,7 +221,7 @@ function myTimer(deltaTime) {
                 "modelURL": hecatePortalModelUrl,
                 "useOriginalPivot": true,
                 "lifetime": REFRESH_INTERVAL + 1,
-                "renderWithZones": [zoneID]
+                "renderWithZones": renderWithZones
             }, "domain");
             
             forFastDeletion.push(portalId);
@@ -245,7 +247,7 @@ function myTimer(deltaTime) {
                     "modelURL": ROOT + "models/deadend.fbx",
                     "useOriginalPivot": true,
                     "lifetime": REFRESH_INTERVAL + 1,
-                    "renderWithZones": [zoneID]
+                    "renderWithZones": renderWithZones
                 }, "domain");
             }
 
