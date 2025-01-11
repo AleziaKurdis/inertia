@@ -253,7 +253,7 @@ function myTimer(deltaTime) {
     }
     
     function genVisibilityZone() {
-        var zoneID = Entities.addEntity({
+        var zID = Entities.addEntity({
             "type":"Zone",
             "name":"OVERTE_ISSUES_TOWER_VISIBILITY_ZONE",
             "locked": false,
@@ -264,20 +264,12 @@ function myTimer(deltaTime) {
             },
             "position": positionZero,
             "grab":{
-                "grabbable":false
+                "grabbable": false
             },
             "shapeType":"box",
-            "keyLight":{
-                "direction":{
-                   "x":0,
-                   "y":-0.70710676908493,
-                   "z":0.70710676908493
-                },
-                "castShadows":true
-            },
             "lifetime": REFRESH_INTERVAL + 15
         }, "domain");
-        return zoneID;
+        return zID;
     }
     
     function dateToTimestamp(dateString) {
