@@ -252,6 +252,7 @@ function myTimer(deltaTime) {
             }
 
         }
+        EntityViewer.queryOctree();
     }
     
     function genVisibilityZone() {
@@ -289,6 +290,7 @@ function myTimer(deltaTime) {
             "tonemappingMode": "inherit",
             "ambientOcclusionMode": "inherit"
         }, "domain");
+        EntityViewer.queryOctree();
         print("OIT: " + zID);
         return zID;
     }
