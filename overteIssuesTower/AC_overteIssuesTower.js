@@ -16,7 +16,7 @@ var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
 
 var positionZero = { "x": -8000, "y": -8000, "z": -8000}; //<=== SET THE POSITION IN YOUR DOMAIN
 
-var REFRESH_INTERVAL = 3600; //60 minutes in sec.
+var REFRESH_INTERVAL = 600;//3600; //60 minutes in sec.
 var updateTimerInterval = REFRESH_INTERVAL * 1000; //60 minutes in millisec
 var processTimer = 0;
 
@@ -92,7 +92,7 @@ function myTimer(deltaTime) {
     }
     
     function generateTower(tilesData) {
-        
+        EntityViewer.queryOctree();
         forFastDeletion = [];
         var zoneID = genVisibilityZone();
         forFastDeletion.push(zoneID);
@@ -140,41 +140,41 @@ function myTimer(deltaTime) {
                     "lifetime": REFRESH_INTERVAL + 1,
                     "renderWithZones": renderWithZones
                 }, "domain");
-                
+                EntityViewer.queryOctree();
                 forFastDeletion.push(parkId);
                 
                 var areaTextId = Entities.addEntity({
-                        "type": "Text",
-                        "parentID": parkId,
-                        "name": "AREA " + placeArea,
-                        "dimensions": {
-                            "x": 4,
-                            "y": 0.9,
-                            "z": 0.01
-                        },
-                        "localPosition": {"x": 0.7, "y": 0, "z": 0},
-                        "localRotation": Quat.fromVec3Radians( {"x": -Math.PI/2, "y": Math.PI/2, "z": 0} ),
-                        "grab": {
-                            "grabbable": false
-                        },
-                        "textColor": {
-                            "red": 255,
-                            "green": 200,
-                            "blue": 0
-                        },                        
-                        "text": "AREA " + placeArea,
-                        "lineHeight": 0.6,
-                        "backgroundAlpha": 0.0,
-                        "topMargin": 0.0,
-                        "unlit": false,
-                        "alignment": "center",
-                        "locked": false,
-                        "collisionless": true,
-                        "ignoreForCollisions": true,
-                        "lifetime": REFRESH_INTERVAL + 1,
-                        "renderWithZones": renderWithZones
-                    }, "domain");
-
+                    "type": "Text",
+                    "parentID": parkId,
+                    "name": "AREA " + placeArea,
+                    "dimensions": {
+                        "x": 4,
+                        "y": 0.9,
+                        "z": 0.01
+                    },
+                    "localPosition": {"x": 0.7, "y": 0, "z": 0},
+                    "localRotation": Quat.fromVec3Radians( {"x": -Math.PI/2, "y": Math.PI/2, "z": 0} ),
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "textColor": {
+                        "red": 255,
+                        "green": 200,
+                        "blue": 0
+                    },                        
+                    "text": "AREA " + placeArea,
+                    "lineHeight": 0.6,
+                    "backgroundAlpha": 0.0,
+                    "topMargin": 0.0,
+                    "unlit": false,
+                    "alignment": "center",
+                    "locked": false,
+                    "collisionless": true,
+                    "ignoreForCollisions": true,
+                    "lifetime": REFRESH_INTERVAL + 1,
+                    "renderWithZones": renderWithZones
+                }, "domain");
+                EntityViewer.queryOctree();
                 coy = coy - STEP_HEIGHT;
             }
             
@@ -223,7 +223,7 @@ function myTimer(deltaTime) {
                 "lifetime": REFRESH_INTERVAL + 1,
                 "renderWithZones": renderWithZones
             }, "domain");
-            
+            EntityViewer.queryOctree();
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
@@ -250,9 +250,8 @@ function myTimer(deltaTime) {
                     "renderWithZones": renderWithZones
                 }, "domain");
             }
-
+            EntityViewer.queryOctree();
         }
-        EntityViewer.queryOctree();
     }
     
     function genVisibilityZone() {
