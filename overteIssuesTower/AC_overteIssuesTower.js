@@ -277,7 +277,7 @@ function myTimer(deltaTime) {
             },
             "lifetime": REFRESH_INTERVAL + 15
         }, "domain");
-        return zoneID
+        return zoneID;
     }
     
     function dateToTimestamp(dateString) {
