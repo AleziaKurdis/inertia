@@ -274,7 +274,8 @@ function myTimer(deltaTime) {
                    "z":0.70710676908493
                 },
                 "castShadows":true
-            }
+            },
+            "lifetime": REFRESH_INTERVAL + 15
         }, "domain");
         return zoneID
     }
