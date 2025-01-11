@@ -97,7 +97,7 @@ function myTimer(deltaTime) {
         var zoneID = genVisibilityZone();
         forFastDeletion.push(zoneID);
         var renderWithZones = [];
-        //renderWithZones.push(zoneID);
+        renderWithZones.push(zoneID);
         var i;
         var radius = 9;
         var espacement = 4.5;
@@ -405,6 +405,7 @@ Script.scriptEnding.connect(function () {
     var i;
     for (i = 0; i < forFastDeletion.length; i++) {
         Entities.deleteEntity(forFastDeletion[i]);
+        EntityViewer.queryOctree();
     }
     forFastDeletion = [];
     
