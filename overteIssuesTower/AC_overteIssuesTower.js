@@ -278,6 +278,7 @@ function myTimer(deltaTime) {
             "tonemappingMode": "inherit",
             "ambientOcclusionMode": "inherit"
         }, "domain");
+        print("OIT: " + zID);
         return zID;
     }
     
