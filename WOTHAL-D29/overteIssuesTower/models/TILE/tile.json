@@ -1,9 +1,0 @@
-{"materials":[{
-    "albedo": [0.031, 0.031, 0.031],
-    "roughness": 0.480, 
-    "metallic": 0.01, 
-    "normalMap": "fundationNormal512b.jpg",
-    "cullFaceMode": "CULL_NONE", 
-    "model": "hifi_pbr",
-    "defaultFallthrough": false
-}]}
