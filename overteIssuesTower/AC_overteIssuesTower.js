@@ -271,6 +271,17 @@ function myTimer(deltaTime) {
             "shapeType":"box",
             "lifetime": REFRESH_INTERVAL + 15,
             "keyLightMode": "inherit",
+            "keyLight": {
+                "direction": {
+                    "x":0,
+                    "y":-1,
+                    "z":0
+                },
+                "intensity": 1,
+                "castShadows": true,
+                "shadowBias":0.02,
+                "shadowMaxDistance": 150
+            },
             "ambientLightMode": "inherit",
             "skyboxMode": "inherit",
             "hazeMode": "inherit",
