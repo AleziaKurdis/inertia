@@ -269,7 +269,14 @@ function myTimer(deltaTime) {
                 "grabbable": false
             },
             "shapeType":"box",
-            "lifetime": REFRESH_INTERVAL + 15
+            "lifetime": REFRESH_INTERVAL + 15,
+            "keyLightMode": "inherit",
+            "ambientLightMode": "inherit",
+            "skyboxMode": "inherit",
+            "hazeMode": "inherit",
+            "bloomMode": "inherit",
+            "tonemappingMode": "inherit",
+            "ambientOcclusionMode": "inherit"
         }, "domain");
         return zID;
     }
