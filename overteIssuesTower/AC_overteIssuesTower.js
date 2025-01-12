@@ -30,7 +30,7 @@ var forFastDeletion = [];
 var STEP_HEIGHT = 0.2;
 var PARK_INTERVAL = 19;
 
-var CONSIDERED_AS_OLD_STUFF = 12960000; //15 d24 days
+var CONSIDERED_AS_OLD_STUFF = 3600 * 24 * 15 * 1000; //15 d24 days in millisec
 
 function myTimer(deltaTime) {
     var today = new Date();
