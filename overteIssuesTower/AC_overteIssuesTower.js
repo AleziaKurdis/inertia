@@ -224,6 +224,42 @@ function myTimer(deltaTime) {
                 "renderWithZones": renderWithZones
             }, "domain");
             EntityViewer.queryOctree();
+        
+            //ISSUE NUMBER text
+            var issueNumberPortalId = Entities.addEntity({
+                "type": "Text",
+                "parentID": portalId,
+                "locked": true,
+                "name": "PORTAL_NUMBER_TEXT - " + tilesData[i].number,
+                "dimensions": {
+                    "x": 2.4119091033935547,
+                    "y": 0.2888250946998596,
+                    "z": 0.009999999776482582
+                },
+                "localRotation": {
+                    "x": 0,
+                    "y": 0.7071067690849304,
+                    "z": 0,
+                    "w": 0.7071067690849304
+                },
+                "localPosition": {
+                    "x": 1.28,
+                    "y": 3.0775,
+                    "z": 0
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "text": tilesData[i].number,
+                "lineHeight": 0.17000000178813934,
+                "backgroundAlpha": 0.7,
+                "topMargin": 0.05999999865889549,
+                "unlit": true,
+                "textEffectThickness": 0.23999999463558197,
+                "alignment": "center",
+                "verticalAlignment": "center"
+            },"domain");
+            EntityViewer.queryOctree();
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
@@ -249,6 +285,7 @@ function myTimer(deltaTime) {
                     "lifetime": REFRESH_INTERVAL + 1,
                     "renderWithZones": renderWithZones
                 }, "domain");
+                
             }
             EntityViewer.queryOctree();
         }
