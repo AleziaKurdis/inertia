@@ -229,11 +229,11 @@ function myTimer(deltaTime) {
             var issueNumberPortalId = Entities.addEntity({
                 "type": "Text",
                 "parentID": portalId,
-                "locked": true,
+                "locked": false,
                 "name": "PORTAL_NUMBER_TEXT - " + tilesData[i].number,
                 "dimensions": {
                     "x": 2.4119091033935547,
-                    "y": 0.2888250946998596,
+                    "y": 0.35,
                     "z": 0.009999999776482582
                 },
                 "localRotation": {
@@ -244,16 +244,16 @@ function myTimer(deltaTime) {
                 },
                 "localPosition": {
                     "x": 1.28,
-                    "y": 3.0775,
+                    "y": 4.70,
                     "z": 0
                 },
                 "grab": {
                     "grabbable": false
                 },
                 "text": tilesData[i].number,
-                "lineHeight": 0.17000000178813934,
+                "lineHeight": 0.3,
                 "backgroundAlpha": 0.7,
-                "topMargin": 0.05999999865889549,
+                "bottomMargin": 0.05,
                 "unlit": true,
                 "textEffectThickness": 0.23999999463558197,
                 "alignment": "center",
