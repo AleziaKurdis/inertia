@@ -257,9 +257,47 @@ function myTimer(deltaTime) {
                 "unlit": true,
                 "textEffectThickness": 0.23999999463558197,
                 "alignment": "center",
-                "verticalAlignment": "center"
+                "verticalAlignment": "center",
+                "textColor": {"red": 247, "green": 88, "blue": 30}
             },"domain");
             EntityViewer.queryOctree();
+
+            var issueTitlePortalId = Entities.addEntity({
+                "type": "Text",
+                "parentID": portalId,
+                "locked": false,
+                "name": "PORTAL_TITLE_TEXT - " + tilesData[i].number,
+                "dimensions": {
+                    "x": 2.4119091033935547,
+                    "y": 0.9,
+                    "z": 0.009999999776482582
+                },
+                "localRotation": {
+                    "x": 0,
+                    "y": 0.7071067690849304,
+                    "z": 0,
+                    "w": 0.7071067690849304
+                },
+                "localPosition": {
+                    "x": 1.28,
+                    "y": 3.80,
+                    "z": 0
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "text": tilesData[i].title,
+                "lineHeight": 0.2,
+                "backgroundAlpha": 0.7,
+                "bottomMargin": 0.0,
+                "unlit": true,
+                "textEffectThickness": 0.23999999463558197,
+                "alignment": "center",
+                "verticalAlignment": "center",
+                "textColor": {"red": 255, "green": 255, "blue": 255}
+            },"domain");
+            EntityViewer.queryOctree();
+
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
