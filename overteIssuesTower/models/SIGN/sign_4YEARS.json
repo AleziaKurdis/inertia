@@ -1,0 +1,10 @@
+{"materials":[{
+    "albedo": [1, 1, 1],
+    "roughness": 0.1, 
+    "metallic": 0.01, 
+    "albedoMap": "image_4YEARS.jpg",
+    "emissiveMap": "image_4YEARS.jpg",
+    "cullFaceMode": "CULL_NONE", 
+    "model": "hifi_pbr",
+    "defaultFallthrough": false
+}]}
