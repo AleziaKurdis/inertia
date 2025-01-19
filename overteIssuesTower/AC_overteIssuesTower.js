@@ -281,14 +281,14 @@ function myTimer(deltaTime) {
                 },
                 "localPosition": {
                     "x": 1.28,
-                    "y": 3.80,
+                    "y": 3.9307,
                     "z": 0
                 },
                 "grab": {
                     "grabbable": false
                 },
                 "text": tilesData[i].title,
-                "lineHeight": 0.18,
+                "lineHeight": 0.17,
                 "backgroundAlpha": 0.7,
                 "leftMargin": 0.07,
                 "rightMargin": 0.07,
