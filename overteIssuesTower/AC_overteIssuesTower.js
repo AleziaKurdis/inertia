@@ -30,7 +30,10 @@ var forFastDeletion = [];
 var STEP_HEIGHT = 0.2;
 var PARK_INTERVAL = 19;
 
-var CONSIDERED_AS_OLD_STUFF = 3600 * 24 * 15 * 1000; //15 d24 days in millisec
+var LIMIT_BLUE_30DAYS = 3600 * 24 * 30 * 1000;
+var LIMIT_ORANGE_1YEAR = 3600 * 24 * 365 * 1000;
+var LIMIT_GOLD_2YEARS = 3600 * 24 * 365 * 2 * 1000;
+var LIMIT_SILVER_3YEARS = 3600 * 24 * 365 * 3 * 1000;
 
 function myTimer(deltaTime) {
     var today = new Date();
@@ -104,7 +107,7 @@ function myTimer(deltaTime) {
         var angleRad = 0;
         var corridorFactor = 1.7;
         var coy = 0.0;
-        
+        var currentYears = 0;
         var placeArea = 0;
         for (i = 0;i < tilesData.length; i++) {
             
@@ -189,18 +192,42 @@ function myTimer(deltaTime) {
             var today = new Date();
             var curTime = today.getTime();
             var hecatePortalModelUrl;
-            if (tilesData[i].creationDate >= tilesData[i].updateDate) {
-                if (curTime - tilesData[i].updateDate < CONSIDERED_AS_OLD_STUFF) {
-                    hecatePortalModelUrl = ROOT + "models/TILE_RED.fst";
-                } else {
-                    hecatePortalModelUrl = ROOT + "models/TILE_STANDARD.fst";
+
+
+
+            hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
+            var eventToSet = "";
+            if (curTime - tilesData[i].updateDate < LIMIT_BLUE_30DAYS) {
+                hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
+                currentYears = 0;
+            } else if (curTime - tilesData[i].updateDate < LIMIT_ORANGE_1YEAR) {
+                if (currentYears === 0) {
+                    eventToSet = "1YEAR";
                 }
+                hecatePortalModelUrl = ROOT + "models/TILE_ORANGE.fst";
+                currentYears = 1;
+            } else if (curTime - tilesData[i].updateDate < LIMIT_GOLD_2YEARS) {
+                if (currentYears === 1) {
+                    eventToSet = "2YEARS";
+                }
+                hecatePortalModelUrl = ROOT + "models/TILE_GOLD.fst";
+                currentYears = 2;
+            } else if (curTime - tilesData[i].updateDate < LIMIT_SILVER_3YEARS) {
+                if (currentYears === 2) {
+                    eventToSet = "3YEARS";
+                }                
+                hecatePortalModelUrl = ROOT + "models/TILE_SILVER.fst";
+                currentYears = 3;
             } else {
-                if (curTime - tilesData[i].updateDate < CONSIDERED_AS_OLD_STUFF) {
-                    hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
-                } else {
-                    hecatePortalModelUrl = ROOT + "models/TILE_STANDARD.fst";
-                }
+                if (currentYears === 3) {
+                    eventToSet = "4YEARS";
+                }                 
+                hecatePortalModelUrl = ROOT + "models/TILE_BLACK.fst";
+                currentYears = 4;
+            }
+
+            if (tilesData[i].creationDate >= tilesData[i].updateDate) { 
+                hecatePortalModelUrl = ROOT + "models/TILE_RED.fst";
             }
             
             var portalId = Entities.addEntity({
@@ -301,10 +328,66 @@ function myTimer(deltaTime) {
             },"domain");
             EntityViewer.queryOctree();
 
+            var issueBodyPortalId = Entities.addEntity({
+                "type": "Text",
+                "parentID": portalId,
+                "locked": false,
+                "name": "PORTAL_BODY_TEXT - " + tilesData[i].number,
+                "dimensions": {
+                    "x": 2.4119091033935547,
+                    "y": 2.0,
+                    "z": 0.009999999776482582
+                },
+                "localRotation": {
+                    "x": 0,
+                    "y": 0.7071067690849304,
+                    "z": 0,
+                    "w": 0.7071067690849304
+                },
+                "localPosition": {
+                    "x": 1.28,
+                    "y": 2.0,
+                    "z": 0
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "text": tilesData[i].body,
+                "lineHeight": 0.10,
+                "backgroundAlpha": 0.7,
+                "topMargin": 0.07,
+                "leftMargin": 0.07,
+                "rightMargin": 0.07,
+                "unlit": true,
+                "textEffectThickness": 0.23999999463558197,
+                "alignment": "left",
+                "verticalAlignment": "top",
+                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "renderWithZones": renderWithZones
+            },"domain");
+            EntityViewer.queryOctree();
+
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
-
+            
+            switch(eventToSet) {
+                case "1YEAR":
+                    // set entrance 1 years section
+                    break;
+                case "2YEARS":
+                    // set entrance 2 years section
+                    break;
+                case "3YEARS":
+                    // set entrance 3 years section
+                    break;
+                case "4YEARS":
+                    // set entrance 4 years section
+                    break;
+                default:
+                    //Do nothing
+            }
+            
             if (i === (tilesData.length - 1)) {
                 var deadEndId = Entities.addEntity({
                     "type": "Model",

@@ -1,5 +1,5 @@
 {"materials":[{
-    "albedo": [0.129, 0.129, 0.129],
+    "albedo": [1, 0.549, 0.137],
     "roughness": 0.1, 
     "metallic": 1.0, 
     "normalMap": "metalNormal512c.jpg",
