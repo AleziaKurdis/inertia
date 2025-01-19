@@ -258,7 +258,8 @@ function myTimer(deltaTime) {
                 "textEffectThickness": 0.23999999463558197,
                 "alignment": "center",
                 "verticalAlignment": "center",
-                "textColor": {"red": 247, "green": 88, "blue": 30}
+                "textColor": {"red": 247, "green": 88, "blue": 30},
+                "renderWithZones": renderWithZones
             },"domain");
             EntityViewer.queryOctree();
 
@@ -269,7 +270,7 @@ function myTimer(deltaTime) {
                 "name": "PORTAL_TITLE_TEXT - " + tilesData[i].number,
                 "dimensions": {
                     "x": 2.4119091033935547,
-                    "y": 0.9,
+                    "y": 0.96,
                     "z": 0.009999999776482582
                 },
                 "localRotation": {
@@ -287,14 +288,16 @@ function myTimer(deltaTime) {
                     "grabbable": false
                 },
                 "text": tilesData[i].title,
-                "lineHeight": 0.2,
+                "lineHeight": 0.18,
                 "backgroundAlpha": 0.7,
-                "bottomMargin": 0.0,
+                "leftMargin": 0.07,
+                "rightMargin": 0.07,
                 "unlit": true,
                 "textEffectThickness": 0.23999999463558197,
                 "alignment": "center",
                 "verticalAlignment": "center",
-                "textColor": {"red": 255, "green": 255, "blue": 255}
+                "textColor": {"red": 255, "green": 255, "blue": 255},
+                "renderWithZones": renderWithZones
             },"domain");
             EntityViewer.queryOctree();
 
