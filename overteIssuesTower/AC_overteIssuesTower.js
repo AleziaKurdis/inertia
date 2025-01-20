@@ -109,10 +109,16 @@ function myTimer(deltaTime) {
         var coy = 0.0;
         var currentYears = 0;
         var placeArea = 0;
+        var currentsubVisibilityZoneID;
         for (i = 0;i < tilesData.length; i++) {
             
             var numbrePossiblePerRing, cox, coz, relativePosition;
-
+            
+            if (coy%20 === 0) {
+                currentsubVisibilityZoneID = genSubVisibilityZone(coy);
+                forFastDeletion.push(currentsubVisibilityZoneID);
+            }
+            
             if ((i%PARK_INTERVAL) === 0 && i !== 0) {
                 placeArea++;
                 numbrePossiblePerRing = (radius * 2 * Math.PI) / espacement;
@@ -286,7 +292,7 @@ function myTimer(deltaTime) {
                 "alignment": "center",
                 "verticalAlignment": "center",
                 "textColor": {"red": 247, "green": 88, "blue": 30},
-                "renderWithZones": renderWithZones
+                "renderWithZones": [currentsubVisibilityZoneID]
             },"domain");
             EntityViewer.queryOctree();
 
@@ -324,7 +330,7 @@ function myTimer(deltaTime) {
                 "alignment": "center",
                 "verticalAlignment": "center",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
-                "renderWithZones": renderWithZones
+                "renderWithZones": [currentsubVisibilityZoneID]
             },"domain");
             EntityViewer.queryOctree();
 
@@ -363,7 +369,7 @@ function myTimer(deltaTime) {
                 "alignment": "left",
                 "verticalAlignment": "top",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
-                "renderWithZones": renderWithZones
+                "renderWithZones": [currentsubVisibilityZoneID]
             },"domain");
             EntityViewer.queryOctree();
 
@@ -371,21 +377,28 @@ function myTimer(deltaTime) {
             
             coy = coy - STEP_HEIGHT;
             
-            switch(eventToSet) {
-                case "1YEAR":
-                    // set entrance 1 years section
-                    break;
-                case "2YEARS":
-                    // set entrance 2 years section
-                    break;
-                case "3YEARS":
-                    // set entrance 3 years section
-                    break;
-                case "4YEARS":
-                    // set entrance 4 years section
-                    break;
-                default:
-                    //Do nothing
+            if (eventToSet !== "") {
+                var deadEndId = Entities.addEntity({
+                    "type": "Model",
+                    "name": "SECTION " + eventToSet,
+                    "parentID": portalId,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "locked": false,
+                    "dimensions": {
+                        "x": 2.9488,
+                        "y": 1.2709,
+                        "z": 0.1825
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "static-mesh",
+                    "modelURL": ROOT + "models/GATE_" + eventToSet + ".fst",
+                    "useOriginalPivot": true,
+                    "lifetime": REFRESH_INTERVAL + 1,
+                    "renderWithZones": [currentsubVisibilityZoneID]
+                }, "domain");
+                EntityViewer.queryOctree();
             }
             
             if (i === (tilesData.length - 1)) {
@@ -451,7 +464,51 @@ function myTimer(deltaTime) {
             "ambientOcclusionMode": "inherit"
         }, "domain");
         EntityViewer.queryOctree();
-        print("OIT: " + zID);
+        return zID;
+    }
+
+    function genSubVisibilityZone(coy) {
+        var zonePosition = {
+            "x": positionZero.x,
+            "y": positionZero.y - coy,
+            "z": positionZero.z
+        };
+            
+        var zID = Entities.addEntity({
+            "type":"Zone",
+            "name":"SUB_VISIBILITY_ZONE - " + coy,
+            "locked": false,
+            "dimensions":{
+                "x":4000,
+                "y":40,
+                "z":4000
+            },
+            "position": zonePosition,
+            "grab":{
+                "grabbable": false
+            },
+            "shapeType":"box",
+            "lifetime": REFRESH_INTERVAL + 15,
+            "keyLightMode": "inherit",
+            "keyLight": {
+                "direction": {
+                    "x":0,
+                    "y":-1,
+                    "z":0
+                },
+                "intensity": 1,
+                "castShadows": true,
+                "shadowBias":0.02,
+                "shadowMaxDistance": 150
+            },
+            "ambientLightMode": "inherit",
+            "skyboxMode": "inherit",
+            "hazeMode": "inherit",
+            "bloomMode": "inherit",
+            "tonemappingMode": "inherit",
+            "ambientOcclusionMode": "inherit"
+        }, "domain");
+        EntityViewer.queryOctree();
         return zID;
     }
     
