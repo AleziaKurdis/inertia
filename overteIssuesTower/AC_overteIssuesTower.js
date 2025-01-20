@@ -341,7 +341,7 @@ function myTimer(deltaTime) {
                 "name": "PORTAL_BODY_TEXT - " + tilesData[i].number,
                 "dimensions": {
                     "x": 2.4119091033935547,
-                    "y": 2.0,
+                    "y": 2.38,
                     "z": 0.009999999776482582
                 },
                 "localRotation": {
@@ -352,7 +352,7 @@ function myTimer(deltaTime) {
                 },
                 "localPosition": {
                     "x": 1.28,
-                    "y": 2.0,
+                    "y": 2.07,
                     "z": 0
                 },
                 "grab": {
