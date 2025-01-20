@@ -384,11 +384,7 @@ function myTimer(deltaTime) {
                     "parentID": portalId,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "locked": false,
-                    "dimensions": {
-                        "x": 2.9488,
-                        "y": 1.2709,
-                        "z": 0.1825
-                    },
+                    "dimensions": {"x":1.619999647140503,"y":4.784629821777344,"z":0.09999990463256836},
                     "grab": {
                         "grabbable": false
                     },
