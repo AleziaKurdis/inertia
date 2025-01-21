@@ -110,6 +110,7 @@ function myTimer(deltaTime) {
         var currentYears = 0;
         var placeArea = 0;
         var currentsubVisibilityZoneID;
+        var subRenderWithZones = [];
         for (i = 0;i < tilesData.length; i++) {
             
             var numbrePossiblePerRing, cox, coz, relativePosition;
@@ -117,6 +118,8 @@ function myTimer(deltaTime) {
             if (coy%20 === 0) {
                 currentsubVisibilityZoneID = genSubVisibilityZone(coy);
                 forFastDeletion.push(currentsubVisibilityZoneID);
+                subRenderWithZones = [];
+                subRenderWithZones.push(currentsubVisibilityZoneID);
             }
             
             if ((i%PARK_INTERVAL) === 0 && i !== 0) {
@@ -292,7 +295,7 @@ function myTimer(deltaTime) {
                 "alignment": "center",
                 "verticalAlignment": "center",
                 "textColor": {"red": 247, "green": 88, "blue": 30},
-                "renderWithZones": [currentsubVisibilityZoneID]
+                "renderWithZones": subRenderWithZones
             },"domain");
             EntityViewer.queryOctree();
 
@@ -330,7 +333,7 @@ function myTimer(deltaTime) {
                 "alignment": "center",
                 "verticalAlignment": "center",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
-                "renderWithZones": [currentsubVisibilityZoneID]
+                "renderWithZones": subRenderWithZones
             },"domain");
             EntityViewer.queryOctree();
 
@@ -369,7 +372,7 @@ function myTimer(deltaTime) {
                 "alignment": "left",
                 "verticalAlignment": "top",
                 "textColor": {"red": 255, "green": 255, "blue": 255},
-                "renderWithZones": [currentsubVisibilityZoneID]
+                "renderWithZones": subRenderWithZones
             },"domain");
             EntityViewer.queryOctree();
 
@@ -392,7 +395,7 @@ function myTimer(deltaTime) {
                     "modelURL": ROOT + "models/GATE_" + eventToSet + ".fst",
                     "useOriginalPivot": true,
                     "lifetime": REFRESH_INTERVAL + 1,
-                    "renderWithZones": [currentsubVisibilityZoneID]
+                    "renderWithZones": subRenderWithZones
                 }, "domain");
                 EntityViewer.queryOctree();
             }
