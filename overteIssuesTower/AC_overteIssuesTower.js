@@ -91,7 +91,7 @@ function myTimer(deltaTime) {
             }
         }
         generateTower(tiles);
-        //print("OIT: " + JSON.stringify(tiles));
+        print("OIT: " + JSON.stringify(tiles));
     }
     
     function generateTower(tilesData) {
