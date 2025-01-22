@@ -380,14 +380,14 @@ function myTimer(deltaTime) {
             //CATEGORIES
             if (tilesData[i].labels !== "") {
                 var bgColor;
-                var foreFolor = {"red": 0, "green": 0, "blue": 0};
+                var foreColor = {"red": 0, "green": 0, "blue": 0};
                 if (tilesData[i].hueLabels !== -1) {
                     bgColor = hslToRgb(tilesData[i].hueLabels/360, 1, 0.5);
                 } else {
                     bgColor = hslToRgb(0, 1, 1);
                 }
                 if (tilesData[i].hueLabels = 0) {
-                    foreFolor = {"red": 255, "green": 255, "blue": 255};
+                    foreColor = {"red": 255, "green": 255, "blue": 255};
                 }
                 
                 var issueCategoryPortalId = Entities.addEntity({
@@ -425,7 +425,7 @@ function myTimer(deltaTime) {
                     "textEffectThickness": 0.23999999463558197,
                     "alignment": "center",
                     "verticalAlignment": "center",
-                    "textColor": foreFolor,
+                    "textColor": foreColor,
                     "renderWithZones": subRenderWithZones
                 },"domain");
                 EntityViewer.queryOctree();
