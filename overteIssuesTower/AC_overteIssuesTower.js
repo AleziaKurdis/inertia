@@ -484,6 +484,7 @@ function myTimer(deltaTime) {
     }
     
     function genVisibilityZone() {
+        EntityViewer.queryOctree();
         var zID = Entities.addEntity({
             "type":"Zone",
             "name":"OVERTE_ISSUES_TOWER_VISIBILITY_ZONE",
@@ -528,7 +529,7 @@ function myTimer(deltaTime) {
             "y": positionZero.y - coy,
             "z": positionZero.z
         };
-            
+        EntityViewer.queryOctree();
         var zID = Entities.addEntity({
             "type":"Zone",
             "name":"SUB_VISIBILITY_ZONE - " + coy,
