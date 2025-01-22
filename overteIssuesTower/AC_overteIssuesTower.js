@@ -91,8 +91,7 @@ function myTimer(deltaTime) {
             }
         }
         generateTower(tiles);
-        //print("OIT: " + JSON.stringify(tiles));
-        print("OIT: Number of Tile found: " + tiles.length);
+        print("OIT: Number of Tiles found: " + tiles.length);
     }
     
     function generateTower(tilesData) {
@@ -112,6 +111,7 @@ function myTimer(deltaTime) {
         var placeArea = 0;
         var currentsubVisibilityZoneID;
         var subRenderWithZones = [];
+        
         for (i = 0;i < tilesData.length; i++) {
             
             var numbrePossiblePerRing, cox, coz, relativePosition;
@@ -377,6 +377,61 @@ function myTimer(deltaTime) {
             },"domain");
             EntityViewer.queryOctree();
 
+            //CATEGORIES
+            if (tilesData[i].labels !== "") {
+                var bgColor;
+                var foreFolor = {"red": 0, "green": 0, "blue": 0};
+                if (tilesData[i].hueLabels !== -1) {
+                    bgColor = hslToRgb(tilesData[i].hueLabels/360, 1, 0.5);
+                } else {
+                    bgColor = hslToRgb(0, 1, 1);
+                }
+                if (tilesData[i].hueLabels = 0) {
+                    foreFolor = {"red": 255, "green": 255, "blue": 255};
+                }
+                
+                var issueCategoryPortalId = Entities.addEntity({
+                    "type": "Text",
+                    "parentID": portalId,
+                    "locked": false,
+                    "name": "PORTAL_CATEGORY_TEXT - " + tilesData[i].number,
+                    "dimensions": {
+                        "x": 2.4119091033935547,
+                        "y": 2.38,
+                        "z": 0.009999999776482582
+                    },
+                    "localRotation": {
+                        "x": 0,
+                        "y": 0.7071067690849304,
+                        "z": 0,
+                        "w": 0.7071067690849304
+                    },
+                    "localPosition": {
+                        "x": 1.28,
+                        "y": 0.7,
+                        "z": 0
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "text": tilesData[i].labels,
+                    "lineHeight": 0.10,
+                    "backgroundAlpha": 1.0,
+                    "backgroundColor": {"red": bgColor[0], "green": bgColor[1], "blue": bgColor[2]},
+                    "topMargin": 0.0,
+                    "leftMargin": 0.0,
+                    "rightMargin": 0.0,
+                    "unlit": true,
+                    "textEffectThickness": 0.23999999463558197,
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "textColor": foreFolor,
+                    "renderWithZones": subRenderWithZones
+                },"domain");
+                EntityViewer.queryOctree();
+            }
+            // END CATEGORIES
+            
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
