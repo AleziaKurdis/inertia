@@ -91,7 +91,8 @@ function myTimer(deltaTime) {
             }
         }
         generateTower(tiles);
-        print("OIT: " + JSON.stringify(tiles));
+        //print("OIT: " + JSON.stringify(tiles));
+        print("OIT: Number of Tile found: " + tiles.length);
     }
     
     function generateTower(tilesData) {
