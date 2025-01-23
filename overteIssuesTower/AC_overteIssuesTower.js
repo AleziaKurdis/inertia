@@ -117,6 +117,7 @@ function myTimer(deltaTime) {
             var numbrePossiblePerRing, cox, coz, relativePosition;
             
             if (coy%20 === 0) {
+                print("OIT coy: " + coy); //########################################## DEBUG
                 currentsubVisibilityZoneID = genSubVisibilityZone(coy);
                 forFastDeletion.push(currentsubVisibilityZoneID);
                 subRenderWithZones = [];
@@ -519,6 +520,7 @@ function myTimer(deltaTime) {
             "tonemappingMode": "inherit",
             "ambientOcclusionMode": "inherit"
         }, "domain");
+        if (!zID) {print("OIT: main visibility return false.");} //############################ DEBUG
         EntityViewer.queryOctree();
         return zID;
     }
@@ -565,6 +567,7 @@ function myTimer(deltaTime) {
             "ambientOcclusionMode": "inherit"
         }, "domain");
         EntityViewer.queryOctree();
+        if (!zID) {print("OIT: sub visibility return false. (coy = " + coy + ")");} //############################ DEBUG
         return zID;
     }
     
