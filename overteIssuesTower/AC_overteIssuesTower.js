@@ -83,8 +83,7 @@ function myTimer(deltaTime) {
                     "htmlUrl": data[i].html_url,
                     "creationDate": dateToTimestamp(data[i].created_at),
                     "updateDate": dateToTimestamp(data[i].updated_at),
-                    "labels": label.value,
-                    "hueLabels": label.hue,
+                    "labels": label,
                     "creator": data[i].user.login
                 };
                 tiles.push(record);
@@ -116,10 +115,7 @@ function myTimer(deltaTime) {
             
             var numbrePossiblePerRing, cox, coz, relativePosition;
             
-            //if (coy%20 > -0.18) {
             if (i%100 === 0) {
-                //print("OIT coy: " + coy); //########################################## DEBUG
-                print("OIT i for zone: " + i); //########################################## DEBUG
                 currentsubVisibilityZoneID = genSubVisibilityZone(coy);
                 forFastDeletion.push(currentsubVisibilityZoneID);
                 subRenderWithZones = [];
@@ -381,60 +377,61 @@ function myTimer(deltaTime) {
             EntityViewer.queryOctree();
 
             //CATEGORIES
-            if (tilesData[i].labels !== "") {
+
+            if (tilesData[i].labels.length > 0) {
+                var fullWidth = 2.4119091033935547;
+                var labelsWidth = fullWidth/tilesData[i].labels.length
+                var initialXpos = 1.28 - ((tilesData[i].labels.length/2) * (labelsWidth/2));
+                var k;
                 var bgColor;
-                var foreColor = {"red": 0, "green": 0, "blue": 0};
-                if (tilesData[i].hueLabels !== -1) {
-                    bgColor = hslToRgb(tilesData[i].hueLabels/360, 1, 0.5);
-                } else {
-                    bgColor = hslToRgb(0, 1, 1);
+                var foreColor
+                for (k = 0; k < tilesData[i].labels.length; k++) {
+                    bgColor = tilesData[i].labels[k].labelBgColor;
+                    foreColor = getContrastingColor(bgColor);
+                    
+                    var issueCategoryPortalId = Entities.addEntity({
+                        "type": "Text",
+                        "parentID": portalId,
+                        "locked": false,
+                        "name": "PORTAL_CATEGORY_TEXT - " + tilesData[i].number + " - " + tilesData[i].labels[k].labelText,
+                        "dimensions": {
+                            "x": labelsWidth,
+                            "y": 0.35,
+                            "z": 0.009999999776482582
+                        },
+                        "localRotation": {
+                            "x": 0,
+                            "y": 0.7071067690849304,
+                            "z": 0,
+                            "w": 0.7071067690849304
+                        },
+                        "localPosition": {
+                            "x": initialXpos + (k * labelsWidth),
+                            "y": 0.5425,
+                            "z": 0
+                        },
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "text": tilesData[i].labels[k].labelText,
+                        "lineHeight": 0.13,
+                        "backgroundAlpha": 1.0,
+                        "backgroundColor": bgColor,
+                        "topMargin": 0.0,
+                        "leftMargin": 0.0,
+                        "rightMargin": 0.0,
+                        "unlit": true,
+                        "textEffectThickness": 0.23999999463558197,
+                        "alignment": "center",
+                        "verticalAlignment": "center",
+                        "textColor": foreColor,
+                        "renderWithZones": subRenderWithZones
+                    },"domain");
+                    EntityViewer.queryOctree();
                 }
-                if (tilesData[i].hueLabels = 0) {
-                    foreColor = {"red": 255, "green": 255, "blue": 255};
-                }
-                
-                var issueCategoryPortalId = Entities.addEntity({
-                    "type": "Text",
-                    "parentID": portalId,
-                    "locked": false,
-                    "name": "PORTAL_CATEGORY_TEXT - " + tilesData[i].number,
-                    "dimensions": {
-                        "x": 2.4119091033935547,
-                        "y": 2.38,
-                        "z": 0.009999999776482582
-                    },
-                    "localRotation": {
-                        "x": 0,
-                        "y": 0.7071067690849304,
-                        "z": 0,
-                        "w": 0.7071067690849304
-                    },
-                    "localPosition": {
-                        "x": 1.28,
-                        "y": 0.7,
-                        "z": 0
-                    },
-                    "grab": {
-                        "grabbable": false
-                    },
-                    "text": tilesData[i].labels,
-                    "lineHeight": 0.10,
-                    "backgroundAlpha": 1.0,
-                    "backgroundColor": {"red": bgColor[0], "green": bgColor[1], "blue": bgColor[2]},
-                    "topMargin": 0.0,
-                    "leftMargin": 0.0,
-                    "rightMargin": 0.0,
-                    "unlit": true,
-                    "textEffectThickness": 0.23999999463558197,
-                    "alignment": "center",
-                    "verticalAlignment": "center",
-                    "textColor": foreColor,
-                    "renderWithZones": subRenderWithZones
-                },"domain");
-                EntityViewer.queryOctree();
             }
             // END CATEGORIES
-            
+
             forFastDeletion.push(portalId);
             
             coy = coy - STEP_HEIGHT;
@@ -581,54 +578,51 @@ function myTimer(deltaTime) {
     function getLabelDataFrom(arOfLabels) {
         if (arOfLabels.length > 0) {
             var j;
-            var value = "";
-            var hue = -1;
+            var labelz = [];
+            var labelObj;
             for (j = 0; j < arOfLabels.length; j++) {
-                if (j === 0) {
-                    value = arOfLabels[j].name;
-                    hue = getHueFromHex(arOfLabels[j].color);
-                } else {
-                    value = value + ", " + arOfLabels[j].name;
-                    hue = -1;
-                }
+                labelObj = {
+                    "labelText": arOfLabels[j].name,
+                    "labelBgColor": getColorRGBFromHex(arOfLabels[j].color)
+                };
+                labelz.push(labelObj);
             }
-            return {"value": value, "hue": hue};
+            return labelz;
         } else {
-            return {"value": "", "hue": -1};
+            return [];
         }
-        
-    }
-    
-    function getHueFromHex(hexColor) {
-        hexColor = hexColor.replace(/^#/, '');
-        const r = parseInt(hexColor.substring(0, 2), 16) / 255;
-        const g = parseInt(hexColor.substring(2, 4), 16) / 255;
-        const b = parseInt(hexColor.substring(4, 6), 16) / 255;
-
-        const max = Math.max(r, g, b);
-        const min = Math.min(r, g, b);
-        const delta = max - min;
-        
-        let hue = 0;
-
-        if (delta !== 0) {
-            if (max === r) {
-                hue = ((g - b) / delta) % 6;
-            } else if (max === g) {
-                hue = (b - r) / delta + 2;
-            } else {
-                hue = (r - g) / delta + 4;
-            }
-        }
-
-        hue = Math.round(hue * 60);
-        if (hue < 0) {
-            hue += 360;
-        }
-
-        return hue;
     }
 
+    function getColorRGBFromHex(hex) {
+        hex = hex.replace(/^#/, '');
+        
+        // If it's a shorthand hex color, expand it (e.g., "03F" -> "0033FF")
+        if (hex.length === 3) {
+            hex = hex.split('').map(char => char + char).join('');
+        }
+
+        if (hex.length !== 6 || !/^[0-9A-Fa-f]{6}$/.test(hex)) {
+            return { "red": 0, "green": 0, "blue": 0 };
+        } else {
+            const r = parseInt(hex.slice(0, 2), 16);
+            const g = parseInt(hex.slice(2, 4), 16);
+            const b = parseInt(hex.slice(4, 6), 16);
+
+            return { "red": r, "green": g, "blue": b };
+        }
+    }
+
+    function getContrastingColor(colorVec) {
+        var r = colorVec.red;
+        var g = colorVec.green;
+        var b = colorVec.blue;
+        
+        // Calculate the relative luminance of the color
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+        // If luminance is greater than 0.5, return black; otherwise, return white
+        return luminance > 0.5 ? { "red": 0, "green": 0, "blue": 0 } : { "red": 255, "green": 255, "blue": 255 };
+    }
 
     /*
      * Converts an HSL color value to RGB. Conversion formula
