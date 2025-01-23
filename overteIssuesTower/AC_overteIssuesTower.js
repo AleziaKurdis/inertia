@@ -116,8 +116,10 @@ function myTimer(deltaTime) {
             
             var numbrePossiblePerRing, cox, coz, relativePosition;
             
-            if (coy%20 > -0.18) {
-                print("OIT coy: " + coy); //########################################## DEBUG
+            //if (coy%20 > -0.18) {
+            if (i%100 === 0) {
+                //print("OIT coy: " + coy); //########################################## DEBUG
+                print("OIT i for zone: " + i); //########################################## DEBUG
                 currentsubVisibilityZoneID = genSubVisibilityZone(coy);
                 forFastDeletion.push(currentsubVisibilityZoneID);
                 subRenderWithZones = [];
