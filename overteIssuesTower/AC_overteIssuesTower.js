@@ -533,7 +533,7 @@ function myTimer(deltaTime) {
         EntityViewer.queryOctree();
         var zID = Entities.addEntity({
             "type":"Zone",
-            "name":"SUB_VISIBILITY_ZONE - " + coy,
+            "name":"SUB_VISIBILITY_ZONE (" + coy + ")",
             "locked": false,
             "dimensions":{
                 "x":4000,
