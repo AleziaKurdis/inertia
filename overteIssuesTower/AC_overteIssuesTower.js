@@ -406,9 +406,9 @@ function myTimer(deltaTime) {
                             "w": 0.7071067690849304
                         },
                         "localPosition": {
-                            "x": 1.28
+                            "x": 1.28,
                             "y": 0.5425,
-                            "z": initialZpos + (k * labelsWidth),
+                            "z": initialZpos + (k * labelsWidth)
                         },
                         "grab": {
                             "grabbable": false
