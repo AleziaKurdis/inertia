@@ -380,11 +380,11 @@ function myTimer(deltaTime) {
 
             if (tilesData[i].labels.length > 0) {
                 var fullWidth = 2.4119091033935547;
-                var labelsWidth = fullWidth/tilesData[i].labels.length
-                var initialXpos = 1.28 - ((tilesData[i].labels.length/2) * (labelsWidth/2));
+                var labelsWidth = fullWidth/tilesData[i].labels.length;
+                var initialZpos = 0.0 - ((tilesData[i].labels.length/2) * (labelsWidth/2));
                 var k;
                 var bgColor;
-                var foreColor
+                var foreColor;
                 for (k = 0; k < tilesData[i].labels.length; k++) {
                     bgColor = tilesData[i].labels[k].labelBgColor;
                     foreColor = getContrastingColor(bgColor);
@@ -406,9 +406,9 @@ function myTimer(deltaTime) {
                             "w": 0.7071067690849304
                         },
                         "localPosition": {
-                            "x": initialXpos + (k * labelsWidth),
+                            "x": 1.28
                             "y": 0.5425,
-                            "z": 0
+                            "z": initialZpos + (k * labelsWidth),
                         },
                         "grab": {
                             "grabbable": false
