@@ -1,0 +1,3 @@
+name = NOWHERE ISLAND TABLE
+filename = univertable.fbx
+materialMap = [{"mat::FRAME": {"materials":[{ "name": "FRAME", "albedo": { "red": 0.25, "green": 0.11, "blue": 0.05 }, "roughness": 0.4, "metallic": 0.22, "normalMap": "oldwood_normal.jpg", "cullFaceMode": "CULL_BACK", "defaultFallthrough": false}]}},{"mat::TOP": {"materials":[{ "name": "TOP", "albedo": { "red": 0.25, "green": 0.11, "blue": 0.05 }, "roughness": 0.4, "metallic": 0.22, "normalMap": "papyrus_normal.jpg", "cullFaceMode": "CULL_BACK", "defaultFallthrough": false}]}}]

@@ -1,0 +1,6762 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/-6.04968,-6090.27,27.9652\/0,0.0109333,0,0.99994"
+   },
+  "Entities": [
+    {
+    "id": "{14c703cd-658e-4a71-aaa0-9a89c3209f16}",
+    "type": "Box",
+    "lastEdited": 1736934473551232,
+    "parentID": "{d52f3edc-286c-4b59-bc1a-10ec577dee5e}",
+    "visible": false,
+    "name": "sit box (2)",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.0516357421875,
+        "y": 0.876953125,
+        "z": -0.0001220703125
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7070878744125366,
+        "z": -0.0000152587890625,
+        "w": 0.7070878744125366
+    },
+    "created": 1646550203760640,
+    "lastEditedBy": "{1342d1b6-d1cd-49c9-b5ad-c0eadf3741eb}",
+    "queryAACube": {
+        "x": -8.975808143615723,
+        "y": -6090.18017578125,
+        "z": -6.11264181137085,
+        "scale": 0.42724609375
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1646550581248,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4b9ed833-32f8-44db-918a-31e0728f3429}",
+    "type": "Box",
+    "lastEdited": 1736934473546774,
+    "parentID": "{f3468dfb-e3cb-48df-8cfd-92784bb23014}",
+    "visible": false,
+    "name": "sit box (3)",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.051634788513183594,
+        "y": 0.87744140625,
+        "z": -0.000118255615234375
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7070878744125366,
+        "z": -0.0000152587890625,
+        "w": 0.7070878744125366
+    },
+    "created": 1646550203760640,
+    "lastEditedBy": "{01562ada-885d-4c91-873b-d4c6803294f2}",
+    "queryAACube": {
+        "x": -9.83712100982666,
+        "y": -6090.17529296875,
+        "z": -5.190854549407959,
+        "scale": 0.4267578125
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1646550581248,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{991a5630-ab0f-4b65-903c-efc7265c5c08}",
+    "type": "Box",
+    "lastEdited": 1736934473880916,
+    "parentID": "{796b18ab-7651-48be-afdd-f6bb10385f0d}",
+    "visible": false,
+    "name": "sit box (2)",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.0516357421875,
+        "y": 0.876953125,
+        "z": -0.0001220703125
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7070878744125366,
+        "z": -0.0000152587890625,
+        "w": 0.7070878744125366
+    },
+    "created": 1643344279109632,
+    "lastEditedBy": "{3496051b-ccc1-4154-b891-aa7c6f4b64df}",
+    "queryAACube": {
+        "x": 49.5557975769043,
+        "y": -6090.8349609375,
+        "z": -17.056137084960938,
+        "scale": 0.42626953125
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1643344822272,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4def0e33-c3c8-41a9-985f-6c6ba742affc}",
+    "type": "Box",
+    "lastEdited": 1736934473882798,
+    "parentID": "{5dfce6e3-ab0b-4616-90ec-39fba86a5bc8}",
+    "visible": false,
+    "name": "sit box (3)",
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.051634788513183594,
+        "y": 0.87744140625,
+        "z": -0.000118255615234375
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7070878744125366,
+        "z": -0.0000152587890625,
+        "w": 0.7070878744125366
+    },
+    "created": 1643344681762816,
+    "lastEditedBy": "{dd189a9d-055f-43aa-96db-5e853442f5a8}",
+    "queryAACube": {
+        "x": 50.49302673339844,
+        "y": -6090.83447265625,
+        "z": -16.895763397216797,
+        "scale": 0.4267578125
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1633664499712,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{34fe2460-7d4d-41e9-962b-e8a96edc38d3}",
+    "type": "Model",
+    "lastEdited": 1736934473538259,
+    "name": "GRASS_05 (2)",
+    "locked": true,
+    "position": {
+        "x": 5.772129058837891,
+        "y": 42.58154296875,
+        "z": 20.937406539916992
+    },
+    "dimensions": {
+        "x": 2.6209492683410645,
+        "y": 1.8000524044036865,
+        "z": 2.7375404834747314
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": 0.996124267578125,
+        "z": -0.0000457763671875,
+        "w": -0.08778512477874756
+    },
+    "created": 1613190387466240,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 3.6742913722991943,
+        "y": 40.48370361328125,
+        "z": 18.839569091796875,
+        "scale": 4.195675373077393
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2349cd2b-f794-40d3-9fd0-bb308474c7d1}",
+    "type": "Model",
+    "lastEdited": 1736934473530116,
+    "name": "GRASS_01 (2)",
+    "locked": true,
+    "position": {
+        "x": 4.53192138671875,
+        "y": 42.43994140625,
+        "z": 27.714218139648438
+    },
+    "dimensions": {
+        "x": 2.2249679565429688,
+        "y": 1.553947925567627,
+        "z": 2.3579976558685303
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.809445321559906,
+        "z": -0.0000152587890625,
+        "w": 0.5872129201889038
+    },
+    "created": 1613190253248512,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 2.7343263626098633,
+        "y": 40.6423454284668,
+        "z": 25.916624069213867,
+        "scale": 3.5951898097991943
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e0c7a74a-8059-4362-a22c-f60dd25c583b}",
+    "type": "Model",
+    "lastEdited": 1736934473534026,
+    "name": "GRASS_01",
+    "locked": true,
+    "position": {
+        "x": 3.678661346435547,
+        "y": 42.43994140625,
+        "z": 27.792991638183594
+    },
+    "dimensions": {
+        "x": 2.2249679565429688,
+        "y": 1.553947925567627,
+        "z": 2.3579976558685303
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612731228618752,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 1.8810664415359497,
+        "y": 40.6423454284668,
+        "z": 25.995397567749023,
+        "scale": 3.5951898097991943
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e6e5d5c2-82c1-43c4-be25-3eb65faf2498}",
+    "type": "Model",
+    "lastEdited": 1737772769652028,
+    "name": "GRASS_01 (3)",
+    "locked": true,
+    "position": {
+        "x": 4.109626770019531,
+        "y": 42.318359375,
+        "z": 29.007568359375
+    },
+    "dimensions": {
+        "x": 1.7750483751296997,
+        "y": 1.239717960357666,
+        "z": 1.8811776638031006
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.532982349395752,
+        "z": -0.0000457763671875,
+        "w": 0.846097469329834
+    },
+    "created": 1613190253248512,
+    "lastEditedBy": "{ee40d5a0-ed30-4d1c-8b55-c31de2ac0a8b}",
+    "queryAACube": {
+        "x": 2.6755306720733643,
+        "y": 40.88426208496094,
+        "z": 27.57347297668457,
+        "scale": 2.868192195892334
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3ad94c53-3f3d-4d14-bf54-49e29be873e2}",
+    "type": "Model",
+    "lastEdited": 1736934473528647,
+    "name": "ALOES (3)",
+    "locked": true,
+    "position": {
+        "x": 10.119182586669922,
+        "y": 42.18701171875,
+        "z": 28.746009826660156
+    },
+    "dimensions": {
+        "x": 1.4510836601257324,
+        "y": 1.4510836601257324,
+        "z": 1.4510836601257324
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.999664306640625,
+        "z": -0.0000762939453125,
+        "w": 0.025253653526306152
+    },
+    "created": 1613190253248512,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 8.862506866455078,
+        "y": 40.930335998535156,
+        "z": 27.489334106445312,
+        "scale": 2.513350486755371
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0339a4d7-e42d-4a97-bdd1-b519684e92e6}",
+    "type": "Model",
+    "lastEdited": 1736934473535223,
+    "name": "GRASS_05",
+    "locked": true,
+    "position": {
+        "x": 5.450794219970703,
+        "y": 42.765625,
+        "z": 21.80514144897461
+    },
+    "dimensions": {
+        "x": 3.3541111946105957,
+        "y": 2.3035836219787598,
+        "z": 3.503316640853882
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.6018005609512329,
+        "z": -0.0000457763671875,
+        "w": 0.7986419200897217
+    },
+    "created": 1612731228618752,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 2.766125440597534,
+        "y": 40.080955505371094,
+        "z": 19.120471954345703,
+        "scale": 5.369337558746338
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{26d9c47e-380d-48d8-aee4-8f75fddf174b}",
+    "type": "Model",
+    "lastEdited": 1736934473524287,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 7.870399475097656,
+        "y": 41.96044921875,
+        "z": 27.440937042236328
+    },
+    "dimensions": {
+        "x": 2.430540084838867,
+        "y": 2.265657901763916,
+        "z": 2.229442596435547
+    },
+    "rotation": {
+        "x": 0.0013885498046875,
+        "y": -0.9777218103408813,
+        "z": 0.0320286750793457,
+        "w": 0.20756852626800537
+    },
+    "created": 1612756327333888,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 5.86970329284668,
+        "y": 39.95975112915039,
+        "z": 25.44024085998535,
+        "scale": 4.001392841339111
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{6f727fef-2471-40eb-8f73-4fd10208da0d}",
+    "type": "Model",
+    "lastEdited": 1736934473527190,
+    "name": "ALOES (2)",
+    "locked": true,
+    "position": {
+        "x": 8.896659851074219,
+        "y": 42.13134765625,
+        "z": 29.030672073364258
+    },
+    "dimensions": {
+        "x": 1.276568055152893,
+        "y": 1.276568055152893,
+        "z": 1.276568055152893
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.9901427030563354,
+        "z": -0.0000762939453125,
+        "w": -0.14006257057189941
+    },
+    "created": 1613190119030784,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 7.791119575500488,
+        "y": 41.02580642700195,
+        "z": 27.92513084411621,
+        "scale": 2.21108078956604
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{342657c7-5b26-4fb3-b3a8-4c0f038903d4}",
+    "type": "Model",
+    "lastEdited": 1736934473525660,
+    "name": "ALOES",
+    "locked": true,
+    "position": {
+        "x": 8.9510498046875,
+        "y": 42.5341796875,
+        "z": 27.993377685546875
+    },
+    "dimensions": {
+        "x": 2.3154914379119873,
+        "y": 2.3154914379119873,
+        "z": 2.3154914379119873
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.9426261186599731,
+        "z": -0.0000457763671875,
+        "w": 0.3337911367416382
+    },
+    "created": 1612730825965568,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 6.945775032043457,
+        "y": 40.52890396118164,
+        "z": 25.98810386657715,
+        "scale": 4.010549068450928
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8f46f67a-dace-45cc-9330-3c23b8637aff}",
+    "type": "Model",
+    "lastEdited": 1736934473536706,
+    "name": "GRASS_05 (2)",
+    "locked": true,
+    "position": {
+        "x": 6.777957916259766,
+        "y": 42.6171875,
+        "z": 21.872867584228516
+    },
+    "dimensions": {
+        "x": 2.8248507976531982,
+        "y": 1.9400906562805176,
+        "z": 2.950512409210205
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613190387466240,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 4.516915321350098,
+        "y": 40.356143951416016,
+        "z": 19.61182403564453,
+        "scale": 4.522085666656494
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{13e72bb8-687e-49d8-b495-569053fe4620}",
+    "type": "Box",
+    "lastEdited": 1736934473565177,
+    "visible": false,
+    "name": "Wind2",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind2.mp3\",\"soundVolume\":0.7,\"refreshInterval\":100}",
+    "position": {
+        "x": 18.417909622192383,
+        "y": 43.56201171875,
+        "z": 18.227645874023438
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612585199730688,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 18.244705200195312,
+        "y": 43.3888053894043,
+        "z": 18.054441452026367,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 240,
+        "blue": 80
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cf26d0bf-beca-4b19-aa6e-94889fc56efd}",
+    "type": "Box",
+    "lastEdited": 1736934473563593,
+    "visible": false,
+    "name": "Wind1",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind.mp3\",\"soundVolume\":0.6,\"refreshInterval\":100}",
+    "position": {
+        "x": 18.41756820678711,
+        "y": 44.1318359375,
+        "z": 29.975231170654297
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612584931295232,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 18.24436378479004,
+        "y": 43.9586296081543,
+        "z": 29.802026748657227,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4a2944e8-a811-4542-89ff-1435b469c973}",
+    "type": "Box",
+    "lastEdited": 1736934473543370,
+    "visible": false,
+    "name": "Ocean2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean2.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 29.429384231567383,
+        "y": 44.39013671875,
+        "z": 24.41676902770996
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612585870819328,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 29.256179809570312,
+        "y": 44.2169303894043,
+        "z": 24.24356460571289,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 52,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{885d5d3e-6115-4743-9664-19e3ccb47e22}",
+    "type": "Model",
+    "lastEdited": 1736934473532823,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 6.128173828125,
+        "y": 43.85400390625,
+        "z": 27.56376838684082
+    },
+    "dimensions": {
+        "x": 5.06781530380249,
+        "y": 4.724026679992676,
+        "z": 4.648515701293945
+    },
+    "rotation": {
+        "x": 0.14702069759368896,
+        "y": -0.010849177837371826,
+        "z": -0.07029831409454346,
+        "w": 0.9865720272064209
+    },
+    "created": 1612756193116160,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 1.9566068649291992,
+        "y": 39.682437896728516,
+        "z": 23.392200469970703,
+        "scale": 8.343133926391602
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{eb27281c-06db-4c30-8824-53e8cc7ed58b}",
+    "type": "Box",
+    "lastEdited": 1736934473586903,
+    "visible": false,
+    "name": "Ocean1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 9.798603057861328,
+        "y": 45.09912109375,
+        "z": 59.521217346191406
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612585736601600,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 9.625397682189941,
+        "y": 44.9259147644043,
+        "z": 59.3480110168457,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 192,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a40694a3-2f5a-47ad-8944-258246a5aaae}",
+    "type": "Box",
+    "lastEdited": 1736934473556736,
+    "visible": false,
+    "name": "sit box deck (2)",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 43.711666107177734,
+        "y": 42.46044921875,
+        "z": 27.039936065673828
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.007339596748352051,
+        "z": -0.0000457763671875,
+        "w": 0.999969482421875
+    },
+    "created": 1616219144716288,
+    "lastEditedBy": "{17823770-1690-4c47-b933-6c17a6959425}",
+    "queryAACube": {
+        "x": 43.506446838378906,
+        "y": 42.25522994995117,
+        "z": 26.834716796875,
+        "scale": 0.4104377031326294
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1616218816512,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d52f3edc-286c-4b59-bc1a-10ec577dee5e}",
+    "type": "Model",
+    "lastEdited": 1736934473549210,
+    "name": "univestool_arms_NAVY_CANTINA (2)",
+    "locked": true,
+    "position": {
+        "x": 41.549190521240234,
+        "y": 42.28125,
+        "z": 31.28998374938965
+    },
+    "dimensions": {
+        "x": 0.5059115886688232,
+        "y": 1.0777661800384521,
+        "z": 0.60999995470047
+    },
+    "rotation": {
+        "x": -0.0001678466796875,
+        "y": -0.5833371877670288,
+        "z": 0.0000152587890625,
+        "w": -0.8122529983520508
+    },
+    "created": 1646550203760640,
+    "lastEditedBy": "{1342d1b6-d1cd-49c9-b5ad-c0eadf3741eb}",
+    "queryAACube": {
+        "x": 40.880306243896484,
+        "y": 41.61236572265625,
+        "z": 30.6210994720459,
+        "scale": 1.3377691507339478
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/FURNITURES/bistro/univestool_arms_NAVY_CANTINA.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9d91acb5-a5b4-41d1-bbe8-0a9b6efc8799}",
+    "type": "Box",
+    "lastEdited": 1736934473554247,
+    "visible": false,
+    "name": "sit box deck",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 44.384586334228516,
+        "y": 42.46044921875,
+        "z": 27.049816131591797
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.007339596748352051,
+        "z": -0.0000457763671875,
+        "w": 0.999969482421875
+    },
+    "created": 1616218742063104,
+    "lastEditedBy": "{17823770-1690-4c47-b933-6c17a6959425}",
+    "queryAACube": {
+        "x": 44.17936706542969,
+        "y": 42.25522994995117,
+        "z": 26.84459686279297,
+        "scale": 0.4104377031326294
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1616218816512,
+    "serverScripts": "https://aleziakurdis.github.io/inertia/nowhereIsland/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fe7254a3-5261-4da7-8b6e-5f8f6fe3c19c}",
+    "type": "Box",
+    "lastEdited": 1736934473560598,
+    "visible": false,
+    "name": "Wind2",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind2.mp3\",\"soundVolume\":0.7,\"refreshInterval\":100}",
+    "position": {
+        "x": 45.08959197998047,
+        "y": 49.8310546875,
+        "z": 25.509105682373047
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612585468166144,
+    "lastEditedBy": "{5fb83dd5-d91e-4f4d-b73b-e5f54af04acb}",
+    "queryAACube": {
+        "x": 44.916385650634766,
+        "y": 49.6578483581543,
+        "z": 25.335901260375977,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 240,
+        "blue": 80
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a55db86a-f007-4343-bdf5-a1d9a198a998}",
+    "type": "Model",
+    "lastEdited": 1736934473558376,
+    "name": "GRASS_01 (4)",
+    "locked": true,
+    "position": {
+        "x": 47.58555221557617,
+        "y": 42.34521484375,
+        "z": 27.07880401611328
+    },
+    "dimensions": {
+        "x": 2.532700538635254,
+        "y": 1.7688724994659424,
+        "z": 2.684129476547241
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189850595328,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 45.53933334350586,
+        "y": 40.29899597167969,
+        "z": 25.03258514404297,
+        "scale": 4.09243631362915
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fbf83a34-0662-4451-ae7b-a0dd2775a488}",
+    "type": "Box",
+    "lastEdited": 1736934473629164,
+    "visible": false,
+    "name": "Wind3",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind3.mp3\",\"soundVolume\":0.3,\"refreshInterval\":100}",
+    "position": {
+        "x": 34.420005798339844,
+        "y": 45.48291015625,
+        "z": 40.68643569946289
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612585468166144,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 34.24679946899414,
+        "y": 45.3097038269043,
+        "z": 40.51322937011719,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 64,
+        "green": 0,
+        "blue": 240
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{88b28b7a-5e1b-40ed-b8b8-606f07c8d187}",
+    "type": "Model",
+    "lastEdited": 1736934473615273,
+    "name": "SCHEFLERA",
+    "locked": true,
+    "position": {
+        "x": 42.69642639160156,
+        "y": 42.4970703125,
+        "z": 41.75737762451172
+    },
+    "dimensions": {
+        "x": 1.6785951852798462,
+        "y": 1.9353059530258179,
+        "z": 1.354499101638794
+    },
+    "rotation": {
+        "x": -0.0036774277687072754,
+        "y": -0.3220721483230591,
+        "z": 0.025772452354431152,
+        "w": 0.9463492631912231
+    },
+    "created": 1612757803728896,
+    "lastEditedBy": "{5ada5465-1ed4-4891-924a-38b7a10ad75d}",
+    "queryAACube": {
+        "x": 41.24748229980469,
+        "y": 41.048126220703125,
+        "z": 40.308433532714844,
+        "scale": 2.8978888988494873
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/plant-unknown-trop/baked/plant-unknown-trop.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1480ac63-8cd1-49dc-b9af-b5cd76936dc7}",
+    "type": "Model",
+    "lastEdited": 1736934473618013,
+    "name": "GRASS_05 (5)",
+    "locked": true,
+    "position": {
+        "x": 41.72004699707031,
+        "y": 42.5927734375,
+        "z": 42.87876510620117
+    },
+    "dimensions": {
+        "x": 2.7696168422698975,
+        "y": 1.9021563529968262,
+        "z": 2.8928213119506836
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189984813056,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 39.50321578979492,
+        "y": 40.37594223022461,
+        "z": 40.66193389892578,
+        "scale": 4.433665752410889
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0b42a2d5-adbd-4a75-ae06-d318e7579071}",
+    "type": "Model",
+    "lastEdited": 1736934473590842,
+    "name": "GRASS_05 (4)",
+    "locked": true,
+    "position": {
+        "x": 39.83989715576172,
+        "y": 42.26904296875,
+        "z": 39.15923309326172
+    },
+    "dimensions": {
+        "x": 1.9422732591629028,
+        "y": 1.3339416980743408,
+        "z": 2.0286738872528076
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189850595328,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 38.2852783203125,
+        "y": 40.71442413330078,
+        "z": 37.6046142578125,
+        "scale": 3.1092350482940674
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{666b96f3-4a53-4e56-acbc-6430ab07c05a}",
+    "type": "Model",
+    "lastEdited": 1736934473616637,
+    "name": "SCHEFLERA",
+    "locked": true,
+    "position": {
+        "x": 41.99333953857422,
+        "y": 42.8759765625,
+        "z": 41.499656677246094
+    },
+    "dimensions": {
+        "x": 2.1993863582611084,
+        "y": 2.53574275970459,
+        "z": 1.7747381925582886
+    },
+    "rotation": {
+        "x": 0.012497186660766602,
+        "y": -0.9377431869506836,
+        "z": 0.0195162296295166,
+        "w": 0.34654760360717773
+    },
+    "created": 1612844642598912,
+    "lastEditedBy": "{5ada5465-1ed4-4891-924a-38b7a10ad75d}",
+    "queryAACube": {
+        "x": 40.094852447509766,
+        "y": 40.97748947143555,
+        "z": 39.60116958618164,
+        "scale": 3.796970844268799
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/plant-unknown-trop/baked/plant-unknown-trop.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{94b9b557-ce3a-4f5c-ab71-151e2e31135e}",
+    "type": "Model",
+    "lastEdited": 1736934473626401,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 45.53776931762695,
+        "y": 40.50146484375,
+        "z": 61.4273567199707
+    },
+    "dimensions": {
+        "x": 0.4089511036872864,
+        "y": 2.749021530151367,
+        "z": 0.4089515805244446
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.34200048446655273,
+        "z": -0.0000457763671875,
+        "w": 0.9396963119506836
+    },
+    "created": 1612732973449216,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 44.13317108154297,
+        "y": 39.096866607666016,
+        "z": 60.02275848388672,
+        "scale": 2.809199571609497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{045324fe-0c16-47f8-bcb0-85cd233b3c2f}",
+    "type": "Model",
+    "lastEdited": 1736934473619401,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 45.54635238647461,
+        "y": 40.50146484375,
+        "z": 55.948081970214844
+    },
+    "dimensions": {
+        "x": 0.4089511036872864,
+        "y": 2.749021530151367,
+        "z": 0.4089515805244446
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612733107666944,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 44.141754150390625,
+        "y": 39.096866607666016,
+        "z": 54.54348373413086,
+        "scale": 2.809199571609497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{aecb8fa9-7567-4252-ac39-9a242ecbf177}",
+    "type": "Model",
+    "lastEdited": 1736934473624968,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 42.90248489379883,
+        "y": 40.50146484375,
+        "z": 61.43047332763672
+    },
+    "dimensions": {
+        "x": 0.41717100143432617,
+        "y": 2.804276704788208,
+        "z": 0.4171714782714844
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612732973449216,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 41.46965408325195,
+        "y": 39.068634033203125,
+        "z": 59.997642517089844,
+        "scale": 2.86566424369812
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9066bec5-df34-4f73-91f5-ffa377b8caac}",
+    "type": "Model",
+    "lastEdited": 1736934473627759,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 42.90626525878906,
+        "y": 40.50146484375,
+        "z": 55.947837829589844
+    },
+    "dimensions": {
+        "x": 0.41717100143432617,
+        "y": 2.804276704788208,
+        "z": 0.4171714782714844
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.42259860038757324,
+        "z": -0.0000762939453125,
+        "w": 0.9063096046447754
+    },
+    "created": 1612733107666944,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 41.47343444824219,
+        "y": 39.068634033203125,
+        "z": 54.51500701904297,
+        "scale": 2.86566424369812
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f25e4762-df72-428d-aa60-65a7c448876d}",
+    "type": "Box",
+    "lastEdited": 1736934473852789,
+    "visible": false,
+    "name": "Wind1",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind.mp3\",\"soundVolume\":0.6,\"refreshInterval\":100}",
+    "position": {
+        "x": 53.819576263427734,
+        "y": 44.3916015625,
+        "z": 33.37060546875
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612585468166144,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 53.64636993408203,
+        "y": 44.2183952331543,
+        "z": 33.1973991394043,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cf072077-f456-4a21-a8d8-825de1c64883}",
+    "type": "Model",
+    "lastEdited": 1736934474205132,
+    "name": "GRASS_05 (3)",
+    "locked": true,
+    "position": {
+        "x": 50.2454948425293,
+        "y": 42.34130859375,
+        "z": 36.17414474487305
+    },
+    "dimensions": {
+        "x": 1.9422732591629028,
+        "y": 1.3339416980743408,
+        "z": 2.0286738872528076
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 48.69087600708008,
+        "y": 40.78668975830078,
+        "z": 34.61952590942383,
+        "scale": 3.1092350482940674
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fe96ee20-f2ab-40b8-b489-049c4ff36daa}",
+    "type": "Model",
+    "lastEdited": 1736934474206497,
+    "name": "ALOES (3)",
+    "locked": true,
+    "position": {
+        "x": 49.889217376708984,
+        "y": 42.14697265625,
+        "z": 41.63528823852539
+    },
+    "dimensions": {
+        "x": 1.364851951599121,
+        "y": 1.364851951599121,
+        "z": 1.364851951599121
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 48.70722198486328,
+        "y": 40.9649772644043,
+        "z": 40.45329284667969,
+        "scale": 2.363992929458618
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e013466a-d0d7-4879-8205-df6ec300b8ef}",
+    "type": "Model",
+    "lastEdited": 1736934474210978,
+    "name": "GRASS_01 (4)",
+    "locked": true,
+    "position": {
+        "x": 51.71127700805664,
+        "y": 42.3232421875,
+        "z": 43.115535736083984
+    },
+    "dimensions": {
+        "x": 2.1840479373931885,
+        "y": 1.5253686904907227,
+        "z": 2.3146309852600098
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189850595328,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 49.94674301147461,
+        "y": 40.55870819091797,
+        "z": 41.35100173950195,
+        "scale": 3.529069662094116
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{5eccaa0c-c1fd-47d5-bc85-15aeb67cb309}",
+    "type": "Model",
+    "lastEdited": 1736934474203793,
+    "name": "GRASS_01 (3)",
+    "locked": true,
+    "position": {
+        "x": 51.242286682128906,
+        "y": 42.416015625,
+        "z": 42.10518264770508
+    },
+    "dimensions": {
+        "x": 2.532700538635254,
+        "y": 1.7688724994659424,
+        "z": 2.684129476547241
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 49.196067810058594,
+        "y": 40.36979675292969,
+        "z": 40.058963775634766,
+        "scale": 4.09243631362915
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{6659a0a6-2594-4847-90d2-326c272ef64d}",
+    "type": "Model",
+    "lastEdited": 1736934474207945,
+    "name": "ALOES (4)",
+    "locked": true,
+    "position": {
+        "x": 50.38727951049805,
+        "y": 42.0498046875,
+        "z": 40.4613037109375
+    },
+    "dimensions": {
+        "x": 1.0077474117279053,
+        "y": 1.0077474117279053,
+        "z": 1.0077474117279053
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.6629892587661743,
+        "z": -0.0000152587890625,
+        "w": 0.7486228942871094
+    },
+    "created": 1613189850595328,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 49.51454544067383,
+        "y": 41.17707061767578,
+        "z": 39.58856964111328,
+        "scale": 1.7454698085784912
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f76ca758-7921-4d37-9dd2-ea7621b387cb}",
+    "type": "Text",
+    "lastEdited": 1736934473604127,
+    "name": "D29-EH",
+    "locked": true,
+    "position": {
+        "x": 47.05765151977539,
+        "y": 44.37255859375,
+        "z": 47.88934326171875
+    },
+    "dimensions": {
+        "x": 1.1808717250823975,
+        "y": 0.4630858302116394,
+        "z": 0.009999999776482582
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -1,
+        "z": 0.0000152587890625,
+        "w": 0.004898190498352051
+    },
+    "created": 1651894351036416,
+    "lastEditedBy": "{33c369a6-7e89-40cc-bbc0-e65cf60e7493}",
+    "queryAACube": {
+        "x": 46.42341995239258,
+        "y": 43.73832702636719,
+        "z": 47.25511169433594,
+        "scale": 1.2684662342071533
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "unlit": true,
+    "text": "D29-EH",
+    "lineHeight": 0.05999999865889549,
+    "backgroundAlpha": 0.800000011920929,
+    "rightMargin": 0.03999999910593033,
+    "topMargin": 0.019999999552965164,
+    "alignment": "right",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c05f03ca-7b71-42cc-9f90-4c6b1c8f737a}",
+    "type": "Model",
+    "lastEdited": 1736934473595623,
+    "name": "SCHEFLERA (2)",
+    "locked": true,
+    "position": {
+        "x": 46.238834381103516,
+        "y": 42.63623046875,
+        "z": 41.080596923828125
+    },
+    "dimensions": {
+        "x": 2.0608747005462646,
+        "y": 2.3760483264923096,
+        "z": 1.6629695892333984
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.5948729515075684,
+        "z": -0.0000152587890625,
+        "w": 0.8038300275802612
+    },
+    "created": 1612757803728896,
+    "lastEditedBy": "{5ada5465-1ed4-4891-924a-38b7a10ad75d}",
+    "queryAACube": {
+        "x": 44.45991134643555,
+        "y": 40.85730743408203,
+        "z": 39.301673889160156,
+        "scale": 3.557847261428833
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/plant-unknown-trop/baked/plant-unknown-trop.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a7127c1c-2126-408b-b2c9-fdac7c15d6db}",
+    "type": "Box",
+    "lastEdited": 1736934473610537,
+    "visible": false,
+    "name": "TP-VIRZ-JCT",
+    "locked": true,
+    "userData": "hifi://virz/-9012,-8952.78,-9000.1/0,0.9999,0,0.0141146",
+    "position": {
+        "x": 47.11591720581055,
+        "y": 43.5703125,
+        "z": 48.360748291015625
+    },
+    "dimensions": {
+        "x": 1.5253565311431885,
+        "y": 2.5105462074279785,
+        "z": 0.791303813457489
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1651807109513216,
+    "lastEditedBy": "{8fdd1f65-5a36-4d5f-958d-c5924c130e40}",
+    "queryAACube": {
+        "x": 45.594757080078125,
+        "y": 42.04915237426758,
+        "z": 46.8395881652832,
+        "scale": 3.042320966720581
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/teleporter.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e8d3c34c-f564-4c04-bbc1-68c730de2762}",
+    "type": "Model",
+    "lastEdited": 1736934474191090,
+    "name": "DECK_ELEMENT_2",
+    "locked": true,
+    "position": {
+        "x": 45.422672271728516,
+        "y": 41.58203125,
+        "z": 46.94574737548828
+    },
+    "dimensions": {
+        "x": 5.764850616455078,
+        "y": 3.523960828781128,
+        "z": 7.213946342468262
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612673649213440,
+    "lastEditedBy": "{3f8563b4-419a-4166-ab84-a87e813b44bc}",
+    "queryAACube": {
+        "x": 40.480690002441406,
+        "y": 36.640045166015625,
+        "z": 42.003761291503906,
+        "scale": 9.883968353271484
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DESCK_ELEMENT_2.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9d52dd77-dfc3-4262-b753-099ed60620d8}",
+    "type": "Model",
+    "lastEdited": 1736934474195314,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 52.59355163574219,
+        "y": 44.61962890625,
+        "z": 43.20698547363281
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.05839627981185913,
+        "y": -0.43279165029525757,
+        "z": 0.024948477745056152,
+        "w": 0.8992294073104858
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{53e76e3b-3df5-449d-a328-dd802d422033}",
+    "queryAACube": {
+        "x": 44.05643844604492,
+        "y": 36.082515716552734,
+        "z": 34.66987228393555,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 59997.6875,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{acdcc1f2-f743-444b-8466-43164f65fbbf}",
+    "type": "Model",
+    "lastEdited": 1736934473607317,
+    "name": "ACCES-CABINE",
+    "locked": true,
+    "position": {
+        "x": 47.05146408081055,
+        "y": 42.27099609375,
+        "z": 49.095970153808594
+    },
+    "dimensions": {
+        "x": 2.6554183959960938,
+        "y": 3.5176053047180176,
+        "z": 2.2263967990875244
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7018997669219971,
+        "z": -0.0000457763671875,
+        "w": -0.7122758626937866
+    },
+    "created": 1651630613200896,
+    "lastEditedBy": "{e4e8c4c5-4de1-4567-8688-6a449fda75bd}",
+    "queryAACube": {
+        "x": 44.582576751708984,
+        "y": 39.80210876464844,
+        "z": 46.62708282470703,
+        "scale": 4.937776565551758
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/access-cabine/acces-cabine.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{524c4ff3-9f05-4f57-a9f4-51829f34efc1}",
+    "type": "Model",
+    "lastEdited": 1736934474209642,
+    "name": "ALOES (5)",
+    "locked": true,
+    "position": {
+        "x": 49.2844123840332,
+        "y": 42.34228515625,
+        "z": 40.61689758300781
+    },
+    "dimensions": {
+        "x": 1.8285170793533325,
+        "y": 1.8285170793533325,
+        "z": 1.8285170793533325
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.10374605655670166,
+        "z": -0.0000457763671875,
+        "w": 0.9945982694625854
+    },
+    "created": 1613189850595328,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 47.700870513916016,
+        "y": 40.75874328613281,
+        "z": 39.033355712890625,
+        "scale": 3.1670844554901123
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9cbce01c-d5e8-4dfb-b938-36c927d732b0}",
+    "type": "Model",
+    "lastEdited": 1736934474202450,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 49.63150405883789,
+        "y": 42.4150390625,
+        "z": 36.41810607910156
+    },
+    "dimensions": {
+        "x": 3.594712972640991,
+        "y": 3.350855827331543,
+        "z": 3.2972936630249023
+    },
+    "rotation": {
+        "x": -0.08284121751785278,
+        "y": -0.9738155007362366,
+        "z": -0.0158236026763916,
+        "w": 0.21116960048675537
+    },
+    "created": 1612756864204800,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 46.67251968383789,
+        "y": 39.4560546875,
+        "z": 33.45912170410156,
+        "scale": 5.917967796325684
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{74461eec-d33c-448f-a492-bb13f8521ffe}",
+    "type": "Box",
+    "lastEdited": 1736934473613424,
+    "visible": false,
+    "name": "CLOCK-eternal Hour",
+    "locked": true,
+    "position": {
+        "x": 46.96306610107422,
+        "y": 44.298828125,
+        "z": 47.892086029052734
+    },
+    "dimensions": {
+        "x": 1.2200980186462402,
+        "y": 0.5383801460266113,
+        "z": 0.0430278554558754
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -1,
+        "z": 0.0000152587890625,
+        "w": 0.004898190498352051
+    },
+    "created": 1651894216818688,
+    "lastEditedBy": "{33c369a6-7e89-40cc-bbc0-e65cf60e7493}",
+    "queryAACube": {
+        "x": 46.29591751098633,
+        "y": 43.63167953491211,
+        "z": 47.224937438964844,
+        "scale": 1.3342952728271484
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/clock_D29_eternalHour.js",
+    "scriptTimestamp": 1651894386688,
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a0be72e8-d73e-4f48-84f5-c8404f007eb4}",
+    "type": "Model",
+    "lastEdited": 1736934474188709,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 46.347232818603516,
+        "y": 44.03369140625,
+        "z": 38.9206657409668
+    },
+    "dimensions": {
+        "x": 5.06781530380249,
+        "y": 4.724026679992676,
+        "z": 4.648515701293945
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000457763671875,
+        "z": -0.07026779651641846,
+        "w": 0.997528076171875
+    },
+    "created": 1612416353828864,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 42.17566680908203,
+        "y": 39.862125396728516,
+        "z": 34.74909973144531,
+        "scale": 8.343133926391602
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1762fce7-b1fd-48da-8f6e-d1f556835a55}",
+    "type": "Model",
+    "lastEdited": 1736934473598301,
+    "name": "GRASS_05 (6)",
+    "locked": true,
+    "position": {
+        "x": 46.31196594238281,
+        "y": 42.62646484375,
+        "z": 39.82044982910156
+    },
+    "dimensions": {
+        "x": 2.7696168422698975,
+        "y": 1.9021563529968262,
+        "z": 2.8928213119506836
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.4304722547531128,
+        "z": -0.0000457763671875,
+        "w": 0.9025864601135254
+    },
+    "created": 1613189984813056,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 44.09513473510742,
+        "y": 40.40963363647461,
+        "z": 37.60361862182617,
+        "scale": 4.433665752410889
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8cce1192-9db0-4155-8b8d-b6fa32e97097}",
+    "type": "Model",
+    "lastEdited": 1736934473593093,
+    "name": "SCHEFLERA",
+    "locked": true,
+    "position": {
+        "x": 46.238800048828125,
+        "y": 42.63623046875,
+        "z": 42.22834014892578
+    },
+    "dimensions": {
+        "x": 2.0608747005462646,
+        "y": 2.3760483264923096,
+        "z": 1.6629695892333984
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612731094401024,
+    "lastEditedBy": "{5ada5465-1ed4-4891-924a-38b7a10ad75d}",
+    "queryAACube": {
+        "x": 44.459877014160156,
+        "y": 40.85730743408203,
+        "z": 40.44941711425781,
+        "scale": 3.557847261428833
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/plant-unknown-trop/baked/plant-unknown-trop.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b136edd6-4c79-436d-8d75-9e372c3a77d1}",
+    "type": "Model",
+    "lastEdited": 1736934474193903,
+    "name": "DECK_ELEMENT_1",
+    "locked": true,
+    "position": {
+        "x": 44.222293853759766,
+        "y": 41.58349609375,
+        "z": 38.50971603393555
+    },
+    "dimensions": {
+        "x": 2.0055084228515625,
+        "y": 3.523961067199707,
+        "z": 10.17937183380127
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612679823228928,
+    "lastEditedBy": "{3f8563b4-419a-4166-ab84-a87e813b44bc}",
+    "queryAACube": {
+        "x": 38.74369812011719,
+        "y": 36.10490036010742,
+        "z": 33.03112030029297,
+        "scale": 10.957188606262207
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DESCK_ELEMENT_1.fbx?version=1",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{7b326c2e-4c49-4c09-a7c3-9677fbf61cb4}",
+    "type": "Model",
+    "lastEdited": 1736934474200761,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 47.66211700439453,
+        "y": 43.76416015625,
+        "z": 36.119789123535156
+    },
+    "dimensions": {
+        "x": 5.06781530380249,
+        "y": 4.724026679992676,
+        "z": 4.648515701293945
+    },
+    "rotation": {
+        "x": -0.040451645851135254,
+        "y": -0.5250171422958374,
+        "z": -0.0636758804321289,
+        "w": 0.8477455377578735
+    },
+    "created": 1612756729987072,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 43.49055099487305,
+        "y": 39.592594146728516,
+        "z": 31.948223114013672,
+        "scale": 8.343133926391602
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8f0ee8e0-6bb8-45c5-8d0b-e4455343950f}",
+    "type": "Model",
+    "lastEdited": 1736934473561226,
+    "name": "DECK_ELEMENT_2",
+    "locked": true,
+    "position": {
+        "x": 42.917938232421875,
+        "y": 41.58154296875,
+        "z": 30.0515193939209
+    },
+    "dimensions": {
+        "x": 5.764850616455078,
+        "y": 3.523960828781128,
+        "z": 7.213946342468262
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612680091664384,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 37.9759521484375,
+        "y": 36.639556884765625,
+        "z": 25.109535217285156,
+        "scale": 9.883968353271484
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DESCK_ELEMENT_2.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4c1fa683-4171-4473-aba9-343dd044fef2}",
+    "type": "Model",
+    "lastEdited": 1736934474196753,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 40.2822265625,
+        "y": 46.34423828125,
+        "z": 36.65617752075195
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.017654716968536377,
+        "y": -0.5432059168815613,
+        "z": -0.029465198516845703,
+        "w": -0.8389257788658142
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 31.745113372802734,
+        "y": 37.807125091552734,
+        "z": 28.119064331054688,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 59988.86328125,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b4c97d3a-ab3f-4870-b1f8-b3a9928760f6}",
+    "type": "Model",
+    "lastEdited": 1736934473522790,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 7.208805084228516,
+        "y": 42.88427734375,
+        "z": 29.059345245361328
+    },
+    "dimensions": {
+        "x": 3.808196544647217,
+        "y": 3.5498576164245605,
+        "z": 3.493114948272705
+    },
+    "rotation": {
+        "x": 0.041702866554260254,
+        "y": -0.7574731111526489,
+        "z": -0.15767145156860352,
+        "w": 0.6321660280227661
+    },
+    "created": 1612756193116160,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 4.074091911315918,
+        "y": 39.74956512451172,
+        "z": 25.924633026123047,
+        "scale": 6.269425868988037
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{ac49dc2a-fe3c-4f27-8261-c6f7a95abac1}",
+    "type": "Model",
+    "lastEdited": 1736934474198152,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 48.621578216552734,
+        "y": 45.7431640625,
+        "z": 26.930612564086914
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.09309530258178711,
+        "y": -0.7816128730773926,
+        "z": 0.07679867744445801,
+        "w": 0.6119935512542725
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 40.08446502685547,
+        "y": 37.206050872802734,
+        "z": 18.39350128173828,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 59980.6015625,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f3468dfb-e3cb-48df-8cfd-92784bb23014}",
+    "type": "Model",
+    "lastEdited": 1736934473552690,
+    "name": "univestool_arms_NAVY_CANTINA (3)",
+    "locked": true,
+    "position": {
+        "x": 40.7503662109375,
+        "y": 42.28564453125,
+        "z": 32.1401481628418
+    },
+    "dimensions": {
+        "x": 0.5059115886688232,
+        "y": 1.0777661800384521,
+        "z": 0.60999995470047
+    },
+    "rotation": {
+        "x": -0.0001983642578125,
+        "y": -0.9739070534706116,
+        "z": -0.0000152587890625,
+        "w": 0.22694742679595947
+    },
+    "created": 1646550203760640,
+    "lastEditedBy": "{01562ada-885d-4c91-873b-d4c6803294f2}",
+    "queryAACube": {
+        "x": 40.08148193359375,
+        "y": 41.61676025390625,
+        "z": 31.471263885498047,
+        "scale": 1.3377691507339478
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/FURNITURES/bistro/univestool_arms_NAVY_CANTINA.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fad0670a-a965-459d-a784-f277a131a0ef}",
+    "type": "Model",
+    "lastEdited": 1736934473545241,
+    "name": "UNIVERTABLE_NOWHERE-ISLAND",
+    "locked": true,
+    "position": {
+        "x": 40.70277404785156,
+        "y": 42.78173828125,
+        "z": 31.288740158081055
+    },
+    "dimensions": {
+        "x": 0.8537499904632568,
+        "y": 0.9878767132759094,
+        "z": 0.8209772109985352
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613274541981696,
+    "lastEditedBy": "{01562ada-885d-4c91-873b-d4c6803294f2}",
+    "queryAACube": {
+        "x": 39.93160629272461,
+        "y": 42.01057052612305,
+        "z": 30.517574310302734,
+        "scale": 1.5423336029052734
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/FURNITURES/bistro/univertable_nowhere_island.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c786ab11-b4c6-4d58-98b1-dc0740967378}",
+    "type": "Model",
+    "lastEdited": 1736934474199459,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 41.46962356567383,
+        "y": 42.482421875,
+        "z": 34.796512603759766
+    },
+    "dimensions": {
+        "x": 3.8972644805908203,
+        "y": 3.632882833480835,
+        "z": 3.574812889099121
+    },
+    "rotation": {
+        "x": -0.0016632080078125,
+        "y": -0.8670023679733276,
+        "z": 0.07048141956329346,
+        "w": 0.4933089017868042
+    },
+    "created": 1612756729987072,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 38.2615966796875,
+        "y": 39.274391174316406,
+        "z": 31.588483810424805,
+        "scale": 6.416057586669922
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fa3ecce0-6b90-49be-b4ff-ab242522bc0e}",
+    "type": "Model",
+    "lastEdited": 1736934473623610,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 42.90248489379883,
+        "y": 40.50146484375,
+        "z": 66.17236328125
+    },
+    "dimensions": {
+        "x": 0.41717100143432617,
+        "y": 2.804276704788208,
+        "z": 0.4171714782714844
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612732973449216,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 41.46965408325195,
+        "y": 39.068634033203125,
+        "z": 64.73953247070312,
+        "scale": 2.86566424369812
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cc552cae-c22a-44af-8b32-3f2e9a806e87}",
+    "type": "Model",
+    "lastEdited": 1736934473622252,
+    "name": "IMMERGED_POLE",
+    "locked": true,
+    "position": {
+        "x": 45.54722595214844,
+        "y": 40.50146484375,
+        "z": 66.16525268554688
+    },
+    "dimensions": {
+        "x": 0.4089511036872864,
+        "y": 2.749021530151367,
+        "z": 0.4089515805244446
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612732839231488,
+    "lastEditedBy": "{27b741b0-16b9-4325-8883-56d3ca8dc344}",
+    "queryAACube": {
+        "x": 44.14262771606445,
+        "y": 39.096866607666016,
+        "z": 64.76065063476562,
+        "scale": 2.809199571609497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DECK_POLE_WATERLINE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{acced08b-c618-40c9-b93a-156c56aab860}",
+    "type": "Model",
+    "lastEdited": 1736934473870981,
+    "name": "ALOES (4)",
+    "locked": true,
+    "position": {
+        "x": 91.6158218383789,
+        "y": 41.94189453125,
+        "z": 13.015350341796875
+    },
+    "dimensions": {
+        "x": 1.3707592487335205,
+        "y": 1.3707592487335205,
+        "z": 1.3707592487335205
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.1280689239501953,
+        "z": -0.0000457763671875,
+        "w": 0.9917601346969604
+    },
+    "created": 1613190655901696,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 90.4287109375,
+        "y": 40.754783630371094,
+        "z": 11.828237533569336,
+        "scale": 2.3742246627807617
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c5361dc0-5fb8-41c2-be8f-1400361bc8d8}",
+    "type": "Model",
+    "lastEdited": 1736934473866039,
+    "name": "ALOES (2)",
+    "locked": true,
+    "position": {
+        "x": 92.38993835449219,
+        "y": 42.10498046875,
+        "z": 12.101524353027344
+    },
+    "dimensions": {
+        "x": 1.6308237314224243,
+        "y": 1.6308237314224243,
+        "z": 1.6308237314224243
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189582159872,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 90.97760009765625,
+        "y": 40.69264602661133,
+        "z": 10.689189910888672,
+        "scale": 2.824669599533081
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{5364dbbe-2ff4-4f01-8961-88de7e3ec705}",
+    "type": "Model",
+    "lastEdited": 1736934473868502,
+    "name": "ALOES (3)",
+    "locked": true,
+    "position": {
+        "x": 92.68665313720703,
+        "y": 42.0380859375,
+        "z": 13.101741790771484
+    },
+    "dimensions": {
+        "x": 1.3707592487335205,
+        "y": 1.3707592487335205,
+        "z": 1.3707592487335205
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.3026931881904602,
+        "z": -0.0000152587890625,
+        "w": 0.9530632495880127
+    },
+    "created": 1613190655901696,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 91.49954223632812,
+        "y": 40.850975036621094,
+        "z": 11.914628982543945,
+        "scale": 2.3742246627807617
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{41a24a9e-539f-4e43-8255-9d98f4458132}",
+    "type": "Box",
+    "lastEdited": 1736934473857642,
+    "visible": false,
+    "name": "Wind1",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind.mp3\",\"soundVolume\":0.6,\"refreshInterval\":100}",
+    "position": {
+        "x": 83.97376251220703,
+        "y": 43.5205078125,
+        "z": 8.055522918701172
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.9539177417755127,
+        "z": -0.0000457763671875,
+        "w": 0.30006861686706543
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 83.8005599975586,
+        "y": 43.3473014831543,
+        "z": 7.882318019866943,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{58301602-5682-43c3-a053-cb5f9ac23318}",
+    "type": "Box",
+    "lastEdited": 1736934473875622,
+    "visible": false,
+    "name": "Wind2",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind2.mp3\",\"soundVolume\":0.7,\"refreshInterval\":100}",
+    "position": {
+        "x": 89.20243072509766,
+        "y": 44.60498046875,
+        "z": 27.917083740234375
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.9539177417755127,
+        "z": -0.0000457763671875,
+        "w": 0.30006861686706543
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 89.02922821044922,
+        "y": 44.4317741394043,
+        "z": 27.743879318237305,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 240,
+        "blue": 80
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{70ad0969-e14f-465f-87e9-c1c0e3f7fddd}",
+    "type": "Model",
+    "lastEdited": 1736934473859934,
+    "name": "GRASS_01 (3)",
+    "locked": true,
+    "position": {
+        "x": 93.82878112792969,
+        "y": 42.15234375,
+        "z": 16.030214309692383
+    },
+    "dimensions": {
+        "x": 1.3921295404434204,
+        "y": 1.3052749633789062,
+        "z": 1.4753642082214355
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.615625262260437,
+        "z": -0.0000457763671875,
+        "w": 0.7879911661148071
+    },
+    "created": 1613190655901696,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 92.6227035522461,
+        "y": 40.94626998901367,
+        "z": 14.824139595031738,
+        "scale": 2.4121499061584473
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{caa8e0d4-b9c7-4bfc-b581-92d1d959a48e}",
+    "type": "Model",
+    "lastEdited": 1736934473857486,
+    "name": "GRASS_01 (2)",
+    "locked": true,
+    "position": {
+        "x": 93.82881164550781,
+        "y": 42.26806640625,
+        "z": 15.403158187866211
+    },
+    "dimensions": {
+        "x": 1.8455402851104736,
+        "y": 1.5394392013549805,
+        "z": 1.9558842182159424
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189582159872,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 92.27951049804688,
+        "y": 40.7187614440918,
+        "z": 13.853854179382324,
+        "scale": 3.0986087322235107
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fe1e225e-35d2-4b08-a3ba-b711f38eaa17}",
+    "type": "Box",
+    "lastEdited": 1736934473912148,
+    "visible": false,
+    "name": "Ocean2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean2.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 65.68833923339844,
+        "y": 44.392578125,
+        "z": 43.86149597167969
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612586139254784,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 65.51513671875,
+        "y": 44.2193717956543,
+        "z": 43.688289642333984,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 52,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{15517118-ca37-4c34-ad4a-173e8a1e345e}",
+    "type": "Box",
+    "lastEdited": 1736934473856231,
+    "visible": false,
+    "name": "Wind1",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind.mp3\",\"soundVolume\":0.6,\"refreshInterval\":100}",
+    "position": {
+        "x": 75.86529541015625,
+        "y": 43.73681640625,
+        "z": 36.91260528564453
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.9762874841690063,
+        "z": -0.0000152587890625,
+        "w": 0.21644926071166992
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 75.69209289550781,
+        "y": 43.5636100769043,
+        "z": 36.73939895629883,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8d8d2700-1de1-45f7-9672-afec74bbcf2d}",
+    "type": "Model",
+    "lastEdited": 1736934473921703,
+    "name": "ALOES (3)",
+    "locked": true,
+    "position": {
+        "x": 76.33596801757812,
+        "y": 42.27490234375,
+        "z": 60.31834411621094
+    },
+    "dimensions": {
+        "x": 1.4026151895523071,
+        "y": 1.4026151895523071,
+        "z": 1.4026151895523071
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 75.12126922607422,
+        "y": 41.060203552246094,
+        "z": 59.10364532470703,
+        "scale": 2.429400682449341
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/aloes/ALOES_ZEJA.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c28f89fb-9b5d-4f86-a3c6-9f1096b316d8}",
+    "type": "Model",
+    "lastEdited": 1736934473926635,
+    "name": "GRASS_05 (3)",
+    "locked": true,
+    "position": {
+        "x": 78.47640991210938,
+        "y": 42.14111328125,
+        "z": 61.086524963378906
+    },
+    "dimensions": {
+        "x": 1.5160174369812012,
+        "y": 1.041191816329956,
+        "z": 1.5834565162658691
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 77.26296997070312,
+        "y": 40.927677154541016,
+        "z": 59.87308883666992,
+        "scale": 2.426875352859497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e8366a76-776b-44af-803f-8049f361d2ae}",
+    "type": "Model",
+    "lastEdited": 1736934473925265,
+    "name": "GRASS_01 (4)",
+    "locked": true,
+    "position": {
+        "x": 75.78977966308594,
+        "y": 42.38623046875,
+        "z": 56.294193267822266
+    },
+    "dimensions": {
+        "x": 1.7819327116012573,
+        "y": 1.5293251276016235,
+        "z": 1.888473391532898
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.6360417604446411,
+        "z": -0.0000457763671875,
+        "w": 0.771633505821228
+    },
+    "created": 1613190521683968,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 74.28308868408203,
+        "y": 40.879539489746094,
+        "z": 54.78750228881836,
+        "scale": 3.013378620147705
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{9fd56faf-869d-4b53-a858-621860cdf0b2}",
+    "type": "Box",
+    "lastEdited": 1736934473914578,
+    "visible": false,
+    "name": "Wind2",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind2.mp3\",\"soundVolume\":0.7,\"refreshInterval\":100}",
+    "position": {
+        "x": 71.88082885742188,
+        "y": 44.87841796875,
+        "z": 56.94831848144531
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.9762874841690063,
+        "z": -0.0000152587890625,
+        "w": 0.21644926071166992
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 71.70762634277344,
+        "y": 44.7052116394043,
+        "z": 56.77511215209961,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 0,
+        "green": 240,
+        "blue": 80
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cffe16ff-30d1-479e-80d6-eab69bd42cdd}",
+    "type": "Model",
+    "lastEdited": 1736934473918126,
+    "name": "GRASS_01 (3)",
+    "locked": true,
+    "position": {
+        "x": 76.35519409179688,
+        "y": 42.4013671875,
+        "z": 57.16758346557617
+    },
+    "dimensions": {
+        "x": 2.0583715438842773,
+        "y": 1.5093762874603271,
+        "z": 2.1814403533935547
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189716377600,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 74.6763687133789,
+        "y": 40.72254180908203,
+        "z": 55.48876190185547,
+        "scale": 3.357646942138672
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1aa6b6e9-c3d0-4acb-8145-ec12f148eb19}",
+    "type": "Box",
+    "lastEdited": 1736934473878270,
+    "visible": false,
+    "name": "Ocean2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean2.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 88.27407836914062,
+        "y": 44.39208984375,
+        "z": 35.10906219482422
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612586139254784,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 88.10087585449219,
+        "y": 44.2188835144043,
+        "z": 34.935855865478516,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 52,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c47d68ce-a14d-4e03-b93b-3ec9b711ca41}",
+    "type": "Model",
+    "lastEdited": 1736934473929357,
+    "name": "GRASS_05 (5)",
+    "locked": true,
+    "position": {
+        "x": 79.10462951660156,
+        "y": 42.14111328125,
+        "z": 61.529273986816406
+    },
+    "dimensions": {
+        "x": 1.5160174369812012,
+        "y": 1.041191816329956,
+        "z": 1.5834565162658691
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.07008469104766846,
+        "z": -0.0000457763671875,
+        "w": 0.997528076171875
+    },
+    "created": 1613190521683968,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 77.89118957519531,
+        "y": 40.927677154541016,
+        "z": 60.31583786010742,
+        "scale": 2.426875352859497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d0117009-1357-4aa7-8821-cec13428469a}",
+    "type": "Model",
+    "lastEdited": 1736934473928008,
+    "name": "GRASS_05 (4)",
+    "locked": true,
+    "position": {
+        "x": 79.02346801757812,
+        "y": 42.14111328125,
+        "z": 60.63111877441406
+    },
+    "dimensions": {
+        "x": 1.5160174369812012,
+        "y": 1.041191816329956,
+        "z": 1.5834565162658691
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.4771343469619751,
+        "z": -0.0000457763671875,
+        "w": 0.8788127899169922
+    },
+    "created": 1613190521683968,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 77.81002807617188,
+        "y": 40.927677154541016,
+        "z": 59.41768264770508,
+        "scale": 2.426875352859497
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1feb2a08-8349-4085-8372-ea43ea7e3dd6}",
+    "type": "Box",
+    "lastEdited": 1736934473884168,
+    "visible": false,
+    "name": "Wind3",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind3.mp3\",\"soundVolume\":0.3,\"refreshInterval\":100}",
+    "position": {
+        "x": 102.2978515625,
+        "y": 45.052734375,
+        "z": 12.228282928466797
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.9539177417755127,
+        "z": -0.0000457763671875,
+        "w": 0.30006861686706543
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{752309bf-a1b2-4168-a358-2b1de21482df}",
+    "queryAACube": {
+        "x": 102.12464904785156,
+        "y": 44.8795280456543,
+        "z": 12.05507755279541,
+        "scale": 0.3464101552963257
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 64,
+        "green": 0,
+        "blue": 240
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4284ff56-9c12-477b-9005-f4e50ad8826e}",
+    "type": "Model",
+    "lastEdited": 1736934473883435,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 106.09953308105469,
+        "y": 41.65869140625,
+        "z": 13.26064682006836
+    },
+    "dimensions": {
+        "x": 2.5902366638183594,
+        "y": 2.4145219326019287,
+        "z": 2.375926971435547
+    },
+    "rotation": {
+        "x": 0.21492338180541992,
+        "y": 0.3638514280319214,
+        "z": -0.20125126838684082,
+        "w": 0.8836957216262817
+    },
+    "created": 1612756461551616,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 103.9673843383789,
+        "y": 39.52653884887695,
+        "z": 11.128496170043945,
+        "scale": 4.264301776885986
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{796b18ab-7651-48be-afdd-f6bb10385f0d}",
+    "type": "Model",
+    "lastEdited": 1736934473899399,
+    "name": "univestool_arms_NAVY_CANTINA (2)",
+    "locked": true,
+    "position": {
+        "x": 100.13123321533203,
+        "y": 41.62646484375,
+        "z": 20.2590274810791
+    },
+    "dimensions": {
+        "x": 0.5059115886688232,
+        "y": 1.0777661800384521,
+        "z": 0.60999995470047
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.9106126427650452,
+        "z": 0.0001068115234375,
+        "w": 0.4132601022720337
+    },
+    "created": 1643344279109632,
+    "lastEditedBy": "{01562ada-885d-4c91-873b-d4c6803294f2}",
+    "queryAACube": {
+        "x": 99.46234893798828,
+        "y": 40.95758056640625,
+        "z": 19.59014320373535,
+        "scale": 1.3377691507339478
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/FURNITURES/bistro/univestool_arms_NAVY_CANTINA.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{5dfce6e3-ab0b-4616-90ec-39fba86a5bc8}",
+    "type": "Model",
+    "lastEdited": 1736934473902990,
+    "name": "univestool_arms_NAVY_CANTINA (3)",
+    "locked": true,
+    "position": {
+        "x": 101.01869201660156,
+        "y": 41.62646484375,
+        "z": 20.40918731689453
+    },
+    "dimensions": {
+        "x": 0.5059115886688232,
+        "y": 1.0777661800384521,
+        "z": 0.60999995470047
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": -0.5873044729232788,
+        "z": 0.0001373291015625,
+        "w": 0.8093843460083008
+    },
+    "created": 1643344681762816,
+    "lastEditedBy": "{01562ada-885d-4c91-873b-d4c6803294f2}",
+    "queryAACube": {
+        "x": 100.34980773925781,
+        "y": 40.95758056640625,
+        "z": 19.74030303955078,
+        "scale": 1.3377691507339478
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/objects/FURNITURES/bistro/univestool_arms_NAVY_CANTINA.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "useOriginalPivot": true,
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e9924100-28ce-4a71-9af4-1e1f7a37e7b6}",
+    "type": "Model",
+    "lastEdited": 1736934473891874,
+    "name": "GRASS_05 (5)",
+    "locked": true,
+    "position": {
+        "x": 106.14680480957031,
+        "y": 42.048828125,
+        "z": 18.37664222717285
+    },
+    "dimensions": {
+        "x": 1.8916563987731934,
+        "y": 1.2991783618927002,
+        "z": 1.9758055210113525
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.17927825450897217,
+        "z": -0.0000762939453125,
+        "w": 0.9837949275970459
+    },
+    "created": 1613190790119424,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 104.63269805908203,
+        "y": 40.534725189208984,
+        "z": 16.862539291381836,
+        "scale": 3.0282065868377686
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f18eef76-d60f-4b69-a671-7badf609312e}",
+    "type": "Model",
+    "lastEdited": 1736934473883445,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 105.54238891601562,
+        "y": 43.5068359375,
+        "z": 14.02241325378418
+    },
+    "dimensions": {
+        "x": 4.845415115356445,
+        "y": 4.516714096069336,
+        "z": 4.444516181945801
+    },
+    "rotation": {
+        "x": 0.09364461898803711,
+        "y": 0.8649271726608276,
+        "z": -0.07954525947570801,
+        "w": 0.48662543296813965
+    },
+    "created": 1612756461551616,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 101.55389404296875,
+        "y": 39.51833724975586,
+        "z": 10.033914566040039,
+        "scale": 7.976996898651123
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2c6749b8-587a-4ed7-b567-313657d6f9fe}",
+    "type": "Model",
+    "lastEdited": 1736934473889125,
+    "name": "GRASS_05 (3)",
+    "locked": true,
+    "position": {
+        "x": 105.48650360107422,
+        "y": 42.52294921875,
+        "z": 17.5356388092041
+    },
+    "dimensions": {
+        "x": 2.8763606548309326,
+        "y": 1.9754674434661865,
+        "z": 3.0043137073516846
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.34200048446655273,
+        "z": -0.0000457763671875,
+        "w": 0.9396963119506836
+    },
+    "created": 1613190790119424,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 103.18423461914062,
+        "y": 40.22067642211914,
+        "z": 15.233366966247559,
+        "scale": 4.604543685913086
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bbf1aff8-a1b2-477f-b87e-28fcd896c5a2}",
+    "type": "Model",
+    "lastEdited": 1736934473884788,
+    "name": "GRASS_05 (2)",
+    "locked": true,
+    "position": {
+        "x": 105.48654174804688,
+        "y": 42.52294921875,
+        "z": 16.185819625854492
+    },
+    "dimensions": {
+        "x": 2.8763606548309326,
+        "y": 1.9754674434661865,
+        "z": 3.0043137073516846
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613189582159872,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 103.18427276611328,
+        "y": 40.22067642211914,
+        "z": 13.88354778289795,
+        "scale": 4.604543685913086
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{90eb9aa6-d5a2-4e4d-bccc-dff45b7a5649}",
+    "type": "Model",
+    "lastEdited": 1736934473890503,
+    "name": "GRASS_05 (4)",
+    "locked": true,
+    "position": {
+        "x": 106.91290283203125,
+        "y": 42.427734375,
+        "z": 16.33884620666504
+    },
+    "dimensions": {
+        "x": 2.8763606548309326,
+        "y": 1.9754674434661865,
+        "z": 3.0043137073516846
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.21647971868515015,
+        "z": -0.0000457763671875,
+        "w": 0.9762569665908813
+    },
+    "created": 1613190790119424,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 104.61063385009766,
+        "y": 40.12546157836914,
+        "z": 14.036574363708496,
+        "scale": 4.604543685913086
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_05/baked/TallGrass_05.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a90bccc0-bb10-4528-a640-5e9f9f85045d}",
+    "type": "Box",
+    "lastEdited": 1736934473936577,
+    "visible": false,
+    "name": "Ocean1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 109.05917358398438,
+        "y": 45.09912109375,
+        "z": 44.690303802490234
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612586005037056,
+    "lastEditedBy": "{752309bf-a1b2-4168-a358-2b1de21482df}",
+    "queryAACube": {
+        "x": 108.88597106933594,
+        "y": 44.9259147644043,
+        "z": 44.51709747314453,
+        "scale": 0.3464101552963257
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 192,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b331abd5-1c9b-4ef5-8f58-9216b8d6359c}",
+    "type": "Model",
+    "lastEdited": 1736934473894523,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 92.02384948730469,
+        "y": 44.06982421875,
+        "z": 17.89501190185547
+    },
+    "dimensions": {
+        "x": 6.051235198974609,
+        "y": 5.6407341957092285,
+        "z": 5.550570011138916
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000152587890625,
+        "z": 0.06971848011016846,
+        "w": 0.99755859375
+    },
+    "created": 1612756193116160,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 87.04277801513672,
+        "y": 39.0887565612793,
+        "z": 12.913944244384766,
+        "scale": 9.962136268615723
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d58f9551-2aad-4cc3-920a-fd60d12dcb14}",
+    "type": "Model",
+    "lastEdited": 1736934473897145,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 95.0912857055664,
+        "y": 43.16650390625,
+        "z": 16.17047119140625
+    },
+    "dimensions": {
+        "x": 3.959057569503784,
+        "y": 3.690484046936035,
+        "z": 3.6314940452575684
+    },
+    "rotation": {
+        "x": -0.013900995254516602,
+        "y": -0.7203936576843262,
+        "z": -0.024429678916931152,
+        "w": 0.6929885149002075
+    },
+    "created": 1612756595769344,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 91.83238983154297,
+        "y": 39.90760803222656,
+        "z": 12.911577224731445,
+        "scale": 6.517787933349609
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4720a2f5-398d-4beb-9c56-92cf0f7f0d78}",
+    "type": "Model",
+    "lastEdited": 1736934473863753,
+    "name": "BANANIER",
+    "locked": true,
+    "position": {
+        "x": 93.47262573242188,
+        "y": 43.32373046875,
+        "z": 14.662565231323242
+    },
+    "dimensions": {
+        "x": 4.845415115356445,
+        "y": 4.516714096069336,
+        "z": 4.444516181945801
+    },
+    "rotation": {
+        "x": 0.0189058780670166,
+        "y": 0.023422598838806152,
+        "z": 0.053543925285339355,
+        "w": 0.99810791015625
+    },
+    "created": 1612756461551616,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 89.484130859375,
+        "y": 39.33523178100586,
+        "z": 10.674066543579102,
+        "scale": 7.976996898651123
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/bananier/TROPICAL_TREE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1c16459e-9d18-41c3-813c-31a88adc3900}",
+    "type": "Model",
+    "lastEdited": 1736934473908356,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 101.78370666503906,
+        "y": 46.55126953125,
+        "z": 21.033737182617188
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000152587890625,
+        "z": 0.09581136703491211,
+        "w": 0.9953917264938354
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 93.24659729003906,
+        "y": 38.014156341552734,
+        "z": 12.496624946594238,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 61384.69921875,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fa1d6518-7163-46a2-a29c-65aedd830878}",
+    "type": "Model",
+    "lastEdited": 1736934473862352,
+    "name": "GRASS_01 (4)",
+    "locked": true,
+    "position": {
+        "x": 94.863037109375,
+        "y": 42.15234375,
+        "z": 15.788225173950195
+    },
+    "dimensions": {
+        "x": 1.3921295404434204,
+        "y": 1.3052749633789062,
+        "z": 1.4753642082214355
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.9562981128692627,
+        "z": -0.0000762939453125,
+        "w": 0.2923780679702759
+    },
+    "created": 1613190655901696,
+    "lastEditedBy": "{b8038ed2-5a7a-4e3c-b8cd-1b5c00bffb6c}",
+    "queryAACube": {
+        "x": 93.6569595336914,
+        "y": 40.94626998901367,
+        "z": 14.58215045928955,
+        "scale": 2.4121499061584473
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/TallGrass_01/baked/TallGrass_01.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{354d5e49-34e7-405f-a57c-1f246765ee34}",
+    "type": "Box",
+    "lastEdited": 1736934473932399,
+    "visible": false,
+    "name": "Wind3",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind3.mp3\",\"soundVolume\":0.3,\"refreshInterval\":100}",
+    "position": {
+        "x": 87.41929626464844,
+        "y": 44.82861328125,
+        "z": 67.20621490478516
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.9762874841690063,
+        "z": -0.0000152587890625,
+        "w": 0.21644926071166992
+    },
+    "created": 1612585602383872,
+    "lastEditedBy": "{752309bf-a1b2-4168-a358-2b1de21482df}",
+    "queryAACube": {
+        "x": 87.24609375,
+        "y": 44.6554069519043,
+        "z": 67.03301239013672,
+        "scale": 0.3464101552963257
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 64,
+        "green": 0,
+        "blue": 240
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{ea4f0788-3734-49bf-8993-470a64579f7d}",
+    "type": "Box",
+    "lastEdited": 1736934473930939,
+    "visible": false,
+    "name": "Ocean1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 80.51397705078125,
+        "y": 45.1015625,
+        "z": 74.78746795654297
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612586005037056,
+    "lastEditedBy": "{752309bf-a1b2-4168-a358-2b1de21482df}",
+    "queryAACube": {
+        "x": 80.34077453613281,
+        "y": 44.9283561706543,
+        "z": 74.61426544189453,
+        "scale": 0.3464101552963257
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 192,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{7aca9e66-0904-404f-9a92-330e54637f9e}",
+    "type": "Zone",
+    "lastEdited": 1736934473630592,
+    "name": "ARRIVAL_FLYING_ZONE",
+    "locked": true,
+    "position": {
+        "x": 44.27678680419922,
+        "y": 43.29541015625,
+        "z": 64.79566955566406
+    },
+    "dimensions": {
+        "x": 4,
+        "y": 4.506345748901367,
+        "z": 4
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613444058972160,
+    "lastEditedBy": "{f0688bcf-7ca0-4d86-b665-043b0e8b4c66}",
+    "queryAACube": {
+        "x": 40.66060256958008,
+        "y": 39.67922592163086,
+        "z": 61.17948532104492,
+        "scale": 7.232368469238281
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "box",
+    "keyLight": {
+        "direction": {
+            "x": 0,
+            "y": -0.7071067690849304,
+            "z": 0.7071067690849304
+        },
+        "castShadows": true
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b054a393-923f-4f6c-954e-92aef64fa937}",
+    "type": "Model",
+    "lastEdited": 1736934474189902,
+    "name": "DECK_ELEMENT_1",
+    "locked": true,
+    "position": {
+        "x": 44.221675872802734,
+        "y": 41.4287109375,
+        "z": 58.50957489013672
+    },
+    "dimensions": {
+        "x": 3.2165677547454834,
+        "y": 5.651961326599121,
+        "z": 16.326353073120117
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612671904382976,
+    "lastEditedBy": "{3f8563b4-419a-4166-ab84-a87e813b44bc}",
+    "queryAACube": {
+        "x": 35.43474197387695,
+        "y": 32.64177703857422,
+        "z": 49.72264099121094,
+        "scale": 17.57386589050293
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/decks/DESCK_ELEMENT_1.fbx?version=1",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3db3e969-9de5-40aa-ac9e-1c9553219f00}",
+    "type": "Model",
+    "lastEdited": 1736934473934927,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 76.31458282470703,
+        "y": 44.93603515625,
+        "z": 64.43338012695312
+    },
+    "dimensions": {
+        "x": 8.104284286499023,
+        "y": 8.102890968322754,
+        "z": 7.680142879486084
+    },
+    "rotation": {
+        "x": 0.21641874313354492,
+        "y": -0.0000457763671875,
+        "z": -0.0000152587890625,
+        "w": 0.9762874841690063
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 69.41674041748047,
+        "y": 38.03819274902344,
+        "z": 57.53553771972656,
+        "scale": 13.795682907104492
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 61284.0078125,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3399b94d-a19d-4aa7-8979-55690dc79d71}",
+    "type": "Box",
+    "lastEdited": 1736934474192505,
+    "visible": false,
+    "name": "ARRIVAL_SUPPORT",
+    "locked": true,
+    "position": {
+        "x": 44.29593276977539,
+        "y": 42.46484375,
+        "z": 59.83815002441406
+    },
+    "dimensions": {
+        "x": 2.836653232574463,
+        "y": 0.20000000298023224,
+        "z": 13.710671424865723
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612674186084352,
+    "lastEditedBy": "{3f8563b4-419a-4166-ab84-a87e813b44bc}",
+    "queryAACube": {
+        "x": 37.294700622558594,
+        "y": 35.46360778808594,
+        "z": 52.8369140625,
+        "scale": 14.00246810913086
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{554d6a99-2833-4b40-8ec9-ac8b6d4fc44f}",
+    "type": "Model",
+    "lastEdited": 1736934473936339,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 78.56661224365234,
+        "y": 45.80859375,
+        "z": 58.23029327392578
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.03389030694961548,
+        "y": 0.3170977830886841,
+        "z": 0.01100170612335205,
+        "w": 0.9477225542068481
+    },
+    "created": 1612755656245248,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": 70.02950286865234,
+        "y": 37.271480560302734,
+        "z": 49.693180084228516,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 61276.796875,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bab5da07-6688-42ec-8b5f-bf542682a395}",
+    "type": "Zone",
+    "lastEdited": 1736934474185331,
+    "name": "TROPICAL_ISLAND_ZONE",
+    "locked": true,
+    "position": {
+        "x": 50.32938003540039,
+        "y": 133.13330078125,
+        "z": 37.14168930053711
+    },
+    "dimensions": {
+        "x": 6000,
+        "y": 800,
+        "z": 6000
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612326159515648,
+    "lastEditedBy": "{d2fecc47-2b13-4ee7-871c-4efb538614bb}",
+    "queryAACube": {
+        "x": -4211.12548828125,
+        "y": -4128.32177734375,
+        "z": -4224.3134765625,
+        "scale": 8522.91015625
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sun_island_sky_wind.js",
+    "shapeType": "box",
+    "keyLight": {
+        "color": {
+            "red": 242,
+            "green": 216,
+            "blue": 160
+        },
+        "intensity": 3,
+        "direction": {
+            "x": -0.007853295654058456,
+            "y": -0.9044122099876404,
+            "z": -0.4265875518321991
+        },
+        "castShadows": true,
+        "shadowBias": 0.15000000596046448,
+        "shadowMaxDistance": 100
+    },
+    "ambientLight": {
+        "ambientIntensity": 0.3499999940395355,
+        "ambientURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/skies/day.ktx"
+    },
+    "skybox": {
+        "color": {
+            "red": 255,
+            "green": 255,
+            "blue": 255
+        },
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/skies/day.ktx"
+    },
+    "haze": {
+        "hazeColor": {
+            "red": 16,
+            "green": 20,
+            "blue": 46
+        },
+        "hazeAltitudeEffect": true,
+        "hazeCeiling": -6130,
+        "hazeBaseRef": -6150
+    },
+    "flyingAllowed": false,
+    "keyLightMode": "disabled",
+    "ambientLightMode": "disabled",
+    "skyboxMode": "disabled",
+    "hazeMode": "disabled",
+    "bloomMode": "disabled",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{be92841d-5244-4ef0-b392-4367ab810a5f}",
+    "type": "Box",
+    "lastEdited": 1736934473521573,
+    "visible": false,
+    "name": "Wind3",
+    "locked": true,
+    "userData": "{\"soundURL\":\"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/wind3.mp3\",\"soundVolume\":0.3,\"refreshInterval\":100}",
+    "position": {
+        "x": 0,
+        "y": 45.22314453125,
+        "z": 20.453786849975586
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612585333948416,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": -0.17320507764816284,
+        "y": 45.0499382019043,
+        "z": 20.280582427978516,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 64,
+        "green": 0,
+        "blue": 240
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8cdf7249-5b80-4471-aa6d-f60c0436da80}",
+    "type": "Box",
+    "lastEdited": 1736934473853079,
+    "visible": false,
+    "name": "Ocean2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/ocean2.mp3\",\n  \"soundVolume\": 1,\n  \"refreshInterval\": 100\n}",
+    "position": {
+        "x": 65.1526870727539,
+        "y": 44.38818359375,
+        "z": 0
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": 0.40669870376586914,
+        "z": -0.0000152587890625,
+        "w": 0.9135423898696899
+    },
+    "created": 1612586139254784,
+    "lastEditedBy": "{9886a45f-d8a3-4ee2-b9a4-d2ca9d2a4712}",
+    "queryAACube": {
+        "x": 64.97948455810547,
+        "y": 44.2149772644043,
+        "z": -0.17320507764816284,
+        "scale": 0.3464101552963257
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/nowhereIsland/sounds/soundLoopEmitter.js",
+    "scriptTimestamp": 1612585107456,
+    "color": {
+        "red": 240,
+        "green": 52,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d9182afd-ed5c-421e-9968-796ee1070138}",
+    "type": "Model",
+    "lastEdited": 1736934473565401,
+    "name": "PALMIER",
+    "locked": true,
+    "position": {
+        "x": 4.754364013671875,
+        "y": 46.44873046875,
+        "z": 24.08530044555664
+    },
+    "dimensions": {
+        "x": 10.030266761779785,
+        "y": 10.02854061126709,
+        "z": 9.505327224731445
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612499703037952,
+    "lastEditedBy": "{6b93d881-1d96-4c3d-8eea-5f5078318b5e}",
+    "queryAACube": {
+        "x": -3.782748222351074,
+        "y": 37.911617279052734,
+        "z": 15.548188209533691,
+        "scale": 17.0742244720459
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "url": "https://aleziakurdis.github.io/inertia/nowhereIsland/PalmTree_anim/baked/PalmTree_anim.baked.fbx",
+        "currentFrame": 62355.90234375,
+        "running": true,
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{976f88e3-d541-430c-b29d-0d481eee31f9}",
+    "type": "Model",
+    "lastEdited": 1736934474187571,
+    "name": "SUN ISLAND - LANDSCAPE",
+    "locked": true,
+    "position": {
+        "x": 569.9074096679688,
+        "y": 0,
+        "z": 443.936279296875
+    },
+    "dimensions": {
+        "x": 8003.26953125,
+        "y": 83.48385620117188,
+        "z": 6931.03564453125
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612327233257472,
+    "lastEditedBy": "{a1a26118-6e9e-433b-bb54-4b679b18319e}",
+    "queryAACube": {
+        "x": -4723.9228515625,
+        "y": -5293.830078125,
+        "z": -4849.8935546875,
+        "scale": 10587.66015625
+    },
+    "renderWithZones": [
+        "{bab5da07-6688-42ec-8b5f-bf542682a395}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/nowhereIsland/ATOLIA_LANDSCAPE_210.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "allowTranslation": false,
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+}
+    ],
+  "Id": "{1878a395-4c0d-437a-a8fb-a6aef43a9f8f}",
+  "Version": 147
+}

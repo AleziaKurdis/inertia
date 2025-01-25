@@ -1,0 +1,15 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo":[0.06,0.2,0.18],
+            "metallic": 1,
+            "roughness": 0.12,
+            "opacity": 0.52,
+            "model": "hifi_pbr",
+            "normalMap": "http://metaverse.bashora.com/sun_island/AQUASPHERE_B_NORMAL.png",
+            "albedoMap":"",
+            "defaultFallthrough": false            
+        }
+    ]
+}
