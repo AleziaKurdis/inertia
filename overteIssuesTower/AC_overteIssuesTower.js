@@ -381,7 +381,11 @@ function myTimer(deltaTime) {
             if (tilesData[i].labels.length > 0) {
                 var fullWidth = 2.4119091033935547;
                 var labelsWidth = fullWidth/tilesData[i].labels.length;
+                
                 var initialZpos = 0.0 - ((tilesData[i].labels.length/2) * (labelsWidth/2));
+                if (tilesData[i].labels.length === 1) {
+                    initialZpos = 0;
+                }
                 var k;
                 var bgColor;
                 var foreColor;
