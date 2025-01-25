@@ -7,9 +7,9 @@
             "roughness": 0.12,
             "opacity": 0.52,
             "model": "hifi_pbr",
-            "normalMap": "http://metaverse.bashora.com/sun_island/AQUASPHERE_B_NORMAL.png",
+            "normalMap": "AQUASPHERE_B_NORMAL.png",
             "albedoMap":"",
-            "defaultFallthrough": false            
+            "defaultFallthrough": false
         }
     ]
 }
