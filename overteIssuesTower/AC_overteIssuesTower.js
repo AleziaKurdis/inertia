@@ -531,7 +531,7 @@ function myTimer(deltaTime) {
     function genSubVisibilityZone(coy) {
         var zonePosition = {
             "x": positionZero.x,
-            "y": positionZero.y - coy,
+            "y": positionZero.y + coy,
             "z": positionZero.z
         };
         EntityViewer.queryOctree();
