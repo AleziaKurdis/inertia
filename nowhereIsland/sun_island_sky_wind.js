@@ -1,14 +1,22 @@
-//#####################
-// SUN ISLAND SKY WIND WATER MANAGER
-// Alezia Kurdis
-// November 2020.
-//#####################
-(function(){ 
-    var zoneID = Uuid.NULL;
-    var waterID = Uuid.NULL;
-    var waterMaterialID = Uuid.NULL;
-    var waterUnderID = Uuid.NULL;
-    var waterUnderMaterialID = Uuid.NULL;    
+//
+//  sun_island_sky_wind.js
+//
+//  Created by Alezia Kurdis, November 1st, 2020.
+//  Copyright 2020 Vircadia and contributors.
+//  Copyright 2025 Overte e.V.
+//
+//  SUN ISLAND SKY WIND WATER MANAGER.
+//
+//  Distributed under the Apache License, Version 2.0.
+//  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+//
+(function(){
+    var ROOT = Script.resolvePath('').split("sun_island_sky_wind.js")[0];
+    var zoneID = Uuid.NONE;
+    var waterID = Uuid.NONE;
+    var waterMaterialID = Uuid.NONE;
+    var waterUnderID = Uuid.NONE;
+    var waterUnderMaterialID = Uuid.NONE;    
     var universeCenter;
     var universeDimension;
     var waterOriginPosition;
@@ -21,7 +29,7 @@
     var MONTH_DURATION = 3600 * 19 * 36;
  
     this.preload = function(entityID) {
-        if (zoneID == Uuid.NULL){
+        if (zoneID == Uuid.NONE){
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
                 initiate(entityID);
             }
@@ -29,7 +37,7 @@
     };
 
     this.enterEntity = function(entityID) {
-        if (zoneID == Uuid.NULL){
+        if (zoneID == Uuid.NONE){
             initiate(entityID);
         }
     };
@@ -60,7 +68,7 @@
     }
 
     function shutdown() {
-        if (zoneID != Uuid.NULL){
+        if (zoneID != Uuid.NONE){
 
             Script.update.disconnect(myTimer);
         
@@ -69,12 +77,12 @@
             Entities.deleteEntity(waterID);
             Entities.deleteEntity(waterMaterialID);
             Entities.deleteEntity(waterUnderID);
-            Entities.deleteEntity(waterUnderMaterialID);               
-            waterUnderID = Uuid.NULL;
-            waterUnderMaterialID = Uuid.NULL;                
-            waterID = Uuid.NULL;
-            waterMaterialID = Uuid.NULL;   
-            zoneID = Uuid.NULL;
+            Entities.deleteEntity(waterUnderMaterialID);
+            waterUnderID = Uuid.NONE;
+            waterUnderMaterialID = Uuid.NONE;
+            waterID = Uuid.NONE;
+            waterMaterialID = Uuid.NONE;
+            zoneID = Uuid.NONE;
         }
     }
 
@@ -124,7 +132,7 @@
             },
             "ambientLight": {
                 "ambientIntensity": 0.4,
-                "ambientURL": "http://metaverse.bashora.com/sun_island/skies/day.ktx"
+                "ambientURL": ROOT + "skies/day.ktx"
             },
             "skybox": {
                 "color": {
@@ -132,7 +140,7 @@
                     "green": 255,
                     "blue": 255
                 },
-                "url": "http://metaverse.bashora.com/sun_island/skies/day.ktx"
+                "url": ROOT + "skies/day.ktx"
             },
             "bloom": {
                 "bloomIntensity": 0.5009999871253967,
@@ -158,7 +166,7 @@
             "bloomMode": "enabled"
         };
         
-        zoneID = Entities.addEntity(nova, "local");          
+        zoneID = Entities.addEntity(nova, "local");
 
         waterID = Entities.addEntity({
             "type": "Model",
@@ -180,7 +188,7 @@
             "grab": {
                 "grabbable": false
             },
-            "modelURL": "http://metaverse.bashora.com/sun_island/WATER_LEVEL_200.fbx"
+            "modelURL": ROOT + "WATER_LEVEL_200.fbx"
         }, "local");
  
         waterMaterialID = Entities.addEntity({
@@ -199,7 +207,7 @@
             "grab": {
                 "grabbable": false
             },
-            "materialURL": "http://metaverse.bashora.com/sun_island/water_material.json",
+            "materialURL": ROOT + "water_material.json",
             "priority": 2,
             "parentMaterialName": "[mat::WATER]",
             "materialMappingScale": {
@@ -229,7 +237,7 @@
             "grab": {
                 "grabbable": false
             },
-            "modelURL": "http://metaverse.bashora.com/sun_island/WATER_LEVEL_200.fbx"
+            "modelURL": ROOT + "WATER_LEVEL_200.fbx"
         }, "local");
  
         waterUnderMaterialID = Entities.addEntity({
@@ -248,7 +256,7 @@
             "grab": {
                 "grabbable": false
             },
-            "materialURL": "http://metaverse.bashora.com/sun_island/water_material.json",
+            "materialURL": ROOT + "water_material.json",
             "priority": 2,
             "parentMaterialName": "[mat::WATER]",
             "materialMappingScale": {
@@ -257,13 +265,11 @@
             }
         }, "local");
 
-
-      
         updateSky();
 
 		var today = new Date();
         processTimer = today.getTime();
-        Script.update.connect(myTimer);        
+        Script.update.connect(myTimer);
     }
 
     function moveWater() {
@@ -275,18 +281,13 @@
         var sinMareBeta = Math.sin((mareCycleBeta/10) * DEGREES_TO_RADIANS);
         if (Math.abs(sinMareBeta) > Math.abs(sinMare)) {sinMare = sinMareBeta;}
         var waterVelocity = Vec3.multiplyQbyV( Quat.fromVec3Degrees( {"x": 0, "y": aquaRotor, "z": 0} ), {"x": 0,"y": 0.015 * sinMare,"z": 0.3} );
-        /*##### DEBUG ===============
-        print("VELOCITY" + JSON.stringify(waterVelocity));
-        var properties = Entities.getEntityProperties(waterID, ["position"]);
-        var curposition = properties.position;
-        print("DISTANCE FROM ORIGIN: " + Vec3.distance(waterOriginPosition, curposition));
-        //=========== END DUBUG ##### */
+
         var watertest = Entities.editEntity(waterID, {"damping": 0.0, "friction": 0.0, "velocity": waterVelocity});
         var watertest2 = Entities.editEntity(waterUnderID, {"damping": 0.0, "friction": 0.0, "velocity": waterVelocity});
     }
     
     function updateSky() {
-        if (zoneID != Uuid.NULL){
+        if (zoneID != Uuid.NONE){
             var myAvPos = MyAvatar.position;
             
             var DAY_DURATION = 68400;
@@ -332,7 +333,7 @@
                 },
                 "ambientLight": {
                     "ambientIntensity": 0.4,
-                    "ambientURL": "http://metaverse.bashora.com/sun_island/skies/day.ktx"
+                    "ambientURL": ROOT + "skies/day.ktx"
                 },
                 "skybox": {
                     "color": {
@@ -340,7 +341,7 @@
                         "green": 255,
                         "blue": 255
                     },
-                    "url": "http://metaverse.bashora.com/sun_island/skies/day.ktx"
+                    "url": ROOT + "skies/day.ktx"
                 },
                 "bloom": {
                     "bloomIntensity": 0.5009999871253967,
@@ -366,8 +367,7 @@
                 "bloomMode": "enabled"
             };            
 
-            var test = Entities.editEntity(zoneID, propertiesToChanges);            
-
+            var test = Entities.editEntity(zoneID, propertiesToChanges);
 
         }
     } 
@@ -459,5 +459,5 @@
             && targetPosition.y >= minY && targetPosition.y <= maxY
             && targetPosition.z >= minZ && targetPosition.z <= maxZ);
     }
-    
+
 })
