@@ -155,7 +155,8 @@
         
         //Buildings
         var nbrBuidling = Math.floor(Math.random() * 17) + 3;
-        for (i=0; i < nbrBuidling; i++) {
+        var i;
+        for (i = 0; i < nbrBuidling; i++) {
             
             var buildingRotation = Quat.fromVec3Radians( {"x": 0.0, "y": (Math.random() * 2 * Math.PI), "z": 0.0} );
             
