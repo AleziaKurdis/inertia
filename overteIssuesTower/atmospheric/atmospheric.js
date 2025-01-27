@@ -167,7 +167,7 @@
             
             var buildingId = Entities.addEntity({
                     "type": "Model",
-                    "locked": true,
+                    "locked": false,
                     "name": "BUIDING-" + i,
                     "dimensions": {
                         "x": 328.3628845214844,
