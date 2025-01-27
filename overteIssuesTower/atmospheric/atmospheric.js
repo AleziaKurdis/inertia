@@ -196,7 +196,7 @@
         
         
         var i;
-        for (i = 0 i < toDelete.length; i++) {
+        for (i = 0; i < toDelete.length; i++) {
             Entities.deleteEntity(toDelete[i]);
         }
         toDelete = [];
