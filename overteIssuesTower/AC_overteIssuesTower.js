@@ -16,7 +16,7 @@ var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
 
 var positionZero = { "x": -8000, "y": -8000, "z": -8000}; //<=== SET THE POSITION IN YOUR DOMAIN
 
-var REFRESH_INTERVAL = 3600; //60 minutes in sec.
+var REFRESH_INTERVAL = 7200; //120 minutes in sec.
 var updateTimerInterval = REFRESH_INTERVAL * 1000; //60 minutes in millisec
 var processTimer = 0;
 
@@ -439,13 +439,13 @@ function myTimer(deltaTime) {
             coy = coy - STEP_HEIGHT;
             
             if (eventToSet !== "") {
-                var deadEndId = Entities.addEntity({
+                var sectionGateId = Entities.addEntity({
                     "type": "Model",
                     "name": "SECTION " + eventToSet,
                     "parentID": portalId,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "locked": false,
-                    "dimensions": {"x":1.619999647140503,"y":4.784629821777344,"z":0.09999990463256836},
+                    "dimensions": {"x":5.299069404602051,"y":6.1590986251831055,"z":0.25771236419677734},
                     "grab": {
                         "grabbable": false
                     },
