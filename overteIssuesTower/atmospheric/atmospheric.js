@@ -79,7 +79,7 @@
         var skyZoneId = Entities.addEntity({
             "type": "Zone",
             "name": "SKY",
-            "locked": true,
+            "locked": false,
             "dimensions": {
                 "x": 10000,
                 "y": 2000,
@@ -181,7 +181,8 @@
                     "modelURL": atmosBuildingdModelUrl,
                     "position": buildingPosition,
                     "rotation": buildingRotation,
-                    "useOriginalPivot": true
+                    "useOriginalPivot": true,
+                    "renderWithZones": [thisEntity]
                 }, "local");
             toDelete.push(buildingId);
             
