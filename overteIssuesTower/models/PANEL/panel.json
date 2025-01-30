@@ -1,0 +1,9 @@
+{"materials":[{
+    "albedo": [1, 1, 1],
+    "albedoMap": "panel_albedo.jpg",
+    "roughnessMap": "panel_roughness.jpg", 
+    "metallicMap": "panel_metallic.jpg",
+    "cullFaceMode": "CULL_NONE", 
+    "model": "hifi_pbr",
+    "defaultFallthrough": false
+}]}
