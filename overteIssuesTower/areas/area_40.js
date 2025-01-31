@@ -4,9 +4,9 @@
 //
 //  Created by Alezia Kurdis, June 17th, 2021.
 //  Copyright 2021 Vircadia and contributors.
-//  Copyright 2024 Overte e.V.
+//  Copyright 2025 Overte e.V.
 //
-//  Add customized content to a specific area of the 3D Goto (hecate) application.
+//  Add customized content to a specific area of the Overte Issues Tower.
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
@@ -29,7 +29,7 @@
         //Generate a Visibility Zone.
         var visibilityZoneId = Entities.addEntity({
             "name": "VISIBILITY_ZONE_AREA_" + AREA_NO,
-            "locked": true,
+            "locked": false,
             "parentID": entityID,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
             "localRotation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0},
@@ -44,7 +44,7 @@
             "skyboxMode": "inherit",
             "hazeMode": "inherit",
             "bloomMode": "inherit"
-        },"domain");
+        },"local");
         
         
         /*###### HERE IS WHERE YOU ADD YOUR CONTENT ############ 
@@ -59,14 +59,13 @@
             "localRotation": 
         Using local values will ensure a correct rendering in every cases.
         
-        Also, we must create "domain" entities. 
-        It will be simpler as we don't have to ensure the deletion.
+        Also, we must create "local" entities. Not locked.
         ###################### CONTENT #####################################*/
         
         var id = Entities.addEntity({
             "parentID": entityID,
             "renderWithZones": [visibilityZoneId],
-            "locked": true,            
+            "locked": false,            
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
             "localRotation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0},
             "name": "Area 40 - shop",
@@ -82,7 +81,7 @@
             "shapeType": "static-mesh",
             "modelURL": CONTENT_BASE_PATH + "structure_area_40.fbx",
             "useOriginalPivot": true
-        },"domain");
+        },"local");
         
 
         //################### END CONTENT ###################################*/
