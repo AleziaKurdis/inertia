@@ -30,7 +30,7 @@ var forFastDeletion = [];
 var STEP_HEIGHT = 0.2;
 var PARK_INTERVAL = 19;
 
-var LIMIT_BLUE_30DAYS = 3600 * 24 * 30 * 1000;
+var LIMIT_BLUE_90DAYS = 3600 * 24 * 90 * 1000;
 var LIMIT_ORANGE_1YEAR = 3600 * 24 * 365 * 1000;
 var LIMIT_GOLD_2YEARS = 3600 * 24 * 365 * 2 * 1000;
 var LIMIT_SILVER_3YEARS = 3600 * 24 * 365 * 3 * 1000;
@@ -206,7 +206,7 @@ function myTimer(deltaTime) {
 
             hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
             var eventToSet = "";
-            if (curTime - tilesData[i].updateDate < LIMIT_BLUE_30DAYS) {
+            if (curTime - tilesData[i].updateDate < LIMIT_BLUE_90DAYS) {
                 hecatePortalModelUrl = ROOT + "models/TILE_BLUE.fst";
                 currentYears = 0;
             } else if (curTime - tilesData[i].updateDate < LIMIT_ORANGE_1YEAR) {
@@ -431,6 +431,38 @@ function myTimer(deltaTime) {
                     },"domain");
                     EntityViewer.queryOctree();
                 }
+            } else {
+                var issueCategoryNOTAGId = Entities.addEntity({
+                    "type": "Shape",
+                    "shape": "Cube",
+                    "parentID": portalId,
+                    "locked": false,
+                    "name": "PORTAL_NO_CATEGORY - " + tilesData[i].number,
+                    "dimensions": {
+                        "x": 2.4119091033935547,
+                        "y": 0.35,
+                        "z": 0.009999999776482582
+                    },
+                    "localRotation": {
+                        "x": 0,
+                        "y": 0.7071067690849304,
+                        "z": 0,
+                        "w": 0.7071067690849304
+                    },
+                    "localPosition": {
+                        "x": 1.28,
+                        "y": 0.5425,
+                        "z": 0
+                    },
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "alpha": 0.7,
+                    "color": {"red": 0, "green": 0, "blue": 0},
+                    "unlit": true,
+                    "renderWithZones": subRenderWithZones
+                },"domain");
+                EntityViewer.queryOctree();
             }
             // END CATEGORIES
 
@@ -445,7 +477,7 @@ function myTimer(deltaTime) {
                     "parentID": portalId,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "locked": false,
-                    "dimensions": {"x":5.299069404602051,"y":6.1590986251831055,"z":0.25771236419677734},
+                    "dimensions": {"x":5.299069404602051,"y":5.224411487579346,"z":0.25771236419677734},
                     "grab": {
                         "grabbable": false
                     },
