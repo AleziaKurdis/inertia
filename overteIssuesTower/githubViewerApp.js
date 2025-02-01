@@ -14,8 +14,8 @@
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
         
     var APP_NAME = "GITHUB";
-    var APP_ICON_INACTIVE = ROOT + "icons/icon_template_inactive.png";
-    var APP_ICON_ACTIVE = ROOT + "icons/icon_template_active.png";
+    var APP_ICON_INACTIVE = ROOT + "icons/icon_inactive.png";
+    var APP_ICON_ACTIVE = ROOT + "icons/icon_active.png";
     var appStatus = false;
     var ICON_CAPTION_COLOR = "#ffae00";
     
@@ -58,9 +58,27 @@
     }
 
     function updateIssueWindow() {
-        //currentBugNo
         var entityIDs = Entities.findEntitiesByType("Model", MyAvatar.position, 5);
-        print("Number of Model entities within 5m: " + entityIDs.length);
+        var i, prop, dist;
+        var lowestDist = 1000;
+        var issueNumber = -1;
+        for (i = 0; i < entityIDs.length; i++) {
+            prop = Entities.getEntityProperties(entityIDs[i], ["position", "name"]);
+            if (prop.name.indexOf("ISSUE - ") === 0) {
+                dist = Vec3.distance(MyAvatar.position, prop.position);
+                if (dist < lowestDist) {
+                    lowestDist = dist;
+                    issueNumber = parseInt(prop.name.substr(8), 10);
+                }
+            } 
+        }
+        if (currentBugNo !== issueNumber) {
+            if (issueNumber > 0) {
+                //update window with new bug no
+                print("OBSERVERD ISSUE: " + issueNumber); //############################# DEBUG
+                currentBugNo = issueNumber;
+            }
+        }
     }
 
     function myTimer(deltaTime) {
