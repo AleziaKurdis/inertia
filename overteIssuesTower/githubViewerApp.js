@@ -13,7 +13,7 @@
     var jsMainFileName = "githubViewerApp.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
         
-    var APP_NAME = "GITHUB";
+    var APP_NAME = "OPENER";
     var APP_ICON_INACTIVE = ROOT + "icons/icon_inactive.png";
     var APP_ICON_ACTIVE = ROOT + "icons/icon_active.png";
     var appStatus = false;
@@ -24,7 +24,6 @@
     var thisPosition;
     var thisEntityID;
     var currentBugNo = -1;
-    var viewer;
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
@@ -50,16 +49,10 @@
 
     function showIssueWindow() {
         Script.update.connect(myTimer);
-        viewer = new OverlayWebWindow({
-            title: "OVERTE ISSUE",
-            source: "",
-            width: 1000,
-            height: 600
-        });
+        updateIssueWindow();
     }
 
     function removeIssueWindow() {
-        viewer.close();
         Script.update.disconnect(myTimer);
     }
 
@@ -82,7 +75,6 @@
             if (issueNumber > 0) {
                 var url = "https://github.com/overte-org/overte/issues/" + issueNumber;
                 Window.openUrl(url);
-                //viewer.setURL(url);
                 currentBugNo = issueNumber;
             }
         }
