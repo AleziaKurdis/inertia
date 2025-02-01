@@ -16,8 +16,8 @@ var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
 
 var positionZero = { "x": -8000, "y": -8000, "z": -8000}; //<=== SET THE POSITION IN YOUR DOMAIN
 
-var REFRESH_INTERVAL = 7200; //120 minutes in sec.
-var updateTimerInterval = REFRESH_INTERVAL * 1000; //60 minutes in millisec
+var REFRESH_INTERVAL = 14400; //4h in sec.
+var updateTimerInterval = REFRESH_INTERVAL * 1000; // in millisec
 var processTimer = 0;
 
 const owner = "overte-org";
