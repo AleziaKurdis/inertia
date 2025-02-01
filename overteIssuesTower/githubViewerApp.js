@@ -24,6 +24,7 @@
     var thisPosition;
     var thisEntityID;
     var currentBugNo = -1;
+    var viewer;
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
 
@@ -49,11 +50,16 @@
 
     function showIssueWindow() {
         Script.update.connect(myTimer);
-        //DrawWindow
+        viewer = new OverlayWebWindow({
+            title: "OVERTE ISSUE",
+            source: "",
+            width: 1000,
+            height: 600
+        });
     }
 
     function removeIssueWindow() {
-        //Clear here
+        viewer.close();
         Script.update.disconnect(myTimer);
     }
 
@@ -74,8 +80,8 @@
         }
         if (currentBugNo !== issueNumber) {
             if (issueNumber > 0) {
-                //update window with new bug no
-                print("OBSERVERD ISSUE: " + issueNumber); //############################# DEBUG
+                var url = "https://github.com/overte-org/overte/issues/" + issueNumber;
+                viewer.setURL(url);
                 currentBugNo = issueNumber;
             }
         }
