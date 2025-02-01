@@ -81,7 +81,8 @@
         if (currentBugNo !== issueNumber) {
             if (issueNumber > 0) {
                 var url = "https://github.com/overte-org/overte/issues/" + issueNumber;
-                viewer.setURL(url);
+                Window.openUrl(url);
+                //viewer.setURL(url);
                 currentBugNo = issueNumber;
             }
         }
