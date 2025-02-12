@@ -694,6 +694,11 @@ function myTimer(deltaTime) {
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
+function setUpEntityViewer() {
+    EntityViewer.setPosition(positionZero);
+    EntityViewer.setCenterRadius(8000);
+    EntityViewer.queryOctree();
+}
 
 // ################## CYLCE AND TIME FUNCTIONS ###########################
 function GetCurrentCycleValue(cyclelength, cycleduration){
@@ -707,6 +712,7 @@ function GetCurrentCycleValue(cyclelength, cycleduration){
 // ################## END CYLCE AND TIME FUNCTIONS ###########################
 
 Script.update.connect(myTimer);
+setUpEntityViewer();
 
 Script.scriptEnding.connect(function () {
     var i;
