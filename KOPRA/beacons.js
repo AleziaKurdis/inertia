@@ -30,8 +30,8 @@
     
     
     for (i = 0; i < areas.length; i++) {
-        areas[i].id = Uuid.NULL;
-        areas[i].beaconTextID = Uuid.NULL;
+        areas[i].id = Uuid.NONE;
+        areas[i].beaconTextID = Uuid.NONE;
     }    
     //###########################################################################################################
 
@@ -77,9 +77,9 @@
         let i;
         if (areas.length !== 0) {
             for (i = 0; i < areas.length; i++) {
-                if (areas[i].id !== Uuid.NULL) {
+                if (areas[i].id !== Uuid.NONE) {
                     Entities.deleteEntity(areas[i].id);
-                    areas[i].id = Uuid.NULL;
+                    areas[i].id = Uuid.NONE;
                 }
             }
         }
@@ -130,7 +130,7 @@
                         dimFactor = 2;
                     }
                     
-                    if (areas[i].id === Uuid.NULL) {
+                    if (areas[i].id === Uuid.NONE) {
                         areas[i].id = Entities.addEntity({
                             "type": "Gizmo",
                             "gizmoType": "ring",

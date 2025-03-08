@@ -20,7 +20,7 @@
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
 
-    var astrolithID = Uuid.NULL;
+    var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
     
     var AIR_SOUND = ROOT + "sounds/air.mp3";
@@ -32,7 +32,7 @@
     
     var DAY_DURATION = 104400; //D29
     var storming = false;
-    var lightningsID = Uuid.NULL;
+    var lightningsID = Uuid.NONE;
     var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
     var THUNDER_SOUND_1 = ROOT + "sounds/thunder0.mp3";
     var THUNDER_SOUND_2 = ROOT + "sounds/thunder1.mp3";
@@ -41,7 +41,7 @@
     var thunderSound = []; 
     var thunderInjector;
 
-    var zoneID = Uuid.NULL;
+    var zoneID = Uuid.NONE;
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
@@ -106,21 +106,21 @@
     function shutdown() {
         if (isInitiated){            
             Script.update.disconnect(myTimer);
-            if (astrolithID != Uuid.NULL){
+            if (astrolithID != Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
-                astrolithID = Uuid.NULL;
+                astrolithID = Uuid.NONE;
             }
             if (univerSoundPlaying == 1) {
                 universeSoundInjector.stop();
                 univerSoundPlaying = 0;
             }
-            if (zoneID !== Uuid.NULL) {
+            if (zoneID !== Uuid.NONE) {
                 Entities.deleteEntity(zoneID);
-                zoneID = Uuid.NULL;
+                zoneID = Uuid.NONE;
             }
-            if (lightningsID !== Uuid.NULL) {
+            if (lightningsID !== Uuid.NONE) {
                 Entities.deleteEntity(lightningsID);
-                lightningsID = Uuid.NULL;
+                lightningsID = Uuid.NONE;
             }
         }
         isInitiated = false;
@@ -239,7 +239,7 @@
             var distanceAstrolith = 65;
             var radiusEffect = 50;//70; 
             if (myVelocity > 25){
-                if (astrolithID == Uuid.NULL){
+                if (astrolithID == Uuid.NONE){
                     astrolithID = Entities.addEntity({
                         "type": "ParticleEffect",
                         "name": "ASTROLITHES",
@@ -304,9 +304,9 @@
                         });
                 }
             }else{
-                if (astrolithID != Uuid.NULL){
+                if (astrolithID != Uuid.NONE){
                     Entities.deleteEntity(astrolithID);
-                    astrolithID = Uuid.NULL;
+                    astrolithID = Uuid.NONE;
                 }
             }
             
@@ -451,7 +451,7 @@
                 if (storming) {
                     // stop the storm
                     Entities.deleteEntity(lightningsID);
-                    lightningsID = Uuid.NULL;
+                    lightningsID = Uuid.NONE;
                     storming = false;
                 }
             }

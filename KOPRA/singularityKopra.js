@@ -17,17 +17,17 @@
     var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
     var processTimer = 0;
 
-    var starId = Uuid.NULL;
-    var blackStarId = Uuid.NULL;
-    var fireMatId = Uuid.NULL;
-    var solarZoneId = Uuid.NULL;
+    var starId = Uuid.NONE;
+    var blackStarId = Uuid.NONE;
+    var fireMatId = Uuid.NONE;
+    var solarZoneId = Uuid.NONE;
     
     var singularityGeneratorPosition;
     
     var renderWithZones;
     
-    var matId = Uuid.NULL;
-    var lightTableID = Uuid.NULL;
+    var matId = Uuid.NONE;
+    var lightTableID = Uuid.NONE;
     
     var D29_DAY_DURATION = 104400; //sec
     var D19_DAY_DURATION = 68400;//sec
@@ -142,7 +142,7 @@
     }   
 
     function moveStar() {// readd velocity
-        if (starId !== Uuid.NULL) {
+        if (starId !== Uuid.NONE) {
             var sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
             currentBlackSunPosition = sunCumputedValues.blackLocalPosition;
@@ -177,7 +177,7 @@
     }
 
     function updateStar() {
-        if (starId !== Uuid.NULL) {
+        if (starId !== Uuid.NONE) {
             
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
@@ -204,7 +204,7 @@
                 ]
             };
             
-            if (fireMatId === Uuid.NULL) {
+            if (fireMatId === Uuid.NONE) {
                 //CREATE
                 fireMatId = Entities.addEntity({
                     "type": "Material",
@@ -228,34 +228,34 @@
 
 
     this.unload = function(entityID) {
-        if (starId !== Uuid.NULL) {
+        if (starId !== Uuid.NONE) {
             Entities.deleteEntity(starId);
-            starId = Uuid.NULL;
+            starId = Uuid.NONE;
         }
-        if (blackStarId !== Uuid.NULL) {
+        if (blackStarId !== Uuid.NONE) {
             Entities.deleteEntity(blackStarId);
-            blackStarId = Uuid.NULL;
+            blackStarId = Uuid.NONE;
         }
-        if (solarZoneId !== Uuid.NULL) {
+        if (solarZoneId !== Uuid.NONE) {
             Entities.deleteEntity(solarZoneId);
-            solarZoneId = Uuid.NULL;
+            solarZoneId = Uuid.NONE;
         }
         
-        if (matId !== Uuid.NULL) {
+        if (matId !== Uuid.NONE) {
             Entities.deleteEntity(matId);
-            matId = Uuid.NULL;
+            matId = Uuid.NONE;
         }
 
-        if (lightTableID !== Uuid.NULL) {
+        if (lightTableID !== Uuid.NONE) {
             Entities.deleteEntity(lightTableID);
-            lightTableID = Uuid.NULL;
+            lightTableID = Uuid.NONE;
         }
 
 /*        var i;
         for (i = 0; i < asteroidIds.length; i++) {
-            if (asteroidIds[i] !== Uuid.NULL) {
+            if (asteroidIds[i] !== Uuid.NONE) {
                 Entities.deleteEntity(asteroidIds[i]);
-                asteroidIds[i] = Uuid.NULL;
+                asteroidIds[i] = Uuid.NONE;
             }
         }
 */        

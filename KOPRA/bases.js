@@ -68,7 +68,7 @@
         
         //texts
         let deltaX, deltaZ, alignX, alignZ;
-        let deltaY = 0.29;
+        let deltaY = 0.45;
         switch (model) {
             case "1X1":
                 deltaX = 8.01;
