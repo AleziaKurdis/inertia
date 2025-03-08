@@ -45,7 +45,7 @@
 
         currentBolides = 0;
         for (i = 0; i < MAX_NBR_ITEMS; i++) {
-            bolides[i] = Uuid.NULL;
+            bolides[i] = Uuid.NONE;
         }
 
         //cleanup old remains here
@@ -91,11 +91,11 @@
 
     function processCurrentBolide() {
         currentMaximumOfItem = getNumbrOfItemPerVisitor();
-        if (currentBolides >= currentMaximumOfItem && bolides[currentBolides] !== Uuid.NULL) {
+        if (currentBolides >= currentMaximumOfItem && bolides[currentBolides] !== Uuid.NONE) {
             Entities.deleteEntity(bolides[currentBolides]);
-            bolides[currentBolides] = Uuid.NULL;
+            bolides[currentBolides] = Uuid.NONE;
         } else {
-            if (bolides[currentBolides] !== Uuid.NULL) {
+            if (bolides[currentBolides] !== Uuid.NONE) {
                 Entities.deleteEntity(bolides[currentBolides]);
             }
             bolides[currentBolides] = createBolide(ENTITY_HOST_TYPE);
@@ -109,7 +109,7 @@
 
     function createBolide(entityHostType) {
         if (Vec3.distance(MyAvatar.position, generatorPosition) > BOLIDE_INFLUENCE_RADIUS ) {
-            return Uuid.NULL;
+            return Uuid.NONE;
         } else {
             let gravity, newBolidePosition;
             let typeOfBolides = ["dropLight", "dropLight", "dropLight", "dropLight", "electro"];
@@ -172,7 +172,8 @@
                 "collisionMask":31,
                 "collidesWith":"static,dynamic,kinematic,myAvatar,otherAvatar,",
                 "dynamic": true,
-                "collisionSoundURL": ROOT + "sounds/deepBoom.mp3" 
+                "collisionSoundURL": ROOT + "sounds/deepBoom.mp3",
+                "lifetime": 40
             }, entityHostType);
             
             let hue = Math.random();
@@ -404,9 +405,9 @@
     this.unload = function(entityID) {
         let i;
         for (i = 0; i < bolides.length; i++) {
-            if (bolides[i] !== Uuid.NULL) {
+            if (bolides[i] !== Uuid.NONE) {
                 Entities.deleteEntity(bolides[i]);
-                bolides[i] = Uuid.NULL;
+                bolides[i] = Uuid.NONE;
             }
         }
 
