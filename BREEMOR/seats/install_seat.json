@@ -1,0 +1,30 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat",
+        "userData": "{\n    \"name\": \"Pilot Seat\",\n    \"fst\": \"THRONE_BLUE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "script": "https://aleziakurdis.github.io/inertia/BREEMOR/seats/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/inertia//BREEMOR/seats/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube"
+    }
+    ],
+  "Id": "{6949198a-a886-4f7f-95f6-834e11ddd371}",
+  "Version": 133
+}
