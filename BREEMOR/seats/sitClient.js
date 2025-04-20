@@ -608,42 +608,10 @@
 
     var chairID = Uuid.NULL;
 
-    function createChair() {
-        var properties = Entities.getEntityProperties(_this.entityID, ["renderWithZones", "userData"]);
-        var renderWithZones = properties.renderWithZones;
-        var userData = JSON.parse(properties.userData);
-        
-        if (chairID === Uuid.NULL) {
-            chairID = Entities.addEntity({
-                "renderWithZones": renderWithZones,
-                "parentID": _this.entityID,
-                "type": "Model",
-                "name": userData.name,
-                "dimensions": userData.dimensions,
-                "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": -90,"z": 0.0}),
-                "localPosition": {"x": 0, "y": -0.8773, "z": -0.0519},
-                "grab": {
-                    "grabbable": false
-                },
-                "shapeType": "none",
-                "modelURL": ROOT + "../models/" + userData.fst,
-                "useOriginalPivot": true                
-            }, "local");
-        }
-    }
-
-    function deleteChair() {
-        if (chairID !== Uuid.NULL) {
-            Entities.deleteEntity(chairID);
-            chairID = Uuid.NULL;
-        }
-    }
-
     // Preload entity method
     function preload(id) {
         _this.entityID = id;
         deleteAllClickToSitOverlays();
-        createChair();
         prefetchPresitImages();
         updateUserData();
         requestSitData(_this.entityID);
@@ -657,8 +625,6 @@
 
         maybeClearRequestSitDataTimeoutTimer();
         maybeClearRequestSitDataTimer();
-        
-        deleteChair();
         
         deleteAllClickToSitOverlays();
         deletePresit();

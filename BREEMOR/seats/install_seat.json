@@ -5,7 +5,7 @@
         "type": "Box",
         "visible": false,
         "name": "Seat",
-        "userData": "{\n    \"name\": \"Pilot Seat\",\n    \"fst\": \"THRONE_BLUE.fst\",\n    \"dimensions\": {\n        \"x\": 0.6091,\n        \"y\": 1.7579,\n        \"z\": 0.6289\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "userData": "{\"canClickOnModelToSit\": false\n}",
         "dimensions": {
             "x": 0.3499999940395355,
             "y": 0.004999999888241291,
