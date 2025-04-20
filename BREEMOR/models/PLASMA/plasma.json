@@ -1,0 +1,8 @@
+{"materials":[{
+    "albedo": [ 1, 1, 1],
+    "metallic": 0.008,
+    "roughness": 0.5,
+    "emissive": [0.7922352941176471, 1.937764705882353, 2.73],
+    "cullFaceMode": "CULL_BACK",
+    "defaultFallthrough": false
+}]}
