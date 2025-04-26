@@ -3,10 +3,9 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[1,1,1],
-         "albedoMap": "RUBBER_FLOOR_albedo.jpg",
-         "metallicMap": "RUBBER_FLOOR_metallic.jpg",
-         "roughnessMap": "RUBBER_FLOOR_roughness.jpg",
+         "albedo":[0.007,0.007,0.007],
+         "metallic": 0.01,
+         "roughness": 0.5,
          "normalMap": "RUBBER_FLOOR_normal.jpg",
          "cullFaceMode":"CULL_BACK"
       }
