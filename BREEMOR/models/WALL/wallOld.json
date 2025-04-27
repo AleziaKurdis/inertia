@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "wall_old_albedo.jpg",
+         "metallicMap": "wall_old_metallic.jpg",
+         "roughnessMap": "wall_old_roughness.jpg",
+         "normalMap": "wall_old_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
