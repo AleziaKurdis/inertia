@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "BASE_albedo.jpg",
+         "metallic": 0.01,
+         "roughnessMap": "BASE_roughness.jpg",
+         "normalMap": "HULL_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
