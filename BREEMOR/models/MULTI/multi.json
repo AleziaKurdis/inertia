@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "MULTI_albedo.jpg",
+         "metallicMap": "MULTI_metallic.jpg",
+         "roughnessMap": "MULTI_roughness.jpg",
+         "normalMap": "MULTI_normal.jpg",
+         "emissiveMap": "MULTI_emissive.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
