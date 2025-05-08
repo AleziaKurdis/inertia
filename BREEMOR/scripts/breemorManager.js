@@ -29,7 +29,7 @@
                 "type": "Light",
                 "name": "Breemor Light " + lightDefinition[i].name,
                 "dimensions": lightDefinition[i].dimensions,
-                "rotation": Quat.fromVec3Degrees { "x": -90, "y": 0, "z": 0}),
+                "rotation": Quat.fromVec3Degrees({ "x": -90, "y": 0, "z": 0}),
                 "localPosition": lightDefinition[i].localPosition,
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
