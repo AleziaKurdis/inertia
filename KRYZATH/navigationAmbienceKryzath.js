@@ -189,7 +189,12 @@
             },
             "ambientLight": {
                 "ambientIntensity": 0.5,
-                "ambientURL": skyTextureUrl
+                "ambientURL": skyTextureUrl,
+                "ambientColor": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                }
             },
             "skybox": {
                 "color": {
@@ -207,6 +212,7 @@
             "skyboxMode": "enabled",
             "hazeMode": "disabled",
             "bloomMode": "enabled",
+            "ambientOcclusionMode": "enabled",
             "angularDamping": 0,
             "angularVelocity": {
                 "x":0,
