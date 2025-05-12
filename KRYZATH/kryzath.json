@@ -56,6 +56,34 @@
         },
         "collisionless": true,
         "script": "https://aleziakurdis.github.io/inertia/KRYZATH/singularityKryzath.js"
+    },
+    {
+        "id": "{8da760f3-2b53-4c89-b1ce-c8916701cdf1}",
+        "type": "Model",
+        "position": {
+            "x": 4000.0,
+            "y": 4000.0,
+            "z": 4000.0
+        },
+        "name": "BREEMOR",
+        "locked": true,
+        "dimensions": {
+            "x": 58.304840087890625,
+            "y": 37.439666748046875,
+            "z": 133.204833984375
+        },
+        "renderWithZones": [
+            "{bb708919-7d4f-43e0-93c3-39cbcb84291b}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "damping": 0,
+        "angularDamping": 0,
+        "script": "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/breemorManager.js",
+        "shapeType": "static-mesh",
+        "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/BREEMOR.fst",
+        "useOriginalPivot": true
     }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
