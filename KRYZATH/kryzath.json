@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/4016.94,3982.18,3980.38\/0,0.724424,0,0.689354"
+      "\/":"\/4001.01,3991.53,4038.68\/0,0.00124034,0,0.999999"
    },
    "Entities":[
     {
@@ -42,7 +42,7 @@
         },
         "name": "Kryzath-Singularity",
         "locked": true,
-        "visibile": false,
+        "visible": false,
         "dimensions": {
             "x": 5,
             "y": 5,
