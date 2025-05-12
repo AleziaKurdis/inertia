@@ -42,7 +42,7 @@
         },
         "name": "Kryzath-Singularity",
         "locked": true,
-        "visibility": false,
+        "visibile": false,
         "dimensions": {
             "x": 5,
             "y": 5,
