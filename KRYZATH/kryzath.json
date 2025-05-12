@@ -1,0 +1,63 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/4016.94,3982.18,3980.38\/0,0.724424,0,0.689354"
+   },
+   "Entities":[
+    {
+        "id":"{bb708919-7d4f-43e0-93c3-39cbcb84291b}",
+        "type":"Zone",
+        "name":"KRYZATH_VISIBILITY_ZONE",
+        "locked":true,
+        "dimensions":{
+            "x":4000,
+            "y":4000,
+            "z":4000
+        },
+        "position": {
+             "x": 4000,
+             "y": 4000,
+             "z": 4000
+        },         
+        "rotation":{
+            "x":-1.52587890625e-5,
+            "y":-1.52587890625e-5,
+            "z":-1.52587890625e-5,
+            "w":1
+        },
+        "grab":{
+            "grabbable":false
+        },
+        "shapeType":"sphere",
+        "script": "https://aleziakurdis.github.io/inertia/KRYZATH/navigationAmbienceKryzath.js"
+    },
+    {
+        "id": "{db5e7ce5-2088-4c40-a2e6-6103d6ba54cd}",
+        "type": "Shape",
+        "shape": "Cube",
+        "position": {
+            "x": 4000,
+            "y": 4000,
+            "z": 4000
+        },
+        "name": "Kryzath-Singularity",
+        "locked": true,
+        "visibility": false,
+        "dimensions": {
+            "x": 5,
+            "y": 5,
+            "z": 5
+        },
+        "renderWithZones": [
+            "{bb708919-7d4f-43e0-93c3-39cbcb84291b}"
+        ],
+        "grab": {
+            "grabbable": false
+        },
+        "collisionless": true,
+        "script": "https://aleziakurdis.github.io/inertia/KRYZATH/singularityKryzath.js"
+    }
+   ],
+   "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
+   "Version":120
+}
