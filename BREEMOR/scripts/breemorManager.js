@@ -57,7 +57,9 @@
             {"name": "COCKPIT", "dimensions": {"x":5.715744495391846,"y":5.715744495391846,"z":8.083283424377441}, "localPosition": {"x": 0.8877, "y": 19.9729, "z": -12.4661}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.0, "cutoff": 45},
             {"name": "DETENTION 1", "dimensions": {"x":6.192154407501221,"y":6.192154407501221,"z":8.083283424377441}, "localPosition": {"x": 4.0627, "y": 0.2139, "z": -35.1631}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.0, "cutoff": 50},
             {"name": "DETENTION 2", "dimensions": {"x":6.192154407501221,"y":6.192154407501221,"z":8.083283424377441}, "localPosition": {"x": 4.0627, "y": 0.2139, "z": -37.7778}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.0, "cutoff": 50},
-            {"name": "DETENTION 3", "dimensions": {"x":13.804311752319336,"y":13.804311752319336,"z":13.804311752319336}, "localPosition": {"x": -2.5791, "y": 0.2644, "z": -38.8616}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 90}
+            {"name": "DETENTION 3", "dimensions": {"x":13.804311752319336,"y":13.804311752319336,"z":13.804311752319336}, "localPosition": {"x": -2.5791, "y": 0.2644, "z": -38.8616}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 90},
+            {"name": "MAIN AIRLOCK B", "dimensions": {"x":8.035924911499023,"y":8.035924911499023,"z":9.279086112976074}, "localPosition": {"x": 26.9019, "y": 0.6895, "z": -30.3335}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 60},
+            {"name": "MAIN AIRLOCK A", "dimensions": {"x":8.035924911499023,"y":8.035924911499023,"z":9.279086112976074}, "localPosition": {"x": -26.9019, "y": 0.6895, "z": -30.3335}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 60}
         ];
         var i, id;
         for (i=0; i < lightDefinition.length; i++) {
