@@ -13,6 +13,13 @@
     var ROOT = Script.resolvePath('').split("breemorManager.js")[0];
     var renderWithZones = [];
     var entitiesToDelete = [];
+    
+    var cargoDoorClosedID = Uuid.NONE;
+    var cargoDoorOpenID = Uuid.NONE;
+    var cargoZoneID = Uuid.NONE;
+    
+    var channelName = "org.overte.ak.breemor";
+
     this.preload = function(entityID) {
         renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         
@@ -87,8 +94,89 @@
             
             entitiesToDelete.push(id);
         }
+        
+        cargoDoorClosedID = Entities.addEntity({
+            "type": "Model",
+            "name": "Breemor - Cargo Door Closed",
+            "dimensions": {"x":8.380768775939941,"y":5.189289093017578,"z":3.0092849731445312},
+            "localPosition": {"x":0.0,"y":0.0,"z":0.0},
+            "parentID": entityID,
+            "visible": false,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "modelURL": ROOT + "../models/CARGO_GATE/CargoGate_Closed.fst",
+            "useOriginalPivot": true,
+            "lifetime": 25200
+        }, "local");
+        
+        cargoDoorOpenID = Entities.addEntity({
+            "type": "Model",
+            "name": "Breemor - Cargo Door Open",
+            "dimensions": {"x":8.380768775939941,"y":2.368936538696289,"z":1.5760574340820312},
+            "localPosition": {"x":0.0,"y":0.0,"z":0.0},
+            "parentID": entityID,
+            "visible": false,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "modelURL": ROOT + "../models/CARGO_GATE/CargoGate_Open.fst",
+            "useOriginalPivot": true,
+            "lifetime": 25200
+        }, "local");
+        
+        cargoZoneID = Entities.addEntity({
+            "type": "Zone",
+            "name": "Breemor - Cargo Zone",
+            "parentID": entityID,
+            "visible": false,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "ambientLight": {
+                "ambientIntensity": 0.07999999821186066,
+                "ambientColor": {
+                    "red": 54,
+                    "green": 43,
+                    "blue": 35
+                }
+            },
+            "ambientLightMode": "enabled",
+            "ambientOcclusionMode": "enabled",
+            "localPosition": {"x":0.0,"y":0.9590,"z":62.7764},
+            "dimensions": {"x":16.76904296875,"y":10.4931640625,"z":27.99267578125},
+            "lifetime": 25200
+        }, "local");
+        
+        closeCargoDoor();
     };
-
+    
+    function openCargoDoor() {
+        //sound here
+        Entities.editEntity(cargoDoorClosedID, {"visible": false});
+        Entities.editEntity(cargoDoorOpenID, {"visible": true});
+        Entities.editEntity(cargoZoneID, {"visible": false});
+    }
+    
+    function closeCargoDoor() {
+        //sound here
+        Entities.editEntity(cargoDoorClosedID, {"visible": true});
+        Entities.editEntity(cargoDoorOpenID, {"visible": false});
+        Entities.editEntity(cargoZoneID, {"visible": true});
+    }
+    
     this.unload = function(entityID) {
         var i;
         for (i=0; i < entitiesToDelete.length; i++) {
@@ -96,6 +184,37 @@
             
         }
         entitiesToDelete = [];
-    };    
+        
+        if (cargoDoorClosedID !== Uuid.NONE) {
+            Entities.deleteEntity(cargoDoorClosedID);
+            cargoDoorClosedID = Uuid.NONE;
+        }
+        if (cargoDoorOpenID !== Uuid.NONE) {
+            Entities.deleteEntity(cargoDoorOpenID);
+            cargoDoorOpenID = Uuid.NONE;
+        }
+        if (cargoZoneID !== Uuid.NONE) {
+            Entities.deleteEntity(cargoZoneID);
+            cargoZoneID = Uuid.NONE;
+        }
+    };
+
+    function onMessageReceived(channel, message, sender, localOnly) {
+        if (channel === channelName) {
+            if ( message === "CLOSE_CARGO_DOOR") {
+                closeCargoDoor();
+            } else if (message === "OPEN_CARGO_DOOR") {
+                openCargoDoor();
+            }
+        }
+    }
+
+    Messages.subscribe(channelName);
+    Messages.messageReceived.connect(onMessageReceived);
+
+    Script.scriptEnding.connect(function () {
+        Messages.messageReceived.disconnect(onMessageReceived);
+        Messages.unsubscribe(channelName);
+    });
 
 })
