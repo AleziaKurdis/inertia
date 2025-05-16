@@ -20,8 +20,16 @@
     
     var channelName = "org.overte.ak.breemor";
 
+    var CARGO_DOOR_SOUND = ROOT + "../sounds/door.mp3";
+    var CARGO_DOOR_LOCAL_POSITION = {"x":0.0,"y":-1.8169,"z":77.3286};
+    var cargoDoorSound;
+    var cargoDoorPosition;
+    
     this.preload = function(entityID) {
-        renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
+        cargoDoorSound = SoundCache.getSound(CARGO_DOOR_SOUND);
+        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
+        renderWithZones = properties.renderWithZones;
+        cargoDoorPosition = Vec3.sum(properties.position, CARGO_DOOR_LOCAL_POSITION);
         
         //Ship Lights
         var lightDefinition = [
@@ -160,18 +168,49 @@
             "lifetime": 25200
         }, "local");
         
+        //trigger for the Cargo door
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "name": "Breemor - Cargo Door Trigger",
+            "dimensions": {"x":8.5467529296875,"y":5.557983875274658,"z":4.746460437774658},
+            "localPosition": CARGO_DOOR_LOCAL_POSITION,
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "visible": false,
+            "script": ROOT + "cargoBayFrontDoorTrigger.js",
+            "lifetime": 25200
+        }, "local");
+        
+        entitiesToDelete.push(id);
+        
+        
         closeCargoDoor();
     };
     
+    function playPunctualSound(sound, position) {
+        var injectorOptions = {
+            "position": position,
+            "volume": 1.0,
+            "loop": false,
+            "localOnly": false
+        };
+        var injector = Audio.playSound(sound, injectorOptions);
+    }
+    
     function openCargoDoor() {
-        //sound here
+        playPunctualSound(cargoDoorSound, cargoDoorPosition);
         Entities.editEntity(cargoDoorClosedID, {"visible": false});
         Entities.editEntity(cargoDoorOpenID, {"visible": true});
         Entities.editEntity(cargoZoneID, {"visible": false});
     }
     
     function closeCargoDoor() {
-        //sound here
+        playPunctualSound(cargoDoorSound, cargoDoorPosition);
         Entities.editEntity(cargoDoorClosedID, {"visible": true});
         Entities.editEntity(cargoDoorOpenID, {"visible": false});
         Entities.editEntity(cargoZoneID, {"visible": true});
