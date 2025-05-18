@@ -239,7 +239,7 @@
                 "localPosition": genericDoors[t].localPosition,
                 "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
                 "parentID": entityID,
-                "visible": false,
+                "visible": true,
                 "renderWithZones": renderWithZones,
                 "grab": {
                     "grabbable": false
@@ -270,7 +270,7 @@
                 "type": "Shape",
                 "shape": "Cube",
                 "name": "Breemor - Generic Door " + t + " Trigger",
-                "dimensions": {"x":genericDoors[t].dimensions.x,"y":genericDoors[t].dimensions.y,"z":genericDoors[t].dimensions.z * 7},
+                "dimensions": {"x":genericDoors[t].dimensions.x,"y":genericDoors[t].dimensions.y,"z":genericDoors[t].dimensions.z * 13},
                 "localPosition": genericDoors[t].localPosition,
                 "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
                 "parentID": entityID,
