@@ -13,6 +13,7 @@
     var ROOT = Script.resolvePath('').split("breemorManager.js")[0];
     var renderWithZones = [];
     var entitiesToDelete = [];
+    var entityPosition;
     
     var cargoDoorClosedID = Uuid.NONE;
     var cargoDoorOpenID = Uuid.NONE;
@@ -25,11 +26,48 @@
     var cargoDoorSound;
     var cargoDoorPosition;
     
+    var genericDoorSound;
+    var GENERIC_DOOR_SOUND = ROOT + "../sounds/smallDoor.mp3";
+    var genericDoors = [
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_darkS100-LB.fst",
+            "dimensions": {"x":3.882308006286621,"y":3.435433864593506,"z":0.23986530303955078},
+            "localPosition": {"x": 8.8406,"y": -6.8015,"z": -12.2112},
+            "localYrotation": 0.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_darkS100-LB.fst",
+            "dimensions": {"x":3.882308006286621,"y":3.435433864593506,"z":0.23986530303955078},
+            "localPosition": {"x": -8.8406,"y": -6.8015,"z": -12.2112},
+            "localYrotation": 0.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkCB-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_darkCB-LB.fst",
+            "dimensions": {"x":3.457259178161621,"y":3.542611598968506,"z":0.23986530303955078},
+            "localPosition": {"x": 0.0,"y": -2.3401,"z": 48.7202},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        }
+    ];
+    
     this.preload = function(entityID) {
         cargoDoorSound = SoundCache.getSound(CARGO_DOOR_SOUND);
+        genericDoorSound = SoundCache.getSound(GENERIC_DOOR_SOUND);
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = properties.renderWithZones;
-        cargoDoorPosition = Vec3.sum(properties.position, CARGO_DOOR_LOCAL_POSITION);
+        entityPosition = properties.position;
+        cargoDoorPosition = Vec3.sum(entityPosition, CARGO_DOOR_LOCAL_POSITION);
         
         //Ship Lights
         var lightDefinition = [
@@ -190,6 +228,63 @@
         
         
         closeCargoDoor();
+        
+        var t;
+        
+        for (t = 0; t < genericDoors.length; t++ ) {
+            genericDoors[t].closedID = Entities.addEntity({
+                "type": "Model",
+                "name": "Breemor - Generic Door " + t + " Closed",
+                "dimensions": genericDoors[t].dimensions,
+                "localPosition": genericDoors[t].localPosition,
+                "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
+                "parentID": entityID,
+                "visible": false,
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "modelURL": genericDoors[t].closedURL,
+                "useOriginalPivot": false,
+                "lifetime": 25200
+            }, "local");
+            
+            genericDoors[t].openID = Entities.addEntity({
+                "type": "Model",
+                "name": "Breemor - Generic Door " + t + " Open",
+                "dimensions": genericDoors[t].dimensions,
+                "localPosition": genericDoors[t].localPosition,
+                "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
+                "parentID": entityID,
+                "visible": false,
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "modelURL": genericDoors[t].openURL,
+                "useOriginalPivot": false,
+                "lifetime": 25200
+            }, "local");
+ 
+            genericDoors[t].triggerID = Entities.addEntity({
+                "type": "Shape",
+                "shape": "Cube",
+                "name": "Breemor - Generic Door " + t + " Trigger",
+                "dimensions": {"x":genericDoors[t].dimensions.x,"y":genericDoors[t].dimensions.y,"z":genericDoors[t].dimensions.z * 7},
+                "localPosition": genericDoors[t].localPosition,
+                "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
+                "parentID": entityID,
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "collisionless": true,
+                "visible": false,
+                "script": ROOT + "genericDoorDoorTrigger.js",
+                "description": "" + t,
+                "lifetime": 25200
+            }, "local");
+        }
     };
     
     function playPunctualSound(sound, position) {
@@ -236,17 +331,46 @@
             Entities.deleteEntity(cargoZoneID);
             cargoZoneID = Uuid.NONE;
         }
+        
+        for (i=0; i < genericDoors.length; i++) {
+            Entities.deleteEntity(genericDoors[i].closedID);
+            Entities.deleteEntity(genericDoors[i].openID);
+            Entities.deleteEntity(genericDoors[i].triggerID);
+            genericDoors[i].closedID = UuiD.NONE;
+            genericDoors[i].openID = UuiD.NONE;
+            genericDoors[i].triggerID = UuiD.NONE;
+        }
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
+        var explosed;
         if (channel === channelName) {
             if ( message === "CLOSE_CARGO_DOOR") {
                 closeCargoDoor();
             } else if (message === "OPEN_CARGO_DOOR") {
                 openCargoDoor();
-            }
+            } else if (message.indexOf("OPEN_GENERIC_DOOR") !== -1) {
+                explosed = message.split(" ");
+                openGenericDoor(explosed[1]);
+            } else if (message.indexOf("CLOSE_GENERIC_DOOR") !== -1) {
+                explosed = message.split(" ");
+                closeGenericDoor(explosed[1]);
+            } 
         }
     }
+
+    function openGenericDoor(no) {
+        playPunctualSound(genericDoorSound, Vec3.sum(entityPosition, genericDoors[no].localPosition));
+        Entities.editEntity(genericDoors[no].closedID, {"visible": false});
+        Entities.editEntity(genericDoors[no].openID, {"visible": true});
+    }
+    
+    function closeGenericDoor(no) {
+        playPunctualSound(genericDoorSound, Vec3.sum(entityPosition, genericDoors[no].localPosition));
+        Entities.editEntity(genericDoors[no].closedID, {"visible": true});
+        Entities.editEntity(genericDoors[no].openID, {"visible": false});
+    }
+    
 
     Messages.subscribe(channelName);
     Messages.messageReceived.connect(onMessageReceived);
