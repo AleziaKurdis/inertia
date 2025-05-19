@@ -118,6 +118,16 @@
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen__INFIRMARY.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_INFIRMARY.fst",
+            "dimensions": {"x":2.485579013824463,"y":3.151254177093506,"z":0.23986530303955078},
+            "localPosition": {"x": -3.6111,"y": 11.8374,"z": -20.1250},
+            "localYrotation": -90.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
         }
     ];
     
