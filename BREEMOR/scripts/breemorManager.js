@@ -84,7 +84,7 @@
             "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_AIRLOCK_L200-GATEA.fst",
             "dimensions": {"x":3.834700584411621,"y":3.835824489593506,"z":0.1998262256383896},
             "localPosition": {"x": 25.2607,"y": -1.2063,"z": -30.3247},
-            "localYrotation": -90.0,
+            "localYrotation": 90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
@@ -94,7 +94,7 @@
             "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_AIRLOCK_L200-GATEB.fst",
             "dimensions": {"x":3.834700584411621,"y":3.835824489593506,"z":0.1998262256383896},
             "localPosition": {"x": -25.2607,"y": -1.2063,"z": -30.3247},
-            "localYrotation": 90.0,
+            "localYrotation": -90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
