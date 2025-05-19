@@ -98,6 +98,26 @@
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_JAIL.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_JAIL.fst",
+            "dimensions": {"x":3.442366600036621,"y":3.498910427093506,"z":0.2906465530395508},
+            "localPosition": {"x": 4.0962,"y": -1.3457,"z": -33.9075},
+            "localYrotation": 0.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_JAIL.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_JAIL.fst",
+            "dimensions": {"x":3.442366600036621,"y":3.498910427093506,"z":0.2906465530395508},
+            "localPosition": {"x": 4.0962,"y": -1.3457,"z": -39.0693},
+            "localYrotation": 0.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
         }
     ];
     
