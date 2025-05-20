@@ -128,6 +128,36 @@
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen__INFIRMARY.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_CAPTAIN_MESS.fst",
+            "dimensions": {"x":1.613020896911621,"y":2.591195583343506,"z":0.226193368434906},
+            "localPosition": {"x": 4.9045,"y": 11.5674,"z": -11.1523},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen__INFIRMARY.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_CAPTAIN_QUARTERS.fst",
+            "dimensions": {"x":1.613020896911621,"y":2.591195583343506,"z":0.226193368434906},
+            "localPosition": {"x": -0.7505,"y": 11.5674,"z": -11.1523},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen__INFIRMARY.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_CAPTAIN_PRIVATE.fst",
+            "dimensions": {"x":1.613020896911621,"y":2.591195583343506,"z":0.226193368434906},
+            "localPosition": {"x": 1.1514,"y": 11.5674,"z": -4.4309},
+            "localYrotation": 90.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
         }
     ];
     
