@@ -158,6 +158,46 @@
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_ELEVATOR.fst",
+            "dimensions": {"x":2.120833396911621,"y":3.123910427093506,"z":0.167111337184906},
+            "localPosition": {"x": 0.0195,"y": 11.8755,"z": -28.3110},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_ELEVATOR.fst",
+            "dimensions": {"x":2.120833396911621,"y":3.123910427093506,"z":0.167111337184906},
+            "localPosition": {"x": 0.0195,"y": 3.5962,"z": -28.3110},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_ELEVATOR.fst",
+            "dimensions": {"x":2.120833396911621,"y":3.123910427093506,"z":0.167111337184906},
+            "localPosition": {"x": 0.0195,"y": -1.5503,"z": -28.3110},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
+        },
+        {
+            "openURL": ROOT + "../models/GENERIC_DOOR/genDoorOpen_darkS100-LB.fst", 
+            "closedURL": ROOT + "../models/GENERIC_DOOR/genDoorClosed_ELEVATOR.fst",
+            "dimensions": {"x":2.120833396911621,"y":3.123910427093506,"z":0.167111337184906},
+            "localPosition": {"x": 0.0195,"y": -6.9353,"z": -28.3110},
+            "localYrotation": 180.0,
+            "closedID": Uuid.NONE,
+            "openID": Uuid.NONE,
+            "triggerID": Uuid.NONE
         }
     ];
     
