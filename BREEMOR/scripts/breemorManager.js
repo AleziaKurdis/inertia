@@ -252,8 +252,13 @@
             {"name": "DETENTION 2", "dimensions": {"x":6.192154407501221,"y":6.192154407501221,"z":8.083283424377441}, "localPosition": {"x": 4.0627, "y": 0.2139, "z": -37.7778}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.0, "cutoff": 50},
             {"name": "DETENTION 3", "dimensions": {"x":13.804311752319336,"y":13.804311752319336,"z":13.804311752319336}, "localPosition": {"x": -2.5791, "y": 0.2644, "z": -38.8616}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 90},
             {"name": "MAIN AIRLOCK B", "dimensions": {"x":8.035924911499023,"y":8.035924911499023,"z":9.279086112976074}, "localPosition": {"x": 26.9019, "y": 0.6895, "z": -30.3335}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 60},
-            {"name": "MAIN AIRLOCK A", "dimensions": {"x":8.035924911499023,"y":8.035924911499023,"z":9.279086112976074}, "localPosition": {"x": -26.9019, "y": 0.6895, "z": -30.3335}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 60}
+            {"name": "MAIN AIRLOCK A", "dimensions": {"x":8.035924911499023,"y":8.035924911499023,"z":9.279086112976074}, "localPosition": {"x": -26.9019, "y": 0.6895, "z": -30.3335}, "color": {"red": 255, "green": 202, "blue": 133}, "intensity": 9, "falloffRadius": 1.5, "cutoff": 60},
+            {"name": "ELEVATOR 200", "dimensions": {"x":9.601367950439453,"y":9.601367950439453,"z":9.74948501586914}, "localPosition": {"x": 0.0, "y": 0.1702, "z": -26.8137}, "color": {"red": 0, "green": 157, "blue": 255}, "intensity": 12, "falloffRadius": 2.5, "cutoff": 80},
+            {"name": "ELEVATOR 100", "dimensions": {"x":9.601367950439453,"y":9.601367950439453,"z":9.74948501586914}, "localPosition": {"x": 0.0, "y": -5.2385, "z": -26.8137}, "color": {"red": 0, "green": 157, "blue": 255}, "intensity": 12, "falloffRadius": 2.5, "cutoff": 80},
+            {"name": "ELEVATOR 300", "dimensions": {"x":9.601367950439453,"y":9.601367950439453,"z":9.74948501586914}, "localPosition": {"x": 0.0, "y": 5.1970, "z": -26.8137}, "color": {"red": 0, "green": 157, "blue": 255}, "intensity": 12, "falloffRadius": 2.5, "cutoff": 80},
+            {"name": "ELEVATOR 400", "dimensions": {"x":9.601367950439453,"y":9.601367950439453,"z":9.74948501586914}, "localPosition": {"x": 0.0, "y": 13.5359, "z": -26.8137}, "color": {"red": 0, "green": 157, "blue": 255}, "intensity": 12, "falloffRadius": 2.5, "cutoff": 80}
         ];
+
         var i, id;
         for (i=0; i < lightDefinition.length; i++) {
             id = Entities.addEntity({
