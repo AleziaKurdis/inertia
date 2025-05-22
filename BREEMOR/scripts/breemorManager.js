@@ -200,6 +200,25 @@
             "triggerID": Uuid.NONE
         }
     ];
+
+    var elevatorsButtons = [
+        {"id": Uuid.NONE, "name": "100 BTN 100", "localPosition": {"x": -1.1648,"y": -7.10,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100_ACTIVE.fst", "isSelected": true, "destination": 0},
+        {"id": Uuid.NONE, "name": "100 BTN 200", "localPosition": {"x": -1.1648,"y": -6.95,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": false, "destination": 200},
+        {"id": Uuid.NONE, "name": "100 BTN 300", "localPosition": {"x": -1.1648,"y": -6.8,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "100 BTN 400", "localPosition": {"x": -1.1648,"y": -6.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "200 BTN 100", "localPosition": {"x": -1.1648,"y": -1.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "200 BTN 200", "localPosition": {"x": -1.1648,"y": -1.5,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200_ACTIVE.fst", "isSelected": true, "destination": 0},
+        {"id": Uuid.NONE, "name": "200 BTN 300", "localPosition": {"x": -1.1648,"y": -1.35,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "200 BTN 400", "localPosition": {"x": -1.1648,"y": -1.2,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "300 BTN 100", "localPosition": {"x": -1.1648,"y": 3.45,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "300 BTN 200", "localPosition": {"x": -1.1648,"y": 3.6,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
+        {"id": Uuid.NONE, "name": "300 BTN 300", "localPosition": {"x": -1.1648,"y": 3.75,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300_ACTIVE.fst", "isSelected": false, "destination": 0},
+        {"id": Uuid.NONE, "name": "300 BTN 400", "localPosition": {"x": -1.1648,"y": 3.9,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "400 BTN 100", "localPosition": {"x": -1.1648,"y": 11.70,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "400 BTN 200", "localPosition": {"x": -1.1648,"y": 11.85,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
+        {"id": Uuid.NONE, "name": "400 BTN 300", "localPosition": {"x": -1.1648,"y": 12.0,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "400 BTN 400", "localPosition": {"x": -1.1648,"y": 12.15,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400_ACTIVE.fst", "isSelected": false, "destination": 0}
+    ];
     
     this.preload = function(entityID) {
         cargoDoorSound = SoundCache.getSound(CARGO_DOOR_SOUND);
@@ -430,6 +449,48 @@
                 "lifetime": 25200
             }, "local");
         }
+        var script, description;
+        for (t = 0; t < elevatorsButtons.length; t++ ) {
+            if (!elevatorsButtons[t].isSelected) {
+                script = ROOT + "localTeleporter.js";
+            } else {
+                script = "";
+            }
+            switch (elevatorsButtons[t].destination) {
+                case 0:
+                    description = "";
+                    break;
+                case 100:
+                    description = entityPosition.z -8.3;
+                    break;
+                case 200:
+                    description = entityPosition.z -3;
+                    break;
+                case 300:
+                    description = entityPosition.z + 2.2;
+                    break;
+                case 400:
+                    description = entityPosition.z + 10.4;
+                    break;
+            }
+            elevatorsButtons[t].id = Entities.addEntity({
+                "type": "Model",
+                "name": "Breemor - Elevator BTN " + elevatorsButtons[t].name,
+                "dimensions": {"x":0.084877,"y":0.084877,"z":0.0206102},
+                "localPosition": elevatorsButtons[t].localPosition,
+                "parentID": entityID,
+                "visible": true,
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "modelURL": ROOT + "../models/ELEVATOR_BTN/" + elevatorsButtons[t].modelName,
+                "useOriginalPivot": true,
+                "description": description,
+                "script": script,
+                "lifetime": 25200
+            }, "local");
+        }
     };
     
     function playPunctualSound(sound, position) {
@@ -484,6 +545,11 @@
             genericDoors[i].closedID = UuiD.NONE;
             genericDoors[i].openID = UuiD.NONE;
             genericDoors[i].triggerID = UuiD.NONE;
+        }
+        
+        for (i=0; i < elevatorsButtons.length; i++) {
+            Entities.deleteEntity(elevatorsButtons[i].id);
+            elevatorsButtons[i].id = UuiD.NONE;
         }
     };
 

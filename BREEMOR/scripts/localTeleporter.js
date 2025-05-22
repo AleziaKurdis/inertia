@@ -11,13 +11,13 @@
 //
 (function(){
     var ROOT = Script.resolvePath('').split("localTeleporter.js")[0];
-    var arrivalPosition;
+    var arrivalZposition;
     var SOUND = SoundCache.getSound(ROOT + "../sounds/elevator.mp3");
     var MAX_CLICKABLE_DISTANCE_M = 2; 
     var oneTimeOnly = false;
     
     this.preload = function(entityID) {
-        arrivalPosition = JSON.parse(Entities.getEntityProperties(entityID, ["description"]).description);
+        arrivalZposition = parseInt(Entities.getEntityProperties(entityID, ["description"]).description, 10);
     }
 
     
@@ -31,7 +31,9 @@
 
     function trigger() {
         if (oneTimeOnly === false) {
-            MyAvatar.position = arrivalPosition;
+            var newPosition = MyAvatar.position;
+            newPosition.z = arrivalZposition;
+            MyAvatar.position = newPosition;
             var injectorOptions = {
                 "position": MyAvatar.position,
                 "volume": 0.5,
