@@ -14,6 +14,7 @@
     var renderWithZones = [];
     var entitiesToDelete = [];
     var entityPosition;
+    var thisEntityID = Uuid.NONE;
     
     var cargoDoorClosedID = Uuid.NONE;
     var cargoDoorOpenID = Uuid.NONE;
@@ -226,6 +227,7 @@
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = properties.renderWithZones;
         entityPosition = properties.position;
+        thisEntityID = entityID;
         cargoDoorPosition = Vec3.sum(entityPosition, CARGO_DOOR_LOCAL_POSITION);
         
         //Ship Lights
@@ -491,6 +493,18 @@
                 "lifetime": 25200
             }, "local");
         }
+        
+        var lightBulbDefinition = [
+            {"hue": 25, "localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}},
+            {"hue": 220, "localPosition": {"x":1.4868,"y":13.7275,"z":-33.7065}},
+            {"hue": 60, "localPosition": {"x":2.6270,"y":13.7275,"z":-36.1692}},
+            {"hue": 5, "localPosition": {"x":11.1609,"y":12.8750,"z":-33.4971}},
+            {"hue": 100, "localPosition": {"x":9.6592,"y":12.8750,"z":-31.1709}},
+            {"hue": 320, "localPosition": {"x":6.3047,"y":13.1885,"z":-31.9651}}
+        ];
+        for (t = 0; t < lightBulbDefinition.length; t++ ) {
+            entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition));
+        }
     };
     
     function playPunctualSound(sound, position) {
@@ -581,7 +595,92 @@
         Entities.editEntity(genericDoors[no].closedID, {"visible": true});
         Entities.editEntity(genericDoors[no].openID, {"visible": false});
     }
-    
+
+    function generateLightBulb(hue, localPosition) {
+        var colorArray = hslToRgb(hue, 1, 0.5);
+        var color ={"red": colorArray[0], "green": colorArray[1], "blue": colorArray[2]}
+        
+        var id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Sphere",
+            "name": "Breemor - lightBulb",
+            "dimensions": {"x":0.7,"y":0.7,"z":0.7},
+            "localPosition": localPosition,
+            "parentID": thisEntityID,
+            "visible": true,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "lifetime": 25200
+        }, "local");
+
+        var lightOfBulbID = Entities.addEntity({
+            "parentID": id,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "localRotation": {
+                "x": -0.7071,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.7071
+            },
+            "name": "bulb-light",
+            "grab": {
+                "grabbable": false
+            },
+            "type": "Light",
+            "dimensions": {
+                "x": 6.0,
+                "y": 6.0,
+                "z": 6.0
+            },
+            "color": color,
+            "intensity": 12,
+            "falloffRadius": 3,
+            "isSpotlight": true,
+            "visible": true,
+            "exponent": 1,
+            "cutoff": 40
+        },"local");
+        
+        var sumColorCompnent = (color.red/255) +(color.green/255) +(color.blue/255);
+        if (sumColorCompnent === 0) { 
+            sumColorCompnent = 0.001; 
+        }
+        var bloomFactor = 9 / sumColorCompnent;
+
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                    {
+                        "name": "bulb",
+                        "albedo": [1, 1, 1],
+                        "metallic": 1,
+                        "roughness": 1,
+                        "opacity": 1,
+                        "emissive": [(color.red/255) * bloomFactor, (color.green/255) * bloomFactor, (color.blue/255) * bloomFactor],
+                        "scattering": 0,
+                        "unlit": false,
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+        
+        var materialID = Entities.addEntity({
+            "type": "Material",
+            "parentID": id,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.2, "z": 0.0},
+            "name": "bulb-material",
+            "materialURL": "materialData",
+            "priority": 2,
+            "materialData": JSON.stringify(materialContent)
+        },"local");
+        
+        return id;
+    }
 
     Messages.subscribe(channelName);
     Messages.messageReceived.connect(onMessageReceived);
@@ -590,5 +689,41 @@
         Messages.messageReceived.disconnect(onMessageReceived);
         Messages.unsubscribe(channelName);
     });
+
+    /*
+     * Converts an HSL color value to RGB. Conversion formula
+     * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+     * Assumes h, s, and l are contained in the set [0, 1] and
+     * returns r, g, and b in the set [0, 255].
+     *
+     * @param   {number}  h       The hue
+     * @param   {number}  s       The saturation
+     * @param   {number}  l       The lightness
+     * @return  {Array}           The RGB representation
+     */
+    function hslToRgb(h, s, l){
+        var r, g, b;
+
+        if(s == 0){
+            r = g = b = l; // achromatic
+        }else{
+            var hue2rgb = function hue2rgb(p, q, t){
+                if(t < 0) t += 1;
+                if(t > 1) t -= 1;
+                if(t < 1/6) return p + (q - p) * 6 * t;
+                if(t < 1/2) return q;
+                if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                return p;
+            }
+
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
 
 })
