@@ -202,22 +202,22 @@
     ];
 
     var elevatorsButtons = [
-        {"id": Uuid.NONE, "name": "100 BTN 100", "localPosition": {"x": -1.1648,"y": -7.10,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100_ACTIVE.fst", "isSelected": true, "destination": 0},
-        {"id": Uuid.NONE, "name": "100 BTN 200", "localPosition": {"x": -1.1648,"y": -6.95,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": false, "destination": 200},
-        {"id": Uuid.NONE, "name": "100 BTN 300", "localPosition": {"x": -1.1648,"y": -6.8,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
-        {"id": Uuid.NONE, "name": "100 BTN 400", "localPosition": {"x": -1.1648,"y": -6.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
-        {"id": Uuid.NONE, "name": "200 BTN 100", "localPosition": {"x": -1.1648,"y": -1.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
-        {"id": Uuid.NONE, "name": "200 BTN 200", "localPosition": {"x": -1.1648,"y": -1.5,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200_ACTIVE.fst", "isSelected": true, "destination": 0},
-        {"id": Uuid.NONE, "name": "200 BTN 300", "localPosition": {"x": -1.1648,"y": -1.35,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
-        {"id": Uuid.NONE, "name": "200 BTN 400", "localPosition": {"x": -1.1648,"y": -1.2,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
-        {"id": Uuid.NONE, "name": "300 BTN 100", "localPosition": {"x": -1.1648,"y": 3.45,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
-        {"id": Uuid.NONE, "name": "300 BTN 200", "localPosition": {"x": -1.1648,"y": 3.6,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
-        {"id": Uuid.NONE, "name": "300 BTN 300", "localPosition": {"x": -1.1648,"y": 3.75,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300_ACTIVE.fst", "isSelected": false, "destination": 0},
-        {"id": Uuid.NONE, "name": "300 BTN 400", "localPosition": {"x": -1.1648,"y": 3.9,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
-        {"id": Uuid.NONE, "name": "400 BTN 100", "localPosition": {"x": -1.1648,"y": 11.70,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
-        {"id": Uuid.NONE, "name": "400 BTN 200", "localPosition": {"x": -1.1648,"y": 11.85,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
-        {"id": Uuid.NONE, "name": "400 BTN 300", "localPosition": {"x": -1.1648,"y": 12.0,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
-        {"id": Uuid.NONE, "name": "400 BTN 400", "localPosition": {"x": -1.1648,"y": 12.15,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400_ACTIVE.fst", "isSelected": false, "destination": 0}
+        {"id": Uuid.NONE, "name": "100 BTN 100", "localPosition": {"x": -1.1755,"y": -7.15,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100_ACTIVE.fst", "isSelected": true, "destination": 0},
+        {"id": Uuid.NONE, "name": "100 BTN 200", "localPosition": {"x": -1.1755,"y": -7.0,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": false, "destination": 200},
+        {"id": Uuid.NONE, "name": "100 BTN 300", "localPosition": {"x": -1.1755,"y": -6.85,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "100 BTN 400", "localPosition": {"x": -1.1755,"y": -6.7,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "200 BTN 100", "localPosition": {"x": -1.1755,"y": -1.75,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "200 BTN 200", "localPosition": {"x": -1.1755,"y": -1.6,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200_ACTIVE.fst", "isSelected": true, "destination": 0},
+        {"id": Uuid.NONE, "name": "200 BTN 300", "localPosition": {"x": -1.1755,"y": -1.45,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "200 BTN 400", "localPosition": {"x": -1.1755,"y": -1.3,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "300 BTN 100", "localPosition": {"x": -1.1755,"y": 3.35,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "300 BTN 200", "localPosition": {"x": -1.1755,"y": 3.5,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
+        {"id": Uuid.NONE, "name": "300 BTN 300", "localPosition": {"x": -1.1755,"y": 3.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300_ACTIVE.fst", "isSelected": false, "destination": 0},
+        {"id": Uuid.NONE, "name": "300 BTN 400", "localPosition": {"x": -1.1755,"y": 3.8,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400.fst", "isSelected": false, "destination": 400},
+        {"id": Uuid.NONE, "name": "400 BTN 100", "localPosition": {"x": -1.1755,"y": 11.65,"z": -28.1975}, "modelName": "ELEVATOR_BTN_100.fst", "isSelected": false, "destination": 100},
+        {"id": Uuid.NONE, "name": "400 BTN 200", "localPosition": {"x": -1.1755,"y": 11.8,"z": -28.1975}, "modelName": "ELEVATOR_BTN_200.fst", "isSelected": true, "destination": 200},
+        {"id": Uuid.NONE, "name": "400 BTN 300", "localPosition": {"x": -1.1755,"y": 11.95,"z": -28.1975}, "modelName": "ELEVATOR_BTN_300.fst", "isSelected": false, "destination": 300},
+        {"id": Uuid.NONE, "name": "400 BTN 400", "localPosition": {"x": -1.1755,"y": 12.1,"z": -28.1975}, "modelName": "ELEVATOR_BTN_400_ACTIVE.fst", "isSelected": false, "destination": 0}
     ];
     
     this.preload = function(entityID) {
