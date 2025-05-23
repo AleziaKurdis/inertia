@@ -604,7 +604,7 @@
             "type": "Shape",
             "shape": "Sphere",
             "name": "Breemor - lightBulb",
-            "dimensions": {"x":0.7,"y":0.7,"z":0.7},
+            "dimensions": {"x":0.07,"y":0.07,"z":0.07},
             "localPosition": localPosition,
             "parentID": thisEntityID,
             "visible": true,
@@ -675,7 +675,7 @@
             "localPosition": {"x": 0.0, "y": 0.2, "z": 0.0},
             "name": "bulb-material",
             "materialURL": "materialData",
-            "priority": 2,
+            "priority": 1,
             "materialData": JSON.stringify(materialContent)
         },"local");
         
