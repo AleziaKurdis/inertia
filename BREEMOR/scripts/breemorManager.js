@@ -597,7 +597,7 @@
     }
 
     function generateLightBulb(hue, localPosition) {
-        var colorArray = hslToRgb(hue, 1, 0.5);
+        var colorArray = hslToRgb(hue/360.0, 1, 0.5);
         var color ={"red": colorArray[0], "green": colorArray[1], "blue": colorArray[2]}
         
         var id = Entities.addEntity({
