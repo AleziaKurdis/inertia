@@ -11,15 +11,15 @@
 //
 (function(){
     var ROOT = Script.resolvePath('').split("localTeleporter.js")[0];
-    var arrivalZposition;
+    var arrivalYposition;
     var SOUND = SoundCache.getSound(ROOT + "../sounds/elevator.mp3");
     var MAX_CLICKABLE_DISTANCE_M = 2; 
     var oneTimeOnly = false;
     
     this.preload = function(entityID) {
-        arrivalZposition = parseFloat(Entities.getEntityProperties(entityID, ["description"]).description);
-        if(!arrivalZposition) {
-            arrivalZposition = 0.0;
+        arrivalYposition = parseFloat(Entities.getEntityProperties(entityID, ["description"]).description);
+        if(!arrivalYposition) {
+            arrivalYposition = 0.0;
         }
     }
 
@@ -34,9 +34,7 @@
 
     function trigger() {
         if (oneTimeOnly === false) {
-            var newPosition = MyAvatar.position;
-            newPosition.z = arrivalZposition;
-            MyAvatar.position = newPosition;
+            MyAvatar.position.y = arrivalYposition;
             var injectorOptions = {
                 "position": MyAvatar.position,
                 "volume": 0.5,
