@@ -17,7 +17,10 @@
     var oneTimeOnly = false;
     
     this.preload = function(entityID) {
-        arrivalZposition = parseInt(Entities.getEntityProperties(entityID, ["description"]).description, 10);
+        arrivalZposition = parseFloat(Entities.getEntityProperties(entityID, ["description"]).description);
+        if(!arrivalZposition) {
+            arrivalZposition = 0.0;
+        }
     }
 
     
