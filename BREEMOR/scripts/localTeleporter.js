@@ -18,6 +18,7 @@
     
     this.preload = function(entityID) {
         arrivalYposition = parseFloat(Entities.getEntityProperties(entityID, ["description"]).description);
+        print("arrivalYposition: " + arrivalYposition);
         if(!arrivalYposition) {
             arrivalYposition = 0.0;
         }
@@ -36,7 +37,6 @@
         if (oneTimeOnly === false) {
             var novaPosition = {"x": MyAvatar.position.x, "y": arrivalYposition, "z": MyAvatar.position.z};
             print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));
-            print("arrivalYposition: " + arrivalYposition);
             MyAvatar.goToLocation(novaPosition);
             var injectorOptions = {
                 "position": MyAvatar.position,
