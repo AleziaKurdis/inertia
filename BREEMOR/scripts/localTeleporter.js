@@ -34,10 +34,9 @@
 
     function trigger() {
         if (oneTimeOnly === false) {
-            var newPosition = MyAvatar.position;
-            newPosition.y = arrivalYposition;
-            print("ARRIVAL POSITION: " + JSON.stringify(newPosition));
-            MyAvatar.goToLocation(newPosition);
+            var novaPosition = {"x": MyAvatar.position.x, "y": arrivalYposition, "z": MyAvatar.position.z};
+            print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));
+            MyAvatar.goToLocation(novaPosition);
             var injectorOptions = {
                 "position": MyAvatar.position,
                 "volume": 0.5,
