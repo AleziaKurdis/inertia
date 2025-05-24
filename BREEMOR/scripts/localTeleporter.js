@@ -34,7 +34,7 @@
 
     function trigger() {
         if (oneTimeOnly === false) {
-            MyAvatar.position.y = arrivalYposition;
+            MyAvatar.goToLocation({"x": MyAvatar.position.x, "y": arrivalYposition, "z": MyAvatar.position.z});
             var injectorOptions = {
                 "position": MyAvatar.position,
                 "volume": 0.5,
