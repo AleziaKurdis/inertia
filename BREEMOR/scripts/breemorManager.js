@@ -556,14 +556,14 @@
             Entities.deleteEntity(genericDoors[i].closedID);
             Entities.deleteEntity(genericDoors[i].openID);
             Entities.deleteEntity(genericDoors[i].triggerID);
-            genericDoors[i].closedID = UuiD.NONE;
-            genericDoors[i].openID = UuiD.NONE;
-            genericDoors[i].triggerID = UuiD.NONE;
+            genericDoors[i].closedID = Uuid.NONE;
+            genericDoors[i].openID = Uuid.NONE;
+            genericDoors[i].triggerID = Uuid.NONE;
         }
         
         for (i=0; i < elevatorsButtons.length; i++) {
             Entities.deleteEntity(elevatorsButtons[i].id);
-            elevatorsButtons[i].id = UuiD.NONE;
+            elevatorsButtons[i].id = Uuid.NONE;
         }
     };
 
