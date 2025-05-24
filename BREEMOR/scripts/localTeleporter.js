@@ -36,7 +36,7 @@
         if (oneTimeOnly === false) {
             var newPosition = MyAvatar.position;
             newPosition.y = arrivalYposition;
-            print("ARRIVAL POISTION: " + JSON.stingify(newPosition));
+            print("ARRIVAL POSITION: " + JSON.stringify(newPosition));
             MyAvatar.goToLocation(newPosition);
             var injectorOptions = {
                 "position": MyAvatar.position,
