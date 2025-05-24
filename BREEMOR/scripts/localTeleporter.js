@@ -17,12 +17,14 @@
     var oneTimeOnly = false;
     
     this.preload = function(entityID) {
-        arrivalYposition = parseFloat(Entities.getEntityProperties(entityID, ["description"]).description);
+        var desc = Entities.getEntityProperties(entityID, ["description"]).description;
+        print("desc: " + desc);
+        arrivalYposition = parseFloat(desc);
         print("arrivalYposition: " + arrivalYposition);
         if(!arrivalYposition) {
             arrivalYposition = 0.0;
         }
-    }
+    };
 
     
     // Constructor
