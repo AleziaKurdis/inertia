@@ -16,17 +16,6 @@
     var MAX_CLICKABLE_DISTANCE_M = 2; 
     var oneTimeOnly = false;
     
-    this.preload = function(entityID) {
-        var desc = Entities.getEntityProperties(entityID, ["description"]).description;
-        print("desc: " + desc);
-        arrivalYposition = parseFloat(desc);
-        print("arrivalYposition: " + arrivalYposition);
-        if(!arrivalYposition) {
-            arrivalYposition = 0.0;
-        }
-    };
-
-    
     // Constructor
     var _this = null;
 
@@ -38,7 +27,7 @@
     function trigger() {
         if (oneTimeOnly === false) {
             var novaPosition = {"x": MyAvatar.position.x, "y": arrivalYposition, "z": MyAvatar.position.z};
-            print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));
+            print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));//############################ DEBUD/TRASH
             MyAvatar.goToLocation(novaPosition);
             var injectorOptions = {
                 "position": MyAvatar.position,
@@ -60,6 +49,14 @@
         preload: function (id) {
             _this.entityID = id;
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
+            
+            var desc = Entities.getEntityProperties(entityID, ["description"]).description;
+            print("desc: " + desc); //############################ DEBUD/TRASH
+            arrivalYposition = parseFloat(desc);
+            print("arrivalYposition: " + arrivalYposition); //############################ DEBUD/TRASH
+            if(!arrivalYposition) {
+                arrivalYposition = 0.0;
+            }
         },
 
         displayModeChangedCallback: function() {
