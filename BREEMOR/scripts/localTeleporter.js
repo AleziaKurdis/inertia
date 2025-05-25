@@ -34,7 +34,7 @@
             "localOnly": false
         };
         var injector = Audio.playSound(SOUND, injectorOptions); 
-    }
+    };
 
     // Entity methods
     clickableUI.prototype = {
