@@ -50,7 +50,7 @@
             _this.entityID = id;
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
             
-            var desc = Entities.getEntityProperties(entityID, ["description"]).description;
+            var desc = Entities.getEntityProperties(id, ["description"]).description;
             print("desc: " + desc); //############################ DEBUD/TRASH
             arrivalYposition = parseFloat(desc);
             print("arrivalYposition: " + arrivalYposition); //############################ DEBUD/TRASH
