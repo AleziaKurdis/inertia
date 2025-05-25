@@ -26,7 +26,7 @@
 
     function trigger() {
         if (oneTimeOnly === false) {
-            var novaPosition = {"x": MyAvatar.position.x, "y": arrivalYposition, "z": MyAvatar.position.z};
+            var novaPosition = {"x": MyAvatar.position.x, "y": MyAvatar.position.y + arrivalYposition, "z": MyAvatar.position.z};
             print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));//############################ DEBUD/TRASH
             MyAvatar.goToLocation(novaPosition);
             var injectorOptions = {
@@ -51,9 +51,7 @@
             HMD.displayModeChanged.connect(this.displayModeChangedCallback);
             
             var desc = Entities.getEntityProperties(id, ["description"]).description;
-            print("desc: " + desc); //############################ DEBUD/TRASH
             arrivalYposition = parseFloat(desc);
-            print("arrivalYposition: " + arrivalYposition); //############################ DEBUD/TRASH
             if(!arrivalYposition) {
                 arrivalYposition = 0.0;
             }
