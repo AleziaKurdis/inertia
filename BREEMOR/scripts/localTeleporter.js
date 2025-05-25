@@ -25,7 +25,6 @@
 
     function trigger() {
         var novaPosition = {"x": MyAvatar.position.x, "y": MyAvatar.position.y + arrivalYposition, "z": MyAvatar.position.z};
-        print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));//############################ DEBUD/TRASH
         MyAvatar.goToLocation(novaPosition);
         var injectorOptions = {
             "position": MyAvatar.position,
