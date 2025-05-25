@@ -14,7 +14,6 @@
     var arrivalYposition;
     var SOUND = SoundCache.getSound(ROOT + "../sounds/elevator.mp3");
     var MAX_CLICKABLE_DISTANCE_M = 2; 
-    var oneTimeOnly = false;
     
     // Constructor
     var _this = null;
@@ -25,24 +24,17 @@
     }
 
     function trigger() {
-        if (oneTimeOnly === false) {
-            var novaPosition = {"x": MyAvatar.position.x, "y": MyAvatar.position.y + arrivalYposition, "z": MyAvatar.position.z};
-            print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));//############################ DEBUD/TRASH
-            MyAvatar.goToLocation(novaPosition);
-            var injectorOptions = {
-                "position": MyAvatar.position,
-                "volume": 0.5,
-                "loop": false,
-                "localOnly": false
-            };
-            var injector = Audio.playSound(SOUND, injectorOptions);
-            
-            oneTimeOnly = true;
-            Script.setTimeout(function () {
-                oneTimeOnly = false;
-            }, 3000);
-        }
-    }; 
+        var novaPosition = {"x": MyAvatar.position.x, "y": MyAvatar.position.y + arrivalYposition, "z": MyAvatar.position.z};
+        print("ARRIVAL POSITION: " + JSON.stringify(novaPosition));//############################ DEBUD/TRASH
+        MyAvatar.goToLocation(novaPosition);
+        var injectorOptions = {
+            "position": MyAvatar.position,
+            "volume": 0.5,
+            "loop": false,
+            "localOnly": false
+        };
+        var injector = Audio.playSound(SOUND, injectorOptions); 
+    }
 
     // Entity methods
     clickableUI.prototype = {
