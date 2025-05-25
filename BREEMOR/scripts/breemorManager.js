@@ -479,12 +479,12 @@
         }
         
         var lightBulbDefinition = [
-            {"hue": 25, "localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}},
+            {"hue": 60, "localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}},
             {"hue": 220, "localPosition": {"x":1.4868,"y":13.7275,"z":-33.7065}},
-            {"hue": 60, "localPosition": {"x":2.6270,"y":13.7275,"z":-36.1692}},
+            {"hue": 320, "localPosition": {"x":2.6270,"y":13.7275,"z":-36.1692}},
             {"hue": 5, "localPosition": {"x":11.1609,"y":12.8750,"z":-33.4971}},
             {"hue": 100, "localPosition": {"x":9.6592,"y":12.8750,"z":-31.1709}},
-            {"hue": 320, "localPosition": {"x":6.3047,"y":13.1885,"z":-31.9651}}
+            {"hue": 25, "localPosition": {"x":6.3047,"y":13.1885,"z":-31.9651}}
         ];
         for (t = 0; t < lightBulbDefinition.length; t++ ) {
             entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition));
