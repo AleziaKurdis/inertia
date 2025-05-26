@@ -615,9 +615,9 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 6.0,
-                "y": 6.0,
-                "z": 6.0
+                "x": 8.0,
+                "y": 8.0,
+                "z": 8.0
             },
             "color": color,
             "intensity": 12,
