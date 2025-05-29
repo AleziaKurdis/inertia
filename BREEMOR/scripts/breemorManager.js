@@ -479,15 +479,15 @@
         }
         
         var lightBulbDefinition = [
-            {"hue": 60, "localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}},
-            {"hue": 220, "localPosition": {"x":1.4868,"y":13.7275,"z":-33.7065}},
-            {"hue": 320, "localPosition": {"x":2.6270,"y":13.7275,"z":-36.1692}},
-            {"hue": 5, "localPosition": {"x":11.1609,"y":12.8750,"z":-33.4971}},
-            {"hue": 100, "localPosition": {"x":9.6592,"y":12.8750,"z":-31.1709}},
-            {"hue": 25, "localPosition": {"x":6.3047,"y":13.1885,"z":-31.9651}}
+            {"hue": 60, "localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}, "angle": 40.0 },
+            {"hue": 220, "localPosition": {"x":1.4868,"y":13.7275,"z":-33.7065}, "angle": 60.0 },
+            {"hue": 320, "localPosition": {"x":2.6270,"y":13.7275,"z":-36.1692}, "angle": 60.0 },
+            {"hue": 5, "localPosition": {"x":11.1609,"y":12.8750,"z":-33.4971}, "angle": 40.0 },
+            {"hue": 100, "localPosition": {"x":9.6592,"y":12.8750,"z":-31.1709}, "angle": 25.0 },
+            {"hue": 25, "localPosition": {"x":6.3047,"y":13.1885,"z":-31.9651}, "angle": 40.0 }
         ];
         for (t = 0; t < lightBulbDefinition.length; t++ ) {
-            entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition));
+            entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition, lightBulbDefinition[t].angle));
         }
     };
     
@@ -580,7 +580,7 @@
         Entities.editEntity(genericDoors[no].openID, {"visible": false});
     }
 
-    function generateLightBulb(hue, localPosition) {
+    function generateLightBulb(hue, localPosition, angle) {
         var colorArray = hslToRgb(hue/360.0, 1, 0.5);
         var color ={"red": colorArray[0], "green": colorArray[1], "blue": colorArray[2]}
         
@@ -588,7 +588,7 @@
             "type": "Shape",
             "shape": "Sphere",
             "name": "Breemor - lightBulb",
-            "dimensions": {"x":0.07,"y":0.07,"z":0.07},
+            "dimensions": {"x":0.055,"y":0.055,"z":0.055},
             "localPosition": localPosition,
             "parentID": thisEntityID,
             "visible": true,
@@ -625,7 +625,7 @@
             "isSpotlight": true,
             "visible": true,
             "exponent": 1,
-            "cutoff": 40
+            "cutoff": angle
         },"local");
         
         var sumColorCompnent = (color.red/255) +(color.green/255) +(color.blue/255);
