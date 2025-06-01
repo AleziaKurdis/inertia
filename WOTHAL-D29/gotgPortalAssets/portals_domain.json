@@ -8,7 +8,7 @@
     {
         "name": "CEON",
         "localPosition": {"x":-1659.56,"y":445.11,"z":1132.16},
-        "destinationURL": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/gotgPortalAssets/virz_wothal2ceon_satellite.json",
+        "destinationURL": "hifi://ceon/3459.4,3921.38,4024.84/0,-0.664438,0,0.747343",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/CEON/images/CEON_SKY.jpg"
     }
 ]
