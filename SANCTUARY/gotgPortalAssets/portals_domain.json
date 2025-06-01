@@ -2,7 +2,7 @@
     {
         "name": "CEON",
         "localPosition": {"x": -245.19, "y": -122.98, "z":638.39},
-        "destinationURL": "hifi://virz/4896.72,-3793.78,3800.88/0,0.765461,0,0.643483",
+        "destinationURL": "hifi://ceon/4896.72,4206.22,3800.88/0,0.765461,0,0.643483",
         "destinationSkyUrl": "https://aleziakurdis.github.io/inertia/CEON/images/CEON_SKY.jpg"
     },
     {
