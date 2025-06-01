@@ -205,7 +205,7 @@
             "closedURL": ROOT + "../models/FIGHTER_DOOR/fighterDoorClosedA1.fst",
             "dimensions": {"x":0.14121627807617188,"y":2.210576295852661,"z":2.443953037261963},
             "localPosition": {"x":16.1975,"y":-11.7644,"z":-14.4624},
-            "localYrotation": 0.0,
+            "localYrotation": 90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
@@ -215,7 +215,7 @@
             "closedURL": ROOT + "../models/FIGHTER_DOOR/fighterDoorClosedA2.fst",
             "dimensions": {"x":0.14121627807617188,"y":2.210576295852661,"z":2.443953037261963},
             "localPosition": {"x":16.1975,"y":-11.7644,"z":-29.5960},
-            "localYrotation": 0.0,
+            "localYrotation": 90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
@@ -225,7 +225,7 @@
             "closedURL": ROOT + "../models/FIGHTER_DOOR/fighterDoorClosedB1.fst",
             "dimensions": {"x":0.14121627807617188,"y":2.210576295852661,"z":2.443953037261963},
             "localPosition": {"x":-16.1975,"y":-11.7644,"z":-14.4624},
-            "localYrotation": 0.0,
+            "localYrotation": 90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
@@ -235,7 +235,7 @@
             "closedURL": ROOT + "../models/FIGHTER_DOOR/fighterDoorClosedB2.fst",
             "dimensions": {"x":0.14121627807617188,"y":2.210576295852661,"z":2.443953037261963},
             "localPosition": {"x":-16.1975,"y":-11.7644,"z":-29.5960},
-            "localYrotation": 0.0,
+            "localYrotation": 90.0,
             "closedID": Uuid.NONE,
             "openID": Uuid.NONE,
             "triggerID": Uuid.NONE
