@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.0,0.0,0.0],
+         "metallic": 0.001,
+         "roughness": 0.07,
+         "normalMap": "metalNormal512c.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
