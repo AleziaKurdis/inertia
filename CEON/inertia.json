@@ -1361,7 +1361,7 @@
             "y": 4000,
             "z": 4000
         },
-        "name": "CABARET",
+        "name": "AUDITORIUM",
         "locked": true,
         "dimensions": {
             "x": 14.09367561340332,
@@ -1375,7 +1375,7 @@
             "grabbable": false
         },
         "shapeType": "static-mesh",
-        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_CABARET.fst",
+        "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_AUDITORIUM.fst",
         "useOriginalPivot": true
     },
     {
