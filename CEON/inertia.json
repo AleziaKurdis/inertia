@@ -1371,6 +1371,7 @@
             "grabbable": false
         },
         "shapeType": "static-mesh",
+        "script": "https://aleziakurdis.github.io/inertia/CEON/auditorium.js"
         "modelURL": "https://aleziakurdis.github.io/inertia/CEON/models/CEON_AUDITORIUM.fst",
         "useOriginalPivot": true
     },
