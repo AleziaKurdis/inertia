@@ -11,16 +11,17 @@
 //
 (function(){
     var ROOT = Script.resolvePath('').split("auditorium.js")[0];
-    var localPositions = [
-        {"x":3965.537353515625,"y":3997.328857421875,"z":3996.233154296875}, //
-        {"x":3973.868408203125,"y":3997.328857421875,"z":4001.27978515625}, //
-        {"x":3988.75341796875,"y":3997.328857421875,"z":4001.27978515625}, //
-        {"x":4011.181640625,"y":3997.328857421875,"z":3998.645751953125}, //
-        {"x":4022.7724609375,"y":3997.328857421875,"z":3993.577392578125}, //
-        {"x":4020.814208984375,"y":3997.328857421875,"z":3977.77001953125}, //
-        {"x":4020.814208984375,"y":3997.328857421875,"z":3962.255859375}, //
-        {"x":4007.5458984375,"y":3997.328857421875,"z":3949.8076171875}, //
-        {"x":3999.577392578125,"y":3997.328857421875,"z":3967.605712890625} //
+    var COORD_REFERENCE = {"x": 4000, "y": 4000, "z": 4000};
+    var audienceLights = [
+        { "localPosition": {"x":4030.865234375,"y":3994.455078125,"z":4005.75439453125}, "dimensionsScaleFactor": 1.0}, //p1
+        { "localPosition": {"x":4030.112060546875,"y":3994.455078125,"z":4001.851318359375}, "dimensionsScaleFactor": 1.0}, //p0 coin
+        { "localPosition": {"x":4029.311767578125,"y":3994.455078125,"z":4009.448974609375}, "dimensionsScaleFactor": 1.0}, //p2
+        { "localPosition": {"x":4026.0302734375,"y":3994.455078125,"z":4011.631103515625}, "dimensionsScaleFactor": 1.0}, //p3
+        { "localPosition": {"x":4022.05322265625,"y":3994.455078125,"z":4011.606689453125}, "dimensionsScaleFactor": 1.0}, //p4
+        { "localPosition": {"x":4020.186767578125,"y":3994.126953125,"z":4009.3759765625}, "dimensionsScaleFactor": 1.3}, //wall 1 x1.3
+        { "localPosition": {"x":4019.093994140625,"y":3994.126953125,"z":4013.29736328125}, "dimensionsScaleFactor": 1.3}, //wall 2 x1.3
+        { "localPosition": {"x":4017.780029296875,"y":3994.60791015625,"z":4008.8525390625}, "dimensionsScaleFactor": 1.8}, //door x1.8
+        { "localPosition": {"x":4030.59130859375,"y":3996.553466796875,"z":4007.86865234375}, "dimensionsScaleFactor": 0.5}, //upstair x 0.5
     ];
     
     var zoneID = Uuid.NONE;
@@ -53,15 +54,11 @@
         
         //wall lights
         var i, id;
-        for (i=0; i < localPositions.length; i++) {
+        for (i=0; i < audienceLights.length; i++) {
             id = Entities.addEntity({
                 "type": "Light",
                 "name": "auditorium-light",
-                "dimensions": {
-                    "x": 32.485660552978516,
-                    "y": 32.485660552978516,
-                    "z": 33.631629943847656
-                },
+                "dimensions": Vec3.multiply({"x": 5, "y": 5, "z": 5}, audienceLights[i].dimensionsScaleFactor),
                 "rotation": {
                     "x": 0.7071068286895752,
                     "y": 0,
@@ -69,7 +66,7 @@
                     "w": -0.7071068286895752
                 },
                 
-                "localPosition": localPositions[i],
+                "localPosition": Vec3.subtract(audienceLights[i].localPosition, COORD_REFERENCE),
                 "parentID": zoneID,
                 "renderWithZones": [zoneID],
                 "grab": {
@@ -79,13 +76,13 @@
                 "ignoreForCollisions": true,
                 "color": {
                     "red": 255,
-                    "green": 196,
-                    "blue": 148
+                    "green": 171,
+                    "blue": 97
                 },
                 "isSpotlight": true,
-                "intensity": 15,
+                "intensity": 9,
                 "exponent": 1,
-                "cutoff": 75,
+                "cutoff": 50,
                 "falloffRadius": 1.5,
                 "lifetime": 25200
             }, "local");
@@ -96,6 +93,7 @@
         
         //circle
         
+        //Seat manager
     };
 
     this.unload = function(entityID) {
