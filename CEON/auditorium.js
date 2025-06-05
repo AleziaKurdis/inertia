@@ -59,7 +59,7 @@
             id = Entities.addEntity({
                 "type": "Light",
                 "name": "auditorium-light",
-                "dimensions": Vec3.multiply({"x": 5, "y": 5, "z": 5}, audienceLights[i].dimensionsScaleFactor),
+                "dimensions": Vec3.multiply({"x": 7, "y": 7, "z": 7}, audienceLights[i].dimensionsScaleFactor),
                 "rotation": {
                     "x": 0.7071068286895752,
                     "y": 0,
@@ -175,7 +175,7 @@
         
         //circle
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-        var color = hslToRgb(hue, 0.7, 0.4);
+        var color = hslToRgb(hue, 1.0, 0.35);
         id = Entities.addEntity({
             "type": "Shape",
             "name": "CIRCLE",
