@@ -91,10 +91,91 @@
         }
         
         //scene lights
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "SCENE_MAIN_LIGHT",
+            "dimensions": {
+                "x": 4.776536464691162,
+                "y": 4.776536464691162,
+                "z": 9.553072929382324
+            },
+            "rotation": {
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "isSpotlight": true,
+            "intensity": 10,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 2,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 0.4888, "y": -4.2073, "z": -6.5605},
+            "lifetime": 25200
+        }, "local");
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "SCENE_FRONT_LIGHT 1",
+            "dimensions": {"x":5.1391987800598145,"y":5.1391987800598145,"z":5.1391987800598145},
+            "isSpotlight": false,
+            "intensity": 4.0,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 1.0,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 0.1165, "y": -6.9021, "z": -4.6587},
+            "lifetime": 25200
+        }, "local");
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "SCENE_FRONT_LIGHT 2",
+            "dimensions": {"x":5.1391987800598145,"y":5.1391987800598145,"z":5.1391987800598145},
+            "isSpotlight": false,
+            "intensity": 4.0,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 1.0,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 1.8984, "y": -6.9021, "z": -5.0847},
+            "lifetime": 25200
+        }, "local");
+
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "SCENE_FRONT_LIGHT 3",
+            "dimensions": {"x":5.1391987800598145,"y":5.1391987800598145,"z":5.1391987800598145},
+            "isSpotlight": false,
+            "intensity": 4.0,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 1.0,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 2.3335, "y": -6.9021, "z": -7.5825},
+            "lifetime": 25200
+        }, "local");
         
         //circle
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-        var color = hslToRgb(hue, 0.8, 0.5);
+        var color = hslToRgb(hue, 0.7, 0.4);
         id = Entities.addEntity({
             "type": "Shape",
             "name": "CIRCLE",
