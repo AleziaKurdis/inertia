@@ -21,7 +21,7 @@
         { "localPosition": {"x":4020.186767578125,"y":3994.126953125,"z":4009.3759765625}, "dimensionsScaleFactor": 1.3}, //wall 1 x1.3
         { "localPosition": {"x":4019.093994140625,"y":3994.126953125,"z":4013.29736328125}, "dimensionsScaleFactor": 1.3}, //wall 2 x1.3
         { "localPosition": {"x":4017.780029296875,"y":3994.60791015625,"z":4008.8525390625}, "dimensionsScaleFactor": 1.8}, //door x1.8
-        { "localPosition": {"x":4030.59130859375,"y":3996.553466796875,"z":4007.86865234375}, "dimensionsScaleFactor": 0.5}, //upstair x 0.5
+        { "localPosition": {"x":4030.59130859375,"y":3996.553466796875,"z":4007.86865234375}, "dimensionsScaleFactor": 0.5} //upstair x 0.5
     ];
     
     var zoneID = Uuid.NONE;
@@ -66,7 +66,7 @@
                     "w": -0.7071068286895752
                 },
                 
-                "localPosition": Vec3.subtract(audienceLights[i].localPosition, COORD_REFERENCE),
+                "localPosition": Vec3.subtract(Vec3.subtract(audienceLights[i].localPosition, COORD_REFERENCE),{"x": 23.6450,"y": 0.09769,"z": 11.7122}),
                 "parentID": zoneID,
                 "renderWithZones": [zoneID],
                 "grab": {
