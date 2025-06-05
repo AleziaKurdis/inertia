@@ -11,6 +11,7 @@
 //
 (function(){
     var ROOT = Script.resolvePath('').split("auditorium.js")[0];
+    var D29_DAY_DURATION = 104400; //sec
     var COORD_REFERENCE = {"x": 4000, "y": 4000, "z": 4000};
     var audienceLights = [
         { "localPosition": {"x":4030.865234375,"y":3994.455078125,"z":4005.75439453125}, "dimensionsScaleFactor": 1.0}, //p1
@@ -92,6 +93,31 @@
         //scene lights
         
         //circle
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var color = hslToRgb(hue, 0.8, 0.5);
+        id = Entities.addEntity({
+            "type": "Shape",
+            "name": "CIRCLE",
+            "dimensions": {
+                "x": 4.400000095367432,
+                "y": 0.03886719048023224,
+                "z": 4.400000095367432
+            },
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "shape": "Cylinder",
+            "color": {
+                "red": color[0],
+                "green": color[1],
+                "blue": color[2]
+            },
+            "localPosition": {"x": 0.4888, "y": -8.0408, "z": -6.5605},
+            "lifetime": 25200
+        }, "local");
+        
         
         //Seat manager
     };
