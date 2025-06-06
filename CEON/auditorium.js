@@ -27,6 +27,7 @@
     
     var zoneID = Uuid.NONE;
     this.preload = function(entityID) {
+        var renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         //Create a visibility zone
         zoneID = Entities.addEntity({
             "type": "Zone",
@@ -200,7 +201,33 @@
         }, "local");
         
         
-        //Seat manager
+        //Sign
+        id = Entities.addEntity({
+            "type": "Model",
+            "name": "AUDITORIUM Sign",
+            "dimensions": {
+                "x": 1.841064453125,
+                "y": 0.3342578411102295,
+                "z": 0.03999999910593033
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"" + ROOT + "images/auditorium.jpg\",\"emission_color_texture\":\"" + ROOT + "images/auditorium.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+            "useOriginalPivot": true,
+            "parentID": zoneID,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": -7.2720, "y": -5.7803, "z": -2.8826},
+            "lifetime": 25200
+        }, "local");
     };
 
     this.unload = function(entityID) {
