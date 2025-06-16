@@ -247,6 +247,45 @@
             "lifetime": 25200
         }, "local");
         
+        //back light
+        var goldenHue = hue + 0.618;
+        if (goldenHue >= 1.0) { 
+            goldenHue = goldenHue - 1.0;
+        }
+        color = hslToRgb(goldenHue, 1.0, 0.35);
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "BackLight",
+            "dimensions": {
+                "x": 44.168922424316406,
+                "y": 44.168922424316406,
+                "z": 44.85029983520508
+            },
+            "localRotation": {
+                "x": 0.8335155844688416,
+                "y": -0.18009650707244873,
+                "z": -0.2768820524215698,
+                "w": 0.44289180636405945
+            },
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": Vec3.subtract(Vec3.subtract({"x":4033.091796875,"y":3990.1416015625,"z":4017.246826171875}, COORD_REFERENCE),{"x": 23.6450,"y": 0.09769,"z": 11.7122}),
+            "lifetime": 25200,
+            "color": {
+                "red": color[0],
+                "green": color[1],
+                "blue": color[2]
+            },
+            "isSpotlight": true,
+            "intensity": 30,
+            "exponent": 1,
+            "cutoff": 80,
+            "falloffRadius": 10
+        }, "local");
         
         //Sign
         id = Entities.addEntity({
