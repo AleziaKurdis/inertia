@@ -189,7 +189,7 @@
             "grab": {
                 "grabbable": false
             },
-            "localPosition": {"x": 28.9380, "y": -6.7698, "z": 5.3738},
+            "localPosition": Vec3.subtract({"x": 28.9380, "y": -6.7698, "z": 5.3738}, {"x": 23.6450,"y": 0.09769,"z": 11.7122}),
             "lifetime": 25200,
             "color": {
                 "red": 255,
@@ -212,7 +212,7 @@
             "grab": {
                 "grabbable": false
             },
-            "localPosition": {"x": 24.6475, "y": -6.7698, "z": 9.9131},
+            "localPosition": Vec3.subtract({"x": 24.6475, "y": -6.7698, "z": 9.9131},{"x": 23.6450,"y": 0.09769,"z": 11.7122}),
             "lifetime": 25200,
             "color": {
                 "red": 255,
