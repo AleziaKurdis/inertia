@@ -14,15 +14,15 @@
     var D29_DAY_DURATION = 104400; //sec
     var COORD_REFERENCE = {"x": 4000, "y": 4000, "z": 4000};
     var audienceLights = [
-        { "localPosition": {"x":4030.865234375,"y":3994.455078125,"z":4005.75439453125}, "dimensionsScaleFactor": 1.0}, //p1
-        { "localPosition": {"x":4030.112060546875,"y":3994.455078125,"z":4001.851318359375}, "dimensionsScaleFactor": 1.0}, //p0 coin
-        { "localPosition": {"x":4029.311767578125,"y":3994.455078125,"z":4009.448974609375}, "dimensionsScaleFactor": 1.0}, //p2
-        { "localPosition": {"x":4026.0302734375,"y":3994.455078125,"z":4011.631103515625}, "dimensionsScaleFactor": 1.0}, //p3
-        { "localPosition": {"x":4022.05322265625,"y":3994.455078125,"z":4011.606689453125}, "dimensionsScaleFactor": 1.0}, //p4
+        { "localPosition": {"x":4028.1669921875,"y":3994.126953125,"z":4000.596923828125}, "dimensionsScaleFactor": 1.3}, //far wall
+        { "localPosition": {"x":4032.249267578125,"y":3995.49365234375,"z":4002.78515625}, "dimensionsScaleFactor": 1.0}, //p1 coin
+        { "localPosition": {"x":4032.144287109375,"y":3995.49365234375,"z":4007.705810546875}, "dimensionsScaleFactor": 1.0}, //p2
+        { "localPosition": {"x":4027.203125,"y":3995.49365234375,"z":4013.000732421875}, "dimensionsScaleFactor": 1.0}, //p3
+        { "localPosition": {"x":4022.2568359375,"y":3995.49365234375,"z":4013.358642578125}, "dimensionsScaleFactor": 1.0}, //p4
         { "localPosition": {"x":4020.186767578125,"y":3994.126953125,"z":4009.3759765625}, "dimensionsScaleFactor": 1.3}, //wall 1 x1.3
         { "localPosition": {"x":4019.093994140625,"y":3994.126953125,"z":4013.29736328125}, "dimensionsScaleFactor": 1.3}, //wall 2 x1.3
         { "localPosition": {"x":4017.780029296875,"y":3994.60791015625,"z":4008.8525390625}, "dimensionsScaleFactor": 1.8}, //door x1.8
-        { "localPosition": {"x":4030.59130859375,"y":3996.553466796875,"z":4007.86865234375}, "dimensionsScaleFactor": 0.5} //upstair x 0.5
+        { "localPosition": {"x":4031.945068359375,"y":3994.126953125,"z":4000.545654296875}, "dimensionsScaleFactor": 1.3} //far entry x 0.5
     ];
     
     var zoneID = Uuid.NONE;
@@ -172,6 +172,53 @@
             },
             "localPosition": {"x": 2.3335, "y": -6.9021, "z": -7.5825},
             "lifetime": 25200
+        }, "local");
+        
+        //LUTRINS LIGHTS
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "LUTRIN 1",
+            "dimensions": {"x":3,"y":3,"z":3},
+            "isSpotlight": false,
+            "intensity": 7.0,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 1.0,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 28.9380, "y": -6.7698, "z": 5.3738},
+            "lifetime": 25200,
+            "color": {
+                "red": 255,
+                "green": 171,
+                "blue": 97
+            }
+        }, "local");
+        
+        id = Entities.addEntity({
+            "type": "Light",
+            "name": "LUTRIN 2",
+            "dimensions": {"x":3,"y":3,"z":3},
+            "isSpotlight": false,
+            "intensity": 7.0,
+            "exponent": 1,
+            "cutoff": 30,
+            "falloffRadius": 1.0,
+            "parentID": zoneID,
+            "renderWithZones": [zoneID],
+            "grab": {
+                "grabbable": false
+            },
+            "localPosition": {"x": 24.6475, "y": -6.7698, "z": 9.9131},
+            "lifetime": 25200,
+            "color": {
+                "red": 255,
+                "green": 171,
+                "blue": 97
+            }
         }, "local");
         
         //circle
