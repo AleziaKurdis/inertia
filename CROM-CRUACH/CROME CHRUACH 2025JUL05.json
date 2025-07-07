@@ -1,0 +1,3078 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{3b6f31b4-9423-401e-8483-80a75fb7aa7e}",
+    "type": "Box",
+    "lastEdited": 1750813952991780,
+    "parentID": "{aae784e5-40bb-4550-b4b5-b881ceea9b2f}",
+    "visible": false,
+    "name": "RITUAL_EFFECTS",
+    "locked": true,
+    "position": {
+        "x": -37.61360168457031,
+        "y": 5.22607421875,
+        "z": -35.81988525390625
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612846253211648,
+    "lastEditedBy": "{9e3552dd-33d5-400f-ae72-2fe9436b0e40}",
+    "queryAACube": {
+        "x": -40.96725845336914,
+        "y": 4001.67138671875,
+        "z": -39.17610549926758,
+        "scale": 6.709819793701172
+    },
+    "canCastShadow": false,
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "grabFollowsController": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/crom_cruach_ritual.js?version=2",
+    "scriptTimestamp": 1737089613824,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cf34e71c-d2fa-443a-bcc0-1c83198fdb79}",
+    "type": "Box",
+    "lastEdited": 1750813953066369,
+    "parentID": "{c2894573-346a-45c0-816b-d2d42d0eba8c}",
+    "visible": false,
+    "name": "sit box",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.0161590576171875,
+        "y": 0.423095703125,
+        "z": 0.021148264408111572
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.07917904853820801,
+        "z": -0.0001068115234375,
+        "w": 0.996856689453125
+    },
+    "created": 1616644614914048,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": -51.00348663330078,
+        "y": 4007.80419921875,
+        "z": 36.13319778442383,
+        "scale": 0.427490234375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1611459854336,
+    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{aa39ab4e-cf5e-4956-9e5f-1fb30cf50207}",
+    "type": "Box",
+    "lastEdited": 1750813953072917,
+    "parentID": "{a43ba7af-5c6d-465d-bca1-ca342dd8a17f}",
+    "visible": false,
+    "name": "sit box",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.003963470458984375,
+        "y": 0.416748046875,
+        "z": -0.01032162457704544
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": 0.8865033388137817,
+        "z": -0.0001373291015625,
+        "w": 0.462699294090271
+    },
+    "created": 1616645017567232,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": -49.46250534057617,
+        "y": 4007.76513671875,
+        "z": 33.315574645996094,
+        "scale": 0.427490234375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1611459854336,
+    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{40068cd8-4596-4737-a409-99a4d6f46643}",
+    "type": "Box",
+    "lastEdited": 1750813953069629,
+    "parentID": "{fe9ac42d-caf6-4728-8a9a-9a8e9a0f365b}",
+    "visible": false,
+    "name": "sit box",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.01219940185546875,
+        "y": 0.40283203125,
+        "z": 0.01604461669921875
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": 0.0000762939453125,
+        "y": -0.18339818716049194,
+        "z": -0.0001068115234375,
+        "w": 0.9830319881439209
+    },
+    "created": 1616645017567232,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": -49.79009246826172,
+        "y": 4007.803955078125,
+        "z": 35.46455764770508,
+        "scale": 0.427490234375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1611459854336,
+    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{74ebe6de-5a23-4f49-90a2-2f6fff1d0c47}",
+    "type": "Box",
+    "lastEdited": 1750813953063052,
+    "parentID": "{299e9f91-0203-43c8-971b-b21588a5eff3}",
+    "visible": false,
+    "name": "sit box",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": 0.2648344039916992,
+        "y": 0.36669921875,
+        "z": 0.019443511962890625
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": -0.999603271484375,
+        "z": -0.0000457763671875,
+        "w": 0.028244495391845703
+    },
+    "created": 1616644346478592,
+    "lastEditedBy": "{b59a8bbc-7593-4f40-a2f1-bda53300095b}",
+    "queryAACube": {
+        "x": -52.822444915771484,
+        "y": 4007.758056640625,
+        "z": 34.42533874511719,
+        "scale": 0.427490234375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1611459854336,
+    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1a9e7fcc-c015-4cbf-b21d-2d11746cb8b8}",
+    "type": "Box",
+    "lastEdited": 1750813953059783,
+    "parentID": "{299e9f91-0203-43c8-971b-b21588a5eff3}",
+    "visible": false,
+    "name": "sit box",
+    "locked": true,
+    "userData": "{\"canClickOnModelToSit\":true}",
+    "position": {
+        "x": -0.26195716857910156,
+        "y": 0.352783203125,
+        "z": 0.06258392333984375
+    },
+    "dimensions": {
+        "x": 0.28872573375701904,
+        "y": 0.04164140298962593,
+        "z": 0.28872573375701904
+    },
+    "rotation": {
+        "x": 0.0000152587890625,
+        "y": -0.99957275390625,
+        "z": -0.0000457763671875,
+        "w": 0.029709339141845703
+    },
+    "created": 1616644346478592,
+    "lastEditedBy": "{b59a8bbc-7593-4f40-a2f1-bda53300095b}",
+    "queryAACube": {
+        "x": -52.68852996826172,
+        "y": 4007.744140625,
+        "z": 34.93661880493164,
+        "scale": 0.427490234375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "scriptTimestamp": 1611459854336,
+    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{caec7096-d16a-496f-b2d2-f24880547857}",
+    "type": "Box",
+    "lastEdited": 1750813953018588,
+    "visible": false,
+    "name": "Sound Emitter 1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 39.037254333496094,
+        "y": 14.899169921875,
+        "z": 17.987598419189453
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651200196608,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 37.524261474609375,
+        "y": 13.386177062988281,
+        "z": 16.474605560302734,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{50108049-ce45-42e8-96e3-4e33c4117fd8}",
+    "type": "Model",
+    "lastEdited": 1750813953012654,
+    "name": "MAGIC_MUSHROOM_blue.fst",
+    "locked": true,
+    "position": {
+        "x": 59.99879837036133,
+        "y": 12.266845703125,
+        "z": 62.63157272338867
+    },
+    "dimensions": {
+        "x": 0.18393981456756592,
+        "y": 0.17134875059127808,
+        "z": 0.18476100265979767
+    },
+    "rotation": {
+        "x": -0.09446859359741211,
+        "y": 0.0174105167388916,
+        "z": -0.18193334341049194,
+        "w": 0.9786068201065063
+    },
+    "created": 1617935386804224,
+    "lastEditedBy": "{ec590fb1-6724-4b44-90f8-bbeb793f96b0}",
+    "queryAACube": {
+        "x": 59.84280776977539,
+        "y": 12.110856056213379,
+        "z": 62.475582122802734,
+        "scale": 0.3119789659976959
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 3,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_blue.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b6693c17-82f5-4f6c-b59e-e745a31955f5}",
+    "type": "Box",
+    "lastEdited": 1750813952986258,
+    "visible": false,
+    "name": "Sound Emitter 2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 30.543418884277344,
+        "y": 20.225830078125,
+        "z": 62.47983932495117
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651468632064,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 29.030426025390625,
+        "y": 18.71283721923828,
+        "z": 60.96684646606445,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4a81a544-15c9-47d7-b8a4-f92bec201e41}",
+    "type": "Box",
+    "lastEdited": 1750813953130993,
+    "visible": false,
+    "name": "Sound Emitter 1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 39.03410339355469,
+        "y": 10.91357421875,
+        "z": 117.31935119628906
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651200196608,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 37.52111053466797,
+        "y": 9.400581359863281,
+        "z": 115.80635833740234,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b95af14f-d741-4830-9e7b-b59a5d4be3f1}",
+    "type": "Box",
+    "lastEdited": 1750813953075293,
+    "visible": false,
+    "name": "Sound Emitter 2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 44.077354431152344,
+        "y": 20.22705078125,
+        "z": 117.31922912597656
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651468632064,
+    "lastEditedBy": "{1adf23a6-9918-4c7f-8fbc-8651b16a27a6}",
+    "queryAACube": {
+        "x": 42.564361572265625,
+        "y": 18.71405792236328,
+        "z": 115.80623626708984,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a43ba7af-5c6d-465d-bca1-ca342dd8a17f}",
+    "type": "Model",
+    "lastEdited": 1750813953054087,
+    "name": "LOG_SEAT_1",
+    "locked": true,
+    "position": {
+        "x": 54.141754150390625,
+        "y": 14.14990234375,
+        "z": 99.11985778808594
+    },
+    "dimensions": {
+        "x": 0.5217851996421814,
+        "y": 0.5800000429153442,
+        "z": 0.5225163102149963
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1616644078043136,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": 53.672264099121094,
+        "y": 13.680412292480469,
+        "z": 98.6503677368164,
+        "scale": 0.9389798641204834
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c2894573-346a-45c0-816b-d2d42d0eba8c}",
+    "type": "Model",
+    "lastEdited": 1750813953051681,
+    "name": "LOG_SEAT_1",
+    "locked": true,
+    "position": {
+        "x": 52.588584899902344,
+        "y": 14.1826171875,
+        "z": 101.906005859375
+    },
+    "dimensions": {
+        "x": 0.5217851996421814,
+        "y": 0.5800000429153442,
+        "z": 0.5225163102149963
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1616643809607680,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": 52.11909484863281,
+        "y": 13.713127136230469,
+        "z": 101.43651580810547,
+        "scale": 0.9389798641204834
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fe9ac42d-caf6-4728-8a9a-9a8e9a0f365b}",
+    "type": "Model",
+    "lastEdited": 1750813953056400,
+    "name": "LOG_SEAT_1",
+    "locked": true,
+    "position": {
+        "x": 53.803123474121094,
+        "y": 14.20263671875,
+        "z": 101.26817321777344
+    },
+    "dimensions": {
+        "x": 0.5217851996421814,
+        "y": 0.5800000429153442,
+        "z": 0.5225163102149963
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.6427557468414307,
+        "z": -0.0000457763671875,
+        "w": 0.7660486698150635
+    },
+    "created": 1616644078043136,
+    "lastEditedBy": "{56d18548-6cb4-4487-8773-a41aacc5c4b2}",
+    "queryAACube": {
+        "x": 53.33363342285156,
+        "y": 13.733146667480469,
+        "z": 100.7986831665039,
+        "scale": 0.9389798641204834
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{299e9f91-0203-43c8-971b-b21588a5eff3}",
+    "type": "Model",
+    "lastEdited": 1750813953049684,
+    "name": "LOG_SEAT_2",
+    "locked": true,
+    "position": {
+        "x": 50.812591552734375,
+        "y": 14.19287109375,
+        "z": 100.48351287841797
+    },
+    "dimensions": {
+        "x": 1.2341513633728027,
+        "y": 0.6109731793403625,
+        "z": 0.6278850436210632
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.7660181522369385,
+        "z": -0.0000762939453125,
+        "w": 0.6427862644195557
+    },
+    "created": 1616643809607680,
+    "lastEditedBy": "{b59a8bbc-7593-4f40-a2f1-bda53300095b}",
+    "queryAACube": {
+        "x": 50.05584716796875,
+        "y": 13.436124801635742,
+        "z": 99.72676849365234,
+        "scale": 1.5134918689727783
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_2.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c3791a8f-808b-42d0-a906-2bb25c68ec6d}",
+    "type": "Model",
+    "lastEdited": 1750813953047652,
+    "name": "FIRE_RING",
+    "locked": true,
+    "position": {
+        "x": 52.72721481323242,
+        "y": 13.93798828125,
+        "z": 100.14007568359375
+    },
+    "dimensions": {
+        "x": 1.7508676052093506,
+        "y": 0.33818668127059937,
+        "z": 1.5994138717651367
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1616643675389952,
+    "lastEditedBy": "{c2cdd010-828f-436d-bfd5-675d7adde433}",
+    "queryAACube": {
+        "x": 51.52950668334961,
+        "y": 12.740278244018555,
+        "z": 98.94236755371094,
+        "scale": 2.395419120788574
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/FIRE_RING.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b2419535-9cfc-4aea-a206-113068974fab}",
+    "type": "Model",
+    "lastEdited": 1750813953133588,
+    "name": "GENERIC FIRE ELEMENT",
+    "locked": true,
+    "userData": "{\"volume\": 0.6}",
+    "description": "Generic Fire Element(v2020.12) for Fireplace or Campfire. By Alezia Kurdis.",
+    "position": {
+        "x": 52.672943115234375,
+        "y": 14.09765625,
+        "z": 100.1690673828125
+    },
+    "dimensions": {
+        "x": 1.3754385709762573,
+        "y": 0.4130847454071045,
+        "z": 1.3309329748153687
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1610907612348416,
+    "lastEditedBy": "{afe42cd5-b04a-421b-ae55-af24a430976f}",
+    "queryAACube": {
+        "x": 51.693931579589844,
+        "y": 13.118644714355469,
+        "z": 99.19005584716797,
+        "scale": 1.9580227136611938
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "script": "https://aleziakurdis.github.io/fire_element/components/fire_manager.js",
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d45ff48c-a8b3-476a-a7e9-a4105b7284f4}",
+    "type": "Box",
+    "lastEdited": 1750813952994364,
+    "visible": false,
+    "name": "RITUAL_SOUND",
+    "locked": true,
+    "position": {
+        "x": 65.85872650146484,
+        "y": 12.643310546875,
+        "z": 29.776180267333984
+    },
+    "dimensions": {
+        "x": 0.20000000298023224,
+        "y": 0.20000000298023224,
+        "z": 0.20000000298023224
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1612070340526080,
+    "lastEditedBy": "{6afff7cc-53d4-4dd0-8141-f1f357d6edac}",
+    "queryAACube": {
+        "x": 65.6855239868164,
+        "y": 12.470105171203613,
+        "z": 29.602975845336914,
+        "scale": 0.3464101552963257
+    },
+    "canCastShadow": false,
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "grabFollowsController": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/music/radio.php?range=22",
+    "scriptTimestamp": 1612070780928,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{fa8293ec-a7e2-4692-b466-6f42578ee025}",
+    "type": "Model",
+    "lastEdited": 1750813953010118,
+    "name": "MAGIC_MUSHROOM_red.fst",
+    "locked": true,
+    "position": {
+        "x": 67.8808364868164,
+        "y": 11.911376953125,
+        "z": 48.54183578491211
+    },
+    "dimensions": {
+        "x": 0.10907253623008728,
+        "y": 0.1521434634923935,
+        "z": 0.10955948382616043
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000457763671875,
+        "z": -0.12205690145492554,
+        "w": 0.9925230741500854
+    },
+    "created": 1618280863236096,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 67.77238464355469,
+        "y": 11.802924156188965,
+        "z": 48.43338394165039,
+        "scale": 0.2169048935174942
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 3,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_red.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{bd42d8fc-c341-478c-b2ed-eaba8d6cbe5d}",
+    "type": "Box",
+    "lastEdited": 1750813953078543,
+    "visible": false,
+    "name": "Sound Emitter 1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 78.17738342285156,
+        "y": 18.91357421875,
+        "z": 67.74549102783203
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651200196608,
+    "lastEditedBy": "{c3d83379-7e28-43d1-9d84-7baaabe3e58d}",
+    "queryAACube": {
+        "x": 76.66439056396484,
+        "y": 17.40058135986328,
+        "z": 66.23249816894531,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f7e6c7bc-2a5f-4771-9db8-a5b37c921794}",
+    "type": "Model",
+    "lastEdited": 1750813953124160,
+    "name": "MAGIC_MUSHROOM_yellow.fst (2)",
+    "locked": true,
+    "position": {
+        "x": 89.46505737304688,
+        "y": 8.251220703125,
+        "z": 110.10167694091797
+    },
+    "dimensions": {
+        "x": 0.10907253623008728,
+        "y": 0.12797196209430695,
+        "z": 0.10955948382616043
+    },
+    "rotation": {
+        "x": -0.018631279468536377,
+        "y": 0.9641412496566772,
+        "z": 0.17109942436218262,
+        "w": 0.20192265510559082
+    },
+    "created": 1618280326365184,
+    "lastEditedBy": "{ec590fb1-6724-4b44-90f8-bbeb793f96b0}",
+    "queryAACube": {
+        "x": 89.36471557617188,
+        "y": 8.150875091552734,
+        "z": 110.00133514404297,
+        "scale": 0.2006911188364029
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 2,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_yellow.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{8f3063f2-a22a-4a27-93bb-b390c6b0b69c}",
+    "type": "Model",
+    "lastEdited": 1750813953121530,
+    "name": "MAGIC_MUSHROOM_yellow.fst",
+    "locked": true,
+    "position": {
+        "x": 89.35498046875,
+        "y": 8.27001953125,
+        "z": 110.01300048828125
+    },
+    "dimensions": {
+        "x": 0.10907253623008728,
+        "y": 0.17801663279533386,
+        "z": 0.10955948382616043
+    },
+    "rotation": {
+        "x": 0.0346531867980957,
+        "y": 0.0036163330078125,
+        "z": 0.10441744327545166,
+        "w": 0.9938963651657104
+    },
+    "created": 1618280326365184,
+    "lastEditedBy": "{ec590fb1-6724-4b44-90f8-bbeb793f96b0}",
+    "queryAACube": {
+        "x": 89.23709106445312,
+        "y": 8.152132034301758,
+        "z": 109.89511108398438,
+        "scale": 0.23577536642551422
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 2,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_yellow.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1fbcadd2-d157-4637-b50e-997267cf9178}",
+    "type": "Light",
+    "lastEdited": 1750813953126173,
+    "name": "MUSH LIGHT YELLOW",
+    "locked": true,
+    "position": {
+        "x": 89.30098724365234,
+        "y": 8.123291015625,
+        "z": 110.17857360839844
+    },
+    "dimensions": {
+        "x": 4.685288429260254,
+        "y": 4.685288429260254,
+        "z": 4.685288429260254
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1618280057929728,
+    "lastEditedBy": "{ec590fb1-6724-4b44-90f8-bbeb793f96b0}",
+    "queryAACube": {
+        "x": 85.243408203125,
+        "y": 4.0657124519348145,
+        "z": 106.1209945678711,
+        "scale": 8.115157127380371
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 234,
+        "blue": 0
+    },
+    "intensity": 2,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 0.30000001192092896,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{1f041142-be97-4c04-a56b-ac5d79875622}",
+    "type": "Model",
+    "lastEdited": 1750813953081426,
+    "name": "MAGIC_MUSHROOM_green.fst",
+    "locked": true,
+    "position": {
+        "x": 96.59081268310547,
+        "y": 9.546630859375,
+        "z": 70.28053283691406
+    },
+    "dimensions": {
+        "x": 0.1426790952682495,
+        "y": 0.1221141666173935,
+        "z": 0.12033982574939728
+    },
+    "rotation": {
+        "x": 0.24888992309570312,
+        "y": -0.5630731582641602,
+        "z": -0.16301214694976807,
+        "w": 0.770962119102478
+    },
+    "created": 1618281534324736,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 96.47928619384766,
+        "y": 9.43510627746582,
+        "z": 70.16900634765625,
+        "scale": 0.22304902970790863
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 3,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_green.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c9e29039-2cdf-408a-a61b-5dbaa388848d}",
+    "type": "Model",
+    "lastEdited": 1750813953885372,
+    "name": "LANTERN",
+    "locked": true,
+    "position": {
+        "x": 107.62785339355469,
+        "y": 8.4326171875,
+        "z": 124.96672058105469
+    },
+    "dimensions": {
+        "x": 0.24304944276809692,
+        "y": 1.6862751245498657,
+        "z": 0.24304941296577454
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.23341727256774902,
+        "z": -0.0000457763671875,
+        "w": 0.9723505973815918
+    },
+    "created": 1610856341176320,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": 106.76737976074219,
+        "y": 7.572142124176025,
+        "z": 124.10624694824219,
+        "scale": 1.7209502458572388
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LANTERN.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{b509905e-4bf9-4c83-a1f3-468e4ff37c9c}",
+    "type": "Model",
+    "lastEdited": 1750813953700933,
+    "name": "MAGIC_MUSHROOM_white.fst",
+    "locked": true,
+    "position": {
+        "x": 107.15290832519531,
+        "y": 37.028076171875,
+        "z": 102.19139862060547
+    },
+    "dimensions": {
+        "x": 0.11792606860399246,
+        "y": 0.16478541493415833,
+        "z": 0.1184525415301323
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000457763671875,
+        "z": -0.15663385391235352,
+        "w": 0.9876401424407959
+    },
+    "created": 1618282608066560,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 107.03555297851562,
+        "y": 36.91071701049805,
+        "z": 102.07404327392578,
+        "scale": 0.23471641540527344
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 900,
+    "cloneLimit": 1,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_white.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e574fe81-3cbb-4779-b4db-52849b77e309}",
+    "type": "Light",
+    "lastEdited": 1750813953084467,
+    "name": "GREEN MUSH LIGHT",
+    "locked": true,
+    "position": {
+        "x": 96.7077865600586,
+        "y": 9.65234375,
+        "z": 70.22618103027344
+    },
+    "dimensions": {
+        "x": 1.1518828868865967,
+        "y": 1.1518828868865967,
+        "z": 1.1518828868865967
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1618281668542464,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 95.7102279663086,
+        "y": 8.654784202575684,
+        "z": 69.22862243652344,
+        "scale": 1.9951196908950806
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 72,
+        "green": 255,
+        "blue": 0
+    },
+    "intensity": 2,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 0.30000001192092896,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{4d7b1caf-4fde-44e4-9187-37c59c011f84}",
+    "type": "Box",
+    "lastEdited": 1750813953128575,
+    "visible": false,
+    "name": "Sound Emitter 2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 96.04582214355469,
+        "y": 23.088623046875,
+        "z": 154.3017578125
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651602849792,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 94.53282928466797,
+        "y": 21.57563018798828,
+        "z": 152.78875732421875,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{793a0392-ab52-46e5-bd47-613211658a7b}",
+    "type": "Box",
+    "lastEdited": 1750813953697152,
+    "visible": false,
+    "name": "Sound Emitter 2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 165.44644165039062,
+        "y": 20.220947265625,
+        "z": 47.99348449707031
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651602849792,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 163.93344116210938,
+        "y": 18.70795440673828,
+        "z": 46.480491638183594,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{584987c3-34b4-4f9f-9bdb-01dbd3699aab}",
+    "type": "Box",
+    "lastEdited": 1750813953703732,
+    "visible": false,
+    "name": "Sound Emitter 1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 148.1522216796875,
+        "y": 18.911376953125,
+        "z": 68.5399169921875
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651200196608,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 146.63922119140625,
+        "y": 17.39838409423828,
+        "z": 67.02692413330078,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{90008802-e1f4-477f-9c0f-8bf71fbb9da8}",
+    "type": "Box",
+    "lastEdited": 1750813953705765,
+    "visible": false,
+    "name": "Sound Emitter 1",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 136.7528076171875,
+        "y": 14.89990234375,
+        "z": 138.73544311523438
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609650931761152,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 135.23980712890625,
+        "y": 13.386909484863281,
+        "z": 137.22244262695312,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e54bd82f-d3c3-4e8f-9ff3-3b2a728032b3}",
+    "type": "Box",
+    "lastEdited": 1750813953714939,
+    "visible": false,
+    "name": "TP_EXIT",
+    "locked": true,
+    "position": {
+        "x": 184.0218505859375,
+        "y": 10.184814453125,
+        "z": 152.78811645507812
+    },
+    "dimensions": {
+        "x": 7.565380573272705,
+        "y": 8.386239051818848,
+        "z": 1.4740724563598633
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.19075298309326172,
+        "z": -0.0001678466796875,
+        "w": 0.9816281795501709
+    },
+    "created": 1610824800010240,
+    "lastEditedBy": "{c23fcf47-b40f-4528-b6a3-9a07c229b205}",
+    "queryAACube": {
+        "x": 178.32675170898438,
+        "y": 4.489709377288818,
+        "z": 147.093017578125,
+        "scale": 11.390210151672363
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/tp_crom_to_virz.js",
+    "scriptTimestamp": 1651460538368,
+    "color": {
+        "red": 240,
+        "green": 220,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{cefe8c65-fc0b-42ac-8fa0-4ba3e7cd1423}",
+    "type": "Box",
+    "lastEdited": 1750813953710600,
+    "visible": false,
+    "name": "STOPPER_EXIT",
+    "locked": true,
+    "position": {
+        "x": 184.41445922851562,
+        "y": 10.184814453125,
+        "z": 153.75999450683594
+    },
+    "dimensions": {
+        "x": 7.565380573272705,
+        "y": 8.386239051818848,
+        "z": 0.9627982974052429
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.19075298309326172,
+        "z": -0.0001678466796875,
+        "w": 0.9816281795501709
+    },
+    "created": 1610824665792512,
+    "lastEditedBy": "{8af0d101-fc08-426f-bb94-b37f4a91c093}",
+    "queryAACube": {
+        "x": 178.74676513671875,
+        "y": 4.5171217918396,
+        "z": 148.09230041503906,
+        "scale": 11.3353853225708
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 0,
+        "green": 180,
+        "blue": 239
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c68854ea-c00d-4ac2-9709-826ab9558ff9}",
+    "type": "Zone",
+    "lastEdited": 1750813953725403,
+    "name": "ARRIVAL_FLYABLE",
+    "locked": true,
+    "position": {
+        "x": 180.03012084960938,
+        "y": 9.47021484375,
+        "z": 148.5557861328125
+    },
+    "dimensions": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1613444998496256,
+    "lastEditedBy": "{9caeebd9-0d7f-4dac-8c14-3b6d9be19932}",
+    "queryAACube": {
+        "x": 171.369873046875,
+        "y": 0.8099603652954102,
+        "z": 139.89553833007812,
+        "scale": 17.32050895690918
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "box",
+    "keyLight": {
+        "direction": {
+            "x": 0,
+            "y": -0.7071067690849304,
+            "z": 0.7071067690849304
+        },
+        "castShadows": true
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{36c455c5-3a2a-4b0c-ba77-84f106bae204}",
+    "type": "Material",
+    "lastEdited": 1750813953699359,
+    "parentID": "{c9e29039-2cdf-408a-a61b-5dbaa388848d}",
+    "name": "LANTERN_MATERIAL",
+    "locked": true,
+    "position": {
+        "x": 0.0367889404296875,
+        "y": 0.248291015625,
+        "z": 0.000008255243301391602
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 1
+    },
+    "created": 1610856341176320,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": 3.5281262397766113,
+        "y": 4001.38720703125,
+        "z": 58.74419403076172,
+        "scale": 1.7209510803222656
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n  \"materialVersion\": 1,\n  \"materials\": [\n    {\n      \"name\": \"untitled\",\n      \"albedo\": [\n        1,\n        1,\n        1\n      ],\n      \"metallic\": 0.001,\n      \"roughness\": 0.5,\n      \"opacity\": 1,\n      \"emissive\": [\n        1.71,\n        0.737235294117647,\n        0.3723529411764706\n      ],\n      \"scattering\": 0,\n      \"unlit\": false,\n      \"model\": \"hifi_pbr\"\n    }\n  ]\n}",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{c7e2b562-3b88-44fa-9fd2-dc6090ec89ef}",
+    "type": "Material",
+    "lastEdited": 1750813953721974,
+    "parentID": "{2688b1a2-8c2d-4af7-807a-1257330bfe56}",
+    "name": "LANTERN_MATERIAL (2)",
+    "locked": true,
+    "position": {
+        "x": -0.00942230224609375,
+        "y": 0.036865234375,
+        "z": 0.004327468574047089
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 1
+    },
+    "created": 1611290535526400,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": 65.1025390625,
+        "y": 3997.924560546875,
+        "z": 83.78119659423828,
+        "scale": 2.937255859375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "materialURL": "materialData",
+    "priority": 1,
+    "parentMaterialName": "[mat::LIGHT]",
+    "materialData": "{\n  \"materialVersion\": 1,\n  \"materials\": [\n    {\n      \"name\": \"untitled\",\n      \"albedo\": [\n        1,\n        1,\n        1\n      ],\n      \"metallic\": 0.001,\n      \"roughness\": 0.5,\n      \"opacity\": 1,\n      \"emissive\": [2.11, 0.3723529411764706, 0.3723529411764706],\n      \"scattering\": 0,\n      \"unlit\": false,\n      \"model\": \"hifi_pbr\"\n    }\n  ]\n}",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d9280805-2b20-4349-99e4-e241e1d0ab33}",
+    "type": "Light",
+    "lastEdited": 1750813953733790,
+    "parentID": "{2688b1a2-8c2d-4af7-807a-1257330bfe56}",
+    "name": "LANTER_LIGHT (2)",
+    "locked": true,
+    "position": {
+        "x": -0.00937652587890625,
+        "y": 0.68359375,
+        "z": 0.00431668758392334
+    },
+    "dimensions": {
+        "x": 16.48162841796875,
+        "y": 16.48162841796875,
+        "z": 16.48162841796875
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 1
+    },
+    "created": 1611290535526400,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": 51.80831527709961,
+        "y": 3985.1953125,
+        "z": 70.3724594116211,
+        "scale": 28.54701805114746
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 17,
+        "blue": 0
+    },
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 2,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{0ad25718-5137-47de-950c-b83117c3ec65}",
+    "type": "Light",
+    "lastEdited": 1750813953016282,
+    "name": "ORANGE MUSH LIGHT",
+    "locked": true,
+    "position": {
+        "x": 82.34735107421875,
+        "y": 0.109375,
+        "z": 9.866962432861328
+    },
+    "dimensions": {
+        "x": 1.7117193937301636,
+        "y": 1.7117193937301636,
+        "z": 1.7117193937301636
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1618281936977920,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 80.86495971679688,
+        "y": -1.3730175495147705,
+        "z": 8.384570121765137,
+        "scale": 2.964785099029541
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 106,
+        "blue": 0
+    },
+    "intensity": 2,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 0.30000001192092896,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d933711d-d4d4-4f2e-b4a9-4443f0767aab}",
+    "type": "Light",
+    "lastEdited": 1750813953883128,
+    "parentID": "{c9e29039-2cdf-408a-a61b-5dbaa388848d}",
+    "name": "LANTER_LIGHT",
+    "locked": true,
+    "position": {
+        "x": -0.007709503173828125,
+        "y": 0.674072265625,
+        "z": 0.008131027221679688
+    },
+    "dimensions": {
+        "x": 16.48162841796875,
+        "y": 16.48162841796875,
+        "z": 16.48162841796875
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.0000457763671875,
+        "z": -0.0000457763671875,
+        "w": 1
+    },
+    "created": 1610856341176320,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": -10.04482650756836,
+        "y": 3988.237060546875,
+        "z": 45.12216567993164,
+        "scale": 28.54701805114746
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 252,
+        "green": 74,
+        "blue": 15
+    },
+    "intensity": 5,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 1.2000000476837158,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{72a9e787-ed7d-448f-aee6-91bf3a9914c6}",
+    "type": "Box",
+    "lastEdited": 1750813953718272,
+    "visible": false,
+    "name": "TP_FLOOR",
+    "locked": true,
+    "position": {
+        "x": 181.20089721679688,
+        "y": 5.984619140625,
+        "z": 148.9367218017578
+    },
+    "dimensions": {
+        "x": 7.987594127655029,
+        "y": 1.124462604522705,
+        "z": 12.136335372924805
+    },
+    "rotation": {
+        "x": -0.0000762939453125,
+        "y": -0.27992677688598633,
+        "z": -0.0000457763671875,
+        "w": 0.9600213766098022
+    },
+    "created": 1610824934227968,
+    "lastEditedBy": "{8af0d101-fc08-426f-bb94-b37f4a91c093}",
+    "queryAACube": {
+        "x": 173.9146728515625,
+        "y": -1.3016128540039062,
+        "z": 141.65048217773438,
+        "scale": 14.572463989257812
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 12,
+        "green": 240,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2688b1a2-8c2d-4af7-807a-1257330bfe56}",
+    "type": "Model",
+    "lastEdited": 1750813953731200,
+    "name": "LANTERN (2)",
+    "locked": true,
+    "position": {
+        "x": 169.4872283935547,
+        "y": 5.38134765625,
+        "z": 150.22341918945312
+    },
+    "dimensions": {
+        "x": 0.24304944276809692,
+        "y": 1.6862751245498657,
+        "z": 0.24304941296577454
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1611290535526400,
+    "lastEditedBy": "{caf176de-42e1-425c-804c-2ca57122cbfa}",
+    "queryAACube": {
+        "x": -0.08660253882408142,
+        "y": -0.08660253882408142,
+        "z": -0.08660253882408142,
+        "scale": 4013.8291015625
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LANTERN.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{dd33b513-d631-4a34-8f4b-7f4a6391c12d}",
+    "type": "Model",
+    "lastEdited": 1750813953015350,
+    "name": "MAGIC_MUSHROOM_orange.fst",
+    "locked": true,
+    "position": {
+        "x": 82.32776641845703,
+        "y": 0,
+        "z": 9.783287048339844
+    },
+    "dimensions": {
+        "x": 0.13675278425216675,
+        "y": 0.15922631323337555,
+        "z": 0.13736331462860107
+    },
+    "rotation": {
+        "x": -0.10710304975509644,
+        "y": -0.018417656421661377,
+        "z": -0.15727472305297852,
+        "w": 0.9815366268157959
+    },
+    "created": 1618281936977920,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": 82.20234680175781,
+        "y": -0.12542231380939484,
+        "z": 9.657864570617676,
+        "scale": 0.2508446276187897
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 600,
+    "cloneLimit": 2,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_orange.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{3f2b4caf-4d31-4777-aa26-e0c6626007e0}",
+    "type": "Box",
+    "lastEdited": 1750813952988709,
+    "visible": false,
+    "name": "Sound Emitter 2",
+    "locked": true,
+    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "position": {
+        "x": 89.18130493164062,
+        "y": 20.221923828125,
+        "z": 0
+    },
+    "dimensions": {
+        "x": 1.7470537424087524,
+        "y": 1.7470537424087524,
+        "z": 1.7470537424087524
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609651602849792,
+    "lastEditedBy": "{d6b9caf8-41a8-45d7-a73a-fb41d95cad38}",
+    "queryAACube": {
+        "x": 87.6683120727539,
+        "y": 18.70893096923828,
+        "z": -1.5129929780960083,
+        "scale": 3.0259859561920166
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{917deff5-35c5-432b-ac88-01da39f10c4f}",
+    "type": "Light",
+    "lastEdited": 1750813953728935,
+    "name": "EXIT_TUNEL_LIGHT",
+    "locked": true,
+    "position": {
+        "x": 184.423095703125,
+        "y": 9.751953125,
+        "z": 157.108154296875
+    },
+    "dimensions": {
+        "x": 28.817102432250977,
+        "y": 28.817102432250977,
+        "z": 28.817102432250977
+    },
+    "rotation": {
+        "x": -0.0000457763671875,
+        "y": -0.3842068910598755,
+        "z": -0.0000152587890625,
+        "w": 0.9232470989227295
+    },
+    "created": 1610824531574784,
+    "lastEditedBy": "{c23fcf47-b40f-4528-b6a3-9a07c229b205}",
+    "queryAACube": {
+        "x": 159.4667510986328,
+        "y": -15.204391479492188,
+        "z": 132.1518096923828,
+        "scale": 49.912689208984375
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "color": {
+        "red": 255,
+        "green": 77,
+        "blue": 0
+    },
+    "intensity": 8,
+    "exponent": 1,
+    "cutoff": 75,
+    "falloffRadius": 1,
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{aae784e5-40bb-4550-b4b5-b881ceea9b2f}",
+    "type": "Model",
+    "lastEdited": 1750813953875183,
+    "name": "CROM_CRUACH_LANDSCAPE_100",
+    "locked": true,
+    "position": {
+        "x": 103.39604949951172,
+        "y": 6.59619140625,
+        "z": 65.58175659179688
+    },
+    "dimensions": {
+        "x": 395.45977783203125,
+        "y": 242.47369384765625,
+        "z": 425.2586669921875
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1609559261052928,
+    "lastEditedBy": "{67fdca53-4f5f-48d2-a008-3704decfb695}",
+    "queryAACube": {
+        "x": -211.25726318359375,
+        "y": -308.05712890625,
+        "z": -249.07156372070312,
+        "scale": 629.306640625
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "shapeType": "static-mesh",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/CROM_CRUACH_LANDSCAPE_100.fbx",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{434450a2-fab9-47f8-b867-d7f36f451e34}",
+    "type": "Model",
+    "lastEdited": 1750813953045103,
+    "name": "MAGIC_MUSHROOM_violet.fst",
+    "locked": true,
+    "position": {
+        "x": 0,
+        "y": 5.114501953125,
+        "z": 77.25044250488281
+    },
+    "dimensions": {
+        "x": 0.12395745515823364,
+        "y": 0.1357267200946808,
+        "z": 0.12451085448265076
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000457763671875,
+        "z": -0.14006257057189941,
+        "w": 0.9901427030563354
+    },
+    "created": 1618282339631104,
+    "lastEditedBy": "{3e16c017-ac8d-4ace-9d74-047cfc6648d5}",
+    "queryAACube": {
+        "x": -0.11100692301988602,
+        "y": 5.003495216369629,
+        "z": 77.13943481445312,
+        "scale": 0.22201384603977203
+    },
+    "renderWithZones": [
+        "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}"
+    ],
+    "grab": {
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "gravity": {
+        "x": 0,
+        "y": -9.800000190734863,
+        "z": 0
+    },
+    "cloneable": true,
+    "cloneLifetime": 800,
+    "cloneLimit": 4,
+    "cloneDynamic": true,
+    "shapeType": "sphere",
+    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_violet.fst",
+    "blendshapeCoefficients": "{\n}\n",
+    "animation": {
+        "smoothFrames": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{6e310fb9-cd83-40a7-9464-d8115c1e4f09}",
+    "type": "Zone",
+    "lastEdited": 1750813953879183,
+    "name": "CROM_CRUACH_ZONE",
+    "locked": true,
+    "position": {
+        "x": 103.39604949951172,
+        "y": 6.59619140625,
+        "z": 65.58175659179688
+    },
+    "dimensions": {
+        "x": 1000,
+        "y": 800,
+        "z": 1000
+    },
+    "rotation": {
+        "x": 0.10957503318786621,
+        "y": -0.24068057537078857,
+        "z": 0.027237296104431152,
+        "w": 0.9640191793441772
+    },
+    "created": 1609559261052928,
+    "lastEditedBy": "{af9bba96-b5dc-4d0d-9f77-a910f8b07f4f}",
+    "queryAACube": {
+        "x": -709.0078125,
+        "y": -805.8076782226562,
+        "z": -746.8221435546875,
+        "scale": 1624.8077392578125
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "shapeType": "box",
+    "keyLight": {
+        "color": {
+            "red": 13,
+            "green": 40,
+            "blue": 89
+        },
+        "intensity": 0.5,
+        "direction": {
+            "x": -0.32210883498191833,
+            "y": -0.34289780259132385,
+            "z": 0.88242107629776
+        },
+        "castShadows": true,
+        "shadowBias": 0.019999999552965164,
+        "shadowMaxDistance": 120
+    },
+    "ambientLight": {
+        "ambientIntensity": 0.10000000149011612,
+        "ambientURL": "http://metaverse.bashora.com/skyboxes/NIGHT_AND_MOON.jpg"
+    },
+    "skybox": {
+        "color": {
+            "red": 46,
+            "green": 88,
+            "blue": 255
+        },
+        "url": "http://metaverse.bashora.com/skyboxes/NIGHT_AND_MOON.jpg"
+    },
+    "haze": {
+        "hazeRange": 1500,
+        "hazeColor": {
+            "red": 172,
+            "green": 213,
+            "blue": 252
+        },
+        "hazeGlareColor": {
+            "red": 67,
+            "green": 94,
+            "blue": 247
+        },
+        "hazeEnableGlare": true,
+        "hazeAltitudeEffect": true,
+        "hazeCeiling": 4000,
+        "hazeBaseRef": 3920
+    },
+    "bloom": {
+        "bloomIntensity": 0.6000000238418579
+    },
+    "keyLightMode": "enabled",
+    "ambientLightMode": "enabled",
+    "skyboxMode": "enabled",
+    "hazeMode": "enabled",
+    "bloomMode": "enabled",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+}
+    ],
+  "Id": "{a31112d4-2659-4b2e-8e52-bc7046788660}",
+  "Version": 147
+}
