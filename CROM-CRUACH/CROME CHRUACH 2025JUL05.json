@@ -57,7 +57,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/crom_cruach_ritual.js?version=2",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/crom_cruach_ritual.js?version=2",
     "scriptTimestamp": 1737089613824,
     "color": {
         "red": 0,
@@ -124,9 +124,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitClient.js",
     "scriptTimestamp": 1611459854336,
-    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "serverScripts": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitServer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -192,9 +192,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitClient.js",
     "scriptTimestamp": 1611459854336,
-    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "serverScripts": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitServer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -260,9 +260,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitClient.js",
     "scriptTimestamp": 1611459854336,
-    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "serverScripts": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitServer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -328,9 +328,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitClient.js",
     "scriptTimestamp": 1611459854336,
-    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "serverScripts": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitServer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -396,9 +396,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "http://metaverse.bashora.com/scripts/sit/sitClient.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitClient.js",
     "scriptTimestamp": 1611459854336,
-    "serverScripts": "http://metaverse.bashora.com/scripts/sit/sitServer.js",
+    "serverScripts": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/sit/sitServer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -418,7 +418,7 @@
     "visible": false,
     "name": "Sound Emitter 1",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 39.037254333496094,
         "y": 14.899169921875,
@@ -462,7 +462,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -532,7 +532,7 @@
     "cloneLimit": 3,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_blue.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_blue.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -550,7 +550,7 @@
     "visible": false,
     "name": "Sound Emitter 2",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 30.543418884277344,
         "y": 20.225830078125,
@@ -594,7 +594,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 255,
         "green": 0,
@@ -614,7 +614,7 @@
     "visible": false,
     "name": "Sound Emitter 1",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 39.03410339355469,
         "y": 10.91357421875,
@@ -658,7 +658,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -678,7 +678,7 @@
     "visible": false,
     "name": "Sound Emitter 2",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 44.077354431152344,
         "y": 20.22705078125,
@@ -722,7 +722,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 255,
         "green": 0,
@@ -784,7 +784,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LOG_SEAT_1.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -844,7 +844,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LOG_SEAT_1.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -904,7 +904,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_1.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LOG_SEAT_1.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -964,7 +964,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LOG_SEAT_2.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LOG_SEAT_2.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1023,7 +1023,7 @@
             "w": 1
         }
     },
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/FIRE_RING.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/FIRE_RING.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1223,7 +1223,7 @@
     "cloneLimit": 3,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_red.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_red.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1241,7 +1241,7 @@
     "visible": false,
     "name": "Sound Emitter 1",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 78.17738342285156,
         "y": 18.91357421875,
@@ -1285,7 +1285,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -1355,7 +1355,7 @@
     "cloneLimit": 2,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_yellow.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_yellow.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1423,7 +1423,7 @@
     "cloneLimit": 2,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_yellow.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_yellow.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1556,7 +1556,7 @@
     "cloneLimit": 3,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_green.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_green.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1616,7 +1616,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LANTERN.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LANTERN.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1684,7 +1684,7 @@
     "cloneLimit": 1,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_white.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_white.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -1767,7 +1767,7 @@
     "visible": false,
     "name": "Sound Emitter 2",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 96.04582214355469,
         "y": 23.088623046875,
@@ -1811,7 +1811,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 255,
         "green": 0,
@@ -1831,7 +1831,7 @@
     "visible": false,
     "name": "Sound Emitter 2",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 165.44644165039062,
         "y": 20.220947265625,
@@ -1875,7 +1875,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 255,
         "green": 0,
@@ -1895,7 +1895,7 @@
     "visible": false,
     "name": "Sound Emitter 1",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 148.1522216796875,
         "y": 18.911376953125,
@@ -1939,7 +1939,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -1959,7 +1959,7 @@
     "visible": false,
     "name": "Sound Emitter 1",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_01.mp3\",\n  \"soundVolume\": 1.6,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 136.7528076171875,
         "y": 14.89990234375,
@@ -2003,7 +2003,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -2069,7 +2069,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/tp_crom_to_virz.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/tp_crom_to_virz.js",
     "scriptTimestamp": 1651460538368,
     "color": {
         "red": 240,
@@ -2629,7 +2629,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/LANTERN.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/LANTERN.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -2697,7 +2697,7 @@
     "cloneLimit": 2,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_orange.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_orange.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -2715,7 +2715,7 @@
     "visible": false,
     "name": "Sound Emitter 2",
     "locked": true,
-    "userData": "{\n  \"soundURL\": \"http://metaverse.bashora.com/scripts/crom_cruach/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
+    "userData": "{\n  \"soundURL\": \"https://aleziakurdis.github.io/inertia/CROM-CRUACH/forest_sound_02.mp3\",\n  \"soundVolume\": 3,\n  \"soundLoop\": true,\n  \"soundLocal\": true,\n  \"refreshInterval\": 1500\n}",
     "position": {
         "x": 89.18130493164062,
         "y": 20.221923828125,
@@ -2759,7 +2759,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "http://metaverse.bashora.com/scripts/crom_cruach/soundplayer.js",
+    "script": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/soundplayer.js",
     "color": {
         "red": 255,
         "green": 0,
@@ -2886,7 +2886,7 @@
         }
     },
     "shapeType": "static-mesh",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/CROM_CRUACH_LANDSCAPE_100.fbx",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/CROM_CRUACH_LANDSCAPE_100.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -2954,7 +2954,7 @@
     "cloneLimit": 4,
     "cloneDynamic": true,
     "shapeType": "sphere",
-    "modelURL": "http://metaverse.bashora.com/objects/CROM_CRUACH/MAGIC_MUSHROOM_violet.fst",
+    "modelURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/MAGIC_MUSHROOM_violet.fst",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "smoothFrames": false
@@ -3031,7 +3031,7 @@
     },
     "ambientLight": {
         "ambientIntensity": 0.10000000149011612,
-        "ambientURL": "http://metaverse.bashora.com/skyboxes/NIGHT_AND_MOON.jpg"
+        "ambientURL": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/NIGHT_AND_MOON.jpg"
     },
     "skybox": {
         "color": {
@@ -3039,7 +3039,7 @@
             "green": 88,
             "blue": 255
         },
-        "url": "http://metaverse.bashora.com/skyboxes/NIGHT_AND_MOON.jpg"
+        "url": "https://aleziakurdis.github.io/inertia/CROM-CRUACH/NIGHT_AND_MOON.jpg"
     },
     "haze": {
         "hazeRange": 1500,
