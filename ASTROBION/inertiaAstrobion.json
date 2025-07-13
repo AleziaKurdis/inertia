@@ -1,0 +1,63 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/-6000,-6000,6000\/0,-0.0216264,0.000152732,0.999766"
+   },
+   "Entities":[
+        {
+            "id":"{6e7adc37-41e5-4f45-a225-2d106ad03e78}",
+            "type":"Zone",
+            "name":"ASTROBION_VISIBILITY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":8000,
+                "y":8000,
+                "z":8000
+            },
+            "position": {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },         
+            "rotation":{
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/ASTROBION/navigationAmbienceAstrobion.js"
+        },
+        {
+            "id": "{68dc28e2-896d-453a-b4cf-cc2139ee5a70}",
+            "type": "Shape",
+            "shape": "Sphere",
+            "position":  {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },
+            "name": "Singularity",
+            "locked": true,
+            "collisionless": true,
+            "visible": false,
+            "dimensions": {
+                "x": 20,
+                "y": 20,
+                "z": 20
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/inertia/ASTROBION/singularityAstrobion.js"
+        }
+   ],
+   "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
+   "Version":120
+}
