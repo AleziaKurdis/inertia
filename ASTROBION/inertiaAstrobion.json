@@ -56,6 +56,36 @@
                 "grabbable": false
             },
             "script": "https://aleziakurdis.github.io/inertia/ASTROBION/singularityAstrobion.js"
+        },
+        {
+            "id": "{2c936baf-2b11-4da6-87fe-322754c9af92}",
+            "type": "Model",
+            "position": {
+                        "x": -6000,
+                        "y": -6000,
+                        "z": 6000
+                    },
+            "name": "VIREL-CORE",
+            "locked": true,
+            "dimensions": {
+                "x": 4027.9541015625,
+                "y": 711.9500732421875,
+                "z": 4001.095947265625
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/VIREL-CORE.fst",
+            "useOriginalPivot": true,
+            "animation": {
+                "allowTranslation": false
+            }
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
