@@ -1,3 +1,3 @@
 name = BRAINSTORMER
 filename = BRAINSTORMER.glb
-materialMap = [{"mat::DARKM": {"materials":[ { "name": "DARKM", "albedo":[1,1,1], "metallic": 0.01, "roughness": 0.2, "normalMap": "organic2_normal-ogl.jpg", "cullFaceMode":"CULL_BACK"}]},{"mat::EMISSIVE": {"materials":[ { "name": "EMISSIVE", "albedo":[1,1,1], "metallic": 0.01, "roughness": 0.5, "normalMap": "", "emissive": [2.6,2.6,0], "cullFaceMode":"CULL_BACK"}]}]
+materialMap = [{"mat::DARKM":"DARKM/darkmMaterial.json#DARKM"}, {"mat::EMISSIVE":"EMISSIVE/emissiveMaterial.json#EMISSIVE"}]
