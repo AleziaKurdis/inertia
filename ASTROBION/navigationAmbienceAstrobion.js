@@ -217,7 +217,8 @@
                 "shadowMaxDistance": 100
             },
             "ambientLight": {
-                "ambientIntensity": 0.5,
+                "ambientColor": {"red": 255, "green": 255, "blue": 255},
+                "ambientIntensity": 0.9,
                 "ambientURL": skyTextureUrl
             },
             "skybox": {
