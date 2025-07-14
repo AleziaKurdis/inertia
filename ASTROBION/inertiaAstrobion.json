@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/-6000,-6000,6000\/0,-0.0216264,0.000152732,0.999766"
+      "\/":"\/-7140.27,-5773.58,4574.39\/0,0.691054,0,0.722803"
    },
    "Entities":[
         {
@@ -86,6 +86,30 @@
             "animation": {
                 "allowTranslation": false
             }
+        },
+        {
+            "id": "{36b5b48f-e681-4eec-8284-887b5b4b630a}",
+            "type": "Model",
+            "position": {"x":-7118.1328125,"y":-5770.47607421875,"z":4604.7470703125},
+            "name": "BREEMOR",
+            "locked": true,
+            "dimensions": {
+                "x": 58.304840087890625,
+                "y": 37.439666748046875,
+                "z": 133.204833984375
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/breemorManager.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/BREEMOR.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
