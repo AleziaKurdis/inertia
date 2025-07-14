@@ -37,13 +37,16 @@
     var THUNDER_SOUND_1 = ROOT + "sounds/thunder0.mp3";
     var THUNDER_SOUND_2 = ROOT + "sounds/thunder1.mp3";
     var THUNDER_SOUND_3 = ROOT + "sounds/thunder2.mp3";
-    var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
+    var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";
     var thunderSound = []; 
     var thunderInjector;
 
+    var channelComm = "ak.serverTimeService.overte";
+    var deltaWithServerTime = 0;
+
     var zoneID = Uuid.NONE;
     var thisEntityID;
-    var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
+    var UNIVERSE_SOUND = ROOT + "sounds/astrobionAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
@@ -61,9 +64,34 @@
         }        
     ];
     
-   
+
+    function onMessageReceived(channel, message, sender, localOnly) {
+        var messageToSent;
+        var i;
+        var displayText = "";
+        if (channel === channelComm) {
+            var data = JSON.parse(message);
+            if (data.action === "SERVER_TIME") {
+                var today = new Date();
+                deltaWithServerTime = today.getTime() - data.time;
+                //print("SERVER TIME OFFSET: " + deltaWithServerTime);
+                //print("SERVER TIME: " + data.time);
+                //print("LOCAL TIME: " + today.getTime());
+            }
+        }
+    }
+
     this.preload = function(entityID) {
         thisEntityID = entityID;
+        
+        Messages.subscribe(channelComm);
+        Messages.messageReceived.connect(onMessageReceived);
+        
+        var messageToSend = {
+            "action": "GET_SERVER_TIME"
+        };
+        Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
+        
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
  
@@ -104,7 +132,11 @@
     }
 
     function shutdown() {
-        if (isInitiated){            
+        if (isInitiated){
+            
+            Messages.messageReceived.disconnect(onMessageReceived);
+            Messages.unsubscribe(channelComm);
+        
             Script.update.disconnect(myTimer);
             if (astrolithID != Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
@@ -143,7 +175,11 @@
     }
 
     function generateSky(entityID) {
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
+        var zoneRotation = Quat.fromVec3Degrees( {
+            "x": GetCurrentCycleValue(360, 3600),
+            "y": - GetCurrentCycleValue(360, 900),
+            "z": GetCurrentCycleValue(360, 1800)
+        } );
         var skyTextureUrl = ROOT + "images/ASTROBION_SKY.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
@@ -202,9 +238,9 @@
             "bloomMode": "enabled",
             "angularDamping": 0,
             "angularVelocity": {
-                "x":0,
-                "y":-0.015,
-                "z":0
+                "x":0.1 * (Math.PI / 180),
+                "y":-0.4 * (Math.PI / 180),
+                "z":0.2 * (Math.PI / 180)
             }
         },"local");
     }
@@ -354,7 +390,7 @@
             var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
             //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
-            if ( d29CurrentHour > 2 && d29CurrentHour < 5 ) {
+            if ( d29CurrentHour > 6 && d29CurrentHour < 9 ) {
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
@@ -464,7 +500,7 @@
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(cyclelength, cycleduration){
 		var today = new Date();
-		var TodaySec = today.getTime()/1000;
+		var TodaySec = (today.getTime()- deltaWithServerTime)/1000;
 		var CurrentSec = TodaySec%cycleduration;
 		
 		return (CurrentSec/cycleduration)*cyclelength;

@@ -13,6 +13,9 @@
     var ROOT = Script.resolvePath('').split("singularityAstrobion.js")[0];
     var thisEntity;
 
+    var channelComm = "ak.serverTimeService.overte";
+    var deltaWithServerTime = 0;
+
     var UPDATE_TIMER_INTERVAL = 5000; // 5 sec 
     var processTimer = 0;
 
@@ -28,14 +31,39 @@
     var lightTableID = Uuid.NONE;
     
     var D29_DAY_DURATION = 104400; //sec
-    var STAR_DIAMETER = 1200; //m
+    var STAR_DIAMETER = 600; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
-    
+
+    function onMessageReceived(channel, message, sender, localOnly) {
+        var messageToSent;
+        var i;
+        var displayText = "";
+        if (channel === channelComm) {
+            var data = JSON.parse(message);
+            if (data.action === "SERVER_TIME") {
+                var today = new Date();
+                deltaWithServerTime = today.getTime() - data.time;
+                //print("SERVER TIME OFFSET: " + deltaWithServerTime);
+                //print("SERVER TIME: " + data.time);
+                //print("LOCAL TIME: " + today.getTime());
+            }
+        }
+    }
+
     this.preload = function(entityID) { 
         thisEntity = entityID;
+        
+        Messages.subscribe(channelComm);
+        Messages.messageReceived.connect(onMessageReceived);
+        
+        var messageToSend = {
+            "action": "GET_SERVER_TIME"
+        };
+        Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
+        
         var prop = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
@@ -234,6 +262,9 @@
             lightTableID = Uuid.NONE;
         }
 
+        Messages.messageReceived.disconnect(onMessageReceived);
+        Messages.unsubscribe(channelComm);
+
         Script.update.disconnect(myTimer);
     };
 
@@ -275,12 +306,11 @@
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
 		var today = new Date();
-		var TodaySec = today.getTime()/1000;
+		var TodaySec = (today.getTime()- deltaWithServerTime)/1000;
 		var CurrentSec = TodaySec%cycleduration;
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
-	}    
-
+	}
 
 })
