@@ -83,9 +83,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/VIREL-CORE.fst",
             "useOriginalPivot": true,
-            "animation": {
-                "allowTranslation": false
-            }
+            "script": "https://aleziakurdis.github.io/inertia/ASTROBION/astrobion.js"
         },
         {
             "id": "{36b5b48f-e681-4eec-8284-887b5b4b630a}",
