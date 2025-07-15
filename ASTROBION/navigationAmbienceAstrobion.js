@@ -74,9 +74,6 @@
             if (data.action === "SERVER_TIME") {
                 var today = new Date();
                 deltaWithServerTime = today.getTime() - data.time;
-                //print("SERVER TIME OFFSET: " + deltaWithServerTime);
-                //print("SERVER TIME: " + data.time);
-                //print("LOCAL TIME: " + today.getTime());
             }
         }
     }
