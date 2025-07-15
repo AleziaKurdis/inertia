@@ -41,6 +41,7 @@
     }
 
     this.preload = function(entityID) { 
+        Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         thisEntity = entityID;
         
         Messages.subscribe(channelComm);
@@ -134,7 +135,8 @@
 
         Messages.messageReceived.disconnect(onMessageReceived);
         Messages.unsubscribe(channelComm);
-
+        
+        Workload.getConfig("controlViews")["regulateViewRanges"] = true;
     };
 
     /*
