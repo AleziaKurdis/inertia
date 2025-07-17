@@ -19,9 +19,6 @@
     var generatorPosition;
     var renderWithZones;
     
-    var matId = Uuid.NONE;
-    var lightTableID = Uuid.NONE;
-    
     var D29_DAY_DURATION = 104400; //sec
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
 
