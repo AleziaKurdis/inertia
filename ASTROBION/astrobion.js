@@ -157,22 +157,71 @@
         var i, bsID;
         for (i = 0; i < brainStormerFXitems.length; i++) {
             bsID = Entities.addEntity({
-                "type": "Shape",
-                "shape": "Sphere",
+                "type": "ParticleEffect",
+                "dimensions": {
+                    "x": 960,
+                    "y": 960,
+                    "z": 960
+                },
+                "shapeType": "ellipsoid",
+                "color": {
+                    "red": 255,
+                    "green": 220,
+                    "blue": 105
+                },
+                "alpha": 0.029999999329447746,
+                "textures": ROOT + "images/fog.png",
+                "lifespan": 10,
+                "emitRate": 100,
+                "emitSpeed": 0,
+                "speedSpread": 20,
+                "emitOrientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                },
+                "emitDimensions": {
+                    "x": 100,
+                    "y": 100,
+                    "z": 100
+                },
+                "emitRadiusStart": 0.30000001192092896,
+                "polarFinish": 3.1415927410125732,
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "particleRadius": 90,
+                "radiusSpread": 30,
+                "radiusStart": 60,
+                "radiusFinish": 180,
+                "colorStart": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "colorFinish": {
+                    "red": 255,
+                    "green": 255,
+                    "blue": 255
+                },
+                "alphaSpread": 0.019999999552965164,
+                "alphaStart": 0,
+                "alphaFinish": 0,
+                "spinSpread": 1.0499999523162842,
+                "spinStart": -1.0499999523162842,
+                "spinFinish": 1.0499999523162842,
+                "rotateWithEntity": true
                 "localPosition": Vec3.subtract(brainStormerFXitems[i], REF_TO_LOCAL),
                 "parentID": id,
                 "name": "BRAIN-STORM " + i,
-                "dimensions": {
-                    "x": 2.0,
-                    "y": 2.0,
-                    "z": 2.0
-                },
                 "renderWithZones": renderWithZones,
                 "grab": {
                     "grabbable": false
                 },
-                "visible": false,
-                "collisionless": false,
+                "visible": true,
                 "script": ROOT + "storm.js"
             }, "local");
         }
