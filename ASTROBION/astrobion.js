@@ -213,7 +213,7 @@
                 "spinSpread": 1.0499999523162842,
                 "spinStart": -1.0499999523162842,
                 "spinFinish": 1.0499999523162842,
-                "rotateWithEntity": true
+                "rotateWithEntity": true,
                 "localPosition": Vec3.subtract(brainStormerFXitems[i], REF_TO_LOCAL),
                 "parentID": id,
                 "name": "BRAIN-STORM " + i,
