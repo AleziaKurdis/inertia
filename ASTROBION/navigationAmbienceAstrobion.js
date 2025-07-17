@@ -47,7 +47,7 @@
     var zoneID = Uuid.NONE;
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/astrobionAmbience.mp3";
-    var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
+    var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.28;
     var universeSound, universeSoundInjector;
     var univerSoundPlaying = 0;
     var blindspots = [

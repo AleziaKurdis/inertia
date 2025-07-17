@@ -169,7 +169,7 @@
                     "green": 220,
                     "blue": 105
                 },
-                "alpha": 0.029999999329447746,
+                "alpha": 0.03,
                 "textures": ROOT + "images/fog.png",
                 "lifespan": 10,
                 "emitRate": 100,
@@ -186,7 +186,7 @@
                     "y": 100,
                     "z": 100
                 },
-                "emitRadiusStart": 0.30000001192092896,
+                "emitRadiusStart": 0.3,
                 "polarFinish": 3.1415927410125732,
                 "emitAcceleration": {
                     "x": 0,
