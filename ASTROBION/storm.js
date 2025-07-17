@@ -54,6 +54,7 @@
     function manageStorm() {
         if (storming) {
             if (Math.random() < 0.02) { //0.02 = 1 fois par 5 sec
+                Entities.editEntity(lightningsID, {"isEmitting": true});
                 var thunderVolume = Math.random();
                 var thunderSoundIndex = Math.floor(Math.random() * thunderSound.length);
                 var thunderPitch = (0.6 + (Math.random() * 1.5));
@@ -64,6 +65,9 @@
                     "volume": thunderVolume,
                     "pitch": thunderPitch
                     });
+                    
+            } else {
+                Entities.editEntity(lightningsID, {"isEmitting": false});
             }
         } else {
             //initiate the storm
@@ -142,7 +146,8 @@
                 "spinSpread": 3.140000104904175,
                 "spinStart": 3.140000104904175,
                 "spinFinish": 3.140000104904175,
-                "emitterShouldTrail": true
+                "emitterShouldTrail": true,
+                "isEmitting": false
             }, "local");
             
             storming = true;
