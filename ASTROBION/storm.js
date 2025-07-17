@@ -19,7 +19,7 @@
     var D29_DAY_DURATION = 104400; //sec
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
 
-    var UPDATE_TIMER_INTERVAL = 2000; // 2 sec 
+    var UPDATE_TIMER_INTERVAL = 4000; // 4 sec 
     var processTimer = 0;
 
     var storming = false;
@@ -52,8 +52,8 @@
     }
 
     function manageStorm() {
-        if (storming) {
-            if (Math.random() < 0.02) { //0.02 = 1 fois par 5 sec
+        if (lightningsID !== Uuid.NONE ) {
+            if (Math.random() < 0.05) { //0.05 = 1 fois sur 20
                 Entities.editEntity(lightningsID, {"isEmitting": true});
                 var thunderVolume = Math.random();
                 var thunderSoundIndex = Math.floor(Math.random() * thunderSound.length);
@@ -149,8 +149,7 @@
                 "emitterShouldTrail": true,
                 "isEmitting": false
             }, "local");
-            
-            storming = true;
+
         }
     }
 
