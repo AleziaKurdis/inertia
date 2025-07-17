@@ -111,10 +111,10 @@
                     "y": 0,
                     "z": 0
                 },
-                "particleRadius": 900,
-                "radiusStart": 900,
-                "radiusFinish": 900,
-                "radiusSpread": 500,
+                "particleRadius": 100,
+                "radiusStart": 100,
+                "radiusFinish": 100,
+                "radiusSpread": 80,
                 "color": {
                     "red": 255,
                     "green": 255,
