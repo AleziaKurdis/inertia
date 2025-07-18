@@ -86,6 +86,93 @@
             "lifetime": 864000
         }, "local");
         entitiesToDelete.push(id);
+
+        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var antiHue = hue - 0.5;
+        if (antiHue < 0) {
+            antiHue = antiHue + 1;
+        }
+        var colorArray = hslToRgb(antiHue, 1, 0.6);
+        var color ={"red": colorArray[0], "green": colorArray[1], "blue": colorArray[2]}
+        
+        var eyeID = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Sphere",
+            "name": "Cortex - lightBulb",
+            "dimensions": {"x":50,"y":50,"z":50},
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "parentID": id,
+            "visible": true,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "lifetime": 25200
+        }, "local");
+
+        var lightOfBulbID = Entities.addEntity({
+            "parentID": eyeID,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "localRotation": {
+                "x": -0.7071,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.7071
+            },
+            "name": "Cortex - bulb-light",
+            "grab": {
+                "grabbable": false
+            },
+            "type": "Light",
+            "dimensions": {
+                "x": 2000.0,
+                "y": 2000.0,
+                "z": 2000.0
+            },
+            "color": color,
+            "intensity": 50,
+            "falloffRadius": 10,
+            "isSpotlight": true,
+            "visible": true,
+            "exponent": 1,
+            "cutoff": 15
+        },"local");
+        
+        var sumColorCompnent = (color.red/255) +(color.green/255) +(color.blue/255);
+        if (sumColorCompnent === 0) { 
+            sumColorCompnent = 0.001; 
+        }
+        var bloomFactor = 9 / sumColorCompnent;
+
+        var materialContent = {
+            "materialVersion": 1,
+            "materials": [
+                    {
+                        "name": "bulb",
+                        "albedo": [1, 1, 1],
+                        "metallic": 1,
+                        "roughness": 1,
+                        "opacity": 1,
+                        "emissive": [(color.red/255) * bloomFactor, (color.green/255) * bloomFactor, (color.blue/255) * bloomFactor],
+                        "scattering": 0,
+                        "unlit": false,
+                        "cullFaceMode": "CULL_NONE",
+                        "model": "hifi_pbr"
+                    }
+                ]
+            };
+        
+        var materialID = Entities.addEntity({
+            "type": "Material",
+            "parentID": eyeID,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.2, "z": 0.0},
+            "name": "Cortex - bulb-material",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(materialContent)
+        },"local");
         
         //BRAINSTORMER #####################################
         rotation = Quat.fromVec3Degrees( {
