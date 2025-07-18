@@ -541,7 +541,6 @@
         }
         
         //Hyperspace
-        "description": uniqueKey,
         id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
