@@ -547,7 +547,7 @@
             "description": uniqueKey,
             "name": "Breemor - Hyperspace",
             "dimensions": properties.dimensions,
-            "localPosition": {"x":0,"y":0,"z":0},
+            "localPosition": {"x":0,"y":2.4065,"z":13.7551},
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "grab": {
