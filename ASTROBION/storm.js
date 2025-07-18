@@ -19,7 +19,7 @@
     var D29_DAY_DURATION = 104400; //sec
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
 
-    var UPDATE_TIMER_INTERVAL = 4000; // 4 sec 
+    var UPDATE_TIMER_INTERVAL = 5000; // 4 sec 
     var processTimer = 0;
 
     var storming = false;
