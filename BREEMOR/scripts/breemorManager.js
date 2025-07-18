@@ -429,7 +429,7 @@
             "localPosition": CARGO_DOOR_LOCAL_POSITION,
             "parentID": entityID,
             "renderWithZones": renderWithZones,
-            "tags": [uniqueKey],
+            "userData": JSON.stringify({"uniqueKey": uniqueKey}),
             "grab": {
                 "grabbable": false
             },
@@ -490,7 +490,7 @@
                 "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
-                "tags": [uniqueKey],
+                "userData": JSON.stringify({"uniqueKey": uniqueKey}),
                 "grab": {
                     "grabbable": false
                 },
