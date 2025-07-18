@@ -17,6 +17,12 @@
     
     this.preload = function(entityID) {
         doorNo = parseInt(Entities.getEntityProperties(entityID, ["description"]).description, 10);
+        var tags = Entities.getEntityProperties(entityID, ["tags"]).tags;
+        if (tags.length > 0) {
+            channelName = channelName + "." + tags[0];
+        } else {
+            channelName = channelName + ".";
+        }
     };
     
     this.enterEntity = function(entityID) {

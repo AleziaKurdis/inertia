@@ -13,6 +13,15 @@
     var ROOT = Script.resolvePath('').split("cargoBayFrontDoorTrigger.js")[0];
 
     var channelName = "org.overte.ak.breemor";
+    
+    this.preload = function(entityID) {
+        var tags = Entities.getEntityProperties(entityID, ["tags"]).tags;
+        if (tags.length > 0) {
+            channelName = channelName + "." + tags[0];
+        } else {
+            channelName = channelName + ".";
+        }
+    };
 
     this.enterEntity = function(entityID) {
         Messages.sendMessage(channelName, "OPEN_CARGO_DOOR");

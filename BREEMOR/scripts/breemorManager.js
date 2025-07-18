@@ -21,6 +21,7 @@
     var cargoZoneID = Uuid.NONE;
     
     var channelName = "org.overte.ak.breemor";
+    var uniqueKey = "";
 
     var CARGO_DOOR_SOUND = ROOT + "../sounds/door.mp3";
     var CARGO_DOOR_LOCAL_POSITION = {"x":0.0,"y":-1.8169,"z":77.3286};
@@ -264,10 +265,17 @@
     this.preload = function(entityID) {
         cargoDoorSound = SoundCache.getSound(CARGO_DOOR_SOUND);
         genericDoorSound = SoundCache.getSound(GENERIC_DOOR_SOUND);
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
+        var properties = Entities.getEntityProperties(entityID, ["dimensions", "description", "renderWithZones", "position"]);
         renderWithZones = properties.renderWithZones;
         entityPosition = properties.position;
+        channelName = channelName + "." + properties.description;
+        uniqueKey = properties.description;
+        
         thisEntityID = entityID;
+        
+        Messages.subscribe(channelName);
+        Messages.messageReceived.connect(onMessageReceived);
+        
         cargoDoorPosition = Vec3.sum(entityPosition, CARGO_DOOR_LOCAL_POSITION);
         
         //Ship Lights
@@ -421,6 +429,7 @@
             "localPosition": CARGO_DOOR_LOCAL_POSITION,
             "parentID": entityID,
             "renderWithZones": renderWithZones,
+            "tags": [uniqueKey],
             "grab": {
                 "grabbable": false
             },
@@ -481,6 +490,7 @@
                 "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":genericDoors[t].localYrotation,"z":0.0}),
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
+                "tags": [uniqueKey],
                 "grab": {
                     "grabbable": false
                 },
@@ -529,6 +539,28 @@
         for (t = 0; t < lightBulbDefinition.length; t++ ) {
             entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition, lightBulbDefinition[t].angle));
         }
+        
+        //Hyperspace
+        "description": uniqueKey,
+        id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "description": uniqueKey,
+            "name": "Breemor - Hyperspace",
+            "dimensions": properties.dimensions,
+            "localPosition": {"x":0,"y":0,"z":0},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "visible": true,
+            "script": ROOT + "hyperspace.js",
+            "lifetime": 25200
+        }, "local");
+        
+        entitiesToDelete.push(id);
     };
     
     function playPunctualSound(sound, position) {
@@ -556,6 +588,9 @@
     }
     
     this.unload = function(entityID) {
+        Messages.messageReceived.disconnect(onMessageReceived);
+        Messages.unsubscribe(channelName);
+        
         var i;
         for (i=0; i < entitiesToDelete.length; i++) {
             Entities.deleteEntity(entitiesToDelete[i]);
@@ -589,6 +624,7 @@
             Entities.deleteEntity(elevatorsButtons[i].id);
             elevatorsButtons[i].id = Uuid.NONE;
         }
+        
     };
 
     function onMessageReceived(channel, message, sender, localOnly) {
@@ -705,14 +741,6 @@
         
         return id;
     }
-
-    Messages.subscribe(channelName);
-    Messages.messageReceived.connect(onMessageReceived);
-
-    Script.scriptEnding.connect(function () {
-        Messages.messageReceived.disconnect(onMessageReceived);
-        Messages.unsubscribe(channelName);
-    });
 
     /*
      * Converts an HSL color value to RGB. Conversion formula
