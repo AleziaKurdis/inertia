@@ -388,7 +388,7 @@
             var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
             //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
-            if ( d29CurrentHour > 6 && d29CurrentHour < 9 ) {
+            if ( d29CurrentHour > 25  ) { //SO NEVER NOT USED
                 if (storming) {
                     // Manage thunder and color
                     Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
