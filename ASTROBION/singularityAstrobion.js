@@ -72,7 +72,7 @@
         currentSunPosition = sunCumputedValues.localPosition;
 
         var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-        var sunColor = hslToRgb(hue, 1, 0.6);
+        var sunColor = hslToRgb(hue, 1, 0.7);
         solarZoneId = Entities.addEntity({
             "name": "SUNLIGHT_(!)_Z0N3",
             "dimensions": {"x": superZoneDimensions.x - 200, "y": superZoneDimensions.y - 200, "z": superZoneDimensions.z - 200},
@@ -166,7 +166,7 @@
             var sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
             var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
-            var sunColor = hslToRgb(hue, 1, 0.6);
+            var sunColor = hslToRgb(hue, 1, 0.7);
             Entities.editEntity(starId, {"localPosition": currentSunPosition});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
