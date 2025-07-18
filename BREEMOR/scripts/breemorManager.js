@@ -554,7 +554,7 @@
                 "grabbable": false
             },
             "collisionless": true,
-            "visible": true,
+            "visible": false,
             "script": ROOT + "hyperspace.js",
             "lifetime": 25200
         }, "local");
