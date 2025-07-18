@@ -25,7 +25,7 @@
     var storming = false;
     var lightningsID = Uuid.NONE;
     
-    var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
+    var LIGNTNINGS_PARTICLE_URL = ROOT + "images/electricArc.png";
     var THUNDER_SOUND_1 = ROOT + "sounds/thunder0.mp3";
     var THUNDER_SOUND_2 = ROOT + "sounds/thunder1.mp3";
     var THUNDER_SOUND_3 = ROOT + "sounds/thunder2.mp3";
