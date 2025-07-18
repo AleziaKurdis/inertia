@@ -1,0 +1,26 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "type": "Model",
+    "name": "BREEMOR",
+    "description": "uniqueKey-placename",
+    "dimensions": {
+        "x": 58.304840087890625,
+        "y": 37.439666748046875,
+        "z": 133.204833984375
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/breemorManager.js",
+    "shapeType": "static-mesh",
+    "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/BREEMOR.fst",
+    "useOriginalPivot": true
+}
+    ],
+  "Id": "{62625c7a-7d24-4a0f-8e37-2b503cdd16d7}",
+  "Version": 147
+}
