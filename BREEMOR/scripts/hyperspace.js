@@ -57,7 +57,7 @@
         if (channel === channelName) {
             if ( message.substr(0, 10) === "HYPERSPACE") {
                 var divided = message.split("_");
-                var myDestination = divided[1];
+                var myDestination = parseInt(divided[1], 10);
                 hyperspace(myDestination);
             }
         }
