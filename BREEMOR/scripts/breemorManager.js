@@ -543,7 +543,7 @@
         //Nav Panel UI
         
         var navPanels = [
-            {"localPosition": {"x":-1.4966,"y":19.3518,"z":-9.5940}, "localRotation": {"x":0,"y":-0.15643446147441864,"z":0,"w":0.987688422203064}}
+            {"localPosition": {"x":-1.5918,"y":19.4773,"z":-9.5825}, "localRotation": {"x":0,"y":-0.10452844202518463,"z":0,"w":0.994521975517273}}
         ];
         
         for (t = 0; t < navPanels.length; t++ ) {
@@ -588,7 +588,7 @@
                 "grabbable": false
             },
             "collisionless": true,
-            "visible": true,
+            "visible": false,
             "script": ROOT + "navPanel.js",
             "lifetime": 25200
         }, "local");
