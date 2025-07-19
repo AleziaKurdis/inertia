@@ -77,7 +77,7 @@
             "dimensions": {"x": 0.43, "y": 0.23, "z": 0.01},
             "localPosition": {"x": 0.0, "y": 0.0, "z": (triggerDimensions.z/2)},
             "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 180.0, "z": 0.0}),
-            "sourceUrl": ROOT + "navPanel.html",
+            "sourceUrl": ROOT + "navPanel.html?channelName=" + channelName,
             "useBackground": true,
             "lifetime": 25200
         }, "local");
@@ -97,6 +97,10 @@
             }
         }  
     }
+
+    Entities.webEventReceived.connect(function (entityID, message ) {
+        print("Message: " + message + " | Entity: " + entityID);
+    });
 
     function initiate(EntID, from) {
         var properties = Entities.getEntityProperties(EntID, ["description", "renderWithZones", "position", "dimensions"]);
