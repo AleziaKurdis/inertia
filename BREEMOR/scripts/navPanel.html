@@ -20,7 +20,7 @@
     </head>
     <script>
         //EventBridge.emitWebEvent("TEST");
-        
+        var navData;
         async function loadJsonFile(filePath) {
             try {
                 const response = await fetch(filePath);
@@ -38,13 +38,24 @@
         // Usage example:
         loadJsonFile("destinations.json").then(data => {
             if (data) {
-                alert("JSON data loaded: |" + JSON.stringify(data) + "|");
-                // Now 'data' variable holds your JSON content
+                navData = data;
+                generateMenu();
             }
         });
         
     </script>
     <body>
-        <h1>Page Title</h1>
+        <div id = "destinations"></div>
+        <script>
+            function generateMenu() {
+                var i;
+                var content = "";
+                for (i = 0; i < navData.length; i++) {
+                    content = content + navData[i].name + "<br>";
+                }
+                document.getElementById("destinations").innerHTML = content;
+            }
+            
+        </script>
     </body>
 </html>
