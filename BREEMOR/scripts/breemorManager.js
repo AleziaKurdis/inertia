@@ -592,6 +592,7 @@
             "script": ROOT + "navPanel.js",
             "lifetime": 25200
         }, "local");
+        print("TRIGGER ID: " + id);
         return id;
     }
     
