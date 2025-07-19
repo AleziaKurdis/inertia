@@ -588,7 +588,7 @@
                 "grabbable": false
             },
             "collisionless": true,
-            "visible": false,
+            "visible": true,
             "script": ROOT + "navPanel.js",
             "lifetime": 25200
         }, "local");
