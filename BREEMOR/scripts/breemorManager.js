@@ -573,6 +573,7 @@
     };
     
     function generateTriggerNavPanel(localPosition, localRotation) {
+        print("BEEN THERE!");
         var id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
