@@ -2,7 +2,7 @@
 //
 //  navigationAmbienceAstrobion.js
 //
-//  Created by Alezia Kurdis, July 13th, 2026.
+//  Created by Alezia Kurdis, July 13th, 2025.
 //  Copyright 2025, Overte e.V.
 //
 //  Space Navigation and ambience, sky and sound for the ASTROBION scenery.
