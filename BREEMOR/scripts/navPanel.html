@@ -19,7 +19,30 @@
         <title>BREEMOR - Hyperspace System</title>
     </head>
     <script>
-        EventBridge.emitWebEvent("TEST");
+        //EventBridge.emitWebEvent("TEST");
+        
+        async function loadJsonFile(filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const jsonData = await response.json();
+                return jsonData;
+            } catch (error) {
+                alert("Error loading JSON file:", error);
+                return null;
+            }
+        }
+
+        // Usage example:
+        loadJsonFile("destinations.json").then(data => {
+            if (data) {
+                alert("JSON data loaded:", JSON.stringify(data));
+                // Now 'data' variable holds your JSON content
+            }
+        });
+        
     </script>
     <body>
         <h1>Page Title</h1>
