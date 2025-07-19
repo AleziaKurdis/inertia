@@ -38,7 +38,7 @@
                 processTimer = today.getTime();
                 Script.update.connect(myTimer);
                 
-                initiate(entityID);
+                initiate(entityID,"PRELOAD");
             }
         }  
         
@@ -46,7 +46,7 @@
 
     this.enterEntity = function(entityID) {
         if (!isInitiated){
-            initiate(entityID);
+            initiate(entityID,"ENTER");
         }
     };
 
@@ -66,6 +66,7 @@
             Entities.deleteEntity(webID);
             webID = Uuid.NONE;
         }
+        isInitiated = false;
     }
     
     function setPanelOn() {
@@ -97,7 +98,7 @@
         }  
     }
 
-    function initiate(EntID) {
+    function initiate(EntID, from) {
         var properties = Entities.getEntityProperties(EntID, ["description", "renderWithZones", "position", "dimensions"]);
         triggerPosition = properties.position;
         triggerDimensions = properties.dimensions;
@@ -108,9 +109,13 @@
         
         setPanelOn();
  
-        var today = new Date();
-        processTimer = today.getTime();
-        Script.update.connect(myTimer);
+        if (from === "PRELOAD") {
+            var today = new Date();
+            processTimer = today.getTime();
+            Script.update.connect(myTimer);
+        } else {
+            processTimer = 0;
+        }
     }
 
 
