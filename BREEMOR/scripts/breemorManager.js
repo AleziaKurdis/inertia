@@ -543,7 +543,7 @@
         //Nav Panel UI
         
         var navPanels = [
-            {"localPosition" {"x":7.2292,"y":13.7275,"z":-35.7676}, "localRotation": {"x":0, "y":0, "z":0, "w": 1.0}},
+            {"localPosition": {"x":7.2292,"y":13.7275,"z":-35.7676}, "localRotation": {"x":0, "y":0, "z":0, "w": 1.0}}
         ];
         
         for (t = 0; t < navPanels.length; t++ ) {
