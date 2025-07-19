@@ -75,8 +75,9 @@
             "name": "Breemor - Navigation Panel",
             "dimensions": {"x": 0.35, "y": 0.25, "z": 0.01},
             "localPosition": {"x": 0.0, "y": 0.0, "z": (triggerDimensions.z/2)},
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 180.0, "z": 0.0}),
             "sourceUrl": ROOT + "navPanel.html",
-            "useBackground": false,
+            "useBackground": true,
             "lifetime": 25200
         }, "local");
     }
