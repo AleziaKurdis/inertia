@@ -540,6 +540,16 @@
             entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition, lightBulbDefinition[t].angle));
         }
         
+        //Nav Panel UI
+        
+        var navPanels = [
+            {"localPosition" {"x":7.2292,"y":13.7275,"z":-35.7676}, "localRotation": {"x":0, "y":0, "z":0, "w": 1.0}},
+        ];
+        
+        for (t = 0; t < navPanels.length; t++ ) {
+            entitiesToDelete.push(generateTriggerNavPanel(navPanels[t].localPosition, navPanels[t].localRotation));
+        }
+        
         //Hyperspace
         id = Entities.addEntity({
             "type": "Shape",
@@ -561,6 +571,28 @@
         
         entitiesToDelete.push(id);
     };
+    
+    function generateTriggerNavPanel(localPosition, localRotation) {
+        var id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "description": uniqueKey,
+            "name": "Breemor - TriggerNavPanel",
+            "dimensions": {"x":1.0,"y":3.0,"z":1.0},
+            "localPosition": localPosition,
+            "localRotation": localRotation,
+            "parentID": thisEntityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "visible": false,
+            "script": ROOT + "navPanel.js",
+            "lifetime": 25200
+        }, "local");
+        return id;
+    }
     
     function playPunctualSound(sound, position) {
         var injectorOptions = {
