@@ -578,7 +578,6 @@
     };
     
     function generateTriggerNavPanel(localPosition, localRotation) {
-        print("BEEN THERE!");
         var id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
@@ -597,7 +596,6 @@
             "script": ROOT + "navPanel.js",
             "lifetime": 25200
         }, "local");
-        print("TRIGGER ID: " + id);
         return id;
     }
     

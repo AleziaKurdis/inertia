@@ -99,7 +99,9 @@
     }
 
     Entities.webEventReceived.connect(function (entityID, message ) {
-        print("Message: " + message + " | Entity: " + entityID);
+        if (entityID === webID) {
+            print("Message: " + message + " | Entity: " + entityID);
+        }
     });
 
     function initiate(EntID, from) {
