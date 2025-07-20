@@ -65,7 +65,7 @@
 
     function hyperspace(destination) {
         if (positionIsInsideEntityBounds(thisEntityID, MyAvatar.position)) {
-            print("BEEN HERE!");
+            print("BEEN HERE: " + JSON.stringify(destinations));
             var relativePosition = Vec3.subtract( MyAvatar.position, entityPosition );
             var realRelativePosition = Vec3.multiplyQbyV(entityRotation, relativePosition);
             var arrivalPosition = Vec3.sum(destinations[destination].position, Vec3.multiplyQbyV(destinations[destination].rotation, realRelativePosition));
