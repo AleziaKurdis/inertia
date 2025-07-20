@@ -18,6 +18,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BREEMOR - Hyperspace System</title>
     </head>
+    <style>
+        @font-face {
+            font-family: FiraSans-SemiBold;
+            src: url(fonts/FiraSans-SemiBold.ttf);
+        }
+
+        @font-face {
+            font-family: FiraSans-Regular;
+            src: url(fonts/FiraSans-Regular.ttf);
+            }
+    
+        html {
+            background-color: rgba(0, 0, 0, 0);
+            margin: 0px;
+            font-family: FiraSans-SemiBold;
+        }
+        
+        body {
+            background-color: rgba(0, 0, 0, 0);
+            color: #FFFFFF;
+            margin: 0px;
+            padding: 0px;
+        }
+        #destinations {
+            background-color: rgba(0, 200, 255, 50);
+            border:1px solid rgba(0, 200, 255, 75);
+            border-radius:30px;
+            
+        }
+        
+    </style>
     <script>
         //EventBridge.emitWebEvent("TEST");
         var navData;
@@ -45,14 +76,25 @@
         
     </script>
     <body>
+        <img src="logo.png"><br>
         <div id = "destinations"></div>
         <script>
             function generateMenu() {
                 var i;
-                var content = "";
+                var content = "<table>";
+                var count = 0;
                 for (i = 0; i < navData.length; i++) {
-                    content = content + navData[i].name + "<br>";
+                    if (count === 0) {
+                        content = content + "<tr>";
+                    }
+                    content = content + "<td>" + navData[i].name + "</td>";
+                    count++;
+                    if (count === 6) {
+                        content = content + "</tr>";
+                        count = 0;
+                    }
                 }
+                content = content + "</table>";
                 document.getElementById("destinations").innerHTML = content;
             }
             
