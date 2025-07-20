@@ -45,12 +45,24 @@
             background-color: rgba(0, 200, 255, 50);
             border:1px solid rgba(0, 200, 255, 75);
             border-radius:30px;
-            
+            width:100%;
+            padding: 10px;
         }
         
+        table {
+            width:100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            background-color: #0000ff;
+            color: #FFFFFF;
+            padding: 5px;
+            border:1px solid #ffffff;
+            width: 16%;
+        }
     </style>
     <script>
-        //EventBridge.emitWebEvent("TEST");
         var navData;
         async function loadJsonFile(filePath) {
             try {
@@ -87,7 +99,7 @@
                     if (count === 0) {
                         content = content + "<tr>";
                     }
-                    content = content + "<td>" + navData[i].name + "</td>";
+                    content = content + "<td><span onclick = 'hyperspace(" + i + ");'>" + navData[i].name + "</span></td>";
                     count++;
                     if (count === 6) {
                         content = content + "</tr>";
@@ -98,6 +110,9 @@
                 document.getElementById("destinations").innerHTML = content;
             }
             
+            function hyperspace(index) {
+                EventBridge.emitWebEvent("HYPERSPACE_" + index);
+            }
         </script>
     </body>
 </html>
