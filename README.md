@@ -41,7 +41,7 @@ https://aleziakurdis.github.io/inertia/nowhereIsland/nowhereIsland.json
 # Breemor - Multiworld Navigation Spacecraft (import file)  
 https://aleziakurdis.github.io/inertia/BREEMOR/install_Breemor.json  
 Note: You need to set a unique identifier in the "description" properties (ideally the placename) to avoid conflict between different instances in a same domain.   
-Note: You need to add the destination data in the file "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/destinations.json".   
+Note: You need to add the destination data (of the "Breemor - hyperspace" local entity) in the file "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/destinations.json".   
    
 # Clocks
 **D19 (HUT)**  
