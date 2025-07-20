@@ -64,8 +64,8 @@
     }
 
     function hyperspace(destination) {
-        //determine the arrival URL
         if (positionIsInsideEntityBounds(thisEntityID, MyAvatar.position)) {
+            print("BEEN HERE!");
             var relativePosition = Vec3.subtract( MyAvatar.position, entityPosition );
             var realRelativePosition = Vec3.multiplyQbyV(entityRotation, relativePosition);
             var arrivalPosition = Vec3.sum(destinations[destination].position, Vec3.multiplyQbyV(destinations[destination].rotation, realRelativePosition));
@@ -73,7 +73,9 @@
             var arrivalURL = "hifi://" + destinations[destination].placename + "/" + arrivalPosition.x + "," + arrivalPosition.y + "," + arrivalPosition.z + "/" + arrivalRotation.x + "," + arrivalRotation.y  + "," + arrivalRotation.z  + "," + arrivalRotation.w;    
             
             playPunctualSound(tpSound, MyAvatar.position);
-            Window.location = arrivalURL;
+            Script.setTimeout(function () {
+                Window.location = arrivalURL;
+            }, 14000);
         }
     }
 
