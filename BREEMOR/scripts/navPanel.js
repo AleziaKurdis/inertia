@@ -104,6 +104,7 @@
     Entities.webEventReceived.connect(function (entityID, message ) {
         if (entityID === webID) {
             Messages.sendMessage(channelName, "HYPERSPACE_" + message);
+            setPanelOff();
         }
     });
 
