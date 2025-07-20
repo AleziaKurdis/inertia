@@ -21,7 +21,7 @@
     var HALF = 0.5;
     
     var tpSound;
-    var TP_SOUND = ROOT + "../sounds/hyperspace.mp3";
+    var TP_SOUND = ROOT + "../sounds/hyperspaceWarning.mp3";
     
     var destinations = Script.require(ROOT + "destinations.json");
 
