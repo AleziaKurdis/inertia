@@ -65,12 +65,10 @@
 
     function hyperspace(destination) {
         if (positionIsInsideEntityBounds(thisEntityID, MyAvatar.position)) {
-            print("BEEN HERE: " + JSON.stringify(destinations));
-            print("INDEX: " + destination);
             var relativePosition = Vec3.subtract( MyAvatar.position, entityPosition );
             var realRelativePosition = Vec3.multiplyQbyV(entityRotation, relativePosition);
             var arrivalPosition = Vec3.sum(destinations[destination].position, Vec3.multiplyQbyV(destinations[destination].rotation, realRelativePosition));
-            var arrivalRotation = Quat.multiply(destinations[destination].rotation, Quat.multiply( MyAvatar.rotation, entityRotation ));
+            var arrivalRotation = Quat.multiply(destinations[destination].rotation, Quat.multiply( MyAvatar.orientation, entityRotation ));
             var arrivalURL = "hifi://" + destinations[destination].placename + "/" + arrivalPosition.x + "," + arrivalPosition.y + "," + arrivalPosition.z + "/" + arrivalRotation.x + "," + arrivalRotation.y  + "," + arrivalRotation.z  + "," + arrivalRotation.w;    
             
             playPunctualSound(tpSound, MyAvatar.position);
