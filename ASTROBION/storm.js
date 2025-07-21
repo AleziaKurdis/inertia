@@ -92,7 +92,7 @@
                 "textures": LIGNTNINGS_PARTICLE_URL,
                 "maxParticles": 10,
                 "lifespan": 0.3,
-                "emitRate": 0.15,
+                "emitRate": 0.1 + Math.random() * 0.3,
                 "emitSpeed": 0,
                 "speedSpread": 0,
                 "emitOrientation": {
