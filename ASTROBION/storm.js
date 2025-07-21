@@ -54,7 +54,6 @@
     function manageStorm() {
         if (lightningsID !== Uuid.NONE ) {
             if (Math.random() < 0.05) { //0.05 = 1 fois sur 20
-                //Entities.editEntity(lightningsID, {"isEmitting": true});
                 var thunderVolume = Math.random();
                 var thunderSoundIndex = Math.floor(Math.random() * thunderSound.length);
                 var thunderPitch = (0.6 + (Math.random() * 1.5));
@@ -66,8 +65,6 @@
                     "pitch": thunderPitch
                     });
                     
-            } else {
-                //Entities.editEntity(lightningsID, {"isEmitting": false});
             }
         } else {
             //initiate the storm
@@ -115,10 +112,10 @@
                     "y": 0,
                     "z": 0
                 },
-                "particleRadius": 200,
-                "radiusStart": 200,
-                "radiusFinish": 200,
-                "radiusSpread": 150,
+                "particleRadius": 300,
+                "radiusStart": 300,
+                "radiusFinish": 300,
+                "radiusSpread": 250,
                 "color": {
                     "red": 255,
                     "green": 255,
