@@ -54,7 +54,7 @@
     function manageStorm() {
         if (lightningsID !== Uuid.NONE ) {
             if (Math.random() < 0.05) { //0.05 = 1 fois sur 20
-                Entities.editEntity(lightningsID, {"isEmitting": true});
+                //Entities.editEntity(lightningsID, {"isEmitting": true});
                 var thunderVolume = Math.random();
                 var thunderSoundIndex = Math.floor(Math.random() * thunderSound.length);
                 var thunderPitch = (0.6 + (Math.random() * 1.5));
@@ -67,7 +67,7 @@
                     });
                     
             } else {
-                Entities.editEntity(lightningsID, {"isEmitting": false});
+                //Entities.editEntity(lightningsID, {"isEmitting": false});
             }
         } else {
             //initiate the storm
@@ -92,7 +92,7 @@
                 "textures": LIGNTNINGS_PARTICLE_URL,
                 "maxParticles": 10,
                 "lifespan": 0.3,
-                "emitRate": 0.25,
+                "emitRate": 0.15,
                 "emitSpeed": 0,
                 "speedSpread": 0,
                 "emitOrientation": {
@@ -102,9 +102,9 @@
                     "w": 1
                 },
                 "emitDimensions": {
-                    "x": 100,
-                    "y": 100,
-                    "z": 100
+                    "x": 300,
+                    "y": 300,
+                    "z": 300
                 },
                 "polarStart": 0,
                 "polarFinish": Math.PI,
@@ -115,10 +115,10 @@
                     "y": 0,
                     "z": 0
                 },
-                "particleRadius": 100,
-                "radiusStart": 100,
-                "radiusFinish": 100,
-                "radiusSpread": 80,
+                "particleRadius": 200,
+                "radiusStart": 200,
+                "radiusFinish": 200,
+                "radiusSpread": 150,
                 "color": {
                     "red": 255,
                     "green": 255,
@@ -139,7 +139,7 @@
                     "green": 255,
                     "blue": 255
                 }, 
-                "alphaStart": 0.4,
+                "alphaStart": 0.7,
                 "alpha": 0,
                 "alphaFinish": 0.4,
                 "particleSpin": 3.140000104904175,
@@ -147,7 +147,7 @@
                 "spinStart": 3.140000104904175,
                 "spinFinish": 3.140000104904175,
                 "emitterShouldTrail": true,
-                "isEmitting": false
+                "isEmitting": true
             }, "local");
 
         }
