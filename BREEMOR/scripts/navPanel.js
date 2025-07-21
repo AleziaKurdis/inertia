@@ -79,6 +79,7 @@
             "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 180.0, "z": 0.0}),
             "sourceUrl": ROOT + "navPanel.html",
             "dpi": 62,
+            "alpha": 0.25,
             "grab": {
                 "grabbable": false
             },
