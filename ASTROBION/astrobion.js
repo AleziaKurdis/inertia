@@ -99,7 +99,7 @@
             "type": "Shape",
             "shape": "Sphere",
             "name": "Cortex - lightBulb",
-            "dimensions": {"x":150,"y":150,"z":150},
+            "dimensions": {"x":200,"y":200,"z":200},
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
             "localRotation": {"x":0.2299824208021164,"y":-0.12234975397586823,"z":0.021027235314249992,"w":0.9652442932128906},
             "parentID": id,
@@ -122,13 +122,13 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 2000.0,
-                "y": 2000.0,
-                "z": 2000.0
+                "x": 4000.0,
+                "y": 4000.0,
+                "z": 4000.0
             },
             "color": color,
-            "intensity": 700,
-            "falloffRadius": 100,
+            "intensity": 70,
+            "falloffRadius": 30,
             "isSpotlight": true,
             "visible": true,
             "exponent": 1,
