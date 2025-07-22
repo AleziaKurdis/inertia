@@ -115,7 +115,7 @@
             "parentID": eyeID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.xxx({"x": 0.0, "y": 0.0, "z": 0.0}),/*{
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0}),/*{
                 "x": -0.7071,
                 "y": 0.0,
                 "z": 0.0,
