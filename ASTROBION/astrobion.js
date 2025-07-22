@@ -115,12 +115,7 @@
             "parentID": eyeID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0}),/*{
-                "x": -0.7071,
-                "y": 0.0,
-                "z": 0.0,
-                "w": 0.7071
-            },*/
+            "localRotation": Quat.fromVec3Degrees({"x": 180.0, "y": 0.0, "z": 0.0}),
             "name": "Cortex - bulb-light",
             "grab": {
                 "grabbable": false
@@ -132,12 +127,12 @@
                 "z": 2000.0
             },
             "color": color,
-            "intensity": 200,
-            "falloffRadius": 40,
+            "intensity": 700,
+            "falloffRadius": 100,
             "isSpotlight": true,
             "visible": true,
             "exponent": 1,
-            "cutoff": 15
+            "cutoff": 20
         },"local");
         
         var sumColorCompnent = (color.red/255) +(color.green/255) +(color.blue/255);
