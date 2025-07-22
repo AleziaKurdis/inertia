@@ -115,12 +115,12 @@
             "parentID": eyeID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": {
+            "localRotation": Quat.xxx({"x": 0.0, "y": 0.0, "z": 0.0}),/*{
                 "x": -0.7071,
                 "y": 0.0,
                 "z": 0.0,
                 "w": 0.7071
-            },
+            },*/
             "name": "Cortex - bulb-light",
             "grab": {
                 "grabbable": false
