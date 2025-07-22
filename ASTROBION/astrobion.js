@@ -115,7 +115,7 @@
             "parentID": eyeID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({"x": 180.0, "y": 0.0, "z": 0.0}),
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "Cortex - bulb-light",
             "grab": {
                 "grabbable": false
@@ -127,8 +127,8 @@
                 "z": 6000.0
             },
             "color": color,
-            "intensity": 70,
-            "falloffRadius": 30,
+            "intensity": 300,
+            "falloffRadius": 100,
             "isSpotlight": true,
             "visible": true,
             "exponent": 1,
