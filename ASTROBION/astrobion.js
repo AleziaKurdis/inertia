@@ -306,6 +306,35 @@
             }, "local");
         }
         
+        //BONE-1 #####################################
+        rotation = Quat.fromVec3Degrees( {
+            "x": GetCurrentCycleValue(360, 720),
+            "y": 0,
+            "z": 0
+        } );
+        
+        id = Entities.addEntity({
+            "type": "Model",
+            "position": generatorPosition,
+            "name": "BONE-1",
+            "dimensions": {"x":803.9321899414062,"y":2610.29931640625,"z":2660.913330078125},
+            "rotation": rotation,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularVelocity": {
+                "x": 0.5 * (Math.PI / 180),
+                "y": 0 * (Math.PI / 180),
+                "z": 0 * (Math.PI / 180)
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/BONE-1.fst",
+            "useOriginalPivot": true,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(id);
     }
 
 
