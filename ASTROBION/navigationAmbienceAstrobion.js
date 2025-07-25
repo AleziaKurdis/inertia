@@ -211,7 +211,7 @@
                 },
                 "castShadows": true,
                 "shadowBias": 0.02,
-                "shadowMaxDistance": 100
+                "shadowMaxDistance": 250
             },
             "ambientLight": {
                 "ambientColor": {"red": 255, "green": 255, "blue": 255},
