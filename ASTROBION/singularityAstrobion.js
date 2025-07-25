@@ -84,7 +84,7 @@
                 "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth),
                 "castShadows": true,
                 "shadowBias": 0.02,
-                "shadowMaxDistance": 200
+                "shadowMaxDistance": 250
             },
             "position": singularityGeneratorPosition,
             "renderWithZones": renderWithZones,
