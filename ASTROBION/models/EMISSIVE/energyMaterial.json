@@ -6,7 +6,7 @@
          "metallic": 0.01,
          "roughness": 0.5,
          "normalMap": "",
-         "emissive": [2.6,2.6,0],
+         "emissive": [2.1148,2.1148,0.6126],
          "cullFaceMode":"CULL_BACK"
       }
    ]
