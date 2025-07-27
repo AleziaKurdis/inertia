@@ -335,6 +335,39 @@
             "lifetime": 864000
         }, "local");
         entitiesToDelete.push(id);
+        
+        //NUTRI #####################################
+        rotation = Quat.fromVec3Degrees( {
+            "x": GetCurrentCycleValue(360, 3600),
+            "y": GetCurrentCycleValue(360, 2400),
+            "z": GetCurrentCycleValue(360, 1800)
+        } );
+        
+        id = Entities.addEntity({
+            "type": "Model",
+            "position": generatorPosition,
+            "name": "NUTRI",
+            "dimensions": {"x":7277.0830078125,"y":3185.648681640625,"z":7616.95703125},
+            "rotation": rotation,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularVelocity": {
+                "x": 0.1 * (Math.PI / 180),
+                "y": 0.15 * (Math.PI / 180),
+                "z": 0.2 * (Math.PI / 180)
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/NUTRI.fst",
+            "useOriginalPivot": true,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        //ORGANEL########################################
+        //HERE
     }
 
 
