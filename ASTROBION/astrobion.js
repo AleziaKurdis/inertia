@@ -338,9 +338,9 @@
         
         //NUTRI #####################################
         rotation = Quat.fromVec3Degrees( {
-            "x": GetCurrentCycleValue(360, 3600),
-            "y": GetCurrentCycleValue(360, 2400),
-            "z": GetCurrentCycleValue(360, 1800)
+            "x": GetCurrentCycleValue(360, 1800),
+            "y": GetCurrentCycleValue(360, 1125),
+            "z": GetCurrentCycleValue(360, 600)
         } );
         
         id = Entities.addEntity({
@@ -354,9 +354,9 @@
                 "grabbable": false
             },
             "angularVelocity": {
-                "x": 0.1 * (Math.PI / 180),
-                "y": 0.15 * (Math.PI / 180),
-                "z": 0.2 * (Math.PI / 180)
+                "x": 0.2 * (Math.PI / 180),
+                "y": 0.32 * (Math.PI / 180),
+                "z": 0.6 * (Math.PI / 180)
             },
             "damping": 0,
             "angularDamping": 0,
