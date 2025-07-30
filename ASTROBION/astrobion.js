@@ -324,7 +324,7 @@
                 "grabbable": false
             },
             "angularVelocity": {
-                "x": 0.5 * (Math.PI / 180),
+                "x": -0.5 * (Math.PI / 180),
                 "y": 0 * (Math.PI / 180),
                 "z": 0 * (Math.PI / 180)
             },
@@ -386,9 +386,9 @@
                 "grabbable": false
             },
             "angularVelocity": {
-                "x": 0.8 * (Math.PI / 180),
-                "y": 0.18 * (Math.PI / 180),
-                "z": 0.24 * (Math.PI / 180)
+                "x": -0.8 * (Math.PI / 180),
+                "y": -0.18 * (Math.PI / 180),
+                "z": -0.24 * (Math.PI / 180)
             },
             "damping": 0,
             "angularDamping": 0,
