@@ -366,8 +366,42 @@
         }, "local");
         entitiesToDelete.push(id);
         
+        //??? vapor point??? here?
+        
         //ORGANEL########################################
-        //HERE
+        rotation = Quat.fromVec3Degrees( {
+            "x": GetCurrentCycleValue(360, 450),
+            "y": GetCurrentCycleValue(360, 2000),
+            "z": GetCurrentCycleValue(360, 1500)
+        } );
+        
+        id = Entities.addEntity({
+            "type": "Model",
+            "position": generatorPosition,
+            "name": "ORGANEL",
+            "dimensions": {"x":5346.357421875,"y":5301.4794921875,"z":1278.0474853515625},
+            "rotation": rotation,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "angularVelocity": {
+                "x": 0.8 * (Math.PI / 180),
+                "y": 0.18 * (Math.PI / 180),
+                "z": 0.24 * (Math.PI / 180)
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/ORGANEL.fst",
+            "useOriginalPivot": true,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(id);
+        
+        //??? vapor point??? here?
+        
+        //BUCAL ###########################################
+        //??? here or in json cause we want it physical???
     }
 
 
