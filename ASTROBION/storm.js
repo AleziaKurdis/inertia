@@ -132,9 +132,9 @@
                     "blue": 255
                 },
                 "colorSpread": {
-                    "red": 255,
-                    "green": 255,
-                    "blue": 255
+                    "red": 0,
+                    "green": 0,
+                    "blue": 0
                 }, 
                 "alphaStart": 0.7,
                 "alpha": 0,
