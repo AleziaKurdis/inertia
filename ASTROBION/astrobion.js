@@ -403,67 +403,6 @@
         //BUCAL ###########################################
         //??? here or in json cause we want it physical???
         
-        //GRAVITY ON VIREL CORE #####################################
-        id = Entities.addEntity({
-            "type": "Zone",
-            "position": generatorPosition,
-            "name": "GRAVITY ZONE",
-            "dimensions": {
-                "x": 3959.1435546875,
-                "y": 400,
-                "z": 3959.1435546875
-            },
-            "grab": {
-                "grabbable": false
-            },
-            "damping": 0,
-            "angularDamping": 0,
-            "shapeType": "cylinder-y",
-            "keyLight": {
-                "direction": {
-                    "x": 0,
-                    "y": -0.7071067690849304,
-                    "z": 0.7071067690849304
-                },
-                "castShadows": true
-            },
-            "flyingAllowed": false,
-            "ghostingAllowed": false,
-            "renderWithZones": renderWithZones,
-            "script": ROOT + "gravity.js",
-            "lifetime": 864000
-        }, "local");
-        entitiesToDelete.push(id);
-
-        id = Entities.addEntity({
-            "type": "Zone",
-            "position": generatorPosition,
-            "name": "FLY ZONE",
-            "dimensions": {
-                "x": 3044.9814453125,
-                "y": 399.79998779296875,
-                "z": 3044.9814453125
-            },
-            "grab": {
-                "grabbable": false
-            },
-            "damping": 0,
-            "angularDamping": 0,
-            "shapeType": "cylinder-y",
-            "keyLight": {
-                "direction": {
-                    "x": 0,
-                    "y": -0.7071067690849304,
-                    "z": 0.7071067690849304
-                },
-                "castShadows": true
-            },
-            "flyingAllowed": true,
-            "ghostingAllowed": true,
-            "renderWithZones": renderWithZones,
-            "lifetime": 864000
-        }, "local");
-        entitiesToDelete.push(id);
     }
 
 

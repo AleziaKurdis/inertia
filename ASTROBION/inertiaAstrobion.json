@@ -110,6 +110,77 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/BREEMOR.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{1d507481-8c32-4948-bf00-1bafe6920bbe}",
+            "type": "Zone",
+            "locked": true,
+            "position": {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },
+            "name": "GRAVITY ZONE",
+            "dimensions": {
+                "x": 3959.1435546875,
+                "y": 400,
+                "z": 3959.1435546875
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/ASTROBION/gravity.js"
+        },
+        {
+            "id": "{4bde6d9e-e654-46e2-8a79-358a902f79df}",
+            "type": "Zone",
+            "locked": true,
+            "position": {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },
+            "name": "FLY ZONE",
+            "dimensions": {
+                "x": 3044.9814453125,
+                "y": 399.79998779296875,
+                "z": 3044.9814453125
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": true,
+            "ghostingAllowed": true,
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ]
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
