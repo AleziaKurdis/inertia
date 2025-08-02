@@ -3,7 +3,7 @@
    "materials":[
       {
          "albedo":[1,1,1],
-         "albedoMap": "worn-modern-panels_albedo.jpg"
+         "albedoMap": "worn-modern-panels_albedo.jpg",
          "metallic": 0.01,
          "roughnessMap": "worn-modern-panels_roughness.jpg",
          "normalMap": "worn-modern-panels_normal-ogl.jpg",

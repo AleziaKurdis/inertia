@@ -3,7 +3,7 @@
    "materials":[
       {
          "albedo":[1,1,1],
-         "albedoMap": "rusted-steel_albedo.jpg"
+         "albedoMap": "rusted-steel_albedo.jpg",
          "metallicMap": "rusted-steel_metallic.jpg",
          "roughnessMap": "rusted-steel_roughness.jpg",
          "normalMap": "rusted-steel_normal-ogl.jpg",
