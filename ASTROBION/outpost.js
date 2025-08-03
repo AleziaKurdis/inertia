@@ -55,6 +55,7 @@
             "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
             "name": "glow-material",
             "materialURL": "materialData",
+            "parentMaterialName": "mat::GLOW",
             "priority": 2,
             "materialData": JSON.stringify(materialContent),
             "lifetime": 864000
