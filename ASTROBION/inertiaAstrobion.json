@@ -181,6 +181,30 @@
             "renderWithZones": [
                 "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
             ]
+        },
+        {
+            "id": "{e89c4268-b2af-4921-ac68-a2d4b354c877}",
+            "type": "Model",
+            "position": {"x":-7212.31494140625,"y":-5925.8857421875,"z":4975.4501953125},
+            "name": "OUTPOST",
+            "locked": true,
+            "dimensions": {
+                "x": 12.870519638061523,
+                "y": 19.057090759277344,
+                "z": 8.844597816467285
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/ASTROBION/outpost.js",
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/OUTPOST.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
