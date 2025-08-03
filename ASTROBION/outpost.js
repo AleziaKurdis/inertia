@@ -37,7 +37,7 @@
             "materialVersion": 1,
             "materials": [
                 {
-                    "name": "plasma",
+                    "name": "GLOW",
                     "albedo": [1, 1, 1],
                     "metallic": 1,
                     "roughness": 1,
@@ -53,7 +53,7 @@
             "parentID": thisEntity,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 1, "z": 0.0},
-            "name": "plasma-material",
+            "name": "glow-material",
             "materialURL": "materialData",
             "priority": 2,
             "materialData": JSON.stringify(materialContent),
@@ -68,7 +68,7 @@
 
     this.unload = function(entityID) {
         var i;
-        for i = 0; i < entitiesToDelete.length; i++) {
+        for (i = 0; i < entitiesToDelete.length; i++) {
             Entities.deleteEntity(entitiesToDelete[i]);
         }
         entitiesToDelete = [];
