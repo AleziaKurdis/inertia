@@ -403,6 +403,24 @@
         //BUCAL ###########################################
         //??? here or in json cause we want it physical???
         
+        
+        //PILOSITY
+        id = Entities.addEntity({
+            "type": "Model",
+            "position": generatorPosition,
+            "name": "PILOSITY",
+            "dimensions": {"x":1600.545654296875,"y":158.456298828125,"z":2087.385986328125},
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/PILOSITY.glb",
+            "useOriginalPivot": true,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(id);
     }
 
 
