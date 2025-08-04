@@ -42,7 +42,7 @@
             "position": position,
             "volume": 1.0,
             "loop": false,
-            "localOnly": false
+            "localOnly": true
         };
         var injector = Audio.playSound(sound, injectorOptions);
     }
