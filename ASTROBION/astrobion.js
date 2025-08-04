@@ -54,11 +54,12 @@
         generatorPosition = prop.position;
         
         //CORTEX####################################################
-        var rotation = Quat.fromVec3Degrees( {
+        /*var rotation = Quat.fromVec3Degrees( {
             "x": - GetCurrentCycleValue(360, 1500),
             "y": GetCurrentCycleValue(360, 300),
             "z": - GetCurrentCycleValue(360, 900)
-        } );
+        } );*/
+        var rotation = Quat.IDENTITY;
         
         var id = Entities.addEntity({
             "type": "Model",
@@ -171,11 +172,11 @@
         },"local");
         
         //BRAINSTORMER #####################################
-        rotation = Quat.fromVec3Degrees( {
+        /*rotation = Quat.fromVec3Degrees( {
             "x": GetCurrentCycleValue(360, 800),
             "y": GetCurrentCycleValue(360, 1200),
             "z": GetCurrentCycleValue(360, 360)
-        } );
+        } );*/
         
         id = Entities.addEntity({
             "type": "Model",
@@ -307,11 +308,11 @@
         }
         
         //BONE-1 #####################################
-        rotation = Quat.fromVec3Degrees( {
+        /*rotation = Quat.fromVec3Degrees( {
             "x": GetCurrentCycleValue(360, 720),
             "y": 0,
             "z": 0
-        } );
+        } );*/
         
         id = Entities.addEntity({
             "type": "Model",
@@ -337,11 +338,11 @@
         entitiesToDelete.push(id);
         
         //NUTRI #####################################
-        rotation = Quat.fromVec3Degrees( {
+        /*rotation = Quat.fromVec3Degrees( {
             "x": GetCurrentCycleValue(360, 1800),
             "y": GetCurrentCycleValue(360, 1125),
             "z": GetCurrentCycleValue(360, 600)
-        } );
+        } );*/
         
         id = Entities.addEntity({
             "type": "Model",
@@ -369,11 +370,11 @@
         //??? vapor point??? here?
         
         //ORGANEL########################################
-        rotation = Quat.fromVec3Degrees( {
+        /*rotation = Quat.fromVec3Degrees( {
             "x": GetCurrentCycleValue(360, 1500),
             "y": GetCurrentCycleValue(360, 2000),
             "z": GetCurrentCycleValue(360, 600)
-        } );
+        } );*/
         
         id = Entities.addEntity({
             "type": "Model",
