@@ -36,6 +36,10 @@
         }
         
         body {
+            background-image: url("bgscreen.png");
+            background-repeat: repeat;
+            background-position-x: 50%;
+            background-position-y: -180%;
             background-color: #000033;
             color: #FFFFFF;
             margin: 0px;
@@ -76,8 +80,14 @@
         
         button:hover {
             background-color: #0000AA;
-            border:3px solid #ff7700;
+            border:3px solid #ffb300;
         }
+        
+        #footer {
+            width: 90%;
+            text-align: right;
+        }
+        
     </style>
     <script>
         var navData;
@@ -106,8 +116,9 @@
     </script>
     <body>
         <img src="logo.png"><br><br>
-        DESTINATIONS:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESTINATIONS:<br>
         <div id = "destinations"></div>
+         <div id = "footer"><br><img src="overte.png"></div>
         <script>
             function generateMenu() {
                 var i;
