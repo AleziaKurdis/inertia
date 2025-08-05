@@ -594,7 +594,7 @@
         var id = Entities.addEntity({
             "type": "Model",
             "name": "Breemor - ElevatorSign " + level,
-            "dimensions": {"x":0.33107566833496094,"y":0.49629172682762146,"z":0.2492106556892395},
+            "dimensions": {"x":0.6449019908905029,"y":0.9667263627052307,"z":0.4854373633861542},
             "modelURL": ROOT + "../models/ELEVATOR-SIGN/elevatorSign_" + level + ".fst",
             "localPosition": localPosition,
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":0.0}),
