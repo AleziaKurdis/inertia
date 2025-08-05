@@ -63,7 +63,45 @@
         
         entitiesToDelete.push(fireMatId);
         
+        //Pit ligth
+        var lightID = Entities.addEntity({
+            "type": "Light",
+            "parentID": thisEntity,
+            "localPosition": {"x": 1.8408, "y": 1.1875, "z": 3.3052},
+            "name": "OUTPUT PIT LIGHT",
+            "dimensions": {
+                "x": 7.475191116333008,
+                "y": 7.475191116333008,
+                "z": 7.475191116333008
+            },
+            "rotation": {
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            }
+            "color": {
+                "red": 0,
+                "green": 51,
+                "blue": 255
+            },
+            "isSpotlight": true,
+            "intensity": 9,
+            "exponent": 1,
+            "cutoff": 90,
+            "falloffRadius": 3,
+            "lifetime": 864000
+        }, "local");
         
+        entitiesToDelete.push(lightID);
+        
+        //Cabine Light
+        
+        //pit particle
     }
 
 
