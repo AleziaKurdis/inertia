@@ -540,6 +540,19 @@
             entitiesToDelete.push(generateLightBulb(lightBulbDefinition[t].hue, lightBulbDefinition[t].localPosition, lightBulbDefinition[t].angle));
         }
         
+        //ELEVATOR SIGNS
+        
+        var elevatorSigns = [
+            {"localPosition": {"x":0.0,"y":-6.4226,"z":-31.2302}, "level": "100"},
+            {"localPosition": {"x":0.0,"y":-1.1140,"z":-32.1929}, "level": "200"},
+            {"localPosition": {"x":0.0,"y":3.9905,"z":-32.2068}, "level": "300"},
+            {"localPosition": {"x":0.0,"y":12.2297,"z":-30.7473}, "level": "400"}
+        ];
+        
+        for (t = 0; t < elevatorSigns.length; t++ ) {
+            entitiesToDelete.push(generateElevatorSign(elevatorSigns[t].localPosition, elevatorSigns[t].level));
+        }
+        
         //Nav Panel UI
         
         var navPanels = [
@@ -576,6 +589,26 @@
         
         entitiesToDelete.push(id);
     };
+    
+    function generateElevatorSign(localPosition, level) {
+        var id = Entities.addEntity({
+            "type": "Model",
+            "name": "Breemor - ElevatorSign " + level,
+            "dimensions": {"x":0.33107566833496094,"y":0.49629172682762146,"z":0.2492106556892395},
+            "modelURL": ROOT + "../models/ELEVATOR-SIGN/elevatorSign_" + level + ".fst",
+            "localPosition": localPosition,
+            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":0.0}),
+            "parentID": thisEntityID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "useOriginalPivot": true,
+            "lifetime": 25200
+        }, "local");
+        return id;
+    }
     
     function generateTriggerNavPanel(localPosition, localRotation) {
         var id = Entities.addEntity({
