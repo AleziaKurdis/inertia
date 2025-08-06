@@ -205,6 +205,27 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/OUTPOST.fst",
             "useOriginalPivot": true
+        },
+        {
+            "type": "Model",
+            "locked": true,
+            "position": {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },
+            "name": "FAT",
+            "dimensions": {"x":1014.702880859375,"y":76.32215118408203,"z":1066.6104736328125},
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/FAT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",

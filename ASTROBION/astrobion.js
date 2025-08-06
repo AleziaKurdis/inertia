@@ -423,7 +423,7 @@
         }, "local");
         entitiesToDelete.push(id);
         
-        //FAT
+/*        //FAT
         id = Entities.addEntity({
             "type": "Model",
             "position": generatorPosition,
@@ -440,6 +440,7 @@
             "lifetime": 864000
         }, "local");
         entitiesToDelete.push(id);
+*/
     }
 
 
