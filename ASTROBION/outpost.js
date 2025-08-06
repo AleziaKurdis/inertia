@@ -83,11 +83,11 @@
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
-            }
+            },
             "color": {
-                "red": 0,
-                "green": 51,
-                "blue": 255
+                "red": fireColor[0],
+                "green": fireColor[1],
+                "blue": fireColor[2]
             },
             "isSpotlight": true,
             "intensity": 9,
@@ -100,6 +100,34 @@
         entitiesToDelete.push(lightID);
         
         //Cabine Light
+        lightID = Entities.addEntity({
+            "type": "Light",
+            "parentID": thisEntity,
+            "localPosition": {"x": -1.3828, "y": 3.7031, "z": -1.1191},
+            "name": "OUTPUT CABINE LIGHT",
+            "dimensions": {
+                "x": 8.0,
+                "y": 8.0,
+                "z": 8.0
+            },
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "color": {
+                "red": fireColor[0],
+                "green": fireColor[1],
+                "blue": fireColor[2]
+            },
+            "isSpotlight": false,
+            "intensity": 9,
+            "exponent": 1,
+            "cutoff": 90,
+            "falloffRadius": 2,
+            "lifetime": 864000
+        }, "local");
+        
+        entitiesToDelete.push(lightID);
         
         //pit particle
     }
