@@ -226,6 +226,121 @@
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/FAT.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{e761f5e8-1460-417c-9429-587115c57473}",
+            "type": "Model",
+            "name": "ANNIHILATOR CRATE",
+            "position": {"x":-7209.64697265625,"y":-5924.97314453125,"z":4977.40478515625},
+            "dimensions": {
+                "x": 0.8542806506156921,
+                "y": 0.5682937502861023,
+                "z": 2
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.8616292476654053,
+                "z": 0,
+                "w": 0.5075383186340332
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/weaponsCase/weaponsCase.fst",
+            "useOriginalPivot": true,
+            "locked": true
+        },
+        {
+            "id": "{51ab60a7-1687-4da2-9816-c1d0a56cc132}",
+            "type": "Model",
+            "name": "WHISKY CRATE 2",
+            "position": {"x":-7211.6416015625,"y":-5924.974609375,"z":4979.43896484375},
+            "dimensions": {
+                "x": 0.540448784828186,
+                "y": 0.5404488444328308,
+                "z": 0.5404488444328308
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.8703557252883911,
+                "z": 0,
+                "w": 0.49242350459098816
+            },
+            "locked": true,
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/XandarianWhiskyCrate/xandarianWhiskyCrate.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{0c2d9b3e-fa8f-4fa3-8565-9cf47d756ce7}",
+            "type": "Model",
+            "locked": true,
+            "name": "WHISKY CRATE 3",
+            "position": {"x":-7211.4892578125,"y":-5924.974609375,"z":4977.78125},
+            "dimensions": {
+                "x": 0.540448784828186,
+                "y": 0.5404488444328308,
+                "z": 0.5404488444328308
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9426416158676147,
+                "z": 0,
+                "w": 0.3338067829608917
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/XandarianWhiskyCrate/xandarianWhiskyCrate.fst",
+            "useOriginalPivot": true
+        },{
+            "id": "{2c946c45-0004-41db-a3da-829dd9ae88fc}",
+            "type": "Model",
+            "locked": true,
+            "name": "WHISKY CRATE 1",
+            "position": {"x":-7209.08544921875,"y":-5924.974609375,"z":4979.259765625},
+            "dimensions": {
+                "x": 0.540448784828186,
+                "y": 0.5404488444328308,
+                "z": 0.5404488444328308
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.5735765099525452,
+                "z": 0,
+                "w": 0.8191520571708679
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/XandarianWhiskyCrate/xandarianWhiskyCrate.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
