@@ -422,6 +422,24 @@
             "lifetime": 864000
         }, "local");
         entitiesToDelete.push(id);
+        
+        //FAT
+        id = Entities.addEntity({
+            "type": "Model",
+            "position": generatorPosition,
+            "name": "FAT",
+            "dimensions": {"x":1014.702880859375,"y":76.32215118408203,"z":1066.6104736328125},
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": ROOT + "models/FAT.fst",
+            "useOriginalPivot": true,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(id);
     }
 
 
