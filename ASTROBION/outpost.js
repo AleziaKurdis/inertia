@@ -130,6 +130,74 @@
         entitiesToDelete.push(lightID);
         
         //pit particle
+        var pitFxID = Entities.addEntity({
+            "parentID": thisEntity,
+            "localPosition": {"x": 1.8408, "y": 1.12, "z": 3.3052},
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "type": "ParticleEffect",
+            "name": "PIT FX",
+            "dimensions": {
+                "x": 27.665000915527344,
+                "y": 27.665000915527344,
+                "z": 27.665000915527344
+            },
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": plasmaColor[0],
+                "green": plasmaColor[1],
+                "blue": plasmaColor[2]
+            },
+            "textures": ROOT + "images/PARTICLE-GLOWBLOB.png",
+            "maxParticles": 120,
+            "lifespan": 15,
+            "emitRate": 8,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 0.5,
+                "y": 0,
+                "z": 0.5
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0.10000000149011612,
+                "z": 0
+            },
+            "particleRadius": 0.10000000149011612,
+            "radiusSpread": 0.07000000029802322,
+            "radiusStart": 0.15000000596046448,
+            "radiusFinish": 0.10000000149011612,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": fireColor[0],
+                "green": fireColor[1],
+                "blue": fireColor[2]
+            },
+            "alphaStart": 1,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 3.140000104904175,
+            "spinStart": -3.119999885559082,
+            "spinFinish": 3.119999885559082,
+            "lifetime": 864000
+        }, "local");
+        
+        entitiesToDelete.push(pitFxID);
     }
 
 
