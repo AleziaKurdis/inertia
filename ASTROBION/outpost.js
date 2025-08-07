@@ -198,8 +198,40 @@
         }, "local");
         
         entitiesToDelete.push(pitFxID);
+        
+        //Seats ###########################################
+        var seats = [
+            {"localPosition": {"x": 0.0,"y": 0.0,"z": 0.0}, "localRotation": {"x":0,"y":-0.10452844202518463,"z":0,"w":0.994521975517273}},
+            {"localPosition": {"x": 0.0,"y": 0.0,"z": 0.0}, "localRotation": {"x":0,"y":0.10452844202518463,"z":0,"w":0.994521975517273}},
+            {"localPosition": {"x": 0.0,"y": 0.0,"z": 0.0}, "localRotation": {"x":0,"y":-0.10452844202518463,"z":0,"w":0.994521975517273}},
+            {"localPosition": {"x": 0.0,"y": 0.0,"z": 0.0}, "localRotation": {"x":0,"y":0.10452844202518463,"z":0,"w":0.994521975517273}},
+            {"localPosition": {"x": 0.0,"y": 0.0,"z": 0.0}, "localRotation": {"x":0,"y":-0.10452844202518463,"z":0,"w":0.994521975517273}}
+        ];
+        
+        var t;
+        for (t = 0; t < seats.length; t++ ) {
+            entitiesToDelete.push(generateSeat(seats[t].localPosition, seats[t].localRotation));
+        }
     }
 
+    function generateSeat(localPosition, localRotation) {
+        var id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "parentID": thisEntity,
+            "name": "Outpost - Seat",
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "localPosition": localPosition,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "visible": false,
+            "script": ROOT + "sit_spot.js",
+            "lifetime": 864000
+        }, "local");
+        return id;
+    }
 
     this.unload = function(entityID) {
         var i;

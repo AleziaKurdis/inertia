@@ -443,7 +443,6 @@
 */
     }
 
-
     this.unload = function(entityID) {
         var i;
         for (i = 0; i < entitiesToDelete.length; i++ ) {
