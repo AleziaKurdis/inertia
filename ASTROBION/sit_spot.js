@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: CC0-1.0
+// sit_spot.js
+//
 (function() {try{
 	const MSG_CHANNEL = "net.thingvellir.sit_spot";
 	const EDIT_SETTING = "io.highfidelity.isEditing"; // true if the create app is open
@@ -9,6 +11,8 @@
 	let disabled = false;
 	let visualID;
 	let selfID;
+    let renderWithZones;
+    const ROOT = Script.resolvePath('').split("sit_spot.js")[0];
 
 	this.actionEvent = function(actionID, value) {
 		if (disabled || !isSitting || actionID != actionTranslateY) { return; }
@@ -23,23 +27,42 @@
 
 	this.preload = function(_selfID) {
 		selfID = _selfID;
-
+        renderWithZones = Entities.getEntityProperties(selfID, ["renderWithZones"]).renderWithZones;
 		Controller.actionEvent.connect(this.actionEvent);
 
-		visualID = Entities.addEntity({
+		/*visualID = Entities.addEntity({
 			"type": "Text",
 			"parentID": selfID,
 			"localRotation": Quat.fromPitchYawRollDegrees(-90, 180, 0),
 			"dimensions": [0.3, 0.3, 0.1],
 			"text": "SIT",
 			"unlit": true,
-			"backgroundAlpha": 0.4,
-			"textEffect": "outline",
+			"backgroundAlpha": 0.6,
+			"textEffect": "outline fill",
 			"textEffectColor": [0, 0, 0],
 			"textEffectThickness": 0.4,
 			"alignment": "center",
 			"verticalAlignment": "center",
 			"ignorePickIntersection": true,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            }
+		}, "local");*/
+		visualID = Entities.addEntity({
+			"type": "Image",
+			"parentID": selfID,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+			"localRotation": Quat.fromPitchYawRollDegrees(-90, 180, 0),
+			"dimensions": [0.3, 0.3, 0.1],
+			"imageURL": ROOT + "images/sit.svg",
+			"emissive": true,
+			"alpha": 0.8,
+			"ignorePickIntersection": true,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            }
 		}, "local");
 	};
 
