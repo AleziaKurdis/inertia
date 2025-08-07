@@ -219,6 +219,7 @@
             "renderWithZones": [
                 "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
             ],
+            "shapeType": "static-mesh",
             "grab": {
                 "grabbable": false
             },
