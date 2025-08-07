@@ -222,11 +222,13 @@
             "name": "Outpost - Seat",
             "dimensions": {"x":0.3,"y":0.01,"z":0.3},
             "localPosition": localPosition,
+            "localRotation": localRotation,
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
             },
-            "visible": false,
+            "visible": true,
+            "alpha": 0.0,
             "script": ROOT + "sit_spot.js",
             "lifetime": 864000
         }, "local");

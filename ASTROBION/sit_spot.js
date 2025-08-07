@@ -27,19 +27,19 @@
 		Controller.actionEvent.connect(this.actionEvent);
 
 		visualID = Entities.addEntity({
-			type: "Text",
-			parentID: selfID,
-			localRotation: Quat.fromPitchYawRollDegrees(-90, 180, 0),
-			localDimensions: [0.3, 0.3, 0.1],
-			text: "Sit",
-			unlit: true,
-			backgroundAlpha: 0.7,
-			textEffect: "outline fill",
-			textEffectColor: [0, 0, 0],
-			textEffectThickness: 0.4,
-			alignment: "center",
-			verticalAlignment: "center",
-			ignorePickIntersection: true,
+			"type": "Text",
+			"parentID": selfID,
+			"localRotation": Quat.fromPitchYawRollDegrees(-90, 180, 0),
+			"dimensions": [0.3, 0.3, 0.1],
+			"text": "SIT",
+			"unlit": true,
+			"backgroundAlpha": 0.4,
+			"textEffect": "outline",
+			"textEffectColor": [0, 0, 0],
+			"textEffectThickness": 0.4,
+			"alignment": "center",
+			"verticalAlignment": "center",
+			"ignorePickIntersection": true,
 		}, "local");
 	};
 
