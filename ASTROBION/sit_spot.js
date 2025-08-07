@@ -80,16 +80,20 @@
 	Messages.messageReceived.connect(this.messageRecv);
 
 	this.unload = function(_selfID) {
-		Messages.messageReceived.disconnect(this.messageRecv);
+		unloading();
+	};
+
+    function unloading() {
+        Messages.messageReceived.disconnect(this.messageRecv);
 		Controller.actionEvent.disconnect(this.actionEvent);
 		Entities.deleteEntity(visualID);
 		delete visualID;
 		if (isSitting) {
 			MyAvatar.endSit(MyAvatar.position, MyAvatar.orientation);
 		}
-	};
+    }
 
 	Window.domainChanged.connect(function() {
-		this.unload();
+		unloading();
 	});
 } catch(e) { console.error(e); this.unload(); }})

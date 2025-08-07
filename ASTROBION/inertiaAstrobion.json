@@ -341,6 +341,35 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/BREEMOR/models/XandarianWhiskyCrate/xandarianWhiskyCrate.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{de02575f-0b8c-4b60-8048-f315b298a354}",
+            "type": "Zone",
+            "position": {"x":-7212.0126953125,"y":-5923.65185546875,"z":4976.69970703125},
+            "name": "SEAT AREA FLY ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 9.71923828125,
+                "y": 4.36376953125,
+                "z": 9.2353515625
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            }
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
