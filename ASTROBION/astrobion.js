@@ -403,6 +403,7 @@
         var vaporingID = Entities.addEntity({
             "parentID": id,
             "localPosition": {"x":0.0,"y":0.0,"z":0.0},
+            "localRotation": Quat.fromVec3Degrees({"x":90.0,"y":0.0,"z":90.0}),
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
@@ -416,10 +417,10 @@
                 "z": 6000
             },
             "shapeType": "cylinder-y",
-            "alpha": 0.05999999865889549,
+            "alpha": 0.04,
             "textures": ROOT + "images/fog.png",
-            "maxParticles": 2000,
-            "lifespan": 10,
+            "maxParticles": 3000,
+            "lifespan": 15,
             "emitRate": 200,
             "emitSpeed": 0,
             "speedSpread": 0,
@@ -430,9 +431,9 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 5200,
-                "y": 300,
-                "z": 5200
+                "x": 5000,
+                "y": 400,
+                "z": 5000
             },
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
@@ -441,17 +442,17 @@
                 "z": 0
             },
             "particleRadius": 250,
-            "radiusSpread": 100,
-            "radiusStart": 200,
-            "radiusFinish": 300,
+            "radiusSpread": 200,
+            "radiusStart": 400,
+            "radiusFinish": 600,
             "colorStart": {
                 "red": 255,
                 "green": 255,
                 "blue": 255
             },
             "colorFinish": {
-                "red": 255,
-                "green": 255,
+                "red": 71,
+                "green": 163,
                 "blue": 255
             },
             "alphaStart": 0,
