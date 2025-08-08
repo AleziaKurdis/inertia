@@ -399,7 +399,70 @@
         }, "local");
         entitiesToDelete.push(id);
         
-        //??? vapor point??? here?
+        //Organel's VAPORING#####################
+        var vaporingID = Entities.addEntity({
+            "parentID": id,
+            "localPosition": {"x":0.0,"y":0.0,"z":0.0},
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "lifetime": 864000,
+            "type": "ParticleEffect",
+            "name": "VAPORING",
+            "dimensions": {
+                "x": 6000,
+                "y": 6000,
+                "z": 6000
+            },
+            "shapeType": "cylinder-y",
+            "alpha": 0.05999999865889549,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 2000,
+            "lifespan": 10,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 5200,
+                "y": 300,
+                "z": 5200
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 250,
+            "radiusSpread": 100,
+            "radiusStart": 200,
+            "radiusFinish": 300,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.0499999523162842,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
+        }, "local");
+        entitiesToDelete.push(vaporingID);
+        
         
         //BUCAL ###########################################
         //??? here or in json cause we want it physical???
@@ -423,24 +486,6 @@
         }, "local");
         entitiesToDelete.push(id);
         
-/*        //FAT
-        id = Entities.addEntity({
-            "type": "Model",
-            "position": generatorPosition,
-            "name": "FAT",
-            "dimensions": {"x":1014.702880859375,"y":76.32215118408203,"z":1066.6104736328125},
-            "renderWithZones": renderWithZones,
-            "grab": {
-                "grabbable": false
-            },
-            "damping": 0,
-            "angularDamping": 0,
-            "modelURL": ROOT + "models/FAT.fst",
-            "useOriginalPivot": true,
-            "lifetime": 864000
-        }, "local");
-        entitiesToDelete.push(id);
-*/
     }
 
     this.unload = function(entityID) {
