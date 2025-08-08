@@ -431,9 +431,9 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 5000,
+                "x": 4900,
                 "y": 400,
-                "z": 5000
+                "z": 4900
             },
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
@@ -442,9 +442,9 @@
                 "z": 0
             },
             "particleRadius": 250,
-            "radiusSpread": 200,
-            "radiusStart": 400,
-            "radiusFinish": 600,
+            "radiusSpread": 300,
+            "radiusStart": 600,
+            "radiusFinish": 800,
             "colorStart": {
                 "red": 255,
                 "green": 255,
