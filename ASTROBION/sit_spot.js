@@ -55,7 +55,7 @@
             "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
 			"localRotation": Quat.fromPitchYawRollDegrees(-90, 180, 0),
 			"dimensions": [0.3, 0.3, 0.1],
-			"imageURL": ROOT + "images/sit.svg",
+			"imageURL": ROOT + "sit.svg",
 			"emissive": true,
 			"alpha": 0.8,
 			"ignorePickIntersection": true,
