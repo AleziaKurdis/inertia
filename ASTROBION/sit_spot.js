@@ -59,7 +59,7 @@
 			"dimensions": [0.3, 0.3, 0.1],
 			"imageURL": ROOT + "sit.svg",
 			"emissive": true,
-			"alpha": 0.8,
+			"alpha": 0.6,
 			"ignorePickIntersection": true,
             "renderWithZones": renderWithZones,
             "grab": {
