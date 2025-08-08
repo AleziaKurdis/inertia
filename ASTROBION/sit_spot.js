@@ -1,6 +1,14 @@
 // SPDX-License-Identifier: CC0-1.0
 // sit_spot.js
 //
+//  Created by ada-tv, July 18th, 2025.
+//  Modified by Alezia Kurdis, August 7th, 2025.
+//  Copyright 2025, ada-tv.
+//
+//  Sit_spot, but that vanish after 40 second and reactivate when we approach to at least 3m.
+//
+//  SPDX-License-Identifier: CC0-1.0
+//
 (function() {try{
 	const MSG_CHANNEL = "net.thingvellir.sit_spot";
 	const EDIT_SETTING = "io.highfidelity.isEditing"; // true if the create app is open
