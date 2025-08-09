@@ -372,7 +372,7 @@
             "type": "ParticleEffect",
             "parentID": id,
             "name": "NUTRI-VAPOR 1",
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":6700.0,"z":0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":3400.0,"z":0.0}),
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}),
             "grab": {
                 "grabbable": false
@@ -388,9 +388,9 @@
             "emitRadiusStart": 0.0,
             "alpha": 0.04,
             "textures": ROOT + "images/fog.png",
-            "maxParticles": 750,
-            "lifespan": 15,
-            "emitRate": 50,
+            "maxParticles": 100,
+            "lifespan": 10,
+            "emitRate": 100,
             "emitSpeed": 0,
             "speedSpread": 0,
             "emitOrientation": {
@@ -410,7 +410,7 @@
                 "y": 0,
                 "z": 0
             },
-            "particleRadius": 250,
+            "particleRadius": 500,
             "radiusSpread": 300,
             "radiusStart": 600,
             "radiusFinish": 800,
@@ -432,12 +432,16 @@
             "spinFinish": 0.5199999809265137
         }, "local");
         entitiesToDelete.push(vapid);
-        
+
+/*            "name": "NUTRI-VAPOR 2",
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":3400.0,"z":0.0}),
+            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}),
+            */
         vapid = Entities.addEntity({
             "type": "ParticleEffect",
             "parentID": id,
             "name": "NUTRI-VAPOR 2",
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":6700.0,"z":0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":3400.0,"z":0.0}),
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}),
             "grab": {
                 "grabbable": false
@@ -570,7 +574,7 @@
                 "y": 0,
                 "z": 0
             },
-            "particleRadius": 250,
+            "particleRadius": 500,
             "radiusSpread": 300,
             "radiusStart": 600,
             "radiusFinish": 800,
