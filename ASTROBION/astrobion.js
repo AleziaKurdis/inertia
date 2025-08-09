@@ -367,7 +367,7 @@
         }, "local");
         entitiesToDelete.push(id);
         
-        //??? vapor point??? here?
+        //NUTRI vapor points
         var vapid = Entities.addEntity({
             "type": "ParticleEffect",
             "parentID": id,
@@ -415,13 +415,18 @@
             "radiusStart": 800,
             "radiusFinish": 1000,
             "colorStart": {
-                "red": 255,
-                "green": 255,
+                "red": 144,
+                "green": 0,
                 "blue": 255
             },
             "colorFinish": {
-                "red": 71,
-                "green": 163,
+                "red": 230,
+                "green": 0,
+                "blue": 255
+            },
+            "color": {
+                "red": 195,
+                "green": 0,
                 "blue": 255
             },
             "alphaStart": 0,
@@ -433,10 +438,6 @@
         }, "local");
         entitiesToDelete.push(vapid);
 
-/*            "name": "NUTRI-VAPOR 2",
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":3200.0,"z":0.0}),
-            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}),
-            */
         vapid = Entities.addEntity({
             "type": "ParticleEffect",
             "parentID": id,
@@ -457,11 +458,11 @@
             "emitRadiusStart": 0.0,
             "alpha": 0.04,
             "textures": ROOT + "images/fog.png",
-            "maxParticles": 750,
-            "lifespan": 15,
-            "emitRate": 50,
+            "maxParticles": 100,
+            "lifespan": 10,
+            "emitRate": 100,
             "emitSpeed": 0,
-            "speedSpread": 0,
+            "speedSpread": 50,
             "emitOrientation": {
                 "x": 0,
                 "y": 0,
@@ -469,9 +470,9 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 500,
-                "y": 500,
-                "z": 500
+                "x": 800,
+                "y": 800,
+                "z": 800
             },
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
@@ -479,19 +480,24 @@
                 "y": 0,
                 "z": 0
             },
-            "particleRadius": 250,
-            "radiusSpread": 300,
-            "radiusStart": 600,
-            "radiusFinish": 800,
+            "particleRadius": 900,
+            "radiusSpread": 400,
+            "radiusStart": 800,
+            "radiusFinish": 1000,
             "colorStart": {
                 "red": 255,
-                "green": 255,
-                "blue": 255
+                "green": 47,
+                "blue": 0
             },
             "colorFinish": {
-                "red": 71,
-                "green": 163,
-                "blue": 255
+                "red": 255,
+                "green": 153,
+                "blue": 0
+            },
+            "color": {
+                "red": 255,
+                "green": 106,
+                "blue": 0
             },
             "alphaStart": 0,
             "alphaFinish": 0,
