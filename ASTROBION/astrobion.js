@@ -369,32 +369,132 @@
         
         //??? vapor point??? here?
         var vapid = Entities.addEntity({
-            "type": "Sphere",
+            "type": "ParticleEffect",
             "parentID": id,
             "name": "NUTRI-VAPOR 1",
-            "dimensions": {"x":500.0,"y":500.0,"z":500.0},
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":7000.0,"z":0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":6700.0,"z":0.0}),
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}),
             "grab": {
                 "grabbable": false
             },
             "renderWithZones": renderWithZones,
-            "lifetime": 864000
+            "lifetime": 864000,
+            "dimensions": {
+                "x": 1000,
+                "y": 1000,
+                "z": 1000
+            },
+            "shapeType": "ellipsoid",
+            "emitRadiusStart": 0.0,
+            "alpha": 0.04,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 750,
+            "lifespan": 15,
+            "emitRate": 50,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 500,
+                "y": 500,
+                "z": 500
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 250,
+            "radiusSpread": 300,
+            "radiusStart": 600,
+            "radiusFinish": 800,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": 71,
+                "green": 163,
+                "blue": 255
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.0499999523162842,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
         }, "local");
         entitiesToDelete.push(vapid);
         
         vapid = Entities.addEntity({
-            "type": "Sphere",
+            "type": "ParticleEffect",
             "parentID": id,
             "name": "NUTRI-VAPOR 2",
-            "dimensions": {"x":500.0,"y":500.0,"z":500.0},
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":7000.0,"z":0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":6700.0,"z":0.0}),
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}),
             "grab": {
                 "grabbable": false
             },
             "renderWithZones": renderWithZones,
-            "lifetime": 864000
+            "lifetime": 864000,
+            "dimensions": {
+                "x": 1000,
+                "y": 1000,
+                "z": 1000
+            },
+            "shapeType": "ellipsoid",
+            "emitRadiusStart": 0.0,
+            "alpha": 0.04,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 750,
+            "lifespan": 15,
+            "emitRate": 50,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 500,
+                "y": 500,
+                "z": 500
+            },
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 250,
+            "radiusSpread": 300,
+            "radiusStart": 600,
+            "radiusFinish": 800,
+            "colorStart": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "colorFinish": {
+                "red": 71,
+                "green": 163,
+                "blue": 255
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 1.0499999523162842,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
         }, "local");
         entitiesToDelete.push(vapid);
         
