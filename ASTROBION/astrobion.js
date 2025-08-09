@@ -368,6 +368,35 @@
         entitiesToDelete.push(id);
         
         //??? vapor point??? here?
+        var vapid = Entities.addEntity({
+            "type": "Sphere",
+            "parentID": id,
+            "name": "NUTRI-VAPOR 1",
+            "dimensions": {"x":500.0,"y":500.0,"z":500.0},
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":7000.0,"z":0.0}),
+            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}),
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": renderWithZones,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(vapid);
+        
+        vapid = Entities.addEntity({
+            "type": "Sphere",
+            "parentID": id,
+            "name": "NUTRI-VAPOR 2",
+            "dimensions": {"x":500.0,"y":500.0,"z":500.0},
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}), {"x":0.0,"y":7000.0,"z":0.0}),
+            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":-90.0}),
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": renderWithZones,
+            "lifetime": 864000
+        }, "local");
+        entitiesToDelete.push(vapid);
         
         //ORGANEL########################################
         /*rotation = Quat.fromVec3Degrees( {
