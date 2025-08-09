@@ -371,6 +371,31 @@
                 },
                 "castShadows": true
             }
+        },
+        {
+            "id": "{03973e23-23c8-49c8-a220-284679eafc81}",
+            "type": "Box",
+            "name": "CLOCK D29",
+            "locked": true,
+            "dimensions": {
+                "x": 1.8433825969696045,
+                "y": 1.3191678524017334,
+                "z": 0.01
+            },
+            "position": {"x":-7212.0126953125,"y":-5923.65185546875,"z":4976.69970703125},
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
