@@ -588,7 +588,42 @@
         }, "local");
         
         entitiesToDelete.push(id);
+        
+        //Seats ###########################################
+        var seats = [
+            {"localPosition": {"x": -1.1895,"y": 18.7966,"z": -10.5273}, "localRotation": {"x":0,"y":0,"z":0,"w":1}},
+            {"localPosition": {"x": 1.1895,"y": 18.7966,"z": -10.5273}, "localRotation": {"x":0,"y":0,"z":0,"w":1}},
+            {"localPosition": {"x": -1.1895,"y": 18.4141,"z": -8.0264}, "localRotation": {"x":0,"y":0,"z":0,"w":1}},
+            {"localPosition": {"x": 1.1895,"y": 18.4141,"z": -8.0264}, "localRotation": {"x":0,"y":0,"z":0,"w":1}}
+        ];
+        
+        var t;
+        for (t = 0; t < seats.length; t++ ) {
+            entitiesToDelete.push(generateSeat(seats[t].localPosition, seats[t].localRotation));
+        }
+        
     };
+    
+    function generateSeat(localPosition, localRotation) {
+        var id = Entities.addEntity({
+            "type": "Shape",
+            "shape": "Cube",
+            "parentID": thisEntity,
+            "name": "Breemor - Seat",
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "localPosition": localPosition,
+            "localRotation": localRotation,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "visible": true,
+            "alpha": 0.0,
+            "script": ROOT + "../seats/sit_spot.js",
+            "lifetime": 864000
+        }, "local");
+        return id;
+    }
     
     function generateElevatorSign(localPosition, level) {
         var id = Entities.addEntity({
