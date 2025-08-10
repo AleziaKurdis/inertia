@@ -608,7 +608,7 @@
         var id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
-            "parentID": thisEntity,
+            "parentID": thisEntityID,
             "name": "Breemor - Seat",
             "dimensions": {"x":0.3,"y":0.01,"z":0.3},
             "localPosition": localPosition,
