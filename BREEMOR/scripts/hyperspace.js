@@ -43,7 +43,7 @@
             "playing": false,
             "volume": 0.0,
             "loop": false,
-            "positional": false
+            "positional": false,
             "localOnly": true,
             "soundURL": ROOT + "../sounds/hyperspaceWarning.mp3",
             "lifetime": 20
@@ -66,7 +66,7 @@
             "playing": true,
             "volume": 1.0,
             "loop": false,
-            "positional": false
+            "positional": false,
             "localOnly": true,
             "soundURL": soundURL,
             "lifetime": 20
