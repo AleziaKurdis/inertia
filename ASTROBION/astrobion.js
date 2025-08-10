@@ -372,7 +372,7 @@
             "type": "ParticleEffect",
             "parentID": id,
             "name": "NUTRI-VAPOR 1",
-            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":3200.0,"z":0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}), {"x":0.0,"y":3100.0,"z":0.0}),
             "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":90.0}),
             "grab": {
                 "grabbable": false
@@ -387,7 +387,7 @@
             "shapeType": "ellipsoid",
             "emitRadiusStart": 0.0,
             "alpha": 0.03,
-            "textures": ROOT + "images/fog.png",
+            "textures": ROOT + "images/PARTICULE_OPERA_007.png", //fog.png
             "maxParticles": 1500,
             "lifespan": 15,
             "emitRate": 100,
@@ -415,18 +415,18 @@
             "radiusStart": 800,
             "radiusFinish": 1000,
             "colorStart": {
-                "red": 144,
-                "green": 0,
+                "red": 0,
+                "green": 123,
                 "blue": 255
             },
             "colorFinish": {
-                "red": 230,
-                "green": 0,
+                "red": 166,
+                "green": 239,
                 "blue": 255
             },
             "color": {
-                "red": 195,
-                "green": 0,
+                "red": 15,
+                "green": 211,
                 "blue": 255
             },
             "alphaStart": 0,
@@ -457,7 +457,7 @@
             "shapeType": "ellipsoid",
             "emitRadiusStart": 0.0,
             "alpha": 0.03,
-            "textures": ROOT + "images/fog.png",
+            "textures": ROOT + "images/PARTICULE_OPERA_007.png", //fog.png",
             "maxParticles": 1500,
             "lifespan": 15,
             "emitRate": 100,
