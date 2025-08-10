@@ -20,13 +20,13 @@
 
     var HALF = 0.5;
     
-    var tpSound;
-    var TP_SOUND = ROOT + "../sounds/hyperspaceWarning.wav";
+    //var tpSound;
+    //var TP_SOUND = ROOT + "../sounds/hyperspaceWarning.wav";
     
     var destinations = Script.require(ROOT + "destinations.json");
 
     this.preload = function(entityID) {
-        tpSound = SoundCache.getSound(TP_SOUND);
+        //tpSound = SoundCache.getSound(TP_SOUND);
         var properties = Entities.getEntityProperties(entityID, ["description", "renderWithZones", "position", "rotation"]);
         renderWithZones = properties.renderWithZones;
         entityPosition = properties.position;
@@ -35,16 +35,42 @@
         thisEntityID = entityID;
         Messages.subscribe(channelName);
         Messages.messageReceived.connect(onMessageReceived);
+        var id = Entities.addEntity({
+            "type": "Sound",
+            "name": "Hyperspace Sound",
+            "dimensions": {"x":1,"y":1,"z":1},
+            "position": entityPosition,
+            "playing": false,
+            "volume": 0.0,
+            "loop": false,
+            "positional": false
+            "localOnly": true,
+            "soundURL": ROOT + "../sounds/hyperspaceWarning.mp3",
+            "lifetime": 20
+        }, "local");
     };
     
-    function playPunctualSound(sound, position) {
-        var injectorOptions = {
+    function playPunctualSound(soundURL, position) {
+        /*var injectorOptions = {
             "position": position,
             "volume": 1.0,
             "loop": false,
             "localOnly": true
         };
-        var injector = Audio.playSound(sound, injectorOptions);
+        var injector = Audio.playSound(sound, injectorOptions);*/
+        var id = Entities.addEntity({
+            "type": "Sound",
+            "name": "Hyperspace Sound",
+            "dimensions": {"x":1,"y":1,"z":1},
+            "position": position,
+            "playing": true,
+            "volume": 1.0,
+            "loop": false,
+            "positional": false
+            "localOnly": true,
+            "soundURL": soundURL,
+            "lifetime": 20
+        }, "local");
     }
 
     this.unload = function(entityID) {
@@ -73,7 +99,7 @@
             
             var arrivalURL = "hifi://" + destinations[destination].placename + "/" + arrivalPosition.x + "," + (arrivalPosition.y - 0.2) + "," + arrivalPosition.z + "/" + arrivalRotation.x + "," + arrivalRotation.y  + "," + arrivalRotation.z  + "," + arrivalRotation.w;    
             
-            playPunctualSound(tpSound, MyAvatar.position);
+            playPunctualSound(ROOT + "../sounds/hyperspaceWarning.mp3", MyAvatar.position);
             Script.setTimeout(function () {
                 Window.location = arrivalURL;
             }, 14000);
