@@ -393,6 +393,33 @@
                 "blue": 0
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{1dcfab7f-a3ae-4906-b493-1f4556031d06}",
+            "type": "Model",
+            "position": {
+                "x": -6000,
+                "y": -6000,
+                "z": 6000
+            },
+            "name": "PARAZITS",
+            "locked": true,
+            "dimensions": {
+                "x": 1236.0533447265625,
+                "y": 111.68910217285156,
+                "z": 2001.6829833984375
+            },
+            "renderWithZones": [
+                "{6e7adc37-41e5-4f45-a225-2d106ad03e78}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/ASTROBION/models/PARAZIT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
