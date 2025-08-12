@@ -592,9 +592,9 @@
         //Seats ###########################################
         var seats = [
             {"localPosition": {"x": -1.1895,"y": 18.7966,"z": -10.6273}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
-            {"localPosition": {"x": 1.1895,"y": 18.7966,"z": -10.6273}, "localRotation": {"x":0,"y":0.7071067690849304,"z":0,"w":-0.70710688829422}},
-            {"localPosition": {"x": -1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": {"x":0,"y":0.7071067690849304,"z":0,"w":-0.70710688829422}},
-            {"localPosition": {"x": 1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": {"x":0,"y":0.7071067690849304,"z":0,"w":-0.70710688829422}}
+            {"localPosition": {"x": 1.1895,"y": 18.7966,"z": -10.6273}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
+            {"localPosition": {"x": -1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
+            {"localPosition": {"x": 1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})}
         ];
         
         var t;
@@ -624,7 +624,7 @@
             "visible": true,
             "alpha": 0.0,
             "script": ROOT + "../seats/sit_spot.js",
-            "userData": JSON.stringify(override),
+            "userData": JSON.stringify(distanceOverrider),
             "lifetime": 864000
         }, "local");
         return id;
