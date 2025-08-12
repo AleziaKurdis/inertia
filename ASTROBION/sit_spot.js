@@ -25,11 +25,18 @@
     
     let timerIntervall = 4000; // 4 sec 
     let processTimer = 0;
-    const DISTANCE_TO_SEE_INDICATOR = 3.0;
+    let distanceToSeeIndicator = 3.0;
+    
+    /*
+    NOTE: distanceToSeeIndicator can be overriden using userData:
+    {
+        "distanceToSeeIndicator": 2.0
+    }
+    */
     
     const ROOT = Script.resolvePath('').split("sit_spot.js")[0];
 
-	this.actionEvent = function(actionID, value) {
+	function actionEvent (actionID, value) {
 		if (disabled || !isSitting || actionID != actionTranslateY) { return; }
 
 		if (value > 0.5) {
@@ -46,10 +53,21 @@
 
 	this.preload = function(_selfID) {
 		selfID = _selfID;
-        let properties = Entities.getEntityProperties(selfID, ["position", "renderWithZones"]);
+        let properties = Entities.getEntityProperties(selfID, ["position", "renderWithZones", "userData"]);
         renderWithZones = properties.renderWithZones;
         thisPosition = properties.position;
-		Controller.actionEvent.connect(this.actionEvent);
+        try {
+			let userData = JSON.parse(properties.userData);
+
+			if (userData.distanceToSeeIndicator !== undefined) { 
+                distanceToSeeIndicator = userData.distanceToSeeIndicator;
+            }
+
+		} catch(e) {
+			console.error(e);
+		}
+        
+		Controller.actionEvent.connect(actionEvent);
 
 		visualID = Entities.addEntity({
 			"type": "Image",
@@ -78,7 +96,7 @@
         let today = new Date();
         if ((today.getTime() - processTimer) > timerIntervall ) {
             if (!isSitting) {
-                if (Vec3.distance(MyAvatar.position, thisPosition) < DISTANCE_TO_SEE_INDICATOR) {
+                if (Vec3.distance(MyAvatar.position, thisPosition) < distanceToSeeIndicator) {
                     if (!hasBeenViewed) {
                         Entities.editEntity(visualID, { "visible": true });
                         hasBeenViewed = true;
@@ -116,7 +134,7 @@
 	};
 
 
-	this.messageRecv = function(channel, message, senderID, localOnly) {
+	function messageRecv (channel, message, senderID, localOnly) {
 		if (channel !== MSG_CHANNEL || !localOnly || senderID != MyAvatar.sessionUUID) { return; }
 
 		try {
@@ -130,9 +148,9 @@
 		} catch(e) {
 			console.error(e);
 		}
-	};
+	}
 
-	Messages.messageReceived.connect(this.messageRecv);
+	Messages.messageReceived.connect(messageRecv);
 
 	this.unload = function(_selfID) {
 		unloading();
@@ -140,8 +158,8 @@
 
     function unloading() {
         Script.update.disconnect(myTimer);
-        Messages.messageReceived.disconnect(this.messageRecv);
-		Controller.actionEvent.disconnect(this.actionEvent);
+        Messages.messageReceived.disconnect(messageRecv);
+		Controller.actionEvent.disconnect(actionEvent);
 		Entities.deleteEntity(visualID);
 		delete visualID;
 		if (isSitting) {
@@ -152,4 +170,4 @@
 	Window.domainChanged.connect(function() {
 		unloading();
 	});
-} catch(e) { console.error(e); this.unload(); }})
+} catch(e) { console.error(e); unloading(); }})
