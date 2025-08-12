@@ -215,6 +215,10 @@
     }
 
     function generateSeat(localPosition, localRotation) {
+        var distanceOverrider = {
+            "distanceToSeeIndicator": 2.0
+        };
+        
         var id = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
@@ -230,6 +234,7 @@
             "visible": true,
             "alpha": 0.0,
             "script": ROOT + "sit_spot.js",
+            "userData": JSON.stringify(distanceOverrider),
             "lifetime": 864000
         }, "local");
         return id;
