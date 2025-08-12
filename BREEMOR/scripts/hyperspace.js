@@ -20,13 +20,9 @@
 
     var HALF = 0.5;
     
-    //var tpSound;
-    //var TP_SOUND = ROOT + "../sounds/hyperspaceWarning.wav";
-    
     var destinations = Script.require(ROOT + "destinations.json");
 
     this.preload = function(entityID) {
-        //tpSound = SoundCache.getSound(TP_SOUND);
         var properties = Entities.getEntityProperties(entityID, ["description", "renderWithZones", "position", "rotation"]);
         renderWithZones = properties.renderWithZones;
         entityPosition = properties.position;
@@ -51,13 +47,6 @@
     };
     
     function playPunctualSound(soundURL, position) {
-        /*var injectorOptions = {
-            "position": position,
-            "volume": 1.0,
-            "loop": false,
-            "localOnly": true
-        };
-        var injector = Audio.playSound(sound, injectorOptions);*/
         var id = Entities.addEntity({
             "type": "Sound",
             "name": "Hyperspace Sound",
@@ -90,6 +79,7 @@
     }
 
     function hyperspace(destination) {
+        print("destination" + destination); //TRASH ########################## 
         if (positionIsInsideEntityBounds(thisEntityID, MyAvatar.position)) {
             var relativePosition = Vec3.subtract( MyAvatar.position, entityPosition );
             var eulerAngles = Quat.safeEulerAngles(entityRotation);
