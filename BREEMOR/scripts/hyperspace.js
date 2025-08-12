@@ -79,7 +79,6 @@
     }
 
     function hyperspace(destination) {
-        print("destination" + destination); //TRASH ########################## 
         if (positionIsInsideEntityBounds(thisEntityID, MyAvatar.position)) {
             var relativePosition = Vec3.subtract( MyAvatar.position, entityPosition );
             var eulerAngles = Quat.safeEulerAngles(entityRotation);
