@@ -594,7 +594,17 @@
             {"localPosition": {"x": -1.1895,"y": 18.7966,"z": -10.6273}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
             {"localPosition": {"x": 1.1895,"y": 18.7966,"z": -10.6273}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
             {"localPosition": {"x": -1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
-            {"localPosition": {"x": 1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})}
+            {"localPosition": {"x": 1.1895,"y": 18.4141,"z": -8.1264}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 180,"z": 0})},
+            {"localPosition": {"x": 11.9729,"y": 10.8506,"z": -33.9851}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 123,"z": 0})},
+            {"localPosition": {"x": 11.7185,"y": 10.8506,"z": -32.7124}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 33,"z": 0})},
+            {"localPosition": {"x": 10.7314,"y": 10.8506,"z": -34.2598}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": -147,"z": 0})},
+            {"localPosition": {"x": 11.3696,"y": 10.8506,"z": -34.4858}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 168,"z": 0})},
+            {"localPosition": {"x": 12.1855,"y": 10.8506,"z": -33.2451}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 78,"z": 0})},
+            {"localPosition": {"x": 9.9414,"y": 10.8506,"z": -30.0969}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 14,"z": 0})},
+            {"localPosition": {"x": 10.5493,"y": 10.8506,"z": -31.3657}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 104,"z": 0})},
+            {"localPosition": {"x": 8.7703,"y": 10.8506,"z": -30.9221}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": -76,"z": 0})},
+            {"localPosition": {"x": 9.0530,"y": 10.8506,"z": -30.2026}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": -41,"z": 0})},
+            {"localPosition": {"x": 10.6394,"y": 10.8506,"z": -30.5750}, "localRotation": Quat.fromVec3Degrees({"x": 0,"y": 72,"z": 0})}
         ];
         
         var t;
@@ -602,6 +612,53 @@
             entitiesToDelete.push(generateSeat(seats[t].localPosition, seats[t].localRotation));
         }
         
+        //Haluscence Classic
+        id = Entities.addEntity({
+            "type": "Model",
+            "name": "Breemor - HALLUCENSE - Classic",
+            "dimensions": {
+                "x": 0.2593900263309479,
+                "y": 0.5084574222564697,
+                "z": 0.2593900263309479
+            },
+            "localRotation": Quat.fromVec3Degrees({"x": 0,"y": -53,"z": 0}),
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/hallucense/components/hallucense.fbx",
+            "script": "https://aleziakurdis.github.io/hallucense/components/hallucenseManager.js",
+            "localPosition": {"x":11.1736,"y":11.3389,"z":-33.5068},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "lifetime": 25200
+        }, "local");
+        
+        entitiesToDelete.push(id);
+        
+        //Haluscence Purple Radian
+        id = Entities.addEntity({
+            "type": "Model",
+            "name": "Breemor - HALLUCENSE - Purple Radian",
+            "dimensions": {
+                "x": 0.2593900263309479,
+                "y": 0.5084574222564697,
+                "z": 0.2593900263309479
+            },
+            "localRotation": Quat.fromVec3Degrees({"x": 0,"y": -53,"z": 0}),
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucense.fbx",
+            "script": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucenseManager.js",
+            "localPosition": {"x":9.6843,"y":11.3389,"z":-31.1646},
+            "parentID": entityID,
+            "renderWithZones": renderWithZones,
+            "lifetime": 25200
+        }, "local");
+        
+        entitiesToDelete.push(id);
     };
     
     function generateSeat(localPosition, localRotation) {
