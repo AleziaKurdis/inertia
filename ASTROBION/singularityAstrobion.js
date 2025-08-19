@@ -171,7 +171,8 @@
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
-                    "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth)
+                    "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth),
+                    "position": Myavatar.position
                 }
             });
         }
