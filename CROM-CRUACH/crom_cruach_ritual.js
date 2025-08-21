@@ -10,6 +10,7 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){ 
+    var ROOT = Script.resolvePath('').split("crom_cruach_ritual.js")[0];
     var epiCenter;
     var renderWithZones;
     var landscapeEntityID;
@@ -35,7 +36,7 @@
     var VORTEX_DURATION = 30000; //30 sec.
     var vortexConvectionPointFactor = 1;
     
-    var VORTEX_SOUND_URL = "http://metaverse.bashora.com/scripts/crom_cruach/energy.mp3";
+    var VORTEX_SOUND_URL = ROOT + "energy.mp3";
     var vortexSound;
     var vortexInjector;
     
@@ -206,21 +207,17 @@
                     "parentID": runningSpiritId,
                     "name": "ZARDOZ",
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.sum( {
-                                    "x":epiCenter.x,
-                                    "y": epiCenter.y + ROTOR_1_HEIGHT,
-                                    "z": epiCenter.z
-                                },{
-                                    "x": 0.6698474884033203,
-                                    "y": 0.009765625,
-                                    "z": 5.825725555419922
-                                }),
+                    "localPosition": {
+                        "x": 0.6698474884033203,
+                        "y": 0.009765625,
+                        "z": 5.825725555419922
+                    },
                     "dimensions": {
                         "x": 29.80000114440918,
                         "y": 29.80000114440918,
                         "z": 29.80000114440918
                     },
-                    "rotation": {
+                    "localRotation": {
                         "x": 0.001080600544810295,
                         "y": -0.248988077044487,
                         "z": -0.009234104305505753,
@@ -245,7 +242,7 @@
                         "blue": color[2]
                     },
                     "alpha": 0.06 * alphafactor,
-                    "textures": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Assets/Textures/Defaults/Interface/default_particle.png",
+                    "textures": ROOT + "fog.png",
                     "maxParticles": 1500,
                     "lifespan": 15,
                     "emitRate": 100,
@@ -287,7 +284,7 @@
                     "alphaFinish": 0,
                     "emitterShouldTrail": true,
                     "spinStart": null,
-                    "spinFinish": null                    
+                    "spinFinish": null 
                 }, "local");    
         } else {
             //update
@@ -299,7 +296,7 @@
                     "red": color[0],
                     "green": color[1],
                     "blue": color[2]
-                }                
+                }
             });
             
         }
