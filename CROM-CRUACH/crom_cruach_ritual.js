@@ -11,7 +11,7 @@
 //
 (function(){ 
     var epiCenter;
-    var universeRenderWithZones;
+    var renderWithZones;
     var landscapeEntityID;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var updateTimerInterval = 3000; // 3 sec 
@@ -94,7 +94,7 @@
                     Entities.deleteEntity(zardozId);
                     zardozId = Uuid.NONE;
                     Entities.deleteEntity(runningSpiritId);
-                    runningSpiritId = Uuid.NONE;                    
+                    runningSpiritId = Uuid.NONE;
                 }
                 if (galaxyArmId !== Uuid.NONE) {
                     Entities.deleteEntity(galaxyArmId);
@@ -136,7 +136,7 @@
             Entities.deleteEntity(zardozId);
             zardozId = Uuid.NONE;
             Entities.deleteEntity(runningSpiritId);
-            runningSpiritId = Uuid.NONE;                    
+            runningSpiritId = Uuid.NONE;
         }
         if (galaxyArmId !== Uuid.NONE) {
             Entities.deleteEntity(galaxyArmId);
