@@ -1,0 +1,13 @@
+{
+    "materialVersion":1,
+    "materials":[
+        {
+            "albedo":[1,1,1],
+            "metallic": 0.01,
+            "roughness": 0.5,
+            "normalMap": "",
+            "emissive": [3.85,2.068431,0.8152941],
+            "cullFaceMode":"CULL_BACK"
+        }
+    ]
+}
