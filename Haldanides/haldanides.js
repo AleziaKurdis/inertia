@@ -125,8 +125,9 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         //const TARGET_HOUR = 22.5;
         const TARGET_HOUR = 4.5; //DEBUG
+        const RANDOM_CATALYZER = 0.2; 
         if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
-            updateTimerIntervall = 1000; // 1 sec
+            updateTimerIntervall = 700; // 0.7 sec
             let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR);
             let expFrequency = Math.pow((baseFrequency + 1),3);
             if (expFrequency > 1) {
@@ -134,7 +135,7 @@
             } else if (expFrequency < 0){
                 expFrequency = 0;
             }
-            if (Math.random() < expFrequency) {
+            if (Math.random() < expFrequency * RANDOM_CATALYZER) {
                 print("expFrequency: " + expFrequency);
                 //HERE WE TRIGGER
             }
