@@ -124,18 +124,20 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 3.5; //DEBUG
+        const TARGET_HOUR = 4.5; //DEBUG
         if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
             updateTimerIntervall = 1000; // 1 sec
             let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR);
-            let expFrequency = (baseFrequency + 1)^3;
+            let expFrequency = Math.pow((baseFrequency + 1),3);
             if (expFrequency > 1) {
                 expFrequency = 1;
             } else if (expFrequency < 0){
                 expFrequency = 0;
             }
-            print("expFrequency: " + expFrequency);
-
+            if (Math.random() < expFrequency) {
+                print("expFrequency: " + expFrequency);
+                //HERE WE TRIGGER
+            }
         } else {
             updateTimerIntervall = 20000; // 20 sec
         }
