@@ -14,6 +14,7 @@
     var ROOT = Script.resolvePath('').split("haldanides.js")[0];
     var isInitiated = false;
     var triggerPosition;
+    var renderWithZones;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
     let updateTimerIntervall = 20000; // 20 sec 
@@ -33,7 +34,7 @@
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
                 initiate(entityID);
             }
-        }  
+        }
         
     };
 
@@ -75,10 +76,12 @@
     }
 
     function initiate(EntID) {
-        var properties = Entities.getEntityProperties(EntID, ["position"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "renderWithZones"]);
         triggerPosition = properties.position;
+        renderWithZones = properties.renderWithZones;
         isInitiated = true; 
- 
+        generateBloomZone();
+        
         var today = new Date();
         processTimer = today.getTime();
     
@@ -120,10 +123,11 @@
 
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
-        const TARGET_HOUR = 22.5;
+        //const TARGET_HOUR = 22.5;
+        const TARGET_HOUR = 3.5; //DEBUG
         if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
             updateTimerIntervall = 1000; // 1 sec
-            let baseFrequency = - Math.abs(d19CurrentHour - TARGET_HOUR);
+            let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR);
             let expFrequency = (baseFrequency + 1)^3;
             if (expFrequency > 1) {
                 expFrequency = 1;
