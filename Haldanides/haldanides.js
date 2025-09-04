@@ -134,7 +134,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 11; //DEBUG
+        const TARGET_HOUR = 12; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -191,7 +191,7 @@
                     },
                     "name": "Haldanide",
                     "canCastShadow": false,
-                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 500},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 1000},
                     "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random() * 0.3)},
                     "damping": 0,
                     "angularDamping": 0,
