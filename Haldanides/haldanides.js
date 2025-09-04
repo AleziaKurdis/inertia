@@ -29,6 +29,7 @@
     var thisEntityID;
    
     this.preload = function(entityID) {
+        Workload.getConfig("controlViews")["regulateViewRanges"] = false;
         thisEntityID = entityID;
         catalogNumber = 0;
  
@@ -68,6 +69,7 @@
     function shutdown() {
         if (isInitiated){
             Script.update.disconnect(myTimer);
+            Workload.getConfig("controlViews")["regulateViewRanges"] = true;
             
             if (zoneID !== Uuid.NONE) {
                 Entities.deleteEntity(zoneID);
@@ -178,12 +180,12 @@
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 400 + (Math.random() * 300), "z": 5000},
                     "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 360)}),
-                    "dimensions": dimensionsBolide,
+                    "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 10)),
                     "modelURL": ROOT + fileName,
                     "useOriginalPivot": true,
                     "shapeType": "none",
                     "type": "Model",
-                    "lifetime": 10,
+                    "lifetime": 20,
                     "grab": {
                         "grabbable": false
                     },
