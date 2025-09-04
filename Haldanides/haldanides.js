@@ -189,8 +189,8 @@
                     },
                     "name": "Haldanide",
                     "canCastShadow": false,
-                    "velocity": {"x": 0.0, "y": 0.0, "z": -500},
-                    "angularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random * 0.3)},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": -500},
+                    "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random * 0.3)},
                     "damping": 0,
                     "angularDamping": 0,
                     "collisionless": true
