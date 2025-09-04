@@ -14,6 +14,7 @@
     var ROOT = Script.resolvePath('').split("haldanides.js")[0];
     var isInitiated = false;
     var triggerPosition;
+    var triggerRotation;
     var renderWithZones;
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     var HALF = 0.5;
@@ -85,8 +86,9 @@
     }
 
     function initiate(EntID) {
-        var properties = Entities.getEntityProperties(EntID, ["position", "renderWithZones"]);
+        var properties = Entities.getEntityProperties(EntID, ["position", "renderWithZones", "rotation"]);
         triggerPosition = properties.position;
+        triggerRotation = properties.rotation;
         renderWithZones = properties.renderWithZones;
         isInitiated = true; 
         generateBloomZone();
@@ -122,7 +124,9 @@
                     "castShadows": true
                 },
                 "bloom": {
-                    "bloomIntensity": 0.5
+                    "bloomIntensity": 0.4,
+                    "bloomThreshold": 0.8,
+                    "bloomSize":0.5
                 },
                 "bloomMode": "enabled",
                 "lifetime": DAY_DURATION
@@ -176,25 +180,22 @@
                 } 
 
                 let halID = Entities.addEntity({
-                    "parentID": thisEntityID,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 200 + (Math.random() * 300), "z": -5000},
-                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 60) - 30}),
+                    "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 200 + (Math.random() * 300), "z": -5000}),
+                    "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 60) - 30}))),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
                     "shapeType": "none",
                     "type": "Model",
-                    "lifetime": 20,
+                    "lifetime": 21,
                     "grab": {
                         "grabbable": false
                     },
                     "name": "Haldanide",
                     "canCastShadow": false,
-                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 1000.0},
-                    //"localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random() * 0.3)},
+                    "velocity": {"x": 0.0, "y": 0.0, "z": 500.0},
                     "damping": 0,
-                    //"angularDamping": 0,
                     "collisionless": true
                 }, "local");
                 entitiesToDelete.push(halID);
