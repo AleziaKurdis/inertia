@@ -74,7 +74,7 @@
                 zoneID = Uuid.NONE;
             }
             
-            for (let i = 0; i < entitiesToDelete.length: i++) {
+            for (let i = 0; i < entitiesToDelete.length; i++) {
                 Entities.deleteEntity(entitiesToDelete[i]);
             }
             entitiesToDelete = [];
@@ -176,8 +176,8 @@
                 let halID = Entities.addEntity({
                     "parentID": thisEntityID,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": (Math.random * 2000) - 1000, "y": 400 + (Math.random * 300), "z": 5000},
-                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random * 360)}),
+                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 400 + (Math.random() * 300), "z": 5000},
+                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 360)}),
                     "dimensions": dimensionsBolide,
                     "modelURL": ROOT + fileName,
                     "useOriginalPivot": true,
@@ -190,7 +190,7 @@
                     "name": "Haldanide",
                     "canCastShadow": false,
                     "localVelocity": {"x": 0.0, "y": 0.0, "z": -500},
-                    "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random * 0.3)},
+                    "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random() * 0.3)},
                     "damping": 0,
                     "angularDamping": 0,
                     "collisionless": true
