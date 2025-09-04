@@ -134,7 +134,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 10.4; //DEBUG
+        const TARGET_HOUR = 11; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -178,9 +178,9 @@
                 let halID = Entities.addEntity({
                     "parentID": thisEntityID,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 300 + (Math.random() * 300), "z": 5000},
+                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 400 + (Math.random() * 300), "z": -5000},
                     "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 360)}),
-                    "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 10)),
+                    "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
                     "shapeType": "none",
@@ -191,7 +191,7 @@
                     },
                     "name": "Haldanide",
                     "canCastShadow": false,
-                    "localVelocity": {"x": 0.0, "y": 0.0, "z": -500},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 500},
                     "localAngularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random() * 0.3)},
                     "damping": 0,
                     "angularDamping": 0,
