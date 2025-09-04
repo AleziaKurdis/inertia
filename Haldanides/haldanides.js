@@ -148,7 +148,7 @@
                 expFrequency = 0;
             }
             if (Math.random() < expFrequency * RANDOM_CATALYZER) {
-                print("expFrequency: " + expFrequency);
+                //print("expFrequency: " + expFrequency);
                 let group;
                 if (expFrequency < 0.4) {
                     group = [1];
@@ -198,7 +198,7 @@
                     "collisionless": true
                 }, "local");
                 entitiesToDelete.push(halID);
-                print("HALDANIDE-" + catalogNumber);
+                print("HALDANIDE-" + catalogNumber + " | " + fileName);
                 catalogNumber++;
             }
         } else {
