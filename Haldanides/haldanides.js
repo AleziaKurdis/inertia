@@ -134,7 +134,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 9.75; //DEBUG
+        const TARGET_HOUR = 10.4; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
