@@ -178,10 +178,10 @@
                 let halID = Entities.addEntity({
                     "parentID": thisEntityID,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 400 + (Math.random() * 300), "z": 5000},
+                    "localPosition": {"x": (Math.random() * 2000) - 1000, "y": 300 + (Math.random() * 300), "z": 5000},
                     "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 360)}),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 10)),
-                    "modelURL": ROOT + fileName,
+                    "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
                     "shapeType": "none",
                     "type": "Model",
