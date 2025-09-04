@@ -19,8 +19,9 @@
     var HALF = 0.5;
     let updateTimerIntervall = 20000; // 20 sec 
     var processTimer = 0;
+    var catalogNumber;
 
-
+    var entitiesToDelete = [];
     
     var DAY_DURATION = 68400; //D19
 
@@ -29,6 +30,7 @@
    
     this.preload = function(entityID) {
         thisEntityID = entityID;
+        catalogNumber = 0;
  
         if (!isInitiated){
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
@@ -71,6 +73,11 @@
                 Entities.deleteEntity(zoneID);
                 zoneID = Uuid.NONE;
             }
+            
+            for (let i = 0; i < entitiesToDelete.length: i++) {
+                Entities.deleteEntity(entitiesToDelete[i]);
+            }
+            entitiesToDelete = [];
         }
         isInitiated = false;
     }
@@ -94,9 +101,9 @@
                 "type": "Zone",
                 "name": "HALDANIDES_BLOOM_(!)_Z0N3",
                 "dimensions": {
-                    "x": 10000,
+                    "x": 8000,
                     "y": 1000,
-                    "z": 10000
+                    "z": 8000
                 },
                 "parentID": thisEntityID,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
@@ -125,7 +132,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 4.5; //DEBUG
+        const TARGET_HOUR = 9.75; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -140,134 +147,62 @@
             }
             if (Math.random() < expFrequency * RANDOM_CATALYZER) {
                 print("expFrequency: " + expFrequency);
-                //HERE WE TRIGGER
+                let group;
+                if (expFrequency < 0.4) {
+                    group = [1];
+                } else if (expFrequency < 0.7) {
+                    group = [1, 2];
+                } else {
+                    group = [1, 2, 4];
+                }
+                let groupSet = group[Math.floor(Math.random() * group.length)];
+                let colorSet = Math.floor(Math.random() * 7);
+                
+                let fileName = "HAL-" + groupSet + "-" + colorSet + ".fst";
+                
+                let dimensionsBolide;
+                switch(groupSet) {
+                    case 1:
+                        dimensionsBolide = {"x":7.839242458343506,"y":7.606816291809082,"z":229.58192443847656};
+                        break;
+                    case 2:
+                        dimensionsBolide = {"x":137.0283660888672,"y":7.808669567108154,"z":363.3722229003906};
+                        break;
+                    case 4:
+                        dimensionsBolide = {"x":179.83761596679688,"y":72.03010559082031,"z":427.2826232910156};
+                        break;
+                } 
+
+                let halID = Entities.addEntity({
+                    "parentID": thisEntityID,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": (Math.random * 2000) - 1000, "y": 400 + (Math.random * 300), "z": 5000},
+                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random * 360)}),
+                    "dimensions": dimensionsBolide,
+                    "modelURL": ROOT + fileName,
+                    "useOriginalPivot": true,
+                    "shapeType": "none",
+                    "type": "Model",
+                    "lifetime": 10,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Haldanide",
+                    "canCastShadow": false,
+                    "velocity": {"x": 0.0, "y": 0.0, "z": -500},
+                    "angularVelocity": {"x": 0.0, "y": 0.0, "z": (Math.random * 0.3)},
+                    "damping": 0,
+                    "angularDamping": 0,
+                    "collisionless": true
+                }, "local");
+                entitiesToDelete.push(halID);
+                print("HALDANIDE-" + catalogNumber);
+                catalogNumber++;
             }
         } else {
             updateTimerIntervall = 20000; // 20 sec
         }
         
-            //updateTimerIntervall = 10000; // 10 sec 
-            
-            /* //############## NOCTURN LIGHTNINGS AND THUNDER #############
-            
-            var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
-            
-            //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
-            if ( d29CurrentHour > 23 || d29CurrentHour < 5 ) {
-                if (storming) {
-                    // Manage thunder and color
-                    Entities.editEntity(lightningsID, { "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )) });
-                    
-                    if (Math.random() < 0.05 && universeVolume != 0) { //0.05 = 1 fois par 20 sec
-                        var thunderVolume = Math.random() * (universeVolume/UNIVERSE_SOUND_VOLUME_MAXIMUM);
-                        var thunderSoundIndex = Math.floor(Math.random() * thunderSound.length);
-                        var thunderPitch = (0.6 + (Math.random() * 1.5));
-                        thunderInjector = Audio.playSound(thunderSound[thunderSoundIndex], {
-                            "loop": false,
-                            "localOnly": true,
-                            "volume": thunderVolume,
-                            "pitch": thunderPitch
-                            });
-                    }
-                } else {
-                    //initiate the storm
-                    lightningsID = Entities.addEntity({
-                        "type": "ParticleEffect",
-                        "name": "NOCTURN_STORM",
-                        "dimensions": {
-                            "x": 3000,
-                            "y": 3000,
-                            "z": 3000
-                        },
-                        "position": Vec3.sum(myAvPos, Vec3.multiply(Quat.getForward(myAvRot), 2 )),
-                        "grab": {
-                            "grabbable": false
-                        },
-                        "shapeType": "ellipsoid",
-                        "textures": LIGNTNINGS_PARTICLE_URL,
-                        "maxParticles": 10,
-                        "lifespan": 0.3,
-                        "emitRate": 0.25,
-                        "emitSpeed": 0,
-                        "speedSpread": 0,
-                        "emitOrientation": {
-                            "x": 0,
-                            "y": 0,
-                            "z": 0,
-                            "w": 1
-                        },
-                        "emitDimensions": {
-                            "x": 3000,
-                            "y": 3000,
-                            "z": 3000
-                        },
-                        "polarStart": 0,
-                        "polarFinish": Math.PI,
-                        "azimuthStart": -Math.PI,
-                        "azimuthFinish": Math.PI,
-                        "emitAcceleration": {
-                            "x": 0,
-                            "y": 0,
-                            "z": 0
-                        },
-                        "particleRadius": 900,
-                        "radiusStart": 900,
-                        "radiusFinish": 900,
-                        "radiusSpread": 500,
-                        "color": {
-                            "red": 255,
-                            "green": 255,
-                            "blue": 255
-                        },
-                        "colorStart": {
-                            "red": 255,
-                            "green": 255,
-                            "blue": 255
-                        },
-                        "colorFinish": {
-                            "red": 255,
-                            "green": 255,
-                            "blue": 255
-                        },
-                        "colorSpread": {
-                            "red": 255,
-                            "green": 255,
-                            "blue": 255
-                        }, 
-                        "alphaStart": 0.4,
-                        "alpha": 0,
-                        "alphaFinish": 0.4,
-                        "particleSpin": 3.140000104904175,
-                        "spinSpread": 3.140000104904175,
-                        "spinStart": 3.140000104904175,
-                        "spinFinish": 3.140000104904175,
-                        "emitterShouldTrail": true
-                    }, "local");
-                    
-                    storming = true;
-                }
-            } else {
-                if (storming) {
-                    // stop the storm
-                    Entities.deleteEntity(lightningsID);
-                    lightningsID = Uuid.NONE;
-                    storming = false;
-                }
-            }
-            
-            //############## END NOCTURN LIGHTNINGS AND THUNDER #############
-*/
-            
-/*            //###################### ASTEROIDS ##############################
-            var astroidEventFrequency = 0.033 + (Math.cos(GetCurrentCycleValue(360, UFO_TIDE_CYCLE_DURATION) * DEGREES_TO_RADIANS) * 0.013);
-            
-            if (Math.random() < astroidEventFrequency && astroidFXstatus) { //0.02 = 1 fois par 33 sec
-                //trigger an astroid
-                genAsteroid(myAvPos);
-            }
-            //###################### END ASTEROIDS ##########################
- */           
-
     }
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
@@ -302,85 +237,6 @@
         return (targetPosition.x >= minX && targetPosition.x <= maxX
             && targetPosition.y >= minY && targetPosition.y <= maxY
             && targetPosition.z >= minZ && targetPosition.z <= maxZ);
-    }
-    
-    function genAsteroid(avatarPosition) {
-        var nowDate = new Date();
-		var catalogNumber = nowDate.getTime();
-        var i;
-        for (i=0; i > asteroidStack.length; i++) {
-            if (asteroidStack[i].expiration < catalogNumber) {
-                Entities.deleteEntity(asteroidStack[i].id);
-                asteroidStack.splice(i, 1);
-            }
-        }
-        
-        var FOG_DISTANCE = 2400;
-        
-        var astFromCap = Math.random() * (Math.PI * 2);
-        var astFromInclinaison = (Math.random() * Math.PI) - (Math.PI / 2);
-        var astPolarVec = Vec3.fromPolar({"x": astFromInclinaison,"y": astFromCap,"z": (FOG_DISTANCE * 1.2)});
-        var astStartPoint = {"x": (avatarPosition.x + astPolarVec.x), "y": (avatarPosition.y + astPolarVec.y), "z": (avatarPosition.z + astPolarVec.z)}; 
-            
-        var astVelocity = (Math.random()* 150) + 25;
-        var astLife = ((FOG_DISTANCE * 2.5) * 2) / astVelocity; 
-
-        var canCollide = true;
-        var asteroidMaxSize = 400;
-        var asteroidScale = Math.random() * Math.random()  * Math.random() * asteroidMaxSize;
-        var angVeloc = {
-            x: (Math.random()*1.5) - 0.75, //Rad/sec
-            y: (Math.random()*1.5) - 0.75,
-            z: (Math.random()*1.5) - 0.75
-        };  
-
-        var asteroidModelURL, excentricity, astDimension;
-        astDimension = {
-            "x": (1 + Math.random() - 0.5) * asteroidScale,
-            "y": (1 + Math.random() - 0.5) * asteroidScale,
-            "z": (1 + Math.random() - 0.5) * asteroidScale
-        };
-        
-        asteroidModelURL = ROOT + "models/ROCK/ASTEROID_" + (Math.floor(Math.random() * 6) + 1) + ".fst";
-        
-        
-        var targetPoint = Vec3.sum(avatarPosition, Vec3.multiply( Vec3.multiplyQbyV(MyAvatar.orientation, Vec3.UNIT_NEG_Z), (250 + Math.random() * 500 )));
-        
-        var veloVec = Vec3.multiply(Vec3.normalize({"x": (targetPoint.x - astStartPoint.x), "y": (targetPoint.y - astStartPoint.y), "z": (targetPoint.z - astStartPoint.z)}), astVelocity);
-        
-		var properties = {
-			"type": "Model",
-			"name": "AST-" + catalogNumber,
-			"position": astStartPoint,
-			"useOriginalPivot": true,
-			"dimensions": astDimension,
-			"velocity": veloVec,
-			"damping": 0,
-			"angularVelocity": angVeloc,
-			"angularDamping": 0,
-			"restitution": 1,
-			"friction": 0,
-			"gravity": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			},
-            "grab": {
-                "grabbable": false
-                },
-			"density": 10,
-			"dynamic": true,
-			"collisionless": canCollide,
-			"modelURL": asteroidModelURL,
-			"shapeType": "sphere",
-            "renderWithZones": [thisEntityID]
-		};
-
-
-		print("ASTEROID-" + catalogNumber + " : " + astVelocity + " | " + astLife);
-
-		var id = Entities.addEntity(properties, "local");
-        asteroidStack.push({"id": id, "expiration": catalogNumber + astLife});
     }
 
     /*
