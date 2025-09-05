@@ -203,7 +203,7 @@
                 let id = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}),
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
