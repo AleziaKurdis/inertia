@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 16.75; //DEBUG
+        const TARGET_HOUR = 17.35; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -181,14 +181,14 @@
 
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 200 + (Math.random() * 300), "z": -5000}),
+                    "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000}),
                     "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 60) - 30})),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
                     "shapeType": "none",
                     "type": "Model",
-                    "lifetime": 21,
+                    "lifetime": 38,
                     "grab": {
                         "grabbable": false
                     },
@@ -198,6 +198,29 @@
                     "damping": 0,
                     "collisionless": true
                 }, "local");
+                
+                //TEST ######################################
+                let id = Entities.addEntity({
+                    "parentID": halID,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}),
+                    "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
+                    "modelURL": ROOT + "models/" + fileName,
+                    "useOriginalPivot": true,
+                    "shapeType": "none",
+                    "type": "Model",
+                    "lifetime": 38,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Haldanide",
+                    "canCastShadow": false,
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 500.0},
+                    "damping": 0,
+                    "collisionless": true
+                }, "local");
+                //##################### END TEST ################
+                
                 entitiesToDelete.push(halID);
                 print("HALDANIDE-" + catalogNumber + " | " + fileName);
                 catalogNumber++;
