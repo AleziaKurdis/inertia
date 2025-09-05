@@ -178,30 +178,52 @@
                         dimensionsBolide = {"x":179.83761596679688,"y":72.03010559082031,"z":427.2826232910156};
                         break;
                 } 
-
+                
+                const lifeTime = 38;
+                
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
                     "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000}),
-                    "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 60) - 30})),
-                    "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
-                    "modelURL": ROOT + "models/" + fileName,
-                    "useOriginalPivot": true,
-                    "shapeType": "none",
-                    "type": "Model",
-                    "lifetime": 38,
+                    "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20})),
+                    "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
+                    "shape": "Cube",
+                    "visible": false,
+                    "alpha": 0.0,
+                    "type": "Shape",
+                    "lifetime": lifeTime,
                     "grab": {
                         "grabbable": false
                     },
-                    "name": "Haldanide",
+                    "name": "Propeller 1",
                     "canCastShadow": false,
-                    "velocity": {"x": 0.0, "y": 0.0, "z": 500.0},
+                    "velocity": {"x": 0.0, "y": 0.0, "z": 300.0},
                     "damping": 0,
                     "collisionless": true
                 }, "local");
                 
-                //TEST ######################################
-                let id = Entities.addEntity({
+                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+                let propeller2ID = Entities.addEntity({
                     "parentID": halID,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
+                    "shape": "Cube",
+                    "visible": false,
+                    "alpha": 0.0,
+                    "type": "Shape",
+                    "lifetime": lifeTime,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Propeller 2",
+                    "canCastShadow": false,
+                    "velocity": {"x": 0.0, "y": 0.0, "z": 300.0},
+                    "damping": 0,
+                    "collisionless": true
+                }, "local");
+                
+                let meteoreId = Entities.addEntity({
+                    "parentID": propeller2ID, //halID, //if not use propeller 2
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
@@ -209,17 +231,20 @@
                     "useOriginalPivot": true,
                     "shapeType": "none",
                     "type": "Model",
-                    "lifetime": 38,
+                    "lifetime": lifeTime,
                     "grab": {
                         "grabbable": false
                     },
                     "name": "Haldanide",
                     "canCastShadow": false,
-                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 500.0},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
                     "damping": 0,
                     "collisionless": true
                 }, "local");
-                //##################### END TEST ################
+                
+                //ADD LIGHT HERE
+                
+                //ADD SOUND HERE
                 
                 entitiesToDelete.push(halID);
                 print("HALDANIDE-" + catalogNumber + " | " + fileName);
