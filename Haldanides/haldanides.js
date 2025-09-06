@@ -201,7 +201,7 @@
                     "collisionless": true
                 }, "local");
                 
-         /*       //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
                 let propeller2ID = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
@@ -217,13 +217,13 @@
                     },
                     "name": "Propeller 2",
                     "canCastShadow": false,
-                    "velocity": {"x": 0.0, "y": 0.0, "z": 300.0},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
                     "damping": 0,
                     "collisionless": true
                 }, "local");
-          */      
+                
                 let meteoreId = Entities.addEntity({
-                    "parentID": halID,//propeller2ID, //halID, //if not use propeller 2
+                    "parentID": propeller2ID, //halID, //if not use propeller 2
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
