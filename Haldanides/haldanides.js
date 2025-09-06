@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 22.0; //DEBUG
+        const TARGET_HOUR = 22.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -187,7 +187,7 @@
                     "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20})),
                     "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
                     "shape": "Cube",
-                    "visible": false,
+                    "visible": true,
                     "alpha": 0.0,
                     "type": "Shape",
                     "lifetime": lifeTime,
@@ -208,7 +208,7 @@
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
                     "shape": "Cube",
-                    "visible": false,
+                    "visible": true,
                     "alpha": 0.0,
                     "type": "Shape",
                     "lifetime": lifeTime,
