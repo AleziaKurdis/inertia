@@ -249,11 +249,11 @@
                     "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    "dimensions": {"x": 600.0, "y": 600.0, "z": 600.0},
+                    "dimensions": {"x": 1200.0, "y": 1200.0, "z": 1200.0},
                     "type": "Light",
                     "color": lightColor,
                     "intensity": 20,
-                    "falloffRadius": 4,
+                    "falloffRadius": 600,
                     "isSpotlight": false,
                     "lifetime": lifeTime,
                     "grab": {
