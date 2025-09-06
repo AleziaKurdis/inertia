@@ -185,7 +185,7 @@
                     "renderWithZones": renderWithZones,
                     "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000}),
                     "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20})),
-                    "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
+                    "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
                     "visible": true,
                     "alpha": 0.0,
@@ -201,12 +201,12 @@
                     "collisionless": true
                 }, "local");
                 
-            /*    //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
                 let propeller2ID = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    "dimensions":  {"x": 2.0, "y": 2.0, "z": 2.0},
+                    "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
                     "visible": true,
                     "alpha": 0.0,
@@ -221,9 +221,9 @@
                     "damping": 0,
                     "collisionless": true
                 }, "local");
-            */    
+                
                 let meteoreId = Entities.addEntity({
-                    "parentID": halID, //propeller2ID, //halID, //if not use propeller 2
+                    "parentID": propeller2ID, //halID, //if not use propeller 2
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
