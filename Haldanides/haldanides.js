@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 22.5; //DEBUG
+        const TARGET_HOUR = 23; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -243,6 +243,25 @@
                 }, "local");
                 
                 //ADD LIGHT HERE
+                lightColor = {"red": 255, "green": 255, "blue": 255};
+                
+                let lightID = Entities.addEntity({
+                    "parentID": meteoreId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "dimensions": {"x": 300.0, "y": 300.0, "z": 300.0},
+                    "type": "Light",
+                    "color": lightColor,
+                    "intensity": 20,
+                    "falloffRadius": 3,
+                    "isSpotlight": false,
+                    "lifetime": lifeTime,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Haldanide Light",
+                }, "local");
+                
                 
                 //ADD SOUND HERE
                 
