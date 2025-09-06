@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 23; //DEBUG
+        const TARGET_HOUR = 23.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -253,7 +253,7 @@
                     "type": "Light",
                     "color": lightColor,
                     "intensity": 20,
-                    "falloffRadius": 600,
+                    "falloffRadius": 300,
                     "isSpotlight": false,
                     "lifetime": lifeTime,
                     "grab": {
