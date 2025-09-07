@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 1.0; //DEBUG
+        const TARGET_HOUR = 9.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -222,8 +222,29 @@
                     "collisionless": true
                 }, "local");
                 
+                //Faculative Propeller 3, this make reach 1080 m/s (instead of 810m/s) 
+                let propeller3ID = Entities.addEntity({
+                    "parentID": propeller2ID,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
+                    "shape": "Cube",
+                    "visible": true,
+                    "alpha": 0.0,
+                    "type": "Shape",
+                    "lifetime": lifeTime,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Propeller 3",
+                    "canCastShadow": false,
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
+                    "damping": 0,
+                    "collisionless": true
+                }, "local");
+                
                 let meteoreId = Entities.addEntity({
-                    "parentID": propeller2ID, //halID, //if not use propeller 2
+                    "parentID": propeller3ID, //halID, //if not use propeller2ID
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
