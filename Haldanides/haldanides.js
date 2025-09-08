@@ -286,7 +286,7 @@
                 let soundID = Entities.addEntity({
                     "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "localPosition": {"x": 0.0, "y": -100.0, "z": 0.0},
                     "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
                     "type": "Sound",
                     "soundURL": ROOT + "/sounds/skyrip2.wav",
