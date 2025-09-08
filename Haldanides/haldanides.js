@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 9.5; //DEBUG
+        const TARGET_HOUR = 11.25; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -283,8 +283,25 @@
                     "name": "Haldanide Light",
                 }, "local");
                 
+                let soundID = Entities.addEntity({
+                    "parentID": meteoreId,
+                    "renderWithZones": renderWithZones,
+                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
+                    "type": "Sound",
+                    "soundURL": ROOT + "/sounds/skyrip2.wav",
+                    "playing": true,
+                    "volume": 1.0,
+                    "loop": true,
+                    "positional": true,
+                    "localOnly": true,
+                    "lifetime": lifeTime,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Haldanide Sound",
+                }, "local");
                 
-                //ADD SOUND HERE
                 
                 entitiesToDelete.push(halID);
                 print("HALDANIDE-" + catalogNumber + " | " + fileName);
