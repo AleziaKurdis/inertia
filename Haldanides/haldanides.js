@@ -143,7 +143,7 @@
         const RANDOM_CATALYZER = 0.2;
         
         if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
-            updateTimerIntervall = 700; // 0.7 sec
+            updateTimerIntervall = 600; // 0.6 sec
             let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR);
             let expFrequency = Math.pow((baseFrequency + 1),3);
             if (expFrequency > 1) {
