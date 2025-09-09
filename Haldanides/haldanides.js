@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 19; //DEBUG
+        const TARGET_HOUR = 19.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -296,7 +296,7 @@
                 
                 let soundID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.sum(MyAvatar.position, Vec3.normalize(Vec3.substract(MyAvatar.position, {"x": meteorPosition.x, "y": meteorPosition.y , "z": MyAvatar.position.z}))),
+                    "position": Vec3.sum(MyAvatar.position, Vec3.normalize(Vec3.subtract(MyAvatar.position, {"x": meteorPosition.x, "y": meteorPosition.y , "z": MyAvatar.position.z}))),
                     "dimensions": {"x": 1.0, "y": 1.0, "z": 1.0},
                     "type": "Sound",
                     "soundURL": ROOT + "/sounds/skyripLong.wav",
