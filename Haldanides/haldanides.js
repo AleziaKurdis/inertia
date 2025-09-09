@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 13.25; //DEBUG
+        const TARGET_HOUR = 16.25; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -167,23 +167,27 @@
                 let fileName = "HAL-" + groupSet + "-" + colorSet + ".fst";
                 
                 let dimensionsBolide;
+                let lighness;
                 switch(groupSet) {
                     case 1:
+                        lighness = 0.5;
                         dimensionsBolide = {"x":7.839242458343506,"y":7.606816291809082,"z":229.58192443847656};
                         break;
                     case 2:
+                        lighness = 0.7;
                         dimensionsBolide = {"x":137.0283660888672,"y":7.808669567108154,"z":363.3722229003906};
                         break;
                     case 4:
+                        lighness = 0.85;
                         dimensionsBolide = {"x":179.83761596679688,"y":72.03010559082031,"z":427.2826232910156};
                         break;
                 } 
                 
                 const lifeTime = 38;
-                
+                let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000}),
+                    "position": meteorPosition,
                     "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20})),
                     "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
@@ -264,7 +268,14 @@
                 }, "local");
                 
                 //ADD LIGHT HERE
-                lightColor = {"red": 255, "green": 255, "blue": 255};
+                let lightColor;
+                let hue = [205, 128, 60, 35, 6, 242, -1];
+                
+                if (hue[colorSet] === -1) {
+                    lightColor = [ 255, 255, 255];
+                } else {
+                    lightColor = hslToRgb(hue[colorSet]/360, 1, lighness)
+                }
                 
                 let lightID = Entities.addEntity({
                     "parentID": meteoreId,
@@ -272,7 +283,7 @@
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "dimensions": {"x": 2000.0, "y": 2000.0, "z": 2000.0},
                     "type": "Light",
-                    "color": lightColor,
+                    "color": {"red": lightColor[0], "green": lightColor[1], "blue": lightColor[2]},
                     "intensity": 20,
                     "falloffRadius": 200,
                     "isSpotlight": false,
@@ -284,18 +295,17 @@
                 }, "local");
                 
                 let soundID = Entities.addEntity({
-                    "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0.0, "y": -100.0, "z": 0.0},
-                    "dimensions": {"x": 20.0, "y": 20.0, "z": 20.0},
+                    "position": Vec3.sum(MyAvatar.position, Vec3.normalize(Vec3.substract({"x": meteorPosition.x, "y": meteorPosition.y , "z": MyAvatar.position.z}, MyAvatar.position))),
+                    "dimensions": {"x": 1.0, "y": 1.0, "z": 1.0},
                     "type": "Sound",
-                    "soundURL": ROOT + "/sounds/skyrip2.wav",
+                    "soundURL": ROOT + "/sounds/skyripLong.wav",
                     "playing": true,
                     "volume": 1.0,
-                    "loop": true,
+                    "loop": false,
                     "positional": true,
                     "localOnly": true,
-                    "lifetime": lifeTime,
+                    "lifetime": 14,
                     "grab": {
                         "grabbable": false
                     },
