@@ -1,0 +1,33 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{baf6e5d3-fd7c-4200-97da-95cb94ef5497}",
+    "type": "Box",
+    "name": "Trigger Haldanides",
+    "locked": true,
+    "dimensions": {
+        "x": 6000,
+        "y": 500,
+        "z": 6000
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionless": true,
+    "ignoreForCollisions": true,
+    "script": "https://aleziakurdis.github.io/inertia/Haldanides/haldanides.js?v=300",
+    "color": {
+        "red": 128,
+        "green": 128,
+        "blue": 128
+    },
+    "alpha": 0.0,
+    "shape": "Cube"
+}
+    ],
+  "Id": "{046a1afa-22e2-46cd-9baf-de9bd2e62ed8}",
+  "Version": 147
+}
