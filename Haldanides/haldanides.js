@@ -184,11 +184,12 @@
                 } 
                 
                 const lifeTime = 38;
+                let meteorRotation = Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}));
                 let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
-                    "position": meteorPosition,
-                    "rotation": Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20})),
+                    "position": Vec3.multiplyQbyV(meteorRotation, meteorPosition),
+                    "rotation": meteorRotation,
                     "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
                     "visible": true,
