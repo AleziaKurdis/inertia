@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 23.25;
-        const TARGET_HOUR = 1.5; //DEBUG
+        const TARGET_HOUR = 2.0; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -185,7 +185,7 @@
                 
                 const lifeTime = 38;
                 //let meteorRotation = Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}));
-                //let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
+                let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
                     "parentID": thisEntityID, //out
                     "renderWithZones": renderWithZones,
