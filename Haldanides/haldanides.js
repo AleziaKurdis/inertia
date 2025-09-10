@@ -137,8 +137,8 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
-        const TARGET_HOUR = 23.25;
-        //const TARGET_HOUR = 20; //DEBUG
+        //const TARGET_HOUR = 23.25;
+        const TARGET_HOUR = 1.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -184,12 +184,13 @@
                 } 
                 
                 const lifeTime = 38;
-                let meteorRotation = Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}));
-                let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
+                //let meteorRotation = Quat.multiply(triggerRotation, Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}));
+                //let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
+                    "parentID": thisEntityID, //out
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.multiplyQbyV(meteorRotation, meteorPosition),
-                    "rotation": meteorRotation,
+                    "localPosition": {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000},//Vec3.multiplyQbyV(meteorRotation, meteorPosition),
+                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}), //meteorRotation,
                     "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
                     "visible": true,
@@ -201,7 +202,7 @@
                     },
                     "name": "Propeller 1",
                     "canCastShadow": false,
-                    "velocity": {"x": 0.0, "y": 0.0, "z": 300.0},
+                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0}, //out
                     "damping": 0,
                     "collisionless": true
                 }, "local");
