@@ -137,8 +137,8 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
-        //const TARGET_HOUR = 22.5;
-        const TARGET_HOUR = 20; //DEBUG
+        const TARGET_HOUR = 23.25;
+        //const TARGET_HOUR = 20; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -294,27 +294,27 @@
                     "name": "Haldanide Light"
                 }, "local");
                 
+                let yPosition = meteorPosition.y - MyAvatar.position.y + 3.0;
                 let soundID = Entities.addEntity({
+                    "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.sum(MyAvatar.position, Vec3.normalize(Vec3.subtract({"x": meteorPosition.x, "y": meteorPosition.y , "z": MyAvatar.position.z}, MyAvatar.position ))),
-                    "dimensions": {"x": 1.0, "y": 1.0, "z": 1.0},
+                    "localPosition": {"x": 0.0, "y": yPosition, "z": 0.0},
+                    "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
                     "type": "Sound",
-                    "soundURL": ROOT + "/sounds/skyripLong.wav",
+                    "soundURL": ROOT + "/sounds/skyrip2.wav",
                     "playing": true,
                     "volume": 1.0,
-                    "loop": false,
+                    "loop": true,
                     "positional": true,
                     "localOnly": true,
-                    "lifetime": 14,
+                    "lifetime": lifeTime,
                     "grab": {
                         "grabbable": false
                     },
                     "name": "Haldanide Sound"
                 }, "local");
                 
-                
                 entitiesToDelete.push(halID);
-                entitiesToDelete.push(soundID);
                 print("HALDANIDE-" + catalogNumber + " | " + fileName);
                 catalogNumber++;
             }
