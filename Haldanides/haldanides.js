@@ -138,9 +138,9 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 7.0; //DEBUG
+        const TARGET_HOUR = 8.0; //DEBUG
         
-        const RANDOM_CATALYZER = 0.2;
+        const RANDOM_CATALYZER = 0.3;
         
         if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
             updateTimerIntervall = 600; // 0.6 sec
@@ -252,7 +252,7 @@
                     "parentID": halID, //halID, //if not use propeller2ID
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    //"localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
+                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
@@ -297,7 +297,7 @@
                 }, "local");
                 
                 let yPosition = MyAvatar.position.y + 3.0 - meteorPosition.y;
-                print("yPosition: " + yPosition);//####################################### DEBUG TRASH
+                //print("yPosition: " + yPosition);//####################################### DEBUG TRASH
                 let soundID = Entities.addEntity({
                     "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
