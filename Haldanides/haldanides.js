@@ -206,7 +206,7 @@
                     "collisionless": true
                 }, "local");
                 
-             /*   //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
                 let propeller2ID = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
@@ -227,7 +227,7 @@
                     "collisionless": true
                 }, "local");
                 
-                //Faculative Propeller 3, this make reach 1080 m/s (instead of 810m/s) 
+            /*    //Faculative Propeller 3, this make reach 1080 m/s (instead of 810m/s) 
                 let propeller3ID = Entities.addEntity({
                     "parentID": propeller2ID,
                     "renderWithZones": renderWithZones,
@@ -249,7 +249,7 @@
                 }, "local");*/
                 
                 let meteoreId = Entities.addEntity({
-                    "parentID": halID, //halID, //if not use propeller2ID
+                    "parentID": propeller2ID, //halID, //halID, //if not use propeller2ID
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
