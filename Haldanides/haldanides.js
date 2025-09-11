@@ -137,8 +137,8 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
-        //const TARGET_HOUR = 23.25;
-        const TARGET_HOUR = 2.0; //DEBUG
+        //const TARGET_HOUR = 1.25;
+        const TARGET_HOUR = 6.5; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -188,8 +188,8 @@
                 let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
-                    "position": Vec3.multiplyQbyV(meteorRotation, meteorPosition),
-                    "rotation": meteorRotation,
+                    "position": Vec3.multiplyQbyV(triggerRotation, meteorPosition),
+                    "rotation": triggerRotation,
                     "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
                     "shape": "Cube",
                     "visible": true,
@@ -252,6 +252,7 @@
                     "parentID": propeller3ID, //halID, //if not use propeller2ID
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
