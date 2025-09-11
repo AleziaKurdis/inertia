@@ -206,7 +206,7 @@
                     "collisionless": true
                 }, "local");
                 
-                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+             /*   //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
                 let propeller2ID = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
@@ -246,13 +246,13 @@
                     "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
                     "damping": 0,
                     "collisionless": true
-                }, "local");
+                }, "local");*/
                 
                 let meteoreId = Entities.addEntity({
-                    "parentID": propeller3ID, //halID, //if not use propeller2ID
+                    "parentID": halID, //halID, //if not use propeller2ID
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
+                    //"localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
                     "dimensions": Vec3.multiply(dimensionsBolide, 1 + (Math.random() * 3)),
                     "modelURL": ROOT + "models/" + fileName,
                     "useOriginalPivot": true,
