@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 6.5; //DEBUG
+        const TARGET_HOUR = 7.0; //DEBUG
         
         const RANDOM_CATALYZER = 0.2;
         
@@ -296,7 +296,7 @@
                     "name": "Haldanide Light"
                 }, "local");
                 
-                let yPosition = meteorPosition.y - MyAvatar.position.y + 3.0;
+                let yPosition = MyAvatar.position.y + 3.0 - meteorPosition.y;
                 print("yPosition: " + yPosition);//####################################### DEBUG TRASH
                 let soundID = Entities.addEntity({
                     "parentID": meteoreId,
