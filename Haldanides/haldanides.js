@@ -201,7 +201,7 @@
                     },
                     "name": "Propeller 1",
                     "canCastShadow": false,
-                    "velocity": {"x": 0.0, "y": 0.0, "z": 300.0},
+                    "velocity": Vec3.multiplyQbyV(triggerRotation, {"x": 0.0, "y": 0.0, "z": 300.0}),
                     "damping": 0,
                     "collisionless": true
                 }, "local");
