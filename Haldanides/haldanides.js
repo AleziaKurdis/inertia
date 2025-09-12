@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 14.30; //DEBUG
+        const TARGET_HOUR = 15.0; //DEBUG
         
         const RANDOM_CATALYZER = 0.3;
         
@@ -193,8 +193,9 @@
                     "type": "Sound",
                     "soundURL": ROOT + "/sounds/sonicBoom.wav",
                     "playing": true,
-                    "volume": 0.7,
+                    "volume": 0.6,
                     "loop": false,
+                    "pitch": (Math.random() * 4) - 2,
                     "positional": false,
                     "localOnly": true,
                     "lifetime": 4,
@@ -205,7 +206,7 @@
                 }, "local");
                 
                 let meteorRotation = Quat.multiply(Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),triggerRotation);
-                let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
+                let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 2000) - 1000, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
                     "renderWithZones": renderWithZones,
                     "position": Vec3.multiplyQbyV(triggerRotation, meteorPosition),
