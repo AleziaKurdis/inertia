@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 8.0; //DEBUG
+        const TARGET_HOUR = 12.30; //DEBUG
         
         const RANDOM_CATALYZER = 0.3;
         
@@ -184,6 +184,26 @@
                 } 
                 
                 const lifeTime = 38;
+                
+                //BOOM
+                let boomSoundID = Entities.addEntity({
+                    "renderWithZones": renderWithZones,
+                    "position": MyAvatar.position,
+                    "dimensions": {"x": 1.0, "y": 1.0, "z": 1.0},
+                    "type": "Sound",
+                    "soundURL": ROOT + "/sounds/sonicBoom.wav",
+                    "playing": true,
+                    "volume": 0.7,
+                    "loop": false,
+                    "positional": false,
+                    "localOnly": true,
+                    "lifetime": 4,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "Haldanide Boom Sound"
+                }, "local");
+                
                 let meteorRotation = Quat.multiply(Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),triggerRotation);
                 let meteorPosition = Vec3.sum(triggerPosition, {"x": (Math.random() * 1600) - 800, "y": 100 + (Math.random() * 300), "z": -5000});
                 let halID = Entities.addEntity({
@@ -297,11 +317,17 @@
                 }, "local");
                 
                 let yPosition = MyAvatar.position.y + 3.0 - meteorPosition.y;
+                let xPosition = MyAvatar.position.x - meteorPosition.x;
+                if (xPosition < 0) {
+                    xPosition = xPosition + 2;
+                } else {
+                    xPosition = xPosition - 2;
+                }
                 //print("yPosition: " + yPosition);//####################################### DEBUG TRASH
                 let soundID = Entities.addEntity({
                     "parentID": meteoreId,
                     "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0.0, "y": yPosition, "z": 0.0},
+                    "localPosition": {"x": xPosition, "y": yPosition, "z": 0.0},
                     "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
                     "type": "Sound",
                     "soundURL": ROOT + "/sounds/skyrip2.wav",
