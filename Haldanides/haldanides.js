@@ -138,7 +138,7 @@
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
         //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 15.0; //DEBUG
+        const TARGET_HOUR = 18.75; //DEBUG
         
         const RANDOM_CATALYZER = 0.3;
         
@@ -195,7 +195,7 @@
                     "playing": true,
                     "volume": 0.6,
                     "loop": false,
-                    "pitch": (Math.random() * 4) - 2,
+                    "pitch": Math.random() * 2,
                     "positional": false,
                     "localOnly": true,
                     "lifetime": 4,
