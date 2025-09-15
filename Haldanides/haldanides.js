@@ -137,8 +137,8 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
-        //const TARGET_HOUR = 1.25;
-        const TARGET_HOUR = 21; //DEBUG
+        const TARGET_HOUR = 1.25;
+        //const TARGET_HOUR = 21; //DEBUG
         
         const RANDOM_CATALYZER = 0.3;
         
@@ -227,7 +227,7 @@
                     "collisionless": true
                 }, "local");
                 
-                //Faculative Propeller 2, this make reach 810 m/s (instead of 540m/s) 
+                //Propeller 2, this make reach 810 m/s (instead of 540m/s) 
                 let propeller2ID = Entities.addEntity({
                     "parentID": halID,
                     "renderWithZones": renderWithZones,
@@ -248,29 +248,8 @@
                     "collisionless": true
                 }, "local");
                 
-            /*    //Faculative Propeller 3, this make reach 1080 m/s (instead of 810m/s) 
-                let propeller3ID = Entities.addEntity({
-                    "parentID": propeller2ID,
-                    "renderWithZones": renderWithZones,
-                    "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-                    "dimensions":  {"x": 20.0, "y": 20.0, "z": 20.0},
-                    "shape": "Cube",
-                    "visible": true,
-                    "alpha": 0.0,
-                    "type": "Shape",
-                    "lifetime": lifeTime,
-                    "grab": {
-                        "grabbable": false
-                    },
-                    "name": "Propeller 3",
-                    "canCastShadow": false,
-                    "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
-                    "damping": 0,
-                    "collisionless": true
-                }, "local");*/
-                
                 let meteoreId = Entities.addEntity({
-                    "parentID": propeller2ID, //halID, //halID, //if not use propeller2ID
+                    "parentID": propeller2ID,
                     "renderWithZones": renderWithZones,
                     "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                     "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": (Math.random() * 40) - 20}),
@@ -283,7 +262,7 @@
                     "grab": {
                         "grabbable": false
                     },
-                    "name": "Haldanide",
+                    "name": "Haldanide " + catalogNumber,
                     "canCastShadow": false,
                     "localVelocity": {"x": 0.0, "y": 0.0, "z": 300.0},
                     "damping": 0,
@@ -345,7 +324,7 @@
                 }, "local");
                 
                 entitiesToDelete.push(halID);
-                print("HALDANIDE-" + catalogNumber + " | " + fileName);
+                //print("HALDANIDE-" + catalogNumber + " | " + fileName);
                 catalogNumber++;
             }
         } else {
