@@ -137,14 +137,14 @@
     function processHaldanides() {
         var d19CurrentHour = (GetCurrentCycleValue(86400000, DAY_DURATION)/1000) / 3600;
         
-        const TARGET_HOUR = 1.25;
-        //const TARGET_HOUR = 21; //DEBUG
+        const TARGET_HOUR = 1.5;
+        const RADIUS = 1.5;
         
         const RANDOM_CATALYZER = 0.3;
         
-        if ( d19CurrentHour > (TARGET_HOUR - 1) && d19CurrentHour < (TARGET_HOUR + 1) ) {
+        if ( d19CurrentHour > (TARGET_HOUR - RADIUS) && d19CurrentHour < (TARGET_HOUR + RADIUS) ) {
             updateTimerIntervall = 600; // 0.6 sec
-            let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR);
+            let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR)/RADIUS;
             let expFrequency = Math.pow((baseFrequency + 1),3);
             if (expFrequency > 1) {
                 expFrequency = 1;
