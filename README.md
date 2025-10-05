@@ -34,6 +34,8 @@ https://aleziakurdis.github.io/inertia/PENTACLE/inertiaPentacle.json
 https://aleziakurdis.github.io/inertia/KRYZATH/kryzath.json  
   
 https://aleziakurdis.github.io/inertia/ASTROBION/inertiaAstrobion.json 
+
+https://aleziakurdis.github.io/inertia/VALOMBRA/inertiaValombra.json    
    
 # Nowhere Island (import file)
 https://aleziakurdis.github.io/inertia/nowhereIsland/nowhereIsland.json
