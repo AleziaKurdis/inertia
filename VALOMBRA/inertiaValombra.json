@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/3682.82,4082.49,-3942.99\/0,0.522653,0,0.852545"
+      "\/":"\/3985.15,4092.09,-4218.2\/0,0.975681,0,0.219194"
    },
    "Entities":[
         {
@@ -60,6 +60,29 @@
             },
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
+        },
+        {
+            "id": "{46b610aa-728d-4d34-9333-0889f28cce34}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "Valombra Landscape",
+            "locked": true,
+            "dimensions": {
+                "x": 451.71783447265625,
+                "y": 285.176025390625,
+                "z": 646.5638427734375
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/valombra.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
