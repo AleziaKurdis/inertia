@@ -2,7 +2,11 @@
    "materialVersion":1,
    "materials":[
       {
-         "albedo":[1,1,1],
+         "albedo":[
+			0.6,
+        	0.49019607843137253,
+        	0.37254901960784315
+         ],
          "albedoMap": "pineBranch_alpha_albedo.png",
          "metallic": 0.01,
          "roughness": 0.35,
