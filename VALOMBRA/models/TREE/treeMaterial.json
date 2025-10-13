@@ -10,6 +10,7 @@
          "opacityMap": "pineBranch_alpha_albedo.png",
          "opacityMapMode": "OPACITY_MAP_MASK",
          "opacityCutoff": 0.5,
+         "occlusionMap": "pineBranch_ao.jpg",
          "cullFaceMode":"CULL_NONE"
       }
    ]
