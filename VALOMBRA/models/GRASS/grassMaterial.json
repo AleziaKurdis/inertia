@@ -9,6 +9,7 @@
          "opacityMap": "Grass texture 1.png",
          "opacityMapMode": "OPACITY_MAP_MASK",
          "opacityCutoff": 0.5,
+         "normalMap": "Grass_normal.jpg",
          "cullFaceMode":"CULL_NONE"
       }
    ]
