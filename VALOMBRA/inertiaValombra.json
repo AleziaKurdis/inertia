@@ -83,6 +83,54 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/valombra.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{72a21bb0-f97d-49ba-9365-b4d43c0b091d}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "Valombra Forest",
+            "locked": true,
+            "dimensions": {
+                "x": 394.2196044921875,
+                "y": 212.27426147460938,
+                "z": 504.9246826171875
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/forest.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{cad35f47-1d8e-419b-a226-70e80d0e61a3}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "Valombra Grass Path",
+            "locked": true,
+            "dimensions": {
+                "x": 259.46826171875,
+                "y": 54.056026458740234,
+                "z": 451.033935546875
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grassPath.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
