@@ -9,7 +9,7 @@
          ],
          "albedoMap": "bark_brown_02_diff_512.jpg",
          "metallic": 0.01,
-         "roughness": 0.55,
+         "roughness": 0.65,
          "normalMap": "bark_brown_02_nor_512.jpg",
          "cullFaceMode":"CULL_BACK"
       }
