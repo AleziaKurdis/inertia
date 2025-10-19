@@ -9,7 +9,7 @@
          ],
          "albedoMap": "pineBranch_alpha_albedo.png",
          "metallic": 0.01,
-         "roughness": 0.35,
+         "roughness": 0.45,
          "normalMap": "pineBranch_normal-ogl.jpg",
          "opacityMap": "pineBranch_alpha_albedo.png",
          "opacityMapMode": "OPACITY_MAP_MASK",
