@@ -195,7 +195,7 @@
                     "playing": true,
                     "volume": 0.6,
                     "loop": false,
-                    "pitch": (Math.random() * 15) + 0.0625,
+                    "pitch": (Math.random() * 2) + 0.8,
                     "positional": false,
                     "localOnly": true,
                     "lifetime": 4,
