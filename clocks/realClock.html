@@ -70,7 +70,7 @@
                 var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: 4vw; color: " + baseColor + ";'>" + "Real - local" + "</font></div>";
                 displayClock = displayClock + "<font style='font-size: 22vw; color: " + baseColor + ";'>" + d.getHours() + ":" + minuteZeroized + "</font><br>";
                 displayClock = displayClock + "<font style='font-size: 10vw; color: " + weekColor + ";'>" + days[d.getDay()] + "</font><br>";
-                displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + months[d.getMonth()] + ", " + d.getFullYear() + "</font>";
+                displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "</font>";
                 obj.innerHTML = displayClock;
             }
 
