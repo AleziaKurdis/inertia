@@ -32,6 +32,8 @@ function toggleItem() {
             //DISPLAY HERE
             clockWebID = Entities.addEntity({
                 "type": "Web",
+                "dpi": 23,
+                "name": "4 clocks",
                 "parentID": MyAvatar.sessionUUID,
                 "localPosition": {"x": 0.3, "y": 0.25, "z": -1.5},
                 "dimensions": {"x": 0.25, "y": 0.75, "z": 0.01},
