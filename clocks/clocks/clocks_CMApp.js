@@ -29,7 +29,6 @@ function toggleItem() {
 		isActive = false;
 	} else {
         if (clockWebID === Uuid.NONE) {
-            //DISPLAY HERE
             clockWebID = Entities.addEntity({
                 "type": "Web",
                 "dpi": 23,
@@ -56,7 +55,7 @@ const actionSet = [
 		text: "Clocks",
 		textColor: [255, 255, 255],
 		localClickFunc: "actionClocks",
-        iconImage: ROOT + "clocksIcon.svg"
+        iconImage: ROOT + "icon.png"
 	},
 ];
 
