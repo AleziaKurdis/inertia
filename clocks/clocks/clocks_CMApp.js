@@ -19,6 +19,9 @@ const LEFT_HAND = MyAvatar.getDominantHand() === "right" ? true : false;
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
+var hmdPanelLocalPosition = {"x": 0.3, "y": 0.25, "z": -1.5};
+var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": 0, "y": -3, "z": 0});
+var CAMERA_MATRIX_INDEX = -7;
 
 function toggleItem() {
 	if (isActive) {
@@ -34,7 +37,9 @@ function toggleItem() {
                 "dpi": 23,
                 "name": "4 clocks",
                 "parentID": MyAvatar.sessionUUID,
-                "localPosition": {"x": 0.3, "y": 0.25, "z": -1.5},
+                "parentJointIndex": CAMERA_MATRIX_INDEX,
+                "localPosition": hmdPanelLocalPosition,
+                "localRotation": hmdPanelLocalRotation,
                 "dimensions": {"x": 0.25, "y": 0.75, "z": 0.01},
                 "isVisibleInSecondaryCamera": false,
                 "sourceUrl": ROOT + "../fourClocks.html",
