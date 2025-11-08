@@ -131,6 +131,29 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grassPath.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{35d5e338-42f9-4547-8f44-af797fef5ddd}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "BRIDGE 1",
+            "locked": true,
+            "dimensions": {
+                "x": 4.329636096954346,
+                "y": 11.040098190307617,
+                "z": 43.206764221191406
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/bridge1.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
