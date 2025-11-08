@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "BROKENWALL_albedo.jpg",
+         "metallic": 0.01,
+         "roughness": 0.47,
+         "normalMap": "BROKENWALL_normal.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
