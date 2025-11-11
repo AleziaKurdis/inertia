@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.8,0.8,0.8],
+         "albedoMap": "DAMAGED-CONCRETE_albedo.jpg",
+         "metallic": 0.01,
+         "roughness": 0.52,
+         "normalMap": "DAMAGED-CONCRETE_normalOgl.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
