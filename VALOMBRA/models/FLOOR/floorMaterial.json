@@ -6,7 +6,7 @@
          "albedoMap": "broken-down-stonework_albedo.jpg",
          "metallic": 0.01,
          "roughnessMap": "broken-down-stonework_roughness.jpg",
-         "occlusionMap","broken-down-stonework_ao.jpg",
+         "occlusionMap": "broken-down-stonework_ao.jpg",
          "normalMap": "broken-down-stonework_normal-ogl.jpg",
          "cullFaceMode":"CULL_BACK"
       }

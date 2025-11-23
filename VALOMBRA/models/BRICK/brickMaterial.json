@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "sloppy-mortar-stone-wall_albedo.jpg",
+         "metallic": 0.01,
+         "roughnessMap": "sloppy-mortar-stone-wall_roughness.jpg",
+         "occlusionMap": "sloppy-mortar-stone-wall_ao.jpg",
+         "normalMap": "sloppy-mortar-stone-wall_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
