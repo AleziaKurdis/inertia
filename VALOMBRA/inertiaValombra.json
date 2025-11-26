@@ -177,6 +177,29 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/castel.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a302d3ee-6d17-44d3-97e7-629d16578fe3}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "BRIDGE 2",
+            "locked": true,
+            "dimensions": {
+                "x": 16.919883728027344,
+                "y": 11.233320236206055,
+                "z": 37.3243408203125
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/bridge2.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
