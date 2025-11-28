@@ -219,6 +219,25 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/bridge3.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{1fec7915-711a-4d21-8de0-f5fd564d0985}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "BRIDGE 4",
+            "locked": true,
+            "dimensions": {"x":13.461822509765625,"y":3.1517012119293213,"z":2.705455780029297},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/bridge4.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
