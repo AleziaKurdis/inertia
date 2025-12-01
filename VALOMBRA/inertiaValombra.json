@@ -176,6 +176,7 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/castel.fst",
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/streetLights.js",
             "useOriginalPivot": true
         },
         {
