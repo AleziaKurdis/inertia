@@ -222,6 +222,83 @@
                     "isSpotlight": false
                 }, "local");
                 flickers.push(subId);
+                
+                subID = Entities.addEntity({
+                    "type": "ParticleEffect",
+                    "localPosition": {
+                        "x": 0.0,
+                        "y": 0.1,
+                        "z": 0.0
+                    },
+                    "name": "Flambeau",
+                    "dimensions": {
+                        "x": 0.8235000371932983,
+                        "y": 0.8235000371932983,
+                        "z": 0.8235000371932983
+                    },
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "shapeType": "ellipsoid",
+                    "color": {
+                        "red": 255,
+                        "green": 162,
+                        "blue": 41
+                    },
+                    "alpha": 0.15,
+                    "textures": ROOT + "/images/flambeau.png",
+                    "maxParticles": 8,
+                    "lifespan": 0.5,
+                    "emitRate": 16,
+                    "emitSpeed": 0,
+                    "speedSpread": 0,
+                    "emitOrientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                    },
+                    "emitDimensions": {
+                        "x": 0.05000000074505806,
+                        "y": 0,
+                        "z": 0.05000000074505806
+                    },
+                    "emitRadiusStart": 0,
+                    "polarFinish": 3.1415927410125732,
+                    "emitAcceleration": {
+                        "x": 0,
+                        "y": 1.2000000476837158,
+                        "z": 0
+                    },
+                    "accelerationSpread": {
+                        "x": 0,
+                        "y": 0.20000000298023224,
+                        "z": 0
+                    },
+                    "particleRadius": 0.15000000596046448,
+                    "radiusSpread": 0.05000000074505806,
+                    "radiusStart": 0.15000000596046448,
+                    "radiusFinish": 0.15000000596046448,
+                    "colorStart": {
+                        "red": 255,
+                        "green": 223,
+                        "blue": 64
+                    },
+                    "colorFinish": {
+                        "red": 255,
+                        "green": 115,
+                        "blue": 0
+                    },
+                    "alphaSpread": 0.10000000149011612,
+                    "alphaStart": 0.4000000059604645,
+                    "alphaFinish": 0,
+                    "spinSpread": 0.17000000178813934,
+                    "spinStart": null,
+                    "spinFinish": null
+                }, "local");
+                
             } else if (luminaires[i].model === "muralight") {
                 //MURALIGHT
                 id = Entities.addEntity({
