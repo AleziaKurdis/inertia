@@ -259,7 +259,7 @@
                         "y": 5,
                         "z": 5
                     },
-                    "color": {"red": 255, "green": 183, "blue": 38},
+                    "color": {"red": 255, "green": 128, "blue": 0},
                     "intensity": LIGHT_INTENSITY,
                     "falloffRadius": LIGHT_INTENSITY/10,
                     "isSpotlight": false
@@ -276,7 +276,7 @@
             if (currentFlicker >= flickers.length) {
                 currentFlicker = 0;
             }
-        }, 50);
+        }, 10);
     };
 
     this.unload = function(entityID) {
