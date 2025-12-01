@@ -212,11 +212,11 @@
                         "grabbable": false
                     },
                     "dimensions": {
-                        "x": 5,
-                        "y": 5,
-                        "z": 5
+                        "x": 10,
+                        "y": 10,
+                        "z": 10
                     },
-                    "color": {"red": 255, "green": 183, "blue": 38},
+                    "color": {"red": 255, "green": 128, "blue": 0},
                     "intensity": LIGHT_INTENSITY,
                     "falloffRadius": LIGHT_INTENSITY/10,
                     "isSpotlight": false
@@ -255,9 +255,9 @@
                         "grabbable": false
                     },
                     "dimensions": {
-                        "x": 5,
-                        "y": 5,
-                        "z": 5
+                        "x": 7,
+                        "y": 7,
+                        "z": 7
                     },
                     "color": {"red": 255, "green": 128, "blue": 0},
                     "intensity": LIGHT_INTENSITY,
@@ -271,12 +271,12 @@
         }
         
         timer = Script.setInterval(function () {
-            Entities.editEntity(flickers[currentFlicker], {"intensity": 4.0 + (Math.random() * LIGHT_INTENSITY)});
+            Entities.editEntity(flickers[currentFlicker], {"intensity": ((LIGHT_INTENSITY/2) + (Math.random() * LIGHT_INTENSITY))});
             currentFlicker++;
             if (currentFlicker >= flickers.length) {
                 currentFlicker = 0;
             }
-        }, 10);
+        }, 5);
     };
 
     this.unload = function(entityID) {
