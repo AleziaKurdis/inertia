@@ -246,7 +246,7 @@
                 }, "local");
                 
                 subId = Entities.addEntity({
-                    "name": "TORCHERE LIGHT [" + i + "]",
+                    "name": "MURALIGHT LIGHT [" + i + "]",
                     "type": "Light",
                     "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
                     "parentID": id,
@@ -264,7 +264,7 @@
                     "falloffRadius": LIGHT_INTENSITY/10,
                     "isSpotlight": false
                 }, "local");
-                flickers.push(subId);
+                //flickers.push(subId);
                 
             }
             entitiesToDelete.push(id);
