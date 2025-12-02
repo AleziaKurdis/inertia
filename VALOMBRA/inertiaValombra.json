@@ -239,6 +239,52 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/bridge4.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{682281fd-2555-4074-896f-50ec9a0eb7f5}",
+            "type": "Material",
+            "parentID": "{bdd46d42-65d4-44df-b5d9-08b6c8f48f8b}",
+            "name": "water",
+            "locked": true,
+            "position": {
+                "x": -0.772216796875,
+                "y": 1.037109375,
+                "z": -3.25732421875
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "materialURL": "materialData",
+            "priority": 2,
+            "materialData": "{\n  \"materialVersion\": 1,\n  \"materials\": [\n    {\n      \"model\": \"hifi_pbr\",\n      \"albedo\": [\n        0.03529411764705882,\n        0.23137254901960785,\n        0.21568627450980393\n      ],\n      \"metallic\": 0.926,\n      \"roughness\": 0.001,\n      \"opacity\": 0.36,\n      \"emissive\": [\n        0,\n        0,\n        0\n      ],\n      \"scattering\": 0,\n      \"cullFaceMode\": \"CULL_BACK\"\n    }\n  ]\n}"
+        },
+        {
+            "id": "{bdd46d42-65d4-44df-b5d9-08b6c8f48f8b}",
+            "type": "Shape",
+            "position": {"x":4086.75244140625,"y":4138.61083984375,"z":-3887.810302734375},
+            "name": "WATERPOINT",
+            "locked": true,
+            "dimensions": {
+                "x": 4.828330039978027,
+                "y": 0.7319052219390869,
+                "z": 4.828330039978027
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "shape": "Cylinder"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
