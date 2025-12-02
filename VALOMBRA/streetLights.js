@@ -11,11 +11,13 @@
 //
 (function(){
     var ROOT = Script.resolvePath('').split("streetLights.js")[0];
-    const COORD_REFERENCE = {"x":4000,"y":4107.67236328125,"z":-4000};
     const LIGHT_INTENSITY = 8.0;
     var flickers = [];
     var timer;
     var currentFlicker = 0;
+    
+    
+    const COORD_REFERENCE = {"x":4000,"y":4107.67236328125,"z":-4000};
     var luminaires = [
         { //arrival
             "localPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875}, 
@@ -33,12 +35,12 @@
             "model": "muralight"
         }, 
         { //wall 1
-            "localPosition": {"x":4057.41357421875,"y":4140.462890625,"z":-3883.29052734375}, 
+            "localPosition": {"x":4057.43115234375,"y":4140.462890625,"z":-3883.26806640625}, 
             "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":0.4383711516857147}, 
             "model": "muralight"
         }, 
         { //wall 2
-            "localPosition": {"x":4054.44384765625,"y":4140.462890625,"z":-3880.97021484375}, 
+            "localPosition": {"x":4054.498046875,"y":4140.462890625,"z":-3880.900634765625}, 
             "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":0.4383711516857147}, 
             "model": "muralight"
         },
@@ -48,17 +50,17 @@
             "model": "muralight"
         },
         { //wall 4
-            "localPosition": {"x":4080.820068359375,"y":4140.462890625,"z":-3896.20703125}, 
+            "localPosition": {"x":4080.776611328125,"y":4140.462890625,"z":-3896.2626953125}, 
             "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":0.4383711516857147}, 
             "model": "muralight"
         },
         { //wall 5
-            "localPosition": {"x":4083.8671875,"y":4140.462890625,"z":-3898.587646484375}, 
+            "localPosition": {"x":4083.783203125,"y":4140.462890625,"z":-3898.695068359375}, 
             "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":0.4383711516857147}, 
             "model": "muralight"
         },
         { //wall 6
-            "localPosition": {"x":4087.34375,"y":4140.462890625,"z":-3901.303955078125}, 
+            "localPosition": {"x":4087.2236328125,"y":4140.462890625,"z":-3901.4580078125}, 
             "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":0.4383711516857147}, 
             "model": "muralight"
         },
@@ -175,6 +177,7 @@
     ];
     
     var entitiesToDelete = [];
+    
     this.preload = function(entityID) {
         var renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
         var i, id, subId;
