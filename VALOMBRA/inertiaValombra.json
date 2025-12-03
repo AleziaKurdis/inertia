@@ -285,6 +285,90 @@
             "collisionless": true,
             "ignoreForCollisions": true,
             "shape": "Cylinder"
+        },
+        {
+            "id": "{70d34975-87cd-45e1-b491-7ddec5826e99}",
+            "type": "Model",
+            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4218.68359375},
+            "name": "Torch Alpha",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{6360ec31-8284-4f4a-82b1-516aca8ce9ab}",
+            "type": "Model",
+            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4219.68359375},
+            "name": "Torch Valombra",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{accc1ddd-00cd-41de-ba42-19038138de4d}",
+            "type": "Model",
+            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4220.68359375},
+            "name": "Torch Omega",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
