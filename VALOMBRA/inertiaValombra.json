@@ -369,6 +369,28 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{4b7a5692-0116-4972-913a-a3e0caead11d}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "FERRURES",
+            "locked": true,
+            "dimensions": {
+                "x": 64.02471923828125,
+                "y": 17.636932373046875,
+                "z": 51.89857482910156
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/ferrures.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
