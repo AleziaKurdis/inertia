@@ -230,7 +230,7 @@
                     "type": "ParticleEffect",
                     "localPosition": {
                         "x": 0.0,
-                        "y": 0.15,
+                        "y": 0.13,
                         "z": 0.0
                     },
                     "name": "Flambeau",
