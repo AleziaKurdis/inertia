@@ -44,7 +44,7 @@
             "type": "ParticleEffect",
             "localPosition": {
                 "x": 0.0,
-                "y": 0.3,
+                "y": 0.03,
                 "z": 0.0
             },
             "name": "Flamme FX",
