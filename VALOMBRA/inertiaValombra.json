@@ -298,7 +298,7 @@
                 "z": 0.11172831803560257
             },
             "grab": {
-                "grabbable": false
+                "grabbable": true
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -309,6 +309,7 @@
             "cloneLifetime": 1200,
             "cloneLimit": 10,
             "cloneDynamic": true,
+            "cloneAvatarEntity": true,
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
@@ -327,7 +328,7 @@
                 "z": 0.11172831803560257
             },
             "grab": {
-                "grabbable": false
+                "grabbable": true
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -338,6 +339,7 @@
             "cloneLifetime": 1200,
             "cloneLimit": 10,
             "cloneDynamic": true,
+            "cloneAvatarEntity": true,
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
@@ -356,7 +358,7 @@
                 "z": 0.11172831803560257
             },
             "grab": {
-                "grabbable": false
+                "grabbable": true
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -367,6 +369,7 @@
             "cloneLifetime": 1200,
             "cloneLimit": 10,
             "cloneDynamic": true,
+            "cloneAvatarEntity": true,
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
