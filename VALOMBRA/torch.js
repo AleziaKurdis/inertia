@@ -44,7 +44,7 @@
             "type": "ParticleEffect",
             "localPosition": {
                 "x": 0.0,
-                "y": 0.0,
+                "y": 0.1,
                 "z": 0.0
             },
             "name": "Flamme FX",
@@ -108,6 +108,7 @@
                 "green": 115,
                 "blue": 0
             },
+            "emitterShouldTrail": false,
             "alphaSpread": 0.10000000149011612,
             "alphaStart": 0.4000000059604645,
             "alphaFinish": 0,
