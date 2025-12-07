@@ -416,6 +416,30 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/inn.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{5d2e2e44-4dde-4cab-8dc7-79bd960aab74}",
+            "type": "Model",
+            "position": {"x":4103.38818359375,"y":4138.8603515625,"z":-3869.909912109375},
+            "name": "GENERIC FIRE ELEMENT",
+            "locked": true,
+            "userData": "{\"volume\":0.6}",
+            "description": "Generic Fire Element(v2020.12) for Fireplace or Campfire. By Alezia Kurdis.",
+            "dimensions": {
+                "x": 1.1585946083068848,
+                "y": 0.34796008467674255,
+                "z": 1.121105432510376
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/fire_element/components/fire_manager.js",
+            "scriptTimestamp": 1765083237228,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx",
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
