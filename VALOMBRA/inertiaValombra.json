@@ -397,6 +397,25 @@
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/ferrures.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{e2832f66-ee3c-42e3-b9ba-26fc52ce5ea2}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "INN",
+            "locked": true,
+            "dimensions": {"x":233.0782928466797,"y":42.64421844482422,"z":33.53373718261719},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/inn.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
