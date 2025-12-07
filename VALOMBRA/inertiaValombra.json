@@ -439,7 +439,7 @@
             "script": "https://aleziakurdis.github.io/fire_element/components/fire_manager.js",
             "scriptTimestamp": 1765083237228,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx",
+            "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
