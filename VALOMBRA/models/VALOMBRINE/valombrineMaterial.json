@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "VALOMBRINE_albedo.jpg",
+         "metallicMap": "VALOMBRINE_metallic.jpg",
+         "roughnessMap": "VALOMBRINE_roughness.jpg",
+         "normalMap": "VALOMBRINE_normal_opengl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
