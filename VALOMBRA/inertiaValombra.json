@@ -440,6 +440,30 @@
             "scriptTimestamp": 1765083237228,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx"
+        },
+        {
+            "id": "{888532d3-d988-49a4-87ea-30cb05ae89af}",
+            "type": "Model",
+            "position": {"x":4101.47900390625,"y":4141.6025390625,"z":-3876.84521484375},
+            "name": "Sign La Valombrine",
+            "locked": true,
+            "dimensions": {
+                "x": 0.0641632080078125,
+                "y": 0.8851432800292969,
+                "z": 1.1488037109375
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/valombrine.fst",
+            "useOriginalPivot": false
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
