@@ -316,11 +316,42 @@
             "useOriginalPivot": true,
             "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         },
+
+        {
+            "id": "{95719591-1867-4571-b424-076d94e8bb85}",
+            "type": "Model",
+            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4219.68359375},
+            "name": "Torch Valombra 1",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": true
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torch.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
         {
             "id": "{6360ec31-8284-4f4a-82b1-516aca8ce9ab}",
             "type": "Model",
-            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4219.68359375},
-            "name": "Torch Valombra",
+            "position": {"x":3982.934326171875,"y":4093.945068359375,"z":-4220.28359375},
+            "name": "Torch Valombra 2",
             "locked": true,
             "dimensions": {
                 "x": 0.11172831803560257,
@@ -464,6 +495,238 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/valombrine.fst",
             "useOriginalPivot": false
+        },
+        {
+            "id": "{49d12df6-5994-484c-9879-f7b9741962d7}",
+            "type": "Zone",
+            "name": "UNDERGROUND_ZONE_ENTRANCE",
+            "locked": true,
+            "position": {"x":4100.92333984375,"y":4134.93017578125,"z":-3899.60302734375},
+            "dimensions": {
+                "x": 6.8223395347595215,
+                "y": 14.291015625,
+                "z": 25.350784301757812
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.32556813955307007,
+                "z": 0,
+                "w": 0.9455185532569885
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 110,
+                    "green": 168,
+                    "blue": 255
+                },
+                "intensity": 0.009999999776482582,
+                "direction": {
+                    "x": 0,
+                    "y": -0.9854497313499451,
+                    "z": 0.1699671596288681
+                },
+                "castShadows": true,
+                "shadowMaxDistance": 60
+            },
+            "ambientLight": {
+                "ambientIntensity": 0.20000000298023224,
+                "ambientColor": {
+                    "red": 33,
+                    "green": 33,
+                    "blue": 48
+                }
+            },
+            "skybox": {
+                "color": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 3
+                }
+            },
+            "flyingAllowed": false,
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "disabled"
+        },
+        {
+            "id": "{b7f06594-55c9-4a1f-ab93-d19000757844}",
+            "type": "Zone",
+            "name": "UNDERGROUND_ZONE_MAIN",
+            "locked": true,
+            "position": {"x":4099.58837890625,"y":4132.78466796875,"z":-3873.711181640625},
+            "dimensions": {
+                "x": 35.53825759887695,
+                "y": 10,
+                "z": 20.741086959838867
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.32556813955307007,
+                "z": 0,
+                "w": 0.9455185532569885
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 110,
+                    "green": 168,
+                    "blue": 255
+                },
+                "intensity": 0.009999999776482582,
+                "direction": {
+                    "x": 0,
+                    "y": -0.9854497313499451,
+                    "z": 0.1699671596288681
+                },
+                "castShadows": true,
+                "shadowMaxDistance": 60
+            },
+            "ambientLight": {
+                "ambientIntensity": 0.20000000298023224,
+                "ambientColor": {
+                    "red": 33,
+                    "green": 33,
+                    "blue": 48
+                }
+            },
+            "skybox": {
+                "color": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 3
+                }
+            },
+            "flyingAllowed": false,
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "disabled"
+        },
+        {
+            "id": "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}",
+            "type": "Zone",
+            "position": {"x":4099.7373046875,"y":4165.244140625,"z":-3878.1845703125},
+            "name": "VALOMBRA_TOWER-INN_VISIBILITY_ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 51.32758712768555,
+                "y": 54.2578125,
+                "z": 39.222412109375
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.32556813955307007,
+                "z": 0,
+                "w": 0.9455185532569885
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": false
+        },
+        {
+            "id": "{42dbb95c-7a5d-4d28-a51e-772d5ce44875}",
+            "type": "Box",
+            "name": "PORTAL_VIEW_TOWER",
+            "locked": true,
+            "position": {"x":4102.78515625,"y":4172.4296875,"z":-3888.8115234375},
+            "dimensions": {
+                "x": 1.3486216068267822,
+                "y": 2.933886766433716,
+                "z": 0.0001
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9021530151367188,
+                "z": 0,
+                "w": 0.431416392326355
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "mirrorMode": "portal",
+            "portalExitID": "{94e2b477-1280-4247-8a53-522f51d2fc84}",
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "shape": "Cube"
+        },
+        {
+            "id": "{94e2b477-1280-4247-8a53-522f51d2fc84}",
+            "type": "Box",
+            "position": {"x":4101.89501953125,"y":4140.02734375,"z":-3892.593994140625},
+            "name": "PORTAL_VIEW_RC",
+            "locked": true,
+            "dimensions": {
+                "x": 1.3065364360809326,
+                "y": 2.929492235183716,
+                "z": 0.0001
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.4314163625240326,
+                "z": 0,
+                "w": 0.902152955532074
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "mirrorMode": "portal",
+            "portalExitID": "{42dbb95c-7a5d-4d28-a51e-772d5ce44875}",
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
