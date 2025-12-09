@@ -679,8 +679,6 @@
             "grab": {
                 "grabbable": false
             },
-            "mirrorMode": "portal",
-            "portalExitID": "{94e2b477-1280-4247-8a53-522f51d2fc84}",
             "damping": 0,
             "angularDamping": 0,
             "collisionless": true,
@@ -715,8 +713,6 @@
             "grab": {
                 "grabbable": false
             },
-            "mirrorMode": "portal",
-            "portalExitID": "{42dbb95c-7a5d-4d28-a51e-772d5ce44875}",
             "damping": 0,
             "angularDamping": 0,
             "collisionless": true,
