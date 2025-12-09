@@ -683,10 +683,11 @@
             "angularDamping": 0,
             "collisionless": true,
             "ignoreForCollisions": true,
+            "userData": "{\"ProceduralEntity\":{\"channels\":[\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/SPRITE_PORTAL_04.png\"],\"shaderUrl\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/spriteSheet.fs\",\"uniforms\":{\"uAlphaCutoff\":1,\"uColumns\":3,\"uEmit\":1,\"uEndFrame\":12,\"uFps\":30,\"uRows\":4,\"uShine\":255},\"version\":2},\"grabbableKey\":{\"grabbable\":false}}",
             "color": {
-                "red": 0,
-                "green": 180,
-                "blue": 239
+                "red": 255,
+                "green": 255,
+                "blue": 255
             },
             "shape": "Cube"
         },
@@ -718,10 +719,11 @@
             "collisionless": true,
             "ignoreForCollisions": true,
             "color": {
-                "red": 0,
-                "green": 180,
-                "blue": 239
+                "red": 255,
+                "green": 255,
+                "blue": 255
             },
+            "userData": "{\"ProceduralEntity\":{\"channels\":[\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/SPRITE_PORTAL_04.png\"],\"shaderUrl\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/spriteSheet.fs\",\"uniforms\":{\"uAlphaCutoff\":1,\"uColumns\":3,\"uEmit\":1,\"uEndFrame\":12,\"uFps\":30,\"uRows\":4,\"uShine\":255},\"version\":2},\"grabbableKey\":{\"grabbable\":false}}",
             "shape": "Cube"
         }
    ],
