@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "BONE_TEXTURE_COLOR.jpg",
+         "metallic": 0.191,
+         "roughness": 0.314,
+         "normalMap": "BONE_TEXTURE_NORMAL.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
