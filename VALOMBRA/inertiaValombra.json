@@ -660,15 +660,11 @@
             "id": "{42dbb95c-7a5d-4d28-a51e-772d5ce44875}",
             "type": "Box",
             "name": "PORTAL_VIEW_TOWER",
+            "description": "{\"x\": -2.5667,\"y\":-33.8596,\"z\":-2.4330}",
             "locked": true,
             "position": {"x":4103.1767578125,"y":4172.4296875,"z":-3889.126953125},
             "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":1.0154210329055786},
-            "rotation": {
-                "x": 0,
-                "y": 0.9021530151367188,
-                "z": 0,
-                "w": 0.431416392326355
-            },
+            "rotation": {"x":0,"y":0.431416392326355,"z":0,"w":-0.9021530151367188},
             "renderWithZones": [
                 "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
             ],
@@ -685,21 +681,18 @@
                 "green": 255,
                 "blue": 255
             },
-            "shape": "Cube"
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/elevator.js"
         },
         {
             "id": "{94e2b477-1280-4247-8a53-522f51d2fc84}",
             "type": "Box",
             "position": {"x":4101.5205078125,"y":4140.02734375,"z":-3892.2919921875},
             "name": "PORTAL_VIEW_RC",
+            "description": "{\"x\": 2.669,\"y\": 30.9426,\"z\": 2.4519}",
             "locked": true,
             "dimensions": {"x":1.3065364360809326,"y":2.929492235183716,"z":0.9722207188606262},
-            "rotation": {
-                "x": 0,
-                "y": -0.4314163625240326,
-                "z": 0,
-                "w": 0.902152955532074
-            },
+            "rotation": {"x":0,"y":0.9021530151367188,"z":0,"w":0.431416392326355},
             "renderWithZones": [
                 "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
             ],
@@ -716,7 +709,8 @@
                 "blue": 255
             },
             "userData": "{\"ProceduralEntity\":{\"channels\":[\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/SPRITE_PORTAL_04.png\"],\"shaderUrl\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/spriteSheet.fs\",\"uniforms\":{\"uAlphaCutoff\":1,\"uColumns\":3,\"uEmit\":1,\"uEndFrame\":12,\"uFps\":30,\"uRows\":4,\"uShine\":255},\"version\":2},\"grabbableKey\":{\"grabbable\":false}}",
-            "shape": "Cube"
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/elevator.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
