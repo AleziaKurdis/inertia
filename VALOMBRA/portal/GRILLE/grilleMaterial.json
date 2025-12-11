@@ -1,0 +1,18 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[
+			1.0,
+        	1.0,
+        	1.0
+         ],
+         "albedoMap": "grille_albedo.jpg",
+         "metallic": 1.0,
+         "roughnessMap": "grille_roughness.jpg",
+         "normalMap": "grille_normal-ogl.jpg",
+         "occlusionMap": "grille_ao.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
