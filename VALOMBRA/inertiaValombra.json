@@ -841,6 +841,25 @@
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/AVATAR_SKELETON_SIT_AND_DEAD.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{3b0f614e-ed0e-414f-bb1e-caed2d8116c4}",
+            "type": "Model",
+            "name": "CHAIN",
+            "locked": true,
+            "dimensions": {"x":0.34544819593429565,"y":0.25841498374938965,"z":0.7041187286376953},
+            "rotation": {"x":0,"y":-0.7431448698043823,"z":0,"w":0.6691305637359619},
+            "position": {"x":4095.036865234375,"y":4128.7744140625,"z":-3876.110107421875},
+            "renderWithZones": [
+                "{b7f06594-55c9-4a1f-ab93-d19000757844}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/BLOCK-CHAIN.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
