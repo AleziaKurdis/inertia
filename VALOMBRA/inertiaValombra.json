@@ -818,6 +818,29 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst"
+        },
+        {
+            "id": "{6a0a0a34-b951-463b-9acc-d31b31c3b14d}",
+            "type": "Model",
+            "name": "SKELETON",
+            "locked": true,
+            "dimensions": {
+                "x": 0.47366848587989807,
+                "y": 1.0071394443511963,
+                "z": 0.9208317995071411
+            },
+            "rotation": {"x":0.8043661117553711,"y":0.4930739402770996,"z":0.1470942348241806,"w":-0.2970464825630188},
+            "position": {"x":4093.8486328125,"y":4129.20166015625,"z":-3876.107177734375},
+            "renderWithZones": [
+                "{b7f06594-55c9-4a1f-ab93-d19000757844}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/AVATAR_SKELETON_SIT_AND_DEAD.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
