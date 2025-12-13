@@ -734,6 +734,48 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/ARRIVALS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{5bf31e39-eee5-4a65-a22a-badeec3e08bb}",
+            "type": "Box",
+            "name": "CLOCK D29 A",
+            "position": {"x":3975.045166015625,"y":4095.63330078125,"z":-4234.380859375},
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "dimensions": {"x":0.7907044291496277,"y":0.5658466219902039,"z":0.01},
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        },
+        {
+            "id": "{1ff32740-44d2-48c0-8531-c7bdbfc69358}",
+            "type": "Box",
+            "name": "CLOCK D29 O",
+            "position": {"x":4066.65380859375,"y":4108.5126953125,"z":-3760.379150390625},
+            "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "dimensions": {"x":0.7907044291496277,"y":0.5658466219902039,"z":0.01},
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d29Clock.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
