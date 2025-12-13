@@ -711,6 +711,29 @@
             "userData": "{\"ProceduralEntity\":{\"channels\":[\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/SPRITE_PORTAL_04.png\"],\"shaderUrl\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/spriteSheet.fs\",\"uniforms\":{\"uAlphaCutoff\":1,\"uColumns\":3,\"uEmit\":1,\"uEndFrame\":12,\"uFps\":30,\"uRows\":4,\"uShine\":255},\"version\":2},\"grabbableKey\":{\"grabbable\":false}}",
             "shape": "Cube",
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/elevator.js"
+        },
+        {
+            "id": "{87fc040e-b6ab-4969-a79d-70031fcf5be7}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "ARRIVALS",
+            "locked": true,
+            "dimensions": {
+                "x": 118.72718048095703,
+                "y": 20.92597198486328,
+                "z": 526.4772338867188
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/ARRIVALS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
