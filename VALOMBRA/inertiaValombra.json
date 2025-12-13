@@ -776,6 +776,52 @@
                 "blue": 0
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{4a4081c4-0067-40aa-bd01-b41dbf7d56c3}",
+            "type": "Model",
+            "name": "PORTAL ALPHA",
+            "locked": true,
+            "position": {"x":3961.92138671875,"y":4095.580078125,"z":-4249.18359375},
+            "dimensions": {
+                "x": 4.500001430511475,
+                "y": 4.500001430511475,
+                "z": 8.611637115478516
+            },
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/portal/PORTAL.fst"
+        },
+        {
+            "id": "{2fde17b5-d111-43f1-97e8-53286641eb1a}",
+            "type": "Model",
+            "name": "PORTAL OMEGA",
+            "locked": true,
+            "position": {"x":4052.60693359375,"y":4108.85107421875,"z":-3752.441162109375},
+            "dimensions": {
+                "x": 4.500001430511475,
+                "y": 4.500001430511475,
+                "z": 8.611637115478516
+            },
+            "rotation": {"x":0,"y":0.7071067690849304,"z":0,"w":0.7071067690849304},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/portal/PORTAL.fst"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
