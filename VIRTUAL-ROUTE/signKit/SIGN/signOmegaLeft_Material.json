@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "SIGN_OMEGA_LEFT.jpg",
+         "metallicMap": "SIGN_METALLIC.jpg",
+         "roughness": 0.241,
+         "normalMap": "SIGN_NORMAL.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
