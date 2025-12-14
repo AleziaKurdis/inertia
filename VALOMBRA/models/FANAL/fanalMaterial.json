@@ -3,7 +3,7 @@
    "materials":[
       {
          "albedo":[1,1,1],
-         "albedoMap": "fanal_albedo.jpg",
+         "albedoMap": "fanal_emissive.jpg",
          "metallicMap": "fanal_roughnessMetal.jpg",
          "roughnessMap": "fanal_roughnessMetal.jpg",
          "emissiveMap": "fanal_emissive.jpg",
