@@ -223,6 +223,31 @@
             "localPosition": {"x":3958.934326171875,"y":4136.1923828125,"z":-3901.691650390625}, 
             "rotation": {"x":0,"y":0,"z":0,"w":1}, 
             "model": "torchere"
+        },
+        {// AUBERGE LANTERN OUT 1
+            "localPosition": {"x":4100.28466796875,"y":4141.1025390625,"z":-3876.000732421875}, 
+            "rotation": {"x":0,"y":0,"z":0,"w":1}, 
+            "model": "lantern"
+        },
+        {// AUBERGE LANTERN OUT 2
+            "localPosition": {"x":4103.880859375,"y":4141.1025390625,"z":-3876.000732421875}, 
+            "rotation": {"x":0,"y":0,"z":0,"w":1}, 
+            "model": "lantern"
+        },
+        {// AUBERGE LANTERN OUT 3
+            "localPosition": {"x":4113.1796875,"y":4140.6240234375,"z":-3872.234619140625}, 
+            "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}, 
+            "model": "lantern"
+        },
+        {// AUBERGE LANTERN IN 1
+            "localPosition": {"x":4103.83154296875,"y":4140.85595703125,"z":-3875.33935546875}, 
+            "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0}, 
+            "model": "lantern"
+        },
+        {// AUBERGE LANTERN IN 2
+            "localPosition": {"x":4098.7490234375,"y":4140.85595703125,"z":-3871.370849609375}, 
+            "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}, 
+            "model": "lantern"
         }
     ];
     
@@ -397,6 +422,45 @@
                 }, "local");
                 //flickers.push(subId);
                 
+            } else if (luminaires[i].model === "lantern") {
+                //LANTERN
+                id = Entities.addEntity({
+                    "localPosition": Vec3.subtract(luminaires[i].localPosition, COORD_REFERENCE),
+                    "rotation": luminaires[i].rotation,
+                    "parentID": entityID,
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "name": "LANTERN [" + i + "]",
+                    "type": "Model",
+                    "dimensions": {"x":0.18687865138053894,"y":0.3328094184398651,"z":0.5183696150779724},
+                    "damping": 0,
+                    "angularDamping": 0,
+                    "modelURL": ROOT + "/models/FANAL.fst",
+                    "useOriginalPivot": true
+                }, "local");
+                
+                subId = Entities.addEntity({
+                    "name": "LANTERN LIGHT [" + i + "]",
+                    "type": "Light",
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": -0.4346},
+                    "parentID": id,
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "dimensions": {
+                        "x": 4,
+                        "y": 4,
+                        "z": 4
+                    },
+                    "color": {"red": 255, "green": 128, "blue": 0},
+                    "intensity": LIGHT_INTENSITY,
+                    "falloffRadius": LIGHT_INTENSITY/10,
+                    "isSpotlight": false
+                }, "local");
+                //flickers.push(subId);
             }
             entitiesToDelete.push(id);
         }
