@@ -860,6 +860,118 @@
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/BLOCK-CHAIN.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{0b508abd-0fe9-47b3-92e7-ab61d0afc592}",
+            "type": "Model",
+            "name": "Sign - Valombra 0.6 km",
+            "locked": true,
+            "position": {"x":4056.963134765625,"y":4108.09912109375,"z":-3773.327880859375},
+            "dimensions": {
+                "x": 0.8268890380859375,
+                "y": 2.294036388397217,
+                "z": 0.03819701820611954
+            },
+            "rotation": {
+                "x": -0.005915109068155289,
+                "y": 0.7735266089439392,
+                "z": 0.006415913347154856,
+                "w": -0.6337038278579712
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/signValombra600m.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{effab724-0a0d-42a9-94e8-4e51914c0897}",
+            "type": "Model",
+            "name": "Sign - Valombra 1 km",
+            "locked": true,
+            "position": {"x":3979.309326171875,"y":4091.723388671875,"z":-4217.28759765625},
+            "dimensions": {
+                "x": 0.7644940614700317,
+                "y": 2.120934247970581,
+                "z": 0.03531476855278015
+            },
+            "rotation": {
+                "x": 0.003583354875445366,
+                "y": 0.41061171889305115,
+                "z": -0.007956884801387787,
+                "w": -0.9117686152458191
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/signValombra1km.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c85a35d3-fdec-4552-9654-c4807f7e1057}",
+            "type": "Model",
+            "name": "Sign - Omega 600m",
+            "locked": true,
+            "position": {"x":4051.294921875,"y":4138.3056640625,"z":-3869.905029296875},
+            "dimensions": {
+                "x": 0.5417580604553223,
+                "y": 2.825275182723999,
+                "z": 0.047042448073625565
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.5410486459732056,
+                "z": 0,
+                "w": -0.8409912586212158
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/omega_600m.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{04f9aedc-c61c-4f04-af9b-83d1e99faa8a}",
+            "type": "Model",
+            "name": "Sign - Alpha 1km",
+            "locked": true,
+            "position": {"x":4071.102783203125,"y":4132.15478515625,"z":-3894.65771484375},
+            "dimensions": {
+                "x": 0.4457026720046997,
+                "y": 2.3607516288757324,
+                "z": 0.039307866245508194
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.8765474557876587,
+                "z": 0,
+                "w": 0.48131540417671204
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/alpha_1km.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
