@@ -972,6 +972,151 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/alpha_1km.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{ff7b68d2-7c11-4b31-b4f7-48be8aaa186a}",
+            "type": "Model",
+            "name": "SIGN-OMEGA-AHEAD 3",
+            "locked": true,
+            "position": {"x":4008.1337890625,"y":4108.69580078125,"z":-3991.026123046875},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.026176929473876953,
+                "z": 0,
+                "w": -0.999657392501831
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{959c22d1-4921-4617-bdca-90e258192b32}",
+            "type": "Model",
+            "name": "SIGN-OMEGA-AHEAD 5",
+            "locked": true,
+            "position": {"x":3954.103515625,"y":4136.255859375,"z":-3911.39990234375},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.7826080918312073,
+                "z": 0,
+                "w": -0.6225146055221558
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c4e27b42-7a8c-4ca6-9609-bbf45775bf6b}",
+            "type": "Model",
+            "name": "SIGN-OMEGA-AHEAD 4",
+            "locked": true,
+            "position": {"x":4071.385986328125,"y":4132.63671875,"z":-3899.837158203125},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.891006588935852,
+                "z": 0,
+                "w": -0.4539905786514282
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{29f58f00-2545-4387-b93b-f859d473773d}",
+            "type": "Model",
+            "name": "SIGN-OMEGA-AHEAD 1",
+            "locked": true,
+            "position": {"x":3978.3662109375,"y":4093.673095703125,"z":-4226.48681640625},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{cbf3ddfd-60a6-48a3-b192-e0befb3b7dd6}",
+            "type": "Model",
+            "name": "SIGN-OMEGA-AHEAD 2",
+            "locked": true,
+            "position": {"x":3887.145263671875,"y":4085.25,"z":-4117.7724609375},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9335804581642151,
+                "z": 0,
+                "w": -0.3583679795265198
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
