@@ -1117,6 +1117,151 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{7952dfc3-6d0e-4d2d-af56-125623bc1782}",
+            "type": "Model",
+            "name": "SIGN-ALPHA-AHEAD 2",
+            "locked": true,
+            "position": {"x":3966.05419921875,"y":4126.62060546875,"z":-3806.34619140625},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.6494480967521667,
+                "z": 0,
+                "w": 0.760405957698822
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{3b1fda48-8d4a-4a79-abd3-f43e8f17d58b}",
+            "type": "Model",
+            "name": "SIGN-ALPHA-LEFT 4",
+            "locked": true,
+            "position": {"x":4058.19580078125,"y":4139.8369140625,"z":-3885.904052734375},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9426414966583252,
+                "z": 0,
+                "w": -0.33380696177482605
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_LEFT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{345ba6ae-7fff-478f-8b3e-670f4f60f958}",
+            "type": "Model",
+            "name": "SIGN-ALPHA-AHEAD 1",
+            "locked": true,
+            "position": {"x":4065.066162109375,"y":4108.0703125,"z":-3765.666748046875},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.13917312026023865,
+                "z": 0,
+                "w": 0.9902681112289429
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{094dbc4d-06f2-489d-bd1a-a6de25021f2c}",
+            "type": "Model",
+            "name": "SIGN-ALPHA-AHEAD 3",
+            "locked": true,
+            "position": {"x":3957.018798828125,"y":4134.953125,"z":-3907.55078125},
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9902681112289429,
+                "z": 0,
+                "w": -0.13917317986488342
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{acc7aa30-9b4a-4cb2-9833-26c9413d5bb0}",
+            "type": "Model",
+            "name": "SIGN-ALPHA-AHEAD 5",
+            "locked": true,
+            "position": {"x":4005.22900390625,"y":4111.9990234375,"z":-4031.115234375},
+            "dimensions": {
+                "x": 0.34529930353164673,
+                "y": 1.8456556797027588,
+                "z": 0.025301819667220116
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.9998477101325989,
+                "z": 0,
+                "w": 0.017452344298362732
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
