@@ -1,0 +1,16 @@
+[
+    {
+        "displayName": "Virtual Route Information Center",
+        "placeName": "hytrion",
+        "alphaArrivalUrl": "ta0",
+        "omegaArrivalUrl": "to0",
+        "km": 0.01
+    },
+    {
+        "displayName": "Valombra",
+        "placeName": "valombra",
+        "alphaArrivalUrl": "ta1",
+        "omegaArrivalUrl": "to1",
+        "km": 1.6
+    }
+]
