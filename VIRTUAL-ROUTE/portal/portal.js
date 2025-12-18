@@ -34,7 +34,7 @@
         
         
         let virtualRoute = Script.require(ROOT + "../virtualRoute.json");
-        print("JSON: " + JSON.stringify(virtualRoute));//############################## DEBUG TRASH
+        print("JSON2: " + JSON.stringify(virtualRoute));//############################## DEBUG TRASH
         
         let previousUrl;
         if (portalData.isAlpha) {
