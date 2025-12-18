@@ -20,7 +20,7 @@
         let properties = Entities.getEntityProperties(entityID, ["userData", "renderWithZones"]);
         renderWithZones = properties.renderWithZones;
         let userData = properties.userData;
-        if (userData.length === 0) {
+        if (userData === "") {
             let template = {
                 "placeName": "",
                 "isAlpha": true
