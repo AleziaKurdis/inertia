@@ -16,7 +16,11 @@
     let portalData;
     let destination = "";
     
+    let portalHorizonID = Uuid.NONE;
+    let thisEntityID;
+    
     this.preload = function(entityID) {
+        thisEntityID = entityID;
         let properties = Entities.getEntityProperties(entityID, ["userData", "renderWithZones"]);
         renderWithZones = properties.renderWithZones;
         let userData = properties.userData;
@@ -34,7 +38,6 @@
         
         
         let virtualRoute = Script.require(ROOT + "../virtualRoute.json");
-        print("JSON2: " + JSON.stringify(virtualRoute));//############################## DEBUG TRASH
         
         let previousUrl;
         if (portalData.isAlpha) {
@@ -59,14 +62,93 @@
             }
         }
         
-        print("DESTINATION: " + destination);//############################## DEBUG TRASH
         if (destination !== "") {
-            //gene portal elements
+            let imageUrl, portalName;
+            
+            if (portalData.isAlpha) {
+                //ALPHA
+                imageUrl = ROOT + "SPRITE_PORTAL_02.png";
+                portalName = "ALPHA";
+            } else {
+                //OMEGA
+                imageUrl = ROOT + "SPRITE_PORTAL_01.png";
+                portalName = "OMEGA";
+            }
+            
+            let shader = {
+                "ProceduralEntity": {
+                    "channels": [
+                        imageUrl
+                    ],
+                    "shaderUrl": ROOT + "spriteSheet.fs",
+                    "uniforms": {
+                        "uAlphaCutoff": 1,
+                        "uColumns": 3,
+                        "uEmit": 1,
+                        "uEndFrame": 12,
+                        "uFps": 30,
+                        "uRows": 4,
+                        "uShine": 255
+                    },
+                    "version": 2
+                }
+            };
+            
+            portalHorizonID = Entities.addEntity({
+                "type": "Box",
+                "parentID": entityID,
+                "name": "portalHorizon " + portalName,
+                "locked": true,
+                "userData": JSON.stringify(shader),
+                "description": destination,
+                "localPosition": {
+                    "x": 0.000016367353964596987,
+                    "y": 0,
+                    "z": -3.22021484375
+                },
+                "dimensions": {
+                    "x": 3.379631996154785,
+                    "y": 3.3796374797821045,
+                    "z": 1.8029603958129883
+                },
+                "localRotation": {
+                    "x": 0.28185975551605225,
+                    "y": -0.959455668926239,
+                    "z": 0,
+                    "w": 0
+                },
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "angularVelocity": {
+                    "x": 0,
+                    "y": 0,
+                    "z": -0.31415900588035583
+                },
+                "damping": 0,
+                "angularDamping": 0,
+                "collisionless": true,
+                "ignoreForCollisions": true,
+                "shape": "Cube",
+                "script": ROOT + "teleporter.js",
+                "lifetime": 43200
+            }, "local");
+            
+            //Light
+            //noflyzone
+            //Douane
+            //signs inside
+            //signs outside
+            
         }
     };
 
     this.unload = function(entityID) {
-
+        if (portalHorizonID !== Uuid.NONE) {
+            Entities.deleteEntity(portalHorizonID);
+            portalHorizonID = Uuid.NONE;
+        }
     };
 
 })
