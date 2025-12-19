@@ -794,7 +794,9 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst"
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "userData": "{\"placeName\": \"valombra\", \"isAlpha\": true}"
         },
         {
             "id": "{2fde17b5-d111-43f1-97e8-53286641eb1a}",
@@ -817,7 +819,9 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst"
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "userData": "{\"placeName\": \"valombra\", \"isAlpha\": false}"
         },
         {
             "id": "{6a0a0a34-b951-463b-9acc-d31b31c3b14d}",
