@@ -16,14 +16,16 @@
     let portalData;
     let destination = "";
     
-    let portalHorizonID = Uuid.NONE;
+    let portalHorizonID = null;
     let thisEntityID;
     
     this.preload = function(entityID) {
         thisEntityID = entityID;
-        let properties = Entities.getEntityProperties(entityID, ["userData", "renderWithZones"]);
+        let properties = Entities.getEntityProperties(entityID, ["userData", "renderWithZones", "rotation"]);
         renderWithZones = properties.renderWithZones;
         let userData = properties.userData;
+        let portalRotation = properties.rotation;
+        
         if (userData === "") {
             let template = {
                 "placeName": "",
@@ -121,11 +123,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "angularVelocity": {
-                    "x": 0,
-                    "y": 0,
-                    "z": -0.31415900588035583
-                },
+                "angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
                 "damping": 0,
                 "angularDamping": 0,
                 "collisionless": true,
@@ -145,9 +143,10 @@
     };
 
     this.unload = function(entityID) {
-        if (portalHorizonID !== Uuid.NONE) {
+        print("CALLED");
+        if (portalHorizonID !== null) {
             Entities.deleteEntity(portalHorizonID);
-            portalHorizonID = Uuid.NONE;
+            portalHorizonID = null;
         }
     };
 
