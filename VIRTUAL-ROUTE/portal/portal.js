@@ -142,7 +142,6 @@
     };
 
     this.unload = function(entityID) {
-        print("CALLED");
         if (portalHorizonID !== null) {
             Entities.deleteEntity(portalHorizonID);
             portalHorizonID = null;
