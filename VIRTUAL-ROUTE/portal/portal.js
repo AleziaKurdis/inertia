@@ -103,9 +103,9 @@
                 "userData": JSON.stringify(shader),
                 "description": destination,
                 "localPosition": {
-                    "x": 0.000016367353964596987,
-                    "y": 0,
-                    "z": -3.22021484375
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -3.62021484375
                 },
                 "dimensions": {
                     "x": 3.379631996154785,
@@ -122,7 +122,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                //"angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
+                "angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
                 "damping": 0,
                 "angularDamping": 0,
                 "collisionless": true,
