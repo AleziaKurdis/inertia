@@ -105,7 +105,7 @@
                 "localPosition": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": -3.62021484375
+                    "z": -3.72021484375
                 },
                 "dimensions": {
                     "x": 3.379631996154785,
@@ -133,7 +133,7 @@
             }, "local");
             
             //Light
-            //noflyzone
+            //flyzone
             //Douane
             //signs inside
             //signs outside
