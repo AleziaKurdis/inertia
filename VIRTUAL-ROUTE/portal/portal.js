@@ -122,7 +122,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
+                //"angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
                 "damping": 0,
                 "angularDamping": 0,
                 "collisionless": true,
