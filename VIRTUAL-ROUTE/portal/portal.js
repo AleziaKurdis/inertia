@@ -225,7 +225,7 @@
             }, "local");
             
 
-            //signs outside
+            //signs 
             portalFrontSignID = Entities.addEntity({
                 "type": "Model",
                 "parentID": entityID,
@@ -236,7 +236,7 @@
                     "z": 0.0
                 },
                 "collisionless": true,
-                "dimensions": {"x":4.293360710144043,"y":0.41530081629753113,"z":0.04933452606201172},
+                "dimensions": {"x":4.293360710144043,"y":0.41530081629753113,"z":5.49279260635376},
                 "localRotation": {"x":0,"y":0,"z":0,"w":1},
                 "renderWithZones": renderWithZones,
                 "grab": {
@@ -247,7 +247,8 @@
                 "lifetime": 43200
             }, "local");
             
-            //signs inside
+            //sound
+            
         }
     };
 
