@@ -20,6 +20,7 @@
     let portalLightID = null;
     let portalFlyZoneID = null;
     let portalDouaneID = null;
+    let portalFrontSignID = null;
     let thisEntityID;
     
     this.preload = function(entityID) {
@@ -68,7 +69,7 @@
         }
         
         if (destination !== "") {
-            let imageUrl, portalName, lightColor;
+            let imageUrl, portalName, lightColor, frontsignModelUrl;
             
             if (portalData.isAlpha) {
                 //ALPHA
@@ -79,6 +80,7 @@
                     "green": 255,
                     "blue": 250
                 };
+                frontsignModelUrl = ROOT + "FRONTSIGN-ALPHA.fst";
             } else {
                 //OMEGA
                 imageUrl = ROOT + "SPRITE_PORTAL_01.png";
@@ -88,6 +90,7 @@
                     "green": 200,
                     "blue": 156
                 };
+                frontsignModelUrl = ROOT + "FRONTSIGN-OMEGA.fst";
             }
             
             let shader = {
@@ -221,9 +224,30 @@
                 "lifetime": 43200
             }, "local");
             
-            //signs inside
+
             //signs outside
+            portalFrontSignID = Entities.addEntity({
+                "type": "Model",
+                "parentID": entityID,
+                "name": "portal frontSigns " + portalName,
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "collisionless": true,
+                "dimensions": {"x":4.293360710144043,"y":0.41530081629753113,"z":0.04933452606201172},
+                "localRotation": {"x":0,"y":0,"z":0,"w":1},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "modelURL": frontsignModelUrl,
+                "useOriginalPivot": true,
+                "lifetime": 43200
+            }, "local");
             
+            //signs inside
         }
     };
 
@@ -246,6 +270,11 @@
         if (portalDouaneID !== null) {
             Entities.deleteEntity(portalDouaneID);
             portalDouaneID = null;
+        }
+        
+        if (portalFrontSignID !== null) {
+            Entities.deleteEntity(portalFrontSignID);
+            portalFrontSignID = null;
         }
         
     };
