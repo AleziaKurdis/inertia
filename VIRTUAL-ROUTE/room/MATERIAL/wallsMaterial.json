@@ -4,7 +4,7 @@
       {
          "albedo":[0.650,0.645,0.655],
          "metallic": 0.001,
-         "roughness": 0.318,
+         "roughness": 0.25,
          "normalMap": "metalNormal512c.jpg",
          "cullFaceMode":"CULL_BACK"
       }
