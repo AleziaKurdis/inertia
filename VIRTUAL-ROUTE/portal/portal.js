@@ -17,6 +17,9 @@
     let destination = "";
     
     let portalHorizonID = null;
+    let portalLightID = null;
+    let portalFlyZoneID = null;
+    let portalDouaneID = null;
     let thisEntityID;
     
     this.preload = function(entityID) {
@@ -65,16 +68,26 @@
         }
         
         if (destination !== "") {
-            let imageUrl, portalName;
+            let imageUrl, portalName, lightColor;
             
             if (portalData.isAlpha) {
                 //ALPHA
                 imageUrl = ROOT + "SPRITE_PORTAL_02.png";
                 portalName = "ALPHA";
+                lightColor = {
+                    "red": 156,
+                    "green": 255,
+                    "blue": 250
+                };
             } else {
                 //OMEGA
                 imageUrl = ROOT + "SPRITE_PORTAL_01.png";
                 portalName = "OMEGA";
+                lightColor = {
+                    "red": 255,
+                    "green": 200,
+                    "blue": 156
+                };
             }
             
             let shader = {
@@ -133,8 +146,81 @@
             }, "local");
             
             //Light
+            portalLightID = Entities.addEntity({
+                "type": "Light",
+                "parentID": entityID,
+                "name": "portal Light " + portalName,
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -4.1
+                },
+                "dimensions": {"x":14.273547172546387,"y":14.273547172546387,"z":20.18584442138672},
+                "localRotation": {"x":-1,"y":-0.0000152587890625,"z":-0.0000152587890625,"w":-0.0000152587890625},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "intensity": 8,
+                "falloffRadius": 0.8,
+                "isSpotlight": true,
+                "cutoff": 45,
+                "color": lightColor,
+                "lifetime": 43200
+            }, "local");
+            
             //flyzone
+            portalFlyZoneID = Entities.addEntity({
+                "type": "Zone",
+                "parentID": entityID,
+                "name": "portal FlyZone " + portalName,
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.5648
+                },
+                "dimensions": {"x":4.500001430511475,"y":4.500001430511475,"z":8.611637115478516},
+                "localRotation": {"x":0,"y":0,"z":0,"w":1},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "shapeType": "box",
+                "keyLight": {
+                    "direction": {
+                        "x": 0,
+                        "y": -0.7071067690849304,
+                        "z": 0.7071067690849304
+                    },
+                    "castShadows": true
+                },
+                "flyingAllowed": true,
+                "lifetime": 43200
+            }, "local");
+            
             //Douane
+            portalDouaneID = Entities.addEntity({
+                "type": "Shape",
+                "shape": "Cube",
+                "parentID": entityID,
+                "name": "portal douane " + portalName,
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 2.7440
+                },
+                "alpha": 0.0,
+                "collisionless": true,
+                "dimensions": {"x": 4.5,"y": 4.5,"z": 2.0},
+                "localRotation": {"x":0,"y":0,"z":0,"w":1},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "script": "",
+                "lifetime": 43200
+            }, "local");
+            
             //signs inside
             //signs outside
             
@@ -146,6 +232,22 @@
             Entities.deleteEntity(portalHorizonID);
             portalHorizonID = null;
         }
+
+        if (portalLightID !== null) {
+            Entities.deleteEntity(portalLightID);
+            portalLightID = null;
+        }
+
+        if (portalFlyZoneID !== null) {
+            Entities.deleteEntity(portalFlyZoneID);
+            portalFlyZoneID = null;
+        }
+        
+        if (portalDouaneID !== null) {
+            Entities.deleteEntity(portalDouaneID);
+            portalDouaneID = null;
+        }
+        
     };
 
 })
