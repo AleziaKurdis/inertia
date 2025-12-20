@@ -258,7 +258,7 @@
                     "y": 0.0,
                     "z": -4.1
                 },
-                "dimensions": {"x":1;0,"y":1.0,"z":1.0},
+                "dimensions": {"x":1.0,"y":1.0,"z":1.0},
                 "localRotation": {"x":0,"y":0,"z":0,"w":1},
                 "renderWithZones": renderWithZones,
                 "grab": {
