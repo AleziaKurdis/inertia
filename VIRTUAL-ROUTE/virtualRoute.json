@@ -2,8 +2,8 @@
     {
         "displayName": "Virtual Route Information Center",
         "placeName": "hytrion",
-        "alphaArrivalUrl": "ta0",
-        "omegaArrivalUrl": "to0",
+        "alphaArrivalUrl": "hifi://hytrion/138.91,-9.32518,237.961/0,-0.378151,0,0.925744",
+        "omegaArrivalUrl": "hifi://hytrion/150.717,-9.32586,226.367/0,0.921007,0,0.389547",
         "km": 0.01
     },
     {
