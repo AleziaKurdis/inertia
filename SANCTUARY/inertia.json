@@ -28,6 +28,11 @@
         "grab":{
             "grabbable":false
         },
+        "normalMapAttenuation": {
+            "min": 600,
+            "max": 5000
+        },
+        "normalMapAttenuationMode": "enabled",
         "shapeType":"sphere",
         "script": "https://aleziakurdis.github.io/inertia/SANCTUARY/navigationAmbienceSanctuary.js"
     },
