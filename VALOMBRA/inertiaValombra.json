@@ -778,7 +778,7 @@
             "type": "Model",
             "name": "PORTAL ALPHA",
             "locked": true,
-            "position": {"x":3961.92138671875,"y":4095.580078125,"z":-4249.18359375},
+            "position": {"x":3962.54833984375,"y":4095.580078125,"z":-4249.18359375},
             "dimensions": {
                 "x": 4.500001430511475,
                 "y": 4.500001430511475,
@@ -791,6 +791,7 @@
             "grab": {
                 "grabbable": false
             },
+            "useOriginalPivot": true,
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
@@ -803,7 +804,7 @@
             "type": "Model",
             "name": "PORTAL OMEGA",
             "locked": true,
-            "position": {"x":4052.60693359375,"y":4108.85107421875,"z":-3752.441162109375},
+            "position": {"x":4053.18994140625,"y":4108.85107421875,"z":-3752.441162109375},
             "dimensions": {
                 "x": 4.500001430511475,
                 "y": 4.500001430511475,
@@ -816,6 +817,7 @@
             "grab": {
                 "grabbable": false
             },
+            "useOriginalPivot": true,
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
