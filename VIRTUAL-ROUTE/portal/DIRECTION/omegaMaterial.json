@@ -7,10 +7,10 @@
         	1,
         	1
          ],
-         "albedoMap": "omega.jpg",
+         "albedoMap": "omegaAlpha.jpg",
          "metallic": 0.001,
          "roughness": 0.1,
-         "emissiveMap": "omega.jpg",
+         "emissiveMap": "omegaAlpha.jpg",
          "cullFaceMode":"CULL_NONE"
       }
    ]
