@@ -21,6 +21,7 @@
     let portalFlyZoneID = null;
     let portalDouaneID = null;
     let portalFrontSignID = null;
+    let portalSoundID = null;
     let thisEntityID;
     
     this.preload = function(entityID) {
@@ -248,7 +249,28 @@
             }, "local");
             
             //sound
-            
+            portalSoundID = Entities.addEntity({
+                "type": "Sound",
+                "parentID": entityID,
+                "name": "portal Sound " + portalName,
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -4.1
+                },
+                "dimensions": {"x":1;0,"y":1.0,"z":1.0},
+                "localRotation": {"x":0,"y":0,"z":0,"w":1},
+                "renderWithZones": renderWithZones,
+                "grab": {
+                    "grabbable": false
+                },
+                "soundURL": ROOT + "portalSound.mp3",
+                "volume": 0.3,
+                "loop": true,
+                "positional": true,
+                "localOnly": true,
+                "lifetime": 43200
+            }, "local");
         }
     };
 
@@ -276,6 +298,10 @@
         if (portalFrontSignID !== null) {
             Entities.deleteEntity(portalFrontSignID);
             portalFrontSignID = null;
+        }
+        if (portalSoundID !== null) {
+            Entities.deleteEntity(portalSoundID);
+            portalSoundID = null;
         }
         
     };
