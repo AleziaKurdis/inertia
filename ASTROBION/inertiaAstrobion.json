@@ -28,6 +28,11 @@
             "grab":{
                 "grabbable":false
             },
+            "normalMapAttenuation": {
+                "min": 1000,
+                "max": 8000
+            },
+            "normalMapAttenuationMode": "enabled",
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/ASTROBION/navigationAmbienceAstrobion.js"
         },
