@@ -29,8 +29,8 @@
             "grabbable":false
         },
         "normalMapAttenuation": {
-            "min": 600,
-            "max": 5000
+            "min": 1000,
+            "max": 6000
         },
         "normalMapAttenuationMode": "enabled",
         "shapeType":"sphere",
