@@ -3066,6 +3066,11 @@
     "skyboxMode": "enabled",
     "hazeMode": "enabled",
     "bloomMode": "enabled",
+    "normalMapAttenuation": {
+        "min": 400,
+        "max": 2000
+    },
+    "normalMapAttenuationMode": "enabled",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
