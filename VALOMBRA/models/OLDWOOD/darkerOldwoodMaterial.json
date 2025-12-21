@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.569,0.455,0.38],
+         "albedoMap": "OLDWOOD_PLANKS_albedo.jpg",
+         "metallic": 0.01,
+         "roughness": 0.52,
+         "occlusionMap": "OLDWOOD_PLANKS_ao.jpg",
+         "normalMap": "OLDWOOD_PLANKS_normal_og.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
