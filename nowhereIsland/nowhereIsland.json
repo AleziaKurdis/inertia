@@ -6482,11 +6482,6 @@
     "skyboxMode": "disabled",
     "hazeMode": "disabled",
     "bloomMode": "disabled",
-    "normalMapAttenuation": {
-        "min": 300,
-        "max": 3000
-    },
-    "normalMapAttenuationMode": "enabled",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
