@@ -1273,6 +1273,29 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a7810eb9-54f7-48a8-a70b-549a9babb811}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "Tables",
+            "locked": true,
+            "dimensions": {
+                "x": 5.167945861816406,
+                "y": 0.7666683197021484,
+                "z": 4.043060302734375
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/tables.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
