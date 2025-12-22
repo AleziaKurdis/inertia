@@ -19,8 +19,8 @@ const LEFT_HAND = MyAvatar.getDominantHand() === "right" ? true : false;
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
-var hmdPanelLocalPosition = {"x": 0.0, "y": -0.25, "z": -1.5};
-var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": 0, "y": -3, "z": 0});
+var hmdPanelLocalPosition = {"x": 0.0, "y": 0.0, "z": -1.5};
+var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 0});
 var CAMERA_MATRIX_INDEX = -7;
 
 function toggleItem() {
