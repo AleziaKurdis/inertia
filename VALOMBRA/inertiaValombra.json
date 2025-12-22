@@ -310,23 +310,13 @@
                     "y": 0.09000000357627869,
                     "z": 0.009999999776482582
                 },
-                "equippableLeftRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
                 "equippableRightPosition": {
                     "x": 0.6000000238418579,
                     "y": 0.09000000357627869,
                     "z": 0.10000000149011612
                 },
-                "equippableRightRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                }
+                "equippableRightRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -364,23 +354,13 @@
                     "y": 0.09000000357627869,
                     "z": 0.009999999776482582
                 },
-                "equippableLeftRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
                 "equippableRightPosition": {
                     "x": 0.6000000238418579,
                     "y": 0.09000000357627869,
                     "z": 0.10000000149011612
                 },
-                "equippableRightRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                }
+                "equippableRightRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -417,23 +397,13 @@
                     "y": 0.09000000357627869,
                     "z": 0.009999999776482582
                 },
-                "equippableLeftRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
                 "equippableRightPosition": {
                     "x": 0.6000000238418579,
                     "y": 0.09000000357627869,
                     "z": 0.10000000149011612
                 },
-                "equippableRightRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                }
+                "equippableRightRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -470,23 +440,13 @@
                     "y": 0.09000000357627869,
                     "z": 0.009999999776482582
                 },
-                "equippableLeftRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
                 "equippableRightPosition": {
                     "x": 0.6000000238418579,
                     "y": 0.09000000357627869,
                     "z": 0.10000000149011612
                 },
-                "equippableRightRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 89.9000015258789,
-                    "w": 1
-                }
+                "equippableRightRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
