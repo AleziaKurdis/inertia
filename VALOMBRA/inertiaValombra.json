@@ -1348,6 +1348,114 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/tables.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c37910d9-fe17-4b42-9f3b-993887e9a2ae}",
+            "type": "Model",
+            "name": "Torch Stand 3",
+            "locked": true,
+            "position": {"x":4102.49609375,"y":4140.0185546875,"z":-3916.7734375},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.942948579788208,
+                "z": 0,
+                "w": -0.3329385221004486
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torchStand.fst"
+        },
+        {
+            "id": "{7b4d6059-21e4-4f47-8210-4c40a89fe1da}",
+            "type": "Model",
+            "name": "Torch Stand 2",
+            "locked": true,
+            "position": {"x":4057.826416015625,"y":4140.12353515625,"z":-3875.074951171875},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.43134698271751404,
+                "z": 0,
+                "w": 0.9021861553192139
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torchStand.fst"
+        },
+        {
+            "id": "{28c0bbb1-b26b-4a7e-a542-b6614a233b24}",
+            "type": "Model",
+            "name": "Torch Stand 1",
+            "locked": true,
+            "position": {"x":4066.552978515625,"y":4107.97216796875,"z":-3762.485595703125},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torchStand.fst"
+        },
+        {
+            "id": "{7c0956cb-097d-43dc-9e34-ac1a86ed7179}",
+            "type": "Model",
+            "position": {"x":3975.14599609375,"y":4094.837646484375,"z":-4232.13330078125},
+            "name": "Torch Stand 4",
+            "locked": true,
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torchStand.fst"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
