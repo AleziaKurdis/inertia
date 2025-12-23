@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "torchStand_albedo.jpg",
+         "metallicMap": "torchStand_metallic.jpg",
+         "roughnessMap": "torchStand_roughness.jpg",
+         "normalMap": "torchStand_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
