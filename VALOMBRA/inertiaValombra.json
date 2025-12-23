@@ -317,7 +317,10 @@
                     "y": 0.09000000357627869,
                     "z": 0.01
                 },
-                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304}
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.6, "z": 0.0}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -362,7 +365,10 @@
                     "y": 0.09000000357627869,
                     "z": 0.01
                 },
-                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304}
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.6, "z": 0.0}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -406,7 +412,10 @@
                     "y": 0.09000000357627869,
                     "z": 0.01
                 },
-                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304}
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.6, "z": 0.0}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
@@ -450,7 +459,10 @@
                     "y": 0.09000000357627869,
                     "z": 0.01
                 },
-                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304}
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.6, "z": 0.0}
             },
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
