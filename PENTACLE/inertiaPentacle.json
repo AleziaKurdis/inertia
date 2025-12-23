@@ -30,6 +30,11 @@
             },
             "flyingAllowed": false,
             "ghostingAllowed": false,
+            "normalMapAttenuation": {
+                "min": 500,
+                "max": 2000
+            },
+            "normalMapAttenuationMode": "enabled",
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/PENTACLE/navigationAmbiencePentacle.js"
         },
