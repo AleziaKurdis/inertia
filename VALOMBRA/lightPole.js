@@ -82,6 +82,7 @@
     };    
 
     this.unload = function(entityID) {
+        print("AT LEAST!");
         if (lightID !== Uuid.NONE) {
             print("HMM!");
             Entities.deleteEntity(lightID);
