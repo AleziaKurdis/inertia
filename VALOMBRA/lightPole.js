@@ -49,8 +49,7 @@
             "color": {"red": lightColor[0], "green": lightColor[1], "blue": lightColor[2]},
             "intensity": 15,
             "falloffRadius": 2,
-            "isSpotlight": false,
-            "visible": true
+            "isSpotlight": false
         },"local");
 
         var sumColorCompnent = (color[0]/255) +(color[1]/255) +(color[2]/255);
