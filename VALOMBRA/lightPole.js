@@ -12,8 +12,8 @@
 //
 (function(){ 
     var ROOT = Script.resolvePath('').split("lightPole.js")[0];
-    var lightID = null;
-    var materialID = null;
+    var lightID = Uuid.NONE;
+    var materialID = Uuid.NONE;
     
     const DAY_DURATION = 104400; //D29
     
@@ -90,13 +90,13 @@
     };    
 
     this.unload = function(entityID) {
-        if (lightID !== null) {
+        if (lightID !== Uuid.NONE) {
             Entities.deleteEntity(lightID);
-            lightID = null;
+            lightID = Uuid.NONE;
         }
-        if (materialID !== null) {
+        if (materialID !== Uuid.NONE) {
             Entities.deleteEntity(materialID);
-            materialID = null;
+            materialID = Uuid.NONE;
         }
     };  
 
