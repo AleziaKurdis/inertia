@@ -84,6 +84,7 @@
             "localPosition": {"x": 0.0, "y": 0.2, "z": 0.0},
             "name": "lightPole material",
             "materialURL": "materialData",
+            "parentMaterialName": "[mat::LIGHT]",
             "priority": 2,
             "materialData": JSON.stringify(materialContent)
         },"local");
