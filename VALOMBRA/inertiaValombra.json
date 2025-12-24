@@ -1472,6 +1472,54 @@
             "damping": 0,
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/torchStand.fst"
+        },
+        {
+            "id": "{439b20e8-1eb8-4669-b01c-edc9f7f14a8b}",
+            "type": "Model",
+            "position": {"x":3977.5302734375,"y":4093.289306640625,"z":-4245.55126953125},
+            "name": "LIGHT POLE ALPHA",
+            "locked": true,
+            "dimensions": {
+                "x": 0.7440617680549622,
+                "y": 3.7000861167907715,
+                "z": 0.859168529510498
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/lightPole.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lightPole.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{33cb7d2f-3ed5-4c55-bbef-18f6fd523785}",
+            "type": "Model",
+            "position": {"x":3377.5302734375,"y":4093.289306640625,"z":-4245.55126953125},
+            "name": "LIGHT POLE OMEGA",
+            "locked": true,
+            "dimensions": {
+                "x": 0.7440617680549622,
+                "y": 3.7000861167907715,
+                "z": 0.859168529510498
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/lightPole.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lightPole.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",

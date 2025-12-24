@@ -42,9 +42,9 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 25,
-                "y": 25,
-                "z": 25
+                "x": 40,
+                "y": 40,
+                "z": 40
             },
             "color": {"red": lightColor[0], "green": lightColor[1], "blue": lightColor[2]},
             "intensity": 15,
