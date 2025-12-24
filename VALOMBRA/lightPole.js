@@ -1,4 +1,3 @@
-"use strict";
 //
 //  lightPole.js
 //
@@ -18,7 +17,6 @@
     const DAY_DURATION = 104400; //D29
     
     this.preload = function(entityID) {
-
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
         var renderWithZones = properties.renderWithZones;
 
@@ -30,12 +28,6 @@
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 3.65, "z": 0.0},
-            "localRotation": {
-                "x": -0.7071,
-                "y": 0.0,
-                "z": 0.0,
-                "w": 0.7071
-            },
             "name": "lightPole Light",
             "grab": {
                 "grabbable": false
