@@ -1520,6 +1520,28 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lightPole.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{ac16f5e4-15fc-42f1-a588-9c9d52dc156b}",
+            "type": "Model",
+            "name": "Lustre",
+            "locked": true,
+            "dimensions": {
+                "x": 0.06250762939453125,
+                "y": 0.8993644714355469,
+                "z": 0.13288116455078125
+            },
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lustre.fst"
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
