@@ -1540,7 +1540,7 @@
             },
             "damping": 0,
             "angularDamping": 0,
-            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lustre.fst"
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lustre.fst",
             "useOriginalPivot": true
         }
    ],
