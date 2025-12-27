@@ -33,6 +33,7 @@
                 "max": 5000
             },
             "normalMapAttenuationMode": "enabled",
+            "flyingAllowed": false,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/navigationAmbienceValombra.js"
         },
@@ -64,6 +65,7 @@
                 "grabbable":false
             },
             "shapeType":"sphere",
+            "flyingAllowed": false,
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29"
         },
         {
@@ -1542,6 +1544,37 @@
             "angularDamping": 0,
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/lustre.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{aca390a7-7f8c-44c4-bcc8-f70b8e195860}",
+            "type": "Box",
+            "position": {"x":4000,"y":3752.427490234375,"z":-4000},
+            "name": "FALLEN COLLECTOR",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 500,
+                "z": 2000
+            },
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "alpha": 0.0,
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/fallenCollector.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
