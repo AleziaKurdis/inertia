@@ -1575,6 +1575,244 @@
             "alpha": 0.0,
             "shape": "Cube",
             "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/fallenCollector.js"
+        },
+        {
+            "id": "{1babdc44-77ca-4d45-bf45-a997456cd947}",
+            "type": "Sound",
+            "position": {"x":3919.55615234375,"y":4091.70361328125,"z":-4200.27587890625},
+            "name": "CRICKETS 01",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/forest_sound_02.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{6f1e7aed-1fa6-4a7e-b7bd-463dab634d5f}",
+            "type": "Sound",
+            "position": {"x":3838.333251953125,"y":4090.6708984375,"z":-4063.96533203125},
+            "name": "CRICKETS 02",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/forest_sound_02.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{3b83cb9a-0154-449b-bdfe-7b18662e1be2}",
+            "type": "Sound",
+            "position": {"x":3903.556640625,"y":4083.060546875,"z":-4110.79296875},
+            "name": "CRICKETS 03",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_03.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{9737f008-4c5f-4865-95df-eea46c2b0709}",
+            "type": "Sound",
+            "position": {"x":3885.552490234375,"y":4083.835693359375,"z":-4078.879638671875},
+            "name": "CRICKETS 04",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_03.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{ee67f4e9-1eff-41c9-bb83-8a86383e8b73}",
+            "type": "Sound",
+            "position": {"x":3855.499267578125,"y":4111.1328125,"z":-3984.08544921875},
+            "name": "CRICKETS 05",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_04.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{b710616f-62f2-4f46-ad7b-02c14a4c9c75}",
+            "type": "Sound",
+            "position": {"x":3919.515625,"y":4113.255859375,"z":-3976.804931640625},
+            "name": "CRICKETS 06",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_04.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{8fda9296-3726-4deb-b113-856b542e39ac}",
+            "type": "Sound",
+            "position": {"x":4000.718505859375,"y":4105.2626953125,"z":-3991.609130859375},
+            "name": "CRICKETS 07",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_05.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{28d27af4-3d37-4af0-a951-9552deb6a225}",
+            "type": "Sound",
+            "position": {"x":4039.7890625,"y":4107.3427734375,"z":-4027.119384765625},
+            "name": "CRICKETS 08",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_05.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{e43e420c-1c64-4c6c-a95a-4ae1ea8ac17e}",
+            "type": "Sound",
+            "position": {"x":4070.501708984375,"y":4115.54443359375,"z":-4001.26416015625},
+            "name": "CRICKETS 09",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_06.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{40aa31e5-eda7-477a-84cc-ac7ffedebe87}",
+            "type": "Sound",
+            "position": {"x":3961.8828125,"y":4126.67724609375,"z":-3873.056640625},
+            "name": "CRICKETS 10",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_06.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{f9cd7404-b53c-4b82-8356-5e69e2feb625}",
+            "type": "Sound",
+            "position": {"x":3884.061767578125,"y":4130.3115234375,"z":-3886.11279296875},
+            "name": "CRICKETS 11",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_07.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{ec00efff-aac6-40ce-af65-2bd8b126dd61}",
+            "type": "Sound",
+            "position": {"x":3903.08349609375,"y":4129.94677734375,"z":-3815.013916015625},
+            "name": "CRICKETS 12",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/forest_sound_02.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{fbf3a56a-30f2-4358-9b28-b09635c809f6}",
+            "type": "Sound",
+            "position": {"x":3988.219970703125,"y":4117.0302734375,"z":-3801.05517578125},
+            "name": "CRICKETS 13",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/crickets_07.mp3",
+            "volume": 0.75,
+            "localOnly": true
+        },
+        {
+            "id": "{641d1256-c546-4752-9ece-10ac89e73fa9}",
+            "type": "Sound",
+            "position": {"x":3993.78759765625,"y":4171.3994140625,"z":-3873.1728515625},
+            "name": "CRICKETS 14",
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/forest_sound_01.mp3",
+            "volume": 0.75,
+            "localOnly": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
