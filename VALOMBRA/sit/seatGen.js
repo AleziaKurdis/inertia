@@ -21,12 +21,47 @@
         renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
 
         var seats = [
-/*            {"localPosition": {"x": 0.7163,"y": 1.4902,"z": 3.9883}, "localRotation": {"x":0,"y":-0.5,"z":0,"w":0.8660253882408142}},
-            {"localPosition": {"x": 0.8555,"y": 1.4902,"z": 2.3784}, "localRotation": {"x":0,"y":-0.9025852680206299,"z":0,"w":0.43051114678382874}},
-            {"localPosition": {"x": 3.1714,"y": 1.4902,"z": 3.8174}, "localRotation": {"x":0,"y":0.5735764503479004,"z":0,"w":0.8191521167755127}},
-            {"localPosition": {"x": 2.1230,"y": 1.4902,"z": 1.8643}, "localRotation": {"x":0,"y":0.9659258723258972,"z":0,"w":0.2588191032409668}},
-            {"localPosition": {"x": 2.9697,"y": 1.4902,"z": 2.2861}, "localRotation": {"x":0,"y":0.9659258723258972,"z":0,"w":0.2588191032409668}}
-*/        ];
+            {   //Table 1 Seat 1
+                "localPosition": {"x": 107.3726,"y": 31.3979,"z": 126.6627},
+                "localRotation": {"x":0,"y":0.017452405765652657,"z":0,"w":0.9998477101325989}
+            },
+            {   //Table 1 Seat 2
+                "localPosition": {"x": 106.5962,"y": 31.3979,"z": 126.6899},
+                "localRotation": {"x":0,"y":0.017452405765652657,"z":0,"w":0.9998477101325989}
+            },
+            {   //Table 1 Seat 3
+                "localPosition": {"x": 105.9878,"y": 31.3979,"z": 126.7109},
+                "localRotation": {"x":0,"y":0.017452405765652657,"z":0,"w":0.9998477101325989}
+            },
+            {   //Table 1 Seat 4
+                "localPosition": {"x": 106.0835,"y": 31.3979,"z": 128.6123},
+                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+            },
+            {   //Table 1 Seat 5
+                "localPosition": {"x": 106.7495,"y": 31.3979,"z": 128.5891},
+                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+            },
+            {   //Table 1 Seat 6
+                "localPosition": {"x": 107.4365,"y": 31.3979,"z": 128.5540},
+                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+            },
+            {   //Table 2 Seat 1
+                "localPosition": {"x": 104.5996,"y": 31.3979,"z": 125.1965},
+                "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}
+            },
+            {   //Table 2 Seat 2
+                "localPosition": {"x": 104.5830,"y": 31.3979,"z": 125.9741},
+                "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}
+            },
+            {   //Table 2 Seat 3
+                "localPosition": {"x": 102.9448,"y": 31.3979,"z": 125.9741},
+                "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}
+            },
+            {   //Table 2 Seat 4
+                "localPosition": {"x": 102.9600,"y": 31.3979,"z": 125.1394},
+                "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}
+            }
+        ];
         
         for (let t = 0; t < seats.length; t++ ) {
             entitiesToDelete.push(generateSeat(seats[t].localPosition, seats[t].localRotation));
@@ -42,7 +77,7 @@
             "type": "Shape",
             "shape": "Cube",
             "parentID": thisEntity,
-            "name": "Outpost - Seat",
+            "name": "Seat",
             "dimensions": {"x":0.3,"y":0.01,"z":0.3},
             "localPosition": localPosition,
             "localRotation": localRotation,
