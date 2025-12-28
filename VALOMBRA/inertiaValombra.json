@@ -1582,6 +1582,7 @@
             "type": "Sound",
             "position": {"x":3919.55615234375,"y":4091.70361328125,"z":-4200.27587890625},
             "name": "CRICKETS 01",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1599,6 +1600,7 @@
             "type": "Sound",
             "position": {"x":3838.333251953125,"y":4090.6708984375,"z":-4063.96533203125},
             "name": "CRICKETS 02",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1616,6 +1618,7 @@
             "type": "Sound",
             "position": {"x":3903.556640625,"y":4083.060546875,"z":-4110.79296875},
             "name": "CRICKETS 03",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1633,6 +1636,7 @@
             "type": "Sound",
             "position": {"x":3885.552490234375,"y":4083.835693359375,"z":-4078.879638671875},
             "name": "CRICKETS 04",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1650,6 +1654,7 @@
             "type": "Sound",
             "position": {"x":3855.499267578125,"y":4111.1328125,"z":-3984.08544921875},
             "name": "CRICKETS 05",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1667,6 +1672,7 @@
             "type": "Sound",
             "position": {"x":3919.515625,"y":4113.255859375,"z":-3976.804931640625},
             "name": "CRICKETS 06",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1684,6 +1690,7 @@
             "type": "Sound",
             "position": {"x":4000.718505859375,"y":4105.2626953125,"z":-3991.609130859375},
             "name": "CRICKETS 07",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1701,6 +1708,7 @@
             "type": "Sound",
             "position": {"x":4039.7890625,"y":4107.3427734375,"z":-4027.119384765625},
             "name": "CRICKETS 08",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1718,6 +1726,7 @@
             "type": "Sound",
             "position": {"x":4070.501708984375,"y":4115.54443359375,"z":-4001.26416015625},
             "name": "CRICKETS 09",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1735,6 +1744,7 @@
             "type": "Sound",
             "position": {"x":3961.8828125,"y":4126.67724609375,"z":-3873.056640625},
             "name": "CRICKETS 10",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1752,6 +1762,7 @@
             "type": "Sound",
             "position": {"x":3884.061767578125,"y":4130.3115234375,"z":-3886.11279296875},
             "name": "CRICKETS 11",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1769,6 +1780,7 @@
             "type": "Sound",
             "position": {"x":3903.08349609375,"y":4129.94677734375,"z":-3815.013916015625},
             "name": "CRICKETS 12",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1786,6 +1798,7 @@
             "type": "Sound",
             "position": {"x":3988.219970703125,"y":4117.0302734375,"z":-3801.05517578125},
             "name": "CRICKETS 13",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1803,6 +1816,7 @@
             "type": "Sound",
             "position": {"x":3993.78759765625,"y":4171.3994140625,"z":-3873.1728515625},
             "name": "CRICKETS 14",
+            "locked": true,
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1814,6 +1828,64 @@
             "soundURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/sounds/forest_sound_01.mp3",
             "volume": 0.75,
             "localOnly": true
+        },
+        {
+            "id": "{fee90df4-40d6-4b04-a37a-f86f0fb4ecfe}",
+            "type": "Model",
+            "name": "Framed Sign - VALOMBRA (welcome)",
+            "locked": true,
+            "position": {"x":4096.39697265625,"y":4140.4736328125,"z":-3914.58447265625},
+            "dimensions": {
+                "x": 2,
+                "y": 0.5788867473602295,
+                "z": 0.03999999910593033
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.9429550766944885,
+                "z": 0,
+                "w": 0.33291998505592346
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/ValombraWelcome.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{b235e61e-06e6-4290-95f9-3aa83956f475}",
+            "type": "Model",
+            "name": "Framed Sign - VALOMBRA (welcome)",
+            "locked": true,
+            "position": {"x":4060.7998046875,"y":4141.0673828125,"z":-3868.00341796875},
+            "dimensions": {
+                "x": 2.730929374694824,
+                "y": 0.7904494404792786,
+                "z": 0.05461858585476875
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.43135735392570496,
+                "z": 0,
+                "w": 0.9021812081336975
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/ValombraWelcome.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
