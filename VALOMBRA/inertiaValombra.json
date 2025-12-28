@@ -1365,7 +1365,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/tables.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/sit/seatGen.js"
         },
         {
             "id": "{c37910d9-fe17-4b42-9f3b-993887e9a2ae}",
