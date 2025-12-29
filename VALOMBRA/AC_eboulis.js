@@ -60,6 +60,8 @@ function generateEboulis(renderWithZones, position) {
             },
             "lifetime": 15,
             "modelURL": ROOT + "models/rock.fst",
+            "velocity": { "x": 0.0, "y": -0.01, "z": 0.0},
+            "damping": 0.0,
             "gravity": { "x": 0.0, "y": -9.8, "z": 0.0},
             "dynamic": true
         }, "domain");

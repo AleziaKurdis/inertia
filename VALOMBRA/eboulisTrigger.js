@@ -43,8 +43,8 @@
         let targetPosition;
         let cible = {};
         cible.x = (Math.random() * prop.dimensions.x) - (prop.dimensions.x/2);
-        cible.y = (Math.random() * prop.dimensions.y) - (prop.dimensions.y/2);
-        cible.z = (Math.random() * 60) + 40;
+        cible.y = (Math.random() * 60) + 40;
+        cible.z = (Math.random() * prop.dimensions.z) - (prop.dimensions.z/2);
         
         targetPosition = Vec3.sum(prop.position, Vec3.multiplyQbyV( prop.rotation, cible ));
         
