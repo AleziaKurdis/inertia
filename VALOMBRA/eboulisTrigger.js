@@ -12,6 +12,9 @@
 (function(){ 
     let properties;
     let alreadyTriggered = false;
+    
+    var channelComm = "ak.valombra.ac.communication";
+    
     this.preload = function(entityID) {
         properties = Entities.(entityID, ["renderWithZones", "position", "dimensions", "rotation"]);
         alreadyTriggered = false;
@@ -27,7 +30,7 @@
             };
             
             Script.setTimeout(function () {
-                Window.displayAnnouncement("TRIGGERED: " + JSON.stringify(request));
+                Messages.sendMessage(channelComm, JSON.stringify(request));
             }, Math.floor(Math.random() * 8000);
             
             alreadyTriggered = true;
@@ -49,5 +52,9 @@
     this.leaveEntity = function(entityID) {
         alreadyTriggered = false;
     };
-    
+
+    this.unload = function(entityID) {
+        
+    };
+
 })
