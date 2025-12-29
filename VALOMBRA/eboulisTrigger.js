@@ -16,7 +16,7 @@
     var channelComm = "ak.valombra.ac.communication";
     
     this.preload = function(entityID) {
-        properties = Entities.(entityID, ["renderWithZones", "position", "dimensions", "rotation"]);
+        properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position", "dimensions", "rotation"]);
         alreadyTriggered = false;
         print("EBOULIS TRIGGER ACTIVE!");
     };
@@ -59,4 +59,4 @@
         
     };
 
-})
+})();
