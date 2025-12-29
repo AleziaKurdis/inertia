@@ -461,9 +461,9 @@
                         "grabbable": false
                     },
                     "dimensions": {
-                        "x": 4,
-                        "y": 4,
-                        "z": 4
+                        "x": 6,
+                        "y": 6,
+                        "z": 6
                     },
                     "color": {"red": 255, "green": 128, "blue": 0},
                     "intensity": LIGHT_INTENSITY,
