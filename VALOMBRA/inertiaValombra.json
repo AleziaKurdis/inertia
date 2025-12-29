@@ -1886,6 +1886,76 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/ValombraWelcome.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c33e51c3-d6ee-41c8-bf12-f66d3c326b6f}",
+            "type": "ParticleEffect",
+            "name": "SMOKE AMBIANCE",
+            "locked": true,
+            "dimensions": {
+                "x": 16.600000381469727,
+                "y": 16.600000381469727,
+                "z": 16.600000381469727
+            },
+            "position": {"x":4103.73974609375,"y":4141.08251953125,"z":-3872.629150390625},
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "color": {
+                "red": 117,
+                "green": 112,
+                "blue": 102
+            },
+            "alpha": 0.009999999776482582,
+            "textures": "https://aleziakurdis.github.io/inertia/VALOMBRA/images/fog.png",
+            "maxParticles": 180,
+            "lifespan": 9,
+            "emitRate": 20,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 10,
+                "y": 0.10000000149011612,
+                "z": 5
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "particleRadius": 2,
+            "radiusSpread": 0.30000001192092896,
+            "radiusStart": 1.5,
+            "radiusFinish": 3,
+            "colorStart": {
+                "red": 38,
+                "green": 31,
+                "blue": 24
+            },
+            "colorFinish": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "spinSpread": 0.05000000074505806,
+            "spinStart": -0.5199999809265137,
+            "spinFinish": 0.5199999809265137
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
