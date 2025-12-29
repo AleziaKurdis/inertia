@@ -2034,6 +2034,29 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/signEboulis.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{6656fdf4-7309-4aa0-835d-2c8f06b1b9b3}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "BUCHES",
+            "locked": true,
+            "dimensions": {
+                "x": 1.47821044921875,
+                "y": 0.8510208129882812,
+                "z": 0.9933319091796875
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/buches.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
