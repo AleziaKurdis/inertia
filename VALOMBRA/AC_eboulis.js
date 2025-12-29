@@ -33,7 +33,22 @@ function randomExponential(N, power = 3) {
 }
 
 function generateEboulis(renderWithZones, position) {
-    let numberOfRock = 1 + Math.floor(randomExponential(15, 3));
+    
+    let soundID = Entities.addEntity({
+        "name": "EBOULIS SOUND",
+        "type": "Sound",
+        "soundURL": ROOT + "sounds/eboulis.wav",
+        "playing": true,
+        "volume": 1.0,
+        "loop": false,
+        "positional": true,
+        "localOnly": false,
+        "lifetime": 15,
+        "position": position,
+        "renderWithZones": renderWithZones
+    }, "domain");
+    
+    let numberOfRock = 1 + Math.floor(randomExponential(25, 3));
     
     var id, rezPosition;
     for (let i = 0; i < numberOfRock; i++ ) {
@@ -62,6 +77,8 @@ function generateEboulis(renderWithZones, position) {
             "modelURL": ROOT + "models/rock.fst",
             "velocity": { "x": 0.0, "y": -0.01, "z": 0.0},
             "damping": 0.0,
+            "angularDamping": 0.0,
+            "angularVelocity": { "x": (Math.random() * 0.10472) - 0.0523599, "y": (Math.random() * 0.10472) - 0.0523599, "z": (Math.random() * 0.10472) - 0.0523599},
             "gravity": { "x": 0.0, "y": -9.8, "z": 0.0},
             "dynamic": true
         }, "domain");

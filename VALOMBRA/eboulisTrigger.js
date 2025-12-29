@@ -18,7 +18,6 @@
     this.preload = function(entityID) {
         properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position", "dimensions", "rotation"]);
         alreadyTriggered = false;
-        //Window.displayAnnouncement("EBOULIS TRIGGER ACTIVE!");
     };
 
     this.enterEntity = function(entityID) {
@@ -31,7 +30,6 @@
             };
             
             Script.setTimeout(function () {
-                //Window.displayAnnouncement("TRIGGERED: " + JSON.stringify(request));
                 Messages.sendMessage(channelComm, JSON.stringify(request));
             }, Math.floor(Math.random() * 8000));
             
