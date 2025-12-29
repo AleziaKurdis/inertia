@@ -18,6 +18,7 @@
     this.preload = function(entityID) {
         properties = Entities.(entityID, ["renderWithZones", "position", "dimensions", "rotation"]);
         alreadyTriggered = false;
+        print("EBOULIS TRIGGER ACTIVE!");
     };
 
     this.enterEntity = function(entityID) {
