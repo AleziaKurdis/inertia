@@ -1173,20 +1173,15 @@
         {
             "id": "{cbf3ddfd-60a6-48a3-b192-e0befb3b7dd6}",
             "type": "Model",
-            "name": "SIGN-OMEGA-AHEAD 2",
+            "name": "SIGN-OMEGA-RIGHT 2",
             "locked": true,
-            "position": {"x":3887.145263671875,"y":4085.25,"z":-4117.7724609375},
+            "position": {"x":3908.156005859375,"y":4084.432373046875,"z":-4082.738525390625},
             "dimensions": {
                 "x": 0.29973143339157104,
                 "y": 1.6020913124084473,
                 "z": 0.021962830796837807
             },
-            "rotation": {
-                "x": 0,
-                "y": 0.9335804581642151,
-                "z": 0,
-                "w": -0.3583679795265198
-            },
+            "rotation": {"x":0,"y":0.999657392501831,"z":0,"w":-0.02617695927619934},
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -1196,7 +1191,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "box",
-            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_RIGHT.fst",
             "useOriginalPivot": true
         },
         {
@@ -1956,6 +1951,89 @@
             "spinSpread": 0.05000000074505806,
             "spinStart": -0.5199999809265137,
             "spinFinish": 0.5199999809265137
+        },
+        {
+            "id": "{c0bd328a-14a8-455e-ad54-e690c873cfcb}",
+            "type": "Box",
+            "position": {"x":3864.16943359375,"y":4113.896484375,"z":-3978.81396484375},
+            "name": "EBOULIS-TRIGGER",
+            "locked": true,
+            "dimensions": {
+                "x": 43.94528579711914,
+                "y": 6.473117351531982,
+                "z": 7.9167094230651855
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.10452847182750702,
+                "z": 0,
+                "w": 0.994521975517273
+            },
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/eboulisTrigger.js",
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "alpha": 0,
+            "shape": "Cube"
+        },
+        {
+            "id": "{a0fd4fca-3442-4a5e-a3eb-6de9196b4393}",
+            "type": "Model",
+            "position": {"x":3837.5947265625,"y":4110.33544921875,"z":-3988.2783203125},
+            "name": "Sign - CAUTION EBOULIS",
+            "locked": true,
+            "dimensions": {
+                "x": 0.6057851314544678,
+                "y": 2.4036693572998047,
+                "z": 0.03409583494067192
+            },
+            "rotation": {"x":0,"y":-0.36446496844291687,"z":0,"w":-0.9312171936035156},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/signEboulis.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c414bf06-2ade-4e33-bb99-e84e850ff491}",
+            "type": "Model",
+            "position": {"x":3915.96630859375,"y":4113.18310546875,"z":-3974.208984375},
+            "name": "Sign - CAUTION EBOULIS",
+            "locked": true,
+            "dimensions": {
+                "x": 0.6057851314544678,
+                "y": 2.4036693572998047,
+                "z": 0.03409583494067192
+            },
+            "rotation": {"x":0.05796196311712265,"y":0.7364762425422668,"z":-0.052879542112350464,"w":-0.6718981266021729},
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/VALOMBRA/images/signEboulis.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
