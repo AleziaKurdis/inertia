@@ -92,7 +92,7 @@
             Entities.deleteEntity(materialID);
             materialID = Uuid.NONE;
         }
-    };  
+    };
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
 		var today = new Date();
@@ -101,7 +101,7 @@
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
-	}    
+	}
 
     /*
      * Converts an HSL color value to RGB. Conversion formula
@@ -140,4 +140,4 @@
     }
 
 
-})
+})();

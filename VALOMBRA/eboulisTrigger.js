@@ -33,7 +33,7 @@
             Script.setTimeout(function () {
                 print("TRIGGERED: " + JSON.stringify(request));
                 Messages.sendMessage(channelComm, JSON.stringify(request));
-            }, Math.floor(Math.random() * 8000);
+            }, Math.floor(Math.random() * 8000));
             
             alreadyTriggered = true;
         }
