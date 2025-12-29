@@ -23,6 +23,7 @@ function onMessageReceived(channel, message, sender, localOnly) {
     if (channel === channelComm) {
         var data = JSON.parse(message);
         if (data.action === "TRIGGER_EBOULIS") { 
+            print("EBOULIS: RECU");
             generateEboulis(data.renderWithZones, data.position);
         }
     }
