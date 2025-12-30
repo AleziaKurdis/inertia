@@ -44,15 +44,11 @@
     var univerSoundPlaying = 0;
     var blindspots = [
         {
-            "name": "AK003-1 METASPACEPORT",
-            "position": {
-                "x": 17,
-                "y": 0,
-                "z": 30,
-             },
-            "occultationRadius": 25.5,
-            "influenceRadius": 60,
-            "astroids": true
+            "name": "INN",
+            "position": {"x":4102.86181640625,"y":4139.64794921875,"z":-3874.2080078125},
+            "occultationRadius": 25,
+            "influenceRadius": 40,
+            "astroids": false
         }        
     ];
     
