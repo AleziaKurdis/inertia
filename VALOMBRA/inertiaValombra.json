@@ -340,7 +340,6 @@
             "useOriginalPivot": true,
             "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         },
-
         {
             "id": "{95719591-1867-4571-b424-076d94e8bb85}",
             "type": "Model",
@@ -2057,6 +2056,84 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/buches.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{930bc9c6-9ff2-4fc2-ba19-e92f6180b204}",
+            "type": "Model",
+            "position": {"x":4106.72265625,"y":4139.3125,"z":-3872.369873046875},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "name": "MUG 1",
+            "locked": true,
+            "dimensions": {"x":0.15733742713928223,"y":0.14009228348731995,"z":0.11666475236415863},
+            "grab": {
+                "grabbable": true
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 900,
+            "cloneLimit": 4,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/mug.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{62373ad0-55a5-40d1-b43f-c51ccb758274}",
+            "type": "Model",
+            "position": {"x":4103.74462890625,"y":4139.3125,"z":-3874.40673828125},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "name": "MUG 2",
+            "locked": true,
+            "dimensions": {"x":0.15733742713928223,"y":0.14009228348731995,"z":0.11666475236415863},
+            "grab": {
+                "grabbable": true
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 900,
+            "cloneLimit": 4,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/mug.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{e9d13013-309c-447f-a92e-89e7765bf3dd}",
+            "type": "Model",
+            "position": {"x":4103.41064453125,"y":4139.3125,"z":-3873.513427734375},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "name": "MUG 3",
+            "locked": true,
+            "dimensions": {"x":0.15733742713928223,"y":0.14009228348731995,"z":0.11666475236415863},
+            "grab": {
+                "grabbable": true
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 900,
+            "cloneLimit": 4,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/mug.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
