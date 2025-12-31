@@ -809,6 +809,7 @@
             "id": "{5bf31e39-eee5-4a65-a22a-badeec3e08bb}",
             "type": "Box",
             "name": "CLOCK D29 A",
+            "locked": true,
             "position": {"x":3975.045166015625,"y":4095.63330078125,"z":-4234.380859375},
             "rotation": {"x":0,"y":0.7071068286895752,"z":0,"w":0.7071068286895752},
             "dimensions": {"x":0.7907044291496277,"y":0.5658466219902039,"z":0.01},
@@ -830,6 +831,7 @@
             "id": "{1ff32740-44d2-48c0-8531-c7bdbfc69358}",
             "type": "Box",
             "name": "CLOCK D29 O",
+            "locked": true,
             "position": {"x":4066.65380859375,"y":4108.5126953125,"z":-3760.379150390625},
             "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":0.7071068286895752},
             "dimensions": {"x":0.7907044291496277,"y":0.5658466219902039,"z":0.01},
@@ -1991,7 +1993,7 @@
         {
             "id": "{a0fd4fca-3442-4a5e-a3eb-6de9196b4393}",
             "type": "Model",
-            "position": {"x":3837.5947265625,"y":4110.33544921875,"z":-3988.2783203125},
+            "position": {"x":3822.25,"y":4105.34521484375,"z":-4009.360107421875},
             "name": "Sign - CAUTION EBOULIS",
             "locked": true,
             "dimensions": {
@@ -1999,7 +2001,7 @@
                 "y": 2.4036693572998047,
                 "z": 0.03409583494067192
             },
-            "rotation": {"x":0,"y":-0.36446496844291687,"z":0,"w":-0.9312171936035156},
+            "rotation": {"x":0,"y":-0.07627806067466736,"z":0,"w":-0.9970867037773132},
             "renderWithZones": [
                 "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
             ],
@@ -2112,8 +2114,8 @@
         {
             "id": "{e9d13013-309c-447f-a92e-89e7765bf3dd}",
             "type": "Model",
-            "position": {"x":4103.41064453125,"y":4139.3125,"z":-3873.513427734375},
-            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "position": {"x":4099.294921875,"y":4139.50537109375,"z":-3870.858154296875},
+            "rotation": {"x":0,"y":-0.6087614297866821,"z":0,"w":0.7933533191680908},
             "name": "MUG 3",
             "locked": true,
             "dimensions": {"x":0.15733742713928223,"y":0.14009228348731995,"z":0.11666475236415863},
@@ -2134,6 +2136,29 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/mug.fst",
             "useOriginalPivot": true,
             "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{917a7f1c-c04f-4780-b582-79faf9c3712d}",
+            "type": "Model",
+            "position": {"x":4000,"y":4107.67236328125,"z":-4000},
+            "name": "BARILS",
+            "locked": true,
+            "dimensions": {
+                "x": 3.1784515380859375,
+                "y": 1.349334716796875,
+                "z": 1.92315673828125
+            },
+            "renderWithZones": [
+                "{c80a3fa4-f59f-4232-97f0-3b927d5452c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/BARILS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
