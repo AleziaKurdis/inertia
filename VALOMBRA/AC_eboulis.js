@@ -44,7 +44,7 @@ function generateEboulis(renderWithZones, position) {
         "positional": true,
         "localOnly": false,
         "lifetime": 15,
-        "position": position,
+        "position": Vec3.sum(position, { "x": 0.0, "y": -12.0, "z": 0.0}),
         "renderWithZones": renderWithZones
     }, "domain");
     
