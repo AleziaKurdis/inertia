@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "BARIL_albedo.jpg",
+         "metallicMap": "BARIL_metallic.jpg",
+         "roughnessMap": "BARIL_roughness.jpg",
+         "normalMap": "BARIL_normal_ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
