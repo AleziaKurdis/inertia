@@ -2182,6 +2182,35 @@
             "shapeType": "sphere",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/statue.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c77e590c-06fa-499e-b9d0-ef5d537d1b6e}",
+            "type": "Sphere",
+            "position": {"x":4105.48046875,"y":4175.18115234375,"z":-3891.177734375},
+            "name": "TOWER_LIGHT",
+            "locked": true,
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/VALOMBRA/towerLight.js",
+            "color": {
+                "red": 255,
+                "green": 204,
+                "blue": 0
+            },
+            "alpha": 0
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
