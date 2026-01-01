@@ -14,26 +14,73 @@
     <head>
         <meta charset="UTF-8">
         <style>
-            body {
-                background-color: transparent;
-            }
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+        #viewport {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content {
+            width: 600px;   /* 3 × 200 */
+            height: 300px;  /* 2 × 150 */
+            transform-origin: center center;
+        }
+
+        table {
+            width: 80%;
+            height: 80%;
+            border-collapse: collapse;
+        }
+
+        iframe {
+            width: 198px;
+            height: 148px;
+            border: none;
+            border-radius: 16px;
+        }
         </style>
     </head>
     <body>
-        <table>
-            <tr style="vertical-align: top;">
-                <td>
-                    <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html" style="width: 200px; height: 150px; border: none; border-radius: 16px;"></iframe>
-                    
-                </td>
-                <td>
-                    <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html" style="width: 200px; height: 150px; border: none; border-radius: 16px;"></iframe><br>
-                    <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html" style="width: 200px; height: 150px; border: none; border-radius: 16px;"></iframe>
-                </td>
-                <td>
-                    <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html" style="width: 200px; height: 150px; border: none; border-radius: 16px;"></iframe>
-                </td>
-            </tr>
-        </table>
+        <div id="viewport">
+            <div id="content">    
+                <table>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html"></iframe>
+                            
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html"></iframe><br>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html"></iframe>
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html"></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            function scaleContent() {
+                const content = document.getElementById("content");
+                const scaleX = window.innerWidth / 600;
+                const scaleY = window.innerHeight / 300;
+                const scale = Math.min(scaleX, scaleY);
+                content.style.transform = `scale(${scale})`;
+            }
+
+            window.addEventListener("resize", scaleContent);
+            scaleContent();
+        </script>
     </body>
 </html>
