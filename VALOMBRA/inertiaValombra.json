@@ -2159,6 +2159,29 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/BARILS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{1c67b197-2341-4402-b030-7beac816b7ba}",
+            "type": "Model",
+            "position": {"x":4086.73095703125,"y":4140.73095703125,"z":-3887.7392578125},
+            "name": "Statue",
+            "locked": true,
+            "dimensions": {
+                "x": 0.8871487379074097,
+                "y": 2.6985254287719727,
+                "z": 0.7057694792747498
+            },
+            "renderWithZones": [
+                "{b24496a0-3e7f-4aef-aa05-acec0e979ebe}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "sphere",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VALOMBRA/models/statue.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
