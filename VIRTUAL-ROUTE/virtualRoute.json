@@ -9,8 +9,8 @@
     {
         "displayName": "Valombra",
         "placeName": "valombra",
-        "alphaArrivalUrl": "hifi://valombra/4052.72,4107.39,-3752.42/0,-0.702436,0,0.711747",
-        "omegaArrivalUrl": "hifi://valombra/3962.23,4094.12,-4249.1/0,-0.354436,0,0.93508",
+        "alphaArrivalUrl": "hifi://valombra/3962.23,4094.12,-4249.1/0,-0.354436,0,0.93508",
+        "omegaArrivalUrl": "hifi://valombra/4052.72,4107.39,-3752.42/0,-0.702436,0,0.711747",
         "km": 1.6
     }
 ]
