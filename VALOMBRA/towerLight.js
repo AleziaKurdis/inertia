@@ -24,7 +24,7 @@
 
         let currentHour = GetCurrentCycleValue(24, DAY_DURATION);
         if (currentHour > 20 || currentHour < 6) {
-
+            let remainingTime = getRemainingTime(currentHour);
             lightID = Entities.addEntity({
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
@@ -42,20 +42,34 @@
                 "color": {"red": color[0], "green": color[1], "blue": color[2]},
                 "intensity": 25,
                 "falloffRadius": 4,
-                "isSpotlight": false
+                "isSpotlight": false,
+                "lifetime": remainingTime
             },"local");
             /*
             let particleID = Entities.addEntity({
-                //"type": "Material",
+                "type": "ParticleEffect",
                 "parentID": lightID,
                 "renderWithZones": renderWithZones,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "name": "TOWER LIGHT FX",
+                "lifetime": remainingTime,
+                "isEmitting": true,
+                
             },"local");
             */
         }
     };    
-
+    
+    function getRemainingTime(currentHour) {
+        if (currentHour > 20) {
+            return (6.0 + 24.0 - currentHour) * 3600;
+        } else if (currentHour < 6) {
+            return (6.0 - currentHour) * 3600;
+        } else {
+            return 0;
+        }
+    }
+    
     this.unload = function(entityID) {
         if (lightID !== Uuid.NONE) {
             print("HMM!");
