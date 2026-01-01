@@ -22,35 +22,38 @@
         let hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         let color = hslToRgb(hue, 1, 0.5);
 
+        let currentHour = GetCurrentCycleValue(24, DAY_DURATION);
+        if (currentHour > 20 || currentHour < 6) {
 
-        lightID = Entities.addEntity({
-            "parentID": entityID,
-            "renderWithZones": renderWithZones,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "lightPole Light",
-            "grab": {
-                "grabbable": false
-            },
-            "type": "Light",
-            "dimensions": {
-                "x": 40,
-                "y": 40,
-                "z": 40
-            },
-            "color": {"red": color[0], "green": color[1], "blue": color[2]},
-            "intensity": 25,
-            "falloffRadius": 4,
-            "isSpotlight": false
-        },"local");
-        /*
-        let particleID = Entities.addEntity({
-            //"type": "Material",
-            "parentID": lightID,
-            "renderWithZones": renderWithZones,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "name": "TOWER LIGHT FX",
-        },"local");
-        */
+            lightID = Entities.addEntity({
+                "parentID": entityID,
+                "renderWithZones": renderWithZones,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "name": "lightPole Light",
+                "grab": {
+                    "grabbable": false
+                },
+                "type": "Light",
+                "dimensions": {
+                    "x": 40,
+                    "y": 40,
+                    "z": 40
+                },
+                "color": {"red": color[0], "green": color[1], "blue": color[2]},
+                "intensity": 25,
+                "falloffRadius": 4,
+                "isSpotlight": false
+            },"local");
+            /*
+            let particleID = Entities.addEntity({
+                //"type": "Material",
+                "parentID": lightID,
+                "renderWithZones": renderWithZones,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "name": "TOWER LIGHT FX",
+            },"local");
+            */
+        }
     };    
 
     this.unload = function(entityID) {
