@@ -1,0 +1,37 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/4000,-3700,-4000\/0,-0.724182,0,0.689609"
+   },
+   "Entities":[
+        {
+            "id":"{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}",
+            "type":"Zone",
+            "name":"TRONIX_VISIBILITY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":4000,
+                "y":4000,
+                "z":4000
+            },
+            "position": {
+                 "x": 4000,
+                 "y": -4000,
+                 "z": -4000
+            },         
+            "grab":{
+                "grabbable":false
+            },
+            "normalMapAttenuation": {
+                "min": 200,
+                "max": 1000
+            },
+            "normalMapAttenuationMode": "enabled",
+            "flyingAllowed": true,
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/TRONIX/nav.js"
+        }
+   ],
+   "Id":"{0ca549f4-b397-47f2-bc8c-a2cd4c600dd8}",
+   "Version":120
+}
