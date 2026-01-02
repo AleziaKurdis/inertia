@@ -30,6 +30,34 @@
             "flyingAllowed": true,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/TRONIX/nav.js"
+        },
+        {
+            "id": "{cc06beb4-a972-4aff-bc4d-e737198fba54}",
+            "type": "Model",
+            "position": {
+                "x": 4000,
+                "y": -4000,
+                "z": -4000
+            },
+            "name": "TRONIX MAIN",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/TRONIX/worldBuilder.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{0ca549f4-b397-47f2-bc8c-a2cd4c600dd8}",
