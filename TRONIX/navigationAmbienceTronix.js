@@ -48,7 +48,7 @@
     var starID = Uuid.NONE;
     var fireMatId = Uuid.NONE;
 
-    var STAR_DIAMETER = 90;
+    var STAR_DIAMETER = 360;
     var STAR_DIST = 6000;
     
     var thisEntityID;
@@ -179,7 +179,7 @@
         var zoneRotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth, "z": 0.0} );
         var skyTextureUrl = ROOT + "images/TRONIX_SKY.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
-        var skycolor = hslToRgb(hue, 1, 0.65);
+        var skycolor = hslToRgb(hue, 1, 0.6);
         var fullColor = hslToRgb(hue, 1, 0.5);
 
         if (zoneID === Uuid.NONE) {
@@ -214,7 +214,7 @@
                     },
                     "castShadows": true,
                     "shadowBias": 0.02,
-                    "shadowMaxDistance": 100
+                    "shadowMaxDistance": 200
                 },
                 "ambientLight": {
                     "ambientIntensity": 0.5,
@@ -239,7 +239,23 @@
                 "keyLightMode": "enabled",
                 "ambientLightMode": "enabled",
                 "skyboxMode": "enabled",
-                "hazeMode": "disabled",
+                "hazeMode": "enabled",
+                "haze": {
+                    "hazeRange": 300,
+                    "hazeColor": {
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
+                    },
+                    "hazeGlareColor": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
+                    },
+                    "hazeAltitudeEffect": true,
+                    "hazeCeiling": (universeCenter.y + 250),
+                    "hazeBaseRef": (universeCenter.y - 50)
+                },
                 "bloomMode": "enabled"
             },"local");
         } else {
@@ -266,6 +282,19 @@
                         "red": fullColor[0],
                         "green": fullColor[1],
                         "blue": fullColor[2]
+                    }
+                },
+                "haze": {
+                    "hazeRange": 300,
+                    "hazeColor": {
+                        "red": fullColor[0],
+                        "green": fullColor[1],
+                        "blue": fullColor[2]
+                    },
+                    "hazeGlareColor": {
+                        "red": skycolor[0],
+                        "green": skycolor[1],
+                        "blue": skycolor[2]
                     }
                 }
             });
