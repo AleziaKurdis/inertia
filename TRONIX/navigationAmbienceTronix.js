@@ -177,7 +177,7 @@
     function generateSky(entityID) {
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
         var zoneRotation = Quat.fromVec3Degrees( {"x": 40.0, "y": azimuth, "z": 0.0} );
-        var skyTextureUrl = ROOT + "images/darkness.jpg";
+        var skyTextureUrl = ROOT + "images/TRONIX_SKY.jpg";
         var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
         var skycolor = hslToRgb(hue, 1, 0.65);
         var fullColor = hslToRgb(hue, 1, 0.5);
