@@ -29,7 +29,7 @@
             "normalMapAttenuationMode": "enabled",
             "flyingAllowed": true,
             "shapeType":"sphere",
-            "script": "https://aleziakurdis.github.io/inertia/TRONIX/nav.js"
+            "script": "https://aleziakurdis.github.io/inertia/TRONIX/navigationAmbienceTronix.js"
         },
         {
             "id": "{cc06beb4-a972-4aff-bc4d-e737198fba54}",
