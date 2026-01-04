@@ -28,6 +28,8 @@
                 let model = ROOT + "models/TRONIX.fst";
                 if (Math.abs(x) > 1 || Math.abs(z) > 1) {
                     model = ROOT + "models/LOW-TRONIX.fst";
+                } else {
+                    continue; // comment thsi line if you want them to be generated.
                 }
                 
                 let id = Entities.addEntity({

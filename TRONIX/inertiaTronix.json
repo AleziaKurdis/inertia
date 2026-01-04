@@ -58,6 +58,222 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c6584fa6-c7a1-4de9-b8d3-7dbf3a7c2c91}",
+            "type": "Model",
+            "position": {
+                "x": 6000,
+                "y": -4000,
+                "z": -4000
+            },
+            "name": "TRONIX 0",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{6a21bfcf-3505-4ec6-88ad-5c416ff3ffc6}",
+            "type": "Model",
+            "position": {
+                "x": 6000,
+                "y": -4000,
+                "z": -2000
+            },
+            "name": "TRONIX 1",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{eeb9ab6d-95b6-4b01-9315-ea0b05c9d1d3}",
+            "type": "Model",
+            "position": {
+                "x": 6000,
+                "y": -4000,
+                "z": -6000
+            },
+            "name": "TRONIX 2",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{9fa9ddf2-147a-4b50-bbef-a6cfd7fd56ed}",
+            "type": "Model",
+            "position": {
+                "x": 4000,
+                "y": -4000,
+                "z": -2000
+            },
+            "name": "TRONIX 3",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{be63292c-466f-4c3d-aa83-1cea813d74f5}",
+            "type": "Model",
+            "position": {
+                "x": 4000,
+                "y": -4000,
+                "z": -6000
+            },
+            "name": "TRONIX 4",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{13f9eb18-6546-4c86-901b-2c7bb8692ca8}",
+            "type": "Model",
+            "position": {
+                "x": 2000,
+                "y": -4000,
+                "z": -4000
+            },
+            "name": "TRONIX 5",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{55d5354b-5feb-400b-8c73-a4c30693ecf4}",
+            "type": "Model",
+            "position": {
+                "x": 2000,
+                "y": -4000,
+                "z": -2000
+            },
+            "name": "TRONIX 6",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{034a97d6-4e50-4ab8-a9d7-f29cf9555987}",
+            "type": "Model",
+            "position": {
+                "x": 2000,
+                "y": -4000,
+                "z": -6000
+            },
+            "name": "TRONIX 7",
+            "locked": true,
+            "dimensions": {
+                "x": 2000,
+                "y": 917.8575439453125,
+                "z": 2000
+            },
+            "renderWithZones": [
+                "{7ae9dd04-25e3-4ba0-aa08-5eba5e26825c}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/TRONIX/models/TRONIX.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{0ca549f4-b397-47f2-bc8c-a2cd4c600dd8}",

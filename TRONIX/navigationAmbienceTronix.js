@@ -182,7 +182,7 @@
         let myPosition = MyAvatar.position;
         let distance = Vec3.distance(universeCenter, myPosition);
         let hue = Math.atan2((myPosition.z - universeCenter.z),(myPosition.x - universeCenter.x))/(2 * Math.PI);
-        let lightness = (((900 - distance)/900)/2) + 0.5;
+        let lightness = (((800 - distance)/800)/2) + 0.5;
         if (lightness < 0) { 
             lightness = 0;
         }
@@ -192,6 +192,10 @@
         }
         var skycolor = hslToRgb(hue, 1, brightLightness);
         var fullColor = hslToRgb(hue, 1, lightness);
+        let colors = {
+            "brightColor": skycolor,
+            "saturatedColor": fullColor
+        };
 
         if (zoneID === Uuid.NONE) {
             zoneID = Entities.addEntity({
@@ -310,10 +314,10 @@
                 }
             });
         }
-        manageAstre(hue);
+        manageAstre(colors);
     }
     
-    function manageAstre(hue) {
+    function manageAstre(colors) {
         var azimuth = GetCurrentCycleValue(360, DAY_DURATION);
         var offsetAzimuth = azimuth + 12;
         if (offsetAzimuth >= 360.00) { 
@@ -341,13 +345,13 @@
                 "rotation": Quat.multiply(rotation, Quat.fromVec3Degrees( {"x": 20.0, "y": 0.0, "z": 0.0} ))
             });
         }
-        manageStarMaterial(hue);
+        manageStarMaterial(colors);
     }
     
-    function manageStarMaterial(hue) {
+    function manageStarMaterial(colors) {
         if (starID !== Uuid.NONE) {
             
-            var plasmaColor = hslToRgb(hue, 1, 0.6);
+            var plasmaColor = colors.brightColor; //hslToRgb(hue, 1, 0.6);
             var bloomFactor = 4;
             
             var materialContent = {
