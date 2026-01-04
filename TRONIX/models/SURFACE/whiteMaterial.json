@@ -5,7 +5,7 @@
          "albedo":[0.96,0.96,0.96],
          "metallic": 0.01,
          "roughness": 0.4,
-         "normalMap": "worn_metal4_Normal-ogl.jpg",
+         "normalMap": "spaceship-panels1-normal-ogl.png",
          "cullFaceMode":"CULL_BACK"
       }
    ]
