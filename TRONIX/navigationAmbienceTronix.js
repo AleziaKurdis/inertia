@@ -182,7 +182,8 @@
         let myPosition = MyAvatar.position;
         let distance = Vec3.distance(universeCenter, myPosition);
         let hue = Math.atan2((myPosition.z - universeCenter.z),(myPosition.x - universeCenter.x))/(2 * Math.PI);
-        let lightness = (((800 - distance)/800)/2) + 0.5;
+        const SATURATION_RADIUS = 1500;
+        let lightness = (((SATURATION_RADIUS - distance)/SATURATION_RADIUS)/2) + 0.5;
         if (lightness < 0) { 
             lightness = 0;
         }
