@@ -16,6 +16,9 @@ var ROOT = Script.resolvePath('').split("clocks_CMApp.js")[0];
 
 const LEFT_HAND = MyAvatar.getDominantHand() === "right" ? true : false;
 
+var controllerStandard = Controller.Standard;
+var SOUND_WHOOSH = SoundCache.getSound(Script.resolvePath("sounds/whoosh.mp3"));
+
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
@@ -29,6 +32,7 @@ function toggleItem() {
             Entities.deleteEntity(clockWebID);
             clockWebID = Uuid.NONE;
         }
+        Script.update.disconnect(whooshTimer);
 		isActive = false;
 	} else {
         if (clockWebID === Uuid.NONE) {
@@ -51,8 +55,35 @@ function toggleItem() {
                 "renderLayer": "hud"
             }, "local");
         }
+        Script.update.connect(whooshTimer);
 		isActive = true;
 	}
+}
+
+//Whoosh viewer
+function whooshTimer(deltaTime) {
+    if (HMD.active) {
+        checkHands();
+    }
+}
+
+function checkHands() {
+    var myLeftHand = Controller.getPoseValue(controllerStandard.LeftHand);
+    var myRightHand = Controller.getPoseValue(controllerStandard.RightHand);
+    var eyesPosition = MyAvatar.getEyePosition();
+    var hipsPosition = MyAvatar.getJointPosition("Hips");
+    var eyesRelativeHeight = eyesPosition.y - hipsPosition.y;
+    if (myLeftHand.translation.y > eyesRelativeHeight || myRightHand.translation.y > eyesRelativeHeight) {
+        Audio.playSound(SOUND_WHOOSH, {
+            "position": MyAvatar.position,
+            "localOnly": true,
+            "volume": 1.0
+        });
+        toggleItem();
+		actionSet[0].textColor = isActive ? [0, 0, 0] : [255, 255, 255];
+		actionSet[0].backgroundColor = isActive ? [255, 255, 255] : [0, 0, 0];
+		ContextMenu.editActionSet("menuItemClocks", actionSet);
+    }
 }
 
 const actionSet = [
@@ -87,4 +118,5 @@ Script.scriptEnding.connect(() => {
         Entities.deleteEntity(clockWebID);
         clockWebID = Uuid.NONE;
     }
+    Script.update.disconnect(whooshTimer);
 });
