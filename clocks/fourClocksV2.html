@@ -28,23 +28,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
         #content {
-            width: 600px;   /* 3 × 200 */
-            height: 300px;  /* 2 × 150 */
+            width: 300px;   /* 2 × 150 */
+            height: 240px;  /* 2 × 120 */
             transform-origin: center center;
         }
 
         table {
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
             border-collapse: collapse;
         }
 
         iframe {
-            width: 198px;
-            height: 148px;
+            width: 150px;
+            height: 120px;
             border: none;
             border-radius: 16px;
         }
@@ -54,17 +55,20 @@
         <div id="viewport">
             <div id="content">    
                 <table>
-                    <tr style="vertical-align: top;">
+                    <tr>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html"></iframe>
-                            
-                        </td>
-                        <td>
-                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html"></iframe><br>
-                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html"></iframe>
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html"></iframe>
                         </td>
                     </tr>
                 </table>
@@ -74,7 +78,7 @@
             function scaleContent() {
                 const content = document.getElementById("content");
                 const scaleX = window.innerWidth / 600;
-                const scaleY = window.innerHeight / 300;
+                const scaleY = window.innerHeight / 320;
                 const scale = Math.min(scaleX, scaleY);
                 content.style.transform = `scale(${scale})`;
             }
