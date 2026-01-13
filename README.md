@@ -61,8 +61,13 @@ WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d29.html?tivan=t
 **D24**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json  
 WEB: https://aleziakurdis.github.io/inertia/clocks/d24.html  
-WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true  
-  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true
+ 
+**D7**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D7.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d7.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d7.html?tivan=true  
+    
 # Terrestrial Day/Night Cycle Sky
 
 **D19 (Day duration of 19h)**  
