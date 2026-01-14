@@ -15,9 +15,9 @@
                 "z":10000
             },
             "position": {
-                 "x": 5000,
+                 "x": -5000,
                  "y": 5000,
-                 "z": 5000
+                 "z": -5000
             },
             "grab":{
                 "grabbable":false
@@ -35,9 +35,9 @@
             "id": "{50725a76-19c1-4b28-aa25-087fe8b9b8ad}",
             "type": "Model",
             "position": {
-                "x": 5000,
+                "x": -5000,
                 "y": 5000,
-                "z": 5000
+                "z": -5000
             },
             "name": "Scillia Landscape",
             "locked": true,
