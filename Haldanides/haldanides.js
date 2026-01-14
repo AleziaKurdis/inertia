@@ -91,7 +91,6 @@
         triggerRotation = properties.rotation;
         renderWithZones = properties.renderWithZones;
         isInitiated = true; 
-        generateBloomZone();
         
         var today = new Date();
         processTimer = today.getTime();
@@ -143,6 +142,9 @@
         const RANDOM_CATALYZER = 0.3;
         
         if ( d19CurrentHour > (TARGET_HOUR - RADIUS) && d19CurrentHour < (TARGET_HOUR + RADIUS) ) {
+            if (zoneID === Uuid.NONE) {
+                generateBloomZone();
+            }
             updateTimerIntervall = 600; // 0.6 sec
             let baseFrequency = -Math.abs(d19CurrentHour - TARGET_HOUR)/RADIUS;
             let expFrequency = Math.pow((baseFrequency + 1),3);
@@ -329,6 +331,10 @@
             }
         } else {
             updateTimerIntervall = 20000; // 20 sec
+            if (zoneID !== Uuid.NONE) {
+                Entities.deleteEntity(zoneID);
+                zoneID = Uuid.NONE;
+            }
         }
         
     }
