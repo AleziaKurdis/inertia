@@ -32,12 +32,14 @@ https://aleziakurdis.github.io/inertia/FACING-WORLDS/ctf-face.json
 https://aleziakurdis.github.io/inertia/PENTACLE/inertiaPentacle.json
   
 https://aleziakurdis.github.io/inertia/KRYZATH/kryzath.json  
-  
+   
 https://aleziakurdis.github.io/inertia/ASTROBION/inertiaAstrobion.json 
-
+  
 https://aleziakurdis.github.io/inertia/VALOMBRA/inertiaValombra.json    
-
+  
 https://aleziakurdis.github.io/inertia/TRONIX/inertiaTronix.json  
+   
+https://aleziakurdis.github.io/inertia/SCILLIA/inertiaScillia.json     
    
 # Nowhere Island (import file)
 https://aleziakurdis.github.io/inertia/nowhereIsland/nowhereIsland.json
