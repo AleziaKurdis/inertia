@@ -57,6 +57,36 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/SCILLIA/models/scillia.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{09918212-89be-448d-960e-d0dede5b3df2}",
+            "type": "Model",
+            "position": {
+                 "x": -5000,
+                 "y": 5000,
+                 "z": -5000
+            },
+            "name": "WATER",
+            "locked": true,
+            "dimensions": {
+                "x": 6175.25146484375,
+                "y": 99.26412963867188,
+                "z": 2337.785400390625
+            },
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{e16cf0b7-f097-40b6-b28b-25e3b4266b30}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/SCILLIA/models/water.glb",
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/SCILLIA/waterGenerator.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
