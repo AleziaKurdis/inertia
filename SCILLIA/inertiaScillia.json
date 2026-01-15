@@ -68,11 +68,7 @@
             },
             "name": "WATER",
             "locked": true,
-            "dimensions": {
-                "x": 6175.25146484375,
-                "y": 99.26412963867188,
-                "z": 2337.785400390625
-            },
+            "dimensions": {"x":6175.13623046875,"y":61.18968200683594,"z":2337.74169921875},
             "canCastShadow": false,
             "renderWithZones": [
                 "{e16cf0b7-f097-40b6-b28b-25e3b4266b30}"
