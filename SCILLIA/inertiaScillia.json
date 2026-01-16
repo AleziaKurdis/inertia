@@ -83,6 +83,36 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/SCILLIA/models/water.glb",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/SCILLIA/waterGenerator.js"
+        },
+        {
+            "id":"{da24f512-bc5e-4cd5-aa20-bb13869ff847}",
+            "type":"Zone",
+            "name":"SCILLIA_SKY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":9995,
+                "y":9995,
+                "z":9995
+            },
+            "position": {
+                "x": -5000,
+                "y": 5000,
+                "z": -5000
+            },         
+            "rotation":{
+                "x":-1.52587890625e-5,
+                "y":-1.52587890625e-5,
+                "z":-1.52587890625e-5,
+                "w":1
+            },
+            "renderWithZones": [
+                "{e16cf0b7-f097-40b6-b28b-25e3b4266b30}"
+            ],
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManagerD7.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
