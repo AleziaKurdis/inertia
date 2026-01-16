@@ -3,7 +3,7 @@
    "materials":[
       {
          "albedo":[1.0, 1.0, 1.0],
-         "albedoMap": "land.jpg"
+         "albedoMap": "land.jpg",
          "metallic": 0.001,
          "roughness": 0.6,
          "cullFaceMode":"CULL_BACK"
