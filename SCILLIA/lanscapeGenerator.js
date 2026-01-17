@@ -71,7 +71,7 @@
                 "parentID": thisEntityID,
                 "localPosition": {
                     "x": 0.0,
-                    "y": -200.0,
+                    "y": -300.0,
                     "z": 0.0
                 },
                 "name": "DISTANCE",
