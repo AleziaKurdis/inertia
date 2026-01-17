@@ -1,0 +1,24 @@
+{
+  "materialVersion": 1,
+  "materials": [
+    {
+      "model": "hifi_pbr",
+      "albedo": [
+        0,
+        0.03529411764705882,
+        0.4117647058823529
+      ],
+      "metallic": 0.873,
+      "roughness": 0.0,
+      "normalMap": "AQUASPHERE_NORMAL.jpg",
+      "opacity": 0.965,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "scattering": 0,
+      "cullFaceMode": "CULL_BACK"
+    }
+  ]
+}
