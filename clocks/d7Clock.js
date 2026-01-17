@@ -12,7 +12,7 @@
 (function(){ 
     var jsMainFileName = "d7Clock.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
-    var D7Lib = Script.require(ROOT + "d7Clock.js");
+    var D7Lib = Script.require(ROOT + "d7_library.js");
     
     var UPDATE_TIMER_INTERVAL = (D7Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
     var processTimer = 0;
