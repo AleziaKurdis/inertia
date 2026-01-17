@@ -56,7 +56,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/SCILLIA/models/scillia.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/SCILLIA/lanscapeGenerator.js"
         },
         {
             "id": "{09918212-89be-448d-960e-d0dede5b3df2}",

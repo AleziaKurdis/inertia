@@ -24,7 +24,7 @@
     var waterDirection = 1;
     var WATER_SPEED = 0.3; // m/sec
 
-    var astrolithID = Uuid.NULL;
+    var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
     
     var AIR_SOUND = ROOT + "sounds/air.mp3";
@@ -88,9 +88,9 @@
     function shutdown() {
         if (isInitiated){
             Script.update.disconnect(myTimer);
-            if (astrolithID != Uuid.NULL){
+            if (astrolithID !== Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
-                astrolithID = Uuid.NULL;
+                astrolithID = Uuid.NONE;
             }
             if (univerSoundPlaying == 1) {
                 universeSoundInjector.stop();
@@ -147,7 +147,7 @@
             var distanceAstrolith = 65;
             var radiusEffect = 50;//70; 
             if (myVelocity > 25){
-                if (astrolithID == Uuid.NULL){
+                if (astrolithID === Uuid.NONE){
                     astrolithID = Entities.addEntity({
                         "type": "ParticleEffect",
                         "name": "ASTROLITHES",
@@ -212,9 +212,9 @@
                         });
                 }
             }else{
-                if (astrolithID != Uuid.NULL){
+                if (astrolithID !== Uuid.NONE){
                     Entities.deleteEntity(astrolithID);
-                    astrolithID = Uuid.NULL;
+                    astrolithID = Uuid.NONE;
                 }
             }
             
