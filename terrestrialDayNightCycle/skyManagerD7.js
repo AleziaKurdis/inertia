@@ -946,7 +946,7 @@
         if (periodOfDay === 0 && hour >= 21.0) {
             nightFactor = 1-((hour - 21.0)/3);
         } else if (periodOfDay === 0 && hour < 3.0) {
-            nightFactor = Math.abs(hour - 3.0)/3;
+            nightFactor = 1-(Math.abs(hour - 3.0)/3);
         }
         var nightTint = hslToRgb(230/360, 0.63, nightFactor);
         
