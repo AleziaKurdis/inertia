@@ -63,8 +63,7 @@
         renderWithZones = properties.renderWithZones;
 
         isInitiated = true; 
-        
-        //HERE WE GENERATE IF NOT ALOREADY
+
         if (landscapeID === Uuid.NONE){
             landscapeID = Entities.addEntity({
                 "type": "Model",

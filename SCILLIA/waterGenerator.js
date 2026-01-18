@@ -20,6 +20,8 @@
     const HALF = 0.5;
     let thisEntityID;
     let waterMaterialID = Uuid.NONE;
+    let underWaterID = Uuid.NONE;
+    let underWater2ID = Uuid.NONE;
     
     const UPDATE_TIMER_INTERVAL = 80; // 80 milisec 
     let processTimer = 0;
@@ -56,6 +58,16 @@
                 Entities.deleteEntity(waterMaterialID);
                 waterMaterialID = Uuid.NONE;
             }
+            
+            if (underWaterID !== Uuid.NONE){
+                Entities.deleteEntity(underWaterID);
+                underWaterID = Uuid.NONE;
+            }
+            
+            if (underWater2ID !== Uuid.NONE){
+                Entities.deleteEntity(underWater2ID);
+                underWater2ID = Uuid.NONE;
+            }
         }
         isInitiated = false;
     }
@@ -78,11 +90,105 @@
         isInitiated = true; 
         
         manageWater();
+        genUnderWaters();
 
         let today = new Date();
         processTimer = today.getTime();
     
         Script.update.connect(myTimer);
+    }
+
+    function genUnderWaters() {
+        
+        underWaterID = Entities.addEntity({
+            "type": "Zone",
+            "name": "UNDERWATER 1",
+            "parentID": thisEntityID,
+            "renderWithZones": renderWithZones,
+            "localPosition": {
+                "x": -2058.9893,
+                "y": -324.3853,
+                "z": -230.9443
+            },
+            "dimensions": {"x":2884.403076171875,"y":500.0,"z":1767.341552734375},
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 54,
+                    "green": 48,
+                    "blue": 176
+                },
+                "intensity": 1.5,
+                "direction": {
+                    "x": 0.0007962740492075682,
+                    "y": -0.9999997019767761,
+                    "z": 0
+                },
+                "castShadows": true,
+                "shadowBias": 0.20000000298023224,
+                "shadowMaxDistance": 200
+            },
+            "haze": {
+                "hazeRange": 700,
+                "hazeColor": {
+                    "red": 0,
+                    "green": 9,
+                    "blue": 77
+                }
+            },
+            "keyLightMode": "enabled",
+            "hazeMode": "enabled"
+        }, "local");
+        
+        underWater2ID = Entities.addEntity({
+            "type": "Zone",
+            "name": "UNDERWATER 2",
+            "parentID": thisEntityID,
+            "renderWithZones": renderWithZones,
+            "localPosition": {
+                "x": 1688.2427,
+                "y": -345.9385,
+                "z": -633.5015
+            },
+            "dimensions": {"x":2884.403076171875,"y":665.080078125,"z":2927.943603515625},
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 54,
+                    "green": 48,
+                    "blue": 176
+                },
+                "intensity": 1.5,
+                "direction": {
+                    "x": 0.0007962740492075682,
+                    "y": -0.9999997019767761,
+                    "z": 0
+                },
+                "castShadows": true,
+                "shadowBias": 0.20000000298023224,
+                "shadowMaxDistance": 200
+            },
+            "haze": {
+                "hazeRange": 700,
+                "hazeColor": {
+                    "red": 0,
+                    "green": 9,
+                    "blue": 77
+                }
+            },
+            "keyLightMode": "enabled",
+            "hazeMode": "enabled"
+        }, "local");
     }
 
     function manageWater() {
