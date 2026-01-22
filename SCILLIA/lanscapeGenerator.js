@@ -70,13 +70,13 @@
                 "parentID": thisEntityID,
                 "localPosition": {
                     "x": 0.0,
-                    "y": -300.0,
+                    "y": -400.0,
                     "z": 0.0
                 },
                 "name": "DISTANCE",
                 "dimensions": {
                     "x": 24835.109375,
-                    "y": 969.147705078125,
+                    "y": 800,
                     "z": 24840.841796875
                 },
                 "renderWithZones": renderWithZones,
