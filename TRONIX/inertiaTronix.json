@@ -10,9 +10,9 @@
             "name":"TRONIX_VISIBILITY_ZONE",
             "locked":true,
             "dimensions":{
-                "x":4000,
-                "y":4000,
-                "z":4000
+                "x":12000,
+                "y":12000,
+                "z":12000
             },
             "position": {
                  "x": 4000,
