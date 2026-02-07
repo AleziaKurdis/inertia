@@ -1,20 +1,20 @@
 //
-//  d24Clock.js
+//  d17Clock.js
 //
-//  Created by Alezia Kurdis on February 17th, 2024.
-//  Copyright 2024 Alezia Kurdis.
+//  Created by Alezia Kurdis on January 12th, 2026.
+//  Copyright 2026 Alezia Kurdis.
 //
-//  D24 (Dilatation 24 Hours Time) library.
+//  D17 (Dilatation 17 Hours Time) library.
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){ 
-    var jsMainFileName = "d24Clock.js";
+    var jsMainFileName = "d17Clock.js";
     var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
-    var D24Lib = Script.require(ROOT + "d24_library.js");
+    var D17Lib = Script.require(ROOT + "d17_library.js");
     
-    var UPDATE_TIMER_INTERVAL = (D24Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
+    var UPDATE_TIMER_INTERVAL = (D17Lib.getDayLenghtInSec()/(24 * 60)) * 1000;
     var processTimer = 0;
     var thisID;
     var thisPosition;
@@ -26,7 +26,7 @@
     var hourID = Uuid.NONE;
     var dayID = Uuid.NONE;
     var dateID = Uuid.NONE;
-    var UNIT = D24Lib.getOfficialUnit();
+    var UNIT = D17Lib.getOfficialUnit();
     
     this.preload = function(entityID) {
         //Generate the Clock text local entity.
@@ -81,13 +81,13 @@
 
     function updateClock() {
         
-        //color value  =========
-        var HUE_DAY_DURATION = D24Lib.getDayLenghtInSec();
+        //color value
+        var HUE_DAY_DURATION = D17Lib.getDayLenghtInSec();
         var HUE_WEEK_DURATION = HUE_DAY_DURATION * 9;
-        var hue = D24Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
+        var hue = D17Lib.GetCurrentCycleValue(1, HUE_WEEK_DURATION);
         var color = hslToRgb(hue, 1, 0.5);
         //=======================================
-        var textOfficialColor = D24Lib.getOfficialColor();
+        var textOfficialColor = D17Lib.getOfficialColor();
         
         if (clockID === Uuid.NONE){
             //create clock
@@ -134,7 +134,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "text": D24Lib.getClockText(0, true, false),
+                "text": D17Lib.getClockText(0, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.5,
                 "textColor": textOfficialColor,
@@ -160,7 +160,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "text": D24Lib.getClockText(4, true, false),
+                "text": D17Lib.getClockText(4, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.15,
                 "textColor": textOfficialColor,
@@ -186,7 +186,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "text": D24Lib.getClockText(7, true, false),
+                "text": D17Lib.getClockText(7, true, false),
                 "renderWithZones": thisRenderWithZones,
                 "lineHeight": thisDimensions.y * 0.2,
                 "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
@@ -197,16 +197,16 @@
             
         } else {
             Entities.editEntity(hourID, {
-                "text": D24Lib.getClockText(0, true, false)
+                "text": D17Lib.getClockText(0, true, false)
             });
 
             Entities.editEntity(dayID, {
-                "text": D24Lib.getClockText(7, true, false),
+                "text": D17Lib.getClockText(7, true, false),
                 "textColor": {"red": color[0], "green": color[1], "blue": color[2]},
             });
 
             Entities.editEntity(dateID, {
-                "text": D24Lib.getClockText(4, true, false)
+                "text": D17Lib.getClockText(4, true, false)
             });
             
         }

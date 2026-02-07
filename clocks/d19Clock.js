@@ -21,11 +21,11 @@
     var thisRenderWithZones;
     var thisDimensions;
     
-    var clockID = Uuid.NULL;
-    var greetingID = Uuid.NULL;
-    var hourID = Uuid.NULL;
-    var dayID = Uuid.NULL;
-    var dateID = Uuid.NULL;
+    var clockID = Uuid.NONE;
+    var greetingID = Uuid.NONE;
+    var hourID = Uuid.NONE;
+    var dayID = Uuid.NONE;
+    var dateID = Uuid.NONE;
     var UNIT = D19Lib.getOfficialUnit();
     
     this.preload = function(entityID) {
@@ -60,22 +60,22 @@
 
 
     function shutdown() {
-        if (clockID !== Uuid.NULL){
+        if (clockID !== Uuid.NONE){
             Script.update.disconnect(myTimer);
             Entities.deleteEntity(clockID);
-            clockID = Uuid.NULL;
+            clockID = Uuid.NONE;
             
             Entities.deleteEntity(hourID);
-            hourID = Uuid.NULL;
+            hourID = Uuid.NONE;
 
             //Entities.deleteEntity(greetingID);
-            //greetingID = Uuid.NULL;
+            //greetingID = Uuid.NONE;
 
             Entities.deleteEntity(dayID);
-            dayID = Uuid.NULL;
+            dayID = Uuid.NONE;
 
             Entities.deleteEntity(dateID);
-            dateID = Uuid.NULL;
+            dateID = Uuid.NONE;
         }
     }
 
@@ -89,7 +89,7 @@
         //=======================================
         var textOfficialColor = D19Lib.getOfficialColor();
         
-        if (clockID === Uuid.NULL){
+        if (clockID === Uuid.NONE){
             //create clock
             clockID = Entities.addEntity({
                 "type": "Text",

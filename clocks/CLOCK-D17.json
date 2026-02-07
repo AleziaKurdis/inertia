@@ -1,0 +1,27 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{dc8ceda7-6aba-47c1-bfc1-481f2a81adc4}",
+    "type": "Box",
+    "name": "CLOCK D17",
+    "dimensions": {
+        "x": 1.8433825969696045,
+        "y": 1.3191678524017334,
+        "z": 0.01
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "script": "https://aleziakurdis.github.io/inertia/clocks/d17Clock.js",
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube"
+}
+    ],
+  "Id": "{72b36dad-b955-4133-b253-44f9a1da51e7}",
+  "Version": 133
+}
