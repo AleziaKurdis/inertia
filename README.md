@@ -39,7 +39,9 @@ https://aleziakurdis.github.io/inertia/VALOMBRA/inertiaValombra.json
   
 https://aleziakurdis.github.io/inertia/TRONIX/inertiaTronix.json  
    
-https://aleziakurdis.github.io/inertia/SCILLIA/inertiaScillia.json     
+https://aleziakurdis.github.io/inertia/SCILLIA/inertiaScillia.json   
+
+https://aleziakurdis.github.io/inertia/UKONG/inertiaUkong.json  
    
 # Nowhere Island (import file)
 https://aleziakurdis.github.io/inertia/nowhereIsland/nowhereIsland.json
