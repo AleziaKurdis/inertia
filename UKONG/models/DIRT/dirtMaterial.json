@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "dirtwithrocks_Base_Color.jpg",
+         "metallic": 0.001,
+         "roughness": 0.4,
+         "normalMap": "dirtwithrocks_Normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}

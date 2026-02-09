@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "forest_floor_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "forest_floor_Roughness.jpg",
+         "normalMap": "forest_floor_Normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}

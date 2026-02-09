@@ -1,0 +1,90 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/-3000,3000,-3000\/0,-0.724182,0,0.689609"
+   },
+   "Entities":[
+        {
+            "id":"{3beae1fe-e853-4071-9015-43ebd144299f}",
+            "type":"Zone",
+            "name":"UKONG_VISIBILITY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":4000,
+                "y":4000,
+                "z":4000
+            },
+            "position": {
+                 "x": -3000,
+                 "y": 3000,
+                 "z": -3000
+            },
+            "grab":{
+                "grabbable":false
+            },
+            "normalMapAttenuation": {
+                "min": 800,
+                "max": 1500
+            },
+            "normalMapAttenuationMode": "enabled",
+            "flyingAllowed": true,
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/navigationAmbienceUkong.js"
+        },
+        {
+            "id": "{fbf83951-3e4d-461e-9f5d-782ae0b66f61}",
+            "type": "Model",
+            "position": {
+                "x": -3000,
+                "y": 3000,
+                "z": -3000
+            },
+            "name": "Ukong Island Landscape",
+            "locked": true,
+            "dimensions": {"x":1548.47265625,"y":494.22711181640625,"z":1634.925048828125},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/scillia.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id":"{9cfa4f43-a3c6-4236-9f29-72fdfc5ae16b}",
+            "type":"Zone",
+            "name":"UKONG_SKY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":3995,
+                "y":3995,
+                "z":3995
+            },
+            "position": {
+                "x": -3000,
+                "y": 3000,
+                "z": -3000
+            },         
+            "rotation":{
+                "x":-1.52587890625e-5,
+                "y":-1.52587890625e-5,
+                "z":-1.52587890625e-5,
+                "w":1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=17"
+        }
+   ],
+   "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
+   "Version":120
+}

@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "TexturesCom_Rock_CliffGranite_1K_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "TexturesCom_Rock_CliffGranite_1K_roughness.jpg",
+         "normalMap": "TexturesCom_Rock_CliffGranite_1K_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
