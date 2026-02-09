@@ -51,7 +51,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/scillia.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/UKONG-ISLAND.fst",
             "useOriginalPivot": true
         },
         {
