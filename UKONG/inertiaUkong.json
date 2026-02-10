@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/-3000,3000,-3000\/0,-0.724182,0,0.689609"
+      "\/":"\/-3637.26,3003.39,-3466.82\/0,-0.513851,0,0.857879"
    },
    "Entities":[
         {
@@ -83,6 +83,93 @@
             },
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=17"
+        },
+        {
+            "id": "{f6fcb31e-7771-4d02-8290-bac7b2d93339}",
+            "type": "Box",
+            "position": {"x":-3136.351318359375,"y":2945.0537109375,"z":-3261.737548828125},
+            "name": "PYM 2",
+            "locked": true,
+            "description": "UP",
+            "dimensions": {
+                "x": 238.9502410888672,
+                "y": 106.08525085449219,
+                "z": 352.73687744140625
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "test",
+            "color": {
+                "red": 0,
+                "green": 180,
+                "blue": 239
+            },
+            "alpha": 0.0,
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/pym.js"
+        },
+        {
+            "id": "{65aa2427-275c-4939-bdb7-372defcd4175}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "RAIN FOREST",
+            "locked": true,
+            "dimensions": {
+                "x": 635.0929565429688,
+                "y": 133.3920135498047,
+                "z": 868.8746337890625
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/RAINFOREST_TREES.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{fa736c77-59fe-4046-aef4-a175a52ae199}",
+            "type": "Box",
+            "position": {"x":-3072.74169921875,"y":3187.15234375,"z":-2541.1650390625},
+            "name": "PYM 1",
+            "locked": true,
+            "description": "UP",
+            "dimensions": {
+                "x": 25.3858585357666,
+                "y": 40.44493865966797,
+                "z": 53.46373748779297
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 212,
+                "green": 240,
+                "blue": 0
+            },
+            "alpha": 0.0,
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/pym.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
