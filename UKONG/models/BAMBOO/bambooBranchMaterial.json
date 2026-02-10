@@ -1,0 +1,16 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "BAMBOOBRANCH.png",
+         "metallic": 0.01,
+         "roughness": 0.341,
+         "normalMap": "BAMBOOBRANCH_NORMALogl.jpg",
+         "opacityMap": "BAMBOOBRANCH.png",
+         "opacityMapMode": "OPACITY_MAP_MASK",
+         "opacityCutoff": 0.5,
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
