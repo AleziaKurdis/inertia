@@ -170,6 +170,30 @@
             "alpha": 0.0,
             "shape": "Cube",
             "script": "https://aleziakurdis.github.io/inertia/UKONG/pym.js"
+        },
+        {
+            "id": "{f2ac2b11-a347-4ca4-9cd2-e916823e9d95}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "BAMBOOS",
+            "locked": true,
+            "dimensions": {
+                "x": 702.6677856445312,
+                "y": 163.15615844726562,
+                "z": 1060.29541015625
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BAMBOOS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
