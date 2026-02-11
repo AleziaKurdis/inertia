@@ -13,6 +13,7 @@
     var ROOT = Script.resolvePath('').split("pym.js")[0];
     var thisEntityID;
     var pymType = "DOWN";
+    var pymDirection = "Z+";
     var isProcessing = false;
     var originalScale;
     var entityPosition;
@@ -24,14 +25,19 @@
     
     this.preload = function (entityID) {
         thisEntityID = entityID;
-        var properties = Entities.getEntityProperties(entityID, ["description", "dimensions", "position"]);
-        var description = properties.description;
+        var properties = Entities.getEntityProperties(entityID, ["tags", "dimensions", "position"]);
+        var tags = properties.tags;
         entityPosition = properties.position;
         entityDimensions = properties.dimensions;
-        if (description === "UP") {
+        if (tags.indexOf("UP") !== -1) {
             pymType = "UP";
         } else {
             pymType = "DOWN";
+        }
+        if (tags.indexOf("Z+") !== -1) {
+            pymDirection = "Z+";
+        } else {
+            pymDirection = "Z-";
         }
         originalScale = MyAvatar.scale;
     };
@@ -72,25 +78,48 @@
         var myZposition = MyAvatar.position.z;
         if (Math.abs(myZposition - entityPosition.z) < (entityDimensions.z/2)) {
             //inside
-            if (pymType === "DOWN") {
-                factor = MIN_SCALE + (1 - MIN_SCALE) *((myZposition - entityPosition.z + (entityDimensions.z/2))/entityDimensions.z);
-            } else {
-                factor = 1 + MAX_SCALE *((myZposition - entityPosition.z + (entityDimensions.z/2))/entityDimensions.z);
+            
+            var zScale = ((myZposition - entityPosition.z + (entityDimensions.z/2))/entityDimensions.z);
+            if (pymDirection === "Z+") {
+                zScale = 1 - zScale;
             }
+            
+            if (pymType === "DOWN") {
+                factor = MIN_SCALE + (1 - MIN_SCALE) * zScale;
+            } else {
+                factor = 1 + MAX_SCALE * zScale;
+            }
+
         } else {
             //outside
             if (pymType === "DOWN") {
                 if (myZposition < entityPosition.z) {
-                    factor = MIN_SCALE;
+                    if (pymDirection === "Z+") {
+                        factor = MIN_SCALE;
+                    } else {
+                        factor = 1;
+                    }
                 } else {
-                    factor = 1;
+                    if (pymDirection === "Z+") {
+                        factor = 1;
+                    } else {
+                        factor = MIN_SCALE;
+                    }
                 }
             } else {
                 if (myZposition < entityPosition.z) {
-                    factor = 1;
+                   if (pymDirection === "Z+") {
+                        factor = 1;
+                    } else {
+                        factor = MIN_SCALE;
+                    }
                 } else {
-                    factor = MAX_SCALE;
-                }
+                    if (pymDirection === "Z+") {
+                        factor = MIN_SCALE;
+                    } else {
+                        factor = 1;
+                    }
+                }    
             }
         }
         
