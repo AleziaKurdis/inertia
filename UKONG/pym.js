@@ -109,15 +109,15 @@
             } else {
                 if (myZposition < entityPosition.z) {
                    if (pymDirection === "Z+") {
-                        factor = 1;
+                        factor = MAX_SCALE;
                     } else {
-                        factor = MIN_SCALE;
+                        factor = 1;
                     }
                 } else {
                     if (pymDirection === "Z+") {
-                        factor = MIN_SCALE;
-                    } else {
                         factor = 1;
+                    } else {
+                        factor = MAX_SCALE;
                     }
                 }    
             }
