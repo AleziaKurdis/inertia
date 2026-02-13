@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "CUTSTONE_albedo.jpg",
+         "metallic": 0.001,
+         "roughness": 0.55,
+         "normalMap": "CUTSTONE_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
