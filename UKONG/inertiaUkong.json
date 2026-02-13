@@ -122,11 +122,7 @@
             "position": {"x":-3000,"y":3000,"z":-3000},
             "name": "RAIN FOREST",
             "locked": true,
-            "dimensions": {
-                "x": 635.0929565429688,
-                "y": 133.3920135498047,
-                "z": 868.8746337890625
-            },
+            "dimensions": {"x":635.0929565429688,"y":133.3920135498047,"z":909.8233642578125},
             "renderWithZones": [
                 "{3beae1fe-e853-4071-9015-43ebd144299f}"
             ],
@@ -193,6 +189,59 @@
             "collisionless": true,
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BAMBOOS.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{06e75181-b700-440e-9a71-8934a0e29eaf}",
+            "type": "Model",
+            "position": {"x":-3656.07568359375,"y":3008.97998046875,"z":-3463.130859375},
+            "name": "PORTAL ROCK",
+            "locked": true,
+            "dimensions": {
+                "x": 9.186193466186523,
+                "y": 9.343010902404785,
+                "z": 19.947345733642578
+            },
+            "rotation": {
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/PORTAL_ROCK.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{7a6a3c9f-22b2-4313-9643-014650af88b7}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "TALL GRASS",
+            "locked": true,
+            "dimensions": {
+                "x": 435.06707763671875,
+                "y": 24.96564292907715,
+                "z": 262.6737365722656
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/TALL-GRASS.fst",
             "useOriginalPivot": true
         }
    ],
