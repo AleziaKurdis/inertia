@@ -243,6 +243,30 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/TALL-GRASS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{e976a1b4-0a5f-4fcd-82c2-aa23c66100c1}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "PONCTUAL GRASS",
+            "locked": true,
+            "dimensions": {
+                "x": 573.170166015625,
+                "y": 30.99253273010254,
+                "z": 380.17828369140625
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/PONCTUAL-GRASS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
