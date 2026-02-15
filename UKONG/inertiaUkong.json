@@ -263,6 +263,30 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/PONCTUAL-GRASS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{1930c1dd-d1de-406f-89e1-347b13c35ad0}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "SWAMP",
+            "locked": true,
+            "dimensions": {
+                "x": 329.0504455566406,
+                "y": 0.0010004043579101562,
+                "z": 231.187744140625
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SWAMP.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
