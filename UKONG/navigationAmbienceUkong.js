@@ -32,6 +32,10 @@
     var playing = 0;
     var FLYING_AIR_MAX_VOLUME = 0.5;
 
+    var DAY_DURATION = 61200; //D17
+    var NBR_LAP_TIDE = 30; //N lap of UPDATE_TIMER_INTERVAL sec
+    var seaId = Uuid.NONE;
+
     var thisEntityID;
     var UNIVERSE_SOUND = ROOT + "sounds/backgroundBase.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.18;
@@ -80,6 +84,11 @@
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
             updateNavigation();
+            tideUpdateLap++;
+            if (tideUpdateLap === NBR_LAP_TIDE) {
+                genWater();
+                tideUpdateLap = 0;
+            }
             today = new Date();
             processTimer = today.getTime();
         }  
@@ -96,6 +105,11 @@
                 universeSoundInjector.stop();
                 univerSoundPlaying = 0;
             }
+            
+            if (seaId != Uuid.NONE){
+                Entities.deleteEntity(seaId);
+                seaId = Uuid.NONE;
+            }
         }
         isInitiated = false;
         Workload.getConfig("controlViews")["regulateViewRanges"] = true;
@@ -110,6 +124,10 @@
         isInitiated = true; 
  
         univerSoundPlaying = 0;
+
+        tideUpdateLap = 0;
+        waterDirection = 1;
+        genWater();
 
         var today = new Date();
         processTimer = today.getTime();
@@ -260,6 +278,40 @@
 
         }
     } 
+
+    function genWater() {
+        const heightOffset = -101; //in meters
+        let currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
+        waterDirection = -waterDirection;
+        var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
+        var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + heightOffset,"z":universeCenter.z + currentOffset};
+        
+        if (seaId === Uuid.NONE) {
+            seaId = Entities.addEntity({
+                "type": "Model",
+                "name": "SEA",
+                "renderWithZones": renderWithZones,
+                "dimensions": {"x":18000,"y":0.01,"z":18000},
+                "position": waterPosition,
+                "modelURL": ROOT + "models/AQUASPHERE.fst",
+                "useOriginalPivot": true,
+                "shapeType": "none",
+                "grab": {
+                    "grabbable": false
+                },
+                "velocity": velocity,
+                "damping": 0,
+                "lifetime": 18000,
+                "collisionless": true
+            }, "local");
+            
+        } else {
+            Entities.editEntity(seaId,{
+                "position": waterPosition,
+                "velocity": velocity
+            });
+        }
+    }
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(cyclelength, cycleduration){
