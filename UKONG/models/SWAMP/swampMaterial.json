@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1, 1, 1],
+         "albedoMap": "SWAMP_ALBEDO.jpg",
+         "metallic": 0.01,
+         "roughness": 0.04,
+         "normalMap": "SWAMP_NORMALogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
