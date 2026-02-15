@@ -24,7 +24,7 @@
     var waterDirection = 1;
     var WATER_SPEED = 0.3; // m/sec
 
-    var astrolithID = Uuid.NULL;
+    var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
     
     var AIR_SOUND = ROOT + "sounds/air.mp3";
@@ -34,7 +34,7 @@
     
     var DAY_DURATION = 104400; //D29
     var NBR_LAP_TIDE = 30; //N lap of UPDATE_TIMER_INTERVAL sec
-    var seaId = Uuid.NULL;
+    var seaId = Uuid.NONE;
     var TIDE_AMPLITUDE = 4; //in meter
 
     var thisEntityID;
@@ -98,17 +98,17 @@
     function shutdown() {
         if (isInitiated){
             Script.update.disconnect(myTimer);
-            if (astrolithID != Uuid.NULL){
+            if (astrolithID != Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
-                astrolithID = Uuid.NULL;
+                astrolithID = Uuid.NONE;
             }
             if (univerSoundPlaying == 1) {
                 universeSoundInjector.stop();
                 univerSoundPlaying = 0;
             }
-            if (seaId != Uuid.NULL){
+            if (seaId != Uuid.NONE){
                 Entities.deleteEntity(seaId);
-                seaId = Uuid.NULL;
+                seaId = Uuid.NONE;
             }
         }
         isInitiated = false;
@@ -136,16 +136,16 @@
 
     function genWater() {
         var tide = (TIDE_AMPLITUDE/2) + Math.sin(GetCurrentCycleValue(Math.PI * 2, Math.floor(DAY_DURATION * 12.41/24))) * TIDE_AMPLITUDE;
-        currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
+        var currentOffset = waterDirection * NBR_LAP_TIDE * (UPDATE_TIMER_INTERVAL/1000) * WATER_SPEED;
         waterDirection = -waterDirection;
         var velocity = {"x": 0.0 , "y": 0.0, "z": WATER_SPEED * waterDirection};
         var waterPosition = {"x":universeCenter.x,"y":universeCenter.y + tide,"z":universeCenter.z + currentOffset};
         
-        if (seaId === Uuid.NULL) {
+        if (seaId === Uuid.NONE) {
             seaId = Entities.addEntity({
                 "type": "Model",
                 "name": "SEA",
-                "renderWithZone": renderWithZones,
+                "renderWithZones": renderWithZones,
                 "dimensions": {"x":18000,"y":0.01,"z":18000},
                 "position": waterPosition,
                 "modelURL": ROOT + "models/AQUASPHERE.fst",
@@ -155,7 +155,9 @@
                     "grabbable": false
                 },
                 "velocity": velocity,
-                "damping": 0
+                "damping": 0,
+                "lifetime": 18000,
+                "collisionless": true
             }, "local");
             
         } else {
@@ -196,7 +198,7 @@
             var distanceAstrolith = 65;
             var radiusEffect = 50;//70; 
             if (myVelocity > 25){
-                if (astrolithID == Uuid.NULL){
+                if (astrolithID == Uuid.NONE){
                     astrolithID = Entities.addEntity({
                         "type": "ParticleEffect",
                         "name": "ASTROLITHES",
@@ -261,9 +263,9 @@
                         });
                 }
             }else{
-                if (astrolithID != Uuid.NULL){
+                if (astrolithID != Uuid.NONE){
                     Entities.deleteEntity(astrolithID);
-                    astrolithID = Uuid.NULL;
+                    astrolithID = Uuid.NONE;
                 }
             }
             
