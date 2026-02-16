@@ -308,7 +308,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BOUDLERS.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BOULDERS.fst",
             "useOriginalPivot": true
         }
    ],
