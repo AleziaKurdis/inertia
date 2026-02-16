@@ -287,6 +287,29 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SWAMP.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{f02ab299-9b95-443d-879e-2e4dab791fa5}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "BOULDERS",
+            "locked": true,
+            "dimensions": {
+                "x": 569.1151733398438,
+                "y": 53.121543884277344,
+                "z": 808.4257202148438
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BOUDLERS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
