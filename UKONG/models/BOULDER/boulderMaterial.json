@@ -6,7 +6,7 @@
          "albedoMap": "BOULDER_ALBEDO.jpg",
          "metallic": 0.001,
          "roughness": 0.495,
-         "occlusionMap": "BOULDER_NORMALogl.jpg",
+         "normalMap": "BOULDER_NORMALogl.jpg",
          "cullFaceMode":"CULL_BACK"
       }
    ]
