@@ -250,7 +250,7 @@
             "position": {"x":-3000,"y":3000,"z":-3000},
             "name": "PONCTUAL GRASS",
             "locked": true,
-            "dimensions": {"x":580.153564453125,"y":44.313636779785156,"z":380.3379821777344},
+            "dimensions": {"x":656.0380859375,"y":52.1506233215332,"z":848.582275390625},
             "renderWithZones": [
                 "{3beae1fe-e853-4071-9015-43ebd144299f}"
             ],
@@ -309,6 +309,29 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BOULDERS.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c4c1b060-dfd8-495f-83c7-7f91e6b563e2}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "MULTISIGNS",
+            "locked": true,
+            "dimensions": {
+                "x": 299.03143310546875,
+                "y": 3.6191134452819824,
+                "z": 76.79263305664062
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MULTISIGNS.fst",
             "useOriginalPivot": true
         }
    ],
