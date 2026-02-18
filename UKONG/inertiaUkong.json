@@ -329,7 +329,7 @@
         {
             "id": "{4363e1fb-1711-4c2e-9dbd-a979e738b5d6}",
             "type": "Model",
-            "position": {"x":-3243.033935546875,"y":3005.49755859375,"z":-3268.59814453125},
+            "position": {"x":-3243.084228515625,"y":3004.931396484375,"z":-3268.626708984375},
             "name": "Sign - NO SWIMMING",
             "locked": true,
             "dimensions": {
@@ -381,7 +381,7 @@
             "locked": true,
             "dimensions": {
                 "x": 0.7873829007148743,
-                "y": 0.563469648361206,
+                "y": 0.65,
                 "z": 0.0042714024893939495
             },
             "renderWithZones": [
@@ -410,7 +410,7 @@
             "locked": true,
             "dimensions": {
                 "x": 0.7873829007148743,
-                "y": 0.563469648361206,
+                "y": 0.65,
                 "z": 0.0042714024893939495
             },
             "renderWithZones": [
@@ -429,6 +429,93 @@
                 "blue": 0
             },
             "shape": "Cube"
+        },
+        {
+            "id": "{7e642b41-5e04-4fb3-8913-68b18b0daceb}",
+            "type": "Model",
+            "name": "BRIDGE",
+            "locked": true,
+            "position": {"x":-3436.361083984375,"y":2995.418701171875,"z":-2782.984130859375},
+            "dimensions": {
+                "x": 10.42311954498291,
+                "y": 7.5531182289123535,
+                "z": 49.88452911376953
+            },
+            "rotation": {
+                "x": 0.8104676604270935,
+                "y": -0.2790662348270416,
+                "z": 0.48697805404663086,
+                "w": -0.16767996549606323
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/DEAD_TRUNC.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{164c1acd-4984-4d77-af6a-a46ea0141ec5}",
+            "type": "Model",
+            "name": "SUB TRUNC",
+            "locked": true,
+            "position": {"x":-3280.038818359375,"y":2986.121826171875,"z":-2816.918212890625},
+            "dimensions": {
+                "x": 4.818661689758301,
+                "y": 3.49184513092041,
+                "z": 14.24390983581543
+            },
+            "rotation": {
+                "x": -0.42425858974456787,
+                "y": -0.8877787590026855,
+                "z": 0.1124824732542038,
+                "w": 0.13856962323188782
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/DEAD_TRUNC.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{fb554b93-29fe-4bd5-b779-0bf9a6a06db1}",
+            "type": "Model",
+            "name": "TRUNC",
+            "locked": true,
+            "position": {"x":-3275.927490234375,"y":2987.939697265625,"z":-2794.5224609375},
+            "dimensions": {
+                "x": 8.07993221282959,
+                "y": 5.855125904083252,
+                "z": 23.884185791015625
+            },
+            "rotation": {
+                "x": 0.003285525366663933,
+                "y": -0.9960428476333618,
+                "z": 0.04174656420946121,
+                "w": 0.07839026302099228
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/DEAD_TRUNC.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
