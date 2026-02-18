@@ -4,7 +4,7 @@
 //  Created by Alezia Kurdis, Octorber 12th, 2024.
 //  Copyright 2024, Overte e.V.
 //
-//  PYM CORRIDOR (UP 1 to 20 and DOWN 1 to 0.2).
+//  PYM CORRIDOR (UP 1 to 16 and DOWN 1 to 0.3).
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
@@ -20,8 +20,9 @@
     var entityDimensions;
     var updateTimerInterval = 200; //0.2sec.
     var processTimer = 0;
-    var MIN_SCALE = 0.2;
-    var MAX_SCALE = 20;
+    var MIN_SCALE = 0.3;
+    var MAX_SCALE = 16;
+    let feetInitialY;
     
     this.preload = function (entityID) {
         thisEntityID = entityID;
@@ -45,6 +46,7 @@
     this.enterEntity = function(entityID) {
         Script.update.connect(myTimer);
         isProcessing = true;
+        feetInitialY = MyAvatar.feetPosition.y;
         manageScale();
     }; 
 
@@ -124,5 +126,10 @@
         }
         
         MyAvatar.scale = originalScale * factor;
+        let delta = feetInitialY - MyAvatar.feetPosition.y;
+        if (delta > 0) {
+            MyAvatar.position.y = MyAvatar.position.y + delta;
+        }
+        feetInitialY = MyAvatar.feetPosition.y;
     }
 })
