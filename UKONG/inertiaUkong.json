@@ -325,6 +325,110 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MULTISIGNS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{4363e1fb-1711-4c2e-9dbd-a979e738b5d6}",
+            "type": "Model",
+            "position": {"x":-3243.033935546875,"y":3005.49755859375,"z":-3268.59814453125},
+            "name": "Sign - NO SWIMMING",
+            "locked": true,
+            "dimensions": {
+                "x": 0.64839768409729,
+                "y": 2.718181848526001,
+                "z": 0.04072337970137596
+            },
+            "rotation": {"x":0.050843045115470886,"y":0.8621701002120972,"z":-0.00051080685807392,"w":0.5040611028671265},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/SIGN_NO_SWIMMING.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{8de4e03b-ced7-40ac-9cdb-f014301ffbd4}",
+            "type": "Model",
+            "position": {"x":-3205.755615234375,"y":3005.1220703125,"z":-3240.447021484375},
+            "name": "Sign - NO SWIMMING",
+            "locked": true,
+            "dimensions": {
+                "x": 0.64839768409729,
+                "y": 2.718181848526001,
+                "z": 0.04072337970137596
+            },
+            "rotation": {"x":0.0478021577000618,"y":0.9840967059135437,"z":0.017327159643173218,"w":0.1702016294002533},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/SIGN_NO_SWIMMING.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_s.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{cfd64cb7-c966-4227-b811-5fe1da6bfb12}",
+            "type": "Box",
+            "position": {"x":-3652.213134765625,"y":3005.33154296875,"z":-3478.75732421875},
+            "rotation": {"x":0,"y":0,"z":0,"w":1},
+            "name": "CLOCK D17",
+            "locked": true,
+            "dimensions": {
+                "x": 0.7873829007148743,
+                "y": 0.563469648361206,
+                "z": 0.0042714024893939495
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d17Clock.js",
+            "scriptTimestamp": 1771372559818,
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
+        },
+        {
+            "id": "{c76d1c8d-b345-4b34-bffe-18b9bc67e13a}",
+            "type": "Box",
+            "position": {"x":-3068.439697265625,"y":3169.03662109375,"z":-2578.455078125},
+            "rotation": {"x":0,"y":-0.999999463558197,"z":0.0010284448508173227,"w":0},
+            "name": "CLOCK D17",
+            "locked": true,
+            "dimensions": {
+                "x": 0.7873829007148743,
+                "y": 0.563469648361206,
+                "z": 0.0042714024893939495
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/clocks/d17Clock.js",
+            "scriptTimestamp": 1771372559818,
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
