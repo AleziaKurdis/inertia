@@ -41,19 +41,24 @@
             pymDirection = "Z-";
         }
         originalScale = MyAvatar.scale;
+        feetInitialY = MyAvatar.feetPosition.y;
     };
 
     this.enterEntity = function(entityID) {
-        Script.update.connect(myTimer);
-        isProcessing = true;
-        feetInitialY = MyAvatar.feetPosition.y;
-        manageScale();
+        if (!isProcessing) {
+            Script.update.connect(myTimer);
+            isProcessing = true;
+            feetInitialY = MyAvatar.feetPosition.y;
+            manageScale();
+        }
     }; 
 
     this.leaveEntity = function(entityID) {
-        Script.update.disconnect(myTimer);
-        isProcessing = false;
-        manageScale();
+        if (isProcessing) {
+            Script.update.disconnect(myTimer);
+            isProcessing = false;
+            manageScale();
+        }
     }; 
 
     this.unload = function(entityID) {
@@ -89,7 +94,7 @@
             if (pymType === "DOWN") {
                 factor = MIN_SCALE + (1 - MIN_SCALE) * zScale;
             } else {
-                factor = 1 + MAX_SCALE * zScale;
+                factor = 1 + (MAX_SCALE - 1) * zScale;
             }
 
         } else {
