@@ -21,7 +21,7 @@
     var updateTimerInterval = 200; //0.2sec.
     var processTimer = 0;
     var MIN_SCALE = 0.3;
-    var MAX_SCALE = 16;
+    var MAX_SCALE = 10;
     let feetInitialY;
     
     this.preload = function (entityID) {
