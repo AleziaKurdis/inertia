@@ -516,6 +516,63 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/DEAD_TRUNC.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{85f60f84-dc5a-463c-b98b-4b1820e9da78}",
+            "type": "Model",
+            "name": "PORTAL ALPHA",
+            "locked": true,
+            "position": {"x":-3656.07568359375,"y":3008.97998046875,"z":-3463.130859375},
+            "dimensions": {
+                "x": 4.500001430511475,
+                "y": 4.500001430511475,
+                "z": 8.611637115478516
+            },
+            "rotation": {
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "useOriginalPivot": true,
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "userData": "{\"placeName\": \"ukong\", \"isAlpha\": true}"
+        },
+        {
+            "id": "{932e29e0-eedd-4f79-acdc-e1a74965c691}",
+            "type": "Model",
+            "name": "PORTAL OMEGA",
+            "locked": true,
+            "position": {"x":4053.18994140625,"y":4108.85107421875,"z":-3752.441162109375},
+            "dimensions": {
+                "x": 4.500001430511475,
+                "y": 4.500001430511475,
+                "z": 8.611637115478516
+            },
+            "rotation": {"x":0,"y":0.7071067690849304,"z":0,"w":0.7071067690849304},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "useOriginalPivot": true,
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "userData": "{\"placeName\": \"ukong\", \"isAlpha\": false}"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
