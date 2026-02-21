@@ -67,7 +67,7 @@
                 var weekColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
 
                 
-                var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: 4vw; color: " + baseColor + ";'>" + "Real - local" + "</font></div>";
+                var displayClock = "<div style = 'width: 95%; text-align: right;'><font style='font-size: " + isBigUnit + "vw; color: " + baseColor + ";'>" + "Real - local" + "</font></div>";
                 displayClock = displayClock + "<font style='font-size: 22vw; color: " + baseColor + ";'>" + d.getHours() + ":" + minuteZeroized + "</font><br>";
                 displayClock = displayClock + "<font style='font-size: 10vw; color: " + weekColor + ";'>" + days[d.getDay()] + "</font><br>";
                 displayClock = displayClock + "<font style='font-size: 8vw; color: " + baseColor + ";'>" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "</font>";
@@ -134,6 +134,10 @@
             var isTivan = false;
             var myParameter = findGetParameter("tivan");
             if(myParameter === "true"){isTivan = true;}
+
+            var isBigUnit = "4";
+            myParameter = findGetParameter("bigunit");
+            if(myParameter === "true"){isBigUnit = "7";}
 
             drawDXXDateTime();
             setInterval(drawDXXDateTime, refeshRate);
