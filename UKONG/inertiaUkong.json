@@ -569,6 +569,154 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
             "userData": "{\"placeName\": \"ukong\", \"isAlpha\": false}"
+        },
+        {
+            "id": "{d74341ec-3447-4028-a496-894c199f0eea}",
+            "type": "Model",
+            "name": "Torch Stand 2",
+            "locked": true,
+            "position": {"x":4057.826416015625,"y":4140.12353515625,"z":-3875.074951171875},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.43134698271751404,
+                "z": 0,
+                "w": 0.9021861553192139
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torchStand.fst"
+        },
+        {
+            "id": "{b0fa06b8-f200-4770-94ea-4579a3497219}",
+            "type": "Model",
+            "name": "Torch Stand 1",
+            "locked": true,
+            "position": {"x":4066.552978515625,"y":4107.97216796875,"z":-3762.485595703125},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torchStand.fst"
+        },
+        {
+            "id": "{5564df1d-3cbd-4d64-ab2c-7e3cd412112a}",
+            "type": "Model",
+            "position": {"x":4058.06689453125,"y":4140.43896484375,"z":-3874.958984375},
+            "rotation": {"x":-0.056301817297935486,"y":-0.8944687843322754,"z":0.11775907129049301,"w":-0.4276547133922577},
+            "name": "Torch 2",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": true,
+                "equippable": true,
+                "equippableLeftPosition": {
+                    "x": -0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
+                "equippableRightPosition": {
+                    "x": 0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/UKONG/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.4, "y": 1.4, "z": 1.4},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{01147b8d-e6ce-48f2-8439-d49c5e376949}",
+            "type": "Model",
+            "position": {"x":4066.43994140625,"y":4108.2822265625,"z":-3762.7265625},
+            "rotation": {"x":0.09229596704244614,"y":-0.7010574340820312,"z":0.09229598194360733,"w":0.7010574340820312},
+            "name": "Torch 1",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": true,
+                "equippable": true,
+                "equippableLeftPosition": {
+                    "x": -0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
+                "equippableRightPosition": {
+                    "x": 0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/UKONG/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.4, "y": 1.4, "z": 1.4},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
