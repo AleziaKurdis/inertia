@@ -46,7 +46,7 @@ function toggleItem() {
                 "localRotation": hmdPanelLocalRotation,
                 "dimensions": {"x": 2.0, "y": 1.0, "z": 0.01},
                 "isVisibleInSecondaryCamera": false,
-                "sourceUrl": ROOT + "../fourClocksV2.html",
+                "sourceUrl": ROOT + "../sixClocks.html",
                 "alpha": 0.5,
                 "maxFPS": 1,
                 "wantsKeyboardFocus": false,
