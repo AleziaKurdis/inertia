@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+//  sixClocks.html
+//
+//  Created by Alezia Kurdis on February 20th, 2026.
+//  Copyright 2026 Alezia Kurdis.
+//
+//  HTML display for 6 Clocks (d17, d19, d29, d31, d24 and local) on a same page.
+//
+//  Distributed under the Apache License, Version 2.0.
+//  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+        #viewport {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #content {
+            width: 260px;   /* 2 × 150 */
+            height: 300px;  /* 3 × 120 */
+            transform-origin: center center;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        iframe {
+            width: 130px;
+            height: 100px;
+            border: none;
+            border-radius: 16px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="viewport">
+            <div id="content">
+                <table>
+                    <tr>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d17.html?bigunit=true"></iframe>
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html?bigunit=true"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html?bigunit=true"></iframe>
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html?bigunit=true"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html?bigunit=true"></iframe>
+                        </td>
+                        <td>
+                            <iframe src="https://aleziakurdis.github.io/inertia/clocks/d31.html?bigunit=true"></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            function scaleContent() {
+                const content = document.getElementById("content");
+                const scaleX = window.innerWidth / 600;
+                const scaleY = window.innerHeight / 320;
+                const scale = Math.min(scaleX, scaleY);
+                content.style.transform = `scale(${scale})`;
+            }
+
+            window.addEventListener("resize", scaleContent);
+            scaleContent();
+        </script>
+    </body>
+</html>
