@@ -1,0 +1,27 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{a8446aba-a407-4a9d-918c-c9207cbdba2c}",
+    "type": "Box",
+    "name": "CLOCK D31",
+    "dimensions": {
+        "x": 1.8433825969696045,
+        "y": 1.3191678524017334,
+        "z": 0.01
+    },
+    "grab": {
+        "grabbable": false
+    },
+    "script": "https://aleziakurdis.github.io/inertia/clocks/d31Clock.js",
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cube"
+}
+    ],
+  "Id": "{3723bd63-ed53-4e6d-95c3-56507060b39e}",
+  "Version": 133
+}
