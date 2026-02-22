@@ -731,6 +731,116 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/WATERHOLES.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{754733ff-c582-47ab-bc16-fee7a6f29aa5}",
+            "type": "Sound",
+            "name": "CRICKET 05 - A",
+            "locked": true,
+            "position": {"x":-3351.06787109375,"y":3007.525146484375,"z":-3169.522705078125},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_05.mp3",
+            "volume": 0.6000000238418579
+        },
+        {
+            "id": "{55f1f97d-43a0-4054-a1db-b98d5ed97915}",
+            "type": "Sound",
+            "name": "CRICKET 03 - A",
+            "locked": true,
+            "position": {"x":-3398.240966796875,"y":3007.525146484375,"z":-3247.9853515625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_03.mp3",
+            "volume": 0.6000000238418579
+        },
+        {
+            "id": "{84be3c4f-153f-42e2-b4d6-0103f36d0fdb}",
+            "type": "Sound",
+            "name": "CRICKET 04 - B",
+            "locked": true,
+            "position": {"x":-3393.341796875,"y":3007.525146484375,"z":-3202.629638671875},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_04.mp3",
+            "volume": 0.6000000238418579
+        },
+        {
+            "id": "{c95f76e2-42bd-47ae-8795-a8482a1380ed}",
+            "type": "Sound",
+            "name": "CRICKET 03 - B",
+            "locked": true,
+            "position": {"x":-3407.629150390625,"y":3007.525146484375,"z":-3236.58935546875},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_03.mp3",
+            "volume": 0.6000000238418579
+        },
+        {
+            "id": "{463b2fa1-d0e2-47f2-a29a-18e69b4ea6c9}",
+            "type": "Sound",
+            "name": "CRICKET 04 - A",
+            "locked": true,
+            "position": {"x":-3388.26953125,"y":3007.525146484375,"z":-3227.22021484375},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_04.mp3",
+            "volume": 0.6000000238418579
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
