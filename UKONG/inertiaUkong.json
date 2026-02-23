@@ -841,6 +841,50 @@
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_04.mp3",
             "volume": 0.6000000238418579
+        },
+        {
+            "id": "{cc05b8f0-c0be-4c85-8c60-baeaf44603b5}",
+            "type": "Sound",
+            "name": "CRICKET 08 - B",
+            "locked": true,
+            "position": {"x":-3437.121826171875,"y":3022.83740234375,"z":-3304.480224609375},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_n_birds_08.mp3",
+            "volume": 1.0
+        },
+        {
+            "id": "{a1e2ed40-6fb4-4928-9f2d-a43ec7248cef}",
+            "type": "Sound",
+            "name": "CRICKET 08 - A",
+            "locked": true,
+            "position": {"x":-3433.42529296875,"y":3017.135498046875,"z":-3391.982666015625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_n_birds_08.mp3",
+            "volume": 1.0
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
