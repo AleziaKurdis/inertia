@@ -52,43 +52,50 @@ Note: You need to set a unique identifier in the "description" properties (ideal
 Note: You need to add the destination data (of the "Breemor - hyperspace" local entity) in the file "https://aleziakurdis.github.io/inertia/BREEMOR/scripts/destinations.json".   
    
 # Clocks
+**D17**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D17.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d17.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d17.html?tivan=true  
+  
 **D19 (HUT)**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D19.json  
 WEB: https://aleziakurdis.github.io/inertia/clocks/d19.html  
 WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d19.html?tivan=true  
   
+**D24**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d24.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true
+   
 **D29**  
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D29.json  
 WEB: https://aleziakurdis.github.io/inertia/clocks/d29.html  
 WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d29.html?tivan=true  
   
-**D24**  
-JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D24.json  
-WEB: https://aleziakurdis.github.io/inertia/clocks/d24.html  
-WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d24.html?tivan=true
- 
-**D17**  
-JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D17.json  
-WEB: https://aleziakurdis.github.io/inertia/clocks/d17.html  
-WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d17.html?tivan=true  
+**D31**  
+JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D31.json  
+WEB: https://aleziakurdis.github.io/inertia/clocks/d31.html  
+WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d31.html?tivan=true
     
 # Terrestrial Day/Night Cycle Sky
-
+**D7  (Day duration of 7h)**  
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManagerD7.js
+    
 **D17 (Day duration of 17h)**  
 https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=17 
-
+   
 **D19 (Day duration of 19h)**  
 https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=19   
-  
-**D29 (Day duration of 29h)**   
-https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29 
-  
-**D7  (Day duration of 7h)**  
-https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManagerD7.js  
-
+   
 **D24  (Day duration of 24h, Not Recommended since regular people will be stuck in the same time forever)**  
 https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=24  
      
+**D29 (Day duration of 29h)**   
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=29 
+     
+**D31 (Day duration of 31h)**   
+https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=31 
+           
 **Installation**  
 Create a Zone, name it and set the dimensions. (The dimensions need to be larger than 30m).   
 This zone will be your visibility zone for your place.  
