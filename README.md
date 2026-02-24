@@ -76,11 +76,13 @@ WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d29.html?tivan=t
 JSON IMPORT: https://aleziakurdis.github.io/inertia/clocks/CLOCK-D31.json  
 WEB: https://aleziakurdis.github.io/inertia/clocks/d31.html  
 WEB (Tivan font): https://aleziakurdis.github.io/inertia/clocks/d31.html?tivan=true
-    
+
+**Contextual Menu Clocks Application (display all the clocks) - Installation:**   
+Edit > Running Scripts...   
+Load scripts > Click "From URL" button.  
+Enter: https://aleziakurdis.github.io/inertia/clocks/clocks/clocks_CMApp.js  
+      
 # Terrestrial Day/Night Cycle Sky
-**D7  (Day duration of 7h)**  
-https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManagerD7.js
-    
 **D17 (Day duration of 17h)**  
 https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=17 
    
@@ -99,7 +101,7 @@ https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=
 **Installation**  
 Create a Zone, name it and set the dimensions. (The dimensions need to be larger than 30m).   
 This zone will be your visibility zone for your place.  
-Then add the script of your choice (D17, D19, D29, D7 or D24) in the "script" property of that zone entity.  
+Then add the script of your choice (D17, D19, D24, D29 or D31) in the "script" property of that zone entity.  
 The script will manage the sky as a local entity.  
 
 # Gravity Configurator  
