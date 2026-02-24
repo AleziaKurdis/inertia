@@ -113,7 +113,7 @@
                 "grabbable":false
             },
             "shapeType":"sphere",
-            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManagerD7.js"
+            "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=31"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
