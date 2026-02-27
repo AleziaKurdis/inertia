@@ -885,6 +885,29 @@
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_n_birds_08.mp3",
             "volume": 1.0
+        },
+        {
+            "id": "{045f935e-b311-4cfe-800e-12623576cb11}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "CITY WALL",
+            "locked": true,
+            "dimensions": {
+                "x": 140.8426055908203,
+                "y": 42.51169204711914,
+                "z": 332.2251892089844
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/CITY_WALL.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
