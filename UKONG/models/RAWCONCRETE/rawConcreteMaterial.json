@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "RAW_CONCRETE_albedo.jpg",
+         "metallic": 0.001,
+         "roughness": 0.495,
+         "normalMap": "RAW_CONCRETE_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
