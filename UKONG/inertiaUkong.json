@@ -931,6 +931,50 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/RUINS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{460c6aa0-7f29-4bd2-84b4-8b59ebab623c}",
+            "type": "Sound",
+            "name": "CRICKET 06 - B",
+            "locked": true,
+            "position": {"x":-3172.031494140625,"y":3007.525146484375,"z":-3175.5634765625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_06.mp3",
+            "volume": 0.8
+        },
+        {
+            "id": "{06878b70-ce5b-4202-9d10-59daec98bcbf}",
+            "type": "Sound",
+            "name": "CRICKET 06 - A",
+            "locked": true,
+            "position": {"x":-3229.06201171875,"y":3007.525146484375,"z":-3236.060791015625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_06.mp3",
+            "volume": 0.8
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
