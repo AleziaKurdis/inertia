@@ -975,6 +975,72 @@
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/CRICKETS/crickets_06.mp3",
             "volume": 0.8
+        },
+        {
+            "id": "{54764edd-982a-4fc4-9ad7-8974d6450a4e}",
+            "type": "Sound",
+            "name": "FOREST_LIGHT_BIRDS - B",
+            "locked": true,
+            "position": {"x":-3172.031494140625,"y":3007.525146484375,"z":-3175.5634765625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_light_birds.mp3",
+            "volume": 0.8
+        },
+        {
+            "id": "{187cb9d4-e6a2-4719-9176-d9a7137cbb11}",
+            "type": "Sound",
+            "name": "FOREST_LIGHT_BIRDS - A",
+            "locked": true,
+            "position": {"x":-3229.06201171875,"y":3007.525146484375,"z":-3236.060791015625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_light_birds.mp3",
+            "volume": 0.8
+        },
+        {
+            "id": "{76a2e506-501a-4aa5-b30c-3a65f3119a4c}",
+            "type": "Sound",
+            "name": "FOREST_SOUND_01 - A",
+            "locked": true,
+            "position": {"x":-3229.06201171875,"y":3007.525146484375,"z":-3236.060791015625},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_sound_01.mp3",
+            "volume": 0.8
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
