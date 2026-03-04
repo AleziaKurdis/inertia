@@ -22,7 +22,7 @@ function getOfficialColor() {
 }
 
 function getOfficialUnit() {
-    return "HUT/D19";
+    return "D19";
 }
 
 function getClockText(displayFormat, time24h, forceUppercase) {
