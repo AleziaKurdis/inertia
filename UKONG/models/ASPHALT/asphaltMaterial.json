@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "ASPHALT_ALBEDO.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "ASPHALT_ROUGHNESS.jpg",
+         "normalMap": "ASPHALT_NORMALogl.jpg",
+         "occlusionMap": "ASPHALT_AO.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
