@@ -1063,6 +1063,29 @@
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_sound_01.mp3",
             "volume": 1.0
+        },
+        {
+            "id": "{09baa430-9265-4e7b-a9f4-a5da4fe0114c}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "SLAB",
+            "locked": true,
+            "dimensions": {
+                "x": 349.61553955078125,
+                "y": 41.72808837890625,
+                "z": 314.2309875488281
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SLAB.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
