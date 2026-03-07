@@ -8,7 +8,7 @@
         "omegaArrivalUrl": "hifi://hytrion/150.717,-9.32586,226.367/0,0.921007,0,0.389547",
         "targetPosition": {"x":144.5594024658203,"y":-8.99595832824707,"z":232.19503784179688},
         "targetRadius": 4.9293,
-        "km": 0.01,
+        "km": 0.01
     },
     {
         "displayName": "Valombra",
