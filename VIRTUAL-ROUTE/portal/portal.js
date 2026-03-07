@@ -20,6 +20,7 @@
     let portalLightID = null;
     let portalFlyZoneID = null;
     let portalDouaneID = null;
+    let portalTargetDouaneID = null;
     let portalFrontSignID = null;
     let portalSoundID = null;
     let thisEntityID;
@@ -47,11 +48,15 @@
         let virtualRoute = Script.require(ROOT + "../virtualRoute.json");
         
         let previousUrl;
+        let targetPosition = { "x": 0.0, "y": 0.0, "z": 0.0 };
+        let targetRadius = 0;
         if (portalData.isAlpha) {
             previousUrl = virtualRoute[virtualRoute.length - 1].omegaArrivalUrl;
             for (let i = 0; i < virtualRoute.length; i++) {
                 if (virtualRoute[i].placeName === portalData.placeName) {
                     destination = previousUrl;
+                    targetPosition = virtualRoute[i].targetPosition;
+                    targetRadius = virtualRoute[i].targetRadius;
                     break;
                 } else {
                     previousUrl = virtualRoute[i].omegaArrivalUrl;
@@ -62,6 +67,8 @@
             for (let i = virtualRoute.length -1; i >= 0; i--) {
                 if (virtualRoute[i].placeName === portalData.placeName) {
                     destination = previousUrl;
+                    targetPosition = virtualRoute[i].targetPosition;
+                    targetRadius = virtualRoute[i].targetRadius;
                     break;
                 } else {
                     previousUrl = virtualRoute[i].alphaArrivalUrl;
@@ -208,6 +215,7 @@
                 "shape": "Cube",
                 "parentID": entityID,
                 "name": "portal douane " + portalName,
+                "description": portalData.placeName,
                 "localPosition": {
                     "x": 0.0,
                     "y": 0.0,
@@ -221,10 +229,31 @@
                 "grab": {
                     "grabbable": false
                 },
-                "script": "",
+                "tags": [portalName],
+                "script": ROOT + "douane.js",
                 "lifetime": 43200
             }, "local");
             
+            if (portalName === "ALPHA") {
+                portalTargetDouaneID = Entities.addEntity({
+                    "type": "Shape",
+                    "shape": "Cylinder",
+                    "parentID": entityID,
+                    "name": "target douane",
+                    "description": portalData.placeName,
+                    "position": targetPosition,
+                    "alpha": 0.0,
+                    "collisionless": true,
+                    "dimensions": {"x": targetRadius * 2,"y": targetRadius * 2,"z": targetRadius * 2},
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "tags": ["TARGET"],
+                    "script": ROOT + "douane.js",
+                    "lifetime": 43200
+                }, "local");
+            }
 
             //signs 
             portalFrontSignID = Entities.addEntity({
@@ -293,6 +322,11 @@
         if (portalDouaneID !== null) {
             Entities.deleteEntity(portalDouaneID);
             portalDouaneID = null;
+        }
+        
+        if (portalTargetDouaneID !== null) {
+            Entities.deleteEntity(portalTargetDouaneID);
+            portalTargetDouaneID = null;
         }
         
         if (portalFrontSignID !== null) {
