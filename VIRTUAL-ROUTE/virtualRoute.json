@@ -2,15 +2,23 @@
     {
         "displayName": "Virtual Route Information Center",
         "placeName": "hytrion",
+        "description": "Virtual Route official start point and information center.",
+        "imageUrl": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/room/cover.jpg",
         "alphaArrivalUrl": "hifi://hytrion/138.91,-9.32518,237.961/0,-0.378151,0,0.925744",
         "omegaArrivalUrl": "hifi://hytrion/150.717,-9.32586,226.367/0,0.921007,0,0.389547",
-        "km": 0.01
+        "targetPosition": {"x":144.5594024658203,"y":-8.99595832824707,"z":232.19503784179688},
+        "targetRadius": 4.9293,
+        "km": 0.01,
     },
     {
         "displayName": "Valombra",
         "placeName": "valombra",
+        "description": "Old border post of Valombra in the green canyon.",
+        "imageUrl": "https://aleziakurdis.github.io/inertia/VALOMBRA/images/cover.jpg",
         "alphaArrivalUrl": "hifi://valombra/3962.23,4094.12,-4249.1/0,-0.354436,0,0.93508",
         "omegaArrivalUrl": "hifi://valombra/4052.72,4107.39,-3752.42/0,-0.702436,0,0.711747",
+        "targetPosition": {"x":4100.19873046875,"y":4139.6484375,"z":-3881.1181640625},
+        "targetRadius": 29.3571,
         "km": 1.6
     }
 ]
