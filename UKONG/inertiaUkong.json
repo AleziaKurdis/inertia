@@ -1086,6 +1086,58 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SLAB.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}",
+            "type": "Zone",
+            "position": {"x":-3283.67236328125,"y":2985.13671875,"z":-2807.97021484375},
+            "name": "ENTRE-LES-TRONCS_VISIBILITY ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 22.32373046875,
+                "y": 10,
+                "z": 100.091064453125
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false
+        },
+        {
+            "id": "{341a6553-ae3a-406e-a830-72aeccf92d82}",
+            "type": "Model",
+            "position": {"x":-3278.954833984375,"y":2985.461669921875,"z":-2813.864501953125},
+            "name": "GENERIC FIRE ELEMENT",
+            "locked": true,
+            "userData": "{\"volume\":0.6}",
+            "description": "Generic Fire Element(v2020.12) for Fireplace or Campfire. By Alezia Kurdis.",
+            "dimensions": {
+                "x": 0.902307391166687,
+                "y": 0.2709895074367523,
+                "z": 0.8731110692024231
+            },
+            "renderWithZones": [
+                "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "script": "https://aleziakurdis.github.io/fire_element/components/fire_manager.js",
+            "scriptTimestamp": 1772947063491,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx",
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
