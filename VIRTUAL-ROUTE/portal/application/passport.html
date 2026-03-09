@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+    passport.html
+
+    Created by Alezia Kurdis, March 8th, 2026.
+    Copyright 2026 Overte e.V.
+
+    Passport application for the Virtual Route.
+
+    Distributed under the Apache License, Version 2.0.
+    See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            const channel = "virtualRoute.application.ak.passport";
+            let passportList = [];
+            let sorting = "OMEGA";
+            
+            //Paths
+            const thisPageName = "passport.html";
+            const currentPath = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            const ROOTPATH = currentPath.replace(thisPageName, "");
+
+            let virtualRoute = [];
+
+            EventBridge.scriptEventReceived.connect(function(message){
+                let messageObj;
+                try {
+                    messageObj = JSON.parse(message);
+                } catch (e) {
+                    return;
+                }
+                if (messageObj.channel === channel) {
+                    if (messageObj.action === "PASSPORT_DATA") {
+                        let passportData = messageObj.data;
+                        sorting = passportData.sort;
+                        passportList = passportData.list;
+                        virtualRoute = passportData.virtualRoute;
+                        generateList();
+                    }
+                }
+            });
+            
+            function generateList() {
+                let nbrVisited = 0;
+                let kmDone = 0;
+                let i;
+                let result;
+                let sortbar = "DIRECTION: <span class = 'sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'>" + sorting + "</span>";
+                let content = "";
+                let lineNo = 0;
+                if (sorting === "OMEGA") {
+                    for (i = 0; i < virtualRoute.length; i++) {
+                        lineNo++;
+                        result = genLineOfList(lineNo, virtualRoute[i]);
+                        if (result.completed) {
+                            nbrVisited++;
+                            kmDone = kmDone + result.km;
+                        }
+                        content = content + result.content;
+                    }
+                } else {
+                    for (i = virtualRoute.length - 1; i > -1; i--) {
+                        lineNo++;
+                        result = genLineOfList(lineNo, virtualRoute[i]);
+                        if (result.completed) {
+                            nbrVisited++;
+                            kmDone = kmDone + result.km;
+                        }
+                        content = content + result.content;
+                    }
+                }
+                let completionPercent = Math.round((nbrVisited/virtualRoute.length) * 100);
+
+                document.getElementById("sortbar").innerHTML = sortbar;
+                document.getElementById("completion").innerHTML = "Completion: " + completionPercent + " %";
+                document.getElementById("totalKM").innerHTML = "Distance: " +kmDone + " km";
+                document.getElementById("list").innerHTML = content;
+                if (sorting === "OMEGA") {
+                    setGradient(document.getElementById("listContainer"), 180, "#6667AB", "#FFFFFF");
+                    document.getElementById("sortbar").style.backgroundColor = "#6667AB";
+                    document.getElementById("sortbar").style.color = "#FFFFFF";
+                } else {
+                    setGradient(document.getElementById("listContainer"), 0, "#6667AB", "#FFFFFF");
+                    document.getElementById("sortbar").style.backgroundColor = "#FFFFFF";
+                    document.getElementById("sortbar").style.color = "#6667AB";
+                }
+            }
+            
+            function setGradient(element, angle, color1, color2) {
+                element.style.backgroundImage = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+            }
+            
+            function genLineOfList(no, etape) {
+                let userInfo = getUserInfo(etape.placeName);
+                
+                let km, completed, stamp, kmString;
+                if (userInfo.completionStatus) {
+                    km = etape.km * userInfo.numberOfCompletion;
+                    kmString = "(" + userInfo.numberOfCompletion + ")<br>" + km + " km";
+                    stamp = " [STAMPED]";
+                } else {
+                    km = 0;
+                    kmString = "";
+                    stamp = "";
+                }
+                
+                let line = "<table style='width:90%;'><tr>";
+                line += "<td class='" + sorting + " numeroLine'>";
+                line += no;
+                line += "</td>";
+                line += "<td style='width: auto;'>";
+                line += "<img src='" + etape.imageUrl + "' style='height: 80px;'>";
+                line += "</td>";
+                line += "<td>";
+                line += "<table><tr><td>" + etape.displayName + "</td><td>" + etape.km + " km</td></tr><tr><td colspan='2'>" + etape.description + "</td></tr></table>";
+                line += "</td>";
+                line += "<td>";
+                line += stamp + kmString;
+                line += "</td>";
+                line += "</tr></table>";
+                return {
+                    "completed": userInfo.completionStatus,
+                    "km": km,
+                    "content": line
+                };
+            }
+            
+            function getUserInfo(placeName) {
+                let toReturn = {"numberOfCompletion": false};
+                for (let i = 0; i < passportList.length; i++) {
+                    if (passportList[i].placeName === placeName) {
+                        toReturn = passportList[i];
+                        break;
+                    }
+                }
+                
+                return toReturn;
+            }
+            
+            function changeSort() {
+                if (sorting === "OMEGA") {
+                    sorting = "ALPHA";
+                } else {
+                    sorting = "OMEGA";
+                }
+
+                let messageToSend = {
+                    "channel": channel,
+                    "action": "SET_SORT",
+                    "sorting": sorting
+                };
+                EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+
+                generateList();
+            }
+        </script>
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                background: #222222;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                color:#bbbbbb;
+            }
+            
+            td.ALPHA {
+                background-color: #FFFFFF;
+                color: #6667AB;
+                border: 0;
+            }
+            
+            td.OMEGA {
+                background-color: #6667AB;
+                color: #FFFFFF;
+                border: 0;
+            }
+            #listContainer {
+                background-color: #000000;
+                text-align: right;
+                width: 100%;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+                border: 0;
+            }
+            td {
+                width: 100%;
+                margin: 0;
+                border: 0;
+                text-align: left;
+            }
+            td.numeroLine {
+                font-size: 10px;
+                width: 25px;
+                padding: 3px;
+            }
+            #sortbar {
+                border: 0px;
+                padding: 2px;
+                margin: 0px;
+                font-size: 10px;
+            }
+            
+            .sortingBtn:focus {
+                outline: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan='2'>Virtual Route</td>
+            </tr>
+            <tr>
+                <td style="width: 50%"><div id="totalKM"></div></td>
+                <td style="width: 50%"><div id="completion"></div></td>
+            </tr>
+            <tr>
+                <td colspan='2' style='text-align: left; padding: 0;'><div id="sortbar"></div></td>
+            </tr>
+            <tr>
+                <td colspan='2' id="listContainer">
+                    <div id="list"></div>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function initiate() {
+                let messageToSend = {
+                    "channel": channel,
+                    "action": "UI_READY"
+                };
+                EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+            }
+            
+            initiate();
+        </script>
+    </body>
+</html>

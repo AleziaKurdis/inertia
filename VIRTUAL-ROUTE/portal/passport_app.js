@@ -15,10 +15,10 @@
     
     var APP_NAME = "PASSPORT";
     var APP_URL = ROOT + "application/passport.html";
-    var APP_ICON_INACTIVE = ROOT + "application/icon_orange.svg";
-    var APP_ICON_ACTIVE = ROOT + "application/icon_black.svg";
+    var APP_ICON_INACTIVE = ROOT + "application/icon_inactive.svg";
+    var APP_ICON_ACTIVE = ROOT + "application/icon_active.svg";
     var appStatus = false;
-    var ICON_CAPTION_COLOR = "#ffae00";
+    var ICON_CAPTION_COLOR = "#6667AB";
     var button;
     var isRunning = false;
     
