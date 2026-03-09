@@ -38,8 +38,8 @@
             });
             
             function generateList(list, sort) {
-                alert(virtualRoute);
-                alert(list);
+                alert(JSON.stringify(virtualRoute));
+                alert(JSON.stringify(list));
                 alert(sort);
             }
             
@@ -99,7 +99,6 @@ Image Name description (walk) length |COMPSTAMP n|kilometrage<br>
                 "action": "UI_READY"
             };
             EventBridge.emitWebEvent(JSON.stringify(message));
-            alert(virtualRoute);
         </script>
     </body>
 </html>
