@@ -35,7 +35,8 @@
     
     var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
     
-
+    const virtualRoute = Script.require(ROOT + "../virtualRoute.json");
+    
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
@@ -90,6 +91,7 @@
                 } else if (instruction.action === "UI_READY") {
                     
                     var payload = {
+                        "virtualRoute": virtualRoute,
                         "list": Settings.getValue(PASSPORT_SETTING, []),
                         "sort": Settings.getValue(PASSPORT_SORT_SETTING, "OMEGA"),
                     };

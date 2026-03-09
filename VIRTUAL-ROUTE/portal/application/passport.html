@@ -23,7 +23,7 @@
             const currentPath = window.location.protocol + "//" + window.location.host + window.location.pathname;
             const ROOTPATH = currentPath.replace(thisPageName, "");
 
-            const virtualRoute = fetch("../../virtualRoute.json");
+            let virtualRoute = [];
 
             EventBridge.scriptEventReceived.connect(function(message){
                 messageObj = JSON.parse(message);
@@ -32,6 +32,7 @@
                         let passportData = messageObj.data;
                         sorting = passportData.sort;
                         passportList = passportData.list;
+                        virtualRoute = passportData..virtualRoute;
                         generateList();
                     }
                 }
