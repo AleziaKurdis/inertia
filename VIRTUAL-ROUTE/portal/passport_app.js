@@ -18,7 +18,7 @@
     var APP_ICON_INACTIVE = ROOT + "application/icon_inactive.svg";
     var APP_ICON_ACTIVE = ROOT + "application/icon_active.svg";
     var appStatus = false;
-    var ICON_CAPTION_COLOR = "#6667AB";
+    var ICON_CAPTION_COLOR = "#a8a9f7";
     var button;
     var isRunning = false;
     
