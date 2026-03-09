@@ -1123,11 +1123,7 @@
             "locked": true,
             "userData": "{\"volume\":0.6}",
             "description": "Generic Fire Element(v2020.12) for Fireplace or Campfire. By Alezia Kurdis.",
-            "dimensions": {
-                "x": 0.902307391166687,
-                "y": 0.2709895074367523,
-                "z": 0.8731110692024231
-            },
+            "dimensions": {"x":1.1714376211166382,"y":0.35181725025177,"z":1.133533000946045},
             "renderWithZones": [
                 "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
             ],
