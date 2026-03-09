@@ -32,15 +32,15 @@
                         let passportData = messageObj.data;
                         sorting = passportData.sort;
                         passportList = passportData.list;
-                        generateList(passportList, sorting);
+                        generateList();
                     }
                 }
             });
             
-            function generateList(list, sort) {
+            function generateList() {
                 alert(JSON.stringify(virtualRoute));
-                alert(JSON.stringify(list));
-                alert(sort);
+                alert(JSON.stringify(passportList));
+                alert(sorting);
             }
             
             function changeSort() {
@@ -57,7 +57,7 @@
                 };
                 EventBridge.emitWebEvent(JSON.stringify(messageToSent));
 
-                generateList(passportList, sorting);
+                generateList();
             }
         </script>
         <style>
