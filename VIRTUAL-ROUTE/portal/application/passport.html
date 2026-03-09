@@ -26,7 +26,12 @@
             let virtualRoute = [];
 
             EventBridge.scriptEventReceived.connect(function(message){
-                messageObj = JSON.parse(message);
+                let messageObj;
+                try {
+                    messageObj = JSON.parse(message);
+                } catch (e) {
+                    return;
+                }
                 if (messageObj.channel === channel) {
                     if (messageObj.action === "PASSPORT_DATA") {
                         let passportData = messageObj.data;
@@ -46,17 +51,17 @@
             
             function changeSort() {
                 if (sorting === "OMEGA") {
-                    sorting === "ALPHA";
+                    sorting = "ALPHA";
                 } else {
-                    sorting === "OMEGA";
+                    sorting = "OMEGA";
                 }
 
-                let messageToSent = {
+                let messageToSend = {
                     "channel": channel,
                     "action": "SET_SORT",
                     "sorting": sorting
                 };
-                EventBridge.emitWebEvent(JSON.stringify(messageToSent));
+                EventBridge.emitWebEvent(JSON.stringify(messageToSend));
 
                 generateList();
             }
@@ -95,11 +100,15 @@ Image Name description (walk) length |COMPSTAMP n|kilometrage<br>
         <div id="completion"></div>
         <div id="list"></div>
         <script>
-            let message = {
-                "channel": channel,
-                "action": "UI_READY"
-            };
-            EventBridge.emitWebEvent(JSON.stringify(message));
+            function initiate() {
+                let messagetoSend = {
+                    "channel": channel,
+                    "action": "UI_READY"
+                };
+                EventBridge.emitWebEvent(JSON.stringify(messagetoSend));
+            }
+            
+            initiate();
         </script>
     </body>
 </html>
