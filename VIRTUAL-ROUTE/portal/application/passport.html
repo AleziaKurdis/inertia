@@ -115,7 +115,7 @@
                 line += "<div class='square'><img src='" + etape.imageUrl + "'></div>";
                 line += "</td>";
                 line += "<td class='placeInfo'>";
-                line += "<table><tr><td class='displayName'>" + etape.displayName + "</td><td class='distance'>" + etape.km + " km</td></tr><tr><td colspan='2' class='description'>" + etape.description + "</td></tr></table>";
+                line += "<table style='width: 80px;'><tr><td class='displayName'>" + etape.displayName + "</td><td class='distance'>" + etape.km + " km</td></tr><tr><td colspan='2' class='description'>" + etape.description + "</td></tr></table>";
                 line += "</td>";
                 line += "<td class='stampInfo'>";
                 line += stamp + kmString;
@@ -324,7 +324,7 @@
             }
             #list {
                 width: 100%;
-                height: 600px;
+                height: 590px;
                 overflow-y: scroll;
                 overflow-x: hidden;
             }
