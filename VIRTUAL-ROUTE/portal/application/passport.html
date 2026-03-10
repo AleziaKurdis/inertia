@@ -48,7 +48,7 @@
                 let kmDone = 0;
                 let i;
                 let result;
-                let sortbar = "DIRECTION: <span class = 'sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'>" + sorting + "</span>";
+                let sortbar = "DIRECTION: <span class = 'sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'><img src='" + sorting + ".jpg'></span>";
                 let content = "";
                 let lineNo = 0;
                 if (sorting === "OMEGA") {
@@ -229,6 +229,9 @@
             
             .sortingBtn:focus {
                 outline: none;
+            }
+            span.sortingBtn {
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
             }
             
             #header {
