@@ -112,7 +112,7 @@
                 line += no;
                 line += "</td>";
                 line += "<td style='width: auto;'>";
-                line += "<img src='" + etape.imageUrl + "' style='height: 80px;'>";
+                line += "<div class="square"><img src='" + etape.imageUrl + "'></div>";
                 line += "</td>";
                 line += "<td>";
                 line += "<table><tr><td class='displayName'>" + etape.displayName + "</td><td class='distance'>" + etape.km + " km</td></tr><tr><td colspan='2' class='description'>" + etape.description + "</td></tr></table>";
@@ -256,7 +256,8 @@
                 font-family: FiraSans-Regular;
                 font-size: 11px;
                 padding: 2px;
-                
+                width: 100%
+                text-align: right;
             }
             td.displayName {
                 font-family: FiraSans-SemiBold;
@@ -276,6 +277,16 @@
                 padding: 2px;
                 color: #CC0000;
             }
+            .square {
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+            }
+
+            .square img {
+                height: 80px;
+                object-fit: cover;
+            }
         </style>
     </head>
     <body>
@@ -284,8 +295,8 @@
                 <td colspan='2'><div id="header"></div></td>
             </tr>
             <tr>
-                <td style="width: 25%"><div class="golbalInfo" id="totalKM"></div></td>
-                <td style="width: 75%"><div class="golbalInfo" id="completion"></div></td>
+                <td style="width: 75%"><div class="golbalInfo" id="totalKM"></div></td>
+                <td style="width: 25%"><div class="golbalInfo" id="completion"></div></td>
             </tr>
             <tr>
                 <td colspan='2' style='text-align: left; padding: 0; vertical-align: middle;'><div id="sortbar"></div></td>
