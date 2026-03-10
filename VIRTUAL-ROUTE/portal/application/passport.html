@@ -48,7 +48,7 @@
                 let kmDone = 0;
                 let i;
                 let result;
-                let sortbar = "DIRECTION: <span class = 'sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'><img src='" + sorting + ".jpg'></span>";
+                let sortbar = "<span class = 'sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'>&#8645; <img id='sort' src='" + sorting + ".jpg'></span>";
                 let content = "";
                 let lineNo = 0;
                 if (sorting === "OMEGA") {
@@ -230,7 +230,7 @@
             .sortingBtn:focus {
                 outline: none;
             }
-            span.sortingBtn {
+            #sort {
                 box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
             }
             
@@ -246,18 +246,19 @@
             }
             div.golbalInfo {
                 font-family: FiraSans-Regular;
-                font-size: 10px;
+                font-size: 11px;
                 padding: 2px;
                 
             }
             td.displayName {
                 font-family: FiraSans-SemiBold;
-                font-size: 12px;
+                font-size: 14px;
                 padding: 2px;
+                color: #000000;
             }
             td.distance {
                 font-family: FiraSans-Regular;
-                font-size: 11px;
+                font-size: 12px;
                 padding: 2px;
                 color: #CC0000;
             }
