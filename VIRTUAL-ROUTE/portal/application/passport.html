@@ -107,7 +107,7 @@
                     stamp = "";
                 }
                 
-                let line = "<table style='width:90%;'><tr>";
+                let line = "<table class='etape'><tr>";
                 line += "<td class='" + sorting + " numeroLine'>";
                 line += no;
                 line += "</td>";
@@ -206,6 +206,13 @@
                 border-collapse: collapse;
                 margin: 0;
                 border: 0;
+            }
+            table.etape {
+                width: 90%;
+                border-collapse: collapse;
+                margin: 0;
+                border: 0;
+                background-color: #CCCCCC;
             }
             td {
                 font-family: FiraSans-Regular;
