@@ -117,7 +117,7 @@
                 line += "<td>";
                 line += "<table><tr><td class='displayName'>" + etape.displayName + "</td><td class='distance'>" + etape.km + " km</td></tr><tr><td colspan='2' class='description'>" + etape.description + "</td></tr></table>";
                 line += "</td>";
-                line += "<td>";
+                line += "<td class='stampInfo'>";
                 line += stamp + kmString;
                 line += "</td>";
                 line += "</tr></table>";
@@ -296,6 +296,12 @@
             .square img {
                 height: 80px;
                 object-fit: cover;
+            }
+            td.stampInfo {
+                font-family: FiraSans-Regular;
+                font-size: 12px;
+                padding: 2px;
+                color: #234295;
             }
         </style>
     </head>
