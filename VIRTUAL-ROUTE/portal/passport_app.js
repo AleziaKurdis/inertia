@@ -23,7 +23,6 @@
     var isRunning = false;
     
     var thisPosition;
-    var processTimer = 0;
     var UPDATE_TIMER_INTERVAL = 5000;
     
     var channel = "virtualRoute.application.ak.passport";
@@ -37,52 +36,62 @@
     
     const virtualRoute = Script.require(ROOT + "../virtualRoute.json");
     
+    let timerStatus = false;
+    let timer;
+    
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
         thisPosition = properties.position;
         
-        var today = new Date();
-        processTimer = today.getTime();
-        Script.update.connect(myTimer); 
+        timer = Script.setInterval(checkDistance, UPDATE_TIMER_INTERVAL);
+        timerStatus = true;
     }
 
-    function myTimer(deltaTime) {
-        var today = new Date();
-        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+    this.unload = function(entityID) {
+        cleanup();
+    }
 
-            if (Vec3.distance(MyAvatar.position, thisPosition) > 10000) {
-                if (isRunning) {
-                    tablet.screenChanged.disconnect(onScreenChanged);
+    function checkDistance() {
+        if (Vec3.distance(MyAvatar.position, thisPosition) > 8000) {
+            if (isRunning) {
+                tablet.screenChanged.disconnect(onScreenChanged);
+                if (button) {
+                    button.clicked.disconnect(clicked);
                     tablet.removeButton(button);
-                    isRunning = false;
+                    button = null;
                 }
-            } else {
-                if (!isRunning) {
-                    tablet.screenChanged.connect(onScreenChanged);
-
-                    button = tablet.addButton({
-                        "text": APP_NAME,
-                        "icon": APP_ICON_INACTIVE,
-                        "activeIcon": APP_ICON_ACTIVE,
-                        "sortOrder": 0,
-                        "captionColor": ICON_CAPTION_COLOR
-                    });
-                    isRunning = true;
-                    
-                    button.clicked.connect(clicked);
-                }
+                isRunning = false;
             }
-            
-            today = new Date();
-            processTimer = today.getTime();
-        }  
-    } 
+        } else {
+            if (!isRunning) {
+                tablet.screenChanged.connect(onScreenChanged);
+
+                button = tablet.addButton({
+                    "text": APP_NAME,
+                    "icon": APP_ICON_INACTIVE,
+                    "activeIcon": APP_ICON_ACTIVE,
+                    "sortOrder": 0,
+                    "captionColor": ICON_CAPTION_COLOR
+                });
+                isRunning = true;
+                
+                button.clicked.connect(clicked);
+            }
+        }
+    }
 
     function onAppWebEventReceived(message) {
         if (typeof message === "string") {
             var d = new Date();
             var n = d.getTime();
-            var instruction = JSON.parse(message);
+
+            var instruction;
+            try {
+                instruction = JSON.parse(message);
+            } catch(e) {
+                return;
+            }
+            
             if (instruction.channel === channel) {
                 if (instruction.action === "SET_SORT" && (n - timestamp) > INTERCALL_DELAY) {
                     d = new Date();
@@ -128,6 +137,7 @@
     }
 
     function onScreenChanged(type, url) {
+        var colorCaption;
         if (type === "Web" && url.indexOf(APP_URL) !== -1) {
             colorCaption = "#000000";
             appStatus = true;
@@ -142,19 +152,32 @@
         });
     }
 
-    
+    function onDomainChanged(domain) {
+        cleanup();
+        Window.domainChanged.disconnect(onDomainChanged);
+    }
+
+    Window.domainChanged.connect(onDomainChanged);
 
     function cleanup() {
         if (appStatus) {
             tablet.gotoHomeScreen();
             tablet.webEventReceived.disconnect(onAppWebEventReceived);
+            appStatus = false;
         }
         if (isRunning) {
             tablet.screenChanged.disconnect(onScreenChanged);
-            tablet.removeButton(button);
+            if (button) {
+                button.clicked.disconnect(clicked);
+                tablet.removeButton(button);
+                button = null;
+            }
             isRunning = false;
         }
-        Script.update.disconnect(myTimer);
+        if (timerStatus) {
+            Script.clearInterval(timer);
+            timerStatus = false;
+        }
     }
 
     Script.scriptEnding.connect(cleanup);
