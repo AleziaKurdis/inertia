@@ -21,6 +21,7 @@
     let portalFlyZoneID = null;
     let portalDouaneID = null;
     let portalTargetDouaneID = null;
+    let passortAppID = null;
     let portalFrontSignID = null;
     let portalSoundID = null;
     let thisEntityID;
@@ -253,6 +254,20 @@
                     "script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
+                
+                passortAppID = Entities.addEntity({
+                    "type": "Empty",
+                    "parentID": entityID,
+                    "name": "Passport App",
+                    "localPosition": {"x":0.0,"y":0.0,"z":0.0},
+                    "dimensions": {"x":6.0,"y":6.0,"z":6.0},
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "script": ROOT + "passport_app.js",
+                    "lifetime": 43200
+                }, "local");
             }
 
             //signs 
@@ -327,6 +342,11 @@
         if (portalTargetDouaneID !== null) {
             Entities.deleteEntity(portalTargetDouaneID);
             portalTargetDouaneID = null;
+        }
+        
+        if (passortAppID !== null) {
+            Entities.deleteEntity(passortAppID);
+            passortAppID = null;
         }
         
         if (portalFrontSignID !== null) {
