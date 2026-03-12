@@ -913,7 +913,7 @@
             "id": "{97fb4f99-24ab-4f8c-a92e-010f1d0a5312}",
             "type": "Model",
             "position": {"x":-3000,"y":3000,"z":-3000},
-            "name": "RUINS",
+            "name": "BUILDINGS",
             "locked": true,
             "dimensions": {
                 "x": 280.00390625,
@@ -929,7 +929,7 @@
             "damping": 0,
             "angularDamping": 0,
             "shapeType": "static-mesh",
-            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/RUINS.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/BUILDINGS.fst",
             "useOriginalPivot": true
         },
         {
