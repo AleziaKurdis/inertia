@@ -1130,14 +1130,10 @@
         {
             "id": "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}",
             "type": "Zone",
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-2678.76171875,"y":3133.2041015625,"z":-3308.9970703125},
             "name": "CITY_AREA_VISIBILITY ZONE",
             "locked": true,
-            "dimensions": {
-                "x": 30,
-                "y": 30,
-                "z": 30
-            },
+            "dimensions": {"x":462.1169128417969,"y":303.141845703125,"z":752.391357421875},
             "grab": {
                 "grabbable": false
             },
@@ -1152,7 +1148,7 @@
                 },
                 "castShadows": true
             },
-            "flyingAllowed": false,
+            "flyingAllowed": true,
             "ghostingAllowed": false
         },
         {
@@ -1161,7 +1157,7 @@
             "position": {"x":-3000,"y":3000,"z":-3000},
             "name": "SPRUCES",
             "locked": true,
-            "dimensions": {"x":635.0929565429688,"y":133.3920135498047,"z":909.8233642578125},
+            "dimensions": {"x":346.2716064453125,"y":34.96735763549805,"z":505.1314697265625},
             "renderWithZones": [
                 "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
