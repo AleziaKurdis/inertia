@@ -1126,6 +1126,54 @@
             "scriptTimestamp": 1772947063491,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx"
+        },
+        {
+            "id": "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}",
+            "type": "Zone",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "CITY_AREA_VISIBILITY ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 30,
+                "y": 30,
+                "z": 30
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false
+        },
+        {
+            "id": "{387b7c55-6836-4e05-86c3-941977c1ce8d}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "SPRUCES",
+            "locked": true,
+            "dimensions": {"x":635.0929565429688,"y":133.3920135498047,"z":909.8233642578125},
+            "renderWithZones": [
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/spruces.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
