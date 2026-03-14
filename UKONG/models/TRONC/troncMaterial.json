@@ -1,0 +1,17 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[
+			0.6,
+        	0.49019607843137253,
+        	0.37254901960784315
+         ],
+         "albedoMap": "bark_brown_02_diff_512.jpg",
+         "metallic": 0.01,
+         "roughness": 0.65,
+         "normalMap": "bark_brown_02_nor_512.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
