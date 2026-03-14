@@ -1130,16 +1130,16 @@
         {
             "id": "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}",
             "type": "Zone",
-            "position": {"x":-2678.76171875,"y":3133.2041015625,"z":-3308.9970703125},
+            "position": {"x":-2678.76171875,"y":3133.2041015625,"z":-3219.802734375},
             "name": "CITY_AREA_VISIBILITY ZONE",
             "locked": true,
-            "dimensions": {"x":462.1169128417969,"y":303.141845703125,"z":752.391357421875},
+            "dimensions": {"x":462.1169128417969,"y":303.141845703125,"z":930.780029296875},
             "grab": {
                 "grabbable": false
             },
             "damping": 0,
             "angularDamping": 0,
-            "shapeType": "cylinder-y",
+            "shapeType": "box",
             "keyLight": {
                 "direction": {
                     "x": 0,
