@@ -1,0 +1,18 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[
+			1,
+        	1,
+        	1
+         ],
+         "albedoMap": "FABRIC_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "FARBRIC_roughness.jpg",
+         "normalMap": "FABRIC_normal.jpg",
+         "occlusionMap": "FABRIC_ao.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
