@@ -1346,6 +1346,35 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/swampCabin.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{c650fb6a-df67-440a-90bd-dd495cde2084}",
+            "type": "Model",
+            "name": "Stone ring",
+            "locked": true,
+            "position": {"x":-3278.954833984375,"y":2985.461669921875,"z":-2813.864501953125},
+            "dimensions": {
+                "x": 1,
+                "y": 0.35,
+                "z": 1
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "renderWithZones": [
+                "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/stoneRing.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
