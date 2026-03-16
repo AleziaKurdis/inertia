@@ -1170,6 +1170,182 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/spruces.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}",
+            "type": "Zone",
+            "position": {"x":-2602.75439453125,"y":2989.205322265625,"z":-3162.075927734375},
+            "name": "UNDERSLAB VISIBILTY ZONE",
+            "locked": true,
+            "dimensions": {"x":118.390380859375,"y":22.5,"z":182.7626953125},
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 33,
+                    "green": 41,
+                    "blue": 74
+                },
+                "intensity": 0.20000000298023224,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true,
+                "shadowBias": 0.019999999552965164,
+                "shadowMaxDistance": 120
+            },
+            "ambientLight": {
+                "ambientIntensity": 0.10000000149011612,
+                "ambientURL": "h",
+                "ambientColor": {
+                    "red": 2,
+                    "green": 2,
+                    "blue": 5
+                }
+            },
+            "skybox": {
+                "color": {
+                    "red": 2,
+                    "green": 2,
+                    "blue": 5
+                },
+                "url": "h"
+            },
+            "haze": {
+                "hazeColor": {
+                    "red": 6,
+                    "green": 16,
+                    "blue": 26
+                }
+            },
+            "bloom": {
+                "bloomIntensity": 0.5
+            },
+            "normalMapAttenuation": {
+                "min": 70,
+                "max": 200
+            },
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "enabled",
+            "bloomMode": "enabled",
+            "normalMapAttenuationMode": "enabled"
+        },
+        {
+            "id": "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}",
+            "type": "Zone",
+            "lastEdited": 1773632628024653,
+            "name": "SWAMP VISIBILITY ZONE",
+            "locked": true,
+            "position": {"x":-3244.4697265625,"y":3058.3916015625,"z":-3240.494140625},
+            "dimensions": {
+                "x": 518.948974609375,
+                "y": 135.247802734375,
+                "z": 359.85986328125
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            }
+        },
+        {
+            "id": "{e9219074-1345-4697-862d-2b48055fcd09}",
+            "type": "Model",
+            "name": "GENERIC FIRE ELEMENT",
+            "locked": true,
+            "userData": "{\n    \"volume\": 0.6\n}\n",
+            "description": "Generic Fire Element(v2020.12) for Fireplace or Campfire. By Alezia Kurdis.",
+            "position": {"x":-3170.10498046875,"y":3006.642333984375,"z":-3196.5654296875},
+            "dimensions": {
+                "x": 0.7322363257408142,
+                "y": 0.21991217136383057,
+                "z": 0.708543062210083
+            },
+            "renderWithZones": [
+                "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/fire_element/components/fire_manager.js",
+            "modelURL": "https://aleziakurdis.github.io/fire_element/components/FIRE.fbx",
+            "useOriginalPivot": false
+        },
+        {
+            "id": "{c01b754a-f670-47c9-b916-a734bc777c3d}",
+            "type": "Model",
+            "name": "Sign - Gutt Eaton's Cove",
+            "locked": true,
+            "position": {"x":-3172.3779296875,"y":3005.485107421875,"z":-3190.090087890625},
+            "dimensions": {
+                "x": 0.8480716943740845,
+                "y": 1.872318983078003,
+                "z": 0.039175525307655334
+            },
+            "rotation": {
+                "x": 0.011273493058979511,
+                "y": 0.9882441163063049,
+                "z": -0.015924856066703796,
+                "w": 0.15163451433181763
+            },
+            "renderWithZones": [
+                "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/GuttEatonCove.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{4eab14e9-4733-4de6-831d-be1a40cb1539}",
+            "type": "Model",
+            "name": "GUTT EATON'S COVE",
+            "locked": true,
+            "position": {"x":-3168.82666015625,"y":3005.167724609375,"z":-3195.421875},
+            "dimensions": {
+                "x": 16.089757919311523,
+                "y": 9.055517196655273,
+                "z": 5.159334182739258
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": -0.7071068286895752
+            },
+            "renderWithZones": [
+                "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/swampCabin.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
