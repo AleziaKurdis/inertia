@@ -14,61 +14,62 @@
     var thisEntity;
     var renderWithZones;
     var entitiesToDelete = [];
+    const COORD_REFERENCE = {"x": -3000,"y": 3000,"z": -3000};
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
         
         renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
-
+        
         var seats = [
             {   //GUTT EATON seat 1
-                "localPosition": {"x": 107.3726,"y": 31.3979,"z": 126.6627},
-                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+                "position": {"x":-3168.818359375,"y":3006.777099609375,"z":-3195.427001953125},
+                "localRotation": {"x":0,"y":-0.9238796234130859,"z":0,"w":0.3826834559440613}
             },
             {   //GUTT EATON seat 2
-                "localPosition": {"x": 106.5962,"y": 31.3979,"z": 126.6899},
-                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+                "position": {"x":-3169.631591796875,"y":3006.777099609375,"z":-3195.15283203125},
+                "localRotation": {"x":0,"y":1,"z":0,"w":-4.371138828673793e-8}
             },
             {   //GUTT EATON seat 3
-                "localPosition": {"x": 105.9878,"y": 31.3979,"z": 126.7109},
-                "localRotation": {"x":0,"y":0.9998478293418884,"z":0,"w":-0.0174524188041687}
+                "position": {"x":-3170.218505859375,"y":3006.777099609375,"z":-3195.15283203125},
+                "localRotation": {"x":0,"y":1,"z":0,"w":-4.371138828673793e-8}
             },
             {   //GUTT EATON seat 4
-                "localPosition": {"x": 106.0835,"y": 31.3979,"z": 128.6123},
-                "localRotation": {"x":0,"y":-0.0174524188041687,"z":0,"w":-0.9998478293418884}
+                "position": {"x":-3168.557861328125,"y":3006.777099609375,"z":-3196.238525390625},
+                "localRotation": {"x":0,"y":0.7071067690849304,"z":0,"w":-0.70710688829422}
             },
             {   //GUTT EATON seat 5
-                "localPosition": {"x": 106.7495,"y": 31.3979,"z": 128.5891},
-                "localRotation": {"x":0,"y":-0.0174524188041687,"z":0,"w":-0.9998478293418884}
+                "position": {"x":-3168.557861328125,"y":3006.777099609375,"z":-3196.845703125},
+                "localRotation": {"x":0,"y":0.7071067690849304,"z":0,"w":-0.70710688829422}
             },
             {   //GUTT EATON seat 6
-                "localPosition": {"x": 107.4365,"y": 31.3979,"z": 128.5540},
-                "localRotation": {"x":0,"y":-0.0174524188041687,"z":0,"w":-0.9998478293418884}
+                "position": {"x":-3169.534423828125,"y":3006.777099609375,"z":-3197.93798828125},
+                "localRotation": {"x":0,"y":-0.1908089816570282,"z":0,"w":0.9816271662712097}
             },
             {   //DEAD TRUNK seat 1
-                "localPosition": {"x": 104.5996,"y": 31.3979,"z": 125.1965},
-                "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}
+                "position": {"x":-3279.574462890625,"y":2985.98,"z":-2815.010009765625},
+                "localRotation": {"x": 0,"y": 0.22495101392269135,"z": 0,"w": 0.9743700623512268}
             },
             {   //DEAD TRUNK seat 2
-                "localPosition": {"x": 104.5830,"y": 31.3979,"z": 125.9741},
-                "localRotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752}
+                "position": {"x":-3278.900146484375,"y":2985.98,"z":-2815.253173828125},
+                "localRotation": {"x": 0,"y": 0.008726507425308228,"z": 0,"w": 0.9999619722366333}
             },
             {   //DEAD TRUNK seat 3
-                "localPosition": {"x": 102.9448,"y": 31.3979,"z": 125.9741},
-                "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}
+                "position": {"x":-3278.704345703125,"y":2985.98,"z":-2812.366943359375},
+                "localRotation": {"x": 0,"y": -0.9969174265861511,"z": 0,"w": 0.07845912128686905}
             },
             {   //DEAD TRUNK seat 4
-                "localPosition": {"x": 102.9600,"y": 31.3979,"z": 125.1394},
-                "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}
+                "position": {"x":-3279.454345703125,"y":2985.98,"z":-2812.6484375},
+                "localRotation": {"x": 0,"y": -0.9848077893257141,"z": 0,"w": -0.1736481487751007}
             },
             {   //DEAD TRUNK seat 5
-                "localPosition": {"x": 102.9600,"y": 31.3979,"z": 125.1394},
-                "localRotation": {"x":0,"y":0.7071068286895752,"z":0,"w":-0.7071068286895752}
+                "position": {"x":-3278.161865234375,"y":2985.98,"z":-2812.8505859375},
+                "localRotation": {"x": 0,"y": -0.9510565400123596,"z": 0,"w": 0.3090170621871948}
             }
         ];
         
         for (let t = 0; t < seats.length; t++ ) {
-            entitiesToDelete.push(generateSeat(seats[t].localPosition, seats[t].localRotation));
+            entitiesToDelete.push(generateSeat(Vec3.subtract(seats[t].position, COORD_REFERENCE), seats[t].localRotation));
         }
     }
 
