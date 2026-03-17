@@ -1375,6 +1375,34 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/stoneRing.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a7a6eed7-730d-47d6-b082-5abbe84b964b}",
+            "type": "Model",
+            "name": "Sign - Dead Trunk Hearth",
+            "locked": true,
+            "position": {"x":-3278.954833984375,"y":2985.461669921875,"z":-2813.864501953125},
+            "dimensions": {
+                "x": 0.8480716943740845,
+                "y": 1.872318983078003,
+                "z": 0.039175525307655334
+            },
+            "rotation": {
+                "x": 0.011273493058979511,
+                "y": 0.9882441163063049,
+                "z": -0.015924856066703796,
+                "w": 0.15163451433181763
+            },
+            "renderWithZones": [
+                "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/deadTrunkHearth.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
