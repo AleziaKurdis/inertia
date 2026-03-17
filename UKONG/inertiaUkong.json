@@ -1536,6 +1536,60 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{2f059b77-bdfd-4b6c-ba7f-35f5fab1d3c2}",
+            "type": "Zone",
+            "position": {"x":-3279.124267578125,"y":2986.4716796875,"z":-2814.125},
+            "name": "FLYZONE 4 SEAT - TRUNC",
+            "locked": true,
+            "dimensions": {
+                "x": 5.338991165161133,
+                "y": 5.338991165161133,
+                "z": 5.338991165161133
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": true
+        },
+        {
+            "id": "{c290dc00-504a-4d1b-bde9-e58c5c73b4ae}",
+            "type": "Zone",
+            "position": {"x":-3170.42822265625,"y":3007.2626953125,"z":-3196.655517578125},
+            "name": "FLYZONE 4 SEAT - SWAMP",
+            "locked": true,
+            "dimensions": {
+                "x": 5.338991165161133,
+                "y": 5.338991165161133,
+                "z": 5.338991165161133
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
