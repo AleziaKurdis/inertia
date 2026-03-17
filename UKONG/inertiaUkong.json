@@ -584,7 +584,7 @@
             },
             "rotation": {"x":0,"y":0.7077615261077881,"z":0,"w":-0.7064515352249146},
             "renderWithZones": [
-                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
             "grab": {
                 "grabbable": false
@@ -647,7 +647,7 @@
                 "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
             },
             "renderWithZones": [
-                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
             "damping": 0,
             "angularDamping": 0,
