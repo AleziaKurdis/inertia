@@ -576,15 +576,15 @@
             "type": "Model",
             "name": "Torch Stand 2",
             "locked": true,
-            "position": {"x":-3067.0341796875,"y":3168.625,"z":-2578.553466796875},
+            "position": {"x":-2615.386962890625,"y":2998.532470703125,"z":-3146.0869140625},
             "dimensions": {
                 "x": 0.6632989645004272,
                 "y": 0.8826301097869873,
                 "z": 0.21135686337947845
             },
-            "rotation": {"x":0,"y":-0.0009262673556804657,"z":0,"w":0.9999995827674866},
+            "rotation": {"x":0,"y":0.7077615261077881,"z":0,"w":-0.7064515352249146},
             "renderWithZones": [
-                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
             ],
             "grab": {
                 "grabbable": false
@@ -618,8 +618,8 @@
         {
             "id": "{5564df1d-3cbd-4d64-ab2c-7e3cd412112a}",
             "type": "Model",
-            "position": {"x":-3066.792724609375,"y":3168.9404296875,"z":-2578.66748046875},
-            "rotation": {"x":-0.00012060278095304966,"y":-0.99144446849823,"z":0.13052617013454437,"w":-0.0009161122143268585},
+            "position": {"x":-2615.27294921875,"y":2998.847900390625,"z":-3145.845458984375},
+            "rotation": {"x":0.09238123148679733,"y":0.7004093527793884,"z":-0.09221065789461136,"w":0.7017049193382263},
             "name": "Torch 2",
             "locked": true,
             "dimensions": {
@@ -647,7 +647,7 @@
                 "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
             },
             "renderWithZones": [
-                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
             ],
             "damping": 0,
             "angularDamping": 0,
@@ -1353,18 +1353,9 @@
             "type": "Model",
             "name": "Stone ring",
             "locked": true,
-            "position": {"x":-3278.954833984375,"y":2985.461669921875,"z":-2813.864501953125},
-            "dimensions": {
-                "x": 1,
-                "y": 0.35,
-                "z": 1
-            },
-            "rotation": {
-                "x": 0,
-                "y": 0.7071068286895752,
-                "z": 0,
-                "w": -0.7071068286895752
-            },
+            "position": {"x":-3278.985107421875,"y":2985.3310546875,"z":-2813.91259765625},
+            "dimensions": {"x":1.2830713987350464,"y":0.2478300780057907,"z":1.1720830202102661},
+            "rotation": {"x":0,"y":0.8987940549850464,"z":0,"w":-0.4383711814880371},
             "renderWithZones": [
                 "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
             ],
@@ -1382,18 +1373,9 @@
             "type": "Model",
             "name": "Sign - Dead Trunk Hearth",
             "locked": true,
-            "position": {"x":-3278.954833984375,"y":2985.461669921875,"z":-2813.864501953125},
-            "dimensions": {
-                "x": 0.8480716943740845,
-                "y": 1.872318983078003,
-                "z": 0.039175525307655334
-            },
-            "rotation": {
-                "x": 0.011273493058979511,
-                "y": 0.9882441163063049,
-                "z": -0.015924856066703796,
-                "w": 0.15163451433181763
-            },
+            "position": {"x":-3281.021240234375,"y":2985.3642578125,"z":-2812.598388671875},
+            "dimensions": {"x":0.5600741505622864,"y":1.2364962100982666,"z":0.025871869176626205},
+            "rotation": {"x":0.0470937117934227,"y":0.5768587589263916,"z":-0.022983260452747345,"w":0.8151612877845764},
             "renderWithZones": [
                 "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
             ],
@@ -1403,6 +1385,156 @@
             "shapeType": "simple-compound",
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/deadTrunkHearth.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{00e78df6-41aa-4367-84f7-2bf304012e69}",
+            "type": "Model",
+            "name": "BambooBench 3",
+            "locked": true,
+            "position": {"x":-3278.704345703125,"y":2985.3828125,"z":-2812.366943359375},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.9969174265861511,
+                "z": 0,
+                "w": 0.07845912128686905
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{c2709959-6548-4909-b02c-7cc1fb96f734}",
+            "type": "Model",
+            "name": "BambooBench 4",
+            "locked": true,
+            "position": {"x":-3279.454345703125,"y":2985.3828125,"z":-2812.6484375},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.9848077893257141,
+                "z": 0,
+                "w": -0.1736481487751007
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{40d8f8ee-0f9d-4adc-8487-1889c2fce20b}",
+            "type": "Model",
+            "name": "BambooBench 1",
+            "locked": true,
+            "position": {"x":-3279.574462890625,"y":2985.381591796875,"z":-2815.010009765625},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.22495101392269135,
+                "z": 0,
+                "w": 0.9743700623512268
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{741a4c86-91bd-4bef-b530-a1a5c3cf7aff}",
+            "type": "Model",
+            "name": "BambooBench 2",
+            "locked": true,
+            "position": {"x":-3278.900146484375,"y":2985.381591796875,"z":-2815.253173828125},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.008726507425308228,
+                "z": 0,
+                "w": 0.9999619722366333
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
+            "useOriginalPivot": true
+        },
+            {
+            "id": "{5351e6dd-923f-4826-b54f-de74d6d88faa}",
+            "type": "Model",
+            "name": "BambooBench 5",
+            "locked": true,
+            "position": {"x":-3278.161865234375,"y":2985.3828125,"z":-2812.8505859375},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.9510565400123596,
+                "z": 0,
+                "w": 0.3090170621871948
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
         }
    ],
