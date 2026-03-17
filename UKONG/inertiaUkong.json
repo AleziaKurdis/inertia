@@ -1417,7 +1417,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
         },
-            {
+        {
             "id": "{c2709959-6548-4909-b02c-7cc1fb96f734}",
             "type": "Model",
             "name": "BambooBench 4",
@@ -1447,7 +1447,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
         },
-            {
+        {
             "id": "{40d8f8ee-0f9d-4adc-8487-1889c2fce20b}",
             "type": "Model",
             "name": "BambooBench 1",
@@ -1477,7 +1477,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
         },
-            {
+        {
             "id": "{741a4c86-91bd-4bef-b530-a1a5c3cf7aff}",
             "type": "Model",
             "name": "BambooBench 2",
@@ -1507,7 +1507,7 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/bambooBench.fst",
             "useOriginalPivot": true
         },
-            {
+        {
             "id": "{5351e6dd-923f-4826-b54f-de74d6d88faa}",
             "type": "Model",
             "name": "BambooBench 5",
