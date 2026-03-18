@@ -1590,6 +1590,25 @@
                 "castShadows": true
             },
             "flyingAllowed": true
+        },
+        {
+            "id": "{40b5a72f-7418-4c2f-ae9f-6e6439b9140c}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "DEBRIS",
+            "locked": true,
+            "dimensions": {"x":346.2716064453125,"y":34.96735763549805,"z":505.1314697265625},
+            "renderWithZones": [
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/DEBRIS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
