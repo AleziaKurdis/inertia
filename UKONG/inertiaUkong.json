@@ -1593,7 +1593,7 @@
             "position": {"x":-3000,"y":3000,"z":-3000},
             "name": "DEBRIS",
             "locked": true,
-            "dimensions": {"x":445.0477600097656,"y":51.11808776855469,"z":589.0656127929688},
+            "dimensions": {"x":443.9666442871094,"y":52.010520935058594,"z":587.4900512695312},
             "renderWithZones": [
                 "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
@@ -1611,7 +1611,7 @@
             "type": "Sound",
             "name": "JUNGLE_SOUND_01",
             "locked": true,
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-3043.69580078125,"y":3024.370849609375,"z":-2715.96826171875},
             "dimensions": {
                 "x": 1,
                 "y": 1,
@@ -1626,14 +1626,14 @@
             "damping": 0,
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey.mp3",
-            "volume": 0.8
+            "volume": 1.0
         },
         {
             "id": "{0b2cdf72-e4a8-44af-8d61-57539318e02e}",
             "type": "Sound",
             "name": "JUNGLE_SOUND_02",
             "locked": true,
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-3181.584228515625,"y":3005.82275390625,"z":-2689.802978515625},
             "dimensions": {
                 "x": 1,
                 "y": 1,
@@ -1648,14 +1648,14 @@
             "damping": 0,
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey_2.mp3",
-            "volume": 0.8
+            "volume": 1.0
         },
         {
             "id": "{b7fc067c-3b20-40c9-84bd-4f6e65ae1e31}",
             "type": "Sound",
             "name": "JUNGLE_SOUND_03",
             "locked": true,
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-3323.1357421875,"y":2995.25927734375,"z":-2865.818359375},
             "dimensions": {
                 "x": 1,
                 "y": 1,
@@ -1670,7 +1670,7 @@
             "damping": 0,
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey_3.mp3",
-            "volume": 0.8
+            "volume": 1.0
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
