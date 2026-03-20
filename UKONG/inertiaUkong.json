@@ -1671,6 +1671,58 @@
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey_3.mp3",
             "volume": 1.0
+        },
+        {
+            "id": "{e7474374-4c28-4fa6-82ca-c1fd3a979187}",
+            "type": "Model",
+            "name": "Framed Sign - VROPTI-B",
+            "locked": true,
+            "position": {"x":-3068.659423828125,"y":3168.345703125,"z":-2578.45654296875},
+            "dimensions": {
+                "x": 0.3211606442928314,
+                "y": 0.505676805973053,
+                "z": 0.010112280026078224
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.999999463558197,
+                "z": 0.0010284448508173227,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_s.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{70ede5d6-ba37-4bac-8668-b31673003ee9}",
+            "type": "Model",
+            "name": "Framed Sign - VROPTI-A",
+            "locked": true,
+            "position": {"x":-3651.988037109375,"y":3004.69677734375,"z":-3478.74609375},
+            "dimensions": {
+                "x": 0.3211606442928314,
+                "y": 0.505676805973053,
+                "z": 0.010112280026078224
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_s.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
