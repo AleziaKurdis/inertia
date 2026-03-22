@@ -1723,6 +1723,30 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/VR-OPTIMIZED.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_s.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a3fcd533-8614-4cb4-8e63-560f018e6242}",
+            "type": "Model",
+            "name": "MARKERS",
+            "locked": true,
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "dimensions": {
+                "x": 0.47999998927116394,
+                "y": 0.5435166954994202,
+                "z": 0.47999998927116394
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MARKERS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
