@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "OLDSTONES_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "OLDSTONES_roughness.jpg",
+         "normalMap": "OLDSTONES_normal_ogl.jpg",
+         "occlusionMap": "OLDSTONES_ao.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
