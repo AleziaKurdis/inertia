@@ -1743,6 +1743,25 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MARKERS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a8823239-a317-49fe-a487-4bdd1f2730c0}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "ANTIC-WALL",
+            "locked": true,
+            "dimensions": {"x":10.449687004089355,"y":10.707077026367188,"z":23.750429153442383},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/ANTIC-WALL.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
