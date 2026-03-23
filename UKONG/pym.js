@@ -43,6 +43,7 @@
         }
         originalScale = MyAvatar.scale;
         feetInitialY = MyAvatar.feetPosition.y;
+        Window.domainChanged.connect(onDomainChanged);
     };
 
     this.enterEntity = function(entityID) {
@@ -68,6 +69,7 @@
         }
         MyAvatar.scale = originalScale;
         MyAvatar.setGravity(NORMAL_GRAVITY);
+        Window.domainChanged.disconnect(onDomainChanged);
     }; 
     
     function myTimer(deltaTime) {
@@ -80,6 +82,11 @@
             today = new Date();
             processTimer = today.getTime();
         }
+    }
+
+    function onDomainChanged(domain) {
+        MyAvatar.scale = originalScale;
+        MyAvatar.setGravity(NORMAL_GRAVITY);
     }
 
     function manageScale() {
