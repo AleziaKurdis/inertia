@@ -21,8 +21,9 @@
     var updateTimerInterval = 200; //0.2sec.
     var processTimer = 0;
     var MIN_SCALE = 0.3;
-    var MAX_SCALE = 10;
+    var MAX_SCALE = 13;
     let feetInitialY;
+    const NORMAL_GRAVITY = -9.8;
     
     this.preload = function (entityID) {
         thisEntityID = entityID;
@@ -66,6 +67,7 @@
             Script.update.disconnect(myTimer);
         }
         MyAvatar.scale = originalScale;
+        MyAvatar.setGravity(NORMAL_GRAVITY);
     }; 
     
     function myTimer(deltaTime) {
@@ -131,6 +133,7 @@
         }
         
         MyAvatar.scale = originalScale * factor;
+        MyAvatar.setGravity(NORMAL_GRAVITY * factor);
         let delta = feetInitialY - MyAvatar.feetPosition.y;
         if (delta > 0) {
             MyAvatar.position.y = MyAvatar.position.y + delta;
