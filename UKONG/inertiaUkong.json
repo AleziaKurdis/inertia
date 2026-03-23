@@ -1762,6 +1762,30 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/ANTIC-WALL.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{72fc7b81-4f02-42b7-abac-1de2e66b6a67}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "LIGHT POLE 1",
+            "locked": true,
+            "dimensions": {
+                "x": 0.7440617680549622,
+                "y": 3.7000861167907715,
+                "z": 0.859168529510498
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/lightPole.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/lightPole.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
