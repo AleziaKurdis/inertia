@@ -23,7 +23,7 @@
     var MIN_SCALE = 0.3;
     var MAX_SCALE = 13;
     let feetInitialY;
-    const NORMAL_GRAVITY = -9.8;
+    const NORMAL_GRAVITY = -5;
     
     this.preload = function (entityID) {
         thisEntityID = entityID;
