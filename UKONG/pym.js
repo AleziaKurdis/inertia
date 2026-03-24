@@ -140,7 +140,7 @@
         }
         
         MyAvatar.scale = originalScale * factor;
-        let gravity = NORMAL_GRAVITY * (factor / 2);
+        let gravity = NORMAL_GRAVITY * (factor / 3);
         if (gravity > NORMAL_GRAVITY) {
             gravity = NORMAL_GRAVITY;
         } 
