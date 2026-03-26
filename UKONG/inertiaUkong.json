@@ -1786,6 +1786,25 @@
             "shapeType": "box",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/lightPole.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{f5ffa2a6-30e4-4c99-a023-c59750ed20a1}",
+            "type": "Model",
+            "name": "Sign - Flyable Cave",
+            "locked": true,
+            "position": {"x":-3000.0,"y":3000,"z":-3000.0},
+            "dimensions": {"x":0.5600741505622864,"y":1.2364962100982666,"z":0.025871869176626205},
+            "rotation": {"x":0.0470937117934227,"y":0.5768587589263916,"z":-0.022983260452747345,"w":0.8151612877845764},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/flyableCave.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
