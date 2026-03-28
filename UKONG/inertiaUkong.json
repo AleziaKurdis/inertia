@@ -1863,6 +1863,30 @@
             "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{031c7d40-f252-428d-9ae5-6fe26e96a4ac}",
+            "type": "Model",
+            "position": {"x":-3227.124755859375,"y":3020.580078125,"z":-3015.214111328125},
+            "rotation": {"x":0.051755595952272415,"y":0.7899829149246216,"z":-0.008210135623812675,"w":0.610885500907898},
+            "name": "STREET SIGN LIGHT (FLC)",
+            "locked": true,
+            "dimensions": {
+                "x": 0.06959754973649979,
+                "y": 0.06155701354146004,
+                "z": 0.07767602056264877
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
