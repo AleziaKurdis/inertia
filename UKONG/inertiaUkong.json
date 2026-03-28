@@ -1805,6 +1805,64 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/flyableCave.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{990f60db-66b8-4183-ad02-b8d0dbce5b61}",
+            "type": "Model",
+            "position": {"x":-3172.328125,"y":3007.321533203125,"z":-3190.1416015625},
+            "name": "STREET SIGN LIGHT (GEC)",
+            "locked": true,
+            "dimensions": {
+                "x": 0.09842594712972641,
+                "y": 0.08705489337444305,
+                "z": 0.10985064506530762
+            },
+            "rotation": {
+                "x": 0.011273493058979511,
+                "y": 0.9882441163063049,
+                "z": -0.015924856066703796,
+                "w": 0.15163451433181763
+            },
+            "renderWithZones": [
+                "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{c16cbf36-fdf7-42f0-8f37-8aa969e84420}",
+            "type": "Model",
+            "position": {"x":-3281.782958984375,"y":2986.56640625,"z":-2815.1171875},
+            "name": "STREET SIGN LIGHT (DTH)",
+            "locked": true,
+            "dimensions": {
+                "x": 0.06959754973649979,
+                "y": 0.06155701354146004,
+                "z": 0.07767602056264877
+            },
+            "rotation": {
+                "x": 0.010088028386235237,
+                "y": 0.7725130915641785,
+                "z": 0.02777009643614292,
+                "w": 0.6343111395835876
+            },
+            "renderWithZones": [
+                "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
