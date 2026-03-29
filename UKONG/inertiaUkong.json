@@ -1883,6 +1883,112 @@
             "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{a5cf9374-af36-4f80-adba-0a49abc995bb}",
+            "type": "Model",
+            "name": "Framed Sign - WELCOME YU KONG a",
+            "locked": true,
+            "position": {"x":-3063.478515625,"y":3168.73974609375,"z":-2578.447021484375},
+            "dimensions": {
+                "x": 3.1798925399780273,
+                "y": 1.235205054283142,
+                "z": 0.06359784305095673
+            },
+            "rotation": {
+                "x": 0,
+                "y": -1,
+                "z": 0,
+                "w": -4.371138828673793e-8
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/welcome.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/welcome.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{959daefc-4b26-4f87-831a-c381de48d1b6}",
+            "type": "Model",
+            "name": "Sign - DISTANCES ADIR",
+            "locked": true,
+            "position": {"x":-3068.533203125,"y":3166.054443359375,"z":-2583.890625},
+            "dimensions": {
+                "x": 1.0823999643325806,
+                "y": 3.3844916820526123,
+                "z": 0.05000000074505806
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7345728278160095,
+                "z": 0,
+                "w": -0.6785299181938171
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/DistancesSignAlphaDirection.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{23b25b86-c3b3-4a6d-82d1-d7a0ea6da0f7}",
+            "type": "Model",
+            "name": "Framed Sign - WELCOME YU KONG o",
+            "locked": true,
+            "position":  {"x":-3656.10302734375,"y":3003.900634765625,"z":-3478.854736328125},
+            "dimensions": {
+                "x": 1.278450608253479,
+                "y": 0.49660441279411316,
+                "z": 0.025569012388586998
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/welcome.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/welcome.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{389b1506-83cb-464b-aac9-c45176a81d88}",
+            "type": "Model",
+            "name": "Sign - DISTANCES ODIR",
+            "locked": true,
+            "position": {"x":-3651.02001953125,"y":3002.18115234375,"z":-3475.79541015625},
+            "dimensions": {
+                "x": 1.0823999643325806,
+                "y": 3.0028998851776123,
+                "z": 0.05000000074505806
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/DistancesSignOmegaDirection.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
