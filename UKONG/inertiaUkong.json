@@ -107,7 +107,6 @@
             "angularDamping": 0,
             "collisionless": true,
             "ignoreForCollisions": true,
-            "script": "test",
             "color": {
                 "red": 0,
                 "green": 180,
@@ -1991,6 +1990,62 @@
             "useOriginalPivot": true
         },
         {
+            "id": "{f8528267-6196-442c-a710-bbce249d2058}",
+            "type": "Zone",
+            "position": {"x":-3136.351318359375,"y":2945.0537109375,"z":-3261.737548828125},
+            "name": "FLYABLE CAVE ZONE main",
+            "locked": true,
+            "dimensions": {
+                "x": 238.9502410888672,
+                "y": 106.08525085449219,
+                "z": 352.73687744140625
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": true,
+            "ghostingAllowed": false
+        },
+        {
+            "id": "{44f749ca-1d96-43a2-89f1-5262857975c4}",
+            "type": "Zone",
+            "position": {"x":-2721.393798828125,"y":3129.24365234375,"z":-2724.139404296875},
+            "name": "ZAMYRU VISIBILITY ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 774.0152587890625,
+                "y": 514.2685546875,
+                "z": 774.0152587890625
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "cylinder-y",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false
+        },
+        {
             "id": "{5b3744df-9ab7-4504-8126-2585bb10e5ab}",
             "type": "Model",
             "position": {"x":-3000,"y":3000,"z":-3000},
@@ -1998,7 +2053,7 @@
             "locked": true,
             "dimensions": {"x":142.15232849121094,"y":56.853782653808594,"z":85.81097412109375},
             "renderWithZones": [
-                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
             ],
             "grab": {
                 "grabbable": false
