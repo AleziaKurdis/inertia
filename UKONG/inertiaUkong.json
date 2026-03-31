@@ -2008,7 +2008,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/TEMPLE.fst",
             "useOriginalPivot": true
-        },
+        }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
