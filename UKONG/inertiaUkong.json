@@ -1989,7 +1989,26 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/DistancesSignOmegaDirection.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
             "useOriginalPivot": true
-        }
+        },
+        {
+            "id": "{5b3744df-9ab7-4504-8126-2585bb10e5ab}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "TEMPLE",
+            "locked": true,
+            "dimensions": {"x":182.844482421875,"y":55.794593811035156,"z":410.356689453125},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/TEMPLE.fst",
+            "useOriginalPivot": true
+        },
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
