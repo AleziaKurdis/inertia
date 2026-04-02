@@ -2063,6 +2063,37 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/TEMPLE.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{ea913093-8238-4213-9902-012a1df8349f}",
+            "type": "Box",
+            "position": {"x":-3000,"y":2648,"z":-3000},
+            "name": "FALLEN COLLECTOR",
+            "locked": true,
+            "dimensions": {
+                "x": 3000,
+                "y": 500,
+                "z": 3000
+            },
+            "canCastShadow": false,
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "alpha": 0.0,
+            "shape": "Cube",
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/fallenCollector.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
