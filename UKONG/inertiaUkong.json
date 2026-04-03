@@ -2094,6 +2094,127 @@
             "alpha": 0.0,
             "shape": "Cube",
             "script": "https://aleziakurdis.github.io/inertia/UKONG/fallenCollector.js"
+        },
+        {
+            "id": "{d2a96f38-3fb0-4e88-b329-58d4fce5dfff}",
+            "type": "Zone",
+            "position": {"x":-3168.716796875,"y":3003.288330078125,"z":-3059.310791015625},
+            "name": "FLYABLE CAVE ZONE secondary",
+            "locked": true,
+            "dimensions": {
+                "x": 34.056396484375,
+                "y": 34.88903045654297,
+                "z": 135.38551330566406
+            },
+            "rotation": {
+                "x": -0.11218132823705673,
+                "y": -0.38781866431236267,
+                "z": -0.04761814698576927,
+                "w": 0.9136435389518738
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "flyingAllowed": true,
+            "ghostingAllowed": false
+        },
+        {
+            "id": "{aeca34bf-e700-48eb-88b2-7f31e362b5f3}",
+            "type": "Model",
+            "name": "MEDIACOM OMEGA",
+            "locked": true,
+            "position": {"x":-2840.741455078125,"y":2993.628173828125,"z":-3196.642578125},
+            "dimensions": {
+                "x": 2.55206298828125,
+                "y": 7.601373195648193,
+                "z": 10.765000343322754
+            },
+            "rotation": {
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0,
+                "w": 0
+            },
+            "renderWithZones": [
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_OMEGA.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{5174b22e-e765-4f2c-9583-a8b8a5f2fadb}",
+            "type": "Model",
+            "name": "MEDIACOM ALPHA",
+            "locked": true,
+            "position": {"x":-2779.8623046875,"y":2997.594970703125,"z":-3551.658447265625},
+            "dimensions": {
+                "x": 2.55206298828125,
+                "y": 7.601373195648193,
+                "z": 10.765000343322754
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.8829476833343506,
+                "z": 0,
+                "w": 0.46947160363197327
+            },
+            "renderWithZones": [
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_ALPHA.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{201be9fc-ff98-4052-9b4d-417540ed2991}",
+            "type": "Model",
+            "name": "MEDIACOM FC",
+            "locked": true,
+            "position": {"x":-3066.656982421875,"y":2907.118896484375,"z":-3546.493408203125},
+            "dimensions": {
+                "x": 2.55206298828125,
+                "y": 7.601373195648193,
+                "z": 10.765000343322754
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.760405957698822,
+                "z": 0,
+                "w": 0.649448037147522
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_FC.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
