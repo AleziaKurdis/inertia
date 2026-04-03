@@ -32,7 +32,7 @@
             "intensity": 8.0,
             "falloffRadius": 0.8,
             "isSpotlight": true,
-            "exponent", 1.0,
+            "exponent": 1.0,
             "cutoff": 90,
         },"local");
     };    
