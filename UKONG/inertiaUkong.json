@@ -2157,7 +2157,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_OMEGA.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/mediacomLight.js"
         },
         {
             "id": "{5174b22e-e765-4f2c-9583-a8b8a5f2fadb}",
@@ -2186,7 +2187,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_ALPHA.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/mediacomLight.js"
         },
         {
             "id": "{201be9fc-ff98-4052-9b4d-417540ed2991}",
@@ -2215,7 +2217,8 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_FC.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/mediacomLight.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
