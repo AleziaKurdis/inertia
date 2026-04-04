@@ -140,14 +140,14 @@
         }
         
         MyAvatar.scale = originalScale * factor;
-        let gravity = NORMAL_GRAVITY * (factor / 3);
+        let gravity = NORMAL_GRAVITY * (factor / 2);
         if (gravity > NORMAL_GRAVITY) {
             gravity = NORMAL_GRAVITY;
         } 
         MyAvatar.setGravity(gravity);
         let delta = feetInitialY - MyAvatar.feetPosition.y;
         if (delta > 0) {
-            MyAvatar.position.y = MyAvatar.position.y + delta;
+            MyAvatar.position.y = MyAvatar.position.y + (delta * 1.5);
         }
         feetInitialY = MyAvatar.feetPosition.y;
     }
