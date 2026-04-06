@@ -1670,14 +1670,14 @@
             "damping": 0,
             "angularDamping": 0,
             "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/JUNGLE002.mp3",
-            "volume": 0.7
+            "volume": 0.9
         },
         {
             "id": "{b5d6728b-57f4-403a-8914-d026e4f04153}",
             "type": "Sound",
             "name": "JUNGLE_SOUND_04",
             "locked": true,
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-3231.21484375,"y":2992.729248046875,"z":-2841.12744140625},
             "dimensions": {
                 "x": 1,
                 "y": 1,
