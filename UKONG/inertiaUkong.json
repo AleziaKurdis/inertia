@@ -1625,8 +1625,8 @@
             },
             "damping": 0,
             "angularDamping": 0,
-            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey.mp3",
-            "volume": 1.0
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/JUNGLE001.mp3",
+            "volume": 0.7
         },
         {
             "id": "{0b2cdf72-e4a8-44af-8d61-57539318e02e}",
@@ -1647,8 +1647,8 @@
             },
             "damping": 0,
             "angularDamping": 0,
-            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey_2.mp3",
-            "volume": 1.0
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/JUNGLE003.mp3",
+            "volume": 0.9
         },
         {
             "id": "{b7fc067c-3b20-40c9-84bd-4f6e65ae1e31}",
@@ -1669,8 +1669,30 @@
             },
             "damping": 0,
             "angularDamping": 0,
-            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/forest_intense_bird_monkey_3.mp3",
-            "volume": 1.0
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/JUNGLE002.mp3",
+            "volume": 0.7
+        },
+        {
+            "id": "{b5d6728b-57f4-403a-8914-d026e4f04153}",
+            "type": "Sound",
+            "name": "JUNGLE_SOUND_04",
+            "locked": true,
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/FOREST/JUNGLE004.mp3",
+            "volume": 0.9
         },
         {
             "id": "{e7474374-4c28-4fa6-82ca-c1fd3a979187}",
