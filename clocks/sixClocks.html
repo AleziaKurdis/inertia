@@ -37,7 +37,7 @@
         }
 
         #content {
-            width: 460px;   /* 2 × 150 */
+            width: 480px;   /* 2 × 150 */
             height: 300px;  /* 3 × 120 */
             transform-origin: center center;
         }
@@ -56,7 +56,8 @@
         }
         
         div.places {
-            width: 100%;
+            width: 90px;
+            line-height: 1;
         }
         
         .D17 {
@@ -79,10 +80,11 @@
             font-family: FiraSans-SemiBold;
             color: #000000;
             font-size: 5px;
-            padding: 3px;
-            border-radius: 6px;
+            padding: 1px 4px 2px 4px;
+            border-radius: 4px;
             border: 0;
-            margin-left: 3px;
+            margin: 1px 1px 1px 1px;
+            vertical-align: top;
         }
         </style>
     </head>
@@ -91,34 +93,34 @@
             <div id="content">
                 <table>
                     <tr valign = 'top'>
-                        <td><div class="places" id="locationsD17"></div></td>
+                        <td align='right'><div class="places" id="locationsD17"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d17.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html?bigunit=true"></iframe>
                         </td>
-                        <td><div class="places" id="locationsD19"></div></td>
+                        <td align='left'><div class="places" id="locationsD19"></div></td>
                     </tr>
                     <tr valign = 'top'>
-                        <td><div class="places" id="locationsD24"></div></td>
+                        <td align='right'><div class="places" id="locationsD24"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html?bigunit=true"></iframe>
                         </td>
-                        <td>&nbsp;</td>
+                        <td align='left'>&nbsp;</td>
                     </tr>
                     <tr valign = 'top'>
-                        <td><div class="places" id="locationsD29"></div></td>
+                        <td align='right'><div class="places" id="locationsD29"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d31.html?bigunit=true"></iframe>
                         </td>
-                        <td><div class="places" id="locationsD31"></div></td>
+                        <td align='left'><div class="places" id="locationsD31"></div></td>
                     </tr>
                 </table>
             </div>
@@ -129,7 +131,8 @@
                 const placeCycle = [
                     {"timeDilatationCode": "D17", "placeName": "Yu'Kong Island"},
                     {"timeDilatationCode": "D19", "placeName": "Hytrion Junction"},
-                    {"timeDilatationCode": "D19", "placeName": "Vankh Junction / Rantar Desert"},
+                    {"timeDilatationCode": "D19", "placeName": "Vankh Junction"},
+                    {"timeDilatationCode": "D19", "placeName": "Rantar Desert"},
                     {"timeDilatationCode": "D19", "placeName": "Virborough"},
                     {"timeDilatationCode": "D19", "placeName": "Virtual Underground"},
                     {"timeDilatationCode": "D19", "placeName": "VR Flight Tube"},
