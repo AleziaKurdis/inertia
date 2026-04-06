@@ -14,6 +14,11 @@
     <head>
         <meta charset="UTF-8">
         <style>
+        @font-face {
+            font-family: FiraSans-SemiBold;
+            src: url(fonts/FiraSans-SemiBold.ttf);
+        }
+        
         html, body {
             margin: 0;
             width: 100%;
@@ -32,7 +37,7 @@
         }
 
         #content {
-            width: 260px;   /* 2 × 150 */
+            width: 460px;   /* 2 × 150 */
             height: 300px;  /* 3 × 120 */
             transform-origin: center center;
         }
@@ -49,40 +54,109 @@
             border: none;
             border-radius: 16px;
         }
+        
+        div.places {
+            width: 100%;
+        }
+        
+        .D17 {
+            background-color: rgb(195, 255, 54);
+        }
+        .D19 {
+            background-color: rgb(252, 165, 3);
+        }
+        .D24 {
+            background-color: rgb(69, 184, 255);
+        }
+        .D29 {
+            background-color: rgb(255, 255, 255);
+        }
+        .D31 {
+            background-color: rgb(148, 149, 227);
+        }
+        
+        .placeBtn {
+            font-family: FiraSans-SemiBold;
+            color: #000000;
+            font-size: 5px;
+            padding: 3px;
+            border-radius: 6px;
+            border: 0;
+            margin-left: 3px;
+        }
         </style>
     </head>
     <body>
         <div id="viewport">
             <div id="content">
                 <table>
-                    <tr>
+                    <tr valign = 'top'>
+                        <td><div class="places" id="locationsD17"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d17.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d19.html?bigunit=true"></iframe>
                         </td>
+                        <td><div class="places" id="locationsD19"></div></td>
                     </tr>
-                    <tr>
+                    <tr valign = 'top'>
+                        <td><div class="places" id="locationsD24"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d24.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/realClock.html?bigunit=true"></iframe>
                         </td>
+                        <td>&nbsp;</td>
                     </tr>
-                    <tr>
+                    <tr valign = 'top'>
+                        <td><div class="places" id="locationsD29"></div></td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d29.html?bigunit=true"></iframe>
                         </td>
                         <td>
                             <iframe src="https://aleziakurdis.github.io/inertia/clocks/d31.html?bigunit=true"></iframe>
                         </td>
+                        <td><div class="places" id="locationsD31"></div></td>
                     </tr>
                 </table>
             </div>
         </div>
         <script>
+            function getLocations(unit) {
+
+                const placeCycle = [
+                    {"timeDilatationCode": "D17", "placeName": "Yu'Kong Island"},
+                    {"timeDilatationCode": "D19", "placeName": "Hytrion Junction"},
+                    {"timeDilatationCode": "D19", "placeName": "Vankh Junction / Rantar Desert"},
+                    {"timeDilatationCode": "D19", "placeName": "Virborough"},
+                    {"timeDilatationCode": "D19", "placeName": "Virtual Underground"},
+                    {"timeDilatationCode": "D19", "placeName": "VR Flight Tube"},
+                    {"timeDilatationCode": "D19", "placeName": "Crom Cruach"},
+                    {"timeDilatationCode": "D29", "placeName": "Virz Junction"},
+                    {"timeDilatationCode": "D29", "placeName": "Wothal"},
+                    {"timeDilatationCode": "D29", "placeName": "Kopra"},
+                    {"timeDilatationCode": "D29", "placeName": "Astrobion"},
+                    {"timeDilatationCode": "D29", "placeName": "Minos"},
+                    {"timeDilatationCode": "D29", "placeName": "Nowhere Island (D29EH)"},
+                    {"timeDilatationCode": "D24", "placeName": "Voxecutor (D24)"},
+                    {"timeDilatationCode": "D29", "placeName": "CFT-Facing-Worlds"},
+                    {"timeDilatationCode": "D29", "placeName": "Sanctuary"},
+                    {"timeDilatationCode": "D29", "placeName": "Ceon"},
+                    {"timeDilatationCode": "D29", "placeName": "Valombra"},
+                    {"timeDilatationCode": "D29", "placeName": "AK-Railway"},
+                    {"timeDilatationCode": "D31", "placeName": "Scillia"},
+                ];
+                let places = "";
+                for (let i = 0; i < placeCycle.length; i++) {
+                    if (placeCycle[i].timeDilatationCode === unit) {
+                        places = places + "<button class='placeBtn " + unit + "'>" + placeCycle[i].placeName + "</button>";
+                    }
+                }
+                return places;
+            }
+        
             function scaleContent() {
                 const content = document.getElementById("content");
                 const scaleX = window.innerWidth / 600;
@@ -93,6 +167,11 @@
 
             window.addEventListener("resize", scaleContent);
             scaleContent();
+            document.getElementById("locationsD17").innerHTML = getLocations("D17");
+            document.getElementById("locationsD19").innerHTML = getLocations("D19");
+            document.getElementById("locationsD24").innerHTML = getLocations("D24");
+            document.getElementById("locationsD29").innerHTML = getLocations("D29");
+            document.getElementById("locationsD31").innerHTML = getLocations("D31");
         </script>
     </body>
 </html>
