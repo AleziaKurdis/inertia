@@ -17,6 +17,7 @@
     let oneTimeOnly = false;
     let SOUND = SoundCache.getSound(ROOT + "sounds/RITUAL/gong.mp3");
     
+    print("GONG: Active!"); //################################################# DEBUG, TO TRASH
     // Constructor
     let _this = null;
 
@@ -32,6 +33,7 @@
                 "action": "START_ZAMYRU_RITUAL_OF_DEATH"
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
+            print("GONG: Sent message."); //################################################# DEBUG, TO TRASH
         }
         let injectorOptions = {
             "position": MyAvatar.position,
@@ -40,6 +42,7 @@
             "localOnly": false
         };
         let injector = Audio.playSound(SOUND, injectorOptions);
+        print("GONG: Bong!!!"); //################################################# DEBUG, TO TRASH
     }; 
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
