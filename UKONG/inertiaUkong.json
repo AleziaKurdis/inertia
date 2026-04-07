@@ -2074,7 +2074,7 @@
             "position": {"x":-3000,"y":3000,"z":-3000},
             "name": "TEMPLE",
             "locked": true,
-            "dimensions": {"x":413.0417175292969,"y":56.853782653808594,"z":325.362060546875},
+            "dimensions": {"x":940.3558349609375,"y":65.32704162597656,"z":636.2720947265625},
             "renderWithZones": [
                 "{44f749ca-1d96-43a2-89f1-5262857975c4}"
             ],
@@ -2241,6 +2241,36 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MEDIACOM_FC.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/UKONG/mediacomLight.js"
+        },
+        {
+            "id": "{106e33b3-fd2f-4743-9dd2-49d5aef6ac02}",
+            "type": "Model",
+            "position": {"x":-2667.147216796875,"y":3019.4833984375,"z":-2725.747802734375},
+            "name": "GONG",
+            "locked": true,
+            "dimensions": {
+                "x": 5.113150596618652,
+                "y": 4.171259880065918,
+                "z": 1.704035997390747
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/gong.js",
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/GONG.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
