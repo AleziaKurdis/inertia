@@ -2271,6 +2271,21 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/GONG.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{e6912c9b-736c-4adc-b62b-abca73f87172}",
+            "type": "Empty",
+            "name": "RITUAL MASTER",
+            "locked": true,
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "position": {"x":-2667.147216796875,"y":3019.4833984375,"z":-2725.747802734375},
+            "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/ritual.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
