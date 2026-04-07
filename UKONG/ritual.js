@@ -56,6 +56,7 @@
         if (channel === channelComm) {
             var data = JSON.parse(message);
             if (data.action === "START_ZAMYRU_RITUAL_OF_DEATH") {
+                print("RITUAL: CALLED!"); //#######################################DEBU - TRASH
                 if (!ritualOngoing) {
                     //start ritual here
                     ritualTime = 0;
