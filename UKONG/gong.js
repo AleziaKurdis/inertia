@@ -11,13 +11,12 @@
 //
 (function() {
     const ROOT = Script.resolvePath('').split("gong.js")[0]; 
-    const MAX_CLICKABLE_DISTANCE_M = 4;
+    const MAX_CLICKABLE_DISTANCE_M = 6;
     const channelComm = "ak.ukong.ritual.communications";
     const D17_DAY_DURATION = 61200;
     let oneTimeOnly = false;
     let SOUND = SoundCache.getSound(ROOT + "sounds/RITUAL/GONG.mp3");
     
-    print("GONG: Active!"); //################################################# DEBUG, TO TRASH
     // Constructor
     let _this = null;
 
@@ -33,7 +32,6 @@
                 "action": "START_ZAMYRU_RITUAL_OF_DEATH"
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
-            print("GONG: Sent message."); //################################################# DEBUG, TO TRASH
         }
         let injectorOptions = {
             "position": MyAvatar.position,
@@ -42,7 +40,6 @@
             "localOnly": false
         };
         let injector = Audio.playSound(SOUND, injectorOptions);
-        print("GONG: Bong!!!"); //################################################# DEBUG, TO TRASH
     }; 
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
