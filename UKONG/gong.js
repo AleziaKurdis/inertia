@@ -15,7 +15,7 @@
     const channelComm = "ak.ukong.ritual.communications";
     const D17_DAY_DURATION = 61200;
     let oneTimeOnly = false;
-    let SOUND = SoundCache.getSound(ROOT + "sounds/RITUAL/gong.mp3");
+    let SOUND = SoundCache.getSound(ROOT + "sounds/RITUAL/GONG.mp3");
     
     print("GONG: Active!"); //################################################# DEBUG, TO TRASH
     // Constructor
