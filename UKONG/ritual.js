@@ -132,7 +132,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true
+                "positional": true,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");
@@ -147,7 +147,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true
+                "positional": true,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");
@@ -162,7 +162,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true
+                "positional": true,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");
@@ -183,7 +183,7 @@
             "playing": true,
             "volume": 1.0,
             "loop": false,
-            "positional": true
+            "positional": true,
             "localPosition": {"x": Math.floor(Math.random() * 20), "y": 3.0, "z": Math.floor(Math.random() * 20)},
             "localOnly": true,
             "lifetime": 180
