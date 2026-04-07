@@ -2283,7 +2283,7 @@
             "grab": {
                 "grabbable": false
             },
-            "position": {"x":-2667.147216796875,"y":3019.4833984375,"z":-2725.747802734375},
+            "position": {"x":-2796.62353515625,"y":2990.664794921875,"z":-2733.11328125},
             "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
             "script": "https://aleziakurdis.github.io/inertia/UKONG/ritual.js"
         }
