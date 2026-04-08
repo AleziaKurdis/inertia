@@ -56,7 +56,6 @@
         if (channel === channelComm) {
             var data = JSON.parse(message);
             if (data.action === "START_ZAMYRU_RITUAL_OF_DEATH") {
-                print("RITUAL: CALLED!"); //#######################################DEBU - TRASH
                 if (!ritualOngoing) {
                     //start ritual here
                     ritualTime = 0;
@@ -81,7 +80,7 @@
         } else if (ritualTime === 60) {
             //start TAMTAM  2
             Entities.editEntity(tamtam2ID, {"playing": true});
-        } else if (ritualTime === 68) {
+        } else if (ritualTime === 64) {
             //stop TAMTAM  1
             Entities.editEntity(tamtam1ID, {"playing": false});
         } else if (ritualTime === 75) {
@@ -91,7 +90,7 @@
         } else if (ritualTime === 120) {
             //start TAMTAM  3
             Entities.editEntity(tamtam3ID, {"playing": true});
-        } else if (ritualTime === 128) {
+        } else if (ritualTime === 124) {
             //stop TAMTAM  2
             Entities.editEntity(tamtam2ID, {"playing": false});
         } else if (ritualTime === 137) {
@@ -133,7 +132,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true,
+                "positional": false,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");
@@ -148,7 +147,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true,
+                "positional": false,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");
@@ -163,7 +162,7 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": true,
+                "positional": false,
                 "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
                 "localOnly": true
             }, "local");

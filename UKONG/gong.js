@@ -27,12 +27,12 @@
 
     function trigger(entityID) {
         let d17CurrentHour = (GetCurrentCycleValue(8640000, D17_DAY_DURATION)/100) / 3600;
-        if ( d17CurrentHour > 19 || d17CurrentHour < 5) {
+        if ( d17CurrentHour > 12 || d17CurrentHour < 11.9) { //FOR DEBUG
+        //if ( d17CurrentHour > 19 || d17CurrentHour < 5) {
             let messageToSend = {
                 "action": "START_ZAMYRU_RITUAL_OF_DEATH"
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
-            print("GONG: RITUAL CALLED!"); //############################################# DEBUG - TRASH
         }
         let injectorOptions = {
             "position": MyAvatar.position,
