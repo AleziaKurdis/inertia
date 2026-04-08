@@ -32,6 +32,7 @@
                 "action": "START_ZAMYRU_RITUAL_OF_DEATH"
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
+            print("GONG: RITUAL CALLED!"); //############################################# DEBUG - TRASH
         }
         let injectorOptions = {
             "position": MyAvatar.position,
