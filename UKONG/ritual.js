@@ -35,7 +35,7 @@
     let tamtam2IDc = Uuid.NONE;
     let tamtam3IDc = Uuid.NONE;
     
-    const RADIUS = 20;
+    const RADIUS = 90;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
