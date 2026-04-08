@@ -25,9 +25,17 @@
     
     let ritualId = Uuid.NONE;
     let ritualTime = 0;
-    let tamtam1ID = Uuid.NONE;
-    let tamtam2ID = Uuid.NONE;
-    let tamtam3ID = Uuid.NONE;
+    let tamtam1IDa = Uuid.NONE;
+    let tamtam2IDa = Uuid.NONE;
+    let tamtam3IDa = Uuid.NONE;
+    let tamtam1IDb = Uuid.NONE;
+    let tamtam2IDb = Uuid.NONE;
+    let tamtam3IDb = Uuid.NONE;
+    let tamtam1IDc = Uuid.NONE;
+    let tamtam2IDc = Uuid.NONE;
+    let tamtam3IDc = Uuid.NONE;
+    
+    const RADIUS = 20;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
@@ -72,34 +80,46 @@
             //initiate (build fires, light and effect
             initiateRitual();
             //start TAM TAM 1
-            Entities.editEntity(tamtam1ID, {"playing": true});
+            Entities.editEntity(tamtam1IDa, {"playing": true});
+            Entities.editEntity(tamtam1IDb, {"playing": true});
+            Entities.editEntity(tamtam1IDc, {"playing": true});
         } else if (ritualTime === 12) {
             generatePonctualSound("HORN_1.mp3");
         } else if (ritualTime === 36) {
             generatePonctualSound("HORN_1.mp3");
         } else if (ritualTime === 60) {
             //start TAMTAM  2
-            Entities.editEntity(tamtam2ID, {"playing": true});
+            Entities.editEntity(tamtam2IDa, {"playing": true});
+            Entities.editEntity(tamtam2IDb, {"playing": true});
+            Entities.editEntity(tamtam2IDc, {"playing": true});
         } else if (ritualTime === 64) {
             //stop TAMTAM  1
-            Entities.editEntity(tamtam1ID, {"playing": false});
+            Entities.editEntity(tamtam1IDa, {"playing": false});
+            Entities.editEntity(tamtam1IDb, {"playing": false});
+            Entities.editEntity(tamtam1IDc, {"playing": false});
         } else if (ritualTime === 75) {
             generatePonctualSound("HORN_2.mp3");
         } else if (ritualTime === 95) {
             generatePonctualSound("HORN_1.mp3");
         } else if (ritualTime === 120) {
             //start TAMTAM  3
-            Entities.editEntity(tamtam3ID, {"playing": true});
+            Entities.editEntity(tamtam3IDa, {"playing": true});
+            Entities.editEntity(tamtam3IDb, {"playing": true});
+            Entities.editEntity(tamtam3IDc, {"playing": true});
         } else if (ritualTime === 124) {
             //stop TAMTAM  2
-            Entities.editEntity(tamtam2ID, {"playing": false});
+            Entities.editEntity(tamtam2IDa, {"playing": false});
+            Entities.editEntity(tamtam2IDb, {"playing": false});
+            Entities.editEntity(tamtam2IDc, {"playing": false});
         } else if (ritualTime === 137) {
             generatePonctualSound("HORN_2.mp3");
         } else if (ritualTime === 154) {
             generatePonctualSound("HORN_2.mp3");
         } else if (ritualTime === 180) {
             //ending the ritual
-            Entities.editEntity(tamtam3ID, {"playing": false});
+            Entities.editEntity(tamtam3IDa, {"playing": false});
+            Entities.editEntity(tamtam3IDb, {"playing": false});
+            Entities.editEntity(tamtam3IDc, {"playing": false});
             if (ritualId !== Uuid.NONE) {
                 Entities.deleteEntity(ritualId);
                 ritualId = Uuid.NONE;
@@ -122,9 +142,9 @@
                 "lifetime": 240
             }, "local");
             
-            tamtam1ID = Entities.addEntity({
+            tamtam1IDa = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 1",
+                "name": "TAM TAM 1a",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
@@ -132,14 +152,44 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": false,
-                "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
+
+            tamtam1IDb = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 1b",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_1.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
                 "localOnly": true
             }, "local");
             
-            tamtam2ID = Entities.addEntity({
+            tamtam1IDc = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 2",
+                "name": "TAM TAM 1c",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_1.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
+            
+            tamtam2IDa = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 2a",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
@@ -147,14 +197,44 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": false,
-                "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
                 "localOnly": true
             }, "local");
 
-            tamtam3ID = Entities.addEntity({
+            tamtam2IDb = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 3",
+                "name": "TAM TAM 2b",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_2.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
+            
+            tamtam2IDc = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 2c",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_2.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
+
+            tamtam3IDa = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 3a",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
@@ -162,11 +242,40 @@
                 "playing": false,
                 "volume": 1.0,
                 "loop": true,
-                "positional": false,
-                "localPosition": {"x": Math.floor(Math.random() * 11), "y": 3.0, "z": Math.floor(Math.random() * 11)},
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
                 "localOnly": true
             }, "local");
 
+            tamtam3IDb = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 3b",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
+            
+            tamtam3IDc = Entities.addEntity({
+                "type": "Sound",
+                "name": "TAM TAM 3c",
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
+                "playing": false,
+                "volume": 1.0,
+                "loop": true,
+                "positional": true,
+                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "localOnly": true
+            }, "local");
             //FX
             
         }
@@ -184,7 +293,7 @@
             "volume": 1.0,
             "loop": false,
             "positional": true,
-            "localPosition": {"x": Math.floor(Math.random() * 20), "y": 3.0, "z": Math.floor(Math.random() * 20)},
+            "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
             "localOnly": true,
             "lifetime": 180
         }, "local");
