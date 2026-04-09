@@ -22,33 +22,32 @@
     
     let thisEntityID;
     let thisRenderWithZones;
+    let ritualPosition;
     
     let ritualId = Uuid.NONE;
     let ritualTime = 0;
-    let tamtam1IDa = Uuid.NONE;
-    let tamtam2IDa = Uuid.NONE;
-    let tamtam3IDa = Uuid.NONE;
-    let tamtam1IDb = Uuid.NONE;
-    let tamtam2IDb = Uuid.NONE;
-    let tamtam3IDb = Uuid.NONE;
-    let tamtam1IDc = Uuid.NONE;
-    let tamtam2IDc = Uuid.NONE;
-    let tamtam3IDc = Uuid.NONE;
-    
-    const RADIUS = 90;
+    let tamtam1ID = Uuid.NONE;
+    let tamtam2ID = Uuid.NONE;
+    let tamtam3ID = Uuid.NONE;
+    let currentVolume = 0.0;
+    const FULL_VOLUME_RADIUS = 150;
+    const MAX_AUDIBLE_RADIUS = 1000;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
         Messages.messageReceived.connect(onMessageReceived);
         
         thisEntityID = entityID;
-        let properties = Entities.getEntityProperties(entityID,["renderWithZones"]);
+        let properties = Entities.getEntityProperties(entityID,["position", "renderWithZones"]);
         thisRenderWithZones = properties.renderWithZones;
+        ritualPosition = properties.position;
     };
 
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > TIMER_INTERVAL) {
+            
+            manageVolumes();
             
             processRitual();
             
@@ -74,52 +73,66 @@
         }
     }
 
+    function manageVolumes() {
+        //eval volume
+            let distance = Vec3.distance(ritualPosition, MyAvatar.position);
+            if (distance < FULL_VOLUME_RADIUS) {
+                currentVolume = 1.0;
+            } else {
+                currentVolume = 1.0 - ((distance - FULL_VOLUME_RADIUS) / MAX_AUDIBLE_RADIUS);
+                if (currentVolume < 0.0) {
+                    currentVolume = 0.0;
+                }
+            }
+        
+        //update volume
+        if (tamtam1ID !== Uuid.NONE) {
+            Entities.editEntity(tamtam1ID, {"volume": currentVolume});
+        }
+        
+        if (tamtam2ID !== Uuid.NONE) {
+            Entities.editEntity(tamtam2ID, {"volume": currentVolume});
+        }
+        
+        if (tamtam3ID !== Uuid.NONE) {
+            Entities.editEntity(tamtam3ID, {"volume": currentVolume});
+        }
+    }
+
     function processRitual() {
         ritualTime++;
         if (ritualTime === 1) {
             //initiate (build fires, light and effect
             initiateRitual();
             //start TAM TAM 1
-            Entities.editEntity(tamtam1IDa, {"playing": true});
-            Entities.editEntity(tamtam1IDb, {"playing": true});
-            Entities.editEntity(tamtam1IDc, {"playing": true});
-        } else if (ritualTime === 12) {
+            Entities.editEntity(tamtam1ID, {"playing": true});
+        } else if (ritualTime === 24) {
             generatePonctualSound("HORN_1.mp3");
-        } else if (ritualTime === 36) {
-            generatePonctualSound("HORN_1.mp3");
-        } else if (ritualTime === 60) {
-            //start TAMTAM  2
-            Entities.editEntity(tamtam2IDa, {"playing": true});
-            Entities.editEntity(tamtam2IDb, {"playing": true});
-            Entities.editEntity(tamtam2IDc, {"playing": true});
-        } else if (ritualTime === 64) {
-            //stop TAMTAM  1
-            Entities.editEntity(tamtam1IDa, {"playing": false});
-            Entities.editEntity(tamtam1IDb, {"playing": false});
-            Entities.editEntity(tamtam1IDc, {"playing": false});
-        } else if (ritualTime === 75) {
-            generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 95) {
+        } else if (ritualTime === 72) {
             generatePonctualSound("HORN_1.mp3");
         } else if (ritualTime === 120) {
+            //start TAMTAM  2
+            Entities.editEntity(tamtam2ID, {"playing": true});
+        } else if (ritualTime === 128) {
+            //stop TAMTAM  1
+            Entities.editEntity(tamtam1ID, {"playing": false});
+        } else if (ritualTime === 150) {
+            generatePonctualSound("HORN_2.mp3");
+        } else if (ritualTime === 190) {
+            generatePonctualSound("HORN_1.mp3");
+        } else if (ritualTime === 240) {
             //start TAMTAM  3
-            Entities.editEntity(tamtam3IDa, {"playing": true});
-            Entities.editEntity(tamtam3IDb, {"playing": true});
-            Entities.editEntity(tamtam3IDc, {"playing": true});
-        } else if (ritualTime === 124) {
+            Entities.editEntity(tamtam3ID, {"playing": true});
+        } else if (ritualTime === 248) {
             //stop TAMTAM  2
-            Entities.editEntity(tamtam2IDa, {"playing": false});
-            Entities.editEntity(tamtam2IDb, {"playing": false});
-            Entities.editEntity(tamtam2IDc, {"playing": false});
-        } else if (ritualTime === 137) {
+            Entities.editEntity(tamtam2ID, {"playing": false});
+        } else if (ritualTime === 274) {
             generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 154) {
+        } else if (ritualTime === 308) {
             generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 180) {
+        } else if (ritualTime === 360) {
             //ending the ritual
-            Entities.editEntity(tamtam3IDa, {"playing": false});
-            Entities.editEntity(tamtam3IDb, {"playing": false});
-            Entities.editEntity(tamtam3IDc, {"playing": false});
+            Entities.editEntity(tamtam3ID, {"playing": false});
             if (ritualId !== Uuid.NONE) {
                 Entities.deleteEntity(ritualId);
                 ritualId = Uuid.NONE;
@@ -139,164 +152,79 @@
                 "renderWithZones": thisRenderWithZones,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
-                "lifetime": 240
+                "lifetime": 390
             }, "local");
             
-            tamtam1IDa = Entities.addEntity({
+            tamtam1ID = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 1a",
+                "name": "TAM TAM 1",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
                 "soundURL": ROOT + "sounds/RITUAL/TAMTAM_1.mp3",
                 "playing": false,
-                "volume": 1.0,
+                "volume": currentVolume,
                 "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "positional": false,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localOnly": true
             }, "local");
 
-            tamtam1IDb = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 1b",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_1.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
             
-            tamtam1IDc = Entities.addEntity({
+            tamtam2ID = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 1c",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_1.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
-            
-            tamtam2IDa = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 2a",
+                "name": "TAM TAM 2",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
                 "soundURL": ROOT + "sounds/RITUAL/TAMTAM_2.mp3",
                 "playing": false,
-                "volume": 1.0,
+                "volume": currentVolume,
                 "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "positional": false,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localOnly": true
             }, "local");
 
-            tamtam2IDb = Entities.addEntity({
+            tamtam3ID = Entities.addEntity({
                 "type": "Sound",
-                "name": "TAM TAM 2b",
+                "name": "TAM TAM 3",
                 "parentID": ritualId,
                 "renderWithZones": thisRenderWithZones,
                 "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_2.mp3",
+                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
                 "playing": false,
-                "volume": 1.0,
+                "volume": currentVolume,
                 "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
+                "positional": false,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localOnly": true
             }, "local");
             
-            tamtam2IDc = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 2c",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_2.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
-
-            tamtam3IDa = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 3a",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
-
-            tamtam3IDb = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 3b",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
-            
-            tamtam3IDc = Entities.addEntity({
-                "type": "Sound",
-                "name": "TAM TAM 3c",
-                "parentID": ritualId,
-                "renderWithZones": thisRenderWithZones,
-                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-                "soundURL": ROOT + "sounds/RITUAL/TAMTAM_3.mp3",
-                "playing": false,
-                "volume": 1.0,
-                "loop": true,
-                "positional": true,
-                "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-                "localOnly": true
-            }, "local");
             //FX
             
         }
     }
 
     function generatePonctualSound(filename) {
-        let id = Entities.addEntity({
-            "type": "Sound",
-            "name": filename,
-            "parentID": ritualId,
-            "renderWithZones": thisRenderWithZones,
-            "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
-            "soundURL": ROOT + "sounds/RITUAL/" + filename,
-            "playing": true,
-            "volume": 1.0,
-            "loop": false,
-            "positional": true,
-            "localPosition": {"x": Math.floor(Math.random() * RADIUS * 2) - RADIUS, "y": 3.0, "z": Math.floor(Math.random() * RADIUS * 2) - RADIUS},
-            "localOnly": true,
-            "lifetime": 180
-        }, "local");
+        let distance = Vec3.distance(ritualPosition, MyAvatar.position);
+        if (distance < FULL_VOLUME_RADIUS) {
+            let id = Entities.addEntity({
+                "type": "Sound",
+                "name": filename,
+                "parentID": ritualId,
+                "renderWithZones": thisRenderWithZones,
+                "dimensions": {"x": 3.0, "y": 3.0, "z": 3.0},
+                "soundURL": ROOT + "sounds/RITUAL/" + filename,
+                "playing": true,
+                "volume": 1.0,
+                "loop": false,
+                "positional": false,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "localOnly": true,
+                "lifetime": 360
+            }, "local");
+        }
     }
 
     this.unload = function(entityID) {
