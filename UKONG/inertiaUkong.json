@@ -2286,6 +2286,29 @@
             "position": {"x":-2796.62353515625,"y":2990.664794921875,"z":-2733.11328125},
             "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
             "script": "https://aleziakurdis.github.io/inertia/UKONG/ritual.js"
+        },
+        {
+            "id": "{a044fa99-80eb-4d9b-b7e9-f2ec29bf1a69}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "FIRE_BOWLS",
+            "locked": true,
+            "dimensions": {
+                "x": 5.113150596618652,
+                "y": 4.171259880065918,
+                "z": 1.704035997390747
+            },
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/FIRE_BOWLS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
