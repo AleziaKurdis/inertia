@@ -67,7 +67,7 @@
                 "blue": 41
             },
             "alpha": 0.15,
-            "textures": ROOT + "/images/flambeau.png",
+            "textures": ROOT + "/images/flamme.png",
             "maxParticles": 8,
             "lifespan": 0.5,
             "emitRate": 16,
