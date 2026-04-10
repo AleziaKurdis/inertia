@@ -15,16 +15,17 @@
     let horaireID = Uuid.NONE;
     let antiHoraireID = Uuid.NONE;
     let entitiesToDelete = [];
+    let timer;
     
     this.preload = function(entityID) {
         const renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
 
         //HORAIRE
         
-        let horaireAngle = GetCurrentCycleValue(360, 1800);
-        let horaireSpeed = 0.00349;
-        let antiHoraireAngle = 360 - GetCurrentCycleValue(360, 1800);
-        let antiHoraireSpeed = -0.00349;
+        let horaireAngle = GetCurrentCycleValue(360, 3600);
+        //let horaireSpeed = 0.00349;
+        let antiHoraireAngle = 360 - GetCurrentCycleValue(360, 3600);
+        //let antiHoraireSpeed = -0.00349;
         
         horaireID = Entities.addEntity({
             "name": "CargoShips Group A",
@@ -32,7 +33,7 @@
             "shape": "Sphere",
             "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": horaireAngle, "z": 0.0}),
-            "localAngularVelocity": { "x": 0.0, "y": horaireSpeed, "z": 0.0},
+            //"localAngularVelocity": { "x": 0.0, "y": horaireSpeed, "z": 0.0},
             "angularDamping": 0.0,
             "parentID": entityID,
             "renderWithZones": renderWithZones,
@@ -51,7 +52,7 @@
         let boatID = Entities.addEntity({
             "type": "Model",
             "parentID": horaireID,
-            "localPosition": { "x": -2000.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": -1400.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
             "name": "CARGOSHIP-1",
             "dimensions": {
@@ -74,8 +75,8 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": horaireID,
-            "localPosition": { "x": 2000.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
+            "localPosition": { "x": 1400.0, "y": 0.0, "z": 0.0},
+            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
             "name": "CARGOSHIP-2",
             "dimensions": {
                 "x": 34.47477722167969,
@@ -101,7 +102,7 @@
             "shape": "Sphere",
             "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": antiHoraireAngle, "z": 0.0}),
-            "localAngularVelocity": { "x": 0.0, "y": antiHoraireSpeed, "z": 0.0},
+            //"localAngularVelocity": { "x": 0.0, "y": antiHoraireSpeed, "z": 0.0},
             "angularDamping": 0.0,
             "parentID": entityID,
             "renderWithZones": renderWithZones,
@@ -120,8 +121,8 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": antiHoraireID,
-            "localPosition": { "x": -2200.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
+            "localPosition": { "x": -1700.0, "y": 0.0, "z": 0.0},
+            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "CARGOSHIP-3",
             "dimensions": {
                 "x": 34.47477722167969,
@@ -143,7 +144,7 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": antiHoraireID,
-            "localPosition": { "x": 2200.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": 1700.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "CARGOSHIP-4",
             "dimensions": {
@@ -163,6 +164,15 @@
             "useOriginalPivot": true
         }, "local");
         
+        timer = Script.setInterval(function () {
+            Entities.editEntity(horaireID, {
+                "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": GetCurrentCycleValue(360, 3600), "z": 0.0}),
+            });
+            Entities.editEntity(antiHoraireID, {
+                "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 360 - GetCurrentCycleValue(360, 3600), "z": 0.0}),
+            });
+        }, 80);
+        
     };
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
@@ -175,6 +185,7 @@
 	}
 
     this.unload = function(entityID) {
+        Script.clearInterval(timer);
         for (let i=0; i < entitiesToDelete.length; i++) {
             Entities.deleteEntity(entitiesToDelete[i]);
         }
