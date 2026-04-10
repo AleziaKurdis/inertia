@@ -2305,6 +2305,21 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/FIRE_BOWLS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{6f0f0043-8329-4b62-aa72-2b65c8205b6a}",
+            "type": "Empty",
+            "name": "CARGOSHIP GENERATOR",
+            "locked": true,
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "position": {"x": -3000,"y": 2899.0,"z": -3000},
+            "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/cargoships.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
