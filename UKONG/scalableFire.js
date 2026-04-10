@@ -10,15 +10,26 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
+    //OPTION (musbe set in description:
+    //NOFLICK : No light flickering
+    
     var ROOT = Script.resolvePath('').split("scalableFire.js")[0];
     const LIGHT_INTENSITY = 10.0;
-
+    
     let timer;
     let entitiesToDelete = [];
+    let isFlickering = true;
+
     
     this.preload = function(entityID) {
-        const properties = Entities.getEntityProperties(entityID, ["renderWithZones", "dimensions"]);
+        const properties = Entities.getEntityProperties(entityID, ["renderWithZones", "dimensions", "description"]);
         const renderWithZones = properties.renderWithZones;
+        const description = properties.description;
+        
+        if (description.indexOf("NOFLICK") !== -1) {
+            isFlickering = false;
+        }
+        
         let scale = properties.dimensions.x > properties.dimensions.z ? properties.dimensions.z : properties.dimensions.x;
 
         let id = Entities.addEntity({
@@ -51,26 +62,28 @@
             },
             "name": "Scalable Fire Flamme FX",
             "dimensions": {
-                "x": 0.8235000371932983 * scale,
-                "y": 0.8235000371932983 * scale,
-                "z": 0.8235000371932983 * scale
+                "x": 3.3 * scale,
+                "y": 3.3 * scale,
+                "z": 3.3 * scale
             },
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
             },
+            "collisionless": true,
+            "ignoreForCollisions": true,
             "shapeType": "ellipsoid",
             "color": {
                 "red": 255,
-                "green": 162,
+                "green": 130,
                 "blue": 41
             },
             "alpha": 0.15,
             "textures": ROOT + "/images/flamme.png",
-            "maxParticles": 8,
+            "maxParticles": 36,
             "lifespan": 0.5,
-            "emitRate": 16,
+            "emitRate": 18,
             "emitSpeed": 0,
             "speedSpread": 0,
             "emitOrientation": {
@@ -80,53 +93,57 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 0.05000000074505806,
+                "x": 0.4 * scale,
                 "y": 0,
-                "z": 0.05000000074505806
+                "z": 0.4 * scale
             },
             "emitRadiusStart": 0,
             "polarFinish": 3.1415927410125732,
             "emitAcceleration": {
                 "x": 0,
-                "y": 1.2000000476837158,
+                "y": 2.8 * scale,
                 "z": 0
             },
             "accelerationSpread": {
                 "x": 0,
-                "y": 0.20000000298023224,
+                "y": 0.2 * scale,
                 "z": 0
             },
-            "particleRadius": 0.15000000596046448 * scale,
-            "radiusSpread": 0.05000000074505806 * scale,
-            "radiusStart": 0.15000000596046448 * scale,
-            "radiusFinish": 0.15000000596046448 * scale,
+            "particleRadius": 1 * scale,
+            "radiusSpread": 0.008 * scale,
+            "radiusStart": 0.5 * scale,
+            "radiusFinish": 1.2 * scale,
             "colorStart": {
                 "red": 255,
-                "green": 223,
-                "blue": 64
+                "green": 208,
+                "blue": 0
             },
             "colorFinish": {
                 "red": 255,
-                "green": 115,
+                "green": 98,
                 "blue": 0
             },
             "emitterShouldTrail": false,
-            "alphaSpread": 0.10000000149011612,
-            "alphaStart": 0.4000000059604645,
+            "alphaSpread": 0.1,
+            "alphaStart": 0.4,
             "alphaFinish": 0,
-            "spinSpread": 0.17000000178813934,
+            "spinSpread": 0.17,
             "spinStart": null,
             "spinFinish": null
         }, "local");
         entitiesToDelete.push(particleID);
         
-        timer = Script.setInterval(function () {
-            Entities.editEntity(id, {"intensity": ((LIGHT_INTENSITY/2) + (Math.random() * LIGHT_INTENSITY))});
-        }, 50);
+        if (isFlickering) {
+            timer = Script.setInterval(function () {
+                Entities.editEntity(id, {"intensity": ((LIGHT_INTENSITY/2) + (Math.random() * LIGHT_INTENSITY))});
+            }, 50);
+        }
     };
 
     this.unload = function(entityID) {
-        Script.clearInterval(timer);
+        if (isFlickering) {
+            Script.clearInterval(timer);
+        }
         for (let i=0; i < entitiesToDelete.length; i++) {
             Entities.deleteEntity(entitiesToDelete[i]);
         }
