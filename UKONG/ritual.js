@@ -30,8 +30,8 @@
     let tamtam2ID = Uuid.NONE;
     let tamtam3ID = Uuid.NONE;
     let currentVolume = 0.0;
-    const FULL_VOLUME_RADIUS = 50;
-    const MAX_AUDIBLE_RADIUS = 300;
+    const FULL_VOLUME_RADIUS = 130;
+    const MAX_AUDIBLE_RADIUS = 800;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
