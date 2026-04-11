@@ -52,7 +52,7 @@
         let boatID = Entities.addEntity({
             "type": "Model",
             "parentID": horaireID,
-            "localPosition": { "x": -1200.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": -1350.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "CARGOSHIP-1",
             "dimensions": {
@@ -75,7 +75,7 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": horaireID,
-            "localPosition": { "x": 1200.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": 1350.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
             "name": "CARGOSHIP-2",
             "dimensions": {
@@ -121,7 +121,7 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": antiHoraireID,
-            "localPosition": { "x": -1400.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": -1600.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
             "name": "CARGOSHIP-3",
             "dimensions": {
@@ -144,7 +144,7 @@
         boatID = Entities.addEntity({
             "type": "Model",
             "parentID": antiHoraireID,
-            "localPosition": { "x": 1400.0, "y": 0.0, "z": 0.0},
+            "localPosition": { "x": 1600.0, "y": 0.0, "z": 0.0},
             "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "CARGOSHIP-4",
             "dimensions": {
