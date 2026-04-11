@@ -2065,7 +2065,7 @@
                 },
                 "castShadows": true
             },
-            "flyingAllowed": false,
+            "flyingAllowed": true,
             "ghostingAllowed": false
         },
         {
