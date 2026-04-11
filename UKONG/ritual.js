@@ -30,8 +30,8 @@
     let tamtam2ID = Uuid.NONE;
     let tamtam3ID = Uuid.NONE;
     let currentVolume = 0.0;
-    const FULL_VOLUME_RADIUS = 150;
-    const MAX_AUDIBLE_RADIUS = 1000;
+    const FULL_VOLUME_RADIUS = 50;
+    const MAX_AUDIBLE_RADIUS = 300;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
@@ -106,33 +106,43 @@
             initiateRitual();
             //start TAM TAM 1
             Entities.editEntity(tamtam1ID, {"playing": true});
-        } else if (ritualTime === 24) {
+        } else if (ritualTime === 12) {
             generatePonctualSound("HORN_1.mp3");
-        } else if (ritualTime === 72) {
+        } else if (ritualTime === 36) {
             generatePonctualSound("HORN_1.mp3");
-        } else if (ritualTime === 120) {
+        } else if (ritualTime === 48) {
+            generatePonctualSound("SCREAM_1.mp3");
+        } else if (ritualTime === 60) {
             //start TAMTAM  2
             Entities.editEntity(tamtam2ID, {"playing": true});
-        } else if (ritualTime === 128) {
+        } else if (ritualTime === 64) {
             //stop TAMTAM  1
             Entities.editEntity(tamtam1ID, {"playing": false});
-        } else if (ritualTime === 150) {
+        } else if (ritualTime === 69) {
+            generatePonctualSound("SCREAM_4.mp3");
+        } else if (ritualTime === 75) {
             generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 190) {
+        } else if (ritualTime === 85) {
+            generatePonctualSound("SCREAM_3.mp3");
+        } else if (ritualTime === 95) {
             generatePonctualSound("HORN_1.mp3");
-        } else if (ritualTime === 240) {
+        } else if (ritualTime === 120) {
             //start TAMTAM  3
             Entities.editEntity(tamtam3ID, {"playing": true});
-        } else if (ritualTime === 248) {
+        } else if (ritualTime === 124) {
             //stop TAMTAM  2
             Entities.editEntity(tamtam2ID, {"playing": false});
-        } else if (ritualTime === 274) {
+        } else if (ritualTime === 130) {
+            generatePonctualSound("SCREAM_4.mp3");
+        } else if (ritualTime === 137) {
             generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 308) {
+        } else if (ritualTime === 154) {
             generatePonctualSound("HORN_2.mp3");
-        } else if (ritualTime === 360) {
-            //ending the ritual
+        } else if (ritualTime === 180) {
             Entities.editEntity(tamtam3ID, {"playing": false});
+            generatePonctualSound("SCREAM_2.mp3");
+        } else if (ritualTime === 190) {
+            //ending the ritual
             if (ritualId !== Uuid.NONE) {
                 Entities.deleteEntity(ritualId);
                 ritualId = Uuid.NONE;
@@ -152,7 +162,7 @@
                 "renderWithZones": thisRenderWithZones,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
-                "lifetime": 390
+                "lifetime": 230
             }, "local");
             
             tamtam1ID = Entities.addEntity({
@@ -222,7 +232,7 @@
                 "positional": false,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "localOnly": true,
-                "lifetime": 360
+                "lifetime": 180
             }, "local");
         }
     }
