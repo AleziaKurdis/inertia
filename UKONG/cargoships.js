@@ -53,7 +53,7 @@
             "type": "Model",
             "parentID": horaireID,
             "localPosition": { "x": -1400.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
+            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
             "name": "CARGOSHIP-1",
             "dimensions": {
                 "x": 34.47477722167969,
@@ -122,7 +122,7 @@
             "type": "Model",
             "parentID": antiHoraireID,
             "localPosition": { "x": -1700.0, "y": 0.0, "z": 0.0},
-            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 0.0, "z": 0.0}),
+            "localRotation": Quat.fromVec3Degrees({ "x": 0.0, "y": 180.0, "z": 0.0}),
             "name": "CARGOSHIP-3",
             "dimensions": {
                 "x": 34.47477722167969,
