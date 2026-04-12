@@ -2320,6 +2320,75 @@
             "position": {"x": -3000,"y": 2899.0,"z": -3000},
             "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
             "script": "https://aleziakurdis.github.io/inertia/UKONG/cargoships.js"
+        },
+        {
+            "id": "{255538a2-e9a4-422d-85f6-91f9cf4ce583}",
+            "type": "Model",
+            "name": "Torch Stand Temple",
+            "locked": true,
+            "position": {"x":-3653.230712890625,"y":3004.86572265625,"z":-3478.659912109375},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torchStand.fst"
+        },
+        {
+            "id": "{c5312104-5009-4902-b669-c26fb8130f88}",
+            "type": "Model",
+            "position": {"x":-3653.4716796875,"y":3005.17578125,"z":-3478.546875},
+            "rotation": {"x":0.13052622973918915,"y":0,"z":1.4901161193847656e-8,"w":0.991445004940033},
+            "name": "Torch Temple",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": true,
+                "equippable": true,
+                "equippableLeftPosition": {
+                    "x": -0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
+                "equippableRightPosition": {
+                    "x": 0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/UKONG/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.4, "y": 1.4, "z": 1.4},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
