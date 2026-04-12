@@ -2389,6 +2389,48 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
             "useOriginalPivot": true,
             "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{6bef5347-e28b-4725-919e-3427443b85f0}",
+            "type": "Empty",
+            "name": "FlamSkullRoomB",
+            "locked": true,
+            "position": {"x":-2671.828369140625,"y":3005.361572265625,"z":-2736.767578125},
+            "dimensions": {
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
+                "z": 0.4000000059604645
+            },
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/scalableFire.js"
+        },
+        {
+            "id": "{9f6f3e0e-806a-46b2-a081-a2064f14f8a4}",
+            "type": "Empty",
+            "name": "FlamSkullRoomA",
+            "locked": true,
+            "position": {"x":-2671.828369140625,"y":3005.361572265625,"z":-2731.20068359375},
+            "dimensions": {
+                "x": 0.4000000059604645,
+                "y": 0.4000000059604645,
+                "z": 0.4000000059604645
+            },
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/scalableFire.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
