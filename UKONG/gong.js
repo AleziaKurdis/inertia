@@ -34,6 +34,7 @@
             };
             Messages.sendMessage(channelComm, JSON.stringify(messageToSend));
         }
+
         let injectorOptions = {
             "position": MyAvatar.position,
             "volume": 1.0,
@@ -41,6 +42,9 @@
             "localOnly": false
         };
         let injector = Audio.playSound(SOUND, injectorOptions);
+        let timer = Script.setTimeout(function () {
+            //avoid too fast closure for the sound
+        }, 11000);
     }; 
 
     function GetCurrentCycleValue(cyclelength, cycleduration){

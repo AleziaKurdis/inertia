@@ -30,8 +30,10 @@
     let tamtam2ID = Uuid.NONE;
     let tamtam3ID = Uuid.NONE;
     let currentVolume = 0.0;
-    const FULL_VOLUME_RADIUS = 130;
+    const FULL_VOLUME_RADIUS = 150;
     const MAX_AUDIBLE_RADIUS = 800;
+    
+    const D17_DAY_DURATION = 61200;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
@@ -46,6 +48,8 @@
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > TIMER_INTERVAL) {
+            
+            dayNightLights();
             
             manageVolumes();
             
@@ -73,17 +77,62 @@
         }
     }
 
-    function manageVolumes() {
-        //eval volume
-            let distance = Vec3.distance(ritualPosition, MyAvatar.position);
-            if (distance < FULL_VOLUME_RADIUS) {
-                currentVolume = 1.0;
+    let dayNightFires = [
+        {"localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //which one ?
+    ];
+    
+    function dayNightLights() {
+        let flickering = "";
+        let d17CurrentHour = (GetCurrentCycleValue(8640000, D17_DAY_DURATION)/100) / 3600;
+        for (let i = 0; i < dayNightFires.length; i++) {
+            if ( d17CurrentHour > 19 || d17CurrentHour < 5) { 
+                if (dayNightFires[i].id === Uuid.NONE) {
+                    if (dayNightFires[i].noFlick) {
+                        flickering = "NOFLICK";
+                    } else {
+                        flickering = "";
+                    }
+                    dayNightFires[i].id = Entities.addEntity({
+                        "type": "Empty",
+                        "name": "DAY_NIGHT_FIRE",
+                        "renderWithZones": thisRenderWithZones,
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "parentID": thisEntityID,
+                        "localPosition": dayNightFires[i].localPosition,
+                        "dimensions": {"x": dayNightFires[i].diameter, "y": dayNightFires[i].diameter, "z": dayNightFires[i].diameter},
+                        "script": "https://aleziakurdis.github.io/inertia/UKONG/scalableFire.js",
+                        "lifetime": Math.round(D17_DAY_DURATION * 0.41666),
+                        "description": flickering
+                    }, "local");
+                }
             } else {
-                currentVolume = 1.0 - ((distance - FULL_VOLUME_RADIUS) / MAX_AUDIBLE_RADIUS);
-                if (currentVolume < 0.0) {
-                    currentVolume = 0.0;
+                if (dayNightFires[i].id !== Uuid.NONE) {
+                    Entities.deleteEntity(dayNightFires[i].id);
+                    dayNightFires[i].id = Uuid.NONE;
                 }
             }
+        }
+    }
+
+    function manageVolumes() {
+        //eval volume
+        let distance = Vec3.distance(ritualPosition, MyAvatar.position);
+
+        if (distance < FULL_VOLUME_RADIUS) {
+            currentVolume = 1.0;
+        } else {
+            let t = (distance - FULL_VOLUME_RADIUS) / MAX_AUDIBLE_RADIUS;
+            t = Math.min(Math.max(t, 0.0), 1.0);
+
+            // Exponential curve
+            currentVolume = Math.pow(1.0 - t, 5.0); // try 6.0 ot 7.0 if not decay fast enough
+
+            if (currentVolume < 0.0) {
+                currentVolume = 0.0;
+            }
+        }
         
         //update volume
         if (tamtam1ID !== Uuid.NONE) {
@@ -236,6 +285,15 @@
             }, "local");
         }
     }
+
+    function GetCurrentCycleValue(cyclelength, cycleduration){
+		var today = new Date();
+		var TodaySec = today.getTime()/1000;
+		var CurrentSec = TodaySec%cycleduration;
+		
+		return (CurrentSec/cycleduration)*cyclelength;
+		
+	}
 
     this.unload = function(entityID) {
         if (ritualId !== Uuid.NONE) {
