@@ -135,7 +135,7 @@
             t = Math.min(Math.max(t, 0.0), 1.0);
 
             // Exponential curve
-            currentVolume = Math.pow(1.0 - t, 18.0);
+            currentVolume = Math.pow(1.0 - t, 10.0);
 
             if (currentVolume < 0.0) {
                 currentVolume = 0.0;
