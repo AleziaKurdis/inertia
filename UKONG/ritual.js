@@ -78,7 +78,15 @@
     }
 
     let dayNightFires = [
-        {"localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //which one ?
+        {"localPosition": {"x": 125.8977, "y": 29.7458, "z": -3.8523}, "diameter": 1.1, "noFlick": false, "id": Uuid.NONE }, //Top - CitySide
+        {"localPosition": {"x": 125.8977, "y": 29.7458, "z": 2.3269}, "diameter": 1.1, "noFlick": false, "id": Uuid.NONE }, //Top - MountSide
+        {"localPosition": {"x": 111.7332, "y": 19.3049, "z": -14.8054}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE }, //3rd - CitySide
+        {"localPosition": {"x": 111.7332, "y": 19.3049, "z": 12.8105}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE }, //3rd - MountSide
+        {"localPosition": {"x": -147.9866, "y": 38.4709, "z": -0.5427}, "diameter": 1.3056, "noFlick": false, "id": Uuid.NONE }, //Altar skull
+        {"localPosition": {"x": 11.2847, "y": 3.0122, "z": -5.1023}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //LOWDOOR - CitySide
+        {"localPosition": {"x": 11.2847, "y": 3.0122, "z": 3.5586}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //LOWDOOR - CitySide
+        {"localPosition": {"x": -68.8528, "y": 1.2563, "z": -5.1023}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //WALLDOOR - CitySide
+        {"localPosition": {"x": -68.8528, "y": 1.2563, "z": 3.5586}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //WALLDOOR - CitySide
     ];
     
     function dayNightLights() {
