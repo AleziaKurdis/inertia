@@ -110,7 +110,7 @@
                         "parentID": thisEntityID,
                         "localPosition": dayNightFires[i].localPosition,
                         "dimensions": {"x": dayNightFires[i].diameter, "y": dayNightFires[i].diameter, "z": dayNightFires[i].diameter},
-                        "script": "https://aleziakurdis.github.io/inertia/UKONG/scalableFire.js",
+                        "script": ROOT + "scalableFire.js",
                         "lifetime": Math.round(D17_DAY_DURATION * 0.41666),
                         "description": flickering
                     }, "local");
@@ -124,6 +124,32 @@
         }
     }
 
+    function ceremonialFire(parentID, localPosition, diameter, lifeTime, isFlickering) {
+        let flickering = "";
+
+        if (!isFlickering) {
+            flickering = "NOFLICK";
+        } else {
+            flickering = "";
+        }
+        let id = Entities.addEntity({
+            "type": "Empty",
+            "name": "RITUAL_FIRE",
+            "renderWithZones": thisRenderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "parentID": parentID,
+            "localPosition": localPosition,
+            "dimensions": {"x": diameter, "y": diameter, "z": diameter},
+            "script": ROOT + "scalableFire.js",
+            "lifetime": lifeTime,
+            "description": flickering
+        }, "local");
+        
+        return id;
+    }
+
     function manageVolumes() {
         //eval volume
         let distance = Vec3.distance(ritualPosition, MyAvatar.position);
@@ -135,7 +161,7 @@
             t = Math.min(Math.max(t, 0.0), 1.0);
 
             // Exponential curve
-            currentVolume = Math.pow(1.0 - t, 10.0);
+            currentVolume = Math.pow(1.0 - t, 9.0);
 
             if (currentVolume < 0.0) {
                 currentVolume = 0.0;
@@ -269,7 +295,18 @@
             }, "local");
             
             //FX
-            
+            ceremonialFire(ritualId, {"x": 85.8289, "y": 9.8379, "z": -14.8232}, 2.0, 230, true); //SKULL 2rnd Level City side
+            ceremonialFire(ritualId, {"x": 85.8613, "y": 9.8379, "z": 12.8450}, 2.0, 230, true); //SKULL 2rnd Level Mount side
+            ceremonialFire(ritualId, {"x": 66.0952, "y": -0.5793, "z": -14.7446}, 2.0, 230, true); //SKULL 3rnd Level City side
+            ceremonialFire(ritualId, {"x": 66.0952, "y": -0.1597, "z": 12.7881}, 2.0, 230, true); //SKULL 3rnd Level Mount side
+            ceremonialFire(ritualId, {"x": -76.6477, "y": -4.0374, "z": -32.9136}, 2.0, 230, true); //Wall Bowl City side
+            ceremonialFire(ritualId, {"x": -88.2991, "y": -3.9307, "z": 35.4087}, 2.0, 230, true); //Wall Bowl Mount side
+            ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": 3.5378}, 1.0, 230, true); //Central pol to wall City Side
+            ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": 3.5378}, 1.0, 230, true); //Central pol to wall Mount Side
+            ceremonialFire(ritualId, {"x": -4.3181, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - wall Side
+            ceremonialFire(ritualId, {"x": 4.3708, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - Temple Side
+            ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": 3.5693}, 1.0, 230, true); //Central pol Wall Alley City Side
+            ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": -5.1250}, 1.0, 230, true); //Central pol  Wall Alley Mount Side
         }
     }
 
