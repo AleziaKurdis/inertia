@@ -301,7 +301,7 @@
             ceremonialFire(ritualId, {"x": 66.0952, "y": -0.1597, "z": 12.7881}, 2.0, 230, true); //SKULL 3rnd Level Mount side
             ceremonialFire(ritualId, {"x": -76.6477, "y": -4.0374, "z": -32.9136}, 2.0, 230, true); //Wall Bowl City side
             ceremonialFire(ritualId, {"x": -88.2991, "y": -3.9307, "z": 35.4087}, 2.0, 230, true); //Wall Bowl Mount side
-            ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": 3.5378}, 1.0, 230, true); //Central pol to wall City Side
+            ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": -5.1023}, 1.0, 230, true); //Central pol to wall City Side
             ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": 3.5378}, 1.0, 230, true); //Central pol to wall Mount Side
             ceremonialFire(ritualId, {"x": -4.3181, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - wall Side
             ceremonialFire(ritualId, {"x": 4.3708, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - Temple Side
