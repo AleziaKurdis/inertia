@@ -153,11 +153,11 @@
     function manageVolumes() {
         //eval volume
         let distance = Vec3.distance(ritualPosition, MyAvatar.position);
-
+		let t;
         if (distance < FULL_VOLUME_RADIUS) {
             currentVolume = 1.0;
         } else {
-            let t = (distance - FULL_VOLUME_RADIUS) / MAX_AUDIBLE_RADIUS;
+            t = (distance - FULL_VOLUME_RADIUS) / MAX_AUDIBLE_RADIUS;
             t = Math.min(Math.max(t, 0.0), 1.0);
 
             // Exponential curve
