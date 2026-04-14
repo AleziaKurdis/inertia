@@ -2431,6 +2431,35 @@
             "damping": 0,
             "angularDamping": 0,
             "script": "https://aleziakurdis.github.io/inertia/UKONG/scalableFire.js"
+        },
+        {
+            "id": "{97e4df43-4d22-441c-be45-cef12c1249d3}",
+            "type": "Image",
+            "position": {"x":-2758.798095703125,"y":2994.717529296875,"z":-2733.8447265625},
+            "name": "QUOTE_TEMPLE",
+            "locked": true,
+            "dimensions": {
+                "x": 7.906646251678467,
+                "y": 1.0396716594696045,
+                "z": 0.009999999776482582
+            },
+            "rotation": {
+                "x": 0,
+                "y": -0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "renderWithZones": [
+                "{44f749ca-1d96-43a2-89f1-5262857975c4}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "imageURL": "https://aleziakurdis.github.io/inertia/UKONG/images/templeInstruction.png"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
