@@ -286,9 +286,9 @@
                 "w": 1
             },
             "emitDimensions": {
-                "x": 100,
+                "x": 140,
                 "y": 0,
-                "z": 100
+                "z": 140
             },
             "emitRadiusStart": 0,
             "polarFinish": 3.1415927410125732,
@@ -404,8 +404,8 @@
             ceremonialFire(ritualId, {"x": 4.3708, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - Temple Side
             ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": 3.5693}, 1.0, 230, true); //Central pol Wall Alley City Side
             ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": -5.1250}, 1.0, 230, true); //Central pol  Wall Alley Mount Side
-            ceremonialFire(ritualId, {"x": -152.4084, "y": 48.6702, "z": -2.3809}, 0.6, 230, true); //ALTAR pole -  CITY Side
-            ceremonialFire(ritualId, {"x": -152.7559, "y": 48.6702, "z": -0.2844}, 0.6, 230, true); //ALTAR pole -  CITY Side
+            ceremonialFire(ritualId, {"x": -152.4084, "y": 48.5302, "z": -2.3809}, 0.6, 230, true); //ALTAR pole -  CITY Side
+            ceremonialFire(ritualId, {"x": -152.7559, "y": 48.5302, "z": -0.2844}, 0.6, 230, true); //ALTAR pole -  CITY Side
         }
     }
 
