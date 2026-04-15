@@ -34,6 +34,7 @@
     const MAX_AUDIBLE_RADIUS = 800;
     
     const D17_DAY_DURATION = 61200;
+    let dayNight;
     
     this.preload = function(entityID) {
         Messages.subscribe(channelComm);
@@ -43,6 +44,9 @@
         let properties = Entities.getEntityProperties(entityID,["position", "renderWithZones"]);
         thisRenderWithZones = properties.renderWithZones;
         ritualPosition = properties.position;
+        dayNight = Script.setInterval(function () {
+            dayNightLights();
+        }, 60000);
     };
 
     function myTimer(deltaTime) {
@@ -50,11 +54,10 @@
         if ((today.getTime() - processTimer) > TIMER_INTERVAL) {
             
             dayNightLights();
-            
+
             manageVolumes();
-            
             processRitual();
-            
+
             today = new Date();
             processTimer = today.getTime();
         }
@@ -72,6 +75,7 @@
                     ritualTime = 0;
                     Script.update.connect(myTimer);
                     ritualOngoing = true;
+                    Script.clearInterval(dayNight);
                 }
             }
         }
@@ -232,6 +236,10 @@
             }
             ritualOngoing = false;
             Script.update.disconnect(myTimer);
+            dayNightLights();
+            dayNight = Script.setInterval(function () {
+                dayNightLights();
+            }, 60000);
         }
     }
 
@@ -348,6 +356,10 @@
         if (ritualOngoing) {
             Script.update.disconnect(myTimer);
         }
+        if (!ritualOngoing) {
+            Script.clearInterval(dayNight);
+        }
+        
         ritualOngoing = false;
         
         Messages.messageReceived.disconnect(onMessageReceived);
