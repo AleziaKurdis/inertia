@@ -2435,7 +2435,7 @@
         {
             "id": "{97e4df43-4d22-441c-be45-cef12c1249d3}",
             "type": "Image",
-            "position": {"x":-2758.798095703125,"y":2994.717529296875,"z":-2733.8447265625},
+            "position": {"x":-2758.8000,"y":2994.717529296875,"z":-2733.8447265625},
             "name": "QUOTE_TEMPLE",
             "locked": true,
             "dimensions": {
@@ -2459,7 +2459,9 @@
             "angularDamping": 0,
             "collisionless": true,
             "ignoreForCollisions": true,
-            "imageURL": "https://aleziakurdis.github.io/inertia/UKONG/images/templeInstruction.png"
+            "imageURL": "https://aleziakurdis.github.io/inertia/UKONG/images/templeInstruction.png",
+            "emissive": true,
+            "alpha": 0.7
         },
         {
             "id": "{ed6385fb-1fb2-4f5a-b15d-ee86f2399184}",
