@@ -195,6 +195,7 @@
             Entities.editEntity(tamtam1ID, {"playing": true});
         } else if (ritualTime === 12) {
             generatePonctualSound("HORN_1.mp3");
+            hellFires();
         } else if (ritualTime === 36) {
             generatePonctualSound("HORN_1.mp3");
         } else if (ritualTime === 48) {
@@ -241,6 +242,94 @@
                 dayNightLights();
             }, 60000);
         }
+    }
+
+    function hellFires() {
+        //CLOUDER
+        let id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "parentID": ritualId,
+            "localPosition": {
+                "x": 0.0,
+                "y": 20.9692,
+                "z": 0.0
+            },
+            "name": "CLOUDER",
+            "dimensions": {
+                "x": 144,
+                "y": 144,
+                "z": 144
+            },
+            "renderWithZones": thisRenderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 255,
+                "green": 115,
+                "blue": 0
+            },
+            "alpha": 0.20000000298023224,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 1600,
+            "lifespan": 8,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 100,
+                "y": 0,
+                "z": 100
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.30000001192092896,
+                "z": 0
+            },
+            "particleRadius": 13,
+            "radiusSpread": 5,
+            "radiusStart": 10,
+            "radiusFinish": 17,
+            "colorStart": {
+                "red": 255,
+                "green": 166,
+                "blue": 0
+            },
+            "colorFinish": {
+                "red": 255,
+                "green": 98,
+                "blue": 0
+            },
+            "alphaSpread": 0.10000000149011612,
+            "alphaStart": 0,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 0.7900000214576721,
+            "spinStart": -0.7900000214576721,
+            "spinFinish": 0.7900000214576721
+        }, "local");
+        
+        //4 FOGGERS
+        GenerateFogger({"x": 66.0952, "y": -0.5793, "z": -14.7446}, "1");
+        GenerateFogger({"x": 66.0952, "y": -0.1597, "z": 12.7881}, "2");
+        GenerateFogger({"x": -76.6477, "y": -4.0374, "z": -32.9136}, "3");
+        GenerateFogger({"x": -88.2991, "y": -3.9307, "z": 35.4087}, "4");
     }
 
     function initiateRitual() {
@@ -339,6 +428,83 @@
                 "lifetime": 180
             }, "local");
         }
+    }
+
+    function GenerateFogger(localPosition, no) {
+        let id = Entities.addEntity({
+            "type": "ParticleEffect",
+            "parentID": ritualId,
+            "localPosition": localPosition,
+            "name": "FOGGER " + no,
+            "dimensions": {
+                "x": 143.85601806640625,
+                "y": 143.85601806640625,
+                "z": 143.85601806640625
+            },
+            "renderWithZones": thisRenderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "ellipsoid",
+            "color": {
+                "red": 255,
+                "green": 128,
+                "blue": 0
+            },
+            "alpha": 0.10000000149011612,
+            "textures": ROOT + "images/fog.png",
+            "maxParticles": 1200,
+            "lifespan": 6,
+            "emitRate": 200,
+            "emitSpeed": 0,
+            "speedSpread": 0,
+            "emitOrientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 0,
+                "z": 2
+            },
+            "emitRadiusStart": 0,
+            "polarFinish": 3.1415927410125732,
+            "emitAcceleration": {
+                "x": 0,
+                "y": 2,
+                "z": 0
+            },
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0.6000000238418579,
+                "z": 0
+            },
+            "particleRadius": 4,
+            "radiusSpread": 0.30000001192092896,
+            "radiusStart": 0.5,
+            "radiusFinish": 15,
+            "colorStart": {
+                "red": 255,
+                "green": 204,
+                "blue": 0
+            },
+            "colorFinish": {
+                "red": 255,
+                "green": 38,
+                "blue": 0
+            },
+            "alphaSpread": 0.10000000149011612,
+            "alphaStart": 0.20000000298023224,
+            "alphaFinish": 0,
+            "emitterShouldTrail": true,
+            "spinSpread": 0.7900000214576721,
+            "spinStart": -0.7900000214576721,
+            "spinFinish": 0.7900000214576721
+        }, "local");
     }
 
     function GetCurrentCycleValue(cyclelength, cycleduration){
