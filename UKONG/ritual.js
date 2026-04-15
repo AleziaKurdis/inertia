@@ -315,6 +315,8 @@
             ceremonialFire(ritualId, {"x": 4.3708, "y": 2.6719, "z": -14.9978}, 1.0, 230, true); //Central pol to city - Temple Side
             ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": 3.5693}, 1.0, 230, true); //Central pol Wall Alley City Side
             ceremonialFire(ritualId, {"x": -40.6765, "y": 2.0295, "z": -5.1250}, 1.0, 230, true); //Central pol  Wall Alley Mount Side
+            ceremonialFire(ritualId, {"x": 0, "y": 0, "z": 0}, 1.0, 230, true); //ALTAR pole -  CITY Side
+            ceremonialFire(ritualId, {"x": 0, "y": 0, "z": 0}, 1.0, 230, true); //ALTAR pole -  CITY Side
         }
     }
 
