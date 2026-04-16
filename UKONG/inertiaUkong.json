@@ -2551,6 +2551,65 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MISSILE_CHURCH.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{e329cdfe-a5bf-4a9e-bc1a-b7c518a7cfe5}",
+            "type": "Zone",
+            "position": {"x":-2663.937744140625,"y":2998.05322265625,"z":-2739.30615234375},
+            "name": "TEMPLE DARK ZONE",
+            "locked": true,
+            "dimensions": {
+                "x": 23.11376953125,
+                "y": 30.00048828125,
+                "z": 31.91552734375
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "box",
+            "keyLight": {
+                "color": {
+                    "red": 107,
+                    "green": 176,
+                    "blue": 255
+                },
+                "intensity": 0.009999999776482582,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                },
+                "castShadows": true
+            },
+            "ambientLight": {
+                "ambientColor": {
+                    "red": 0,
+                    "green": 0,
+                    "blue": 6
+                }
+            },
+            "skybox": {
+                "color": {
+                    "red": 0,
+                    "green": 3,
+                    "blue": 15
+                }
+            },
+            "haze": {
+                "hazeColor": {
+                    "red": 8,
+                    "green": 15,
+                    "blue": 36
+                }
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
+            "keyLightMode": "enabled",
+            "ambientLightMode": "enabled",
+            "skyboxMode": "enabled",
+            "hazeMode": "enabled"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
