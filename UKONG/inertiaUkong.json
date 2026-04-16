@@ -2532,7 +2532,30 @@
             "spinSpread": 0.7900000214576721,
             "spinStart": -0.7900000214576721,
             "spinFinish": 0.7900000214576721
-        }
+        },
+        {
+            "id": "{01268114-67ce-4fbe-a95e-7680d9d39260}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "MISSILE CHURCH",
+            "locked": true,
+            "dimensions": {
+                "x": 5.113150596618652,
+                "y": 4.171259880065918,
+                "z": 1.704035997390747
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MISSILE_CHURCH.fst",
+            "useOriginalPivot": true
+        },
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
