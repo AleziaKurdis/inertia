@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "MISSILE_albedo.jpg",
+         "metallic": 1.0,
+         "roughness": 0.25,
+         "normalMap": "MISSILE_normal_ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
