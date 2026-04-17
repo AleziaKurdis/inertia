@@ -2610,6 +2610,31 @@
             "ambientLightMode": "enabled",
             "skyboxMode": "enabled",
             "hazeMode": "enabled"
+        },
+        {
+            "id": "{d6624db0-91d3-4d7d-af7c-1ba92dae4faf}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "rotation": {
+                "x": 0,
+                "y": -0.7071068286895752,
+                "z": 0,
+                "w": 0.7071068286895752
+            },
+            "name": "MISSILE",
+            "locked": true,
+            "dimensions": {"x":3,"y":3,"z":3},
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MISSILE.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
