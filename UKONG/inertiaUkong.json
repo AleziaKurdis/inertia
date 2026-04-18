@@ -2684,6 +2684,32 @@
                 "green": 153,
                 "blue": 255
             }
+        },
+        {
+            "id": "{23927d28-8bbe-478b-97ce-23237224129a}",
+            "type": "Sound",
+            "name": "CAVE DRIPPING",
+            "locked": true,
+            "position": {"x":-3351.06787109375,"y":3007.525146484375,"z":-3169.522705078125},
+            "dimensions": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "soundURL": "https://aleziakurdis.github.io/inertia/UKONG/sounds/caveDripping.mp3",
+            "volume": 1.0,
+            "playing": true,
+            "loop": true,
+            "positional": true,
+            "localOnly": false
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
