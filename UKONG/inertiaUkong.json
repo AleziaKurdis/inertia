@@ -2630,6 +2630,60 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/MISSILE.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{dce71e65-5f53-4dbc-9759-55806677ffd2}",
+            "type": "Sphere",
+            "name": "LIGHT_BULB",
+            "locked": true,
+            "userData": "{\"lightIntensity\":15,\"lightSpotCutOff\":40,\"lightRange\":40}",
+            "position": {"x":-2591.263427734375,"y":3001.0302734375,"z":-3149.341796875},
+            "dimensions": {
+                "x": 0.2224690169095993,
+                "y": 0.2224690169095993,
+                "z": 0.2224690169095993
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/lightBulb.js",
+            "color": {
+                "red": 255,
+                "green": 119,
+                "blue": 51
+            }
+        },
+        {
+            "id": "{92bcc8a2-e135-4874-8ee5-7fa9988e1462}",
+            "type": "Sphere",
+            "name": "LIGHT_BULB 2",
+            "locked": true,
+            "userData": "{\"lightIntensity\":15,\"lightSpotCutOff\":50,\"lightRange\":40}",
+            "position": {"x":-2578.261962890625,"y":3000.94384765625,"z":-3143.481201171875},
+            "dimensions": {
+                "x": 0.2224690169095993,
+                "y": 0.2224690169095993,
+                "z": 0.2224690169095993
+            },
+            "renderWithZones": [
+                "{762dfcbc-e8a6-4586-bdb7-b3b57c6d8d83}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/lightBulb.js",
+            "color": {
+                "red": 51,
+                "green": 153,
+                "blue": 255
+            }
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
