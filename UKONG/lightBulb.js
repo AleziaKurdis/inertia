@@ -52,7 +52,7 @@
             },
             "color": color,
             "intensity": lightIntensity,
-            "falloffRadius": 1,
+            "falloffRadius": lightIntensity/8,
             "isSpotlight": true,
             "visible": true,
             "exponent": 1,
