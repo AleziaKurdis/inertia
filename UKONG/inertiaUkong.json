@@ -2710,6 +2710,26 @@
             "loop": true,
             "positional": true,
             "localOnly": false
+        },
+        {
+            "id": "{d0b7f901-c9bc-4c47-82d1-0be631566650}",
+            "type": "Model",
+            "position": {"x":-2583.887451171875,"y":2989.070068359375,"z":-3146.29638671875},
+            "rotation": {"x":0,"y":0.6087613701820374,"z":0,"w":0.7933533191680908},
+            "name": "EPICENTER",
+            "locked": true,
+            "dimensions": {"x":5.19160795211792,"y":1.8436193466186523,"z":11.287100791931152},
+            "renderWithZones": [
+                "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/EPICENTER.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
