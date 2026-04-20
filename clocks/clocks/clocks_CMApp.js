@@ -22,8 +22,8 @@ var SOUND_WHOOSH = SoundCache.getSound(Script.resolvePath("sounds/whoosh.mp3"));
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
-var hmdPanelLocalPosition = {"x": 0.0, "y": 0.0, "z": -2.0};
-var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": 0, "y": 0, "z": 0});
+var hmdPanelLocalPosition = {"x": 0.0, "y": 0.25, "z": -1.0};
+var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": -30, "y": 0, "z": 0});
 var CAMERA_MATRIX_INDEX = -7;
 
 function toggleItem() {
@@ -39,7 +39,7 @@ function toggleItem() {
             clockWebID = Entities.addEntity({
                 "type": "Web",
                 "dpi": 23,
-                "name": "4 clocks",
+                "name": "clocks",
                 "parentID": MyAvatar.sessionUUID,//"parentJointIndex": CAMERA_MATRIX_INDEX,
                 "localPosition": hmdPanelLocalPosition,
                 "localRotation": hmdPanelLocalRotation,
@@ -51,7 +51,7 @@ function toggleItem() {
                 "wantsKeyboardFocus": false,
                 "showKeyboardFocusHighlight": false,
                 "useBackground": false,
-                "renderLayer": "hud"
+                "renderLayer": "world
             }, "local");
         }
         Script.update.connect(whooshTimer);
