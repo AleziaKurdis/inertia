@@ -91,6 +91,10 @@
         {"localPosition": {"x": 11.2847, "y": 3.0122, "z": 3.5586}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //LOWDOOR - CitySide
         {"localPosition": {"x": -68.8528, "y": 1.2563, "z": -5.1023}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //WALLDOOR - CitySide
         {"localPosition": {"x": -68.8528, "y": 1.2563, "z": 3.5586}, "diameter": 1.0, "noFlick": false, "id": Uuid.NONE }, //WALLDOOR - CitySide
+        {"localPosition": {"x": 85.8289, "y": 9.8379, "z": -14.8232}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE }, //Temple 2e level - CitySide
+        {"localPosition": {"x": 85.8613, "y": 9.8379, "z": 12.8450}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE }, //Temple 2e level - MountSide
+        {"localPosition": {"x": 66.0952, "y": -0.5793, "z": -14.7446}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE }, //Temple 1st level - CitySide
+        {"localPosition": {"x": 66.0952, "y": -0.1597, "z": 12.7881}, "diameter": 2.0, "noFlick": false, "id": Uuid.NONE } //Temple 1st level - MountSide
     ];
     
     function dayNightLights() {
@@ -392,10 +396,6 @@
             }, "local");
             
             //FX
-            ceremonialFire(ritualId, {"x": 85.8289, "y": 9.8379, "z": -14.8232}, 2.0, 230, true); //SKULL 2rnd Level City side
-            ceremonialFire(ritualId, {"x": 85.8613, "y": 9.8379, "z": 12.8450}, 2.0, 230, true); //SKULL 2rnd Level Mount side
-            ceremonialFire(ritualId, {"x": 66.0952, "y": -0.5793, "z": -14.7446}, 2.0, 230, true); //SKULL 3rnd Level City side
-            ceremonialFire(ritualId, {"x": 66.0952, "y": -0.1597, "z": 12.7881}, 2.0, 230, true); //SKULL 3rnd Level Mount side
             ceremonialFire(ritualId, {"x": -76.6477, "y": -4.0374, "z": -32.9136}, 2.0, 230, true); //Wall Bowl City side
             ceremonialFire(ritualId, {"x": -88.2991, "y": -3.9307, "z": 35.4087}, 2.0, 230, true); //Wall Bowl Mount side
             ceremonialFire(ritualId, {"x": -11.7405, "y": 2.9050, "z": -5.1023}, 1.0, 230, true); //Central pol to wall City Side
