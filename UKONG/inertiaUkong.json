@@ -137,37 +137,6 @@
             "useOriginalPivot": true
         },
         {
-            "id": "{fa736c77-59fe-4046-aef4-a175a52ae199}",
-            "type": "Box",
-            "position": {"x":-3072.74169921875,"y":3187.15234375,"z":-2541.1650390625},
-            "name": "PYM 1",
-            "locked": true,
-            "tags": ["UP", "Z-"],
-            "dimensions": {
-                "x": 25.3858585357666,
-                "y": 40.44493865966797,
-                "z": 53.46373748779297
-            },
-            "renderWithZones": [
-                "{3beae1fe-e853-4071-9015-43ebd144299f}"
-            ],
-            "grab": {
-                "grabbable": false
-            },
-            "damping": 0,
-            "angularDamping": 0,
-            "collisionless": true,
-            "ignoreForCollisions": true,
-            "color": {
-                "red": 212,
-                "green": 240,
-                "blue": 0
-            },
-            "alpha": 0.0,
-            "shape": "Cube",
-            "script": "https://aleziakurdis.github.io/inertia/UKONG/pym.js"
-        },
-        {
             "id": "{f2ac2b11-a347-4ca4-9cd2-e916823e9d95}",
             "type": "Model",
             "position": {"x":-3000,"y":3000,"z":-3000},
@@ -2730,6 +2699,75 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/EPICENTER.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{7756eadf-e7b0-4484-a5f2-29a1a6455ae4}",
+            "type": "Model",
+            "name": "Torch Stand Arrival Cave",
+            "locked": true,
+            "position": {"x":-2808.292236328125,"y":2988.52099609375,"z":-2737.386962890625},
+            "dimensions": {
+                "x": 0.6632989645004272,
+                "y": 0.8826301097869873,
+                "z": 0.21135686337947845
+            },
+            "rotation": {"x":0,"y":1.0000001192092896,"z":0,"w":0},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torchStand.fst"
+        },
+        {
+            "id": "{027344dc-3c3a-4509-a21e-3c256bba2724}",
+            "type": "Model",
+            "position": {"x":-2808.533203125,"y":2988.8310546875,"z":-2737.27392578125},
+            "rotation": {"x":0.13052622973918915,"y":0,"z":1.4901161193847656e-8,"w":0.991445004940033},
+            "name": "Torch Arrival Cave",
+            "locked": true,
+            "dimensions": {
+                "x": 0.11172831803560257,
+                "y": 0.7432570457458496,
+                "z": 0.11172831803560257
+            },
+            "grab": {
+                "grabbable": true,
+                "equippable": true,
+                "equippableLeftPosition": {
+                    "x": -0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableLeftRotation": {"x":0,"y":0,"z":0.7009092569351196,"w":0.713250458240509},
+                "equippableRightPosition": {
+                    "x": 0.6000000238418579,
+                    "y": 0.09000000357627869,
+                    "z": 0.01
+                },
+                "equippableRightRotation": {"x":0,"y":0,"z":-0.7071067690849304,"w":0.7071067690849304},
+                "equippableIndicatorURL": "https://aleziakurdis.github.io/inertia/UKONG/models/grabInstructions.glb",
+                "equippableIndicatorScale": {"x": 1.4, "y": 1.4, "z": 1.4},
+                "equippableIndicatorOffset": {"x": 0.0, "y": 0.0, "z": 0.0}
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "damping": 0,
+            "angularDamping": 0,
+            "cloneable": true,
+            "cloneLifetime": 1200,
+            "cloneLimit": 10,
+            "cloneDynamic": true,
+            "cloneAvatarEntity": false,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/torch.js",
+            "shapeType": "box",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
+            "useOriginalPivot": true,
+            "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
