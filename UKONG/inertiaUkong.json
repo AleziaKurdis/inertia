@@ -2768,6 +2768,54 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/torch.fst",
             "useOriginalPivot": true,
             "gravity": {"x":0.0, "y":-9.8, "z": 0.0}
+        },
+        {
+            "id": "{4a7c5ff1-7bf0-4f15-9dce-4cf9012fe14e}",
+            "type": "Model",
+            "name": "Sign - The Monsters' Way",
+            "locked": true,
+            "position": {"x":-3281.75927734375,"y":2985.35693359375,"z":-2815.184814453125},
+            "dimensions": {"x":0.5600741505622864,"y":1.2364962100982666,"z":0.025871869176626205},
+            "rotation": {"x":0.010088028386235237,"y":0.7725130915641785,"z":0.02777009643614292,"w":0.6343111395835876},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/monstersWaySign.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{2c8f0f03-71a0-4ab7-91ec-63eb0c55acbe}",
+            "type": "Model",
+            "position": {"x":-3281.782958984375,"y":2986.56640625,"z":-2815.1171875},
+            "name": "STREET SIGN LIGHT (MONSTWAY)",
+            "locked": true,
+            "dimensions": {
+                "x": 0.06959754973649979,
+                "y": 0.06155701354146004,
+                "z": 0.07767602056264877
+            },
+            "rotation": {
+                "x": 0.010088028386235237,
+                "y": 0.7725130915641785,
+                "z": 0.02777009643614292,
+                "w": 0.6343111395835876
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
