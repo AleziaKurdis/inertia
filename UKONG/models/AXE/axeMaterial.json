@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "AXE_albedo.jpg",
+         "metallicMap": "AXE_metallic.jpg",
+         "roughnessMap": "AXE_roughness.jpg",
+         "normalMap": "AXE_normal.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
