@@ -51,7 +51,7 @@ function toggleItem() {
                 "wantsKeyboardFocus": false,
                 "showKeyboardFocusHighlight": false,
                 "useBackground": false,
-                "renderLayer": "world
+            	"renderLayer": "world"
             }, "local");
         }
         Script.update.connect(whooshTimer);
