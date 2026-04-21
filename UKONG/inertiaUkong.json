@@ -2816,6 +2816,26 @@
             "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{fceb194f-b2c5-4630-8a8f-cd9865bd7dc1}",
+            "type": "Model",
+            "position": {"x":-2501.928955078125,"y":2986.8603515625,"z":-2977.593994140625},
+            "rotation": {"x":0,"y":0.6087614297866821,"z":0,"w":0.7933533191680908},
+            "name": "GIANT AXE",
+            "locked": true,
+            "dimensions": {"x":0.2545911371707916,"y":2.1582865715026855,"z":0.2545911371707916},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/AXE.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
