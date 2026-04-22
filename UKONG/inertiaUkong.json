@@ -2126,18 +2126,13 @@
             "type": "Model",
             "name": "MEDIACOM OMEGA",
             "locked": true,
-            "position": {"x":-2840.741455078125,"y":2993.628173828125,"z":-3196.642578125},
+            "position": {"x":-2838.759033203125,"y":2997.60400390625,"z":-3308.141357421875},
             "dimensions": {
                 "x": 2.55206298828125,
                 "y": 7.601373195648193,
                 "z": 10.765000343322754
             },
-            "rotation": {
-                "x": 0,
-                "y": 1.0000001192092896,
-                "z": 0,
-                "w": 0
-            },
+            "rotation": {"x":0,"y":0.507538378238678,"z":0,"w":0.8616291284561157},
             "renderWithZones": [
                 "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
@@ -2156,18 +2151,13 @@
             "type": "Model",
             "name": "MEDIACOM ALPHA",
             "locked": true,
-            "position": {"x":-2779.8623046875,"y":2997.594970703125,"z":-3551.658447265625},
+            "position": {"x":-2718.7783203125,"y":3003.084228515625,"z":-3418.4453125},
             "dimensions": {
                 "x": 2.55206298828125,
                 "y": 7.601373195648193,
                 "z": 10.765000343322754
             },
-            "rotation": {
-                "x": 0,
-                "y": 0.8829476833343506,
-                "z": 0,
-                "w": 0.46947160363197327
-            },
+            "rotation": {"x":0,"y":0.6755901575088501,"z":0,"w":0.7372773289680481},
             "renderWithZones": [
                 "{6468a0ea-2044-4f97-b7c2-9b61cbdd46c3}"
             ],
@@ -2774,9 +2764,9 @@
             "type": "Model",
             "name": "Sign - The Monsters' Way",
             "locked": true,
-            "position": {"x":-3281.75927734375,"y":2985.35693359375,"z":-2815.184814453125},
-            "dimensions": {"x":0.5600741505622864,"y":1.2364962100982666,"z":0.025871869176626205},
-            "rotation": {"x":0.010088028386235237,"y":0.7725130915641785,"z":0.02777009643614292,"w":0.6343111395835876},
+            "position":  {"x":-3293.6328125,"y":2984.05810546875,"z":-2859.68701171875},
+            "dimensions": {"x":0.9465252161026001,"y":2.0896785259246826,"z":0.0437234565615654},
+            "rotation": {"x":-0.025606222450733185,"y":0.9832910895347595,"z":-0.009359287098050117,"w":0.17998751997947693},
             "renderWithZones": [
                 "{3beae1fe-e853-4071-9015-43ebd144299f}"
             ],
@@ -2791,20 +2781,11 @@
         {
             "id": "{2c8f0f03-71a0-4ab7-91ec-63eb0c55acbe}",
             "type": "Model",
-            "position": {"x":-3281.782958984375,"y":2986.56640625,"z":-2815.1171875},
+            "position": {"x":-3293.72900390625,"y":2986.108154296875,"z":-2859.743896484375},
             "name": "STREET SIGN LIGHT (MONSTWAY)",
             "locked": true,
-            "dimensions": {
-                "x": 0.06959754973649979,
-                "y": 0.06155701354146004,
-                "z": 0.07767602056264877
-            },
-            "rotation": {
-                "x": 0.010088028386235237,
-                "y": 0.7725130915641785,
-                "z": 0.02777009643614292,
-                "w": 0.6343111395835876
-            },
+            "dimensions": {"x":0.11761984974145889,"y":0.10403134673833847,"z":0.13127246499061584},
+            "rotation": {"x":-0.025606222450733185,"y":0.9832910895347595,"z":-0.009359287098050117,"w":0.17998751997947693},
             "renderWithZones": [
                 "{3beae1fe-e853-4071-9015-43ebd144299f}"
             ],
@@ -2820,11 +2801,11 @@
         {
             "id": "{fceb194f-b2c5-4630-8a8f-cd9865bd7dc1}",
             "type": "Model",
-            "position": {"x":-2501.928955078125,"y":2986.8603515625,"z":-2977.593994140625},
-            "rotation": {"x":0,"y":0.6087614297866821,"z":0,"w":0.7933533191680908},
+            "position": {"x":-3044.492431640625,"y":3166.001953125,"z":-2507.917724609375},
+            "rotation": {"x":-0.08320150524377823,"y":0.8084450960159302,"z":0.5409767031669617,"w":0.21642182767391205},
             "name": "GIANT AXE",
             "locked": true,
-            "dimensions": {"x":0.2545911371707916,"y":2.1582865715026855,"z":0.2545911371707916},
+            "dimensions": {"x":2.8979368209838867,"y":0.684387743473053,"z":9.607738494873047},
             "renderWithZones": [
                 "{3beae1fe-e853-4071-9015-43ebd144299f}"
             ],
@@ -2835,6 +2816,95 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/AXE.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{e13b8720-6a2e-4fec-ac82-4517bb748775}",
+            "type": "Model",
+            "name": "Sign - Cave Caution",
+            "locked": true,
+            "position":  {"x":-3293.6328125,"y":2984.05810546875,"z":-2859.68701171875},
+            "dimensions": {"x":0.9465252161026001,"y":2.0896785259246826,"z":0.0437234565615654},
+            "rotation": {"x":-0.025606222450733185,"y":0.9832910895347595,"z":-0.009359287098050117,"w":0.17998751997947693},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/caveAdvice.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/sign_metal_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{f40d593b-3200-4d9c-8cae-d9e3c706b97d}",
+            "type": "Model",
+            "position": {"x":-3293.72900390625,"y":2986.108154296875,"z":-2859.743896484375},
+            "name": "STREET SIGN LIGHT (CAVE CAUTION)",
+            "locked": true,
+            "dimensions": {"x":0.11761984974145889,"y":0.10403134673833847,"z":0.13127246499061584},
+            "rotation": {"x":-0.025606222450733185,"y":0.9832910895347595,"z":-0.009359287098050117,"w":0.17998751997947693},
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/streetSignLight.js",
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/STREET_SIGN_LIGHT.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{4963b463-6ae2-46a9-a336-a619fefcab54}",
+            "type": "Model",
+            "name": "Framed Sign - Ritual a",
+            "locked": true,
+            "position": {"x":-3063.478515625,"y":3168.73974609375,"z":-2578.447021484375},
+            "dimensions": {
+                "x": 3.1798925399780273,
+                "y": 1.235205054283142,
+                "z": 0.06359784305095673
+            },
+            "rotation": {
+                "x": 0,
+                "y": -1,
+                "z": 0,
+                "w": -4.371138828673793e-8
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/ritualSchedule.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/ritualSchedule.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
+            "useOriginalPivot": true
+        },
+        {
+            "id": "{d45be3de-0fef-4368-9218-db2926b26d9c}",
+            "type": "Model",
+            "name": "Framed Sign - Ritual o",
+            "locked": true,
+            "position":  {"x":-3656.10302734375,"y":3003.900634765625,"z":-3478.854736328125},
+            "dimensions": {
+                "x": 1.278450608253479,
+                "y": 0.49660441279411316,
+                "z": 0.025569012388586998
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "shapeType": "box",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/ritualSchedule.jpg\",\"emission_color_texture\":\"https://aleziakurdis.github.io/inertia/UKONG/images/ritualSchedule.jpg\"}",
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_emissive_h.fst",
             "useOriginalPivot": true
         }
    ],
