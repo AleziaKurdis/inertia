@@ -508,7 +508,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
-            "userData": "{\"placeName\": \"ukong\", \"isAlpha\": true}"
+            "userData": "{\"placeName\": \"YuKong\", \"isAlpha\": true}"
         },
         {
             "id": "{932e29e0-eedd-4f79-acdc-e1a74965c691}",
@@ -534,7 +534,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
-            "userData": "{\"placeName\": \"ukong\", \"isAlpha\": false}"
+            "userData": "{\"placeName\": \"YuKong\", \"isAlpha\": false}"
         },
         {
             "id": "{d74341ec-3447-4028-a496-894c199f0eea}",
