@@ -27,7 +27,7 @@
                 "max": 1500
             },
             "normalMapAttenuationMode": "enabled",
-            "flyingAllowed": true,
+            "flyingAllowed": false,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/UKONG/navigationAmbienceUkong.js"
         },
@@ -83,6 +83,7 @@
                 "grabbable":false
             },
             "shapeType":"sphere",
+            "flyingAllowed": false,
             "script": "https://aleziakurdis.github.io/inertia/terrestrialDayNightCycle/skyManager.js?d=17"
         },
         {
@@ -1113,7 +1114,7 @@
                 },
                 "castShadows": true
             },
-            "flyingAllowed": true,
+            "flyingAllowed": false,
             "ghostingAllowed": false
         },
         {
@@ -1202,7 +1203,8 @@
             "skyboxMode": "enabled",
             "hazeMode": "enabled",
             "bloomMode": "enabled",
-            "normalMapAttenuationMode": "enabled"
+            "normalMapAttenuationMode": "enabled",
+            "flyingAllowed": false
         },
         {
             "id": "{40bc53bc-8319-4eb4-9d3a-8eac0abebb39}",
@@ -1229,7 +1231,8 @@
                     "z": 0.7071067690849304
                 },
                 "castShadows": true
-            }
+            },
+            "flyingAllowed": false
         },
         {
             "id": "{e9219074-1345-4697-862d-2b48055fcd09}",
@@ -2034,7 +2037,7 @@
                 },
                 "castShadows": true
             },
-            "flyingAllowed": true,
+            "flyingAllowed": false,
             "ghostingAllowed": false
         },
         {
