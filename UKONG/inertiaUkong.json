@@ -2929,24 +2929,42 @@
             "localOnly": true
         },
         {
+            "id": "{7f074a57-1b4c-44c6-a166-57adc86a45e4}",
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 14.179931640625,
+                "y": 10,
+                "z": 10.411865234375
+            },
+            "position": {"x":-3168.505615234375,"y":3006.462646484375,"z":-3206.28759765625},
+            "flyingAllowed": false,
+            "grab": {
+                "grabbable": false
+            },
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "PYTHON_ZONE",
+            "shapeType": "box",
+            "type": "Zone"
+        },
+        {
             "id": "{c7b113f5-f3f4-47f5-b659-7fb2cb9a6ed4}",
             "type": "Model",
-            "position": {"x":-3000,"y":3000,"z":-3000},
+            "position": {"x":-3170.613525390625,"y":3004.951171875,"z":-3200.357421875},
             "name": "PYTHON",
             "locked": true,
-            "dimensions": {
-                "x": 354.2035827636719,
-                "y": 12.939526557922363,
-                "z": 395.5259094238281
-            },
-            "rotation": {
-                "x": 0,
-                "y": -1,
-                "z": 0,
-                "w": -4.371138828673793e-8
-            },
+            "dimensions": {"x":2.2320785522460938,"y":0.4312261641025543,"z":4.103213787078857},
+            "rotation": {"x":-0.00932648591697216,"y":-0.985684871673584,"z":0.03363021835684776,"w":-0.16494710743427277},
             "renderWithZones": [
-                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+                "{7f074a57-1b4c-44c6-a166-57adc86a45e4}"
             ],
             "grab": {
                 "grabbable": false
