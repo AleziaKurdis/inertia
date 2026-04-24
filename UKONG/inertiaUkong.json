@@ -2927,6 +2927,36 @@
             "loop": true,
             "positional": true,
             "localOnly": true
+        },
+        {
+            "id": "{c7b113f5-f3f4-47f5-b659-7fb2cb9a6ed4}",
+            "type": "Model",
+            "position": {"x":-3000,"y":3000,"z":-3000},
+            "name": "PYTHON",
+            "locked": true,
+            "dimensions": {
+                "x": 354.2035827636719,
+                "y": 12.939526557922363,
+                "z": 395.5259094238281
+            },
+            "rotation": {
+                "x": 0,
+                "y": -1,
+                "z": 0,
+                "w": -4.371138828673793e-8
+            },
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/PYTHON.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
