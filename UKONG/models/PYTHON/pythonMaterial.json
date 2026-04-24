@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "PYTHON_albedo.jpg",
+         "metallic": 0.001,
+         "roughness": 0.2,
+         "normalMap": "PYTHON_normal.jpg",
+         "occlusionMap": "PYTHON_ao.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
