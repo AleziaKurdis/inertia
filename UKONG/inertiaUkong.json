@@ -135,7 +135,8 @@
             "collisionless": true,
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/RAINFOREST_TREES.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/UKONG/soundFxManager.js"
         },
         {
             "id": "{f2ac2b11-a347-4ca4-9cd2-e916823e9d95}",
