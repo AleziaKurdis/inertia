@@ -25,7 +25,7 @@
     var hasAlreadyShutdown = false;
     
     var thisEntity;
-    var skyID = Uuid.NULL;
+    var skyID = Uuid.NONE;
     var universeCenter;
     var universeDimensions;
     
@@ -120,9 +120,9 @@
                 Script.update.disconnect(myTimer);
                 isInitiated = false;
             }
-            if (skyID !== Uuid.NULL) {
+            if (skyID !== Uuid.NONE) {
                 Entities.deleteEntity(skyID);
-                skyID = Uuid.NULL;
+                skyID = Uuid.NONE;
             }
         }
     }
@@ -978,7 +978,7 @@
         
         properties.skybox.color = { "red": nightTint[0], "green": nightTint[1], "blue": nightTint[2] };
         
-        if (skyID === Uuid.NULL) {
+        if (skyID === Uuid.NONE) {
             //CREATE
             skyID = Entities.addEntity(properties, "local");
         } else {
