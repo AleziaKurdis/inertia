@@ -23,56 +23,56 @@
         {
             "name": "WILD_DEER", //swamp
             "soundFile": "sounds/WILD/WILD_DEER.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3250.16,"y":3005.54,"z":-3214.09},
             "radius": 200.0, //in meters
             "frequency": 80 //in second
         },
         {
             "name": "WILD_MASTODONTE", //swamp
             "soundFile": "sounds/WILD/WILD_MASTODONTE.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3135.4,"y":3005.6,"z":-3180.37},
             "radius": 80.0,
             "frequency": 50
         },
         {
             "name": "WILD_HAWK_NOLOOP", //swamp to wall
             "soundFile": "sounds/WILD/WILD_HAWK_NOLOOP.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-2953.49,"y":3012.38,"z":-3222.87},
             "radius": 200.0,
             "frequency": 60
         },
         {
             "name": "WILD_MONKEY", //jungle
             "soundFile": "sounds/WILD/WILD_MONKEY.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
-            "radius": 150.0,
+            "rawPosition": {"x":-3212.76,"y":3000.0,"z"-2755.71},
+            "radius": 250.0,
             "frequency": 30
         },
         {
             "name": "WILD_NEARBY", //swamp
             "soundFile": "sounds/WILD/WILD_NEARBY.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3200.78,"y":3005.54,"z":-3215.21},
             "radius": 70.0,
             "frequency": 40
         },
         {
             "name": "WILD_ROARS", //swamp
             "soundFile": "sounds/WILD/WILD_ROARS.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3230.08,"y":3004.88,"z":-3275.51},
             "radius": 60.0,
             "frequency": 60
         },
         {
             "name": "WILD_RRRR", //swamp
             "soundFile": "sounds/WILD/WILD_RRRR.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3266.9,"y":3004.92,"z":-3288.05},
             "radius": 80.0,
             "frequency": 50
         },
         {
             "name": "WILD_WALKING_NEAR", //swamp
             "soundFile": "sounds/WILD/WILD_WALKING_NEAR.mp3",
-            "rawPosition": {"x":4083.7763671875,"y":4131.3330078125,"z":-3903.164794921875},
+            "rawPosition": {"x":-3318.82,"y":3005.56,"z":-3199.92},
             "radius": 30.0,
             "frequency": 30
         }
