@@ -32,6 +32,60 @@
             "script": "https://aleziakurdis.github.io/inertia/UKONG/navigationAmbienceUkong.js"
         },
         {
+            "id": "{b99aba4d-d015-4692-bcdb-15151c14074d}",
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 2.927294969558716,
+                "y": 0.602343738079071,
+                "z": 4.735156059265137
+            },
+            "position":{"x":-3655.984375,"y":3007.176513671875,"z":-3463.069580078125},
+            "grab": {
+                "grabbable": false
+            },
+            "locked": true,
+            "name": "SAFE_FLOOR o",
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "shape": "Cube",
+            "type": "Box",
+            "visible": false
+        },
+        {
+            "id": "{0d4a373b-bdb3-4517-8b4c-e8bbf3ddf438}",
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 4.779833793640137,
+                "y": 0.512499988079071,
+                "z": 2.914599657058716
+            },
+            "position":{"x":-3054.7763671875,"y":3167.544677734375,"z":-2581.62744140625},
+            "grab": {
+                "grabbable": false
+            },
+            "locked": true,
+            "name": "SAFE_FLOOR a",
+            "renderWithZones": [
+                "{3beae1fe-e853-4071-9015-43ebd144299f}"
+            ],
+            "shape": "Cube",
+            "type": "Box",
+            "visible": false
+        },
+        {
             "id": "{fbf83951-3e4d-461e-9f5d-782ae0b66f61}",
             "type": "Model",
             "position": {
@@ -2980,11 +3034,11 @@
         {
             "id": "{8159c600-576c-451f-adb0-24545c5d4b11}",
             "type": "Model",
-            "position": {"x":-3170.613525390625,"y":3004.951171875,"z":-3200.357421875},
+            "position": {"x":-3276.723876953125,"y":2986.509765625,"z":-2814.600341796875},
             "name": "SINGLE GRASS",
             "locked": true,
-            "dimensions": {"x":2.2320785522460938,"y":0.4312261641025543,"z":4.103213787078857},
-            "rotation": {"x":-0.00932648591697216,"y":-0.985684871673584,"z":0.03363021835684776,"w":-0.16494710743427277},
+            "dimensions": {"x":3.697251558303833,"y":4.944230079650879,"z":4.037990093231201},
+            "rotation": {"x":0,"y":-0.13052618503570557,"z":0,"w":0.9914448261260986},
             "renderWithZones": [
                 "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
             ],
@@ -2996,7 +3050,7 @@
             "collisionless": true,
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SINGLE_GRASS.fst",
-            "useOriginalPivot": true
+            "useOriginalPivot": false
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
