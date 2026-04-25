@@ -2976,6 +2976,27 @@
             "ignoreForCollisions": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/PYTHON.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{8159c600-576c-451f-adb0-24545c5d4b11}",
+            "type": "Model",
+            "position": {"x":-3170.613525390625,"y":3004.951171875,"z":-3200.357421875},
+            "name": "SINGLE GRASS",
+            "locked": true,
+            "dimensions": {"x":2.2320785522460938,"y":0.4312261641025543,"z":4.103213787078857},
+            "rotation": {"x":-0.00932648591697216,"y":-0.985684871673584,"z":0.03363021835684776,"w":-0.16494710743427277},
+            "renderWithZones": [
+                "{98356c72-fe4d-4eda-854d-7008ff3b2ba8}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/UKONG/models/SINGLE_GRASS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
