@@ -26,8 +26,8 @@
         "placeName": "YuKong",
         "description": "The mysterious island with dark secrets.",
         "imageUrl": "https://aleziakurdis.github.io/inertia/UKONG/images/cover.jpg",
-        "alphaArrivalUrl": "hifi://YuKong/-3054.85,3167.82,-2581.63/0,0.684456,0,0.729054",
-        "omegaArrivalUrl": "hifi://YuKong/-3656.09,3007.62,-3463.75/0,0.0093885,0,0.999956",
+        "alphaArrivalUrl": "hifi://YuKong-Island/-3054.85,3167.82,-2581.63/0,0.684456,0,0.729054",
+        "omegaArrivalUrl": "hifi://YuKong-Island/-3656.09,3007.62,-3463.75/0,0.0093885,0,0.999956",
         "targetPosition": {"x":-2819.3,"y":2986.34,"z":-2765.57},
         "targetRadius": 300,
         "km": 4.7
