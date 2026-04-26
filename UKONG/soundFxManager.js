@@ -101,9 +101,30 @@
     function manageSounds() {
         let id, localPosition;
         for (let i = 0; i < punctualEventSounds.length; i++) {
-            //localPosition = Vec3.subtract(punctualEventSounds[i].rawPosition, COORD_REFERENCE);
-            //if (Vec3.distance(MyAvatar.position, Vec3.sum(entityPosition, localPosition)) < punctualEventSounds[i].radius) {}
-            if (Math.random() < ((updateTimerInterval/1000)/punctualEventSounds[i].frequency)) {
+            localPosition = Vec3.subtract(punctualEventSounds[i].rawPosition, COORD_REFERENCE);
+            if (Vec3.distance(MyAvatar.position, Vec3.sum(entityPosition, localPosition)) < punctualEventSounds[i].radius) {
+                if (Math.random() < ((updateTimerInterval/1000)/punctualEventSounds[i].frequency)) {
+                    id = Entities.addEntity({
+                        "type": "Sound",
+                        "parentID": thisEntityID,
+                        "position": Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(Quat.fromVec3Degrees( {"x":0.0 ,"y": Math.random() * 360,"z": 0.0} ),{"x":0.0 ,"y":0.0 ,"z": Math.random() * punctualEventSounds[i].radius})),
+                        "name": punctualEventSounds[i].name,
+                        "renderWithZones": renderWithZones,
+                        "grab": {
+                            "grabbable": false
+                        },
+                        "damping": 0,
+                        "angularDamping": 0,
+                        "soundURL": ROOT + punctualEventSounds[i].soundFile,
+                        "volume": 1.0,
+                        "loop": false,
+                        "positional": true,
+                        "localOnly": true,
+                        "lifetime": 30
+                    }, "local");
+                }
+            }
+            /*if (Math.random() < ((updateTimerInterval/1000)/punctualEventSounds[i].frequency)) {
                 localPosition = Vec3.subtract(punctualEventSounds[i].rawPosition, COORD_REFERENCE);
                 localPosition = Vec3.sum(localPosition, Vec3.multiplyQbyV(Quat.fromVec3Degrees( {"x":0.0 ,"y": Math.random() * 360,"z": 0.0} ),{"x":0.0 ,"y":0.0 ,"z": Math.sqrt(Math.random()) * punctualEventSounds[i].radius}));
                 id = Entities.addEntity({
@@ -118,13 +139,13 @@
                     "damping": 0,
                     "angularDamping": 0,
                     "soundURL": ROOT + punctualEventSounds[i].soundFile,
-                    "volume": 0.9,
+                    "volume": 1.0,
                     "loop": false,
                     "positional": true,
                     "localOnly": true,
                     "lifetime": 30
                 }, "local");
-            }
+            }*/
         }
     }
     
