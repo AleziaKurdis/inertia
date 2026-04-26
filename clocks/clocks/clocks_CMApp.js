@@ -16,6 +16,9 @@ var ROOT = Script.resolvePath('').split("clocks_CMApp.js")[0];
 
 const LEFT_HAND = MyAvatar.getDominantHand() === "right" ? true : false;
 
+const SENSOR_TO_WORLD_MATRIX_INDEX = 65534;
+const CAMERA_MATRIX_INDEX = 65529;
+
 var controllerStandard = Controller.Standard;
 var SOUND_WHOOSH = SoundCache.getSound(Script.resolvePath("sounds/whoosh.mp3"));
 
@@ -24,7 +27,6 @@ let clockWebID = Uuid.NONE;
 
 var hmdPanelLocalPosition = {"x": 0.0, "y": 0.25, "z": -1.0};
 var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": -30, "y": 0, "z": 0});
-var CAMERA_MATRIX_INDEX = -7;
 
 function toggleItem() {
 	if (isActive) {
@@ -40,7 +42,8 @@ function toggleItem() {
                 "type": "Web",
                 "dpi": 23,
                 "name": "clocks",
-                "parentID": MyAvatar.sessionUUID,//"parentJointIndex": CAMERA_MATRIX_INDEX,
+                "parentID": MyAvatar.sessionUUID,
+                "parentJointIndex": HMD.active ? SENSOR_TO_WORLD_MATRIX_INDEX : CAMERA_MATRIX_INDEX,
                 "localPosition": hmdPanelLocalPosition,
                 "localRotation": hmdPanelLocalRotation,
                 "dimensions": {"x": 2.0, "y": 1.0, "z": 0.01},
@@ -51,7 +54,7 @@ function toggleItem() {
                 "wantsKeyboardFocus": false,
                 "showKeyboardFocusHighlight": false,
                 "useBackground": false,
-            	"renderLayer": "world"
+            	"renderLayer": "front"
             }, "local");
         }
         Script.update.connect(whooshTimer);
