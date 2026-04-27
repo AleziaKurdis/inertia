@@ -25,8 +25,8 @@ var SOUND_WHOOSH = SoundCache.getSound(Script.resolvePath("sounds/whoosh.mp3"));
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
-var hmdPanelLocalPosition = {"x": 0.0, "y": 1.25, "z": -1.0};
-var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": -30, "y": -90, "z": 0});
+var hmdPanelLocalPosition = {"x": -1.0, "y": 1.25, "z": 0.0};
+var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": -30, "y": 90, "z": 0});
 
 function toggleItem() {
 	if (isActive) {
