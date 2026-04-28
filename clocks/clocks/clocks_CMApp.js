@@ -25,7 +25,7 @@ var SOUND_WHOOSH = SoundCache.getSound(Script.resolvePath("sounds/whoosh.mp3"));
 let isActive = false;
 let clockWebID = Uuid.NONE;
 
-var hmdPanelLocalPosition = {"x": -1.0, "y": 1.25, "z": 0.0};
+var hmdPanelLocalPosition = {"x": 0.0, "y": 0.25, "z": -1.0};
 var hmdPanelLocalRotation = Quat.fromVec3Degrees({"x": -30, "y": 90, "z": 0});
 
 function toggleItem() {
@@ -44,7 +44,8 @@ function toggleItem() {
                 "name": "clocks",
                 "parentID": MyAvatar.sessionUUID,
                 "parentJointIndex": HMD.active ? SENSOR_TO_WORLD_MATRIX_INDEX : CAMERA_MATRIX_INDEX,
-                "localPosition": hmdPanelLocalPosition,
+                //"localPosition": hmdPanelLocalPosition,
+                "position": Vec3.sum(MyAvatar.position, Vec3.multiplyQbyV(MyAvatar.orientation, hmdPanelLocalPosition)),
                 "localRotation": hmdPanelLocalRotation,
                 "dimensions": {"x": 2.0, "y": 1.0, "z": 0.01},
                 "isVisibleInSecondaryCamera": false,
