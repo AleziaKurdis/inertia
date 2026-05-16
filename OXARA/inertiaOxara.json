@@ -1,7 +1,7 @@
 {
    "DataVersion":3,
    "Paths":{
-      "\/":"\/5000,-4700,5000\/0,-0.0216264,0.000152732,0.999766"
+      "\/":"\/5284.85,-5021.01,5307.77\/0,0.549045,0,0.835792"
    },
    "Entities":[
         {
@@ -27,6 +27,11 @@
             },
             "grab":{
                 "grabbable":false
+            },
+            "normalMapAttenuationMode": "enabled",
+            "normalMapAttenuation": {
+                "min": 300,
+                "max": 600,
             },
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/navigationAmbienceOxara.js"
