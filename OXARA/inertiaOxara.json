@@ -1,0 +1,65 @@
+{
+   "DataVersion":3,
+   "Paths":{
+      "\/":"\/5000,-4700,5000\/0,-0.0216264,0.000152732,0.999766"
+   },
+   "Entities":[
+        {
+            "id":"{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}",
+            "type":"Zone",
+            "name":"OXARA_VISIBILITY_ZONE",
+            "locked":true,
+            "dimensions":{
+                "x":4000,
+                "y":4000,
+                "z":4000
+            },
+            "position": {
+                 "x": 5000,
+                 "y": -5000,
+                 "z": 5000
+            },         
+            "rotation":{
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+            },
+            "grab":{
+                "grabbable":false
+            },
+            "shapeType":"sphere",
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/navigationAmbienceOxara.js"
+        },
+        {
+            "id": "{c2a01ff2-d76d-4198-909e-a09dbe922d4d}",
+            "type": "Model",
+            "position":  {
+                "x": 5000,
+                "y": -5000,
+                "z": 5000
+            },
+            "name": "OXARA LANDSCAPE",
+            "locked": true,
+            "dimensions": {
+                "x": 353.1601,
+                "y": 353.1601,
+                "z": 254.2083
+            },
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/OXARA.fst",
+            "useOriginalPivot": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/singularityOxara.js"
+        }
+   ],
+   "Id":"{7cfa206c-d95b-4065-b233-85d8d0685cc4}",
+   "Version":120
+}
