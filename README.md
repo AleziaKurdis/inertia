@@ -42,6 +42,8 @@ https://aleziakurdis.github.io/inertia/TRONIX/inertiaTronix.json
 https://aleziakurdis.github.io/inertia/SCILLIA/inertiaScillia.json   
 
 https://aleziakurdis.github.io/inertia/UKONG/inertiaUkong.json  
+  
+https://aleziakurdis.github.io/inertia/OXARA/inertiaOxara.json  
    
 # Nowhere Island (import file)
 https://aleziakurdis.github.io/inertia/nowhereIsland/nowhereIsland.json
