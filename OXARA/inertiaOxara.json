@@ -31,7 +31,7 @@
             "normalMapAttenuationMode": "enabled",
             "normalMapAttenuation": {
                 "min": 300,
-                "max": 600,
+                "max": 600
             },
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/navigationAmbienceOxara.js"
@@ -61,6 +61,6 @@
             "script": "https://aleziakurdis.github.io/inertia/OXARA/singularityOxara.js"
         }
    ],
-   "Id":"{7cfa206c-d95b-4065-b233-85d8d0685cc4}",
+   "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
    "Version":120
 }
