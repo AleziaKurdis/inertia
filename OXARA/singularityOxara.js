@@ -27,12 +27,15 @@
     var matId = Uuid.NONE;
     var lightTableID = Uuid.NONE;
     
-    var D29_DAY_DURATION = 104400; //sec
-    var STAR_DIAMETER = 1200; //m
+    var D19_DAY_DURATION = 68400; //sec
+    var STAR_DIAMETER = 900; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
+    let isNight = false;
+    const HUE_SUN = 0.122; //44 deg orange/yellow
+    const OFFSET_SIX_D19_HOUR_BEFORE = 17100;
     
     this.preload = function(entityID) { 
         thisEntity = entityID;
@@ -40,13 +43,13 @@
         renderWithZones = prop.renderWithZones;
         singularityGeneratorPosition = prop.position;
         
-        var visibilityZoneId = Entities.findEntitiesByName( "MINOS_VISIBILITY_ZONE", singularityGeneratorPosition, 10);
+        var visibilityZoneId = Entities.findEntitiesByName( "OXARA_VISIBILITY_ZONE", singularityGeneratorPosition, 10);
         var superZoneDimensions = Entities.getEntityProperties(visibilityZoneId[0], ["dimensions"]).dimensions;
         
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
 
-        var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+        var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
         var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
             "name": "SUNLIGHT_(!)_Z0N3",
@@ -140,7 +143,7 @@
         if (starId !== Uuid.NONE) {
             var sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
-            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+            var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
             var sunColor = hslToRgb(hue, 1, 0.6);
             Entities.editEntity(starId, {"localPosition": currentSunPosition});
             Entities.editEntity(solarZoneId, {
@@ -152,16 +155,61 @@
         }
     }
 
-    function getCurrentSunPosition() {//elevation to adjust duration 400x sec
-        var elevation = (Math.PI/12) + ((Math.PI/4) * Math.sin(GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION * 3))); //un cycle de 3 jours
-        var azimuth = GetCurrentCycleValue((2* Math.PI), D29_DAY_DURATION); //un tour par jour D29
-        var localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": elevation,"y": azimuth, "z": 0}), {"x": 0,"y": 0, "z": -8800});
+    function getCurrentSunPosition() {
+        let coord = getSunCoordinates();
+        let localPosition = Vec3.multiplyQbyV(Quat.fromVec3Radians({"x": coord.elevation,"y": coord.azimuth, "z": 0}), {"x": 0,"y": 0, "z": -8800});
         return { 
-                    "elevation" : elevation,
-                    "azimuth" : azimuth,
+                    "elevation" : coord.elevation,
+                    "azimuth" : coord.azimuth,
                     "localPosition": localPosition
                 };
     }
+
+    function getSunCoordinates() {
+        let inclinationDeg = 30 * Math.sin(GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION * 36, OFFSET_SIX_D19_HOUR_BEFORE));
+        let latitudeDeg = 0;
+        let elapsedSeconds = GetCurrentCycleValue(43200, (D19_DAY_DURATION / 2), OFFSET_SIX_D19_HOUR_BEFORE);
+        let dayOrNight = GetCurrentCycleValue(2, D19_DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
+        if (Math.floor(dayOrNight) === 0) { 
+            isNight = true;
+        } else {
+            isNight = false;
+        }
+        let t = elapsedSeconds / 43200;
+        // Hour angle:
+        // -90° = east horizon
+        // 0° = highest point
+        // +90° = west horizon
+        let hourAngleDeg = (t * 180) - 90;
+
+        // Convert to radians
+        let H = hourAngleDeg * Math.PI / 180;
+        let dec = inclinationDeg * Math.PI / 180;
+        let lat = latitudeDeg * Math.PI / 180;
+
+        // Elevation formula
+        let sinAlt =
+            Math.sin(dec) * Math.sin(lat) +
+            Math.cos(dec) * Math.cos(lat) * Math.cos(H);
+
+        let elevation = Math.asin(sinAlt);
+
+        // Azimuth formula
+        let y = -Math.sin(H);
+        let x =
+            Math.tan(dec) * Math.cos(lat) -
+            Math.sin(lat) * Math.cos(H);
+
+        let azimuth = Math.atan2(y, x);
+
+        azimuth = (azimuth + (2 * Math.PI)) % (2 * Math.PI);
+
+        return {
+            "elevation": elevation,
+            "azimuth": azimuth
+        };
+    }
+
 
     function updateStar() {
         if (starId !== Uuid.NONE) {
@@ -169,7 +217,7 @@
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), (3600 * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
             
-            var hue = GetCurrentCycleValue(1, D29_DAY_DURATION * 9);
+            var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
             var fireColor = hslToRgb(hue, 1, 0.5);
             var plasmaColor = hslToRgb(hue, 1, 0.61);
             var fireColorStart = hslToRgb(hue, 1, 0.9);
@@ -273,9 +321,9 @@
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
 
-    function GetCurrentCycleValue(cyclelength, cycleduration){
+    function GetCurrentCycleValue(cyclelength, cycleduration, timeOffset = 0){
 		var today = new Date();
-		var TodaySec = today.getTime()/1000;
+		var TodaySec = (today.getTime()/1000) + timeOffset;
 		var CurrentSec = TodaySec%cycleduration;
 		
 		return (CurrentSec/cycleduration)*cyclelength;
