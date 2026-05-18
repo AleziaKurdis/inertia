@@ -17,6 +17,8 @@
     var processTimer = 0;
 
     var starId = Uuid.NONE;
+    let compagnonStarId = Uuid.NONE;
+    let moonId = Uuid.NONE;
     var fireMatId = Uuid.NONE;
     var solarZoneId = Uuid.NONE;
     
@@ -29,12 +31,13 @@
     
     var D19_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 900; //m
+    var MOON_DIAMETER = 800; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
     let isNight = false;
-    const HUE_SUN = 0.122; //44 deg orange/yellow
+    const HUE_SUN = 30/360; 
     const OFFSET_SIX_D19_HOUR_BEFORE = 17100;
     
     this.preload = function(entityID) { 
@@ -79,10 +82,11 @@
                 "renderWithZones": renderWithZones,
                 "damping": 0,
                 "angularDamping": 0,
-                "angularVelocity": {"x": 0.2, "y": 0.03, "z": 0.0}
+                "angularVelocity": {"x": 0.2, "y": 0.03, "z": 0.0},
+                "visible": !isNight
         }, "local");
 
-        var compagnonStarId = Entities.addEntity({
+        compagnonStarId = Entities.addEntity({
                 "name": "STAR B",
                 "parentID": starId,
                 "dimensions": {"x": STAR_DIAMETER*0.382, "y": STAR_DIAMETER*0.382, "z": STAR_DIAMETER*0.382},
@@ -91,7 +95,8 @@
                 "shape": "Sphere",
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones,
-                "damping": 0
+                "damping": 0,
+                "visible": !isNight
         }, "local");
         
         var compagnonMatContent = {
@@ -120,6 +125,23 @@
             "materialData": JSON.stringify(compagnonMatContent)
         }, "local");
 
+        moonId = Entities.addEntity({
+                "name": "MOON",
+                "parentID": thisEntity,
+                "dimensions": {"x": MOON_DIAMETER, "y": MOON_DIAMETER, "z": 0.01},
+                "localPosition": currentSunPosition,
+                "type": "Image",
+                "color": {"red": 255, "green": 255, "blue": 255},
+                "renderWithZones": renderWithZones,
+                "damping": 0,
+                "angularDamping": 0,
+                "imageURL": ROOT + "images/MOON.png",
+                "emissive": true,
+                "billboardMode": "full",
+                "visible": isNight
+        }, "local");
+
+
         updateStar();
         
         var today = new Date();
@@ -145,7 +167,9 @@
             currentSunPosition = sunCumputedValues.localPosition;
             var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
             var sunColor = hslToRgb(hue, 1, 0.6);
-            Entities.editEntity(starId, {"localPosition": currentSunPosition});
+            Entities.editEntity(starId, {"localPosition": currentSunPosition, "visible": !isNight});
+            Entities.editEntity(compagnonStarId, {"visible": !isNight});
+            Entities.editEntity(moonId, {"visible": isNight});
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
@@ -169,12 +193,8 @@
         let inclinationDeg = 30 * Math.sin(GetCurrentCycleValue((2* Math.PI), D19_DAY_DURATION * 36, OFFSET_SIX_D19_HOUR_BEFORE));
         let latitudeDeg = 0;
         let elapsedSeconds = GetCurrentCycleValue(43200, (D19_DAY_DURATION / 2), OFFSET_SIX_D19_HOUR_BEFORE);
-        let dayOrNight = GetCurrentCycleValue(2, D19_DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
-        if (Math.floor(dayOrNight) === 0) { 
-            isNight = true;
-        } else {
-            isNight = false;
-        }
+        isNight = getIsNight();
+
         let t = elapsedSeconds / 43200;
         // Hour angle:
         // -90° = east horizon
@@ -210,6 +230,14 @@
         };
     }
 
+    function getIsNight() {
+        let dayOrNight = GetCurrentCycleValue(2, D19_DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
+        if (Math.floor(dayOrNight) === 0) { 
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     function updateStar() {
         if (starId !== Uuid.NONE) {
