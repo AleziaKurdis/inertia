@@ -19,6 +19,8 @@
     var HALF = 0.5;
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
+    let lapSky = 0;
+    const MAX_SKY_LAP = 10; //10 sec
 
     var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
@@ -30,7 +32,8 @@
 
     var UFO_TIDE_CYCLE_DURATION = 18720; //5.2 hours
     
-    var DAY_DURATION = 104400; //D29
+    var DAY_DURATION = 68400; //D19
+    const OFFSET_SIX_D19_HOUR_BEFORE = 17100;
     var storming = false;
     var lightningsID = Uuid.NONE;
     var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
@@ -40,6 +43,7 @@
     var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
     var thunderSound = []; 
     var thunderInjector;
+    let isNight = false;
 
     var zoneID = Uuid.NONE;
     var thisEntityID;
@@ -97,6 +101,11 @@
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+            lap--;
+            if (lap < 0) {
+                lap = MAX_SKY_LAP;
+                manageSky();
+            }
             updateNavigation();
             today = new Date();
             processTimer = today.getTime();
@@ -134,7 +143,8 @@
         isInitiated = true; 
  
         univerSoundPlaying = 0;
-        generateSky(EntID);
+        lapSky = MAX_SKY_LAP;
+        manageSky();
 
         var today = new Date();
         processTimer = today.getTime();
@@ -142,71 +152,113 @@
         Script.update.connect(myTimer);
     }
 
-    function generateSky(entityID) {
-        var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": 0.0, "z": 0.0} );
-        var skyTextureUrl = ROOT + "images/MINOS_SKY.jpg";
-        var hue = GetCurrentCycleValue(1, DAY_DURATION * 9);
-        var skycolor = hslToRgb(hue, 1, 0.65);
+    function getIsNight() {
+        let dayOrNight = GetCurrentCycleValue(2, D19_DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
+        if (Math.floor(dayOrNight) === 0) { 
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    function getCurrentHour() {
+        return (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
+    }
+
+    function manageSky() {
+        isNight = getIsNight();
+        const hour =  getCurrentHour();
+        let zoneRotation = Quat.fromVec3Degrees( {
+            "x": 90.0, 
+            "y": GetCurrentCycleValue(360, DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE), 
+            "z": 0.0
+        });
+        const skyTextureUrl = ROOT + "images/OXARA_SKY.jpg";
         
-        zoneID = Entities.addEntity({
-            "type": "Zone",
-            "name": "SANCTUARY_(!)_Z0N3",
-            "dimensions": {
-                "x": universeDimension.x - 20,
-                "y": universeDimension.y - 20,
-                "z": universeDimension.z - 20
-            },
-            "parentID": entityID,
-            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
-            "localRotation": zoneRotation,
-            "grab": {
-                "grabbable": false
-            },
-            "shapeType": "sphere",
-            "keyLight": {
-                "color": {
-                    "red": skycolor[0],
-                    "green": skycolor[1],
-                    "blue": skycolor[2]
+        const NIGHT_AMBIENCE_INTENSITY = 0.1;
+        const DAY_AMBIENCE_INTENSITY = 0.7;
+        let ambientIntensity;
+        if (hour > 18 || hour <= 5) {
+            ambientIntensity = NIGHT_AMBIENCE_INTENSITY;
+        } else if ( hour <= 18 && hour > 17) {
+            ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((18.0 - hour) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
+        } else if ( hour <= 6 && hour > 5) {
+            ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((1-(6.0 - hour)) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
+        } else {
+            ambientIntensity = DAY_AMBIENCE_INTENSITY;
+        }
+        
+        
+        if (zoneID === Uuid.NONE) {
+            //CREATE
+            zoneID = Entities.addEntity({
+                "type": "Zone",
+                "name": "OXARA_(!)_Z0N3",
+                "dimensions": {
+                    "x": universeDimension.x - 20,
+                    "y": universeDimension.y - 20,
+                    "z": universeDimension.z - 20
                 },
-                "intensity": 2,
-                "direction": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 1
+                "parentID": thisEntityID,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "localRotation": zoneRotation,
+                "grab": {
+                    "grabbable": false
                 },
-                "castShadows": true,
-                "shadowBias": 0.02,
-                "shadowMaxDistance": 100
-            },
-            "ambientLight": {
-                "ambientIntensity": 0.5,
-                "ambientURL": skyTextureUrl
-            },
-            "skybox": {
-                "color": {
-                    "red": 255,
-                    "green": 255,
-                    "blue": 255
+                "shapeType": "sphere",
+                "keyLight": {
+                    "color": {
+                        "red": 255,
+                        "green": 255,
+                        "blue": 255
+                    },
+                    "intensity": 2,
+                    "direction": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "castShadows": true,
+                    "shadowBias": 0.02,
+                    "shadowMaxDistance": 100
                 },
-                "url": skyTextureUrl
-            },
-            "bloom": {
-                "bloomIntensity": 0.5
-            },
-            "keyLightMode": "enabled",
-            "ambientLightMode": "enabled",
-            "skyboxMode": "enabled",
-            "hazeMode": "disabled",
-            "bloomMode": "enabled",
-            "angularDamping": 0,
-            "angularVelocity": {
-                "x":0,
-                "y":-0.015,
-                "z":0
-            }
-        },"local");
+                "ambientLight": {
+                    "ambientIntensity": ambientIntensity,
+                    "ambientURL": skyTextureUrl,
+                    "ambientColor": {
+                        "red": 255,
+                        "green": 255,
+                        "blue": 255
+                    }
+                },
+                "skybox": {
+                    "color": {
+                        "red": 255,
+                        "green": 255,
+                        "blue": 255
+                    },
+                    "url": skyTextureUrl
+                },
+                "bloom": {
+                    "bloomIntensity": 0.5
+                },
+                "keyLightMode": "enabled",
+                "ambientLightMode": "enabled",
+                "skyboxMode": "enabled",
+                "hazeMode": "disabled",
+                "ambientOcclusionMode": "enabled",
+                "bloomMode": "enabled",
+                "angularDamping": 0
+            },"local");
+        } else {
+            //UPDATE
+            Entities.editEntity(zoneID, {
+                "localRotation": zoneRotation,
+                "ambientLight": {
+                    "ambientIntensity": ambientIntensity
+                },
+            });
+        }
     }
     
     function updateNavigation() {
@@ -462,14 +514,14 @@
     } 
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
-    function GetCurrentCycleValue(cyclelength, cycleduration){
+    function GetCurrentCycleValue(cyclelength, cycleduration, timeOffset = 0){
 		var today = new Date();
-		var TodaySec = today.getTime()/1000;
+		var TodaySec = (today.getTime()/1000) + timeOffset;
 		var CurrentSec = TodaySec%cycleduration;
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
-	}    
+	}   
     // ################## END CYLCE AND TIME FUNCTIONS ###########################   
 
     function edgeOfUniverse() {

@@ -375,7 +375,7 @@
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
-	}    
+	}
 
 
 })
