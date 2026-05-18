@@ -37,7 +37,8 @@
     
     var currentSunPosition = {"x": 0, "y": 0, "z": 0};
     let isNight = false;
-    const HUE_SUN = 30/360; 
+    const HUE_SUN = 30/360;
+    const HUE_MOON = 210/360;
     const OFFSET_SIX_D19_HOUR_BEFORE = 17100;
     
     this.preload = function(entityID) { 
@@ -52,7 +53,15 @@
         var sunCumputedValues = getCurrentSunPosition();
         currentSunPosition = sunCumputedValues.localPosition;
 
-        var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
+        let hue;
+        let intensity;
+        if (isNight) {
+            hue = HUE_MOON;
+            intensity = 1.0;
+        } else {
+            hue = HUE_SUN;
+            intensity = 2.6;
+        }
         var sunColor = hslToRgb(hue, 1, 0.6);
         solarZoneId = Entities.addEntity({
             "name": "SUNLIGHT_(!)_Z0N3",
@@ -61,7 +70,7 @@
             "keyLightMode": "enabled",
             "keyLight": {
                 "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
-                "intensity": 2.6,
+                "intensity": intensity,
                 "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth),
                 "castShadows": true,
                 "shadowBias": 0.02,
@@ -163,16 +172,26 @@
 
     function moveStar() {// readd velocity
         if (starId !== Uuid.NONE) {
-            var sunCumputedValues = getCurrentSunPosition();
+            let sunCumputedValues = getCurrentSunPosition();
             currentSunPosition = sunCumputedValues.localPosition;
-            var hue = HUE_SUN; //GetCurrentCycleValue(1, D19_DAY_DURATION * 9);
-            var sunColor = hslToRgb(hue, 1, 0.6);
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "visible": !isNight});
             Entities.editEntity(compagnonStarId, {"visible": !isNight});
             Entities.editEntity(moonId, {"visible": isNight});
+            
+            let hue;
+            let intensity;
+            if (isNight) {
+                hue = HUE_MOON;
+                intensity = 0.6;
+            } else {
+                hue = HUE_SUN;
+                intensity = 2.6;
+            }
+            let sunColor = hslToRgb(hue, 1, 0.6);
             Entities.editEntity(solarZoneId, {
                 "keyLight": {
                     "color": {"red": sunColor[0], "green": sunColor[1], "blue": sunColor[2]},
+                    "intensity": intensity,
                     "direction": Vec3.fromPolar( sunCumputedValues.elevation, sunCumputedValues.azimuth)
                 }
             });
