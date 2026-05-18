@@ -101,9 +101,9 @@
     function myTimer(deltaTime) {
         var today = new Date();
         if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
-            lap--;
-            if (lap < 0) {
-                lap = MAX_SKY_LAP;
+            lapSky--;
+            if (lapSky < 0) {
+                lapSky = MAX_SKY_LAP;
                 manageSky();
             }
             updateNavigation();
@@ -153,7 +153,7 @@
     }
 
     function getIsNight() {
-        let dayOrNight = GetCurrentCycleValue(2, D19_DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
+        let dayOrNight = GetCurrentCycleValue(2, DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE);
         if (Math.floor(dayOrNight) === 0) { 
             return true;
         } else {
