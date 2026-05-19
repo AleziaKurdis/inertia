@@ -169,9 +169,9 @@
         isNight = getIsNight();
         const hour =  getCurrentHour();
         let zoneRotation = Quat.fromVec3Degrees( {
-            "x": 0.0, 
-            "y": 0.0, 
-            "z":  GetCurrentCycleValue(360, DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE)
+            "x": GetCurrentCycleValue(360, DAY_DURATION, OFFSET_SIX_D19_HOUR_BEFORE), 
+            "y": 90.0, 
+            "z": 0.0 
         });
         const skyTextureUrl = ROOT + "images/OXARA_SKY.jpg";
         
