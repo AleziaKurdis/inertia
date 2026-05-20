@@ -155,7 +155,7 @@
                 "parentID": thisEntity,
                 "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "type": "Model",
-                "useOriginalPivot": true
+                "useOriginalPivot": true,
                 "renderWithZones": renderWithZones,
                 "damping": 0,
                 "angularDamping": 0,
