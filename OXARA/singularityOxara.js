@@ -140,7 +140,7 @@
                 "dimensions": {"x": MOON_DIAMETER, "y": MOON_DIAMETER, "z": 0.01},
                 "localPosition": currentSunPosition,
                 "type": "Image",
-                "color": {"red": 255, "green": 255, "blue": 255},
+                "color": {"red": 204, "green": 230, "blue": 255},
                 "renderWithZones": renderWithZones,
                 "damping": 0,
                 "angularDamping": 0,
@@ -150,6 +150,27 @@
                 "visible": isNight
         }, "local");
 
+        let farlandID = Entities.addEntity({
+                "name": "FARLAND",
+                "parentID": thisEntity,
+                "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+                "type": "Model",
+                "useOriginalPivot": true
+                "renderWithZones": renderWithZones,
+                "damping": 0,
+                "angularDamping": 0,
+                "collisionless": true,
+                "dimensions": {
+                    "x": 17455.91015625,
+                    "y": 428.9638977050781,
+                    "z": 17455.53125
+                },
+                "grab": {
+                    "grabbable": false
+                },
+                "ignoreForCollisions": true,
+                "modelURL": ROOT + "models/FARLAND.fst"
+        }, "local");
 
         updateStar();
         
