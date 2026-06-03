@@ -15,8 +15,8 @@
         "placeName": "valombra",
         "description": "Old border post of Valombra in the green canyon.",
         "imageUrl": "https://aleziakurdis.github.io/inertia/VALOMBRA/images/cover.jpg",
-        "alphaArrivalUrl": "hifi://valombra/3962.23,4094.12,-4249.1/0,-0.354436,0,0.93508",
-        "omegaArrivalUrl": "hifi://valombra/4052.72,4107.39,-3752.42/0,-0.702436,0,0.711747",
+        "alphaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/valombraAlphaArrivalUrl.json",
+        "omegaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/valombraOmegaArrivalUrl.json",
         "targetPosition": {"x":4100.19873046875,"y":4139.6484375,"z":-3881.1181640625},
         "targetRadius": 29.3571,
         "km": 1.6
@@ -26,8 +26,8 @@
         "placeName": "YuKong",
         "description": "The mysterious island with dark secrets.",
         "imageUrl": "https://aleziakurdis.github.io/inertia/UKONG/images/cover.jpg",
-        "alphaArrivalUrl": "hifi://YuKong-Island/-3656.09,3007.62,-3463.75/0,0.0093885,0,0.999956",
-        "omegaArrivalUrl": "hifi://YuKong-Island/-3054.85,3167.82,-2581.63/0,0.684456,0,0.729054",
+        "alphaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/yuKongAlphaArrivalUrl.json",
+        "omegaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/yuKongOmegaArrivalUrl.json",
         "targetPosition": {"x":-2819.3,"y":2986.34,"z":-2765.57},
         "targetRadius": 300,
         "km": 4.7
