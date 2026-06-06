@@ -177,15 +177,67 @@
         
         const NIGHT_AMBIENCE_INTENSITY = 0.1;
         const DAY_AMBIENCE_INTENSITY = 0.7;
+        
+        let hazeRang = 500;
+        let hazeBaseRef = -30;
+        let hazeCeiling = 20;
+        let hazeColor;
+        let hazeGlareColor;
+        
+        //universeCenter.y 
         let ambientIntensity;
-        if (hour > 18 || hour <= 5) {
+        if (hour > 18 || hour <= 5) { //night
+            hazeRang = 300;
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY;
-        } else if ( hour <= 18 && hour > 17) {
+            hazeColor = {
+                "blue": 14,
+                "green": 66,
+                "red": 161
+            };
+            hazeGlareColor = {
+                "blue": 52,
+                "green": 166,
+                "red": 227
+            };
+        } else if ( hour <= 18 && hour > 17) { // evening
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((18.0 - hour) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
-        } else if ( hour <= 6 && hour > 5) {
+            hazeRang = 500 - (200 * (hour - 17.0));
+            hazeColor = {
+                "blue": Math.floor(255 - (241 * (hour - 17.0))),
+                "green": Math.floor(131 - (65 * (hour - 17.0))),
+                "red": Math.floor(48 + (113 * (hour - 17.0)))
+            };
+            hazeGlareColor = {
+                "blue": Math.floor(242 - (190 * (hour - 17.0))),
+                "green": Math.floor(174 - (8 * (hour - 17.0))),
+                "red": Math.floor(73 + (154 * (hour - 17.0)))
+            };
+        } else if ( hour <= 6 && hour > 5) { //dawn
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((1-(6.0 - hour)) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
-        } else {
+            hazeRang = 300 + (200 * (hour - 5.0));
+            hazeColor = {
+                "blue": Math.floor(14 + (241 * (hour - 5.0))),
+                "green": Math.floor(66 + (65 * (hour - 5.0))),
+                "red": Math.floor(161 - (113 * (hour - 5.0)))
+            };
+            hazeGlareColor = {
+                "blue": Math.floor(52 + (190 * (hour - 5.0))),
+                "green": Math.floor(166 + (8 * (hour - 5.0))),
+                "red": Math.floor(227 - (154 * (hour - 5.0)))
+            };
+        } else { //day
+            hazeRang = 500;
             ambientIntensity = DAY_AMBIENCE_INTENSITY;
+            hazeColor = {
+                "blue": 255,
+                "green": 131,
+                "red": 48
+            };
+            hazeGlareColor = {
+                "blue": 242,
+                "green": 174,
+                "red": 73
+            };
         }
         
         
@@ -245,7 +297,15 @@
                 "keyLightMode": "enabled",
                 "ambientLightMode": "enabled",
                 "skyboxMode": "enabled",
-                "hazeMode": "disabled",
+                "haze": {
+                    "hazeAltitudeEffect": true,
+                    "hazeBaseRef": universeCenter.y + hazeBaseRef,
+                    "hazeCeiling": universeCenter.y + hazeCeiling,
+                    "hazeColor": hazeColor,
+                    "hazeGlareColor": hazeGlareColor,
+                    "hazeRange": hazeRange
+                },
+                "hazeMode": "enabled",
                 "ambientOcclusionMode": "enabled",
                 "bloomMode": "enabled",
                 "angularDamping": 0
@@ -257,6 +317,13 @@
                 "ambientLight": {
                     "ambientIntensity": ambientIntensity
                 },
+                "haze": {
+                    "hazeBaseRef": universeCenter.y + hazeBaseRef,
+                    "hazeCeiling": universeCenter.y + hazeCeiling,
+                    "hazeColor": hazeColor,
+                    "hazeGlareColor": hazeGlareColor,
+                    "hazeRange": hazeRange
+                }
             });
         }
     }
