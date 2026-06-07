@@ -178,7 +178,7 @@
         const NIGHT_AMBIENCE_INTENSITY = 0.1;
         const DAY_AMBIENCE_INTENSITY = 0.7;
         
-        let hazeRang = 500;
+        let hazeRange = 500;
         let hazeBaseRef = -30;
         let hazeCeiling = 20;
         let hazeColor;
@@ -187,7 +187,7 @@
         //universeCenter.y 
         let ambientIntensity;
         if (hour > 18 || hour <= 5) { //night
-            hazeRang = 300;
+            hazeRange = 300;
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY;
             hazeColor = {
                 "blue": 14,
@@ -201,7 +201,7 @@
             };
         } else if ( hour <= 18 && hour > 17) { // evening
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((18.0 - hour) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
-            hazeRang = 500 - (200 * (hour - 17.0));
+            hazeRange = 500 - (200 * (hour - 17.0));
             hazeColor = {
                 "blue": Math.floor(255 - (241 * (hour - 17.0))),
                 "green": Math.floor(131 - (65 * (hour - 17.0))),
@@ -214,7 +214,7 @@
             };
         } else if ( hour <= 6 && hour > 5) { //dawn
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((1-(6.0 - hour)) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
-            hazeRang = 300 + (200 * (hour - 5.0));
+            hazeRange = 300 + (200 * (hour - 5.0));
             hazeColor = {
                 "blue": Math.floor(14 + (241 * (hour - 5.0))),
                 "green": Math.floor(66 + (65 * (hour - 5.0))),
@@ -226,7 +226,7 @@
                 "red": Math.floor(227 - (154 * (hour - 5.0)))
             };
         } else { //day
-            hazeRang = 500;
+            hazeRange = 500;
             ambientIntensity = DAY_AMBIENCE_INTENSITY;
             hazeColor = {
                 "blue": 255,
