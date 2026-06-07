@@ -59,6 +59,29 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/OXARA.fst",
             "useOriginalPivot": true,
             "script": "https://aleziakurdis.github.io/inertia/OXARA/singularityOxara.js"
+        },
+        {
+            "id": "{b973cc1b-1cee-48e1-8ff8-f8a328e2273d}",
+            "type": "Model",
+            "position":  {
+                "x": 5000,
+                "y": -5000,
+                "z": 5000
+            },
+            "name": "HABITATIONS",
+            "locked": true,
+            "dimensions": {"x":1976.219482421875,"y":208.06077575683594,"z":1956.2939453125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/HABITATIONS.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
