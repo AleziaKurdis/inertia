@@ -82,6 +82,124 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/HABITATIONS.fst",
             "useOriginalPivot": true
+        },
+        {
+            "ambientLight": {
+                "ambientColor": {
+                    "blue": 71,
+                    "green": 38,
+                    "red": 11
+                },
+                "ambientIntensity": 0.07999999821186066
+            },
+            "ambientLightMode": "enabled",
+            "ambientOcclusionMode": "enabled",
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 117.88993835449219,
+                "y": 135.71484375,
+                "z": 174.44137573242188
+            },
+            "flyingAllowed": false,
+            "grab": {
+                "grabbable": false
+            },
+            "hazeMode": "disabled",
+            "id": "{ed8f160b-c167-4bcc-997a-fa67233afb1f}",
+            "keyLight": {
+                "castShadows": true,
+                "color": {
+                    "blue": 153,
+                    "green": 86,
+                    "red": 28
+                },
+                "direction": {
+                    "x": 0,
+                    "y": -0.9854497313499451,
+                    "z": 0.1699671596288681
+                },
+                "shadowBias": 0.019999999552965164
+            },
+            "keyLightMode": "enabled",
+            "locked": true,
+            "name": "DARKZONE 1",
+            "position": {"x":4922.49560546875,"y":-5049.87890625,"z":4783.6611328125},
+            "rotation": {
+                "w": 0.978147566318512,
+                "x": 0,
+                "y": -0.2079116851091385,
+                "z": 0
+            },
+            "shapeType": "cylinder-y",
+            "skybox": {
+                "color": {
+                    "blue": 71,
+                    "green": 38,
+                    "red": 11
+                }
+            },
+            "skyboxMode": "enabled",
+            "type": "Zone"
+        },
+        {
+            "ambientLight": {
+                "ambientColor": {
+                    "blue": 71,
+                    "green": 38,
+                    "red": 11
+                },
+                "ambientIntensity": 0.07999999821186066
+            },
+            "ambientLightMode": "enabled",
+            "ambientOcclusionMode": "enabled",
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 27.67962646484375,
+                "y": 25.833984375,
+                "z": 10
+            },
+            "flyingAllowed": false,
+            "grab": {
+                "grabbable": false
+            },
+            "hazeMode": "disabled",
+            "id": "{f0ab4657-0ca7-4643-91f2-63c56e2d2b36}",
+            "keyLight": {
+                "castShadows": true,
+                "color": {
+                    "blue": 153,
+                    "green": 86,
+                    "red": 28
+                },
+                "direction": {
+                    "x": 0,
+                    "y": -0.9854497313499451,
+                    "z": 0.1699671596288681
+                },
+                "shadowBias": 0.019999999552965164
+            },
+            "keyLightMode": "enabled",
+            "locked": true,
+            "name": "DARKZONE 2",
+            "position": {"x":5083.94580078125,"y":-4995.0908203125,"z":4943.72705078125},
+            "rotation": {
+                "w": 0.9659258723258972,
+                "x": 0,
+                "y": -0.2588190734386444,
+                "z": 0
+            },
+            "shapeType": "box",
+            "skybox": {
+                "color": {
+                    "blue": 71,
+                    "green": 38,
+                    "red": 11
+                }
+            },
+            "skyboxMode": "enabled",
+            "type": "Zone"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
