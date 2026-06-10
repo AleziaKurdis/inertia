@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0,0,0],
+         "metallic": 0.001,
+         "roughness": 0.05,
+         "normalMap": "DARKSTONE_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
