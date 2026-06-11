@@ -310,6 +310,33 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
             "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": false}"
+        },{
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 683.320068359375,
+                "y": 401.9748229980469,
+                "z": 325.0490417480469
+            },
+            "position": {"x":5084.3349609375,"y":-4928.7685546875,"z":4679.35205078125},
+            "flyingAllowed": true,
+            "ghostingAllowed": true,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b909d054-33ec-4c20-a80e-f37fa65ef09b}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "THALARA_VISIBILITY_ZONE",
+            "shapeType": "cylinder-y",
+            "type": "Zone"
         },
         {
             "id": "{112ba4d7-06ee-47cb-8d45-f1b8fcd23ab6}",
@@ -321,9 +348,9 @@
             },
             "name": "MONUMENT",
             "locked": true,
-            "dimensions": {"x":500.66253662109375,"y":52.95170593261719,"z":481.4290771484375},
+            "dimensions": {"x":21.677932739257812,"y":13.422767639160156,"z":12.55999755859375},
             "renderWithZones": [
-                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+                "{b909d054-33ec-4c20-a80e-f37fa65ef09b}"
             ],
             "grab": {
                 "grabbable": false
