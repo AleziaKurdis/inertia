@@ -310,6 +310,29 @@
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
             "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": false}"
+        },
+        {
+            "id": "{112ba4d7-06ee-47cb-8d45-f1b8fcd23ab6}",
+            "type": "Model",
+            "position":  {
+                "x": 5000,
+                "y": -5000,
+                "z": 5000
+            },
+            "name": "MONUMENT",
+            "locked": true,
+            "dimensions": {"x":500.66253662109375,"y":52.95170593261719,"z":481.4290771484375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "shapeType": "static-mesh",
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/MONUMENT.fst",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
