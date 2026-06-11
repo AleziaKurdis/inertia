@@ -177,6 +177,27 @@
         
         const NIGHT_AMBIENCE_INTENSITY = 0.1;
         const DAY_AMBIENCE_INTENSITY = 0.7;
+        const HAZE_COLOR_DAY = {
+                "blue": 14,
+                "green": 66,
+                "red": 161
+            };
+        const HAZE_COLOR_NIGHT = {
+                "blue": 255,
+                "green": 131,
+                "red": 48
+            };
+        const HAZE_GLARE_COLOR_DAY = {
+                "blue": 52,
+                "green": 166,
+                "red": 227
+            };
+        const HAZE_GLARE_COLOR_NIGHT = {
+                "blue": 242,
+                "green": 174,
+                "red": 73
+            };
+        
         
         let hazeRange = 500;
         let hazeBaseRef = -40;
@@ -189,55 +210,39 @@
         if (hour > 18 || hour <= 5) { //night
             hazeRange = 500;
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY;
-            hazeColor = {
-                "blue": 255,
-                "green": 131,
-                "red": 48
-            };
-            hazeGlareColor = {
-                "blue": 242,
-                "green": 174,
-                "red": 73
-            };
+            hazeColor = HAZE_COLOR_NIGHT;
+            hazeGlareColor = HAZE_GLARE_COLOR_NIGHT;
         } else if ( hour <= 18 && hour > 17) { // evening
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((18.0 - hour) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
             hazeRange = 1500 - (1000 * (hour - 17.0));
             hazeColor = {
-                "blue": Math.floor(14 + (241 * (hour - 17.0))),
-                "green": Math.floor(66 + (65 * (hour - 17.0))),
-                "red": Math.floor(161 - (113 * (hour - 17.0)))
+                "blue": Math.floor(HAZE_COLOR_DAY.blue + ((HAZE_COLOR_NIGHT.blue - HAZE_COLOR_DAY.blue) * (hour - 17.0))),
+                "green": Math.floor(HAZE_COLOR_DAY.green + ((HAZE_COLOR_NIGHT.green - HAZE_COLOR_DAY.green) * (hour - 17.0))),
+                "red": Math.floor(HAZE_COLOR_DAY.red + ((HAZE_COLOR_NIGHT.red - HAZE_COLOR_DAY.red) * (hour - 17.0)))
             };
             hazeGlareColor = {
-                "blue": Math.floor(52 + (190 * (hour - 17.0))),
-                "green": Math.floor(166 + (8 * (hour - 17.0))),
-                "red": Math.floor(227 - (154 * (hour - 17.0)))
+                "blue": Math.floor(HAZE_GLARE_COLOR_DAY.blue + ((HAZE_GLARE_COLOR_NIGHT.blue - HAZE_GLARE_COLOR_DAY.blue) * (hour - 17.0))),
+                "green": Math.floor(HAZE_GLARE_COLOR_DAY.green + ((HAZE_GLARE_COLOR_NIGHT.green - HAZE_GLARE_COLOR_DAY.green) * (hour - 17.0))),
+                "red": Math.floor(HAZE_GLARE_COLOR_DAY.red + ((HAZE_GLARE_COLOR_NIGHT.red - HAZE_GLARE_COLOR_DAY.red) * (hour - 17.0)))
             };
         } else if ( hour <= 6 && hour > 5) { //dawn
             ambientIntensity = NIGHT_AMBIENCE_INTENSITY + ((1-(6.0 - hour)) * (DAY_AMBIENCE_INTENSITY - NIGHT_AMBIENCE_INTENSITY));
             hazeRange = 500 + (1000 * (hour - 5.0));
             hazeColor = {
-                "blue": Math.floor(255 - (241 * (hour - 5.0))),
-                "green": Math.floor(131 - (65 * (hour - 5.0))),
-                "red": Math.floor(48 + (113 * (hour - 5.0)))
+                "blue": Math.floor(HAZE_COLOR_NIGHT.blue + ((HAZE_COLOR_DAY.blue - HAZE_COLOR_NIGHT.blue) * (hour - 5.0))),
+                "green": Math.floor(HAZE_COLOR_NIGHT.green + ((HAZE_COLOR_DAY.green - HAZE_COLOR_NIGHT.green) * (hour - 5.0))),
+                "red": Math.floor(HAZE_COLOR_NIGHT.red + ((HAZE_COLOR_DAY.red - HAZE_COLOR_NIGHT.red) * (hour - 5.0)))
             };
             hazeGlareColor = {
-                "blue": Math.floor(242 - (190 * (hour - 5.0))),
-                "green": Math.floor(174 - (8 * (hour - 5.0))),
-                "red": Math.floor(73 + (154 * (hour - 5.0)))
+                "blue": Math.floor(HAZE_GLARE_COLOR_NIGHT.blue + ((HAZE_GLARE_COLOR_DAY.blue - HAZE_GLARE_COLOR_NIGHT.blue) * (hour - 5.0))),
+                "green": Math.floor(HAZE_GLARE_COLOR_NIGHT.green + ((HAZE_GLARE_COLOR_DAY.green - HAZE_GLARE_COLOR_NIGHT.green) * (hour - 5.0))),
+                "red": Math.floor(HAZE_GLARE_COLOR_NIGHT.red + ((HAZE_GLARE_COLOR_DAY.red - HAZE_GLARE_COLOR_NIGHT.red) * (hour - 5.0)))
             };
         } else { //day
             hazeRange = 1500;
             ambientIntensity = DAY_AMBIENCE_INTENSITY;
-            hazeColor = {
-                "blue": 14,
-                "green": 66,
-                "red": 161
-            };
-            hazeGlareColor = {
-                "blue": 52,
-                "green": 166,
-                "red": 227
-            };
+            hazeColor = HAZE_COLOR_DAY;
+            hazeGlareColor = HAZE_GLARE_COLOR_DAY;
         }
         
         
