@@ -179,7 +179,7 @@
         const DAY_AMBIENCE_INTENSITY = 0.7;
         
         let hazeRange = 500;
-        let hazeBaseRef = -50;
+        let hazeBaseRef = -40;
         let hazeCeiling = 0;
         let hazeColor;
         let hazeGlareColor;
