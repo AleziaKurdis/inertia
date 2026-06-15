@@ -183,9 +183,9 @@
                 "red": 161
             };
         const HAZE_COLOR_NIGHT = {
-                "blue": 255,
-                "green": 131,
-                "red": 48
+                "blue": 158, //255,
+                "green": 66, //131,
+                "red": 0 //48
             };
         const HAZE_GLARE_COLOR_DAY = {
                 "blue": 52,
@@ -193,9 +193,9 @@
                 "red": 227
             };
         const HAZE_GLARE_COLOR_NIGHT = {
-                "blue": 242,
-                "green": 174,
-                "red": 73
+                "blue": 204, //242,
+                "green": 122, //174,
+                "red": 0 //73
             };
         
         
