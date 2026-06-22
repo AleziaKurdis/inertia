@@ -383,6 +383,146 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/STRUCTURAL.fst",
             "useOriginalPivot": true
+        },
+        {
+            "dimensions": {
+                "x": 0.6114761829376221,
+                "y": 3.0028998851776123,
+                "z": 0.05000000074505806
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{434c7865-c2b8-4618-b67b-90063df60ffe}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/sign_metal_s.fst",
+            "name": "Sign - amphitheatre",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.5183929204940796,
+                "x": 0,
+                "y": 0.8551426529884338,
+                "z": 0
+            },
+            "position": {"x":4695.681640625,"y":-5001.56640625,"z":4815.96484375},
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/amphitheatre.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "dimensions": {
+                "x": 0.7961000204086304,
+                "y": 3.9501655101776123,
+                "z": 0.05000000074505806
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{dbb09bb5-a12e-4611-bf77-04b0706437cc}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/sign_metal_s.fst",
+            "name": "Sign - Distances to Omega",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.7180075645446777,
+                "x": 0,
+                "y": 0.6960352659225464,
+                "z": 0
+            },
+            "position": {"x":5281.5400390625,"y":-5016.60986328125,"z":5286.84521484375},
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToOmega.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "dimensions": {
+                "x": 0.8616237044334412,
+                "y": 1.755286455154419,
+                "z": 0.03980154171586037
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{785d1dd8-9af8-4370-984c-215a5f6ce6b2}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/sign_metal_h.fst",
+            "name": "Sign - escalier 2",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.5247244834899902,
+                "x": 0,
+                "y": -0.8512721657752991,
+                "z": 0
+            },
+            "position": {"x":4887.70556640625,"y":-5020.966796875,"z":4931.05029296875},
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "dimensions": {
+                "x": 0.8616237044334412,
+                "y": 1.755286455154419,
+                "z": 0.03980154171586037
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a851e3bc-8508-4b2b-989e-eeda0b39dc31}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/sign_metal_h.fst",
+            "name": "Sign - escalier",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9629289507865906,
+                "x": 0,
+                "y": 0.269755095243454,
+                "z": 0
+            },
+            "position": {"x":4855.84375,"y":-5030.86376953125,"z":4924.654296875},
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "dimensions": {
+                "x": 0.7961000204086304,
+                "y": 4.205536842346191,
+                "z": 0.05000000074505806
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3645634e-773e-4fa5-b14b-2ffd6e780e24}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/sign_metal_s.fst",
+            "name": "Sign - Distances to Alpha",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.4936748445034027,
+                "x": 0,
+                "y": 0.8696465492248535,
+                "z": 0
+            },
+            "position": {"x":4660.31591796875,"y":-5002.8828125,"z":4785.54931640625},
+            "shapeType": "simple-compound",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToAlpha.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
