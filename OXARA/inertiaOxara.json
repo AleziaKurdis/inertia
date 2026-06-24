@@ -382,6 +382,7 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/STRUCTURAL.fst",
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/streetLights.js",
             "useOriginalPivot": true
         },
         {

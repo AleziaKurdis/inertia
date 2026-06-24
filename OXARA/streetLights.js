@@ -44,7 +44,21 @@
         {"name": "KW7", "lightType": "STREETPOLE", "position": {"x":4993.39697265625,"y":-5007.00927734375,"z":4933.55810546875}},
         {"name": "L9", "lightType": "STREETPOLE", "position": {"x":4949.8173828125,"y":-5007.03466796875,"z":4901.4501953125}},
         {"name": "L10", "lightType": "STREETPOLE", "position": {"x":4917.92529296875,"y":-5006.54296875,"z":4882.9970703125}},
-        {"name": "OTH-JCT", "lightType": "STREETPOLE", "position": {"x":4879.212890625,"y":-5004.38037109375,"z":4877.05322265625}}
+        {"name": "OTH-JCT", "lightType": "STREETPOLE", "position": {"x":4879.212890625,"y":-5004.38037109375,"z":4877.05322265625}},
+        {"name": "LOR1", "lightType": "STREETPOLE", "position": {"x":4827.07958984375,"y":-5009.85791015625,"z":4908.26806640625}},
+        {"name": "LOR2", "lightType": "STREETPOLE", "position": {"x":4802.0595703125,"y":-5010.26953125,"z":4918.01513671875}},
+        {"name": "LOR3", "lightType": "STREETPOLE", "position": {"x":4791.6708984375,"y":-5014.74560546875,"z":4936.806640625}},
+        {"name": "LOR4", "lightType": "STREETPOLE", "position": {"x":4788.31982421875,"y":-5020.72412109375,"z":4955.56494140625}},
+        {"name": "TAL-JCT", "lightType": "STREETPOLE", "position": {"x":4789.1171875,"y":-5020.98486328125,"z":4972.47265625}},
+        {"name": "TAL1", "lightType": "STREETPOLE", "position": {"x":4824.23388671875,"y":-5025.5625,"z":4942.7578125}},
+        {"name": "TAL2", "lightType": "STREETPOLE", "position": {"x":4853.2529296875,"y":-5025.5458984375,"z":4921.40234375}},
+        {"name": "TAL3", "lightType": "STREETPOLE", "position": {"x":4888.66748046875,"y":-5015.74365234375,"z":4931.76025390625}},
+        {"name": "TAL4", "lightType": "STREETPOLE", "position": {"x":4919.216796875,"y":-5008.4208984375,"z":4931.92333984375}},
+        {"name": "TAL5", "lightType": "STREETPOLE", "position": {"x":4946.98486328125,"y":-5006.23681640625,"z":4945.27001953125}},
+        {"name": "OTY1", "lightType": "STREETPOLE", "position": {"x":4945.9580078125,"y":-5011.95849609375,"z":4807.6923828125}},
+        {"name": "OTY2", "lightType": "STREETPOLE", "position": {"x":4930.83203125,"y":-5011.97021484375,"z":4796.38671875}},
+        {"name": "OTY3", "lightType": "STREETPOLE", "position": {"x":4930.85546875,"y":-5014.97509765625,"z":4772.59375}},
+        {"name": "OTY4", "lightType": "STREETPOLE", "position": {"x":4949.5341796875,"y":-5021.05712890625,"z":4764.466796875}}
     ];
     
     var lights = [];
