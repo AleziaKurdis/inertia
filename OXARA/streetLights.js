@@ -104,7 +104,7 @@
                 };
             }
             
-        if (properties !== null) {
+            if (properties !== null) {
                 id = Entities.addEntity(properties, "local");
                 lights.push(id);
             }
