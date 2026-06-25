@@ -58,7 +58,23 @@
         {"name": "OTY1", "lightType": "STREETPOLE", "position": {"x":4945.9580078125,"y":-5011.95849609375,"z":4807.6923828125}},
         {"name": "OTY2", "lightType": "STREETPOLE", "position": {"x":4930.83203125,"y":-5011.97021484375,"z":4796.38671875}},
         {"name": "OTY3", "lightType": "STREETPOLE", "position": {"x":4930.85546875,"y":-5014.97509765625,"z":4772.59375}},
-        {"name": "OTY4", "lightType": "STREETPOLE", "position": {"x":4949.5341796875,"y":-5021.05712890625,"z":4764.466796875}}
+        {"name": "OTY4", "lightType": "STREETPOLE", "position": {"x":4949.5341796875,"y":-5021.05712890625,"z":4764.466796875}},
+        {"name": "LORW-JCT", "lightType": "STREETPOLE", "position": {"x":4727.3115234375,"y":-5013.1240234375,"z":4956.76904296875}},
+        {"name": "LORW", "lightType": "STREETPOLE", "position": {"x":4739.4443359375,"y":-5011.01513671875,"z":4943.5302734375}},
+        {"name": "DAL1", "lightType": "STREETPOLE", "position": {"x":4703.677734375,"y":-5003.1455078125,"z":4923.978515625}},
+        {"name": "DAL2", "lightType": "STREETPOLE", "position": {"x":4708.0634765625,"y":-5003.15869140625,"z":4903.6484375}},
+        {"name": "DAL3", "lightType": "STREETPOLE", "position": {"x":4723.50830078125,"y":-4999.86181640625,"z":4898.345703125}},
+        {"name": "DAL4", "lightType": "STREETPOLE", "position": {"x":4716.14501953125,"y":-4996.11376953125,"z":4854.59423828125}},
+        {"name": "DAL5", "lightType": "STREETPOLE", "position": {"x":4694.70361328125,"y":-4996.11328125,"z":4817.80078125}},
+        {"name": "ARR-ALPHA", "lightType": "STREETPOLE", "position": {"x":4667.39404296875,"y":-4996.1181640625,"z":4784.2568359375}},
+        {"name": "TUN-1", "lightType": "TUNEL", "position": {"x":4879.12060546875,"y":-5005.2275390625,"z":4861.25927734375}},
+        {"name": "TUN-2" "lightType": "TUNEL", "position": {"x":4895.11572265625,"y":-5005.2529296875,"z":4839.56884765625}},
+        {"name": "TUN-3", "lightType": "TUNEL", "position": {"x":4924.30126953125,"y":-5010.13623046875,"z":4834.3857421875}},
+        {"name": "TUN-4", "lightType": "TUNEL", "position": {"x":4936.04931640625,"y":-5012.185546875,"z":4822.0576171875}},
+        {"name": "TUN-5", "lightType": "TUNEL", "position": {"x":4927.5302734375,"y":-5019.970703125,"z":4753.12109375}},
+        {"name": "TUN-6", "lightType": "TUNEL", "position": {"x":4926.75048828125,"y":-5023.03369140625,"z":4772.72216796875}},
+        {"name": "TUN-7", "lightType": "TUNEL", "position": {"x":4949.634765625,"y":-5023.1357421875,"z":4752.93115234375}},
+        {"name": "TUN-8", "lightType": "TUNEL", "position": {"x":4927.326171875,"y":-5027.93115234375,"z":4731.19873046875}}
     ];
 
     let lights = [];
