@@ -10,9 +10,9 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function(){
-    var ROOT = Script.resolvePath('').split("streetLights.js")[0];
-    var COORD_REFERENCE = {"x": 5000, "y": -5000, "z": 5000};
-    var lightEntries = [
+    const ROOT = Script.resolvePath('').split("streetLights.js")[0];
+    const COORD_REFERENCE = {"x": 5000, "y": -5000, "z": 5000};
+    let lightEntries = [
         {"name": "ARRIVAL-OMEGA", "lightType": "STREETPOLE", "position": {"x":5284.4130859375,"y":-5010.12841796875,"z":5288.4609375}},
         {"name": "L1", "lightType": "STREETPOLE", "position": {"x":5244.9970703125,"y":-5017.3466796875,"z":5282.66943359375}},
         {"name": "L2", "lightType": "STREETPOLE", "position": {"x":5206.603515625,"y":-5021.72314453125,"z":5284.2080078125}},
@@ -60,12 +60,14 @@
         {"name": "OTY3", "lightType": "STREETPOLE", "position": {"x":4930.85546875,"y":-5014.97509765625,"z":4772.59375}},
         {"name": "OTY4", "lightType": "STREETPOLE", "position": {"x":4949.5341796875,"y":-5021.05712890625,"z":4764.466796875}}
     ];
-    
-    var lights = [];
+
+    let lights = [];
     this.preload = function(entityID) {
-        var renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
-        var i, id, properties;
+        let renderWithZones = Entities.getEntityProperties(entityID, ["renderWithZones"]).renderWithZones;
+        let i, id; 
+        let properties;
         for (i=0; i < lightEntries.length; i++) {
+            properties = null;
             if (lightEntries[i].lightType === "STREETPOLE") {
                 properties = {
                     "type": "Light",
@@ -102,8 +104,10 @@
                 };
             }
             
-            id = Entities.addEntity(properties, "local");
-            lights.push(id);
+        if (properties !== null) {
+                id = Entities.addEntity(properties, "local");
+                lights.push(id);
+            }
         }
     };
 
@@ -114,6 +118,6 @@
             
         }
         lights = [];
-    };    
+    };
 
 })
