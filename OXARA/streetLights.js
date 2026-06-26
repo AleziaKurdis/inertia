@@ -123,6 +123,40 @@
                     "cutoff": 75,
                     "falloffRadius": 1.5
                 };
+            } else if (lightEntries[i].lightType === "HANGOUT" ) {
+                properties = {
+                    "type": "Light",
+                    "name": lightEntries[i].lightType + " " + lightEntries[i].name,
+                    "dimensions": {
+                        "x": 32.485660552978516,
+                        "y": 32.485660552978516,
+                        "z": 33.631629943847656
+                    },
+                    "rotation": {
+                        "x": 0.7071068286895752,
+                        "y": 0,
+                        "z": 0,
+                        "w": -0.7071068286895752
+                    },
+                    "localPosition": Vec3.subtract(lightEntries[i].position, COORD_REFERENCE),
+                    "parentID": entityID,
+                    "renderWithZones": renderWithZones,
+                    "grab": {
+                        "grabbable": false
+                    },
+                    "collisionless": true,
+                    "ignoreForCollisions": true,
+                    "color": {
+                        "red": 255,
+                        "green": 148,
+                        "blue": 48
+                    },
+                    "isSpotlight": true,
+                    "intensity": 15,
+                    "exponent": 1,
+                    "cutoff": 75,
+                    "falloffRadius": 1.0
+                };
             }
             
             if (properties !== null) {
