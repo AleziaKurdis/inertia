@@ -84,7 +84,7 @@
         let properties;
         for (i=0; i < lightEntries.length; i++) {
             properties = null;
-            if (lightEntries[i].lightType === "STREETPOLE") {
+            if (lightEntries[i].lightType === "STREETPOLE" || lightEntries[i].lightType === "TUNEL" ) {
                 properties = {
                     "type": "Light",
                     "name": lightEntries[i].lightType + " " + lightEntries[i].name,
