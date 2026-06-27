@@ -524,6 +524,699 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToAlpha.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{abc8f011-7894-4604-86f8-7329a44b145d}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_8",
+            "position": {"x":4686.7421875,"y":-4999.970703125,"z":4805.13623046875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9659258723258972,
+                "x": 0,
+                "y": 0.258819043636322,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c66d7b1c-2c29-4bd5-ac93-4432d5eadec5}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_5",
+            "position": {"x":4728.05859375,"y":-5016.95361328125,"z":4959.80126953125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.31730473041534424,
+                "x": 0,
+                "y": -0.9483237266540527,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ade1f767-be7d-4bae-b89d-b9d9b81ff800}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_7",
+            "position": {"x":4727.3564453125,"y":-5016.76806640625,"z":4953.21435546875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9702957272529602,
+                "x": 0,
+                "y": 0.24192187190055847,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c536f382-45e0-422b-9d2d-3b74cb80a1fd}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_4",
+            "position": {"x":4829.1376953125,"y":-5013.70556640625,"z":4903.10009765625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.8090170621871948,
+                "x": 0,
+                "y": -0.5877852439880371,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b8807af5-4ed6-4814-b256-bbe6bbb048d1}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_3",
+            "position": {"x":4880.68310546875,"y":-5008.4052734375,"z":4877.013671875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.6087614893913269,
+                "x": 0,
+                "y": -0.7933533191680908,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{48793330-8322-4a4c-918b-16e4b2379235}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_5",
+            "position": {"x":4871.57763671875,"y":-5008.21435546875,"z":4881.58203125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.1564345359802246,
+                "x": 0,
+                "y": 0.987688422203064,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a3eb8e0d-2d72-4adf-835d-e8cbfa76fcd7}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_LEFT.fst",
+            "name": "VR_SIGN_AL_2",
+            "position": {"x":4801.2763671875,"y":-5022.38427734375,"z":4968.73876953125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.7547095417976379,
+                "x": 0,
+                "y": 0.6560590267181396,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3529465f-9576-410c-bf65-b2a9eb7e8877}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_4",
+            "position": {"x":4979.19140625,"y":-5010.8291015625,"z":4920.45654296875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.8660253882408142,
+                "x": 0,
+                "y": 0.5,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{97bba040-2667-4808-91d1-3d025021b4cc}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_LEFT.fst",
+            "name": "VR_SIGN_OL_2",
+            "position": {"x":5098.77197265625,"y":-5011.79736328125,"z":4976.67431640625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9681476950645447,
+                "x": 0,
+                "y": -0.2503799796104431,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{532c2c81-985f-49d7-8c0e-a027428f8a14}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_LEFT.fst",
+            "name": "VR_SIGN_AL_1",
+            "position": {"x":5081.3427734375,"y":-5018.27685546875,"z":5039.00390625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.31730470061302185,
+                "x": 0,
+                "y": 0.9483237266540527,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{49d4a8be-27f8-45c5-b586-71ff80dd252a}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_RIGHT.fst",
+            "name": "VR_SIGN_AR_2",
+            "position": {"x":5101.439453125,"y":-5011.4619140625,"z":4987.80419921875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.5075384378433228,
+                "x": 0,
+                "y": 0.8616292476654053,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{95dfd4ca-1803-436e-9e82-98949eaeb771}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_LEFT.fst",
+            "name": "VR_SIGN_OL_1",
+            "position": {"x":5105.19677734375,"y":-5015.89111328125,"z":4993.4716796875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9681476950645447,
+                "x": 0,
+                "y": -0.2503799796104431,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{11d5b115-b3cf-4976-9e04-2aa32c3c2570}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_RIGHT.fst",
+            "name": "VR_SIGN_AR_1",
+            "position": {"x":5107.62158203125,"y":-5015.4287109375,"z":4998.81005859375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.5075384378433228,
+                "x": 0,
+                "y": 0.8616292476654053,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{2edcc346-8782-4308-91ab-d74b83f4b401}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_RIGHT.fst",
+            "name": "VR_SIGN_OR_1",
+            "position": {"x":5084.68212890625,"y":-5018.3330078125,"z":5031.43603515625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.8949344158172607,
+                "x": 0,
+                "y": 0.4461978077888489,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{7bd6cf19-7b7d-4339-b4d6-0a6d15285c7d}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_2",
+            "position": {"x":5148.0986328125,"y":-5016.36474609375,"z":5151.37646484375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": -1.0000001192092896,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c833a252-6ad3-4f53-a09b-b312e0882239}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_3",
+            "position": {"x":5150.8466796875,"y":-5016.27001953125,"z":5146.7333984375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -1.0000001192092896,
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c1d20282-d792-4145-aec2-58b7a05cd63f}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_2",
+            "position": {"x":5166.4736328125,"y":-5019.916015625,"z":5193.72900390625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -1.0000001192092896,
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{523aa19f-62ca-4208-b7ee-c917f7083e50}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_1",
+            "position": {"x":5162.70849609375,"y":-5019.986328125,"z":5198.11279296875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": -1.0000001192092896,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{53b936a2-878c-474b-a16f-2b7233baded3}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_1",
+            "position": {"x":5280.46240234375,"y":-5013.71826171875,"z":5287.16650390625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{89458b61-1920-40d8-bc71-f61994e6a50d}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
+            "name": "VR_SIGN_AD_6",
+            "position": {"x":4666.45361328125,"y":-4999.94873046875,"z":4786.44091796875},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.35836800932884216,
+                "x": 0,
+                "y": -0.9335803985595703,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.29973143339157104,
+                "y": 1.6020913124084473,
+                "z": 0.021962830796837807
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b37a4fe4-bd4a-4729-ae44-be3c38cb2456}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
+            "name": "VR_SIGN_OD_6",
+            "position": {"x":4787.74072265625,"y":-5024.72509765625,"z":4969.3974609375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.6087614297866821,
+                "x": 0,
+                "y": 0.7933533191680908,
+                "z": 0
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
