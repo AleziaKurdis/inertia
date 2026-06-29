@@ -155,7 +155,7 @@
                     "albedo": [1, 1, 1],
                     "metallic": 0.01,
                     "roughness": 1,
-                    "emissive": [0, 1.9978, 3.98],
+                    "emissive": [0.46447058823529414, 1.8707843137254903, 3.29],
                     "cullFaceMode": "CULL_NONE",
                     "model": "hifi_pbr"
                 }
@@ -220,7 +220,7 @@
             currentSunPosition = sunCumputedValues.localPosition;
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "visible": !isNight});
             Entities.editEntity(compagnonStarId, {"visible": !isNight});
-            Entities.editEntity(moonId, {"localPosition": currentSunPosition, "visible": !isNight});
+            Entities.editEntity(moonId, {"localPosition": currentSunPosition, "visible": isNight});
             
             let hue;
             let intensity;
