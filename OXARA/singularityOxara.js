@@ -144,7 +144,7 @@
                 "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones,
                 "damping": 0,
-                "visible": !isNight
+                "visible": isNight
         }, "local");
 
         let moonMatContent = {
