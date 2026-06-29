@@ -31,7 +31,7 @@
     
     var D19_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 900; //m
-    var MOON_DIAMETER = 800; //m
+    var MOON_DIAMETER = 200; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
@@ -57,7 +57,7 @@
         let intensity;
         if (isNight) {
             hue = HUE_MOON;
-            intensity = 1.0;
+            intensity = 0.4;
         } else {
             hue = HUE_SUN;
             intensity = 2.6;
@@ -137,17 +137,40 @@
         moonId = Entities.addEntity({
                 "name": "MOON",
                 "parentID": thisEntity,
-                "dimensions": {"x": MOON_DIAMETER, "y": MOON_DIAMETER, "z": 0.01},
+                "dimensions": {"x": MOON_DIAMETER, "y": MOON_DIAMETER, "z": MOON_DIAMETER},
                 "localPosition": currentSunPosition,
-                "type": "Image",
-                "color": {"red": 204, "green": 230, "blue": 255},
+                "type": "Shape",
+                "shape": "Sphere",
+                "color": {"red": 128, "green": 128, "blue": 128},
                 "renderWithZones": renderWithZones,
                 "damping": 0,
-                "angularDamping": 0,
-                "imageURL": ROOT + "images/MOON.png",
-                "emissive": true,
-                "billboardMode": "full",
-                "visible": isNight
+                "visible": !isNight
+        }, "local");
+
+        let moonMatContent = {
+            "materialVersion": 1,
+            "materials": [
+                {
+                    "name": "plasma",
+                    "albedo": [1, 1, 1],
+                    "metallic": 0.01,
+                    "roughness": 1,
+                    "emissive": [0, 1.9978, 3.98],
+                    "cullFaceMode": "CULL_NONE",
+                    "model": "hifi_pbr"
+                }
+            ]
+        };
+
+        let moonMatId = Entities.addEntity({
+            "type": "Material",
+            "parentID": moonId,
+            "renderWithZones": renderWithZones,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0},
+            "name": "plasma-material",
+            "materialURL": "materialData",
+            "priority": 1,
+            "materialData": JSON.stringify(moonMatContent)
         }, "local");
 
         let farlandID = Entities.addEntity({
@@ -197,13 +220,13 @@
             currentSunPosition = sunCumputedValues.localPosition;
             Entities.editEntity(starId, {"localPosition": currentSunPosition, "visible": !isNight});
             Entities.editEntity(compagnonStarId, {"visible": !isNight});
-            Entities.editEntity(moonId, {"visible": isNight});
+            Entities.editEntity(moonId, {"localPosition": currentSunPosition, "visible": !isNight});
             
             let hue;
             let intensity;
             if (isNight) {
                 hue = HUE_MOON;
-                intensity = 0.6;
+                intensity = 0.4;
             } else {
                 hue = HUE_SUN;
                 intensity = 2.6;
