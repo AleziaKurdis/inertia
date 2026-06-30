@@ -31,7 +31,7 @@
     
     var D19_DAY_DURATION = 68400; //sec
     var STAR_DIAMETER = 900; //m
-    var MOON_DIAMETER = 200; //m
+    var MOON_DIAMETER = 100; //m
     var STAR_LIGHT_DIAMETER_MULTIPLICATOR = 20; //X time the diameter of the star.
     var DEGREES_TO_RADIANS = Math.PI / 180.0;
     
