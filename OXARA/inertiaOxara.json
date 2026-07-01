@@ -1240,6 +1240,62 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ELEVATOR.fst",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{16e18f8a-5d76-4df6-a732-c9b5f7661e23}",
+            "type": "Box",
+            "name": "ELEVATOR_SURFACE",
+            "description": "{\"x\": -2.5667,\"y\":-32.41,\"z\":-2.4330}",
+            "locked": true,
+            "position": {"x":4103.1767578125,"y":4172.4296875,"z":-3889.126953125},
+            "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":1.0154210329055786},
+            "rotation": {"x":0,"y":0.431416392326355,"z":0,"w":-0.9021530151367188},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "id": "{30782854-5099-422f-9a45-281b7fc66243}",
+            "type": "Box",
+            "position": {"x":4101.5205078125,"y":4140.02734375,"z":-3892.2919921875},
+            "name": "ELEVATOR_TUNNEL",
+            "description": "{\"x\": 2.669,\"y\": 32.41,\"z\": 2.4519}",
+            "locked": true,
+            "dimensions": {"x":1.3065364360809326,"y":2.929492235183716,"z":0.9722207188606262},
+            "rotation": {"x":0,"y":0.9021530151367188,"z":0,"w":0.431416392326355},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
