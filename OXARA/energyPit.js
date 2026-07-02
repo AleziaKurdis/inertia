@@ -36,16 +36,16 @@
             lightTopID = Entities.addEntity({
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
-                "localPosition": {"x": 0.0, "y": 70.0, "z": 0.0},
+                "localPosition": {"x": 0.0, "y": 75.0, "z": 0.0},
                 "name": "Energy Pit Light OTHYN",
                 "grab": {
                     "grabbable": false
                 },
                 "type": "Light",
                 "dimensions": {
-                    "x": 40,
-                    "y": 40,
-                    "z": 40
+                    "x": 70,
+                    "y": 70,
+                    "z": 70
                 },
                 "color": {"red": lightColor[0], "green": lightColor[1], "blue": lightColor[2]},
                 "intensity": 15,
@@ -86,7 +86,7 @@
                     {
                         "name": "LIGHT",
                         "albedo": [1, 1, 1],
-                        "metallic": 1,
+                        "metallic": 0.001,
                         "roughness": 1,
                         "opacity": 1,
                         "emissive": [(color[0]/255) * bloomFactor, (color[1]/255) * bloomFactor, (color[2]/255) * bloomFactor],
@@ -105,7 +105,7 @@
             "localPosition": {"x": 0.0, "y": 60.0, "z": 0.0},
             "name": "Energy Pit Material",
             "materialURL": "materialData",
-            "parentMaterialName": "[0]",
+            //"parentMaterialName": "[0]",
             "priority": 2,
             "materialData": JSON.stringify(materialContent)
         },"local");
