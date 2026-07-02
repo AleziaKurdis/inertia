@@ -64,13 +64,13 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 40,
-                "y": 40,
-                "z": 40
+                "x": 70,
+                "y": 70,
+                "z": 70
             },
             "color": {"red": lightColor[0], "green": lightColor[1], "blue": lightColor[2]},
-            "intensity": 15,
-            "falloffRadius": 2,
+            "intensity": 25,
+            "falloffRadius": 3,
             "isSpotlight": false
         },"local");
 
@@ -78,7 +78,7 @@
         if (sumColorCompnent === 0) { 
             sumColorCompnent = 0.001; 
         }
-        let bloomFactor = 9 / sumColorCompnent;
+        let bloomFactor = 6 / sumColorCompnent;
 
         let materialContent = {
             "materialVersion": 1,
@@ -105,7 +105,7 @@
             "localPosition": {"x": 0.0, "y": 60.0, "z": 0.0},
             "name": "Energy Pit Material",
             "materialURL": "materialData",
-            "parentMaterialName": "[mat::LIGHT]",
+            "parentMaterialName": "[0]",
             "priority": 2,
             "materialData": JSON.stringify(materialContent)
         },"local");

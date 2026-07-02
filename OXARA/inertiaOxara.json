@@ -1335,6 +1335,7 @@
             },
             "id": "{bb30b060-80c2-44c5-96ff-74e62e7be6c9}",
             "ignoreForCollisions": true,
+            "locked": true,
             "name": "ENERGY PIT: OTHYN",
             "description": "OTHYN",
             "position": {"x":4951.19873046875,"y":-5107.09228515625,"z":4787.73291015625},
