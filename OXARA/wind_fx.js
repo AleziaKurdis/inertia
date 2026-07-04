@@ -57,7 +57,8 @@
         var HYTRION_DAY = 19 * 3600; //19h
         var hour = GetCurrentCycleValue(24, HYTRION_DAY);
         var isEmitting = false;
-        if (hour > 6.0 && hour < 18.0) {
+        //if (hour > 6.0 && hour < 18.0) { //PRODUCTION
+        if (hour > 0.0 && hour < 23.9) { //DEBUGING
             isEmitting = true;
         }
         
