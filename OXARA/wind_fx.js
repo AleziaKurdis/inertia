@@ -89,11 +89,11 @@
                         "green": 144,
                         "blue": 57
                     },
-                    "alpha": 0.20000000298023224,
+                    "alpha": 0.08,
                     "textures": ROOT + "images/fog.png",
-                    "maxParticles": 16,
-                    "lifespan": 16,
-                    "emitRate": 1,
+                    "maxParticles": 120,
+                    "lifespan": 12,
+                    "emitRate": 10,
                     "emitSpeed": 0,
                     "emitOrientation": {
                         "x": -0.0000152587890625,
@@ -118,22 +118,22 @@
                     "radiusStart": 30,
                     "radiusFinish": 60,
                     "colorStart": {
-                        "red": 168,
-                        "green": 142,
-                        "blue": 123
+                        "red": 112,
+                        "green": 67,
+                        "blue": 35
                     },
                     "colorFinish": {
-                        "red": 158,
-                        "green": 77,
-                        "blue": 24
+                        "red": 112,
+                        "green": 50,
+                        "blue": 9
                     },
-                    "alphaSpread": 0.10000000149011612,
+                    "alphaSpread": 0.04,
                     "alphaStart": 0,
                     "alphaFinish": 0,
                     "emitterShouldTrail": true,
                     "spinSpread": 0.5199999809265137,
-                    "spinStart": -3.140000104904175,
-                    "spinFinish": 3.140000104904175,
+                    "spinStart": 3.140000104904175,
+                    "spinFinish": -3.140000104904175,
                     "renderWithZones": thisRenderWithZones,
                     "parentID": thisEntity,
                     "localPosition": {"x": 0, "y": 0, "z": 0}

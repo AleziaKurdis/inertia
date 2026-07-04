@@ -1340,11 +1340,38 @@
             "description": "OTHYN",
             "position": {"x":4951.19873046875,"y":-5107.09228515625,"z":4787.73291015625},
             "renderWithZones": [
-                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
             ],
             "script": "https://aleziakurdis.github.io/inertia/OXARA/energyPit.js",
             "shape": "Cube",
             "type": "Box"
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 11.438678741455078,
+                "y": 11.438678741455078,
+                "z": 11.438678741455078
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{8b9e879d-4bfb-4f6d-8fa5-242384ea0b73}",
+            "locked": true,
+            "name": "WIND FX",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "position": {"x":5057.1806640625,"y":-4978.09375,"z":4744.68603515625},
+            "rotation": {
+                "w": 0.9876883625984192,
+                "x": 0,
+                "y": -0.15643447637557983,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/wind_fx.js",
+            "type": "Empty"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
