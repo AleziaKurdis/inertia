@@ -11,33 +11,31 @@
 //
 (function(){ 
     const ROOT = Script.resolvePath('').split("wind_fx.js")[0];
-    var UPDATE_TIMER_INTERVAL = 120000; // 2 minutes
-    var processTimer = 0;
+    const UPDATE_TIMER_INTERVAL = 120000; // 2 minutes
+    let processTimer = 0;
 
     
-    var thisEntity;
-    var thisRenderWithZones;
+    let thisEntity;
+    let thisRenderWithZones;
     
     //SPECIFIC
-    var windId = Uuid.NONE;
+    let windId = Uuid.NONE;
 
-    
-    
-    
     this.preload = function(entityID) {
         thisEntity = entityID;
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
+        let properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
         thisRenderWithZones = properties.renderWithZones;
         
         update();
         
-        var today = new Date();
+        let today = new Date();
         processTimer = today.getTime();
         Script.update.connect(myTimer);
         
     };    
     
     this.unload = function(entityID) {
+        Script.update.disconnect(myTimer);
         if (windId !== Uuid.NONE) {
             Entities.deleteEntity(windId);
             windId = Uuid.NONE;
@@ -45,18 +43,17 @@
     };    
 
     function myTimer(deltaTime) {
-        var today = new Date();
-        if ((today.getTime() - processTimer) > UPDATE_TIMER_INTERVAL ) {
+        let today = Date.now();
+        if ((today - processTimer) > UPDATE_TIMER_INTERVAL ) {
             update();
-            today = new Date();
-            processTimer = today.getTime();
+            processTimer = today;
         }  
     }
 
     function update() {
-        var HYTRION_DAY = 19 * 3600; //19h
-        var hour = GetCurrentCycleValue(24, HYTRION_DAY);
-        var isEmitting = false;
+        const HYTRION_DAY = 19 * 3600; //19h
+        let hour = GetCurrentCycleValue(24, HYTRION_DAY);
+        let isEmitting = false;
         //if (hour > 6.0 && hour < 18.0) { //PRODUCTION
         if (hour > 0.0 && hour < 23.9) { //DEBUGING
             isEmitting = true;
@@ -94,7 +91,7 @@
                     },
                     "alpha": 0.20000000298023224,
                     "textures": ROOT + "images/fog.png",
-                    "maxParticles": 800,
+                    "maxParticles": 16,
                     "lifespan": 16,
                     "emitRate": 1,
                     "emitSpeed": 0,
@@ -139,7 +136,7 @@
                     "spinFinish": 3.140000104904175,
                     "renderWithZones": thisRenderWithZones,
                     "parentID": thisEntity,
-                    "localPosition": {"x": 0, "y": 0, "z": 0}                    
+                    "localPosition": {"x": 0, "y": 0, "z": 0}
                 }, "local");
 
         }
@@ -147,9 +144,9 @@
 
     // ################## CYLCE AND TIME FUNCTIONS ###########################
     function GetCurrentCycleValue(cyclelength, cycleduration){
-		var today = new Date();
-		var TodaySec = today.getTime()/1000;
-		var CurrentSec = TodaySec%cycleduration;
+		let today = new Date();
+		let TodaySec = today.getTime()/1000;
+		let CurrentSec = TodaySec%cycleduration;
 		
 		return (CurrentSec/cycleduration)*cyclelength;
 		
@@ -169,12 +166,12 @@
      * @return  {Array}           The RGB representation
      */
     function hslToRgb(h, s, l){
-        var r, g, b;
+        let r, g, b;
 
         if(s == 0){
             r = g = b = l; // achromatic
         }else{
-            var hue2rgb = function hue2rgb(p, q, t){
+            let hue2rgb = function hue2rgb(p, q, t){
                 if(t < 0) t += 1;
                 if(t > 1) t -= 1;
                 if(t < 1/6) return p + (q - p) * 6 * t;
@@ -183,8 +180,8 @@
                 return p;
             }
 
-            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-            var p = 2 * l - q;
+            let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            let p = 2 * l - q;
             r = hue2rgb(p, q, h + 1/3);
             g = hue2rgb(p, q, h);
             b = hue2rgb(p, q, h - 1/3);
