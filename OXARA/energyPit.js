@@ -15,6 +15,7 @@
     let lightID = Uuid.NONE;
     let lightTopID = Uuid.NONE;
     let materialID = Uuid.NONE;
+    let fxID = Uuid.NONE;
     
     const DAY_DURATION = 68400; //D19
 
@@ -51,6 +52,69 @@
                 "intensity": 15,
                 "falloffRadius": 2,
                 "isSpotlight": false
+            },"local");
+            
+            fxID = Entities.addEntity({
+                "alpha": 0,
+                "alphaFinish": 1,
+                "alphaStart": 1,
+                "angularDamping": 0,
+                "colorFinish": {
+                    "blue": color[2],
+                    "green": color[1],
+                    "red": color[0]
+                },
+                "colorStart": {
+                    "blue": 255,
+                    "green": 255,
+                    "red": 255
+                },
+                "damping": 0,
+                "dimensions": {
+                    "x": 90.12100219726562,
+                    "y": 90.12100219726562,
+                    "z": 90.12100219726562
+                },
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": 2.5,
+                    "z": 0
+                },
+                "emitDimensions": {
+                    "x": 3,
+                    "y": 40,
+                    "z": 3
+                },
+                "emitOrientation": {
+                    "w": 1,
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "emitRate": 2,
+                "emitSpeed": 0,
+                "emitterShouldTrail": true,
+                "grab": {
+                    "grabbable": false
+                },
+                "lifespan": 0.20000000298023224,
+                "maxParticles": 10,
+                "name": "ELECTRIC_FX",
+                "particleRadius": 20,
+                "polarFinish": 3.1415927410125732,
+                "radiusFinish": 20,
+                "radiusSpread": 5,
+                "radiusStart": 20,
+                "parentID": entityID,
+                "renderWithZones": renderWithZones,
+                "localPosition": {"x": 0.0, "y": 60.0, "z": 0.0},
+                "shapeType": "cylinder-y",
+                "speedSpread": 0,
+                "spinFinish": null,
+                "spinSpread": 1.5700000524520874,
+                "spinStart": null,
+                "textures": ROOT + "images/electricArc.png",
+                "type": "ParticleEffect"
             },"local");
         }
 
@@ -120,6 +184,10 @@
         if (lightTopID !== Uuid.NONE) {
             Entities.deleteEntity(lightTopID);
             lightTopID = Uuid.NONE;
+        }
+        if (fxID !== Uuid.NONE) {
+            Entities.deleteEntity(fxID);
+            fxID = Uuid.NONE;
         }
         if (materialID !== Uuid.NONE) {
             Entities.deleteEntity(materialID);
