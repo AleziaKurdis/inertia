@@ -102,9 +102,9 @@
                         "w": 1
                     },
                     "emitDimensions": {
-                        "x": 400,
+                        "x": 200,
                         "y": 10,
-                        "z": 100
+                        "z": 50
                     },
                     "emitRadiusStart": 0,
                     "polarFinish": 3.1415927410125732,
