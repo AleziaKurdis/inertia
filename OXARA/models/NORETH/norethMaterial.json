@@ -1,0 +1,12 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[0.084,0.015,0.019],
+         "metallic": 0.001,
+         "roughness": 0.2,
+         "normalMap": "NORETH_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
