@@ -1372,6 +1372,32 @@
             },
             "script": "https://aleziakurdis.github.io/inertia/OXARA/wind_fx.js",
             "type": "Empty"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 8.769927978515625,
+                "y": 2.4819908142089844,
+                "z": 8.769927978515625
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c9a56564-bc9e-4aa5-bea0-827f02681915}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/NORETH.fst",
+            "name": "NORETH-MEMORIAL",
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "shapeType": "static-mesh",
+            "type": "Model"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
