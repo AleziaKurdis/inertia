@@ -41,7 +41,7 @@
     var THUNDER_SOUND_2 = ROOT + "sounds/thunder1.mp3";
     var THUNDER_SOUND_3 = ROOT + "sounds/thunder2.mp3";
     var THUNDER_SOUND_4 = ROOT + "sounds/thunder3.mp3";   
-    var thunderSound = []; 
+    //var thunderSound = []; 
     var thunderInjector;
     let isNight = false;
 
@@ -71,10 +71,10 @@
         airSound = SoundCache.getSound(AIR_SOUND);
         universeSound = SoundCache.getSound(UNIVERSE_SOUND);
  
-        thunderSound[0] = SoundCache.getSound(THUNDER_SOUND_1);
-        thunderSound[1] = SoundCache.getSound(THUNDER_SOUND_2);
-        thunderSound[2] = SoundCache.getSound(THUNDER_SOUND_3);
-        thunderSound[3] = SoundCache.getSound(THUNDER_SOUND_4);
+        //thunderSound[0] = SoundCache.getSound(THUNDER_SOUND_1);
+        //thunderSound[1] = SoundCache.getSound(THUNDER_SOUND_2);
+        //thunderSound[2] = SoundCache.getSound(THUNDER_SOUND_3);
+        //thunderSound[3] = SoundCache.getSound(THUNDER_SOUND_4);
         
         if (!isInitiated){
             if (positionIsInsideEntityBounds(entityID, MyAvatar.position)) {
@@ -434,7 +434,7 @@
                 }
             }
             
-            //######### UNIVERSE SOUD VOLUME MANAGEMENT ##############
+            //######### UNIVERSE SOUND VOLUME MANAGEMENT ##############
             var universeVolume = UNIVERSE_SOUND_VOLUME_MAXIMUM;
             var astroidFXstatus = true;
             if (blindspots.length !== 0) {
@@ -472,9 +472,9 @@
                     univerSoundPlaying = 1;
                 }   
             }
-            // ######### END UNIVERSE SOUD VOLUME MANAGEMENT ######## 
+            // ######### END UNIVERSE SOUND VOLUME MANAGEMENT ######## 
             //############## NOCTURN LIGHTNINGS AND THUNDER #############
-            
+/*            
             var d29CurrentHour = (GetCurrentCycleValue(8640000, DAY_DURATION)/100) / 3600;
             
             //if ( d29CurrentHour > 11.5 || d29CurrentHour < 11 ) { //debug
@@ -581,7 +581,7 @@
             }
             
             //############## END NOCTURN LIGHTNINGS AND THUNDER #############
-            
+*/
         }
     } 
 
