@@ -1398,6 +1398,54 @@
             ],
             "shapeType": "static-mesh",
             "type": "Model"
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 500,
+                "y": 300,
+                "z": 500
+            },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "name": "ALT FIRE ZONE",
+            "shapeType": "cylinder-y",
+            "type": "Zone",
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625}
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 0.5592150092124939,
+                "y": 0.5592150092124939,
+                "z": 0.5592150092124939
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{1a145b81-e14c-41be-969b-b960cbb92392}",
+            "locked": true,
+            "name": "ALT FIRE",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/ALT-FIRE/altFireAK2026.js",
+            "type": "Empty"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
