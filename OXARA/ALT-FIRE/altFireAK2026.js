@@ -602,14 +602,14 @@
             },
             "cutoff": 90,
             "dimensions": {
-                "x": 9,
-                "y": 9,
-                "z": 9
+                "x": 10,
+                "y": 10,
+                "z": 10
             },
             "exponent": 0.20,
-            "falloffRadius": 3,
-            "isSpotlight": true,
-			"intensity": 10,
+            "falloffRadius": 4,
+            "isSpotlight": false,
+			"intensity": 15,
             "name": "ALT-FIRE-LIGHT",
             "localRotation": {
                 "w": 0.7071067690849304,
