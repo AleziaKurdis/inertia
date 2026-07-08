@@ -1446,6 +1446,33 @@
             "position": {"x":5149.0009765625,"y":-5020.73994140625,"z":5209.85400390625},
             "script": "https://aleziakurdis.github.io/inertia/OXARA/ALT-FIRE/altFireAK2026.js",
             "type": "Empty"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 8.769927978515625,
+                "y": 2.4819908142089844,
+                "z": 8.769927978515625
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ea4478b1-8680-4e59-a9e5-29ad5d5999d1}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/NORETH-SEATS.fst",
+            "name": "NORETH-SEATS",
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "renderWithZones": [
+                "{1a145b81-e14c-41be-969b-b960cbb92392}"
+            ],
+            "shapeType": "static-mesh",
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/radiusSeatGen.js",
+            "type": "Model"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
