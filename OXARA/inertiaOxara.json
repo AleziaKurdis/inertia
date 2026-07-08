@@ -1412,6 +1412,7 @@
             "grab": {
                 "grabbable": false
             },
+            "locked": true,
             "id": "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}",
             "keyLight": {
                 "castShadows": true,
