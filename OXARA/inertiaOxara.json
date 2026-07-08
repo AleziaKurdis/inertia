@@ -1467,7 +1467,7 @@
             "renderWithZones": [
                 "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
             ],
-            "shapeType": "static-mesh",
+            "shapeType": "none",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/radiusSeatGen.js",
             "type": "Model"
         }
