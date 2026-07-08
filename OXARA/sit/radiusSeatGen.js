@@ -19,6 +19,10 @@
     
     const MAX_DIST = 5; //in meters
     
+    const DISTANCE_OVERRIDER = {
+        distanceToSeeIndicator: 2.0
+    };
+    
     this.preload = function(entityID) { 
         thisEntity = entityID;
         let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "position"]);
@@ -32,12 +36,11 @@
 
     function generateSeat() {
         let distance = Vec3.distance(entPosition, MyAvatar.position);
-        
-        let distanceOverrider = {
-            "distanceToSeeIndicator": 2.0
-        };
-        
-        let localRotation = Quat.lookAtSimple( {"x":entPosition.x,"y":0.0,"z":entPosition.z}, MyAvatar.position{"x":MyAvatar.position.x,"y":0.0,"z":MyAvatar.position.z});
+
+        let localRotation = Quat.lookAtSimple( 
+            {"x":entPosition.x,"y":0.0,"z":entPosition.z}, 
+            {"x":MyAvatar.position.x,"y":0.0,"z":MyAvatar.position.z}
+        );
         let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": 4} );
         
         if (distance < MAX_DIST) {
@@ -57,8 +60,8 @@
                     "visible": true,
                     "alpha": 0.0,
                     "script": ROOT + "sit_spot.js",
-                    "userData": JSON.stringify(distanceOverrider),
-                    "lifetime": 864000
+                    "userData": JSON.stringify(DISTANCE_OVERRIDER),
+                    "lifetime": 21600
                 }, "local");
             } else {
                 //edit (move)
@@ -67,12 +70,16 @@
                     "localRotation": localRotation
                 });
             }
+        } else if (seatID !== Uuid.NONE) {
+            Entities.deleteEntity(seatID);
+            seatID = Uuid.NONE;
         }
     }
 
     this.unload = function(entityID) {
         if (processing) { 
             Script.clearInterval(processing);
+            processing = null;
         }
         if (seatID !== Uuid.NONE) {
             Entities.deleteEntity(seatID);
