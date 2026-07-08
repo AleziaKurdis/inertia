@@ -6,8 +6,7 @@
          "albedoMap": "Fabric_Red_albedo.jpg",
          "metallic": 0.001,
          "roughness": 0.490,
-         "normalMap": "geyser-rock1_normal-ogl.jpg",
-         "occlusionMap": "Fabric_Normal.jpg",
+         "normalMap": "Fabric_Normal.jpg",
          "cullFaceMode":"CULL_BACK"
       }
    ]
