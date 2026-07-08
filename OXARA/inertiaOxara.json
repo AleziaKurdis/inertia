@@ -1465,7 +1465,7 @@
             "name": "NORETH-SEATS",
             "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
             "renderWithZones": [
-                "{1a145b81-e14c-41be-969b-b960cbb92392}"
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
             ],
             "shapeType": "static-mesh",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/radiusSeatGen.js",
