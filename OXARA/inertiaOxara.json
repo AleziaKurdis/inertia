@@ -1463,7 +1463,7 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/NORETH-SEATS.fst",
             "name": "NORETH-SEATS",
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "position": {"x":5149.0009765625,"y":-5020.8857,"z":5209.85400390625},
             "renderWithZones": [
                 "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
             ],
