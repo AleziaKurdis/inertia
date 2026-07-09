@@ -1526,6 +1526,33 @@
             "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/mapAlphaGate.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 9,
+                "y": 3,
+                "z": 9
+            },
+            "flyingAllowed": true,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{4e7b248c-687f-4115-955c-38c986a28e2d}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "name": "SEAT_ZONE",
+            "shapeType": "cylinder-y",
+            "type": "Zone"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
