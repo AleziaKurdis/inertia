@@ -41,8 +41,8 @@
             {"x":entPosition.x,"y":0.0,"z":entPosition.z}, 
             {"x":MyAvatar.position.x,"y":0.0,"z":MyAvatar.position.z}
         );
-        let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": -3.6} );
-        localPosition.y = 0.1;
+        let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": -3.8} );
+        localPosition.y = 0.06;
         localRotation = Quat.multiply(localRotation, Quat.fromVec3Degrees( {"x":0.0,"y":180.0,"z": 0.0} ));
         
         if (distance < MAX_DIST) {
