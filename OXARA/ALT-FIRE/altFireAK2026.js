@@ -656,12 +656,12 @@
 		let entposition = prop.position;
 		let entrotation = prop.rotation;
 
-		injector = Audio.playSound(MySound,  {
+		injector = Audio.playSound(MySound, {
 			"position": entposition,
 			"orientation": entrotation,
 			"loop": true,
 			"localOnly": false,
-			"volume": 0.16
+			"volume": 0.22
 			});
         let chosen = Math.floor(GetCurrentCycleValue(soundURL.length, duration * soundURL.length));
 		MySound = SoundCache.getSound(soundURL[chosen]); //assign the next sound now
