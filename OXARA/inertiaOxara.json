@@ -1470,6 +1470,62 @@
             "shapeType": "none",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/radiusSeatGen.js",
             "type": "Model"
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 1.5485507249832153,
+                "y": 0.9446159601211548,
+                "z": 0.030971014872193336
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{13dbb05c-f730-477e-9415-c77517a26f46}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "name": "Framed Sign - MAP OMEGA GATE",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "position": {"x":4660.6064453125,"y":-4999.49853515625,"z":4786.79736328125},
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/mapOmegaGate.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 2,
+                "y": 1.2200000286102295,
+                "z": 0.03999999910593033
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{60fa5e04-dbd8-4514-8267-b139bff8addb}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "name": "Framed Sign - MAP ALPHA GATE",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "position": {"x":5284.1845703125,"y":-5013.36767578125,"z":5295.0302734375},
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/mapAlphaGate.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
