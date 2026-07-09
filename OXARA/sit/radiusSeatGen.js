@@ -41,7 +41,8 @@
             {"x":entPosition.x,"y":0.0,"z":entPosition.z}, 
             {"x":MyAvatar.position.x,"y":0.0,"z":MyAvatar.position.z}
         );
-        let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": -4.0} );
+        let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": -3.6} );
+        localPosition.y = 0.1;
         
         if (distance < MAX_DIST) {
             if (seatID === Uuid.NONE) {
