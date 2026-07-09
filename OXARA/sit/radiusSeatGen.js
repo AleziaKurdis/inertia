@@ -20,7 +20,7 @@
     const MAX_DIST = 5; //in meters
     
     const DISTANCE_OVERRIDER = {
-        distanceToSeeIndicator: 2.0
+        distanceToSeeIndicator: 1.0
     };
     
     this.preload = function(entityID) { 
@@ -31,7 +31,7 @@
 
         processing = Script.setInterval(function () {
             generateSeat();
-        }, 2000);
+        }, 1000);
     }
 
     function generateSeat() {
@@ -43,6 +43,7 @@
         );
         let localPosition = Vec3.multiplyQbyV( localRotation, {"x":0.0,"y":0.0,"z": -3.6} );
         localPosition.y = 0.1;
+        localRotation = Quat.multiply(localRotation, Quat.fromVec3Degrees( {"x":0.0,"y":180.0,"z": 0.0} ));
         
         if (distance < MAX_DIST) {
             if (seatID === Uuid.NONE) {
