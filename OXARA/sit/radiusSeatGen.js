@@ -20,7 +20,7 @@
     const MAX_DIST = 5; //in meters
     
     const DISTANCE_OVERRIDER = {
-        distanceToSeeIndicator: 1.0
+        "distanceToSeeIndicator": 1.0
     };
     
     this.preload = function(entityID) { 

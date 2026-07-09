@@ -93,6 +93,7 @@
 	};
 
     function myTimer(deltaTime) {
+        thisPosition = Entities.getEntityProperties(selfID, ["position"]).position;
         let today = new Date();
         if ((today.getTime() - processTimer) > timerIntervall ) {
             if (!isSitting) {
