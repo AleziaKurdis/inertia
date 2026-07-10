@@ -1444,7 +1444,7 @@
             "renderWithZones": [
                 "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
             ],
-            "position": {"x":5149.0009765625,"y":-5020.73994140625,"z":5209.85400390625},
+            "position": {"x":5149.0009765625,"y":-5020.93994140625,"z":5209.85400390625},
             "script": "https://aleziakurdis.github.io/inertia/OXARA/ALT-FIRE/altFireAK2026.js",
             "type": "Empty"
         },
