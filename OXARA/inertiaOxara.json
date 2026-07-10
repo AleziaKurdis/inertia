@@ -1561,11 +1561,7 @@
             },
             "blendshapeCoefficients": "{\n}\n",
             "damping": 0,
-            "dimensions": {
-                "x": 8.769927978515625,
-                "y": 2.4819908142089844,
-                "z": 8.769927978515625
-            },
+            "dimensions": {"x":10.875152587890625,"y":30.364641189575195,"z":10.51336669921875},
             "grab": {
                 "grabbable": false
             },
@@ -1573,7 +1569,7 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/TOWER.fst",
             "name": "DRALON TOWER",
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "position": {"x":4696.92626953125,"y":-4986.1201171875,"z":4842.5185546875},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
