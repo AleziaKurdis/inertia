@@ -1595,16 +1595,11 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_ALPHA_AHEAD.fst",
             "name": "VR_SIGN_AD_KORWEST",
-            "position": {"x":5148.0986328125,"y":-5016.36474609375,"z":5151.37646484375},
+            "position": {"x":5050.1181640625,"y":-5018.607421875,"z":4966.73779296875},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
-            "rotation": {
-                "w": 0,
-                "x": 0,
-                "y": -1.0000001192092896,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
             "shapeType": "box",
             "type": "Model",
             "useOriginalPivot": true
@@ -1628,27 +1623,22 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/signKit/SIGN_OMEGA_AHEAD.fst",
             "name": "VR_SIGN_OD_KORWEST",
-            "position": {"x":5150.8466796875,"y":-5016.27001953125,"z":5146.7333984375},
+            "position": {"x":5015.6171875,"y":-5018.3505859375,"z":4943.63671875},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
-            "rotation": {
-                "w": -1.0000001192092896,
-                "x": 0,
-                "y": 0,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":0.4999999701976776,"z":0,"w":0.866025447845459},
             "shapeType": "box",
             "type": "Model",
             "useOriginalPivot": true
         },
         {
             "id": "{123f58f9-ed96-4795-a1f2-0a20b173d7f0}",
-            "type": "Box",
+            "type": "Shape",
             "name": "ELEVATOR_TOWER_TOP",
-            "description": "{\"x\": -0.4,\"y\":-69.29297,\"z\":-1.915}",
+            "description": "{\"x\": -5.2198,\"y\":-27.8065,\"z\":-2.8836}",
             "locked": true,
-            "position": {"x":4979.34423828125,"y":-4971.31982421875,"z":4729.26513671875},
+            "position": {"x":4697.10986328125,"y":-4970.40673828125,"z":4842.513671875},
             "dimensions": {"x":1.2,"y":3.0,"z":1.2},
             "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
             "renderWithZones": [
@@ -1672,10 +1662,10 @@
         },
         {
             "id": "{1effbafa-67a1-4520-9438-3781f31ec222}",
-            "type": "Box",
-            "position": {"x":4978.87939453125,"y":-5040.61279296875,"z":4728.0498046875},
+            "type": "Shape",
+            "position": {"x":4692.50390625,"y":-4999.70654296875,"z":4840.287109375},
             "name": "ELEVATOR_TOWER_FOOT",
-            "description": "{\"x\": 0.4,\"y\": 69.29297,\"z\": 1.915}",
+            "description": "{\"x\": 5.1761,\"y\": 27.8065,\"z\": 2.8329}",
             "locked": true,
             "dimensions": {"x":1.2,"y":3.0,"z":1.2},
             "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
