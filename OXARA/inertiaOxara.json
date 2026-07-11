@@ -1639,8 +1639,8 @@
             "description": "{\"x\": -5.2198,\"y\":-29.2998,\"z\":-2.8836}",
             "locked": true,
             "position": {"x":4697.10986328125,"y":-4970.40673828125,"z":4842.513671875},
-            "dimensions": {"x":1.2,"y":3.0,"z":1.2},
-            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "dimensions": {"x":1.2,"y":3.0,"z":0.5},
+            "rotation": {"x":0,"y":-0.9238795042037964,"z":0,"w":0.3826834261417389},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
@@ -1656,7 +1656,7 @@
                 "green": 255,
                 "blue": 255
             },
-            "shape": "Cylinder",
+            "shape": "Cube",
             "visible": false,
             "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
         },
@@ -1667,8 +1667,8 @@
             "name": "ELEVATOR_TOWER_FOOT",
             "description": "{\"x\": 5.1761,\"y\": 29.2998,\"z\": 2.8329}",
             "locked": true,
-            "dimensions": {"x":1.2,"y":3.0,"z":1.2},
-            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "dimensions": {"x":1.2,"y":3.0,"z":0.5},
+            "rotation": {"x":0,"y":-0.9238795042037964,"z":0,"w":0.3826834261417389},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
@@ -1684,7 +1684,7 @@
                 "green": 255,
                 "blue": 255
             },
-            "shape": "Cylinder",
+            "shape": "Cube",
             "visible": false,
             "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
         }
