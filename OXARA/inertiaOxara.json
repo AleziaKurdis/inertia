@@ -1687,6 +1687,151 @@
             "shape": "Cube",
             "visible": false,
             "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b95e332f-aa53-4c67-a2d6-7ec848a3ceb7}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_brown.fst",
+            "name": "Brown Armchair 1",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{efd6391c-11e1-4ed9-83b1-11c709aa44e5}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_brown.fst",
+            "name": "Brown Armchair 2",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a4a56d30-4257-4a8b-8c53-394950eda92e}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_brown.fst",
+            "name": "Brown Armchair 3",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{aac8b51b-409a-4e28-89ce-89c3c1a9f329}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_brown.fst",
+            "name": "Brown Armchair 4",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
+            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ead1e126-50a6-450a-aea4-7d489906c183}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_brown.fst",
+            "name": "Brown Armchair 5",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
