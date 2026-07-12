@@ -11,8 +11,6 @@
 //
 (function() {
     const ROOT = Script.resolvePath('').split("armchairSit.js")[0];
-    //let thisEntity;
-    //let renderWithZones;
     let seatID = Uuid.NONE;
 
     const DISTANCE_OVERRIDER = {
@@ -25,7 +23,7 @@
         seatID = Entities.addEntity({
             "type": "Shape",
             "shape": "Cube",
-            "parentID": thisEntity,
+            "parentID": entityID,
             "name": "Seat",
             "dimensions": {"x":0.3,"y":0.01,"z":0.3},
             "localPosition": {"x":0.0,"y":0.55,"z":0.0},
