@@ -26,8 +26,8 @@
             "parentID": entityID,
             "name": "Seat",
             "dimensions": {"x":0.3,"y":0.01,"z":0.3},
-            "localPosition": {"x":0.0,"y":0.55,"z":0.0},
-            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":0.0,"z":0.0}),
+            "localPosition": {"x":0.05,"y":0.55,"z":0.0},
+            "localRotation": Quat.fromVec3Degrees({"x":0.0,"y":90.0,"z":0.0}),
             "renderWithZones": renderWithZones,
             "grab": {
                 "grabbable": false
