@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "armchair_albedo_brown.jpg",
+         "metallicMap": "armchair_metallic.jpg",
+         "roughnessMap": "armchair_roughness.jpg",
+         "normalMap": "armchair_normal_ogl.jpg",
+         "occlusionMap": "armchair_ao.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
