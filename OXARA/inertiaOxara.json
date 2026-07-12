@@ -409,7 +409,7 @@
             },
             "position": {"x":4695.681640625,"y":-5001.56640625,"z":4815.96484375},
             "shapeType": "simple-compound",
-            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/amphitheatre.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/amphitheatre.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
         },
@@ -437,7 +437,7 @@
             },
             "position": {"x":5281.5400390625,"y":-5016.60986328125,"z":5286.84521484375},
             "shapeType": "simple-compound",
-            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToOmega.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToOmega.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
         },
@@ -465,7 +465,7 @@
             },
             "position": {"x":4887.70556640625,"y":-5020.966796875,"z":4931.05029296875},
             "shapeType": "simple-compound",
-            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
         },
@@ -493,7 +493,7 @@
             },
             "position": {"x":4855.84375,"y":-5030.86376953125,"z":4924.654296875},
             "shapeType": "simple-compound",
-            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/dpk-stairs.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
         },
@@ -521,7 +521,7 @@
             },
             "position": {"x":4660.31591796875,"y":-5002.8828125,"z":4785.54931640625},
             "shapeType": "simple-compound",
-            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToAlpha.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/signs/models/ROUGH_METAL_NORMAL.jpg\"}",
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/distancesToAlpha.jpg\",\"normalmap_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/ROUGH_METAL_NORMAL.jpg\"}",
             "type": "Model",
             "useOriginalPivot": true
         },
@@ -1483,7 +1483,7 @@
             },
             "id": "{13dbb05c-f730-477e-9415-c77517a26f46}",
             "locked": true,
-            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/framed_sign_h.fst",
             "name": "Framed Sign - MAP OMEGA GATE",
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
@@ -1511,7 +1511,7 @@
             },
             "id": "{60fa5e04-dbd8-4514-8267-b139bff8addb}",
             "locked": true,
-            "modelURL": "https://aleziakurdis.github.io/signs/models/framed_sign_h.fst",
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/framed_sign_h.fst",
             "name": "Framed Sign - MAP ALPHA GATE",
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
@@ -1700,8 +1700,8 @@
                 "y": 1.138139247894287,
                 "z": 0.7323697805404663
             },
-            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "rotation": {"x":0,"y":0.9025853276252747,"z":0,"w":0.43051111698150635},
+            "position": {"x":5181.80908203125,"y":-4969.0869140625,"z":5056.98876953125},
             "grab": {
                 "grabbable": false
             },
@@ -1729,8 +1729,8 @@
                 "y": 1.138139247894287,
                 "z": 0.7323697805404663
             },
-            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "rotation": {"x":0,"y":0.5948228240013123,"z":0,"w":0.8038569092750549},
+            "position": {"x":5182.6904296875,"y":-4969.08203125,"z":5056.72119140625},
             "grab": {
                 "grabbable": false
             },
@@ -1758,8 +1758,8 @@
                 "y": 1.138139247894287,
                 "z": 0.7323697805404663
             },
-            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "rotation": {"x":0,"y":0.1908089965581894,"z":0,"w":0.9816272258758545},
+            "position": {"x":5183.951171875,"y":-4969.09130859375,"z":5057.421875},
             "grab": {
                 "grabbable": false
             },
@@ -1787,8 +1787,8 @@
                 "y": 1.138139247894287,
                 "z": 0.7323697805404663
             },
-            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "rotation": {"x":0,"y":0.2503800690174103,"z":0,"w":-0.9681476354598999},
+            "position": {"x":5184.095703125,"y":-4969.0830078125,"z":5059.12646484375},
             "grab": {
                 "grabbable": false
             },
@@ -1816,8 +1816,8 @@
                 "y": 1.138139247894287,
                 "z": 0.7323697805404663
             },
-            "rotation": {"x":0,"y":0.866025447845459,"z":0,"w":-0.5},
-            "position": {"x":5149.0009765625,"y":-5020.43994140625,"z":5209.85400390625},
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
             "grab": {
                 "grabbable": false
             },
@@ -1832,6 +1832,68 @@
             "shapeType": "simple-hull",
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "collisionless": true,
+            "dimensions": {
+                "x": 0.9289165735244751,
+                "y": 1.4640727043151855,
+                "z": 0.03045628033578396
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d1ff7b3c-f227-49e1-9897-fbc55f19098b}",
+            "ignoreForCollisions": true,
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/framed_sign_v.fst",
+            "name": "Framed Sign - poster",
+            "renderWithZones": [
+                "{f4cde3f3-a927-42ca-b5f1-4bfc3747b494}"
+            ],
+            "rotation": {
+                "w": 0.9659258127212524,
+                "x": 0,
+                "y": -0.258819043636322,
+                "z": 0
+            },
+            "position": {"x":5185.0517578125,"y":-4967.67431640625,"z":5056.86767578125},
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/poster.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 9.287603378295898,
+                "y": 2.7255859375,
+                "z": 4.12709379196167
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{7c0761d8-c2d1-4e2c-9113-19d3b8ad82c9}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "SIT ZONE",
+            "rotation": {
+                "w": 0.9659258127212524,
+                "x": 0,
+                "y": -0.258819043636322,
+                "z": 0
+            },
+            "position": {"x":5185.09765625,"y":-4967.775390625,"z":5059.25},
+            "shapeType": "box",
+            "type": "Zone"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
