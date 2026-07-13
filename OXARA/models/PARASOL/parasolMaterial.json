@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "parasol_albedo.jpg",
+         "metallic": 0.001,
+         "roughness": 0.35,
+         "normalMap": "parasol_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
