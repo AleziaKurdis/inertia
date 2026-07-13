@@ -1894,6 +1894,180 @@
             "position": {"x":5185.09765625,"y":-4967.775390625,"z":5059.25},
             "shapeType": "box",
             "type": "Zone"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d5fbe55b-b155-47b0-a412-f91bed1b1f56}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 1",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{9f2de1c1-2891-42bb-ba51-b13ea6467fe6}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 2",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d774b8e6-9136-4b9a-9e66-69ed3165f505}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 3",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d30d6dab-5771-4d08-8af7-1cb810ab3b36}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 4",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c72f7e55-498e-4e21-b53b-3a4f527e3ea6}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 5",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "rotation": {"x":0,"y":0.5735765099525452,"z":0,"w":-0.8191521167755127},
+            "position": {"x":5183.349609375,"y":-4969.0888671875,"z":5059.72314453125},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{9f6a0152-71c3-42fa-a8ab-693e964a6d49}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_red.fst",
+            "name": "Red Armchair 6",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
