@@ -2186,6 +2186,249 @@
             "shapeType": "cylinder-y",
             "position": {"x":5140.51416015625,"y":-5005.255859375,"z":5025.7392578125},
             "type": "Zone"
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "collisionless": true,
+            "dimensions": {
+                "x": 0.34136250615119934,
+                "y": 0.48981422185897827,
+                "z": 0.014231502078473568
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{fed7d496-75d9-4105-8c60-607500bbefd1}",
+            "ignoreForCollisions": true,
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/ROADSIGNS/framed_sign_v.fst",
+            "name": "Framed Sign - STAIRCASE",
+            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "rotation": {
+                "w": 0.9848182201385498,
+                "x": 0,
+                "y": 0.17358887195587158,
+                "z": 0
+            },
+            "textures": "{\"base_color_texture\":\"https://aleziakurdis.github.io/inertia/OXARA/images/stairs.jpg\"}",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 158,
+                "red": 61
+            },
+            "cutoff": 60,
+            "damping": 0,
+            "dimensions": {
+                "x": 7.17579460144043,
+                "y": 7.17579460144043,
+                "z": 8.285893440246582
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{e8dc6966-8067-40ee-b291-f2e8b96be452}",
+            "intensity": 8,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "STORE-LIGHT TA",
+            "position": {"x":4942.615234375,"y":-5007.9716796875,"z":4954.62939453125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.4999999403953552,
+                "x": 0.4999999701976776,
+                "y": -0.5000002384185791,
+                "z": -0.5
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 61,
+                "green": 200,
+                "red": 255
+            },
+            "cutoff": 60,
+            "damping": 0,
+            "dimensions": {
+                "x": 6.845320701599121,
+                "y": 6.845320701599121,
+                "z": 7.904294967651367
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a0acde5d-9313-4ecb-8ea8-2e395cbeba18}",
+            "intensity": 8,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "STORE-LIGHT NB",
+            "position": {"x":5039.423828125,"y":-5016.5498046875,"z":4946.515625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": -0.4999999403953552,
+                "x": 0.4999999701976776,
+                "y": -0.5000002384185791,
+                "z": -0.5
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 47,
+                "green": 255,
+                "red": 0
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 23.17079734802246,
+                "y": 23.17079734802246,
+                "z": 23.17079734802246
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{94283291-f193-4b4f-b03b-aa57cc4d6c46}",
+            "intensity": 15,
+            "locked": true,
+            "name": "LIGHT-AMBI-OTHYN 2",
+            "position": {"x":4923.3671875,"y":-5009.18017578125,"z":4808.90380859375},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 158,
+                "red": 61
+            },
+            "cutoff": 60,
+            "damping": 0,
+            "dimensions": {
+                "x": 7.17579460144043,
+                "y": 7.17579460144043,
+                "z": 8.285893440246582
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5ef3263a-631f-46a1-b826-a3048128c71d}",
+            "intensity": 8,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "STORE-LIGHT UMC1",
+            "position": {"x":4917.66845703125,"y":-5016.58740234375,"z":4779.58984375},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "rotation": {
+                "w": -0.4999999403953552,
+                "x": 0.4999999701976776,
+                "y": -0.5000002384185791,
+                "z": -0.5
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{44da9a0f-88e7-44fc-bb8f-8cd8bf9285cb}",
+            "localOnly": true,
+            "locked": true,
+            "name": "SOUND_FAN",
+            "position": {"x":4913.9208984375,"y":-5018.65576171875,"z":4774.48291015625},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "soundURL": "https://aleziakurdis.github.io/inertia/OXARA/sounds/fan.mp3",
+            "type": "Sound",
+            "volume": 0.20000000298023224
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 111,
+                "red": 0
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 4.829057216644287,
+                "y": 4.829057216644287,
+                "z": 4.829057216644287
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3dd97528-a28c-45a3-8978-2dc76c32b2c0}",
+            "intensity": 10,
+            "locked": true,
+            "name": "STORE-LIGHT UMC2",
+            "position": {"x":4914.28662109375,"y":-5018.90185546875,"z":4775.70166015625},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 0,
+                "red": 68
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 22.40447425842285,
+                "y": 22.40447425842285,
+                "z": 22.40447425842285
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{57c4549b-e216-4d69-ad30-4bb5ae7fa334}",
+            "intensity": 15,
+            "locked": true,
+            "name": "LIGHT-AMBI-OTHYN 1",
+            "position": {"x":4920.185546875,"y":-5011.046875,"z":4772.5654296875},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "type": "Light"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
