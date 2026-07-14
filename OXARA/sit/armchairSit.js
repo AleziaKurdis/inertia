@@ -14,7 +14,7 @@
     let seatID = Uuid.NONE;
 
     const DISTANCE_OVERRIDER = {
-        "distanceToSeeIndicator": 2.0
+        "distanceToSeeIndicator": 1.0
     };
     
     this.preload = function(entityID) { 

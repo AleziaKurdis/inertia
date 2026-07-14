@@ -23,7 +23,7 @@
     let thisPosition;
     let hasBeenViewed;
     
-    let timerIntervall = 4000; // 4 sec 
+    let timerIntervall = 2500; // 2.5 sec 
     let processTimer = 0;
     let distanceToSeeIndicator = 3.0;
     
