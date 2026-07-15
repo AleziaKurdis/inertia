@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "OPEN_ALBEDO.jpg",
+         "metallicMap": "OPEN_METALLIC.jpg",
+         "roughness": 0.08,
+         "emissiveMap": "OPEN_EMISSIVE.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
