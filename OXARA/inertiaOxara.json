@@ -2429,6 +2429,90 @@
                 "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
             ],
             "type": "Light"
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.34136250615119934,
+                "y": 0.48981422185897827,
+                "z": 0.014231502078473568
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{7b77219c-42e3-4888-af44-942e6c86ae96}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
+            "name": "We Are Open Sign - UMC",
+            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "renderWithZones": [
+                "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
+            ],
+            "rotation": {
+                "w": 0.9848182201385498,
+                "x": 0,
+                "y": 0.17358887195587158,
+                "z": 0
+            },
+            "type": "Model",
+            "shapeType": "box",
+            "useOriginalPivot": true
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.34136250615119934,
+                "y": 0.48981422185897827,
+                "z": 0.014231502078473568
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{31c90e9d-3dc3-4e90-99bc-33d1cd266ad9}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
+            "name": "We Are Open Sign - TA",
+            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9848182201385498,
+                "x": 0,
+                "y": 0.17358887195587158,
+                "z": 0
+            },
+            "type": "Model",
+            "shapeType": "box",
+            "useOriginalPivot": true
+        },
+        {
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.34136250615119934,
+                "y": 0.48981422185897827,
+                "z": 0.014231502078473568
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5e212126-06fd-425b-bb4b-7fc0c40b3a61}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
+            "name": "We Are Open Sign - NB",
+            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.9848182201385498,
+                "x": 0,
+                "y": 0.17358887195587158,
+                "z": 0
+            },
+            "type": "Model",
+            "shapeType": "box",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
