@@ -2370,7 +2370,7 @@
             ],
             "soundURL": "https://aleziakurdis.github.io/inertia/OXARA/sounds/fan.mp3",
             "type": "Sound",
-            "volume": 0.20000000298023224
+            "volume": 0.35
         },
         {
             "angularDamping": 0,
