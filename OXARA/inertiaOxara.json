@@ -2440,16 +2440,11 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
             "name": "We Are Open Sign - UMC",
-            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "position": {"x":4920.32421875,"y":-5020.1005859375,"z":4777.2490234375},
             "renderWithZones": [
                 "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
             ],
-            "rotation": {
-                "w": 0.9848182201385498,
-                "x": 0,
-                "y": 0.17358887195587158,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":0.7825706601142883,"z":0,"w":0.6225617527961731},
             "type": "Model",
             "shapeType": "box",
             "useOriginalPivot": true
@@ -2464,16 +2459,11 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
             "name": "We Are Open Sign - TA",
-            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "position": {"x":4945.638671875,"y":-5011.34814453125,"z":4952.4375},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
-            "rotation": {
-                "w": 0.9848182201385498,
-                "x": 0,
-                "y": 0.17358887195587158,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":0.30064839124679565,"z":0,"w":0.9537351131439209},
             "type": "Model",
             "shapeType": "box",
             "useOriginalPivot": true
@@ -2488,16 +2478,11 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/weAreOpen.fst",
             "name": "We Are Open Sign - NB",
-            "position": {"x":4915.4755859375,"y":-5018.3671875,"z":4773.931640625},
+            "position": {"x":5038.96728515625,"y":-5019.87451171875,"z":4949.84912109375},
             "renderWithZones": [
                 "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
             ],
-            "rotation": {
-                "w": 0.9848182201385498,
-                "x": 0,
-                "y": 0.17358887195587158,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":0.46941840648651123,"z":0,"w":0.8829758763313293},
             "type": "Model",
             "shapeType": "box",
             "useOriginalPivot": true
