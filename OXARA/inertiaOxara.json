@@ -2364,7 +2364,7 @@
             "localOnly": true,
             "locked": true,
             "name": "SOUND_FAN",
-            "position": {"x":4913.9208984375,"y":-5018.65576171875,"z":4774.48291015625},
+            "position": {"x":4915.76025390625,"y":-5019.17724609375,"z":4778.17529296875},
             "renderWithZones": [
                 "{ed8f160b-c167-4bcc-997a-fa67233afb1f}"
             ],
