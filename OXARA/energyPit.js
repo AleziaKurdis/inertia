@@ -121,7 +121,7 @@
             electroSoundID =Entities.addEntity({
                 "parentID": entityID,
                 "renderWithZones": renderWithZones,
-                "localPosition": {"x": 0.0, "y": 75.0, "z": 0.0},
+                "localPosition": {"x": 0.0, "y": 77.0, "z": 0.0},
                 "name": "Energy Pit Sound OTHYN",
                 "grab": {
                     "grabbable": false
@@ -134,7 +134,7 @@
                 },
                 "soundURL": ROOT + "sounds/electro.mp3",
                 "playing": true,
-                "volume": 0.5,
+                "volume": 1.0,
                 "loop": true,
                 "positional": true,
                 "localOnly": true
