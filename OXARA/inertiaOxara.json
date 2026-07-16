@@ -2511,7 +2511,7 @@
                 "blue": 0
             },
             "shape": "Cube",
-            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }"
         },
         {
             "id": "{03e94bda-f395-4067-86fd-0d512d5f5352}",
@@ -2537,7 +2537,7 @@
                 "blue": 0
             },
             "shape": "Cube",
-            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }"
         },
         {
             "id": "{5fcb7701-9337-4cad-9e49-812278201713}",
@@ -2563,7 +2563,7 @@
                 "blue": 0
             },
             "shape": "Cube",
-            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }"
         },
         {
             "id": "{dd1bba6d-3917-45ac-90c6-cf8959c30b34}",
@@ -2589,7 +2589,7 @@
                 "blue": 0
             },
             "shape": "Cube",
-            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }"
         },
         {
             "id": "{18e25bdd-7901-4942-98ab-8bdcd1cc477c}",
@@ -2615,7 +2615,7 @@
                 "blue": 0
             },
             "shape": "Cube",
-            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }"
         },
         {
             "id": "{98f3b319-0f6d-4fd6-98ef-9a8d8d2dfcfc}",
