@@ -2486,6 +2486,136 @@
             "type": "Model",
             "shapeType": "box",
             "useOriginalPivot": true
+        },
+        {
+            "id": "{59198beb-d385-4024-9a36-777da2c2ec73}",
+            "type": "Shape",
+            "position": {"x":5285.90966796875,"y":-5013.08154296875,"z":5295.0341796875},
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
+            "name": "Seat Teren 1",
+            "locked": true,
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "alpha": 0.0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/sit_spot.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+        },
+        {
+            "id": "{03e94bda-f395-4067-86fd-0d512d5f5352}",
+            "type": "Shape",
+            "position": {"x":5285.90966796875,"y":-5013.08154296875,"z":5295.0341796875},
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
+            "name": "Seat Teren 2",
+            "locked": true,
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "alpha": 0.0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/sit_spot.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+        },
+        {
+            "id": "{5fcb7701-9337-4cad-9e49-812278201713}",
+            "type": "Shape",
+            "position": {"x":5285.90966796875,"y":-5013.08154296875,"z":5295.0341796875},
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
+            "name": "Seat Teren 3",
+            "locked": true,
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "alpha": 0.0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/sit_spot.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+        },
+        {
+            "id": "{dd1bba6d-3917-45ac-90c6-cf8959c30b34}",
+            "type": "Shape",
+            "position": {"x":5285.90966796875,"y":-5013.08154296875,"z":5295.0341796875},
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
+            "name": "Seat Teren 4",
+            "locked": true,
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "alpha": 0.0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/sit_spot.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
+        },
+        {
+            "id": "{18e25bdd-7901-4942-98ab-8bdcd1cc477c}",
+            "type": "Shape",
+            "position": {"x":5285.90966796875,"y":-5013.08154296875,"z":5295.0341796875},
+            "rotation": {"x":0,"y":-1,"z":0,"w":0},
+            "name": "Seat Teren 5",
+            "locked": true,
+            "dimensions": {"x":0.3,"y":0.01,"z":0.3},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "alpha": 0.0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/sit_spot.js",
+            "color": {
+                "red": 0,
+                "green": 0,
+                "blue": 0
+            },
+            "shape": "Cube",
+            "userData": "{\"distanceToSeeIndicator\": 2.0 }",
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
