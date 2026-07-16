@@ -33,6 +33,8 @@
                 "min": 300,
                 "max": 600
             },
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
             "shapeType":"sphere",
             "script": "https://aleziakurdis.github.io/inertia/OXARA/navigationAmbienceOxara.js"
         },
@@ -102,6 +104,7 @@
                 "z": 174.44137573242188
             },
             "flyingAllowed": false,
+            "ghostingAllowed": false,
             "grab": {
                 "grabbable": false
             },
@@ -161,6 +164,7 @@
                 "z": 10
             },
             "flyingAllowed": false,
+            "ghostingAllowed": false,
             "grab": {
                 "grabbable": false
             },
@@ -319,8 +323,8 @@
                 "z": 325.0490417480469
             },
             "position": {"x":5084.3349609375,"y":-4928.7685546875,"z":4679.35205078125},
-            "flyingAllowed": true,
-            "ghostingAllowed": true,
+            "flyingAllowed": false,
+            "ghostingAllowed": false,
             "grab": {
                 "grabbable": false
             },
