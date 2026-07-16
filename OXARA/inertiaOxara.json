@@ -2708,6 +2708,29 @@
             "shape": "Cube",
             "type": "Box",
             "visible": false
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a64f6b31-7ad0-47ee-bf7f-81cc29a9c4b6}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "ARRIVAL ZONE UMC",
+            "position": {"x":4916.71435546875,"y":-5018.53515625,"z":4777.24658203125},
+            "dimensions": {"x":2.0665626525878906,"y":3.004687547683716,"z":8.0},
+            "rotation": {"x":0,"y":-0.9848077297210693,"z":0,"w":0.17364822328090668},
+            "shapeType": "box",
+            "type": "Zone"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
