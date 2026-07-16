@@ -14,6 +14,7 @@
     const ROOT = Script.resolvePath('').split("energyPit.js")[0];
     let lightID = Uuid.NONE;
     let lightTopID = Uuid.NONE;
+    let electroSoundID = Uuid.NONE;
     let materialID = Uuid.NONE;
     let fxID = Uuid.NONE;
     
@@ -116,6 +117,29 @@
                 "textures": ROOT + "images/electricArc.png",
                 "type": "ParticleEffect"
             },"local");
+            
+            electroSoundID =Entities.addEntity({
+                "parentID": entityID,
+                "renderWithZones": renderWithZones,
+                "localPosition": {"x": 0.0, "y": 75.0, "z": 0.0},
+                "name": "Energy Pit Sound OTHYN",
+                "grab": {
+                    "grabbable": false
+                },
+                "type": "Sound",
+                "dimensions": {
+                    "x": 3,
+                    "y": 3,
+                    "z": 3
+                },
+                "soundURL": ROOT + "sounds/electro.mp3",
+                "playing": true,
+                "volume": 0.5,
+                "loop": true,
+                "positional": true,
+                "localOnly": true
+            },"local");
+            
         }
 
         lightID = Entities.addEntity({
@@ -192,6 +216,10 @@
         if (materialID !== Uuid.NONE) {
             Entities.deleteEntity(materialID);
             materialID = Uuid.NONE;
+        }
+        if (electroSoundID !== Uuid.NONE) {
+            Entities.deleteEntity(electroSoundID);
+            electroSoundID = Uuid.NONE;
         }
     };
 
