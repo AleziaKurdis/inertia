@@ -2735,6 +2735,234 @@
             "rotation": {"x":0,"y":-0.9848077297210693,"z":0,"w":0.17364822328090668},
             "shapeType": "box",
             "type": "Zone"
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 200,
+                "y": 200,
+                "z": 200
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{e50d67ec-5b1c-4146-a63a-008df749f424}",
+            "keyLight": {
+                "castShadows": true,
+                "color": {
+                    "blue": 255,
+                    "green": 138,
+                    "red": 36
+                },
+                "direction": {
+                    "x": 0.9999997019767761,
+                    "y": 0,
+                    "z": 0.0007962742820382118
+                },
+                "shadowBias": 0.019999999552965164
+            },
+            "locked": true,
+            "name": "NB_VISIBILITY_ZONE",
+            "position": {"x":4931.39453125,"y":-8000.767578125,"z":4629.57568359375},
+            "shapeType": "box",
+            "type": "Zone"
+        },
+        {
+            "angularDamping": 0,
+            "damping": 0,
+            "dimensions": {
+                "x": 300,
+                "y": 200,
+                "z": 300
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a323b18d-a20b-4e66-9f48-3a7ea9b27944}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "TA_VISIBILITY_ZONE",
+            "position": {"x":4936.91845703125,"y":-8000.39697265625,"z":4946.4130859375},
+            "shapeType": "box",
+            "type": "Zone"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 6.113231658935547,
+                "y": 4.28240966796875,
+                "z": 6.315361022949219
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{83fe977d-3177-47d8-b6a0-d863265ee1d7}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/SUBPLACE-SOCKET.fst",
+            "name": "SUBPLACE SOCKET TA",
+            "renderWithZones": [
+                "{a323b18d-a20b-4e66-9f48-3a7ea9b27944}"
+            ],
+            "position": {"x":4935.5771484375,"y":-8000,"z":4949.35791015625},
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 6.113231658935547,
+                "y": 4.28240966796875,
+                "z": 6.315361022949219
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{6a2eff9c-8d4b-4376-9416-aed2db449b61}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/SUBPLACE-SOCKET.fst",
+            "name": "SUBPLACE SOCKET NB",
+            "position": {"x":4935.5771484375,"y":-8000,"z":4632.68310546875},
+            "rotation": {
+                "w": -4.371138828673793e-08,
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "renderWithZones": [
+                "{e50d67ec-5b1c-4146-a63a-008df749f424}"
+            ],
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "id": "{f7d2ea4e-4cd0-42af-b8a0-99c794fb22c5}",
+            "type": "Box",
+            "name": "ELEVATOR NB SURFACE",
+            "description": "{\"x\": -0.4,\"y\":-69.29297,\"z\":-1.915}",
+            "locked": true,
+            "position": {"x":4979.34423828125,"y":-4971.31982421875,"z":4729.26513671875},
+            "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":0.7},
+            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": false,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "id": "{481dda2d-ce24-4dde-8f91-ca635f20fc09}",
+            "type": "Box",
+            "name": "ELEVATOR NB CAVE",
+            "description": "{\"x\": -0.4,\"y\":-69.29297,\"z\":-1.915}",
+            "locked": true,
+            "position": {"x":4979.34423828125,"y":-4971.31982421875,"z":4729.26513671875},
+            "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":0.7},
+            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "renderWithZones": [
+                "{e50d67ec-5b1c-4146-a63a-008df749f424}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": false,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "id": "{0408d303-96a6-4e0c-bf84-f9f55170c87d}",
+            "type": "Box",
+            "name": "ELEVATOR TA SURFACE",
+            "description": "{\"x\": -0.4,\"y\":-69.29297,\"z\":-1.915}",
+            "locked": true,
+            "position": {"x":4979.34423828125,"y":-4971.31982421875,"z":4729.26513671875},
+            "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":0.7},
+            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": false,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "id": "{47ebf57f-9339-4989-8a41-d107e1e0c15b}",
+            "type": "Box",
+            "name": "ELEVATOR TA CAVE",
+            "description": "{\"x\": -0.4,\"y\":-69.29297,\"z\":-1.915}",
+            "locked": true,
+            "position": {"x":4979.34423828125,"y":-4971.31982421875,"z":4729.26513671875},
+            "dimensions": {"x":1.3486216068267822,"y":2.933886766433716,"z":0.7},
+            "rotation": {"x":0,"y":0.9745951890945435,"z":0,"w":-0.22397348284721375},
+            "renderWithZones": [
+                "{a323b18d-a20b-4e66-9f48-3a7ea9b27944}"
+            ],
+            "grab": {
+                "grabbable": false
+            },
+            "damping": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": 255,
+                "green": 255,
+                "blue": 255
+            },
+            "shape": "Cube",
+            "visible": false,
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
