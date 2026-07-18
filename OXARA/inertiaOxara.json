@@ -2963,6 +2963,74 @@
             "shape": "Cube",
             "visible": false,
             "script": "https://aleziakurdis.github.io/inertia/OXARA/elevator.js"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.10674089193344116,
+                "y": 0.05789214000105858,
+                "z": 0.10674089193344116
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{bf46f19a-4c3d-4b9a-aab9-bcfabc6b6816}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/lampion.fst",
+            "name": "LAMPION parasol",
+            "position": {"x":5140.59326171875,"y":-5005.5361328125,"z":5025.9580078125},
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": -0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/lampion.js",
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.10674089193344116,
+                "y": 0.05789214000105858,
+                "z": 0.10674089193344116
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5421bf65-ce31-4b09-b68f-957304318325}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/lampion.fst",
+            "name": "LAMPION tableTwo",
+            "renderWithZones": [
+                "{2d5b1f23-6b60-4b1c-a962-c3ee76368ff3}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": -0.7071068286895752,
+                "z": 0
+            },
+            "position": {"x":5133.59765625,"y":-5007.94482421875,"z":5023.35986328125},
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/lampion.js",
+            "shapeType": "box",
+            "type": "Model",
+            "useOriginalPivot": true
         }
    ],
    "Id":"{fd74d82a-4718-4387-9a3a-fdf0f2fd53f1}",
