@@ -287,7 +287,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
-            "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": true}"
+            "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": false}"
         },
         {
             "id": "{35013345-1a61-459f-af7a-d2e4ab986740}",
@@ -313,7 +313,7 @@
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
             "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
-            "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": false}"
+            "userData": "{\"placeName\": \"Oxara\", \"isAlpha\": true}"
         },{
             "angularDamping": 0,
             "damping": 0,
