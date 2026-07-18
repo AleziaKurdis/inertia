@@ -1,0 +1,38 @@
+{
+   "DataVersion": 3,
+   "Paths": {
+      "\/":"\/0,0,0"
+   },
+   "Entities": [
+      {
+         "type": "Zone",
+         "name": "SATELLITE",
+         "description": "hifi://oxara/4658.4,-5000.4,4791.21/0,-0.00030943,0,1",
+         "dimensions": {
+            "x":1000,
+            "y":1000,
+            "z":1000
+         },
+         "grab": {
+            "grabbable": false
+         },
+         "script": "https://aleziakurdis.github.io/inertia/satellites/redirector.js",
+         "shapeType": "box",
+         "keyLight": {
+            "direction": {
+               "x": 0,
+               "y": -0.70710676908493,
+               "z": 0.70710676908493
+            },
+            "castShadows": true
+         },
+         "keyLightMode": "disabled",
+         "ambientLightMode": "disabled",
+         "skyboxMode": "enabled",
+         "hazeMode": "disabled",
+         "bloomMode": "disabled"
+      }
+   ],
+   "Id": "{d6851dfd-8931-4bd4-a4fd-b13c633cdc54}",
+   "Version": 120
+}
