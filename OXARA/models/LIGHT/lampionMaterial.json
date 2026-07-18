@@ -5,7 +5,7 @@
             "albedo": [1, 1, 1],
             "metallic": 0.001,
             "roughness": 0.01,
-            "emissive": [1.208, 2, 0.306],
+            "emissive": [1.66, 0.76815, 0.13019],
             "cullFaceMode": "CULL_BACK",
             "model": "hifi_pbr"
         }
