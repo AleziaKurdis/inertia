@@ -31,5 +31,16 @@
         "targetPosition": {"x":-2819.3,"y":2986.34,"z":-2765.57},
         "targetRadius": 300,
         "km": 4.7
+    },
+    {
+        "displayName": "Oxara",
+        "placeName": "Oxara",
+        "description": "Mining colony of Oxara.",
+        "imageUrl": "https://aleziakurdis.github.io/inertia/OXARA/images/cover.jpg",
+        "alphaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/oxaraAlphaArrivalUrl.json",
+        "omegaArrivalUrl": "https://aleziakurdis.github.io/inertia/satellites/oxaraOmegaArrivalUrl.json",
+        "targetPosition": {"x":5038.96728515625,"y":-5019.87451171875,"z":4949.84912109375},
+        "targetRadius": 120,
+        "km": 1.2
     }
 ]
