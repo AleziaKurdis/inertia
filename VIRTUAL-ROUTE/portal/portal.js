@@ -125,7 +125,7 @@
                 "type": "Box",
                 "parentID": entityID,
                 "name": "portalHorizon " + portalName,
-                //"userData": JSON.stringify(shader),
+                "userData": JSON.stringify(shader),
                 "description": destination,
                 "localPosition": {
                     "x": 0.0,
