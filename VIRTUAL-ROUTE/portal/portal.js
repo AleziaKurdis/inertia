@@ -255,7 +255,7 @@
                     "lifetime": 43200
                 }, "local");
                 
-/*                passortAppID = Entities.addEntity({
+                passortAppID = Entities.addEntity({
                     "type": "Empty",
                     "parentID": entityID,
                     "name": "Passport App",
@@ -267,7 +267,7 @@
                     },
                     "script": ROOT + "passport_app.js",
                     "lifetime": 43200
-                }, "local"); */
+                }, "local");
             }
 
             //signs 
