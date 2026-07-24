@@ -17,11 +17,8 @@
     const officialStamp = ["ALPHA", "TARGET", "OMEGA"];
     
     this.preload = function(entityID) {
-        let properties = Entities.getEntityProperties(entityID, ["description", "tags"]);
-        let tags = properties.tags;
-        if (tags.length === 1) {
-            borderStampType = tags[0];
-        }
+        let properties = Entities.getEntityProperties(entityID, ["description", "name"]);
+        borderStampType = properties.name;
         placeName = properties.description;
     };
 

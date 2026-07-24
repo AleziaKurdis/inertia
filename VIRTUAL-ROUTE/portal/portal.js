@@ -215,7 +215,7 @@
                 "type": "Shape",
                 "shape": "Cube",
                 "parentID": entityID,
-                "name": "portal douane " + portalName,
+                "name": portalName,
                 "description": portalData.placeName,
                 "localPosition": {
                     "x": 0.0,
@@ -230,8 +230,8 @@
                 "grab": {
                     "grabbable": false
                 },
-                "tags": [portalName],
-                //"script": ROOT + "douane.js",
+                //"tags": [portalName],
+                "script": ROOT + "douane.js",
                 "lifetime": 43200
             }, "local");
             
@@ -240,7 +240,7 @@
                     "type": "Shape",
                     "shape": "Cylinder",
                     "parentID": entityID,
-                    "name": "target douane",
+                    "name": "TARGET",
                     "description": portalData.placeName,
                     "position": targetPosition,
                     "alpha": 0.0,
@@ -250,8 +250,8 @@
                     "grab": {
                         "grabbable": false
                     },
-                    "tags": ["TARGET"],
-                    //"script": ROOT + "douane.js",
+                    //"tags": ["TARGET"],
+                    "script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
                 
