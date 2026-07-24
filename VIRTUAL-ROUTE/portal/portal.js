@@ -231,7 +231,7 @@
                     "grabbable": false
                 },
                 "tags": [portalName],
-                "script": ROOT + "douane.js",
+                //"script": ROOT + "douane.js",
                 "lifetime": 43200
             }, "local");
             
@@ -251,7 +251,7 @@
                         "grabbable": false
                     },
                     "tags": ["TARGET"],
-                    "script": ROOT + "douane.js",
+                    //"script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
                 
