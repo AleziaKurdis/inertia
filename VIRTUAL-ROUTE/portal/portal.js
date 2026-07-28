@@ -252,7 +252,7 @@
                     //"script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
-                
+/*                
                 passortAppID = Entities.addEntity({
                     "type": "Empty",
                     "parentID": entityID,
@@ -267,7 +267,7 @@
                     "lifetime": 43200
                 }, "local");
             }
-
+*/
             //signs 
             portalFrontSignID = Entities.addEntity({
                 "type": "Model",
