@@ -230,7 +230,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                "script": ROOT + "douane.js",
+                //"script": ROOT + "douane.js",
                 "lifetime": 43200
             }, "local");
             
@@ -249,7 +249,7 @@
                     "grab": {
                         "grabbable": false
                     },
-                    "script": ROOT + "douane.js",
+                    //"script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
                 
