@@ -153,7 +153,7 @@
                 "collisionless": true,
                 "ignoreForCollisions": true,
                 "shape": "Cube",
-                "script": ROOT + "teleporter.js",
+                //"script": ROOT + "teleporter.js",
                 "lifetime": 43200
             }, "local");
             
@@ -230,7 +230,7 @@
                 "grab": {
                     "grabbable": false
                 },
-                //"script": ROOT + "douane.js",
+                "script": ROOT + "douane.js",
                 "lifetime": 43200
             }, "local");
             
@@ -249,10 +249,10 @@
                     "grab": {
                         "grabbable": false
                     },
-                    //"script": ROOT + "douane.js",
+                    "script": ROOT + "douane.js",
                     "lifetime": 43200
                 }, "local");
-/*                
+                
                 passortAppID = Entities.addEntity({
                     "type": "Empty",
                     "parentID": entityID,
@@ -267,7 +267,7 @@
                     "lifetime": 43200
                 }, "local");
             }
-*/
+
             //signs 
             portalFrontSignID = Entities.addEntity({
                 "type": "Model",
