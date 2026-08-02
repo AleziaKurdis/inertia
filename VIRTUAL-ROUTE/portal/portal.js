@@ -125,7 +125,7 @@
                 "type": "Box",
                 "parentID": entityID,
                 "name": "portalHorizon " + portalName,
-                //"userData": JSON.stringify(shader),
+                "userData": JSON.stringify(shader),
                 "description": destination,
                 "localPosition": {
                     "x": 0.0,
@@ -147,13 +147,12 @@
                 "grab": {
                     "grabbable": false
                 },
-                //"angularVelocity": Vec3.multiplyQbyV(portalRotation, {"x": 0.0, "y": 0.0, "z": -0.31415900588035583}),
                 "damping": 0,
                 "angularDamping": 0,
                 "collisionless": true,
                 "ignoreForCollisions": true,
                 "shape": "Cube",
-                //"script": ROOT + "teleporter.js",
+                "script": ROOT + "teleporter.js",
                 "lifetime": 43200
             }, "local");
             
