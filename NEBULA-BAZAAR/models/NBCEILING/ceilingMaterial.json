@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "art-deco-scales-wallpaper_albedo.jpg",
+         "metallicMap": "art-deco-scales-wallpaper_metallic.jpg",
+         "roughnessMap": "art-deco-scales-wallpaper_roughness.jpg",
+         "normalMap": "art-deco-scales-wallpaper_normal-ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}

@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "dark-wood-stain_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "dark-wood-stain_roughness.jpg",
+         "normalMap": "dark-wood-stain_normal-ogl.jpg",
+         "occlusionMap": "dark-wood-stain_ao.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}

@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "carpet-albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "carpet-roughness.jpg",
+         "normalMap": "carpet-normal-ogl.jpg",
+         "occlusionMap": "carpet-ao.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
