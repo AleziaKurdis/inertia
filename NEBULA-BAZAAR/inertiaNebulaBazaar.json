@@ -1,24 +1,70 @@
 {
     "DataVersion":3,
     "Paths":{
-        "\/":"\/4936.87,-8001.52,4637.13\/0,0.999524,0,0.0308671"
+        "\/":"\/4936.87,-8001.32,4637.13\/0,0.999524,0,0.0308671"
     },
     "Entities":[
         {
-            "id":"{a56c825d-1843-415a-b930-07e00c899a9c}",
-            "type":"Zone",
-            "name":"NEBULA-BAZAAR_VISIBILITY_ZONE",
-            "locked":true,
-            "dimensions":{
-                "x":100,
-                "y":100,
-                "z":100
+            "ambientLight": {
+                "ambientColor": {
+                    "blue": 255,
+                    "green": 255,
+                    "red": 255
+                },
+                "ambientIntensity": 0.10000000149011612,
+                "ambientURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/TEMP_SKY.jpg"
             },
+            "ambientLightMode": "enabled",
+            "bloom": {
+                "bloomIntensity": 0.4000000059604645
+            },
+            "bloomMode": "enabled",
+            "dimensions": {
+                "x": 100,
+                "y": 100,
+                "z": 100
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "haze": {
+                "hazeColor": {
+                    "blue": 97,
+                    "green": 66,
+                    "red": 47
+                },
+                "hazeRange": 2000
+            },
+            "hazeMode": "enabled",
+            "id": "{a56c825d-1843-415a-b930-07e00c899a9c}",
+            "keyLight": {
+                "color": {
+                    "blue": 161,
+                    "green": 21,
+                    "red": 8
+                },
+                "direction": {
+                    "x": 0,
+                    "y": -0.9999997019767761,
+                    "z": 0.0007962742820382118
+                },
+                "shadowBias": 0.02
+            },
+            "keyLightMode": "enabled",
+            "locked": true,
+            "name": "NEBULA-BAZAAR_VISIBILITY_ZONE",
+            "shapeType": "box",
+            "skybox": {
+                "color": {
+                    "blue": 255,
+                    "green": 255,
+                    "red": 255
+                },
+                "url": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/TEMP_SKY.jpg"
+            },
+            "skyboxMode": "enabled",
+            "type": "Zone",
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875},
-            "grab":{
-                "grabbable":false
-            },
-            "shapeType":"box"
         },
         {
             "angularDamping": 0,
