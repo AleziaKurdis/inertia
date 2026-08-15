@@ -108,7 +108,7 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/VASE1.fst",
             "name": "VASES 1",
-            "shapeType": "static-mesh",
+            "shapeType": "none",
             "type": "Model",
             "useOriginalPivot": true,
             "renderWithZones": [
@@ -131,7 +131,7 @@
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/VASE2.fst",
             "name": "VASES 2",
-            "shapeType": "static-mesh",
+            "shapeType": "none",
             "type": "Model",
             "useOriginalPivot": true,
             "renderWithZones": [
