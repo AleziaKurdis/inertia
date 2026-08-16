@@ -138,6 +138,113 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.5698521733283997,
+                "y": 4.3949174880981445,
+                "z": 0.6166470050811768
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5268af3b-70d6-4f0f-8a9b-37c9e7959fff}",
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LANTERNE.fst",
+            "name": "LANTERNE-2",
+            "position": {"x":4932.8740,"y":-7997.34619140625,"z":4651.63671875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.5698521733283997,
+                "y": 4.3949174880981445,
+                "z": 0.6166470050811768
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{57a73e09-5a06-412d-9365-9d5fc9e27c98}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LANTERNE.fst",
+            "name": "LANTERNE-1",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Model",
+            "useOriginalPivot": true,
+            "position": {"x":4932.8740,"y":-7997.34619140625,"z":4646.47021484375}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 26,
+                "green": 140,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 14.669408798217773,
+                "y": 14.669408798217773,
+                "z": 14.669408798217773
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{f1329b41-e846-4116-9678-be07ae8ce579}",
+            "intensity": 7,
+            "name": "LANTERNE LIGHT 1",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "position": {"x":4932.8740,"y":-7997.34619140625,"z":4646.47021484375}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 26,
+                "green": 140,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 14.669408798217773,
+                "y": 14.669408798217773,
+                "z": 14.669408798217773
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{e30af95c-42fa-4eb8-8774-4967b2b830da}",
+            "intensity": 7,
+            "name": "LANTERNE LIGHT 2",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "position": {"x":4932.8740,"y":-7997.34619140625,"z":4651.63671875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
