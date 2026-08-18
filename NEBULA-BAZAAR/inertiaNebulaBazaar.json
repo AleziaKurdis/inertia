@@ -508,6 +508,29 @@
             ],
             "type": "Light",
             "position": {"x":4929.60302734375,"y":-7998.56591796875,"z":4641.330078125}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":11.542415618896484,"y":3.3463521003723145,"z":20.268722534179688},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{cb5870d7-4b70-4d28-8dc5-ea7ddceccdf8}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/CURTAINS.fst",
+            "name": "CURTAINS",
+            "shapeType": "none",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
