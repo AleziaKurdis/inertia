@@ -7,7 +7,7 @@
          "metallic": 0.01,
          "roughness": 0.4,
          "normalMap": "CURTAIN_normal-ogl.jpg",
-         "cullFaceMode":"CULL_BACK"
+         "cullFaceMode":"CULL_NONE"
       }
    ]
 }
