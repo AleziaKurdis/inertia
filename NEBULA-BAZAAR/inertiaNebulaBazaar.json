@@ -210,7 +210,7 @@
                 "grabbable": false
             },
             "id": "{f1329b41-e846-4116-9678-be07ae8ce579}",
-            "intensity": 7,
+            "intensity": 5,
             "name": "LANTERNE LIGHT 1",
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
@@ -238,7 +238,7 @@
                 "grabbable": false
             },
             "id": "{e30af95c-42fa-4eb8-8774-4967b2b830da}",
-            "intensity": 7,
+            "intensity": 5,
             "name": "LANTERNE LIGHT 2",
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
