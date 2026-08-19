@@ -764,6 +764,33 @@
             ],
             "type": "Light",
             "position": {"x":4919.12744140625,"y":-8000.52099609375,"z":4646.2685546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 35.68082046508789,
+                "y": 10.266602516174316,
+                "z": 34.88665771484375
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{79675e41-4425-46db-bbd5-b64af5b06b21}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/FLOORTILES.fst",
+            "name": "FLOORTILES",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
