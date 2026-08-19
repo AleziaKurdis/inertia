@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "FLOORTILES_Albedo.jpg",
+         "metallicMap": "FLOORTILES_Metallic.jpg",
+         "roughnessMap": "FLOORTILES_Roughness.jpg",
+         "normalMap": "FLOORTILES_Normal_ogl.jpg",
+         "occlusionMap": "FLOORTILES_AO.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
