@@ -538,6 +538,232 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.3411363959312439,
+                "y": 1.245355248451233,
+                "z": 0.6850793361663818
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{500c31b9-cb7a-4546-945b-bf41d356f4dd}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LANTERNE-RED-MURAL.fst",
+            "name": "LANTERNE RED MURAL 5",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752},
+            "type": "Model",
+            "useOriginalPivot": true,
+            "position": {"x":4919.49609375,"y":-7998.56591796875,"z":4658.197265625}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 25,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 7,
+                "y": 7,
+                "z": 7
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{7208befe-1bee-4452-aea4-ab201866e223}",
+            "intensity": 5,
+            "name": "LANTERNE LIGHT RED 5",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "locked": true,
+            "position": {"x":4919.49609375,"y":-7998.56591796875,"z":4658.197265625}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.3411363959312439,
+                "y": 1.245355248451233,
+                "z": 0.6850793361663818
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c442ab12-a087-476a-a551-bcb49b747341}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LANTERNE-RED-MURAL.fst",
+            "name": "LANTERNE RED MURAL 6",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {"x":0,"y":-0.7071068286895752,"z":0,"w":-0.7071068286895752},
+            "type": "Model",
+            "useOriginalPivot": true,
+            "position": {"x":4919.49609375,"y":-7998.56591796875,"z":4642.01806640625}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 25,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 7,
+                "y": 7,
+                "z": 7
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{e7f9c250-f2df-40bd-b206-e7ee85e37c4a}",
+            "intensity": 5,
+            "name": "LANTERNE LIGHT RED 6",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "locked": true,
+            "position": {"x":4919.49609375,"y":-7998.56591796875,"z":4642.01806640625}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.3411363959312439,
+                "y": 1.245355248451233,
+                "z": 0.6850793361663818
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d56d532d-a63f-4ce4-886d-8ce8bca6a7c7}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LANTERNE-RED-MURAL.fst",
+            "name": "LANTERNE RED MURAL 7",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {"x":0,"y":-1.0000001192092896,"z":0,"w":0},
+            "type": "Model",
+            "useOriginalPivot": true,
+            "position": {"x":4926.13671875,"y":-7998.56591796875,"z":4663.29541015625}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 25,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 7,
+                "y": 7,
+                "z": 7
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{82ddbd82-0f3f-425a-94ee-cfbc8c42b182}",
+            "intensity": 5,
+            "name": "LANTERNE LIGHT RED 7",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "locked": true,
+            "position": {"x":4926.13671875,"y":-7998.56591796875,"z":4663.29541015625}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 154,
+                "red": 66
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 6.982369422912598,
+                "y": 6.982369422912598,
+                "z": 6.982369422912598
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5a04b62e-86dc-4502-a45d-7fdbcebe0380}",
+            "intensity": 5,
+            "locked": true,
+            "name": "SUBCURTAIN LIGHT B",
+            "position": {"x":4919.12744140625,"y":-8000.52099609375,"z":4653.89208984375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 154,
+                "red": 66
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 6.982369422912598,
+                "y": 6.982369422912598,
+                "z": 6.982369422912598
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a4727cb0-75e2-4af4-955c-ea050ff28858}",
+            "intensity": 5,
+            "locked": true,
+            "name": "SUBCURTAIN LIGHT A",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light",
+            "position": {"x":4919.12744140625,"y":-8000.52099609375,"z":4646.2685546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
