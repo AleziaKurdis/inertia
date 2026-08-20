@@ -787,6 +787,181 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 21,
+                "red": 255
+            },
+            "cutoff": 90,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.124865770339966,
+                "y": 3.124865770339966,
+                "z": 3.124865770339966
+            },
+            "exponent": 1,
+            "falloffRadius": 2,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{77459c39-c7e0-4f85-bd0d-9a10fbd48031}",
+            "intensity": 3,
+            "locked": true,
+            "name": "TABLE LIGHT 2",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light",
+            "position": {"x":4923.99560546875,"y":-8000.6123046875,"z":4645.388671875}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 21,
+                "red": 255
+            },
+            "cutoff": 90,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.124865770339966,
+                "y": 3.124865770339966,
+                "z": 3.124865770339966
+            },
+            "exponent": 1,
+            "falloffRadius": 2,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{bf56110c-371b-4967-b1b6-65a2190dbc33}",
+            "intensity": 3,
+            "locked": true,
+            "name": "TABLE LIGHT 5",
+            "position": {"x":4927.65380859375,"y":-8000.6123046875,"z":4649.89599609375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 21,
+                "red": 255
+            },
+            "cutoff": 90,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.124865770339966,
+                "y": 3.124865770339966,
+                "z": 3.124865770339966
+            },
+            "exponent": 1,
+            "falloffRadius": 2,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5fab4a59-8bc3-4099-bf59-33dae65cfa16}",
+            "intensity": 3,
+            "locked": true,
+            "name": "TABLE LIGHT 4",
+            "position": {"x":4927.08203125,"y":-8000.6123046875,"z":4653.7783203125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 21,
+                "red": 255
+            },
+            "cutoff": 90,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.124865770339966,
+                "y": 3.124865770339966,
+                "z": 3.124865770339966
+            },
+            "exponent": 1,
+            "falloffRadius": 2,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ccc65533-9805-4ab7-8945-5bd1433c8101}",
+            "intensity": 3,
+            "locked": true,
+            "name": "TABLE LIGHT 1",
+            "position": {"x":4923.99560546875,"y":-8000.6123046875,"z":4654.23486328125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 0,
+                "green": 21,
+                "red": 255
+            },
+            "cutoff": 90,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.124865770339966,
+                "y": 3.124865770339966,
+                "z": 3.124865770339966
+            },
+            "exponent": 1,
+            "falloffRadius": 2,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{f486b93e-315d-49b4-a174-3e711608bbbe}",
+            "intensity": 3,
+            "locked": true,
+            "name": "TABLE LIGHT 3",
+            "position": {"x":4927.08203125,"y":-8000.6123046875,"z":4646.0341796875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
