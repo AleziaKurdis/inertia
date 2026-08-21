@@ -1031,6 +1031,306 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 79,
+                "green": 152,
+                "red": 255
+            },
+            "cutoff": 70,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.2974917888641357,
+                "y": 3.2974917888641357,
+                "z": 3.509117364883423
+            },
+            "exponent": 1,
+            "falloffRadius": 0.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c69587a3-d000-41ab-8c17-f55934e52fb3}",
+            "intensity": 7,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "ALCOVE-LIGHT 1",
+            "position": {"x":4928.54052734375,"y":-7999.80419921875,"z":4639.93115234375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 79,
+                "green": 152,
+                "red": 255
+            },
+            "cutoff": 70,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.2974917888641357,
+                "y": 3.2974917888641357,
+                "z": 3.509117364883423
+            },
+            "exponent": 1,
+            "falloffRadius": 0.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ea511fd3-6f64-48f4-a14b-da8828262f44}",
+            "intensity": 7,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "ALCOVE-LIGHT 2",
+            "position": {"x":4926.00048828125,"y":-7999.80419921875,"z":4639.93115234375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 79,
+                "green": 152,
+                "red": 255
+            },
+            "cutoff": 70,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.2974917888641357,
+                "y": 3.2974917888641357,
+                "z": 3.509117364883423
+            },
+            "exponent": 1,
+            "falloffRadius": 0.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b9768b42-027e-4fc6-b199-40933422af3f}",
+            "intensity": 7,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "ALCOVE-LIGHT 3",
+            "position": {"x":4923.51220703125,"y":-7999.80419921875,"z":4639.93115234375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 55,
+                "red": 15
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 11.035246849060059,
+                "y": 11.035246849060059,
+                "z": 11.035246849060059
+            },
+            "exponent": 1,
+            "falloffRadius": 0.30000001192092896,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{fb6743e3-946a-4c89-b78b-a68f5ad9ff49}",
+            "intensity": 12,
+            "locked": true,
+            "name": "VIRTAIL LIGHT 1",
+            "position": {"x":4917.81884765625,"y":-7997.13427734375,"z":4664.888671875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 55,
+                "red": 15
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 17.011320114135742,
+                "y": 17.011320114135742,
+                "z": 17.011320114135742
+            },
+            "exponent": 1,
+            "falloffRadius": 0.699999988079071,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b3e46036-760f-4759-9f54-002094f2ceb4}",
+            "intensity": 12,
+            "locked": true,
+            "name": "VIRTAIL LIGHT 3",
+            "position": {"x":4932.1181640625,"y":-7998.517578125,"z":4663.8603515625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 255,
+                "green": 55,
+                "red": 15
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 17.011320114135742,
+                "y": 17.011320114135742,
+                "z": 17.011320114135742
+            },
+            "exponent": 1,
+            "falloffRadius": 0.699999988079071,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5d253994-523b-4c2b-b0bb-7e5d138334f7}",
+            "intensity": 12,
+            "locked": true,
+            "name": "VIRTAIL LIGHT 2",
+            "position": {"x":4924.96240234375,"y":-7994.736328125,"z":4649.99072265625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 115,
+                "green": 190,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 4,
+                "y": 4,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a91d0eaf-6c6e-4177-aa9a-1f8dc6fff4d5}",
+            "intensity": 5,
+            "locked": true,
+            "name": "BAR LIGHT 3",
+            "position": {"x":4928.716796875,"y":-8000.126953125,"z":4661.8017578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 115,
+                "green": 190,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 4,
+                "y": 4,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d9f8bc0a-d640-4922-a978-416fae20b8ad}",
+            "intensity": 5,
+            "locked": true,
+            "name": "BAR LIGHT 2",
+            "position": {"x":4931.28173828125,"y":-8000.126953125,"z":4661.8017578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 115,
+                "green": 190,
+                "red": 255
+            },
+            "cutoff": 75,
+            "damping": 0,
+            "dimensions": {
+                "x": 4,
+                "y": 4,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a4497676-f32d-415a-b03f-a40772dd2802}",
+            "intensity": 5,
+            "locked": true,
+            "name": "BAR LIGHT 1",
+            "position": {"x":4933.86181640625,"y":-8000.126953125,"z":4661.8017578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
