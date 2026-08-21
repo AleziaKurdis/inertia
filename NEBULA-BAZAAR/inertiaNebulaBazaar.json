@@ -1008,6 +1008,29 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":5.521553993225098,"y":0.4114495515823364,"z":0.3703279495239258},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{e2f650e3-eb53-4697-9520-07839da6b180}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/ALCOVE-LAMPS.fst",
+            "name": "ALCOVE-LAMPS",
+            "shapeType": "none",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
