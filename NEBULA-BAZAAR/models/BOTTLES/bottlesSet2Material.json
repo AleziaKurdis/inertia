@@ -1,0 +1,13 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "Bottles_albedo_SET2.jpg",
+         "metallicMap": "Bottles_metallic.jpg",
+         "roughnessMap": "Bottles_roughness.jpg",
+         "normalMap": "Bottles_normal_ogl.jpg",
+         "cullFaceMode":"CULL_BACK"
+      }
+   ]
+}
