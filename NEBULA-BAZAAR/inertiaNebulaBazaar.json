@@ -1535,6 +1535,286 @@
             "shapeType": "static-mesh",
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{6f1cc261-0124-4994-85cd-780fab726dc8}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 8",
+            "position": {"x":4928.49609375,"y":-8001.52685546875,"z":4649.50634765625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9925462007522583,
+                "x": 0,
+                "y": 0.12186935544013977,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3af8d886-87b2-4ca6-b23c-f7346fe960f3}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 12",
+            "position": {"x":4925.02490234375,"y":-8001.52685546875,"z":4645.13330078125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9636304974555969,
+                "x": 0,
+                "y": 0.26723843812942505,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{6a526805-8850-4871-8444-da866ea1378f}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 13",
+            "position": {"x":4924.98974609375,"y":-8001.52685546875,"z":4654.48583984375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9681476950645447,
+                "x": 0,
+                "y": -0.2503800392150879,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{821943fb-0550-4e17-bec3-bd9123a9da06}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 9",
+            "position": {"x":4928.50927734375,"y":-8001.52685546875,"z":4650.41552734375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9862856864929199,
+                "x": 0,
+                "y": -0.16504761576652527,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{f815b056-90fa-41e1-b0da-e08324659353}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 14",
+            "position": {"x":4924.31103515625,"y":-8001.52685546875,"z":4655.18701171875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.8829476833343506,
+                "x": 0,
+                "y": -0.4694715738296509,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{23176995-1a86-421a-81cf-52f1236913b0}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 7",
+            "position": {"x":4928.09912109375,"y":-8001.52685546875,"z":4648.73583984375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9483236074447632,
+                "x": 0,
+                "y": 0.31730467081069946,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{bbd83856-6341-4c80-8123-ce934be21389}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 10",
+            "position": {"x":4928.03564453125,"y":-8001.52685546875,"z":4651.12890625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.9238795638084412,
+                "x": 0,
+                "y": -0.3826834559440613,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false,
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6541786789894104,
+                "y": 1.138139247894287,
+                "z": 0.7323697805404663
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{1e8098cb-cf81-477b-8819-6f4bf91c9747}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/OXARA/models/armchair_royalBlue.fst",
+            "name": "ARMCHAIR 11",
+            "position": {"x":4924.3603515625,"y":-8001.52685546875,"z":4644.4189453125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.8746196031570435,
+                "x": 0,
+                "y": 0.48480960726737976,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/OXARA/sit/armchairSit.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
