@@ -639,7 +639,7 @@
                 "angularVelocity": {"x": 0.0, "y": 0.0, "z": 0.0},
                 "angularDamping": 1.0,                
                 "modelURL": ROOT + "resources/models/" + userData.fstBase,
-                "useOriginalPivot": true                
+                "useOriginalPivot": true
             }, "local");
         }
         if (chairSeatID === Uuid.NONE) {
