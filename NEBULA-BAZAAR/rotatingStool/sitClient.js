@@ -611,8 +611,8 @@
         }
     }
 
-    var chairID = Uuid.NULL;
-    var chairSeatID = Uuid.NULL;
+    var chairID = Uuid.NONE;
+    var chairSeatID = Uuid.NONE;
     var renderWithZones;
     var userData;
     
@@ -621,7 +621,7 @@
         renderWithZones = properties.renderWithZones;
         userData = JSON.parse(properties.userData);
         
-        if (chairID === Uuid.NULL) {
+        if (chairID === Uuid.NONE) {
             chairID = Entities.addEntity({
                 "renderWithZones": renderWithZones,
                 "parentID": _this.entityID,
@@ -642,7 +642,7 @@
                 "useOriginalPivot": true                
             }, "local");
         }
-        if (chairSeatID === Uuid.NULL) {
+        if (chairSeatID === Uuid.NONE) {
             chairSeatID = Entities.addEntity({
                 "renderWithZones": renderWithZones,
                 "parentID": _this.entityID,
@@ -666,13 +666,13 @@
     }
 
     function deleteChair() {
-        if (chairID !== Uuid.NULL) {
+        if (chairID !== Uuid.NONE) {
             Entities.deleteEntity(chairID);
-            chairID = Uuid.NULL;
+            chairID = Uuid.NONE;
         }
-        if (chairSeatID !== Uuid.NULL) {
+        if (chairSeatID !== Uuid.NONE) {
             Entities.deleteEntity(chairSeatID);
-            chairSeatID = Uuid.NULL;
+            chairSeatID = Uuid.NONE;
         }
     }
 
@@ -698,7 +698,7 @@
         if (channel === channelComm) {
             var data = JSON.parse(message);
             if (data.action === "ARMCHAIR_SIT" && data.entityID === _this.entityID) {
-                if (chairSeatID !== Uuid.NULL) {
+                if (chairSeatID !== Uuid.NONE) {
                     Entities.editEntity(chairSeatID, {
                         "parentID": data.avatarID,
                         "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": -90,"z": 0.0}),
@@ -710,7 +710,7 @@
                     });
                 }
             } else if (data.action === "ARMCHAIR_STAND" && data.entityID === _this.entityID) {
-                if (chairSeatID !== Uuid.NULL) {
+                if (chairSeatID !== Uuid.NONE) {
                     Entities.editEntity(chairSeatID, {
                         "parentID": _this.entityID,
                         "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": -90,"z": 0.0}),
