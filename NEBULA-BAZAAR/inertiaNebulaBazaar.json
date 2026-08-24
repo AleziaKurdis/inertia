@@ -1815,6 +1815,251 @@
             "shapeType": "static-mesh",
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ed613c16-ec85-485f-b34e-f9998c18ae64}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 1",
+            "position": {"x":4934.060546875,"y":-8000.6376953125,"z":4660.8642578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}\n",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{f6851525-df7f-4f2c-96ff-589e274f4e4a}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 6",
+            "position": {"x":4927.0654296875,"y":-8000.6376953125,"z":4661.70361328125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.5519369840621948,
+                "x": 0,
+                "y": 0.8338858485221863,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{50450921-7394-464a-894b-0d206231e9e1}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 4",
+            "position": {"x":4930.076171875,"y":-8000.6376953125,"z":4660.8642578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{19fb16b0-e9a2-4cca-8f9f-3bc4b1e62f7e}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 7",
+            "position": {"x":4926.87353515625,"y":-8000.6376953125,"z":4663.01220703125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{4bcfb6fe-b114-44c6-8994-4b1599361e05}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 3",
+            "position": {"x":4931.09814453125,"y":-8000.6376953125,"z":4660.8642578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{9ca2aa7e-7b15-43f0-ab0b-19f58e5652fa}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 2",
+            "position": {"x":4933.03857421875,"y":-8000.6376953125,"z":4660.8642578125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
+        },
+        {
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "dimensions": {
+                "x": 0.3499999940395355,
+                "y": 0.004999999888241291,
+                "z": 0.3499999940395355
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3a3421a2-ebf8-43c4-b97a-fd0802d0c445}",
+            "locked": true,
+            "name": "Seat - Rotostool - Navy Color Fabric 5",
+            "position": {"x":4927.91162109375,"y":-8000.6376953125,"z":4660.9287109375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.19080901145935059,
+                "x": 0,
+                "y": 0.9816272258758545,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
+            "scriptTimestamp": 1670185484288,
+            "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
+            "visible": false
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
