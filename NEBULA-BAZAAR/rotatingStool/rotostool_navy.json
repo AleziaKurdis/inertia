@@ -1,0 +1,30 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+        "type": "Box",
+        "visible": false,
+        "name": "Seat - Rotostool - Navy Color Fabric",
+        "userData": "{\n    \"name\": \"rotostool_navy\",\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.6100\n    },\n    \"canClickOnModelToSit\": false\n}",
+        "dimensions": {
+            "x": 0.3499999940395355,
+            "y": 0.004999999888241291,
+            "z": 0.3499999940395355
+        },
+        "grab": {
+            "grabbable": false
+        },
+        "script": "https://aleziakurdis.github.io/rotatingArmchairs/sitClient.js",
+        "scriptTimestamp": 1670185484288,
+        "serverScripts": "https://aleziakurdis.github.io/rotatingArmchairs/sitServer.js",
+        "color": {
+            "red": 0,
+            "green": 180,
+            "blue": 239
+        },
+        "shape": "Cube"
+    }
+    ],
+  "Id": "{6949198a-a886-4f7f-95f6-834e11ddd371}",
+  "Version": 133
+}
