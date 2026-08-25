@@ -2060,6 +2060,234 @@
             "type": "Box",
             "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
             "visible": false
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.7216046452522278,
+                "y": 0.3274916708469391,
+                "z": 0.12135040760040283
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{604c2bdd-57ed-41e2-a81e-48d9e9b233b5}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET3.fst",
+            "name": "BOTTLES SET 3 2",
+            "position": {"x":4930.978515625,"y":-7999.6240234375,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.752576470375061,
+                "y": 0.3415478765964508,
+                "z": 0.12655887007713318
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ebc3a8ac-6a48-4004-87b2-1e8051630c06}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET2.fst",
+            "name": "BOTTLES SET 2 1",
+            "position": {"x":4931.8154296875,"y":-7999.62548828125,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6850988864898682,
+                "y": 0.3109239637851715,
+                "z": 0.11521133035421371
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{2818c5af-0114-440b-922e-79424f53d114}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET1.fst",
+            "name": "BOTTLES SET 1 6",
+            "position": {"x":4930.17236328125,"y":-8000.40869140625,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.6850988864898682,
+                "y": 0.3109239637851715,
+                "z": 0.11521133035421371
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d95cc81f-79ae-45ec-bdae-83c19487d18a}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET1.fst",
+            "name": "BOTTLES SET 1 3",
+            "position": {"x":4930.17236328125,"y":-7999.625,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.7216046452522278,
+                "y": 0.3274916708469391,
+                "z": 0.12135040760040283
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{53a8fab3-a3c6-4a06-9946-3b6d2268aa90}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET3.fst",
+            "name": "BOTTLES SET 3 5",
+            "position": {"x":4930.978515625,"y":-8000.40771484375,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 140,
+                "green": 219,
+                "red": 255
+            },
+            "cutoff": 85,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.984778881072998,
+                "y": 3.984778881072998,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{252a378d-4eea-4481-a0cd-edbd6aec1d77}",
+            "intensity": 5,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "bottleLight",
+            "position": {"x":4931.0546875,"y":-7999.0556640625,"z":4663.22216796875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.3338068425655365,
+                "x": 0.9426414966583252,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 0.752576470375061,
+                "y": 0.3415478765964508,
+                "z": 0.12655887007713318
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ceb3945e-4158-4a22-a829-790e1d2ee052}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/BOTTLES_SET2.fst",
+            "name": "BOTTLES SET 2 4",
+            "position": {"x":4931.8154296875,"y":-8000.4091796875,"z":4663.8310546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 1.0000001192092896,
+                "z": 0
+            },
+            "type": "Model",
+            "useOriginalPivot": true
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
