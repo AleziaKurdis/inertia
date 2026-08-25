@@ -2288,6 +2288,33 @@
             },
             "type": "Model",
             "useOriginalPivot": true
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {
+                "x": 35.68082046508789,
+                "y": 10.266602516174316,
+                "z": 34.88665771484375
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{d93a4a86-4c6a-466a-9cf6-ce6df6e05d92}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/LOBBY-BACK.fst",
+            "name": "NEBULA-BAZAAR",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
