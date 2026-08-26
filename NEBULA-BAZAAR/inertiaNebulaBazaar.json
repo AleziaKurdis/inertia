@@ -2311,6 +2311,29 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":33.77955627441406,"y":8.431174278259277,"z":53.87506866455078},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{ea829ee8-c41f-4e72-9bd7-b3a3b12ae81a}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/MULTITABLES.fst",
+            "name": "MULTITABLES",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
