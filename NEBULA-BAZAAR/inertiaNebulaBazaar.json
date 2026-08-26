@@ -2356,12 +2356,7 @@
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
-            "rotation": {
-                "w": -0.19080901145935059,
-                "x": 0,
-                "y": 0.9816272258758545,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":-0.1908089518547058,"z":0,"w":-0.9816272854804993},
             "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
             "scriptTimestamp": 1670185484288,
             "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
@@ -2391,12 +2386,7 @@
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
-            "rotation": {
-                "w": -0.19080901145935059,
-                "x": 0,
-                "y": 0.9816272258758545,
-                "z": 0
-            },
+            "rotation": {"x":0,"y":-0.1908089518547058,"z":0,"w":-0.9816272854804993},
             "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitClient.js",
             "scriptTimestamp": 1670185484288,
             "serverScripts": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/rotatingStool/sitServer.js",
