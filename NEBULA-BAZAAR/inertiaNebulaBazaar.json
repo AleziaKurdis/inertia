@@ -2394,6 +2394,414 @@
             "type": "Box",
             "userData": "{\n    \"canClickOnModelToSit\": false,\n    \"dimensionsBase\": {\n        \"x\": 0.4743,\n        \"y\": 0.6772,\n        \"z\": 0.4743\n    },\n    \"dimensionsSeat\": {\n        \"x\": 0.5059,\n        \"y\": 0.4036,\n        \"z\": 0.61\n    },\n    \"fstBase\": \"rotostool_base_navy.fst\",\n    \"fstSeat\": \"rotostool_seat_navy.fst\",\n    \"name\": \"rotostool_navy\"\n}",
             "visible": false
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{cff460ac-fcc8-4e09-9f41-88532bb19823}",
+            "locked": true,
+            "name": "Seat 2.1",
+            "position": {"x":4926.6669921875,"y":-8000.9599609375,"z":4639.56396484375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{cacde0bc-fabc-427c-85d0-d0d0015ba335}",
+            "locked": true,
+            "name": "Seat 3.1",
+            "position": {"x":4924.16796875,"y":-8000.9599609375,"z":4639.56396484375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a1f1e34b-961d-4b4c-b7ec-1557d23f4dd6}",
+            "locked": true,
+            "name": "Seat 2.4",
+            "position": {"x":4925.34130859375,"y":-8000.9599609375,"z":4639.5634765625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{b9167dcd-c4ee-4f0d-99a3-67c69d3f5f17}",
+            "locked": true,
+            "name": "Seat 1.3",
+            "position": {"x":4927.85791015625,"y":-8000.9599609375,"z":4640.32080078125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{4b4af7e7-fc2d-4519-861c-7ffb7d24de7d}",
+            "locked": true,
+            "name": "Seat 1.4",
+            "position": {"x":4927.85791015625,"y":-8000.9599609375,"z":4639.5634765625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{a4d26078-0f70-4615-944f-343e733b1ae9}",
+            "locked": true,
+            "name": "Seat 3.3",
+            "position": {"x":4922.84228515625,"y":-8000.9599609375,"z":4640.32080078125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{cb373a3a-7705-4206-8deb-15f17f271edd}",
+            "locked": true,
+            "name": "Seat 1.1",
+            "position": {"x":4929.18359375,"y":-8000.9599609375,"z":4639.56396484375},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{50aa2f8c-695f-4f5c-9c1a-9ef89c3cce70}",
+            "locked": true,
+            "name": "Seat 3.4",
+            "position": {"x":4922.84228515625,"y":-8000.9599609375,"z":4639.5634765625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{6e1c63f9-871b-4648-91a2-a81e5d737076}",
+            "locked": true,
+            "name": "Seat 3.2",
+            "position": {"x":4924.16796875,"y":-8000.9599609375,"z":4640.3212890625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{3262753b-0578-4f70-9e1a-e91e104c918e}",
+            "locked": true,
+            "name": "Seat 1.2",
+            "position": {"x":4929.18359375,"y":-8000.9599609375,"z":4640.3212890625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{92a6adb4-6cdc-4472-a1ce-a78721744ef7}",
+            "locked": true,
+            "name": "Seat 2.2",
+            "position": {"x":4926.6669921875,"y":-8000.9599609375,"z":4640.3212890625},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": 0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
+            "alpha": 0,
+            "angularDamping": 0,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 0.30000001192092896,
+                "y": 0.009999999776482582,
+                "z": 0.30000001192092896
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{040b75dc-85d8-406f-bd67-9bd51fd0f0fa}",
+            "locked": true,
+            "name": "Seat 2.3",
+            "position": {"x":4925.34130859375,"y":-8000.9599609375,"z":4640.32080078125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.7071068286895752,
+                "x": 0,
+                "y": 0.7071068286895752,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
+            "shape": "Cube",
+            "type": "Box"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
