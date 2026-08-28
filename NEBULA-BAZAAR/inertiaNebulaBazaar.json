@@ -2802,6 +2802,90 @@
             "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/sit/sit_spot.js",
             "shape": "Cube",
             "type": "Box"
+        },
+        {
+            "animation": {
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.2593900263309479,
+                "y": 0.5084574222564697,
+                "z": 0.2593900263309479
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{739774b8-7026-4b20-afed-d36d85ba5e8b}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/hallucense/components/hallucense.fbx",
+            "name": "HALLUCENSE Classic",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4928.0947265625,"y":-8000.181640625,"z":4661.9599609375},
+            "rotation": {
+                "w": 0.9510565400123596,
+                "x": 0,
+                "y": 0.30901700258255005,
+                "z": 0
+            },
+            "script": "https://aleziakurdis.github.io/hallucense/components/hallucenseManager.js",
+            "scriptTimestamp": 1787801209601,
+            "shapeType": "box",
+            "type": "Model"
+        },
+        {
+            "animation": {
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.2593900263309479,
+                "y": 0.5084574222564697,
+                "z": 0.2593900263309479
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{7380c8bc-4271-4fa6-a3ee-987853c972c7}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucense.fbx",
+            "name": "HALLUCENSE Purple Radian 1",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4918.08056640625,"y":-8000.46044921875,"z":4668.033203125},
+            "script": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucenseManager.js",
+            "scriptTimestamp": 1787801603816,
+            "shapeType": "box",
+            "type": "Model"
+        },
+        {
+            "animation": {
+                "smoothFrames": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "dimensions": {
+                "x": 0.2593900263309479,
+                "y": 0.5084574222564697,
+                "z": 0.2593900263309479
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{cde8a162-de80-4944-9e53-1ed301a080f9}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucense.fbx",
+            "name": "HALLUCENSE Purple Radian 2",
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4914.77392578125,"y":-8000.46044921875,"z":4664.7265625},
+            "script": "https://aleziakurdis.github.io/hallucense/purpleRadian/hallucenseManager.js",
+            "scriptTimestamp": 1787801619321,
+            "shapeType": "box",
+            "type": "Model"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
