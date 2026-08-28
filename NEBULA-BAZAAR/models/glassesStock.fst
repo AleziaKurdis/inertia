@@ -1,3 +1,3 @@
 name = glassesStock
 filename = glassesStock.glb
-materialMap = []
+materialMap = [{"mat::GLASS":"glassMaterial.json#GLASS"}]

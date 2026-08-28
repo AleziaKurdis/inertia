@@ -1,0 +1,13 @@
+{
+    "materialVersion": 1,
+    "materials": [
+        {
+            "albedo": [ 0.72156, 0.8, 0.7372549],
+            "metallic": 1.0,
+            "roughness": 0.0,
+            "opacity": 0.878,
+            "cullFaceMode": "CULL_BACK",
+            "model": "hifi_pbr"
+        }
+    ]
+}
