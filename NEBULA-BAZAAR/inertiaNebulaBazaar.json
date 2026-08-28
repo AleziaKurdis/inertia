@@ -2894,11 +2894,11 @@
             },
             "blendshapeCoefficients": "{\n}\n",
             "damping": 0,
-            "dimensions": {"x":7.957658290863037,"y":3.0883212089538574,"z":23.48274803161621},
+            "dimensions": {"x":0.2990840673446655,"y":0.13108259439468384,"z":0.6882050037384033},
             "grab": {
                 "grabbable": false
             },
-            "id": "{ac1a71ac-6fc0-44f4-948b-63644fd56671}",
+            "id": "{1693f5e1-7d5d-4ae9-a310-46a8c7217c3f}",
             "locked": true,
             "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/glassesStock.fst",
             "name": "GLASSES STOCK 1",
@@ -2908,7 +2908,32 @@
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
-            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+            "position": {"x":4929.43017578125,"y":-7999.64794921875,"z":4664.35693359375},
+            "rotation": {"x":-8.398352946414889e-8,"y":-0.7071066498756409,"z":1.1920928955078125e-7,"w":-0.7071070075035095}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":0.2990840673446655,"y":0.13108259439468384,"z":0.6882050037384033},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{c14c4199-a960-4d85-8597-1cf7337d9d64}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/glassesStock.fst",
+            "name": "GLASSES STOCK 2",
+            "shapeType": "none",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4929.43017578125,"y":-8000.40869140625,"z":4664.35693359375},
+            "rotation": {"x":-8.398352946414889e-8,"y":-0.7071066498756409,"z":1.1920928955078125e-7,"w":-0.7071070075035095}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
