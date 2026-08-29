@@ -11,7 +11,7 @@
                     "green": 255,
                     "red": 255
                 },
-                "ambientIntensity": 0.10000000149011612,
+                "ambientIntensity": 1.0,
                 "ambientURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/AMBIENT.jpg"
             },
             "ambientLightMode": "enabled",
