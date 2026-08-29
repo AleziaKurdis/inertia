@@ -12,7 +12,7 @@
                     "red": 255
                 },
                 "ambientIntensity": 0.10000000149011612,
-                "ambientURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/TEMP_SKY.jpg"
+                "ambientURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/AMBIENT.jpg"
             },
             "ambientLightMode": "enabled",
             "bloom": {
