@@ -4,7 +4,7 @@
         {
             "albedo": [1, 1, 1],
             "metallic": 0.001,
-            "emissive": [0.2, 0.2, 2.74],
+            "emissive": [1.0143, 1.0143, 4.24],
             "cullFaceMode": "CULL_BACK",
             "model": "hifi_pbr"
         }
