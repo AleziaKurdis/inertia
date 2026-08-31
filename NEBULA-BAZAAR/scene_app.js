@@ -18,7 +18,7 @@
     var APP_ICON_INACTIVE = ROOT + "application/icon_inactive.png";
     var APP_ICON_ACTIVE = ROOT + "application/icon_active.png";
     var appStatus = false;
-    var ICON_CAPTION_COLOR = "##ffae00";
+    var ICON_CAPTION_COLOR = "#ffae00";
     var button;
     var isRunning = false;
     
@@ -33,6 +33,16 @@
     
     let timerStatus = false;
     let timer;
+
+    let spotlightIDs = {
+        "rear-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "rear-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "side-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "side-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "front-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "front-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
+        "followSpot": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}}
+    };
     
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["position"]);
