@@ -2956,7 +2956,8 @@
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
-            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+            "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875},
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/scene_app.js"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
