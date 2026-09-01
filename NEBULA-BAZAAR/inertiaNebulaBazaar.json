@@ -2244,8 +2244,116 @@
             "intensity": 5,
             "isSpotlight": true,
             "locked": true,
-            "name": "bottleLight",
-            "position": {"x":4931.0546875,"y":-7999.0556640625,"z":4663.22216796875},
+            "name": "bottleLight 1",
+            "position": {"x":4932.44140625,"y":-7999.0556640625,"z":4663.22216796875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.3338068425655365,
+                "x": 0.9426414966583252,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 140,
+                "green": 219,
+                "red": 255
+            },
+            "cutoff": 85,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.984778881072998,
+                "y": 3.984778881072998,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{413c9ea8-6c58-4436-b7ca-bfdd81a471f5}",
+            "intensity": 5,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "bottleLight 2",
+            "position": {"x":4931.26513671875,"y":-7999.0556640625,"z":4663.22216796875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.3338068425655365,
+                "x": 0.9426414966583252,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 140,
+                "green": 219,
+                "red": 255
+            },
+            "cutoff": 85,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.984778881072998,
+                "y": 3.984778881072998,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{0439948a-69de-4fc2-846b-b25f99c0e829}",
+            "intensity": 5,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "bottleLight 3",
+            "position": {"x":4930.005859375,"y":-7999.0556640625,"z":4663.22216796875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "rotation": {
+                "w": -0.3338068425655365,
+                "x": 0.9426414966583252,
+                "y": 0,
+                "z": 0
+            },
+            "type": "Light"
+        },
+        {
+            "angularDamping": 0,
+            "color": {
+                "blue": 140,
+                "green": 219,
+                "red": 255
+            },
+            "cutoff": 85,
+            "damping": 0,
+            "dimensions": {
+                "x": 3.984778881072998,
+                "y": 3.984778881072998,
+                "z": 4
+            },
+            "exponent": 1,
+            "falloffRadius": 1.5,
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{dcef99f5-00e9-448e-91f7-bb85634fdbce}",
+            "intensity": 5,
+            "isSpotlight": true,
+            "locked": true,
+            "name": "bottleLight 4",
+            "position": {"x":4933.5712890625,"y":-7999.0556640625,"z":4663.22216796875},
             "renderWithZones": [
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
