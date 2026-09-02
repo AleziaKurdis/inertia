@@ -3066,6 +3066,30 @@
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875},
             "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/scene_app.js"
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":0.43129342794418335,"y":0.1890273243188858,"z":0.9924243092536926},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{6e747f4f-19a7-4ce9-8df1-bf9b5cb0766b}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/COFFEE-MACHINE.fst",
+            "name": "COFFEE MACHINE",
+            "shapeType": "none",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4932.7060546875,"y":-8000.40869140625,"z":4664.54833984375},
+            "rotation": {"x":-8.398352946414889e-8,"y":-0.7071066498756409,"z":1.1920928955078125e-7,"w":-0.7071070075035095}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
