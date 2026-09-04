@@ -3113,6 +3113,30 @@
                 "{a56c825d-1843-415a-b930-07e00c899a9c}"
             ],
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
+        },
+        {
+            "angularDamping": 0,
+            "animation": {
+                "allowTranslation": false
+            },
+            "blendshapeCoefficients": "{\n}\n",
+            "damping": 0,
+            "dimensions": {"x":0.28085005283355713,"y":0.34215277433395386,"z":0.3447391390800476},
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{5d9569bb-3177-44c3-ac42-a9c0da7a38a2}",
+            "locked": true,
+            "modelURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/models/cups.glb",
+            "name": "CUPS",
+            "shapeType": "none",
+            "type": "Model",
+            "useOriginalPivot": true,
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "position": {"x":4933.51123046875,"y":-8000.40869140625,"z":4663.921875},
+            "rotation": {"x":-1.4367904555001587e-7,"y":-1.0000001192092896,"z":2.490837403001933e-8,"w":-2.384185791015625e-7}
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
