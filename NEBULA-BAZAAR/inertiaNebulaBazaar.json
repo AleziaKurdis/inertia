@@ -15,6 +15,18 @@
                 "ambientURL": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/images/AMBIENT.jpg"
             },
             "ambientLightMode": "enabled",
+            "audio": {
+                "listenerAttenuationCoefficients": [
+                    0.20000000298023224,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "listenerZones": [
+                    "{de2fa70e-289a-4dcf-b14d-07d01196da2d}",
+                    "{62b854ce-76f6-4b60-8ddd-ea7a80c0add3}",
+                    "{a56c825d-1843-415a-b930-07e00c899a9c}"
+                ]
+            },
             "bloom": {
                 "bloomIntensity": 0.4000000059604645
             },
@@ -3137,6 +3149,88 @@
             ],
             "position": {"x":4934.32470703125,"y":-8000.4716796875,"z":4663.6279296875},
             "rotation": {"x":-1.4367904555001587e-7,"y":-1.0000001192092896,"z":2.490837403001933e-8,"w":-2.384185791015625e-7}
+        },
+        {
+            "angularDamping": 0,
+            "audio": {
+                "listenerAttenuationCoefficients": [
+                    0.8999999761581421,
+                    0.5,
+                    0.4000000059604645
+                ],
+                "listenerZones": [
+                    "{a56c825d-1843-415a-b930-07e00c899a9c}",
+                    "{62b854ce-76f6-4b60-8ddd-ea7a80c0add3}",
+                    "{de2fa70e-289a-4dcf-b14d-07d01196da2d}"
+                ]
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 9.046592712402344,
+                "y": 4.341514587402344,
+                "z": 4.189170837402344
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{62b854ce-76f6-4b60-8ddd-ea7a80c0add3}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "AUDIO ZONE SCENE",
+            "position": {"x":4919.73876953125,"y":-7998.6142578125,"z":4649.923828125},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "shapeType": "box",
+            "type": "Zone"
+        },
+        {
+            "angularDamping": 0,
+            "audio": {
+                "listenerAttenuationCoefficients": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.5
+                ],
+                "listenerZones": [
+                    "{a56c825d-1843-415a-b930-07e00c899a9c}",
+                    "{62b854ce-76f6-4b60-8ddd-ea7a80c0add3}",
+                    "{de2fa70e-289a-4dcf-b14d-07d01196da2d}"
+                ]
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 9.779991149902344,
+                "y": 4.341514587402344,
+                "z": 15.635948181152344
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{de2fa70e-289a-4dcf-b14d-07d01196da2d}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0,
+                    "y": -0.7071067690849304,
+                    "z": 0.7071067690849304
+                }
+            },
+            "locked": true,
+            "name": "AUDIO ZONE BACKSTAGE",
+            "position": {"x":4911.4853515625,"y":-7998.6142578125,"z":4650.05810546875},
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "shapeType": "box",
+            "type": "Zone"
         }
     ],
     "Id":"{6588c107-dba3-4db5-8b72-f6c03e7aa2f8}",
