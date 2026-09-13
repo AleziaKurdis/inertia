@@ -164,235 +164,130 @@
                 font-family: FiraSans-Regular;
                 src: url(fonts/FiraSans-Regular.ttf);
             }
-            
             html {
                 width: 100%;
-                height: 100%;
-                margin: 0px;
-                padding: 0px;
+                margin: 0;
+                padding: 0;
             }
 
             body {
+                box-sizing: border-box;
                 font-family: FiraSans-Regular;
-                background: #000000;
+                background: #111111;
                 width: 100%;
-                height: 100%;
-                margin: 0px;
-                padding: 0px;
-                color:#bbbbbb;
+                margin: 0;
+                padding: 10px;
+                color: #ffffff;
                 overflow-y: hidden;
                 overflow-x: hidden;
-            }
-            
-            td.ALPHA {
-                background-color: #FFFFFF;
-                color: #6667AB;
-                border: 0;
-            }
-            
-            td.OMEGA {
-                background-color: #6667AB;
-                color: #FFFFFF;
-                border: 0;
-            }
-            #listContainer {
-                background-color: #000000;
-                text-align: right;
-                width: 100%;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 0;
-                border: 0;
-            }
-            table.etape {
-                width: 95%;
-                height: 80px;
-                border-collapse: collapse;
-                margin: 0;
-                border: 0;
-                background-color: #CCCCCC;
-                margin-bottom: 2px;
-            }
-            td {
-                font-family: FiraSans-Regular;
-                width: 100%;
-                margin: 0;
-                border: 0;
-                text-align: left;
-            }
-            td.numeroLine {
-                font-family: FiraSans-Regular;
-                font-size: 10px;
-                width: 25px;
-                padding: 3px;
-            }
-            #sortbar {
-                border: 0px;
-                padding: 2px;
-                margin: 0px;
-                font-size: 10px;
-            }
-            
-            .sortingBtn:focus {
-                outline: none;
-            }
-            
-            #sortingBtn {
-                vertical-align:middle;
-                font-family: FiraSans-SemiBold;
-                font-size: 16px;
-                color: #000000;
-                margin-bottom: 2px;
-            }
-            
-            #sort {
-                box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-                vertical-align: middle;
-            }
-            
-            #header {
-                width: 100%;
-                background-color: #234295;
-                background-image: url("header.jpg");
-                background-repeat: no-repeat;
-                height: 54px;
-                border: 0px;
-                padding: 0px;
-                margin: 0px;
-            }
-            div.golbalInfo {
-                font-family: FiraSans-Regular;
-                font-size: 11px;
-                padding: 2px;
-                width: 100%;
-                text-align: right;
-            }
-            td.displayName {
-                font-family: FiraSans-SemiBold;
-                font-size: 14px;
-                padding: 4px;
-                color: #000000;
-                width: 80%;
-                vertical-align: top;
-            }
-            td.description {
-                font-family: FiraSans-Regular;
-                font-size: 11px;
-                padding: 4px;
-                color: #000000;
-                vertical-align: top;
-            }
-            td.distance {
-                font-family: FiraSans-Regular;
-                font-size: 12px;
-                padding: 4px;
-                color: #CC0000;
-                width: 20%;
-                vertical-align: top;
-            }
-            .square {
-                width: 80px;
-                height: 80px;
-                overflow: hidden;
+                text-align: center;
             }
 
-            .square img {
-                height: 80px;
-                object-fit: cover;
-            }
-            td.placeInfo {
-                width: 60%;
-                height: 80px;
-            }
-            td.stampInfo {
-                width: 20%;
-                font-family: FiraSans-Regular;
-                font-size: 12px;
-                padding: 2px;
-                color: #234295;
-                text-align: center;
-                vertical-align: middle;
-            }
-            table.layout {
+            #maincontainer {
                 width: 100%;
+                text-align: center;
+            }
+
+            table {
+                width: 80%;
                 border-collapse: collapse;
-                margin: 0;
+                margin: 0 auto;
                 border: 0;
             }
-            #list {
-                width: 100%;
-                height: 585px;
-                overflow-y: auto;
-                overflow-x: hidden;
+            td {
+                background-color: #333333;
+                color: #FFFFFF;
+                border: 1px solid #dddddd;
             }
-            /*SCROLL BAR*/
-            ::-webkit-scrollbar {
-              width: 2px;
-              height: 2px;
+            div.colorsample {
+                width: 200px;
+                height: 20px;
+                border: 1px solid #BBBBBB;
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
-            ::-webkit-scrollbar-button {
-              width: 0px;
-              height: 0px;
+            img {
+                cursor: crosshair;
             }
-            ::-webkit-scrollbar-thumb {
-              background: #e1e1e1;
-              border: 0px none #ffffff;
-              border-radius: 50px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-              background: #ffffff;
-            }
-            ::-webkit-scrollbar-thumb:active {
-              background: #000000;
-            }
-            ::-webkit-scrollbar-track {
-              background: #666666;
-              border: 0px none #ffffff;
-              border-radius: 50px;
-            }
-            ::-webkit-scrollbar-track:hover {
-              background: #666666;
-            }
-            ::-webkit-scrollbar-track:active {
-              background: #333333;
-            }
-            ::-webkit-scrollbar-corner {
-              background: transparent;
-            }
-            /*END SCROLL BAR*/
         </style>
     </head>
     <body>
-        <table class="layout">
-            <tr>
-                <td colspan='3'><div id="header"></div></td>
-            </tr>
-            <tr>
-                <td style="width: 40%">&nbsp;</td>
-                <td style="width: 30%"><div class="golbalInfo" id="totalKM"></div></td>
-                <td style="width: 30%"><div class="golbalInfo" id="completion"></div></td>
-            </tr>
-            <tr>
-                <td colspan='3' style='text-align: left; padding: 0; vertical-align: middle;'><div id="sortbar"></div></td>
-            </tr>
-            <tr>
-                <td colspan='3' id="listContainer">
-                    <div id="list"></div>
-                </td>
-            </tr>
-        </table>
+        <h1>SCENE MANAGER</h1>
+        <div id="maincontainer">
+            <table>
+                <tr>
+                    <td>
+                        Back Left<br>
+                        <img src="hue.jpg" id="L-1" draggable="false"><br>
+                        <div class="colorsample" id="sampleL-1">
+                    </td>
+                    <td>
+                        Back Right<br>
+                        <img src="hue.jpg" id="R-1" draggable="false"><br>
+                        <div class="colorsample" id="sampleR-1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Middle Left<br>
+                        <img src="hue.jpg" id="L0" draggable="false"><br>
+                        <div class="colorsample" id="sampleL0">
+                        
+                    </td>
+                    <td>
+                        Middle Right<br>
+                        <img src="hue.jpg" id="R0" draggable="false"><br>
+                        <div class="colorsample" id="sampleR0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Front Left<br>
+                        <img src="hue.jpg" id="L+1" draggable="false"><br>
+                        <div class="colorsample" id="sampleL+1">
+                    </td>
+                    <td>
+                        Front Right<br>
+                        <img src="hue.jpg" id="R+1" draggable="false"><br>
+                        <div class="colorsample" id="sampleR+1">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan = "2">
+                        Follow Spot<br>
+                        <img src="hue.jpg" id="FC" draggable="false"><br>
+                        <div class="colorsample" id="sampleFC">
+                    </td>
+                </tr>
+            </table>
+        </div>
         <script>
-/*            function initiate() {
+            function hueClick(event) {
+                let img = event.currentTarget;
+                let rect = img.getBoundingClientRect();
+
+                let x = event.clientX - rect.left;
+
+                let hue = Math.floor(x * 2);
+                if (hue > 359) {
+                    hue = -1;
+                }
                 let messageToSend = {
                     "channel": channel,
-                    "action": "UI_READY"
+                    "action": "SET_SPOT",
+                    "name": img.id,
+                    "hue": hue
                 };
                 EventBridge.emitWebEvent(JSON.stringify(messageToSend));
             }
             
-            initiate();*/
+            document.querySelectorAll("img[id]").forEach(function(img) {
+                if (img.src.indexOf("hue.jpg") !== -1) {
+                    img.addEventListener("click", hueClick);
+                }
+            });
+
         </script>
     </body>
 </html>
