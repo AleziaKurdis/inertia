@@ -55,7 +55,8 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70
+            "cutoff": 70,
+            "hue": -1
         },
         "R-1": { 
             "id": Uuid.NONE, 
@@ -75,7 +76,8 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70
+            "cutoff": 70,
+            "hue": -1
         },
         "L0": { 
             "id": Uuid.NONE, 
@@ -95,7 +97,8 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70
+            "cutoff": 70,
+            "hue": -1
         },
         "R0": { 
             "id": Uuid.NONE, 
@@ -115,7 +118,8 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70
+            "cutoff": 70,
+            "hue": -1
         },
         "L+1": { 
             "id": Uuid.NONE, 
@@ -135,7 +139,8 @@
                 "y": 6.963106632232666,
                 "z": 9.089690208435059
             },
-            "cutoff": 50
+            "cutoff": 50,
+            "hue": -1
         },
         "R+1": { 
             "id": Uuid.NONE, 
@@ -155,7 +160,8 @@
                 "y": 6.963106632232666,
                 "z": 9.089690208435059
             },
-            "cutoff": 50
+            "cutoff": 50,
+            "hue": -1
         },
         "FC": { 
             "id": Uuid.NONE, 
@@ -175,22 +181,25 @@
                 "y": 3.773848295211792,
                 "z": 12.21242904663086
             },
-            "cutoff": 18
+            "cutoff": 18,
+            "hue": -1
         }
     };
     
     function updateSpot(name, hue) {
-        const spot = spotlights["name"];
+        const spot = spotlights[name];
         print("SPOT: " + JSON.stringify(spot));
         
         if (spot.id !== Uuid.NONE && hue === -1) {
             Entities.deleteEntity(spot.id);
-            spotlights["name"].id = Uuid.NONE;
+            spotlights[name].id = Uuid.NONE;
+            spotlights[name].hue = -1;
             return;
         }
         if (spot.id !== Uuid.NONE) {
             Entities.deleteEntity(spot.id);
-            spotlights["name"].id = Uuid.NONE;
+            spotlights[name].id = Uuid.NONE;
+            spotlights[name].hue = -1;
             return;
         }
         
@@ -198,8 +207,8 @@
         if (name === "FC") {
             intensity = 24.0;
         }
-        
-        spotlights["name"].id = Entities.addEntity({
+        spotlights[name].hue = hue;
+        spotlights[name].id = Entities.addEntity({
             "angularDamping": 0,
             "cutoff": spot.cutoff,
             "damping": 0,
@@ -219,6 +228,16 @@
             "type": "Light"
         }, "local");
         
+    }
+
+    function clearSpotLights() {
+        for (let name in spotlights) {
+            if (spotlights[name].id !== Uuid.NONE) {
+                Entities.deleteEntity(spotlights[name].id);
+                spotlights[name].id = Uuid.NONE;
+                spotlights[name].hue = -1;
+            }
+        }
     }
     
     this.preload = function(entityID) {
@@ -282,21 +301,14 @@
                     d = new Date();
                     timestamp = d.getTime();
                     updateSpot(instruction.name, instruction.hue);
-                }/* else if (instruction.action === "UI_READY") {
-                    
-                    var payload = {
-                        "virtualRoute": virtualRoute,
-                        "list": Settings.getValue(PASSPORT_SETTING, []),
-                        "sort": Settings.getValue(PASSPORT_SORT_SETTING, "OMEGA"),
-                    };
-                    
+                } else if (instruction.action === "UI_READY") {
                     var messageToSent = {
                         "channel": channel,
-                        "action": "PASSPORT_DATA",
-                        "data": payload
+                        "action": "CURRENT_STATE",
+                        "data": spotlights
                     };
                     tablet.emitScriptEvent(JSON.stringify(messageToSent));
-                } */
+                }
             }
         }
     }
@@ -345,6 +357,7 @@
     Window.domainChanged.connect(onDomainChanged);
 
     function cleanup() {
+        clearSpotLights();
         if (appStatus) {
             tablet.gotoHomeScreen();
             tablet.webEventReceived.disconnect(onAppWebEventReceived);
