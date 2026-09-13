@@ -30,129 +30,19 @@
                     return;
                 }
                 if (messageObj.channel === channel) {
-/*                    if (messageObj.action === "PASSPORT_DATA") {
-                        let passportData = messageObj.data;
-                        sorting = passportData.sort;
-                        passportList = passportData.list;
-                        virtualRoute = passportData.virtualRoute;
-                        generateList();
-                    }*/
+                    if (messageObj.action === "CURRENT_STATE") {
+                        let spotlights = messageObj.data;
+                        for (let name in spotlights) {
+                            if (spotlights[name].hue === -1) {
+                                document.getElementById("sample" + name).style.backgroundColor = "#000000";
+                            } else {
+                                document.getElementById("sample" + name).style.backgroundColor = hslToHex(spotlights[name].hue/360, 1, 0.5);
+                            }
+                        }
+                    }
                 }
             });
             
-/*            function generateList() {
-                let nbrVisited = 0;
-                let kmDone = 0;
-                let i;
-                let result;
-                let sortbar = "<span class='sortingBtn " + sorting + "' id= 'sortingBtn' onClick='changeSort();'><img id='sort' src='" + sorting + ".jpg' align='top'>  &#8645; </span>";
-                let content = "";
-                let lineNo = 0;
-                if (sorting === "OMEGA") {
-                    for (i = 0; i < virtualRoute.length; i++) {
-                        lineNo++;
-                        result = genLineOfList(lineNo, virtualRoute[i]);
-                        if (result.completed) {
-                            nbrVisited++;
-                            kmDone = kmDone + result.km;
-                        }
-                        content = content + result.content;
-                    }
-                } else {
-                    for (i = virtualRoute.length - 1; i > -1; i--) {
-                        lineNo++;
-                        result = genLineOfList(lineNo, virtualRoute[i]);
-                        if (result.completed) {
-                            nbrVisited++;
-                            kmDone = kmDone + result.km;
-                        }
-                        content = content + result.content;
-                    }
-                }
-                let completionPercent = Math.round((nbrVisited/virtualRoute.length) * 100);
-
-                document.getElementById("sortbar").innerHTML = sortbar;
-                document.getElementById("completion").innerHTML = "Completion: " + completionPercent + " %&nbsp;";
-                document.getElementById("totalKM").innerHTML = "Distance: " +kmDone + " km";
-                document.getElementById("list").innerHTML = content;
-                if (sorting === "OMEGA") {
-                    setGradient(document.getElementById("listContainer"), 180, "#6667AB", "#FFFFFF");
-                    document.getElementById("sortbar").style.backgroundColor = "#6667AB";
-                    document.getElementById("sortbar").style.color = "#FFFFFF";
-                } else {
-                    setGradient(document.getElementById("listContainer"), 0, "#6667AB", "#FFFFFF");
-                    document.getElementById("sortbar").style.backgroundColor = "#FFFFFF";
-                    document.getElementById("sortbar").style.color = "#6667AB";
-                }
-            }
-            
-            function setGradient(element, angle, color1, color2) {
-                element.style.backgroundImage = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
-            }
-            
-            function genLineOfList(no, etape) {
-                let userInfo = getUserInfo(etape.placeName);
-                
-                let km, completed, stamp, kmString;
-                if (userInfo.completionStatus) {
-                    km = etape.km * userInfo.numberOfCompletion;
-                    kmString = "(" + userInfo.numberOfCompletion + ")<br>" + km + " km";
-                    stamp = "<img src='STAMP.png'>";
-                } else {
-                    km = 0;
-                    kmString = "";
-                    stamp = "";
-                }
-                
-                let line = "<table class='etape'><tr>";
-                line += "<td class='" + sorting + " numeroLine'>";
-                line += no;
-                line += "</td>";
-                line += "<td style='width: 80px; height: 80px;'>";
-                line += "<div class='square'><img src='" + etape.imageUrl + "'></div>";
-                line += "</td>";
-                line += "<td class='placeInfo'>";
-                line += "<table style='height: 80px;'><tr><td class='displayName'>" + etape.displayName + "</td><td class='distance'>" + etape.km + " km</td></tr><tr><td colspan='2' class='description'>" + etape.description + "</td></tr></table>";
-                line += "</td>";
-                line += "<td class='stampInfo'>";
-                line += stamp + kmString;
-                line += "</td>";
-                line += "</tr></table>";
-                return {
-                    "completed": userInfo.completionStatus,
-                    "km": km,
-                    "content": line
-                };
-            }
-            
-            function getUserInfo(placeName) {
-                let toReturn = {"numberOfCompletion": false};
-                for (let i = 0; i < passportList.length; i++) {
-                    if (passportList[i].placeName === placeName) {
-                        toReturn = passportList[i];
-                        break;
-                    }
-                }
-                
-                return toReturn;
-            }
-            
-            function changeSort() {
-                if (sorting === "OMEGA") {
-                    sorting = "ALPHA";
-                } else {
-                    sorting = "OMEGA";
-                }
-
-                let messageToSend = {
-                    "channel": channel,
-                    "action": "SET_SORT",
-                    "sorting": sorting
-                };
-                EventBridge.emitWebEvent(JSON.stringify(messageToSend));
-
-                generateList();
-            }*/
         </script>
         <style>
             @font-face {
@@ -282,9 +172,9 @@
                 };
                 
                 if (hue === -1) {
-                    document.getElementById("sample" + img.id).style.background-color = "#000000";
+                    document.getElementById("sample" + img.id).style.backgroundColor = "#000000";
                 } else {
-                    document.getElementById("sample" + img.id).style.background-color = hslToHex(hue, 1, 0.5);
+                    document.getElementById("sample" + img.id).style.backgroundColor = hslToHex(hue/360, 1, 0.5);
                 }
                 EventBridge.emitWebEvent(JSON.stringify(messageToSend));
             }
@@ -338,8 +228,11 @@
                     g.toString(16).padStart(2, "0") +
                     b.toString(16).padStart(2, "0");
             }
-
-
+            
+            EventBridge.emitWebEvent(JSON.stringify({
+                    "channel": channel,
+                    "action": "UI_READY"
+            }));
         </script>
     </body>
 </html>
