@@ -10,45 +10,222 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 (function() {
-    var jsMainFileName = "scene_app.js";
-    var ROOT = Script.resolvePath('').split(jsMainFileName)[0];
+    const jsMainFileName = "scene_app.js";
+    const ROOT = Script.resolvePath('').split(jsMainFileName)[0];
     
-    var APP_NAME = "SCENE";
-    var APP_URL = ROOT + "application/scene.html";
-    var APP_ICON_INACTIVE = ROOT + "application/icon_inactive.png";
-    var APP_ICON_ACTIVE = ROOT + "application/icon_active.png";
-    var appStatus = false;
-    var ICON_CAPTION_COLOR = "#ffae00";
-    var button;
-    var isRunning = false;
+    const APP_NAME = "SCENE";
+    const APP_URL = ROOT + "application/scene.html";
+    const APP_ICON_INACTIVE = ROOT + "application/icon_inactive.png";
+    const APP_ICON_ACTIVE = ROOT + "application/icon_active.png";
+    let appStatus = false;
+    const ICON_CAPTION_COLOR = "#ffae00";
+    let button;
+    let isRunning = false;
+    let thisEntityID;
     
-    var thisPosition;
-    var UPDATE_TIMER_INTERVAL = 5000;
+    let thisPosition;
+    const UPDATE_TIMER_INTERVAL = 5000;
+    let renderWithZones;
     
-    var channel = "nebulaBazaar.application.ak.scene";
-    var timestamp = 0;
-    var INTERCALL_DELAY = 200; //0.3 sec
+    const channel = "nebulaBazaar.application.ak.scene";
+    let timestamp = 0;
+    const INTERCALL_DELAY = 200; //0.3 sec
     
-    var tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
+    let tablet = Tablet.getTablet("com.highfidelity.interface.tablet.system");
     
     let timerStatus = false;
     let timer;
 
-    let spotlightIDs = {
-        "rear-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "rear-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "side-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "side-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "front-left": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "front-right": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}},
-        "followSpot": { "id": Uuid.NONE, "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}}
+    let spotlights = {
+        "L-1": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -8.05615234375,
+                "y": 4.3408203125,
+                "z": 0.8662109375
+            }, 
+            "rotation": {
+                "w": 0.9281235337257385,
+                "x": -0.33780932426452637,
+                "y": 0.08972713351249695,
+                "z": -0.12814362347126007
+            },
+            "dimensions": {
+                "x": 8.54151439666748,
+                "y": 8.54151439666748,
+                "z": 9.089690208435059
+            },
+            "cutoff": 70
+        },
+        "R-1": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -8.05615234375,
+                "y": 4.3408203125,
+                "z": -4.47216796875
+            }, 
+            "rotation": {
+                "w": 0.09305079281330109,
+                "x": 0.12575092911720276,
+                "y": 0.9366482496261597,
+                "z": 0.3133981227874756
+            },
+            "dimensions": {
+                "x": 8.54151439666748,
+                "y": 8.54151439666748,
+                "z": 9.089690208435059
+            },
+            "cutoff": 70
+        },
+        "L0": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -5.36572265625,
+                "y": 4.3408203125,
+                "z": -0.01025390625
+            }, 
+            "rotation": {
+                "w": 0.8870108127593994,
+                "x": -0.4617486000061035,
+                "y": 0,
+                "z": 0
+            },
+            "dimensions": {
+                "x": 8.54151439666748,
+                "y": 8.54151439666748,
+                "z": 9.089690208435059
+            },
+            "cutoff": 70
+        },
+        "R0": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -5.36572265625,
+                "y": 4.3408203125,
+                "z": -3.23046875
+            }, 
+            "rotation": {
+                "w": 0,
+                "x": 0,
+                "y": 0.887010931968689,
+                "z": 0.4617486298084259
+            },
+            "dimensions": {
+                "x": 8.54151439666748,
+                "y": 8.54151439666748,
+                "z": 9.089690208435059
+            },
+            "cutoff": 70
+        },
+        "L+1": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -3.607421875,
+                "y": 4.3408203125,
+                "z": 0.1787109375
+            }, 
+            "rotation": {
+                "w": 0.8853564858436584,
+                "x": -0.4608874022960663,
+                "y": 0.028189081698656082,
+                "z": -0.05415072292089462
+            },
+            "dimensions": {
+                "x": 6.963106632232666,
+                "y": 6.963106632232666,
+                "z": 9.089690208435059
+            },
+            "cutoff": 50
+        },
+        "R+1": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -3.607421875,
+                "y": 4.3408203125,
+                "z": -3.23046875
+            }, 
+            "rotation": {
+                "w": 0.028189077973365784,
+                "x": 0.054150719195604324,
+                "y": 0.8853564262390137,
+                "z": 0.4608873426914215
+            },
+            "dimensions": {
+                "x": 6.963106632232666,
+                "y": 6.963106632232666,
+                "z": 9.089690208435059
+            },
+            "cutoff": 50
+        },
+        "FC": { 
+            "id": Uuid.NONE, 
+            "localPosition": {
+                "x": -1.31640625,
+                "y": 5.2529296875,
+                "z": -1.62060546875
+            }, 
+            "rotation": {
+                "w": -0.704416036605835,
+                "x": 0.704416036605835,
+                "y": -0.061628419905900955,
+                "z": 0.06162843480706215
+            },
+            "dimensions": {
+                "x": 3.773848295211792,
+                "y": 3.773848295211792,
+                "z": 12.21242904663086
+            },
+            "cutoff": 18
+        }
     };
     
-    this.preload = function(entityID) {
-        var properties = Entities.getEntityProperties(entityID, ["position"]);
-        thisPosition = properties.position;
+    function updateSpot(name, hue) {
+        const spot = spotlights["name"];
+        print("SPOT: " + JSON.stringify(spot));
         
-        //Create Light here
+        if (spot.id !== Uuid.NONE && hue === -1) {
+            Entities.deleteEntity(spot.id);
+            spotlights["name"].id = Uuid.NONE;
+            return;
+        }
+        if (spot.id !== Uuid.NONE) {
+            Entities.deleteEntity(spot.id);
+            spotlights["name"].id = Uuid.NONE;
+            return;
+        }
+        
+        let intensity = 18.0;
+        if (name === "FC") {
+            intensity = 24.0;
+        }
+        
+        spotlights["name"].id = Entities.addEntity({
+            "angularDamping": 0,
+            "cutoff": spot.cutoff,
+            "damping": 0,
+            "dimensions": spot.dimensions,
+            "exponent": 1,
+            "falloffRadius": 3.618,
+            "grab": {
+                "grabbable": false
+            },
+            "intensity": intensity,
+            "isSpotlight": true,
+            "name": "FC+1",
+            "parentID": thisEntityID,
+            "localPosition": spot.localPosition,
+            "renderWithZones": renderWithZones,
+            "rotation": spot.rotation,
+            "type": "Light"
+        }, "local");
+        
+    }
+    
+    this.preload = function(entityID) {
+        thisEntityID = entityID;
+        let properties = Entities.getEntityProperties(entityID, ["position", "renderWithZones"]);
+        thisPosition = properties.position;
+        renderWithZones = properties.renderWithZones;
         
         
         timer = Script.setInterval(checkDistance, UPDATE_TIMER_INTERVAL);
@@ -101,11 +278,11 @@
             }
             
             if (instruction.channel === channel) {
-/*              if (instruction.action === "SET_S/ORT" && (n - timestamp) > INTERCALL_DELAY) {
+                if (instruction.action === "SET_SPOT" && (n - timestamp) > INTERCALL_DELAY) {
                     d = new Date();
                     timestamp = d.getTime();
-                    Settings.setValue(PASSPORT_SORT_SETTING, instruction.sorting);
-                } else if (instruction.action === "UI_READY") {
+                    updateSpot(instruction.name, instruction.hue);
+                }/* else if (instruction.action === "UI_READY") {
                     
                     var payload = {
                         "virtualRoute": virtualRoute,
