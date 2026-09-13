@@ -273,12 +273,15 @@
                 if (hue > 359) {
                     hue = -1;
                 }
+                
                 let messageToSend = {
                     "channel": channel,
                     "action": "SET_SPOT",
                     "name": img.id,
                     "hue": hue
                 };
+                
+                alert(JSON.stringify(messageToSend));
                 EventBridge.emitWebEvent(JSON.stringify(messageToSend));
             }
             
