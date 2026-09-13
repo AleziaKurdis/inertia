@@ -198,9 +198,6 @@
         }
         if (spot.id !== Uuid.NONE) {
             Entities.deleteEntity(spot.id);
-            spotlights[name].id = Uuid.NONE;
-            spotlights[name].hue = -1;
-            return;
         }
         
         let intensity = 18.0;
@@ -230,7 +227,7 @@
                 "red": color[0],
                 "green": color[1],
                 "blue": color[2]
-            }
+            },
             "localPosition": spot.localPosition,
             "renderWithZones": renderWithZones,
             "rotation": spot.rotation,
