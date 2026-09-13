@@ -55,7 +55,7 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70,
+            "cutoff": -1,
             "hue": -1
         },
         "R-1": { 
@@ -76,7 +76,7 @@
                 "y": 8.54151439666748,
                 "z": 9.089690208435059
             },
-            "cutoff": 70,
+            "cutoff": -1,
             "hue": -1
         },
         "L0": { 
@@ -209,6 +209,10 @@
         if (hue !== -1) {
             color = hslToRgb(hue/360, 1, 0.5);
         }
+        let isSpotlight = true;
+        if (spot.cutoff === -1) {
+            isSpotlight = false;
+        }
         spotlights[name].id = Entities.addEntity({
             "angularDamping": 0,
             "cutoff": spot.cutoff,
@@ -220,7 +224,7 @@
                 "grabbable": false
             },
             "intensity": intensity,
-            "isSpotlight": true,
+            "isSpotlight": isSpotlight,
             "name": "FC+1",
             "parentID": thisEntityID,
             "color": {
