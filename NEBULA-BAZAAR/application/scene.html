@@ -40,7 +40,7 @@
                             }
                         }
                         fogActive = messageObj.fogActive;
-                        fogActive = true; //update controle ############################################
+                        updateFogState();
                     }
                 }
             });
@@ -153,9 +153,13 @@
                     </td>
                 </tr>
             </table>
+            <input type="checkbox" id="fogActive" name="fogActive">
+            <label for="fogActive">FOG</label>
         </div>
         <script>
             function hueClick(event) {
+                fogActive = document.getElementById("fogActive").checked;
+            
                 let img = event.currentTarget;
                 let rect = img.getBoundingClientRect();
 
@@ -187,6 +191,14 @@
                     img.addEventListener("click", hueClick);
                 }
             });
+
+            function updateFogState() {
+                if (fogActive) {
+                    document.getElementById("fogActive").checked = true;
+                } else {
+                    document.getElementById("fogActive").checked = false;
+                }
+            }
 
             /*
              * Converts an HSL color value to RGB. Conversion formula
