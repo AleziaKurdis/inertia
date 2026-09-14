@@ -168,7 +168,7 @@
         }
     };
     
-    function updateSpot(name, hue) {
+    function updateSpot(name, hue, isFog) {
         const spot = spotlights[name];
         //print("SPOT: " + JSON.stringify(spot));
         
@@ -207,7 +207,7 @@
             },
             "intensity": intensity,
             "isSpotlight": isSpotlight,
-            "name": "FC+1",
+            "name": name,
             "parentID": thisEntityID,
             "color": {
                 "red": color[0],
@@ -219,6 +219,91 @@
             "rotation": spot.rotation,
             "type": "Light"
         }, "local");
+        
+        if (isFog) {
+            let size = 4;
+            if (name === "FC") {
+                size = 3;
+            }
+            let parentPosition = Vec3.sum(thisPosition, spot.localPosition);
+            parentPosition.y = thisPosition.y + 1.1675;
+            
+            
+            letfogID = Entities.addEntity({
+                "parentID": spotlights[name].id,
+                "renderWithZones": renderWithZones,
+                "accelerationSpread": {
+                    "x": 0,
+                    "y": 0.009999999776482582,
+                    "z": 0
+                },
+                "alpha": 0.019999999552965164,
+                "alphaFinish": 0,
+                "alphaStart": 0,
+                "angularDamping": 0,
+                "azimuthFinish": 3.140000104904175,
+                "color": {
+                    "blue": color[2],
+                    "green": color[1],
+                    "red": color[0]
+                },
+                "colorFinish": {
+                    "blue": 0,
+                    "green": 0,
+                    "red": 0
+                },
+                "colorStart": {
+                    "blue": 0,
+                    "green": 0,
+                    "red": 0
+                },
+                "damping": 0,
+                "dimensions": {
+                    "x": 9.600000381469727,
+                    "y": 9.600000381469727,
+                    "z": 9.600000381469727
+                },
+                "emitAcceleration": {
+                    "x": 0,
+                    "y": 0.009999999776482582,
+                    "z": 0
+                },
+                "emitDimensions": {
+                    "x": size,
+                    "y": 0.5,
+                    "z": size
+                },
+                "emitOrientation": {
+                    "w": 1,
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "emitRadiusStart": 0,
+                "emitRate": 10,
+                "emitSpeed": 0,
+                "grab": {
+                    "grabbable": false
+                },
+                "lifespan": 10,
+                "maxParticles": 100,
+                "name": "fog " + name,
+                "particleRadius": 1.5,
+                "polarFinish": 3.140000104904175,
+                "radiusFinish": 2.5,
+                "radiusSpread": 0.30000001192092896,
+                "radiusStart": 0.8500000238418579,
+                "shapeType": "ellipsoid",
+                "speedSpread": 0,
+                "spinFinish": 0.17000000178813934,
+                "spinSpread": 0.17000000178813934,
+                "spinStart": -0.17000000178813934,
+                "textures": ROOT + "images/fog.png",
+                "type": "ParticleEffect",
+                "rotation": Quat.IDENTITY,
+                "position": parentPosition
+            }, "local");
+        }
         
     }
 
@@ -292,7 +377,7 @@
                 if (instruction.action === "SET_SPOT" && (n - timestamp) > INTERCALL_DELAY) {
                     d = new Date();
                     timestamp = d.getTime();
-                    updateSpot(instruction.name, instruction.hue);
+                    updateSpot(instruction.name, instruction.hue, true); //Set fog ######################################
                 } else if (instruction.action === "UI_READY") {
                     var messageToSent = {
                         "channel": channel,
