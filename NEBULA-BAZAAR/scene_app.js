@@ -35,6 +35,8 @@
     
     let timerStatus = false;
     let timer;
+    
+    let fogActive = false;
 
     let spotlights = {
         "L-1": { 
@@ -47,7 +49,12 @@
             "rotation": {"x":0.7071068286895752,"y":0,"z":0,"w":-0.7071068286895752},
             "dimensions": {"x":9.914294242858887,"y":9.914294242858887,"z":9.914294242858887},
             "cutoff": 90,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": 0.4272,
+                "y": 1.1079,
+                "z": -2.9316
+            }
         },
         "R-1": { 
             "id": Uuid.NONE, 
@@ -59,7 +66,12 @@
             "rotation": {"x":0.7071068286895752,"y":0,"z":0,"w":-0.7071068286895752},
             "dimensions": {"x":9.914294242858887,"y":9.914294242858887,"z":9.914294242858887},
             "cutoff": 90,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": 0.4561,
+                "y": -0.7217,
+                "z": -2.9702
+            }
         },
         "L0": { 
             "id": Uuid.NONE, 
@@ -80,7 +92,12 @@
                 "z": 9.089690208435059
             },
             "cutoff": 70,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": 0.4121,
+                "y": -1.5864,
+                "z": -2.6157
+            }
         },
         "R0": { 
             "id": Uuid.NONE, 
@@ -101,7 +118,12 @@
                 "z": 9.089690208435059
             },
             "cutoff": 70,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": -0.2334,
+                "y": -1.5396,
+                "z": -2.6738
+            }
         },
         "L+1": { 
             "id": Uuid.NONE, 
@@ -122,7 +144,12 @@
                 "z": 9.089690208435059
             },
             "cutoff": 50,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": 0.4224,
+                "y": -1.2090,
+                "z": -2.9932
+            }
         },
         "R+1": { 
             "id": Uuid.NONE, 
@@ -143,7 +170,12 @@
                 "z": 9.089690208435059
             },
             "cutoff": 50,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": -0.1563,
+                "y": -1.1387,
+                "z": -3.0288
+            }
         },
         "FC": { 
             "id": Uuid.NONE, 
@@ -164,11 +196,17 @@
                 "z": 12.21242904663086
             },
             "cutoff": 18,
-            "hue": -1
+            "hue": -1, 
+            "fogLocalPosition": {
+                "x": -0.1084,
+                "y": -0.0023,
+                "z": -4.1631
+            }
         }
     };
     
     function updateSpot(name, hue, isFog) {
+        fogActive = isFog;
         const spot = spotlights[name];
         //print("SPOT: " + JSON.stringify(spot));
         
@@ -225,9 +263,6 @@
             if (name === "FC") {
                 size = 3;
             }
-            let parentPosition = Vec3.sum(thisPosition, spot.localPosition);
-            parentPosition.y = thisPosition.y + 1.1675;
-            
             
             letfogID = Entities.addEntity({
                 "parentID": spotlights[name].id,
@@ -301,7 +336,7 @@
                 "textures": ROOT + "images/fog.png",
                 "type": "ParticleEffect",
                 "rotation": Quat.IDENTITY,
-                "position": parentPosition
+                "localPosition": spot.fogLocalPosition
             }, "local");
         }
         
@@ -377,12 +412,13 @@
                 if (instruction.action === "SET_SPOT" && (n - timestamp) > INTERCALL_DELAY) {
                     d = new Date();
                     timestamp = d.getTime();
-                    updateSpot(instruction.name, instruction.hue, true); //Set fog ######################################
+                    updateSpot(instruction.name, instruction.hue, instruction.fogActive);
                 } else if (instruction.action === "UI_READY") {
                     var messageToSent = {
                         "channel": channel,
                         "action": "CURRENT_STATE",
-                        "data": spotlights
+                        "data": spotlights,
+                        "fogActive": fogActive
                     };
                     tablet.emitScriptEvent(JSON.stringify(messageToSent));
                 }
