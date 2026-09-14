@@ -170,7 +170,7 @@
     
     function updateSpot(name, hue) {
         const spot = spotlights[name];
-        print("SPOT: " + JSON.stringify(spot));
+        //print("SPOT: " + JSON.stringify(spot));
         
         if (spot.id !== Uuid.NONE && hue === -1) {
             Entities.deleteEntity(spot.id);
