@@ -15,7 +15,7 @@
         <meta charset="UTF-8">
         <script>
             const channel = "nebulaBazaar.application.ak.scene";
-
+            let fogActive = false;
             
             //Paths
             const thisPageName = "scene.html";
@@ -39,6 +39,8 @@
                                 document.getElementById("sample" + name).style.backgroundColor = hslToHex(spotlights[name].hue/360, 1, 0.5);
                             }
                         }
+                        fogActive = messageObj.fogActive;
+                        fogActive = true; //update controle ############################################
                     }
                 }
             });
@@ -169,6 +171,7 @@
                     "action": "SET_SPOT",
                     "name": img.id,
                     "hue": hue
+                    "fogActive": fogActive
                 };
                 
                 if (hue === -1) {
