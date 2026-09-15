@@ -273,7 +273,7 @@
                 size = 3;
             }
             
-            letfogID = Entities.addEntity({
+            let fogID = Entities.addEntity({
                 "parentID": spotlights[name].id,
                 "renderWithZones": renderWithZones,
                 "accelerationSpread": {
