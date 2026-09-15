@@ -176,7 +176,11 @@
 
                 let hue = Math.floor(x * 2);
                 if (hue > 359) {
-                    hue = -1;
+                    if (hue < 376) {
+                        hue = 999;
+                    } else {
+                        hue = -1;
+                    }
                 }
                 
                 let fogActive = document.getElementById("fogActive" + img.id).checked;
@@ -191,6 +195,8 @@
                 
                 if (hue === -1) {
                     document.getElementById("sample" + img.id).style.backgroundColor = "#000000";
+                } else if (hue === 999) {
+                    document.getElementById("sample" + img.id).style.backgroundColor = "#FFFFFF";
                 } else {
                     document.getElementById("sample" + img.id).style.backgroundColor = hslToHex(hue/360, 1, 0.5);
                 }
