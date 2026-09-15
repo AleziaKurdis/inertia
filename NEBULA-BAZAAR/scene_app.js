@@ -236,7 +236,11 @@
         }
         let color = [0,0,0];
         if (hue !== -1) {
-            color = hslToRgb(hue/360, 1, 0.5);
+            if (hue === 999) {
+                color = [255,255,255];
+            } else {
+                color = hslToRgb(hue/360, 1, 0.5);
+            }
         }
         let isSpotlight = true;
         if (spot.cutoff === -1) {
