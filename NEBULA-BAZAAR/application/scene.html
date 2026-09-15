@@ -15,7 +15,6 @@
         <meta charset="UTF-8">
         <script>
             const channel = "nebulaBazaar.application.ak.scene";
-            let fogActive = false;
             
             //Paths
             const thisPageName = "scene.html";
@@ -38,9 +37,9 @@
                             } else {
                                 document.getElementById("sample" + name).style.backgroundColor = hslToHex(spotlights[name].hue/360, 1, 0.5);
                             }
+                            updateFogState(name, spotlights[name].fogActive);
                         }
-                        fogActive = messageObj.fogActive;
-                        updateFogState();
+                        
                     }
                 }
             });
@@ -90,6 +89,7 @@
                 background-color: #333333;
                 color: #FFFFFF;
                 border: 1px solid #dddddd;
+                height: 140px;
             }
             div.colorsample {
                 width: 200px;
@@ -112,54 +112,63 @@
                     <td>
                         Back Left<br>
                         <img src="hue.jpg" id="L-1" draggable="false"><br>
-                        <div class="colorsample" id="sampleL-1">
+                        <div class="colorsample" id="sampleL-1"><br><br>
+                        <input type="checkbox" id="fogActiveL-1" name="fogActiveL-1">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                     <td>
                         Back Right<br>
                         <img src="hue.jpg" id="R-1" draggable="false"><br>
-                        <div class="colorsample" id="sampleR-1">
+                        <div class="colorsample" id="sampleR-1"><br><br>
+                        <input type="checkbox" id="fogActiveR-1" name="fogActiveR-1">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         Middle Left<br>
                         <img src="hue.jpg" id="L0" draggable="false"><br>
-                        <div class="colorsample" id="sampleL0">
-                        
+                        <div class="colorsample" id="sampleL0"><br><br>
+                        <input type="checkbox" id="fogActiveL0" name="fogActiveL0">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                     <td>
                         Middle Right<br>
                         <img src="hue.jpg" id="R0" draggable="false"><br>
-                        <div class="colorsample" id="sampleR0">
+                        <div class="colorsample" id="sampleR0"><br><br>
+                        <input type="checkbox" id="fogActiveR0" name="fogActiveR0">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         Front Left<br>
                         <img src="hue.jpg" id="L+1" draggable="false"><br>
-                        <div class="colorsample" id="sampleL+1">
+                        <div class="colorsample" id="sampleL+1"><br><br>
+                        <input type="checkbox" id="fogActiveL+1" name="fogActiveL+1">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                     <td>
                         Front Right<br>
                         <img src="hue.jpg" id="R+1" draggable="false"><br>
-                        <div class="colorsample" id="sampleR+1">
+                        <div class="colorsample" id="sampleR+1"><br><br>
+                        <input type="checkbox" id="fogActiveR+1" name="fogActiveR+1">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                 </tr>
                 <tr>
                     <td colspan = "2">
                         Follow Spot<br>
                         <img src="hue.jpg" id="FC" draggable="false"><br>
-                        <div class="colorsample" id="sampleFC">
+                        <div class="colorsample" id="sampleFC"><br><br>
+                        <input type="checkbox" id="fogActiveFC" name="fogActiveFC">
+                        <label for="fogActive">FOG</label><br>
                     </td>
                 </tr>
             </table>
-            <input type="checkbox" id="fogActive" name="fogActive">
-            <label for="fogActive">FOG</label>
         </div>
         <script>
             function hueClick(event) {
-                fogActive = document.getElementById("fogActive").checked;
-            
                 let img = event.currentTarget;
                 let rect = img.getBoundingClientRect();
 
@@ -169,6 +178,8 @@
                 if (hue > 359) {
                     hue = -1;
                 }
+                
+                let fogActive = document.getElementById("fogActive" + img.id).checked;
                 
                 let messageToSend = {
                     "channel": channel,
@@ -192,14 +203,54 @@
                 }
             });
 
-            function updateFogState() {
-                if (fogActive) {
-                    document.getElementById("fogActive").checked = true;
+            function updateFogState(name, isFog) {
+                if (isFog) {
+                    document.getElementById("fogActive" + name).checked = true;
                 } else {
-                    document.getElementById("fogActive").checked = false;
+                    document.getElementById("fogActive" + name).checked = false;
                 }
             }
 
+            function pushFogChange(name, isFog) {
+                let messageToSend = {
+                    "channel": channel,
+                    "action": "SET_SPOT",
+                    "name": name,
+                    "hue": 888,
+                    "fogActive": isFog
+                };
+                
+                EventBridge.emitWebEvent(JSON.stringify(messageToSend));
+            }
+
+            document.getElementById("fogActiveL-1").addEventListener('change', (event) => {
+                pushFogChange("L-1", event.target.checked);
+            });
+
+            document.getElementById("fogActiveR-1").addEventListener('change', (event) => {
+                pushFogChange("R-1", event.target.checked);
+            });
+
+            document.getElementById("fogActiveL0").addEventListener('change', (event) => {
+                pushFogChange("L0", event.target.checked);
+            });
+            
+            document.getElementById("fogActiveR0").addEventListener('change', (event) => {
+                pushFogChange("R0", event.target.checked);
+            });
+            
+            document.getElementById("fogActiveL+1").addEventListener('change', (event) => {
+                pushFogChange("L+1", event.target.checked);
+            });
+            
+            document.getElementById("fogActiveR+1").addEventListener('change', (event) => {
+                pushFogChange("R+1", event.target.checked);
+            });
+            
+            document.getElementById("fogActiveFC").addEventListener('change', (event) => {
+                pushFogChange("FC", event.target.checked);
+            });
+            
             /*
              * Converts an HSL color value to RGB. Conversion formula
              * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
