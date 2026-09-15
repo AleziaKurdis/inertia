@@ -35,8 +35,6 @@
     
     let timerStatus = false;
     let timer;
-    
-    let fogActive = false;
 
     let spotlights = {
         "L-1": { 
@@ -54,7 +52,8 @@
                 "x": 0.4272,
                 "y": 1.1079,
                 "z": -2.9316
-            }
+            },
+            "fogActive": false
         },
         "R-1": { 
             "id": Uuid.NONE, 
@@ -71,7 +70,8 @@
                 "x": 0.4561,
                 "y": -0.7217,
                 "z": -2.9702
-            }
+            },
+            "fogActive": false
         },
         "L0": { 
             "id": Uuid.NONE, 
@@ -97,7 +97,8 @@
                 "x": 0.4121,
                 "y": -1.5864,
                 "z": -2.6157
-            }
+            },
+            "fogActive": false
         },
         "R0": { 
             "id": Uuid.NONE, 
@@ -123,7 +124,8 @@
                 "x": -0.2334,
                 "y": -1.5396,
                 "z": -2.6738
-            }
+            },
+            "fogActive": false
         },
         "L+1": { 
             "id": Uuid.NONE, 
@@ -149,7 +151,8 @@
                 "x": 0.4224,
                 "y": -1.2090,
                 "z": -2.9932
-            }
+            },
+            "fogActive": false
         },
         "R+1": { 
             "id": Uuid.NONE, 
@@ -175,7 +178,8 @@
                 "x": -0.1563,
                 "y": -1.1387,
                 "z": -3.0288
-            }
+            },
+            "fogActive": false
         },
         "FC": { 
             "id": Uuid.NONE, 
@@ -201,12 +205,13 @@
                 "x": -0.1084,
                 "y": -0.0023,
                 "z": -4.1631
-            }
+            },
+            "fogActive": false
         }
     };
     
     function updateSpot(name, hue, isFog) {
-        fogActive = isFog;
+        spotlights[name].fogActive = isFog;
         const spot = spotlights[name];
         //print("SPOT: " + JSON.stringify(spot));
         
@@ -224,7 +229,11 @@
         if (name === "FC") {
             intensity = 24.0;
         }
-        spotlights[name].hue = hue;
+        if (hue === 888) {
+            hue = spotlights[name].hue;
+        } else {
+            spotlights[name].hue = hue;
+        }
         let color = [0,0,0];
         if (hue !== -1) {
             color = hslToRgb(hue/360, 1, 0.5);
@@ -417,8 +426,7 @@
                     var messageToSent = {
                         "channel": channel,
                         "action": "CURRENT_STATE",
-                        "data": spotlights,
-                        "fogActive": fogActive
+                        "data": spotlights
                     };
                     tablet.emitScriptEvent(JSON.stringify(messageToSent));
                 }
