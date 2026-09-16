@@ -2433,6 +2433,41 @@
             "position": {"x":4924.9873046875,"y":-8001.51513671875,"z":4651.5185546875}
         },
         {
+            "alpha": 0,
+            "angularDamping": 0,
+            "collisionless": true,
+            "color": {
+                "blue": 239,
+                "green": 180,
+                "red": 0
+            },
+            "damping": 0,
+            "dimensions": {
+                "x": 2.099902391433716,
+                "y": 3.706835985183716,
+                "z": 1.0916016101837158
+            },
+            "grab": {
+                "grabbable": false
+            },
+            "id": "{22773a64-aeba-4dbb-a2ec-2d0eda5e909e}",
+            "ignoreForCollisions": true,
+            "locked": true,
+            "name": "TP-BACK",
+            "parentID": "{d93a4a86-4c6a-466a-9cf6-ce6df6e05d92}",
+            "position": {
+                "x": 11.875,
+                "y": 1.8017578125,
+                "z": -23.89013671875
+            },
+            "renderWithZones": [
+                "{a56c825d-1843-415a-b930-07e00c899a9c}"
+            ],
+            "script": "https://aleziakurdis.github.io/inertia/NEBULA-BAZAAR/back.js",
+            "shape": "Cube",
+            "type": "Box"
+        },
+        {
             "angularDamping": 0,
             "animation": {
                 "allowTranslation": false
