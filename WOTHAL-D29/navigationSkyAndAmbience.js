@@ -21,7 +21,7 @@
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
     var skyProcessingTimer = 0;
-    var astrolithID = Uuid.NULL;
+    var astrolithID = Uuid.NONE;
     var ASTROLITH_URL = ROOT + "images/ASTROLITHE.png";
     
     var AIR_SOUND = ROOT + "sounds/air.mp3";
@@ -33,7 +33,7 @@
     
     var D29_DAY_DURATION = 104400; //29h in sec.
     var storming = false;
-    var lightningsID = Uuid.NULL;
+    var lightningsID = Uuid.NONE;
     var LIGNTNINGS_PARTICLE_URL = ROOT + "images/PARTICLE_LIGHTNING_HYTRION_B.png";
     var THUNDER_SOUND_1 = ROOT + "sounds/thunder0.mp3";
     var THUNDER_SOUND_2 = ROOT + "sounds/thunder1.mp3";
@@ -42,10 +42,10 @@
     var thunderSound = []; 
     var thunderInjector; 
     
-    var vaporID = Uuid.NULL;
+    var vaporID = Uuid.NONE;
 
-    var zoneID = Uuid.NULL;
-    var thisEntity = Uuid.NULL;
+    var zoneID = Uuid.NONE;
+    var thisEntity = Uuid.NONE;
     var UNIVERSE_SOUND = ROOT + "sounds/limboAmbience.mp3";
     var UNIVERSE_SOUND_VOLUME_MAXIMUM = 0.2;
     var universeSound, universeSoundInjector;
@@ -111,25 +111,25 @@
     function shutdown() {
         if (isInitiated){            
             Script.update.disconnect(myTimer);
-            if (astrolithID != Uuid.NULL){
+            if (astrolithID != Uuid.NONE){
                 Entities.deleteEntity(astrolithID);
-                astrolithID = Uuid.NULL;
+                astrolithID = Uuid.NONE;
             }
             if (univerSoundPlaying == 1) {
                 universeSoundInjector.stop();
                 univerSoundPlaying = 0;
             }
-            if (zoneID !== Uuid.NULL) {
+            if (zoneID !== Uuid.NONE) {
                 Entities.deleteEntity(zoneID);
-                zoneID = Uuid.NULL;
+                zoneID = Uuid.NONE;
             }
-            if (vaporID !== Uuid.NULL) {
+            if (vaporID !== Uuid.NONE) {
                 Entities.deleteEntity(vaporID);
-                vaporID = Uuid.NULL;
+                vaporID = Uuid.NONE;
             }
-            if (lightningsID !== Uuid.NULL) {
+            if (lightningsID !== Uuid.NONE) {
                 Entities.deleteEntity(lightningsID);
-                lightningsID = Uuid.NULL;
+                lightningsID = Uuid.NONE;
             }
         }
         isInitiated = false;
@@ -161,7 +161,7 @@
 		var currentRGBsky = hslToRgb(hue, 1, 0.5);
         //print("y: " + y);
         //print("alphaFactor: " + alphaFactor);
-        if (vaporID === Uuid.NULL) {
+        if (vaporID === Uuid.NONE) {
             vaporID = Entities.addEntity({
                 "type": "ParticleEffect",
                 "renderWithZones": universeRenderWithZones,
@@ -266,7 +266,7 @@
 
         var zoneRotation = Quat.fromVec3Degrees( {"x": 0.0, "y": GetCurrentCycleValue(360, D29_DAY_DURATION), "z": 0.0} );
 
-        if (zoneID === Uuid.NULL) {
+        if (zoneID === Uuid.NONE) {
             zoneID = Entities.addEntity({
                 "type": "Zone",
                 "name": "W0TH4L-D29_(!)_Z0N3",
@@ -405,7 +405,7 @@
             var distanceAstrolith = 65;
             var radiusEffect = 50;//70; 
             if (myVelocity > 25){
-                if (astrolithID == Uuid.NULL){
+                if (astrolithID == Uuid.NONE){
                     astrolithID = Entities.addEntity({
                         "type": "ParticleEffect",
                         "name": "ASTROLITHES",
@@ -470,9 +470,9 @@
                         });
                 }
             }else{
-                if (astrolithID != Uuid.NULL){
+                if (astrolithID != Uuid.NONE){
                     Entities.deleteEntity(astrolithID);
-                    astrolithID = Uuid.NULL;
+                    astrolithID = Uuid.NONE;
                 }
             }
             
@@ -617,7 +617,7 @@
                 if (storming) {
                     // stop the storm
                     Entities.deleteEntity(lightningsID);
-                    lightningsID = Uuid.NULL;
+                    lightningsID = Uuid.NONE;
                     storming = false;
                 }
             }
