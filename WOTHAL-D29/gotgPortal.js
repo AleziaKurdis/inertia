@@ -24,9 +24,9 @@
     }
     
     for (i = 0; i < portals.length; i++) {
-        portals[i].id = Uuid.NULL;
-        portals[i].beaconTextID = Uuid.NULL;
-        portals[i].zoneID = Uuid.NULL;
+        portals[i].id = Uuid.NONE;
+        portals[i].beaconTextID = Uuid.NONE;
+        portals[i].zoneID = Uuid.NONE;
     }
 
     //###########################################################################################################
@@ -242,9 +242,9 @@
         removeBeacons();
         if (portals.length !== 0) {
             for (i = 0; i < portals.length; i++) {
-                if (portals[i].zoneID !== Uuid.NULL) {
+                if (portals[i].zoneID !== Uuid.NONE) {
                     Entities.deleteEntity(portals[i].zoneID);
-                    portals[i].zoneID = Uuid.NULL;
+                    portals[i].zoneID = Uuid.NONE;
                 }
             }
         }
@@ -258,9 +258,9 @@
         var i;
         if (portals.length !== 0) {
             for (i = 0; i < portals.length; i++) {
-                if (portals[i].id !== Uuid.NULL) {
+                if (portals[i].id !== Uuid.NONE) {
                     Entities.deleteEntity(portals[i].id);
-                    portals[i].id = Uuid.NULL;
+                    portals[i].id = Uuid.NONE;
                 }
             }
         }
@@ -289,7 +289,7 @@
                 }
                 radius = 0.032 * distance;
                 dimensions = {"x": 0, "y": 0, "z": 0,};
-                if (portals[i].id === Uuid.NULL) {
+                if (portals[i].id === Uuid.NONE) {
                     portals[i].id = Entities.addEntity({
                         "type": "Shape",
                         "shape": "sphere",

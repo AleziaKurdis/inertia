@@ -13,24 +13,24 @@
 (function(){
     var ROOT = Script.resolvePath('').split("whiteCathedral.js")[0];
 
-    var centralLightID = Uuid.NULL;
-    var thisEntity = Uuid.NULL;
+    var centralLightID = Uuid.NONE;
+    var thisEntity = Uuid.NONE;
     var renderWithZones;
     
     var UPDATE_TIMER_INTERVAL = 1000; // 1 sec 
     var processTimer = 0;
     
-    var starId = Uuid.NULL;
-    var poolAId = Uuid.NULL;
-    var poolBId = Uuid.NULL;
-    var fireMatId = Uuid.NULL;
-    var poolAMatId = Uuid.NULL;
-    var poolBMatId = Uuid.NULL;
-    var poolALightId = Uuid.NULL;
-    var poolBLightId = Uuid.NULL;    
-    var fireLightId = Uuid.NULL;
-    var fireParticles = Uuid.NULL;
-    var planetId = Uuid.NULL;
+    var starId = Uuid.NONE;
+    var poolAId = Uuid.NONE;
+    var poolBId = Uuid.NONE;
+    var fireMatId = Uuid.NONE;
+    var poolAMatId = Uuid.NONE;
+    var poolBMatId = Uuid.NONE;
+    var poolALightId = Uuid.NONE;
+    var poolBLightId = Uuid.NONE;    
+    var fireLightId = Uuid.NONE;
+    var fireParticles = Uuid.NONE;
+    var planetId = Uuid.NONE;
     
     var STAR_DIAMETER = 12;
     var DAY_DURATION = 68400; //19h
@@ -132,7 +132,7 @@
         var DISTANCE_FROM_CENTER =  {"x": 0, "y": 0, "z": 4.2};
         var angle = GetCurrentCycleValue(360, WEEK_DURATION);
         var planetLocalPosition = Vec3.sum({"x": 0.0, "y": 180.7, "z": 0.0}, Vec3.multiplyQbyV( Quat.fromVec3Degrees({"x": 0, "y": angle, "z": 0}), DISTANCE_FROM_CENTER ));
-        if (planetId === Uuid.NULL) {
+        if (planetId === Uuid.NONE) {
             //create
             planetId = Entities.addEntity({
                     "type": "Shape",
@@ -167,7 +167,7 @@
     }
 
     function updateStar() {
-        if (starId !== Uuid.NULL) {
+        if (starId !== Uuid.NONE) {
             
             var pitch = Math.sin(GetCurrentCycleValue((2 * Math.PI), ((DAY_DURATION/24) * 5))); //5 h cycle
             if (pitch === 0) {pitch = 0.001;}
@@ -195,7 +195,7 @@
                 ]
             };
             
-            if (fireMatId === Uuid.NULL) {
+            if (fireMatId === Uuid.NONE) {
                 //CREATE
                 fireMatId = Entities.addEntity({
                     "type": "Material",
@@ -214,7 +214,7 @@
                 });
             }
 
-            if (poolAMatId === Uuid.NULL) {
+            if (poolAMatId === Uuid.NONE) {
                 //CREATE
                 poolAMatId = Entities.addEntity({
                     "type": "Material",
@@ -233,7 +233,7 @@
                 });
             }
 
-            if (poolBMatId === Uuid.NULL) {
+            if (poolBMatId === Uuid.NONE) {
                 //CREATE
                 poolBMatId = Entities.addEntity({
                     "type": "Material",
@@ -252,7 +252,7 @@
                 });
             }
 
-            if (fireLightId === Uuid.NULL) {
+            if (fireLightId === Uuid.NONE) {
                 //CREATE
                 fireLightId = Entities.addEntity({
                     "type": "Light",
@@ -294,7 +294,7 @@
                 });
             }
 
-            if (fireParticles === Uuid.NULL) {
+            if (fireParticles === Uuid.NONE) {
                 //CREATE
                 fireParticles = Entities.addEntity({
                     "type": "ParticleEffect",
@@ -411,18 +411,18 @@
 
     function shutdown() {
         Script.update.disconnect(myTimer);
-        if (centralLightID != Uuid.NULL){
+        if (centralLightID != Uuid.NONE){
             Entities.deleteEntity(centralLightID);
-            centralLightID = Uuid.NULL;
+            centralLightID = Uuid.NONE;
         }
-        if (starId != Uuid.NULL){
+        if (starId != Uuid.NONE){
             Entities.deleteEntity(starId);
-            starId = Uuid.NULL;
+            starId = Uuid.NONE;
         }
         
-        if (planetId != Uuid.NULL){
+        if (planetId != Uuid.NONE){
             Entities.deleteEntity(planetId);
-            planetId = Uuid.NULL;
+            planetId = Uuid.NONE;
         }
         
     }
