@@ -474,6 +474,12 @@
             }
         };
 
+        xhr.onload = function () {
+            print("[DataFetcher] Ready state: " + xhr.readyState);
+            print("[DataFetcher] HTTP status: " + xhr.status);
+            print("[DataFetcher] Response length: " + xhr.responseText.length);
+        };
+
         xhr.onerror = function () {
             requestInProgress = false;
             print("[DataFetcher] Network error. Check URL and CORS.");
