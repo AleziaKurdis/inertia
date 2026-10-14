@@ -386,17 +386,10 @@
     function printRecords(records, source) {
         const descriptors = source.descriptor || {};
 
-        print("");
-        print("========== DATA FETCHER ==========");
-        print("URL: " + source.url);
-        print("Format: " + source.format);
-        print("Entries extracted: " + records.length);
-
         for (let i = 0; i < records.length; i++) {
             const record = records[i];
 
-            print("");
-            print("--- Entry " + (i + 1) + " ---");
+            let cardText = "";
 
             const fields = ["title", "summary", "url", "timestamp"];
 
@@ -424,15 +417,15 @@
 
                 // Format timestamps for display.
                 if (field === "timestamp") {
-                    print(label + new Date(value).toISOString());
+                    cardText = cardText + "\n" + label + new Date(value).toISOString();
                 } else {
-                    print(label + value);
+                    cardText = cardText + "\n" + label + value;
                 }
+
             }
+            print(cardText);
         }
 
-        print("==================================");
-        print("");
     }
 
     // ---------------------------------------------------------
