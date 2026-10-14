@@ -22,6 +22,7 @@
 
     const DEFAULT_MAX_ENTRIES = 5;
     const DEFAULT_REFRESH_SECONDS = 300;
+    const TIME_UNIT = 29; //for D29 time format
 
     const DEFAULT_USER_DATA = {
         "dataSource": {
@@ -417,7 +418,8 @@
 
                 // Format timestamps for display.
                 if (field === "timestamp") {
-                    cardText = cardText + "\n" + label + new Date(value).toISOString();
+                    //cardText = cardText + "\n" + label + new Date(value).toISOString();
+                    cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
                 } else {
                     cardText = cardText + "\n" + label + value;
                 }
@@ -543,6 +545,88 @@
             refreshTimer = null;
         }
     };
+
+    function getDtimeLocalFormat(timestamp, timeDilation) {
+        const DAY_DURATION = timeDilation * 3600;
+        const WEEK_DURATION = DAY_DURATION * 9;
+        const MONTH_DURATION = WEEK_DURATION * 4;
+        const YEAR_DURATION = MONTH_DURATION * 10;
+
+        const weekDaysNames = [
+            "Virmonday",
+            "Virtuesday",
+            "Virwednesday",
+            "Virthursday",
+            "Virfriday",
+            "Friturday",
+            "Virsaturday",
+            "Sameday",
+            "Virsunday"
+        ];
+
+        const monthsNames = [
+            "Primum",
+            "Secundum",
+            "Tertium",
+            "Quartum",
+            "Quintilis",
+            "Sextilis",
+            "September",
+            "October",
+            "November",
+            "December"
+        ];
+
+        // Accept Unix timestamps in seconds or milliseconds.
+        // Values below 100 billion are interpreted as seconds.
+        let timestampMs = Number(timestamp);
+
+        if (!isFinite(timestampMs)) {
+            return "";
+        }
+
+        if (Math.abs(timestampMs) < 100000000000) {
+            timestampMs *= 1000;
+        }
+
+        const secSince1970 = timestampMs / 1000;
+
+        // Normalize negative timestamps to a positive cycle position.
+        function getCycleValue(cycleLength, cycleDuration) {
+            const position = ((secSince1970 % cycleDuration) +
+                cycleDuration) % cycleDuration;
+
+            return (position / cycleDuration) * cycleLength;
+        }
+
+        const dayOfWeek = weekDaysNames[
+            Math.floor(getCycleValue(9, WEEK_DURATION))
+        ];
+
+        const year = Math.floor(secSince1970 / YEAR_DURATION) + 1;
+
+        const monthIndex = Math.floor(
+            getCycleValue(10, YEAR_DURATION)
+        );
+
+        const month = monthsNames[monthIndex];
+
+        const dayOfMonth = 1 + Math.floor(
+            getCycleValue(36, MONTH_DURATION)
+        );
+
+        const daySeconds = getCycleValue(86400, DAY_DURATION);
+        const hours = Math.floor(daySeconds / 3600);
+        const minutes = Math.floor(daySeconds / 60) % 60;
+
+        const minuteText = minutes < 10 ? "0" + minutes : "" + minutes;
+        const hourText = hours + ":" + minuteText;
+
+        return dayOfWeek + ", " +
+            month + " " + dayOfMonth + " " + year + ", " +
+            hourText + " D" + timeDilation;
+    }
+
 
     function GetCurrentCycleValue(cyclelength, cycleduration) {
         const today = new Date();
