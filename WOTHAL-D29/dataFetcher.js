@@ -34,6 +34,12 @@
                 "url": "properties.url",
                 "timestamp": "properties.time"
             },
+            "descriptor": {
+                "title": "Location: ",
+                "summary": "Magnitude: ",
+                "url": "",
+                "timestamp": "Event date: "
+            },
             "timeFormat": "unix-ms",
             "maxEntries": 5,
             "refreshSeconds": 300
@@ -378,6 +384,8 @@
     // ---------------------------------------------------------
 
     function printRecords(records, source) {
+        const descriptors = source.descriptor || {};
+
         print("");
         print("========== DATA FETCHER ==========");
         print("URL: " + source.url);
@@ -390,22 +398,36 @@
             print("");
             print("--- Entry " + (i + 1) + " ---");
 
-            if (record.title !== null && record.title !== undefined) {
-                print("Title: " + record.title);
-            }
+            const fields = ["title", "summary", "url", "timestamp"];
 
-            if (record.summary !== null && record.summary !== undefined) {
-                print("Summary: " + record.summary);
-            }
+            for (let j = 0; j < fields.length; j++) {
+                const field = fields[j];
+                const value = record[field];
 
-            if (record.url !== null && record.url !== undefined) {
-                print("URL: " + record.url);
-            }
+                // Skip missing values.
+                if (value === null || value === undefined) {
+                    continue;
+                }
 
-            if (record.timestamp !== null) {
-                print("Timestamp (Unix ms): " + record.timestamp);
-                print("Timestamp (UTC): " +
-                    new Date(record.timestamp).toISOString());
+                // An explicitly empty descriptor hides the field.
+                if (descriptors[field] === "") {
+                    continue;
+                }
+
+                // Use the configured descriptor, or the default label.
+                let label = descriptors[field];
+
+                if (label === undefined || label === null) {
+                    label = field.charAt(0).toUpperCase() +
+                        field.slice(1) + ": ";
+                }
+
+                // Format timestamps for display.
+                if (field === "timestamp") {
+                    print(label + new Date(value).toISOString());
+                } else {
+                    print(label + value);
+                }
             }
         }
 
