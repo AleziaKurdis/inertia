@@ -872,7 +872,7 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
-            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portalZ.js",
             "userData": "{\"placeName\": \"valombra\", \"isAlpha\": true}"
         },
         {
@@ -898,7 +898,7 @@
             "angularDamping": 0,
             "shapeType": "static-mesh",
             "modelURL": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/PORTAL.fst",
-            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portal.js",
+            "script": "https://aleziakurdis.github.io/inertia/VIRTUAL-ROUTE/portal/portalZ.js",
             "userData": "{\"placeName\": \"valombra\", \"isAlpha\": false}"
         },
         {
