@@ -623,8 +623,8 @@
         const hourText = hours + ":" + minuteText;
 
         return dayOfWeek + ", " +
-            month + " " + dayOfMonth + ", " + year + " | " +
-            hourText + " D" + timeDilation;
+            dayOfMonth + " " + month + " " + year + ", " +
+            hourText + " (D" + timeDilation + ")";
     }
 
 
