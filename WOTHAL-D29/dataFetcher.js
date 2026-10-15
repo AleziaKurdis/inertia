@@ -452,9 +452,11 @@
                 }
 
                 // Format timestamps for display.
-                if (field === "timestamp" && source.rendering.showTimestamp) {
-                    //cardText = cardText + "\n" + label + new Date(value).toISOString();
-                    cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
+                if (field === "timestamp") {
+                    if (source.rendering.showTimestamp) {
+                        //cardText = cardText + "\n" + label + new Date(value).toISOString();
+                        cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
+                    }
                 } else {
                     cardText = cardText + "\n" + label + value;
                 }
