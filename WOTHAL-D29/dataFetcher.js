@@ -19,10 +19,24 @@
     let requestInProgress = false;
     let stopped = false;
     let config = null;
+    
+    let rendererContainerID = Uuid.NONE;
+    let emitterDimensions = null;
+    let renderWithZones = [];
+
+    const HMD_LINE_HEIGHT = 0.03;
+    const HMD_INTER_SPACE_NOTIFICATION = 0.05;
+    const HMD_UI_SCALE_FACTOR = 1.0; //This define the size of all the notification system in HMD.
+    let entityWidth = 0.8; //in meter
+    let entityTopMargin = 0.02;
+    let entityLeftMargin = 0.02;
+    const MAX_LINE_LENGTH = 42;
 
     const DEFAULT_MAX_ENTRIES = 5;
     const DEFAULT_REFRESH_SECONDS = 300;
     const TIME_UNIT = 29; //for D29 time format
+    
+    
 
     const DEFAULT_USER_DATA = {
         "dataSource": {
@@ -46,8 +60,8 @@
             "refreshSeconds": 300
         },
         "rendering": {
-            "type": "list",
-            "maxLines": 5,
+            //"type": "list",
+            //"maxLines": 5,
             "showTimestamp": true
         }
     };
@@ -385,9 +399,30 @@
     // ---------------------------------------------------------
 
     function printRecords(records, source) {
+        
+        if (rendererContainerID !== Uuid.NONE) {
+            Entities.deleteEntity(rendererContainerID);
+        }
+        rendererContainerID = Entities.addEntity({
+            "name": "Data Container",
+            "type": "Empty",
+            "parentID": entityID,
+            "dimensions": emitterDimensions,
+            "renderWithZones": renderWithZones,
+            "lifetime": source.refreshSeconds * 2,
+            "canCastShadow": false,
+            "localPosition": {"x": 0.0, "y": 0.0, "z": 0.0}
+        }, "local");
+        
+        
         const descriptors = source.descriptor || {};
+        
+        let properties, count, extraLine, breaks, height;
+        let breakPoint = MAX_LINE_LENGTH + 1;
+        let entityLevel = 0;
 
         for (let i = 0; i < records.length; i++) {
+
             const record = records[i];
 
             let cardText = "";
@@ -417,7 +452,7 @@
                 }
 
                 // Format timestamps for display.
-                if (field === "timestamp") {
+                if (field === "timestamp" && source.rendering.showTimestamp) {
                     //cardText = cardText + "\n" + label + new Date(value).toISOString();
                     cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
                 } else {
@@ -425,7 +460,47 @@
                 }
 
             }
-            print(cardText);
+            
+            
+            count = (cardText.match(/\n/g) || []).length,
+            extraLine = 0;
+            breaks = 0;
+            if (cardText.length >= breakPoint) {
+                breaks = count;
+            }
+
+            let sensorScaleFactor = 1;
+            let lineHeight = HMD_LINE_HEIGHT;
+            height = lineHeight + (2 * entityTopMargin);
+            extraLine = breaks * lineHeight;
+            height = (height + extraLine) * HMD_UI_SCALE_FACTOR;
+            entityLevel = entityLevel - (height/2);
+            
+            let textColor =  { "red": 255, "green": 255, "blue": 255}; //possibly to be a color based on Hue provided ##########
+            let backColor =  { "red": 0, "green": 0, "blue": 0};
+            
+            properties = {
+                "type": "Text",
+                "parentID": rendererContainerID,
+                "localPosition": {"x": 0, "y": entityLevel, "z": 0},
+                "dimensions": {"x": (entityWidth * HMD_UI_SCALE_FACTOR), "y": height, "z": 0.01},
+                "lineHeight": lineHeight * sensorScaleFactor,
+                "textColor": textColor,
+                "textAlpha": 0.85,
+                "backgroundColor": backColor,
+                "backgroundAlpha": 0.0,
+                "leftMargin": entityLeftMargin * sensorScaleFactor,
+                "topMargin": entityTopMargin * sensorScaleFactor,
+                "unlit": true,
+                "grab": { "grabbable": false },
+                "text": cardText
+            };
+            let id = Entities.addEntity(properties, "local");
+
+            //Set card image background here SOON
+
+            entityLevel = entityLevel - (height/2) - (HMD_INTER_SPACE_NOTIFICATION * HMD_UI_SCALE_FACTOR);
+
         }
 
     }
@@ -443,9 +518,6 @@
         const xhr = new XMLHttpRequest();
 
         requestInProgress = true;
-
-        xhr.open("GET", source.url, true);
-        xhr.timeout = 20000;
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState !== 4) {
@@ -508,6 +580,8 @@
         };
 
         try {
+            xhr.open("GET", source.url, true);
+            xhr.timeout = 20000;
             xhr.send();
         } catch (e) {
             requestInProgress = false;
@@ -522,6 +596,10 @@
     this.preload = function (id) {
         entityID = id;
         stopped = false;
+
+        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "dimensions"]);
+        emitterDimensions = properties.dimensions;
+        renderWithZones = properties.renderWithZones;
 
         if (!loadConfig()) {
             return;
@@ -543,6 +621,11 @@
         if (refreshTimer !== null) {
             Script.clearInterval(refreshTimer);
             refreshTimer = null;
+        }
+        
+        if (rendererContainerID !== Uuid.NONE) {
+            Entities.deleteEntity(rendererContainerID);
+            rendererContainerID = Uuid.NONE;
         }
     };
 
