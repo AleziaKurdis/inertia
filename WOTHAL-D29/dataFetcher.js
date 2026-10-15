@@ -27,7 +27,7 @@
     const HMD_LINE_HEIGHT = 0.03;
     const HMD_INTER_SPACE_NOTIFICATION = 0.05;
     const HMD_UI_SCALE_FACTOR = 1.0; //This define the size of all the notification system in HMD.
-    let entityWidth = 0.8; //in meter
+    //let entityWidth = 0.8; //in meter
     let entityTopMargin = 0.02;
     let entityLeftMargin = 0.02;
     const MAX_LINE_LENGTH = 42;
@@ -485,7 +485,7 @@
                 "type": "Text",
                 "parentID": rendererContainerID,
                 "localPosition": {"x": 0, "y": entityLevel, "z": 0},
-                "dimensions": {"x": (entityWidth * HMD_UI_SCALE_FACTOR), "y": height, "z": 0.01},
+                "dimensions": {"x": (emitterDimensions.x * HMD_UI_SCALE_FACTOR), "y": height, "z": 0.01},
                 "lineHeight": lineHeight * sensorScaleFactor,
                 "textColor": textColor,
                 "textAlpha": 0.85,
