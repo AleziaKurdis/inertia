@@ -453,7 +453,7 @@
 
                 // Format timestamps for display.
                 if (field === "timestamp") {
-                    if (source.rendering.showTimestamp) {
+                    if (config.rendering.showTimestamp) {
                         //cardText = cardText + "\n" + label + new Date(value).toISOString();
                         cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
                     }
