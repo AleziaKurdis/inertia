@@ -489,7 +489,7 @@
             }
             
             let textColor = config.rendering.staticColor;
-            if (config.rendering.staticColor === "hotToCold") {
+            if (config.rendering.colorMode === "hotToCold") {
                 let colorTemp = hslToRgb((((i / records.length) * 240)+5)/360, 1, 0.5);
                 textColor = { "red": colorTemp[0], "green": colorTemp[1], "blue": colorTemp[2]};
             }
