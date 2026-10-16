@@ -67,7 +67,8 @@
                 "green": 255,
                 "blue":0
             },
-            "oldStackUp": true
+            "oldStackUp": true,
+            "frameImageUrl": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/images/entryFrame.jpg"
         }
     };
 
@@ -521,7 +522,7 @@
                 "localPosition": {"x": 0, "y": 0, "z": 0.01},
                 "name": "Entry Frame",
                 "dimensions": {"x": (emitterDimensions.x * HMD_UI_SCALE_FACTOR), "y": height, "z": 0.01},
-                "imageURL": ROOT + "images/entryFrame.jpg",
+                "imageURL": config.rendering.frameImageUrl,
                 "emissive": true,
                 "keepAspectRatio": false,
                 "color": textColor,
