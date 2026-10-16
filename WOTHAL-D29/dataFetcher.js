@@ -24,10 +24,8 @@
     let emitterDimensions = null;
     let renderWithZones = [];
 
-    const HMD_LINE_HEIGHT = 0.03;
     const HMD_INTER_SPACE_NOTIFICATION = 0.05;
     const HMD_UI_SCALE_FACTOR = 1.0; //This define the size of all the notification system in HMD.
-    //let entityWidth = 0.8; //in meter
     let entityTopMargin = 0.02;
     let entityLeftMargin = 0.02;
     const MAX_LINE_LENGTH = 42;
@@ -60,9 +58,15 @@
             "refreshSeconds": 300
         },
         "rendering": {
-            //"type": "list",
-            //"maxLines": 5,
-            "showTimestamp": true
+            "showTimestamp": true,
+            "lineHeight": 0.05,
+            "colorMode": "staticColor", // "staticColor" | "hotToCold"
+            "staticColor": {
+                "red": 94,
+                "green": 255,
+                "blue":0
+            },
+            "oldStackUp": true
         }
     };
 
@@ -472,13 +476,23 @@
             }
 
             let sensorScaleFactor = 1;
-            let lineHeight = HMD_LINE_HEIGHT;
+            //let lineHeight = HMD_LINE_HEIGHT;
+            let lineHeight = config.rendering.lineHeight;
             height = lineHeight + (2 * entityTopMargin);
             extraLine = breaks * lineHeight;
             height = (height + extraLine) * HMD_UI_SCALE_FACTOR;
-            entityLevel = entityLevel - (height/2);
+            if (config.rendering.oldStackUp) {
+                entityLevel = entityLevel + (height/2);
+            } else {
+                entityLevel = entityLevel - (height/2);
+            }
             
-            let textColor =  { "red": 255, "green": 255, "blue": 255}; //possibly to be a color based on Hue provided ##########
+            let textColor = config.rendering.staticColor;
+            if (config.rendering.staticColor === "hotToCold") {
+                let colorTemp = hslToRgb((((i / records.length) * 240)+5)/360, 1, 0.5);
+                textColor = { "red": colorTemp[0], "green": colorTemp[1], "blue": colorTemp[2]};
+            }
+            
             let backColor =  { "red": 0, "green": 0, "blue": 0};
             
             properties = {
@@ -500,9 +514,24 @@
             let id = Entities.addEntity(properties, "local");
 
             //Set card image background here SOON
+            let imageID = Entities.addEntity({
+                "type": "Image",
+                "parentID": id,
+                "localPosition": {"x": 0, "y": 0, "z": 0.01},
+                "name": "Entry Frame",
+                "dimensions": {"x": (emitterDimensions.x * HMD_UI_SCALE_FACTOR), "y": height, "z": 0.01},
+                "imageURL": ROOT + "images/entryFrame.jpg",
+                "emissive": true,
+                "keepAspectRatio": false,
+                "color": textColor,
+                "alpha": 0.5,
+            }, "local");
 
-            entityLevel = entityLevel - (height/2) - (HMD_INTER_SPACE_NOTIFICATION * HMD_UI_SCALE_FACTOR);
-
+            if (config.rendering.oldStackUp) {
+                entityLevel = entityLevel + (height/2) + (HMD_INTER_SPACE_NOTIFICATION * HMD_UI_SCALE_FACTOR);
+            } else {
+                entityLevel = entityLevel - (height/2) - (HMD_INTER_SPACE_NOTIFICATION * HMD_UI_SCALE_FACTOR);
+            }
         }
 
     }
