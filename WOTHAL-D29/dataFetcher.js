@@ -14,6 +14,7 @@
 //
 
 (function () {
+    var ROOT = Script.resolvePath('').split("dataFetcher.js")[0];
     let entityID = null;
     let refreshTimer = null;
     let requestInProgress = false;
