@@ -35,8 +35,20 @@
     const DEFAULT_REFRESH_SECONDS = 300;
     const TIME_UNIT = 29; //for D29 time format
     
-    
+/*    
+===== "timeFormat" suported: =====
+"auto"	Automatically parses date strings
+"unix-ms"	Unix timestamp in milliseconds
+"unix-s"	Unix timestamp in seconds
+"iso8601"	ISO 8601 date string
+"rfc822"	RFC 822 date string, commonly used in RSS feeds
+===================================
 
+===== "colorMode" suported: =====
+"staticColor" use the color defined in the property: "staticColor"
+"hotToCold" use a gradation from rencent in red (hue 5 deg) to old in blue (hue 45 deg)
+===================================
+*/
     const DEFAULT_USER_DATA = {
         "dataSource": {
             "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
@@ -61,7 +73,7 @@
         "rendering": {
             "showTimestamp": true,
             "lineHeight": 0.05,
-            "colorMode": "staticColor", // "staticColor" | "hotToCold"
+            "colorMode": "staticColor",
             "staticColor": {
                 "red": 94,
                 "green": 255,
