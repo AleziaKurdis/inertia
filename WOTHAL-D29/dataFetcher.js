@@ -481,22 +481,6 @@
 
             }
             
-            /*
-            count = (cardText.match(/\n/g) || []).length,
-            extraLine = 0;
-            breaks = 0;
-            if (cardText.length >= breakPoint) {
-                breaks = count;
-            }
-
-            let sensorScaleFactor = 1;
-            //let lineHeight = HMD_LINE_HEIGHT;
-            let lineHeight = config.rendering.lineHeight;
-            height = lineHeight + (2 * entityTopMargin);
-            extraLine = breaks * lineHeight;
-            height = (height + extraLine) * HMD_UI_SCALE_FACTOR;
-            */
-            
             const textLines = cardText.split("\n");
             let estimatedLineCount = 0;
 
@@ -514,8 +498,7 @@
                 (estimatedLineCount * lineHeight) +
                 (2 * entityTopMargin)
             ) * HMD_UI_SCALE_FACTOR;
-            
-            //up here
+
             
             if (config.rendering.oldStackUp) {
                 entityLevel = entityLevel + (height/2);
