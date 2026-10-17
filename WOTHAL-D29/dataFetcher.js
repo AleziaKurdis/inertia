@@ -503,7 +503,7 @@
             for (let k = 0; k < textLines.length; k++) {
                 estimatedLineCount += Math.max(
                     1,
-                    Math.ceil(textLines[k].length / MAX_LINE_LENGTH)
+                    Math.ceil(textLines[k].length / (MAX_LINE_LENGTH * 1.5))
                 );
             }
 
