@@ -516,7 +516,8 @@
                 let colorTemp = hslToRgb((((i / records.length) * 240)+5)/360, 1, 0.5);
                 textColor = { "red": colorTemp[0], "green": colorTemp[1], "blue": colorTemp[2]};
             } else if (config.rendering.colorMode === "whiteToHue") {
-                let colorFromHue = hslToRgb(config.rendering.hue/360, 1, 1 - ((i / records.length)/2));
+                let colorFromHue  = hslToRgb(config.rendering.hue/360, 1, 1 - ((i / records.length)/2));
+                textColor = { "red": colorFromHue[0], "green": colorFromHue[1], "blue": colorFromHue[2]};
             } else if (config.rendering.colorMode === "weeklyHueCycle") {
                 textColor = getWeeklyColor(currentTimestamp, TIME_UNIT);
             }
