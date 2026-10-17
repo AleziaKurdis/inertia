@@ -772,7 +772,10 @@
     function getWeeklyColor(timestamp, timeDilation) {
         const DAY_DURATION = timeDilation * 3600;
         const WEEK_DURATION = DAY_DURATION * 9;
-        let hue = GetCurrentCycleValue(1, WEEK_DURATION);
+        
+        const timestampSec = Number(timestamp) / 1000;
+        let hue = ((timestampSec % WEEK_DURATION) / WEEK_DURATION);
+        
         let color = hslToRgb(hue, 1, 0.5);
         return {"red": color[0], "green": color[1], "blue": color[2]};
     }
