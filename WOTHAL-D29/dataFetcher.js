@@ -28,7 +28,7 @@
     const HMD_INTER_SPACE_NOTIFICATION = 0.05;
     const HMD_UI_SCALE_FACTOR = 1.0; //This define the size of all the notification system in HMD.
     let entityTopMargin = 0.02;
-    let entityLeftMargin = 0.02;
+    let entityLeftMargin = 0.03;
     const MAX_LINE_LENGTH = 42;
 
     const DEFAULT_MAX_ENTRIES = 5;
@@ -481,7 +481,7 @@
 
             }
             
-            
+            /*
             count = (cardText.match(/\n/g) || []).length,
             extraLine = 0;
             breaks = 0;
@@ -495,6 +495,28 @@
             height = lineHeight + (2 * entityTopMargin);
             extraLine = breaks * lineHeight;
             height = (height + extraLine) * HMD_UI_SCALE_FACTOR;
+            */
+            
+            const textLines = cardText.split("\n");
+            let estimatedLineCount = 0;
+
+            for (let k = 0; k < textLines.length; k++) {
+                estimatedLineCount += Math.max(
+                    1,
+                    Math.ceil(textLines[k].length / MAX_LINE_LENGTH)
+                );
+            }
+
+            let sensorScaleFactor = 1;
+            let lineHeight = config.rendering.lineHeight;
+
+            height = (
+                (estimatedLineCount * lineHeight) +
+                (2 * entityTopMargin)
+            ) * HMD_UI_SCALE_FACTOR;
+            
+            //up here
+            
             if (config.rendering.oldStackUp) {
                 entityLevel = entityLevel + (height/2);
             } else {
