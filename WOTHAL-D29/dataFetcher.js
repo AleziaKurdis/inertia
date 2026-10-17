@@ -47,6 +47,9 @@
 ===== "colorMode" suported: =====
 "staticColor" use the color defined in the property: "staticColor"
 "hotToCold" use a gradation from rencent in red (hue 5 deg) to old in blue (hue 45 deg)
+"weeklyHueCycle" set the color based on the timestamp and the weekly Hue cycle.
+"whiteToHue" use a gradation from rencent in white to old in hue saturated color.
+
 ===================================
 */
     const DEFAULT_USER_DATA = {
@@ -79,6 +82,7 @@
                 "green": 255,
                 "blue":0
             },
+            "hue": 0,
             "oldStackUp": true,
             "frameImageUrl": "https://aleziakurdis.github.io/inertia/WOTHAL-D29/images/entryFrame.jpg"
         }
@@ -435,7 +439,7 @@
         
         const descriptors = source.descriptor || {};
         
-        let properties, count, extraLine, breaks, height;
+        let properties, count, extraLine, breaks, height, currentTimestamp;
         let breakPoint = MAX_LINE_LENGTH + 1;
         let entityLevel = 0;
 
@@ -471,6 +475,7 @@
 
                 // Format timestamps for display.
                 if (field === "timestamp") {
+                    currentTimestamp = value;
                     if (config.rendering.showTimestamp) {
                         //cardText = cardText + "\n" + label + new Date(value).toISOString();
                         cardText = cardText + "\n" + label + getDtimeLocalFormat(value, TIME_UNIT);
@@ -510,6 +515,10 @@
             if (config.rendering.colorMode === "hotToCold") {
                 let colorTemp = hslToRgb((((i / records.length) * 240)+5)/360, 1, 0.5);
                 textColor = { "red": colorTemp[0], "green": colorTemp[1], "blue": colorTemp[2]};
+            } else if (config.rendering.colorMode === "whiteToHue") {
+                let colorFromHue = hslToRgb(config.rendering.hue/360, 1, 1 - ((i / records.length)/2));
+            } else if (config.rendering.colorMode === "weeklyHueCycle") {
+                textColor = getWeeklyColor(currentTimestamp, TIME_UNIT);
             }
             
             let backColor =  { "red": 0, "green": 0, "blue": 0};
@@ -758,6 +767,14 @@
         return dayOfWeek + ", " +
             dayOfMonth + " " + month + " " + year + ", " +
             hourText + " (D" + timeDilation + ")";
+    }
+
+    function getWeeklyColor(timestamp, timeDilation) {
+        const DAY_DURATION = timeDilation * 3600;
+        const WEEK_DURATION = DAY_DURATION * 9;
+        let hue = GetCurrentCycleValue(1, WEEK_DURATION);
+        let color = hslToRgb(hue, 1, 0.5);
+        return {"red": color[0], "green": color[1], "blue": color[2]};
     }
 
 
