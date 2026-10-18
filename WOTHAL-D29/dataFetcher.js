@@ -138,7 +138,8 @@
 
         if (source.format !== "json" &&
             source.format !== "rss" &&
-            source.format !== "atom") {
+            source.format !== "atom" &&
+            source.format !== "csv") {
             print("[DataFetcher] Unsupported format: " + source.format);
             return false;
         }
@@ -380,9 +381,108 @@
         return records;
     }
 
+    function parseCsv(csv) {
+        csv = String(csv).replace(/^\uFEFF/, "");
+
+        const rows = [];
+        let row = [];
+        let field = "";
+        let inQuotes = false;
+
+        for (let i = 0; i < csv.length; i++) {
+            const char = csv[i];
+
+            if (inQuotes) {
+                if (char === '"') {
+                    if (csv[i + 1] === '"') {
+                        field += '"';
+                        i++;
+                    } else {
+                        inQuotes = false;
+                    }
+                } else {
+                    field += char;
+                }
+            } else if (char === '"' && field === "") {
+                inQuotes = true;
+            } else if (char === ",") {
+                row.push(field);
+                field = "";
+            } else if (char === "\n" || char === "\r") {
+                if (char === "\r" && csv[i + 1] === "\n") {
+                    i++;
+                }
+
+                row.push(field);
+                field = "";
+
+                if (row.some(function (value) {
+                    return value !== "";
+                })) {
+                    rows.push(row);
+                }
+
+                row = [];
+            } else {
+                field += char;
+            }
+        }
+
+        if (field !== "" || row.length > 0) {
+            row.push(field);
+
+            if (row.some(function (value) {
+                return value !== "";
+            })) {
+                rows.push(row);
+            }
+        }
+
+        if (rows.length < 2) {
+            return [];
+        }
+
+        const headers = rows[0].map(function (header) {
+            return header.trim();
+        });
+
+        const records = [];
+
+        for (let i = 1; i < rows.length; i++) {
+            const record = {};
+
+            for (let j = 0; j < headers.length; j++) {
+                record[headers[j]] = rows[i][j] === undefined
+                    ? ""
+                    : rows[i][j];
+            }
+
+            records.push(record);
+        }
+
+        return records;
+    }
+
     // ---------------------------------------------------------
     // Convert source-specific entries to common records.
     // ---------------------------------------------------------
+
+    function normalizeCsvEntries(csv, source) {
+        const entries = parseCsv(csv);
+        const fields = source.fields || {};
+
+        return entries.map(function (entry) {
+            return {
+                title: getFieldValue(entry, fields.title),
+                summary: getFieldValue(entry, fields.summary),
+                url: getFieldValue(entry, fields.url),
+                timestamp: normalizeTimestamp(
+                    getFieldValue(entry, fields.timestamp),
+                    source.timeFormat
+                )
+            };
+        });
+    }
 
     function normalizeJsonEntries(data, source) {
         const entries = getEntries(data, source.entryPath);
@@ -601,6 +701,8 @@
                 if (source.format === "json") {
                     const data = JSON.parse(xhr.responseText);
                     records = normalizeJsonEntries(data, source);
+                } else if (source.format === "csv") {
+                    records = normalizeCsvEntries(xhr.responseText, source);
                 } else {
                     records = parseFeed(
                         xhr.responseText,
