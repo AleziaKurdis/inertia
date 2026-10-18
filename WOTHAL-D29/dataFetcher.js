@@ -468,38 +468,49 @@
     // ---------------------------------------------------------
 
     function normalizeCsvEntries(csv, source) {
-        const entries = parseCsv(csv);
-        const fields = source.fields || {};
+        const text = String(csv);
 
-        function getCsvFieldValue(entry, field) {
-            if (!field) {
-                return null;
-            }
+        // Detect the ESA upcoming close-approach report.
+        if (text.indexOf("Last Update:") !== -1) {
+            const lines = text.split(/\r?\n/);
+            const records = [];
 
-            // Support combining multiple columns with "|".
-            if (field.indexOf("|") !== -1) {
-                const values = field.split("|").map(function (column) {
-                    const value = getFieldValue(entry, column.trim());
-                    return value === null || value === undefined
-                        ? ""
-                        : String(value).trim();
-                }).filter(function (value) {
-                    return value !== "";
+            lines.forEach(function (line) {
+                const cells = line.split("|").map(function (cell) {
+                    return cell.trim();
                 });
 
-                return values.length ? values.join(" ") : null;
-            }
+                // ESA data rows have an ISO date in the second column.
+                if (cells.length < 10 ||
+                    !/^\d{4}-\d{2}-\d{2}$/.test(cells[1])) {
+                    return;
+                }
 
-            return getFieldValue(entry, field);
+                records.push({
+                    title: cells[0] || null,
+                    summary: cells[4] || null,
+                    url: null,
+                    timestamp: normalizeTimestamp(
+                        cells[1],
+                        source.timeFormat
+                    )
+                });
+            });
+
+            return records;
         }
+
+        // Keep the existing parser for ordinary CSV feeds.
+        const entries = parseCsv(text);
+        const fields = source.fields || {};
 
         return entries.map(function (entry) {
             return {
-                title: getCsvFieldValue(entry, fields.title),
-                summary: getCsvFieldValue(entry, fields.summary),
-                url: getCsvFieldValue(entry, fields.url),
+                title: getFieldValue(entry, fields.title),
+                summary: getFieldValue(entry, fields.summary),
+                url: getFieldValue(entry, fields.url),
                 timestamp: normalizeTimestamp(
-                    getCsvFieldValue(entry, fields.timestamp),
+                    getFieldValue(entry, fields.timestamp),
                     source.timeFormat
                 )
             };
