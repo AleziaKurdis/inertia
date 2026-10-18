@@ -471,13 +471,35 @@
         const entries = parseCsv(csv);
         const fields = source.fields || {};
 
+        function getCsvFieldValue(entry, field) {
+            if (!field) {
+                return null;
+            }
+
+            // Support combining multiple columns with "|".
+            if (field.indexOf("|") !== -1) {
+                const values = field.split("|").map(function (column) {
+                    const value = getFieldValue(entry, column.trim());
+                    return value === null || value === undefined
+                        ? ""
+                        : String(value).trim();
+                }).filter(function (value) {
+                    return value !== "";
+                });
+
+                return values.length ? values.join(" ") : null;
+            }
+
+            return getFieldValue(entry, field);
+        }
+
         return entries.map(function (entry) {
             return {
-                title: getFieldValue(entry, fields.title),
-                summary: getFieldValue(entry, fields.summary),
-                url: getFieldValue(entry, fields.url),
+                title: getCsvFieldValue(entry, fields.title),
+                summary: getCsvFieldValue(entry, fields.summary),
+                url: getCsvFieldValue(entry, fields.url),
                 timestamp: normalizeTimestamp(
-                    getFieldValue(entry, fields.timestamp),
+                    getCsvFieldValue(entry, fields.timestamp),
                     source.timeFormat
                 )
             };
