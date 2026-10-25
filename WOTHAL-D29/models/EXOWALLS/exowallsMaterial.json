@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "rusting-lined-metal_albedo.jpg",
+         "metallicMap": "rusting-lined-metal_metallic.jpg",
+         "roughnessMap": "rusting-lined-metal_roughness.jpg",
+         "normalMap": "rusting-lined-metal_normal-ogl.jpg",
+         "occlusionMap": "rusting-lined-metal_ao.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}

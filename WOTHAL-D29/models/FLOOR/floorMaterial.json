@@ -1,0 +1,14 @@
+{
+   "materialVersion":1,
+   "materials":[
+      {
+         "albedo":[1,1,1],
+         "albedoMap": "painted-worn-concrete_albedo.jpg",
+         "metallic": 0.001,
+         "roughnessMap": "painted-worn-concrete_roughness.jpg",
+         "normalMap": "painted-worn-concrete_normal-ogl.jpg",
+         "occlusionMap": "painted-worn-concrete_ao.jpg",
+         "cullFaceMode":"CULL_NONE"
+      }
+   ]
+}
