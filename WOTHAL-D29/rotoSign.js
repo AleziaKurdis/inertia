@@ -25,11 +25,13 @@
     this.preload = function(entityID) {
         var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userdata"]);
         renderWithZones = properties.renderWithZones || [];
+        let data;
         if (properties.userdata === "") {
+            data = template;
             Entities.editEntity(entityID,{"userdata": JSON.stringify(template)});
-            
+        } else {
+            data = JSON.parse(properties.userdata);
         }
-        let data = JSON.parse(properties.userdata);
         colorSign = data.color || [1,1,1];
         signImageURL = data.imageUrl || "";
 
