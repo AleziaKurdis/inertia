@@ -35,6 +35,10 @@
     const DEFAULT_REFRESH_SECONDS = 300;
     const TIME_UNIT = 29; //for D29 time format
     
+    const RETRY_DELAY_SECONDS = 10;
+    
+    let retryTimer = null;
+    
 /*    
 ===== "timeFormat" suported: =====
 "auto"	Automatically parses date strings
@@ -725,6 +729,12 @@
                 return;
             }
 
+            if (xhr.status === 0) {
+                print("[DataFetcher] No HTTP response. Retrying in 10 seconds.");
+                scheduleRetry();
+                return;
+            }
+
             if (xhr.status < 200 || xhr.status >= 300) {
                 print("[DataFetcher] HTTP error: " + xhr.status);
                 return;
@@ -768,12 +778,14 @@
 
         xhr.onerror = function () {
             requestInProgress = false;
-            print("[DataFetcher] Network error. Check URL and CORS.");
+            print("[DataFetcher] Network error. Retrying in 10 seconds.");
+            scheduleRetry();
         };
 
         xhr.ontimeout = function () {
             requestInProgress = false;
-            print("[DataFetcher] Request timed out.");
+            print("[DataFetcher] Request timed out. Retrying in 10 seconds.");
+            scheduleRetry();
         };
 
         try {
@@ -784,6 +796,18 @@
             requestInProgress = false;
             print("[DataFetcher] Request failed: " + e);
         }
+    }
+
+
+    function scheduleRetry() {
+        if (stopped || retryTimer !== null) {
+            return;
+        }
+
+        retryTimer = Script.setTimeout(function () {
+            retryTimer = null;
+            fetchData();
+        }, RETRY_DELAY_SECONDS * 1000);
     }
 
     // ---------------------------------------------------------
@@ -818,6 +842,11 @@
         if (refreshTimer !== null) {
             Script.clearInterval(refreshTimer);
             refreshTimer = null;
+        }
+        
+        if (retryTimer !== null) {
+            Script.clearTimeout(retryTimer);
+            retryTimer = null;
         }
         
         if (rendererContainerID !== Uuid.NONE) {
