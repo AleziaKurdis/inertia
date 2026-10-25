@@ -23,14 +23,14 @@
     };
     
     this.preload = function(entityID) {
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userdata"]);
+        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
         renderWithZones = properties.renderWithZones || [];
         let data;
-        if (properties.userdata === "") {
+        if (properties.userData === "") {
             data = template;
-            Entities.editEntity(entityID,{"userdata": JSON.stringify(template)});
+            Entities.editEntity(entityID,{"userData": JSON.stringify(template)});
         } else {
-            data = JSON.parse(properties.userdata);
+            data = JSON.parse(properties.userData);
         }
         colorSign = data.color || [1,1,1];
         signImageURL = data.imageUrl || "";
