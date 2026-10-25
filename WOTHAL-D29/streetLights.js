@@ -13,7 +13,33 @@
     const ROOT = Script.resolvePath('').split("streetLights.js")[0];
     const COORD_REFERENCE = {"x":6527.78271484375,"y":6000.296875,"z":8624.091796875};
     let lightEntries = [
-        {"name": "POLE 1", "lightType": "STREETPOLE", "position": {"x":5284.4130859375,"y":-5010.12841796875,"z":5288.4609375}},
+        {"name": "POLE 1", "lightType": "STREETPOLE", "position": {"x":6524.3447265625,"y":6131.20458984375,"z":8569.1533203125}},
+        {"name": "POLE 2", "lightType": "STREETPOLE", "position": {"x":6524.95458984375,"y":6131.20458984375,"z":8582.802734375}},
+        {"name": "POLE 3", "lightType": "STREETPOLE", "position": {"x":6523.37939453125,"y":6131.240234375,"z":8604.513671875}},
+        {"name": "POLE 4", "lightType": "STREETPOLE", "position": {"x":6529.73095703125,"y":6131.20166015625,"z":8626.521484375}},
+        {"name": "POLE 5", "lightType": "STREETPOLE", "position": {"x":6532.85009765625,"y":6131.22021484375,"z":8637.109375}},
+        {"name": "POLE 6", "lightType": "STREETPOLE", "position": {"x":6531.6123046875,"y":6131.62255859375,"z":8652.91796875}},
+        {"name": "MURAL 1", "lightType": "STREETPOLE", "position": {"x":6515.5869140625,"y":6131.23291015625,"z":8656.125}},
+        {"name": "MURAL 2", "lightType": "STREETPOLE", "position": {"x":6508.400390625,"y":6131.23291015625,"z":8663.87890625}},
+        {"name": "MURAL 3", "lightType": "STREETPOLE", "position": {"x":6532.3916015625,"y":6131.23779296875,"z":8674.05078125}},
+        {"name": "MURAL 4", "lightType": "STREETPOLE", "position": {"x":6544.98046875,"y":6131.23486328125,"z":8680.6953125}},
+        {"name": "MURAL 5", "lightType": "STREETPOLE", "position": {"x":6562.37744140625,"y":6131.2392578125,"z":8678.6357421875}},
+        {"name": "MURAL 6", "lightType": "STREETPOLE", "position": {"x":6564.5625,"y":6131.23388671875,"z":8692.78515625}},
+        {"name": "MURAL 7", "lightType": "STREETPOLE", "position": {"x":6524.9111328125,"y":6131.23681640625,"z":8693.005859375}},
+        {"name": "MURAL 8", "lightType": "STREETPOLE", "position": {"x":6520.546875,"y":6131.24609375,"z":8684.8564453125}},
+        {"name": "MURAL 9", "lightType": "STREETPOLE", "position": {"x":6510.11572265625,"y":6131.24658203125,"z":8689.1103515625}},
+        {"name": "MURAL 10", "lightType": "STREETPOLE", "position": {"x":6504.90380859375,"y":6131.24658203125,"z":8681.830078125}},
+        {"name": "MURAL 11", "lightType": "STREETPOLE", "position": {"x":6515.7822265625,"y":6131.2392578125,"z":8669.353515625}},
+        {"name": "MURAL 12", "lightType": "STREETPOLE", "position": {"x":6494.91943359375,"y":6131.25341796875,"z":8675.359375}},
+        {"name": "MURAL 13", "lightType": "STREETPOLE", "position": {"x":6491.0888671875,"y":6131.24951171875,"z":8665.576171875}},
+        {"name": "MURAL 14", "lightType": "STREETPOLE", "position": {"x":6489.87109375,"y":6131.24072265625,"z":8684.802734375}},
+        {"name": "MURAL 15", "lightType": "STREETPOLE", "position": {"x":6459.046875,"y":6131.2431640625,"z":8685.9638671875}},
+        {"name": "MURAL 16", "lightType": "STREETPOLE", "position": {"x":6468.41845703125,"y":6131.2177734375,"z":8681.4189453125}},
+        {"name": "MURAL 17", "lightType": "STREETPOLE", "position": {"x":6479.111328125,"y":6131.2421875,"z":8680.7841796875}},
+        {"name": "MURAL 18", "lightType": "STREETPOLE", "position": {"x":6468.30126953125,"y":6131.24169921875,"z":8639.244140625}},
+        {"name": "MURAL 19", "lightType": "STREETPOLE", "position": {"x":6475.2978515625,"y":6131.2373046875,"z":8634.6767578125}},
+        {"name": "MURAL 20", "lightType": "STREETPOLE", "position": {"x":6486.255859375,"y":6131.23681640625,"z":8639.2880859375}},
+        {"name": "MURAL 21", "lightType": "STREETPOLE", "position": {"x":6496.8623046875,"y":6131.244140625,"z":8649.0634765625}}
     ];
 
     let lights = [];
@@ -142,8 +168,8 @@
                     "ignoreForCollisions": true,
                     "color": {
                         "red": 255,
-                        "green": 148,
-                        "blue": 48
+                        "green": 236,
+                        "blue": 201
                     },
                     "isSpotlight": true,
                     "intensity": 15,
