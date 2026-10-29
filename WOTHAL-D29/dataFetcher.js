@@ -52,7 +52,8 @@
 "staticColor" use the color defined in the property: "staticColor"
 "hotToCold" use a gradation from rencent in red (hue 5 deg) to old in blue (hue 45 deg)
 "weeklyHueCycle" set the color based on the timestamp and the weekly Hue cycle.
-"whiteToHue" use a gradation from rencent in white to old in hue saturated color.
+"whiteToHue" use a gradation from recent in white to old in hue saturated color.
+"hueToWhite" use a gradation from recent in hue saturated color to old in white.
 
 ===================================
 */
@@ -655,6 +656,9 @@
             } else if (config.rendering.colorMode === "whiteToHue") {
                 let colorFromHue  = hslToRgb(config.rendering.hue/360, 1, 1 - ((i / records.length)/2));
                 textColor = { "red": colorFromHue[0], "green": colorFromHue[1], "blue": colorFromHue[2]};
+            } else if (config.rendering.colorMode === "hueToWhite") {
+                let colorFromWhite  = hslToRgb(config.rendering.hue/360, 1, 0.5 + ((i / records.length)/2));
+                textColor = { "red": colorFromWhite[0], "green": colorFromWhite[1], "blue": colorFromWhite[2]};
             } else if (config.rendering.colorMode === "weeklyHueCycle") {
                 textColor = getWeeklyColor(currentTimestamp, TIME_UNIT);
             }
