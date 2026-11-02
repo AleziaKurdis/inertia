@@ -20,7 +20,7 @@
         let lightDim = 60;
         let height = 0;
         if (properties.name === "POOL 2"){
-            height = 10;
+            height = 12;
         }
 
         lightID = Entities.addEntity({
