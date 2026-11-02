@@ -27,19 +27,19 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 40,
-                "y": 40,
-                "z": 40
+                "x": 60,
+                "y": 60,
+                "z": 60
             },
-            "color": {"red": 255, "green": 255, "blue": 255},
-            "intensity": 15,
-            "falloffRadius": 2,
+            "color": {"red": 234, "green": 212, "blue": 255},
+            "intensity": 20,
+            "falloffRadius": 3,
             "isSpotlight": false
         },"local");
         
         timer = Script.setInterval(function () {
-            Entities.editEntity(lightID, {"intensity": 15 + (Math.random() * 30) - 15});
-        }, 80);
+            Entities.editEntity(lightID, {"intensity": 20 + (Math.random() * 40) - 20});
+        }, 100);
         
     };    
 
