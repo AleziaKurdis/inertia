@@ -14,8 +14,13 @@
     let timer = null;
     
     this.preload = function(entityID) {
-        let properties = Entities.getEntityProperties(entityID, ["renderWithZones"]);
+        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "name"]);
         let renderWithZones = properties.renderWithZones;
+        
+        let lightDim = 60;
+        if (properties.name === "POOL 2"){
+            lightDim = 50;
+        }
 
         lightID = Entities.addEntity({
             "parentID": entityID,
@@ -27,9 +32,9 @@
             },
             "type": "Light",
             "dimensions": {
-                "x": 60,
-                "y": 60,
-                "z": 60
+                "x": lightDim,
+                "y": lightDim,
+                "z": lightDim
             },
             "color": {"red": 234, "green": 212, "blue": 255},
             "intensity": 20,
