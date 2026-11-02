@@ -18,7 +18,7 @@
         let renderWithZones = properties.renderWithZones;
         
         let lightDim = 60;
-        let height = -3;
+        let height = 0;
         if (properties.name === "POOL 2"){
             height = 10;
         }
