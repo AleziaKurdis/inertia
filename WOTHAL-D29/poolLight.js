@@ -18,14 +18,15 @@
         let renderWithZones = properties.renderWithZones;
         
         let lightDim = 60;
+        let height = 3;
         if (properties.name === "POOL 2"){
-            lightDim = 50;
+            height = -10;
         }
 
         lightID = Entities.addEntity({
             "parentID": entityID,
             "renderWithZones": renderWithZones,
-            "localPosition": {"x": 0.0, "y": 3, "z": 0.0},
+            "localPosition": {"x": 0.0, "y": height, "z": 0.0},
             "name": "Pool Light",
             "grab": {
                 "grabbable": false
