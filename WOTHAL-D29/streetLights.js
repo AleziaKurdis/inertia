@@ -20,6 +20,7 @@
         {"name": "POLE 5", "lightType": "STREETPOLE", "position": {"x":6532.85009765625,"y":6131.22021484375,"z":8637.109375}},
         {"name": "POLE 6", "lightType": "STREETPOLE", "position": {"x":6531.6123046875,"y":6131.62255859375,"z":8652.91796875}},
         {"name": "POLE 7", "lightType": "STREETPOLE", "position": {"x":6495.82470703125,"y":6131.23046875,"z":8611.0322265625}},
+        {"name": "POLE 8", "lightType": "STREETPOLE", "position": {"x":6552.94091796875,"y":6193.45849609375,"z":8677.38671875}},
         {"name": "MURAL 1", "lightType": "STREETPOLE", "position": {"x":6515.5869140625,"y":6131.23291015625,"z":8656.125}},
         {"name": "MURAL 2", "lightType": "STREETPOLE", "position": {"x":6508.400390625,"y":6131.23291015625,"z":8663.87890625}},
         {"name": "MURAL 3", "lightType": "STREETPOLE", "position": {"x":6532.3916015625,"y":6131.23779296875,"z":8674.05078125}},
