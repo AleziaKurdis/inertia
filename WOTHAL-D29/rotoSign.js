@@ -23,7 +23,7 @@
     };
     
     this.preload = function(entityID) {
-        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData"]);
+        var properties = Entities.getEntityProperties(entityID, ["renderWithZones", "userData", "dimensions"]);
         renderWithZones = properties.renderWithZones || [];
         let data;
         if (properties.userData === "") {
@@ -64,6 +64,99 @@
             "priority": 2,
             "materialData": JSON.stringify(materialContent)
         },"local");
+        
+        //4 lights
+        let lightID = Entities.addEntity({
+            "type": "Light",
+            "name": "Hologram Light 1",
+            "dimensions": Vec3.multiply(0.5, properties.dimensions),
+            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 0.0, "z": 0.0}),
+            "parentID": materialID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": Math.floor(colorSign[0] * 255),
+                "green": Math.floor(colorSign[1] * 255),
+                "blue": Math.floor(colorSign[2] * 255)
+            },
+            "isSpotlight": false,
+            "intensity": 6.0,
+            "falloffRadius": 1.0
+        }, "local");
+        
+        lightID = Entities.addEntity({
+            "type": "Light",
+            "name": "Hologram Light 2",
+            "dimensions": Vec3.multiply(0.5, properties.dimensions),
+            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 90.0, "z": 0.0}),
+            "parentID": materialID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": Math.floor(colorSign[0] * 255),
+                "green": Math.floor(colorSign[1] * 255),
+                "blue": Math.floor(colorSign[2] * 255)
+            },
+            "isSpotlight": false,
+            "intensity": 6.0,
+            "falloffRadius": 1.0
+        }, "local");
+        
+        lightID = Entities.addEntity({
+            "type": "Light",
+            "name": "Hologram Light 3",
+            "dimensions": Vec3.multiply(0.5, properties.dimensions),
+            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 180.0, "z": 0.0}),
+            "parentID": materialID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": Math.floor(colorSign[0] * 255),
+                "green": Math.floor(colorSign[1] * 255),
+                "blue": Math.floor(colorSign[2] * 255)
+            },
+            "isSpotlight": false,
+            "intensity": 6.0,
+            "falloffRadius": 1.0
+        }, "local");
+        
+        lightID = Entities.addEntity({
+            "type": "Light",
+            "name": "Hologram Light 4",
+            "dimensions": Vec3.multiply(0.5, properties.dimensions),
+            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
+            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 270.0, "z": 0.0}),
+            "parentID": materialID,
+            "renderWithZones": renderWithZones,
+            "grab": {
+                "grabbable": false
+            },
+            "collisionless": true,
+            "ignoreForCollisions": true,
+            "color": {
+                "red": Math.floor(colorSign[0] * 255),
+                "green": Math.floor(colorSign[1] * 255),
+                "blue": Math.floor(colorSign[2] * 255)
+            },
+            "isSpotlight": false,
+            "intensity": 6.0,
+            "falloffRadius": 1.0
+        }, "local");
     };    
 
     this.unload = function(entityID) {
