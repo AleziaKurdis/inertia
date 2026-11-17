@@ -85,8 +85,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 3.0,
-            "falloffRadius": 0.2
+            "intensity": 6.0,
+            "falloffRadius": 0.5
         }, "local");
         
         lightID = Entities.addEntity({
@@ -108,8 +108,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 3.0,
-            "falloffRadius": 0.2
+            "intensity": 6.0,
+            "falloffRadius": 0.5
         }, "local");
         
         lightID = Entities.addEntity({
@@ -131,8 +131,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 3.0,
-            "falloffRadius": 0.2
+            "intensity": 6.0,
+            "falloffRadius": 0.5
         }, "local");
         
         lightID = Entities.addEntity({
@@ -154,8 +154,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 3.0,
-            "falloffRadius": 0.2
+            "intensity": 6.0,
+            "falloffRadius": 0.5
         }, "local");
     };    
 
