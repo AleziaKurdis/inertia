@@ -11,7 +11,8 @@
 //
 (function(){
     const ROOT = Script.resolvePath('').split("galvronStreetLights.js")[0];
-    const COORD_REFERENCE = {"x":4489.611328125,"y":5883.6435546875,"z":7720.33056640625};
+    //const COORD_REFERENCE = {"x":4489.611328125,"y":5883.6435546875,"z":7720.33056640625};
+    const COORD_REFERENCE = {"x":4489.607421875,"y":6009.6435546875,"z":7720.32666015625}; //PARENT TO MATERIAL
     let lightEntries = [
         {"name": "POLE 1", "lightType": "STREETPOLE", "position": {"x":4482.2529296875,"y":6114.79345703125,"z":7698.82470703125}},
         {"name": "POLE 2", "lightType": "STREETPOLE", "position": {"x":4478.57080078125,"y":6114.7939453125,"z":7716.6875}},
@@ -104,7 +105,7 @@
                         "w": -0.7071068286895752
                     },
                     "localPosition": Vec3.subtract(lightEntries[i].position, COORD_REFERENCE),
-                    "parentID": entityID,
+                    "parentID": materialID,
                     "renderWithZones": renderWithZones,
                     "grab": {
                         "grabbable": false
