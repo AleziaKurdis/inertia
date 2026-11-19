@@ -66,6 +66,9 @@
         },"local");
         
         //4 lights
+        const INTENSITY = 6.0;
+        const FALL_OFF_RADIUS = 0.6;
+        
         let lightID = Entities.addEntity({
             "type": "Light",
             "name": "Hologram Light 1",
@@ -85,8 +88,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 6.0,
-            "falloffRadius": 0.5
+            "intensity": INTENSITY,
+            "falloffRadius": FALL_OFF_RADIUS
         }, "local");
         
         lightID = Entities.addEntity({
@@ -108,8 +111,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 6.0,
-            "falloffRadius": 0.5
+            "intensity": INTENSITY,
+            "falloffRadius": FALL_OFF_RADIUS
         }, "local");
         
         lightID = Entities.addEntity({
@@ -131,8 +134,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 6.0,
-            "falloffRadius": 0.5
+            "intensity": INTENSITY,
+            "falloffRadius": FALL_OFF_RADIUS
         }, "local");
         
         lightID = Entities.addEntity({
@@ -154,8 +157,8 @@
                 "blue": Math.floor(colorSign[2] * 255)
             },
             "isSpotlight": false,
-            "intensity": 6.0,
-            "falloffRadius": 0.5
+            "intensity": INTENSITY,
+            "falloffRadius": FALL_OFF_RADIUS
         }, "local");
     };    
 
