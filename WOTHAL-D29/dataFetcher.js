@@ -39,6 +39,9 @@
     
     let retryTimer = null;
     
+    let mainPosition;
+    const DISTANCE_STOP_RENDER = 300;
+    
 /*    
 ===== "timeFormat" suported: =====
 "auto"	Automatically parses date strings
@@ -563,6 +566,10 @@
         if (rendererContainerID !== Uuid.NONE) {
             Entities.deleteEntity(rendererContainerID);
         }
+        if (Vec3.distance(MyAvatar.position, mainPosition) > DISTANCE_STOP_RENDER) {
+            return;
+        }
+        
         rendererContainerID = Entities.addEntity({
             "name": "Data Container",
             "type": "Empty",
@@ -822,8 +829,9 @@
         entityID = id;
         stopped = false;
 
-        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "dimensions"]);
+        let properties = Entities.getEntityProperties(entityID, ["renderWithZones", "dimensions", "position"]);
         emitterDimensions = properties.dimensions;
+        mainPosition = properties.position;
         renderWithZones = properties.renderWithZones;
 
         if (!loadConfig()) {
