@@ -73,8 +73,7 @@
             "type": "Light",
             "name": "Hologram Light 1",
             "dimensions": properties.dimensions,
-            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
-            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 45.0, "z": 0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x": 0.0, "y": 45.0, "z": 0.0}), {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)}),
             "parentID": materialID,
             "renderWithZones": renderWithZones,
             "grab": {
@@ -96,8 +95,7 @@
             "type": "Light",
             "name": "Hologram Light 2",
             "dimensions": properties.dimensions,
-            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
-            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 135.0, "z": 0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x": 0.0, "y": 135.0, "z": 0.0}), {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)}),
             "parentID": materialID,
             "renderWithZones": renderWithZones,
             "grab": {
@@ -119,8 +117,7 @@
             "type": "Light",
             "name": "Hologram Light 3",
             "dimensions": properties.dimensions,
-            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
-            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 225.0, "z": 0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x": 0.0, "y": 225.0, "z": 0.0}), {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)}),
             "parentID": materialID,
             "renderWithZones": renderWithZones,
             "grab": {
@@ -142,8 +139,7 @@
             "type": "Light",
             "name": "Hologram Light 4",
             "dimensions": properties.dimensions,
-            "localPosition": {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)},
-            "localRotation": Quat.fromVec3Degrees({"x": 0.0, "y": 315.0, "z": 0.0}),
+            "localPosition": Vec3.multiplyQbyV(Quat.fromVec3Degrees({"x": 0.0, "y": 315.0, "z": 0.0}), {"x": 0.0, "y": -0.2, "z": (-properties.dimensions.z/2)}),
             "parentID": materialID,
             "renderWithZones": renderWithZones,
             "grab": {

@@ -75,6 +75,7 @@
             "parentID": entityID,
             "renderWithZones": renderWithZones,
             "localPosition": {"x": 0.0, "y": 126.0, "z": 0.0},
+            "rotation": Quat.IDENTITY,
             "name": "lightPole material",
             "materialURL": "materialData",
             "dimensions": {"x": 10.0, "y": 10.0, "z": 10.0},
